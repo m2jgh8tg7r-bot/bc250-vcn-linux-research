@@ -20,8 +20,9 @@ Confirmed on the tested BC-250:
   - exact target readback `0x00080c40`
   - immediate restore to `0x00000000`
   - exact restore readback `0x00000000`
+- The dedicated live-test boot entry was removed after the successful transaction so the experiment cannot be accidentally re-run.
 
-That last result proves the bounded NBIO register transaction path is live and writable/readable on this board. It does **not** prove VCN power, firmware execution, ring execution, or hardware video decode/encode.
+That live result proves the bounded NBIO register transaction path is live and writable/readable on this board. It does **not** prove VCN power, firmware execution, ring execution, or hardware video decode/encode.
 
 ## Unproven boundaries
 
@@ -44,12 +45,17 @@ VAAPI_HARDWARE_ENCODE=UNPROVEN
 - [Research log](docs/RESEARCH_LOG.md)
 - [External research comparison](docs/EXTERNAL_COMPARISON.md)
 - [Patch notes](patches/README.md)
+- [Sanitized log publication policy](logs/README.md)
 
 ## Safety
 
 Some experiments involve live GPU register writes. A write that stalls the GPU/SoC can prevent rollback code from executing even when the source orders restoration immediately after readback. Do not treat the experimental procedures here as safe defaults for other cards, firmware versions, or kernels.
 
 Raw personal logs are not published. Repository notes intentionally separate observed facts from hypotheses and omit usernames, UUIDs, host-specific paths, and unrelated machine identifiers.
+
+## Collaboration
+
+The purpose of publication is to make the work reusable by the wider BC-250 and Linux/AMD community. Independent reproduction, corrections, safer test designs, comparisons with related work, and mirroring into more appropriate public research venues are welcome.
 
 ## License
 
