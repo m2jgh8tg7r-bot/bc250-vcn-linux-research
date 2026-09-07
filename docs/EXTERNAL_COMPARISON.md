@@ -101,9 +101,9 @@ LOCAL_SMN_TRANSPORT_PROOF != LOCAL_DOMAIN6_POWER_PROOF
 LOCAL_SMN_TRANSPORT_PROOF != LOCAL_VCN_EXECUTION_PROOF
 ```
 
-### Domain-6 status semantics for the next read-only stage
+### Domain-6 status semantics and R116 local reproduction
 
-The pinned external source documents the low-frame domain-6 sequencer and gives the following status interpretation:
+The pinned external source documents:
 
 ```text
 status @ 0x0006d190
@@ -111,9 +111,24 @@ bit 8  = up-ack
 bit 12 = down-ack
 ```
 
-It reports `0x01010101` as the persistent up-residue pattern for domains 0-6 on its tested matching platform, while a firmware-commanded-down domain 7 showed `0x01011010`.
+and reports `0x01010101` as the persistent up-residue pattern for domains 0-6 on its tested matching platform, while a firmware-commanded-down domain 7 showed `0x01011010`.
 
-This is useful for selecting the next raw observation, but the semantic interpretation remains external until independently reproduced. The first local domain-6 probe will therefore record the raw `0x0006d190` value before deciding whether any power-state claim is justified.
+A bounded local read has now independently reached the same low-frame domain-6 status address through the proven local transport and returned:
+
+```text
+0x0006d190 -> 0x01010101
+```
+
+The selector was then restored exactly and no SMU data write or mailbox command was performed.
+
+This upgrades only the sequencer-status boundary:
+
+```text
+EXTERNAL_DOMAIN6_STATUS_SIGNATURE=LOCALLY_REPRODUCED
+DOMAIN6_SEQUENCER_UP_RESIDUE=LOCALLY_OBSERVED
+```
+
+It does **not** yet justify `OUTER_WHOLE_BLOCK_VCN_POWER=PROVEN`. The same pinned external source explicitly records the unresolved contradiction that the domain-6 sequencer can look UP while VCN MMIO still appears CLOSED/all-ones, motivating a search for additional isolation/reset/state latches. Therefore this project keeps sequencer status, de-isolation, VCN register accessibility, VCPU execution, and ring execution as separate proof boundaries.
 
 ### VCN register-file warning
 
@@ -134,18 +149,18 @@ But the external direct-load implementation, firmware choice, SMU exploit, handl
 
 ### Current conclusion
 
-The transport boundary is now locally reproduced. The next local boundary is a narrowly scoped, independently audited read-only observation of domain-6 state through that proven transport.
+The BC-250 `0xB8/0xBC` transport and the external domain-6 `0x01010101` status signature have both now been locally reproduced. The next boundary is to distinguish sequencer-up residue from a genuinely de-isolated/access-ready VCN block without jumping directly to risky VCN-core MMIO.
 
 Current policy:
 
 ```text
 BC250_ROOT_B8_BC_SMN_TRANSPORT=LOCALLY_PROVEN
-EXTERNAL_DOMAIN6_MODEL=HIGH_PRIORITY_STATIC_GUIDE
-EXTERNAL_REPORTED_DOMAIN6_STATE=NOT_LOCAL_PROOF
+EXTERNAL_DOMAIN6_STATUS_SIGNATURE=LOCALLY_REPRODUCED
+DOMAIN6_SEQUENCER_UP_RESIDUE=LOCALLY_OBSERVED
+OUTER_WHOLE_BLOCK_VCN_POWER=UNPROVEN
 RUN_EXTERNAL_ENABLE_TOOL=NO
 RUN_DIRECT_LOAD=NO
 RUN_SMU_HANDLER_REPOINT=NO
-NEXT_LOCAL_BOUNDARY=DOMAIN6_STATUS_READ_ONLY_RAW_OBSERVATION
 ```
 
 ## simpmix/bc250-encoding-decoding-fix
