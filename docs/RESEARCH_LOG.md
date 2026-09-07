@@ -125,6 +125,22 @@ It does not prove VCN power, VCPU execution, ring execution, or decode/encode fu
 
 After the successful R113 experiment, the dedicated live BLS was removed and the boot environment returned to a non-live state. No additional NBIO/VCN/SMU operation occurred during quarantine.
 
+## R114B — stock recovery closure
+
+The system was rebooted through the ordinary stock Bazzite/OSTree entry. The R113-specific command-line token and experimental boot path were absent, and the loaded amdgpu GNU build ID matched the known stock module:
+
+```text
+2da61adf20c29bf978a05facfb74130c81179faa
+```
+
+Classification:
+
+```text
+R114B_RESULT=STOCK_RECOVERY_FULL_PASS
+```
+
+This closes the R113 live-test sequence without carrying the experimental amdgpu module into the next research stage.
+
 ## Current research direction
 
 The next major problem is not the NBIO doorbell-range transaction itself. It is identifying and minimally proving the actual VCN power/liveness condition before authorizing firmware/VCPU or ring execution.
