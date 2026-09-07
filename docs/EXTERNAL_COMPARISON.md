@@ -59,9 +59,61 @@ write SMN index -> config 0xB8
 read SMN data   -> config 0xBC
 ```
 
-This is not automatically equivalent to Linux's generic `amd_smn_read()` path. Current upstream `amd_smn_read()` uses a different PCI config index/data pair (`0x60/0x64`) through the AMD node helper. Therefore this project will not substitute `amd_smn_read()` for the BC-250-specific `0xB8/0xBC` transport without a separate transport-identity proof.
+This is not automatically equivalent to Linux's generic `amd_smn_read()` path. Current upstream `amd_smn_read()` uses a different PCI config index/data pair (`0x60/0x64`) through the AMD node helper. Therefore this project did not substitute `amd_smn_read()` for the BC-250-specific `0xB8/0xBC` transport without a separate transport-identity proof.
 
 That distinction is important because a transport mismatch could turn a nominally read-only experiment into a read from a different fabric/address space.
+
+### R115 local transport reproduction
+
+The external transport model has now been independently reproduced on the tested BC-250 at the transport layer.
+
+Local preflight confirmed:
+
+```text
+0000:00:00.0 = AMD Ariel Root Complex [1022:13e0]
+```
+
+The installed `cyan-skillfish-governor-smu` v0.4.12 was also verified from exact upstream source to use the same `0xB8/0xBC` transport. It was temporarily quiesced before the active selector test to avoid index/data races.
+
+A bounded local transaction then used two exact upstream queue-0 addresses:
+
+```text
+old B8 / Q0 response = 0x03b10a68
+old BC               = 0x00000001
+selected B8 / Q0 arg = 0x03b10a48
+selected BC           = 0x00000000
+restored B8           = 0x03b10a68
+error                 = none
+```
+
+Only the index selector at PCI config `0xB8` was written. `0xBC` was read only. No SMU mailbox message, domain-6 write, or VCN-core access occurred.
+
+This changes the local status of the transport boundary:
+
+```text
+BC250_ROOT_B8_BC_SMN_TRANSPORT=LOCALLY_PROVEN
+```
+
+It does not import any later external result automatically:
+
+```text
+LOCAL_SMN_TRANSPORT_PROOF != LOCAL_DOMAIN6_POWER_PROOF
+LOCAL_SMN_TRANSPORT_PROOF != LOCAL_VCN_EXECUTION_PROOF
+```
+
+### Domain-6 status semantics for the next read-only stage
+
+The pinned external source documents the low-frame domain-6 sequencer and gives the following status interpretation:
+
+```text
+status @ 0x0006d190
+bit 8  = up-ack
+bit 12 = down-ack
+```
+
+It reports `0x01010101` as the persistent up-residue pattern for domains 0-6 on its tested matching platform, while a firmware-commanded-down domain 7 showed `0x01011010`.
+
+This is useful for selecting the next raw observation, but the semantic interpretation remains external until independently reproduced. The first local domain-6 probe will therefore record the raw `0x0006d190` value before deciding whether any power-state claim is justified.
 
 ### VCN register-file warning
 
@@ -80,19 +132,20 @@ software ring registration != ring hardware execution
 
 But the external direct-load implementation, firmware choice, SMU exploit, handler redirection, and ring execution remain outside current local authorization.
 
-### R115A conclusion
+### Current conclusion
 
-The highest-value next local boundary is a narrowly scoped, independently audited read-only observation of the domain-6 power sequencer using the correct BC-250 transport. Before that can happen, transport identity and access ordering must be proven statically.
+The transport boundary is now locally reproduced. The next local boundary is a narrowly scoped, independently audited read-only observation of domain-6 state through that proven transport.
 
 Current policy:
 
 ```text
+BC250_ROOT_B8_BC_SMN_TRANSPORT=LOCALLY_PROVEN
 EXTERNAL_DOMAIN6_MODEL=HIGH_PRIORITY_STATIC_GUIDE
-EXTERNAL_REPORTED_SUCCESS=NOT_LOCAL_PROOF
+EXTERNAL_REPORTED_DOMAIN6_STATE=NOT_LOCAL_PROOF
 RUN_EXTERNAL_ENABLE_TOOL=NO
 RUN_DIRECT_LOAD=NO
 RUN_SMU_HANDLER_REPOINT=NO
-NEXT_LOCAL_BOUNDARY=DOMAIN6_READ_ONLY_POWER_ORACLE
+NEXT_LOCAL_BOUNDARY=DOMAIN6_STATUS_READ_ONLY_RAW_OBSERVATION
 ```
 
 ## simpmix/bc250-encoding-decoding-fix
