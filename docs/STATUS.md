@@ -7,7 +7,7 @@
 - Source commit: `14c028f83498b2900fecd0940a058a3ac0622afe`
 - Tested running kernel: `7.2.1-ogc4.1.fc44.x86_64`
 - Tested board firmware: BIOS P3.00
-- Observed SMU firmware: `0x00580600` (88.6.0)
+- Observed SMU firmware: `0x00580600` (88.6.0 / 0.58.6.0)
 
 ## Confirmed software-side milestones
 
@@ -57,16 +57,20 @@ A prior bounded live read of register `0x00000ef3` returned `0x00000000` without
 A later hardened live transaction completed exactly:
 
 ```text
-fresh old       = 0x00000000
-target write    = 0x00080c40
-target readback = 0x00080c40
-restore write   = 0x00000000
-restore readback= 0x00000000
+fresh old        = 0x00000000
+target write     = 0x00080c40
+target readback  = 0x00080c40
+restore write    = 0x00000000
+restore readback = 0x00000000
 ```
 
 No retry loop was used. Emergency restore was not needed.
 
 This proves the NBIO register transaction path is live and that the original value was restored. It does not prove VCN whole-block power or any VCN execution state.
+
+### Post-live quarantine
+
+After the successful live experiment, the dedicated R113 manual-only BLS entry was removed. The boot environment was left with no automatic experimental selection. No additional NBIO, VCN-core, SMU/PSP, ring, or VCPU operation occurred during this quarantine step.
 
 ## Still unproven
 
@@ -78,6 +82,18 @@ VAAPI_HARDWARE_DECODE=UNPROVEN
 VAAPI_HARDWARE_ENCODE=UNPROVEN
 ```
 
-## Next research direction
+## Current stage
 
-The next useful boundary is VCN power/liveness rather than broader register experimentation. External BC-250 work on SMU domain-6 and direct VCN bring-up is being treated as static comparison material before any live adoption.
+The successful NBIO transaction is closed and the live entry has been quarantined. The next research boundary is VCN power/liveness.
+
+Before any broader live action, external BC-250 work on SMU domain-6, power sequencing, and direct VCN bring-up is being compared statically with the locally verified register and software-lifecycle findings.
+
+## Remaining major milestones
+
+The shortest plausible route still contains roughly five major technical boundaries, with additional safety/audit stages likely between them:
+
+1. stock recovery / post-R113 closure and static comparison,
+2. minimal VCN power/liveness probe design and audit,
+3. physical power/liveness proof,
+4. firmware/VCPU execution proof,
+5. ring execution followed by normal VA-API / FFmpeg validation.
