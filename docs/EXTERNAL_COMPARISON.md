@@ -130,6 +130,27 @@ DOMAIN6_SEQUENCER_UP_RESIDUE=LOCALLY_OBSERVED
 
 It does **not** yet justify `OUTER_WHOLE_BLOCK_VCN_POWER=PROVEN`. The same pinned external source explicitly records the unresolved contradiction that the domain-6 sequencer can look UP while VCN MMIO still appears CLOSED/all-ones, motivating a search for additional isolation/reset/state latches. Therefore this project keeps sequencer status, de-isolation, VCN register accessibility, VCPU execution, and ring execution as separate proof boundaries.
 
+### R117 local frame discriminator reproduction
+
+The pinned external work also reports that the same domain-6 sequencer offset is live only in the low SMN frame on the matching platform: `0x0006d1xx` carries the distinctive domain-6 values while `0x0116d1xx` reads dead-zero.
+
+The local card now independently reproduces that distinction:
+
+```text
+0x0006d190 -> 0x01010101
+0x0116d190 -> 0x00000000
+```
+
+The high-frame read was performed as a single bounded selector/read/restore transaction with the governor temporarily stopped and restored afterward. No SMU data write, mailbox command, or VCN-core access occurred.
+
+This upgrades the address-frame boundary:
+
+```text
+DOMAIN6_LOW_FRAME_SPELLING=LOCALLY_PROVEN
+```
+
+The next external comparison of interest is the wider domain-6 block. The pinned project reports repeated `(0x06900900, 0x000000e8)` templates and treats `0x06900900..0x0690090c` as a read-only candidate responder family for a possible isolation/clamp mechanism. That interpretation remains speculative locally: a future local read can establish whether the address responds, but not whether it is actually the VCN isolation latch.
+
 ### VCN register-file warning
 
 The external register-map work explicitly distinguishes VCN MMIO register-file offsets from SMN addresses. It reports that VCN MMIO reads can hang while the island is dead, and later can return uniform `0xffffffff` even after domain-6 clock/power work. This reinforces the local policy that direct VCN-core MMIO is not the next first-contact probe.
@@ -149,7 +170,7 @@ But the external direct-load implementation, firmware choice, SMU exploit, handl
 
 ### Current conclusion
 
-The BC-250 `0xB8/0xBC` transport and the external domain-6 `0x01010101` status signature have both now been locally reproduced. The next boundary is to distinguish sequencer-up residue from a genuinely de-isolated/access-ready VCN block without jumping directly to risky VCN-core MMIO.
+The BC-250 `0xB8/0xBC` transport, the external domain-6 `0x01010101` status signature, and the low-vs-high domain-6 frame discriminator have all now been locally reproduced. The next boundary is to distinguish sequencer-up residue from a genuinely de-isolated/access-ready VCN block without jumping directly to risky VCN-core MMIO.
 
 Current policy:
 
@@ -157,6 +178,7 @@ Current policy:
 BC250_ROOT_B8_BC_SMN_TRANSPORT=LOCALLY_PROVEN
 EXTERNAL_DOMAIN6_STATUS_SIGNATURE=LOCALLY_REPRODUCED
 DOMAIN6_SEQUENCER_UP_RESIDUE=LOCALLY_OBSERVED
+DOMAIN6_LOW_FRAME_SPELLING=LOCALLY_PROVEN
 OUTER_WHOLE_BLOCK_VCN_POWER=UNPROVEN
 RUN_EXTERNAL_ENABLE_TOOL=NO
 RUN_DIRECT_LOAD=NO
