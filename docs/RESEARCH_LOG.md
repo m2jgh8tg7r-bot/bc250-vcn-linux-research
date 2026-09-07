@@ -141,8 +141,55 @@ R114B_RESULT=STOCK_RECOVERY_FULL_PASS
 
 This closes the R113 live-test sequence without carrying the experimental amdgpu module into the next research stage.
 
+## R115A-R115B — BC-250 SMN transport preflight
+
+Static comparison with public BC-250 SMU tooling identified the board-specific SMN transport as the root-complex PCI configuration pair `0xB8/0xBC`, rather than assuming equivalence with a generic AMD SMN helper.
+
+The local `0000:00:00.0` function was confirmed as the AMD Ariel Root Complex. Passive reads then showed known BC-250 SMU mailbox addresses left in config dword `0xB8`, including queue-0 argument and response addresses.
+
+Because the installed `cyan-skillfish-governor-smu` v0.4.12 uses the same `0xB8/0xBC` transport, it was temporarily stopped before an active selector test. With the governor inactive, the passive pair remained stable for five one-second samples:
+
+```text
+B8 = 0x03b10a68
+BC = 0x00000001
+```
+
+No domain-6, VCN-core, or SMU mailbox command was issued during this preflight.
+
+## R115C — bounded local SMN transport proof
+
+A single locked selector/read/restore transaction was performed on the stock system using two known queue-0 SMU addresses:
+
+```text
+old selector          = 0x03b10a68   # Q0 response
+old data              = 0x00000001
+selected target       = 0x03b10a48   # Q0 argument
+selector readback     = 0x03b10a48
+target data           = 0x00000000
+restored selector     = 0x03b10a68
+error                 = none
+```
+
+Only PCI config `0xB8` was written. PCI config `0xBC` was read only; no SMU data register was written and no mailbox message was sent.
+
+The selector-dependent data change, exact selector readback, and exact restore establish the local BC-250 `0000:00:00.0` `0xB8/0xBC` SMN index/data path as live.
+
+Classification:
+
+```text
+R115C_RESULT=BOUNDED_LOCAL_BC250_SMN_TRANSPORT_PROOF_FULL_PASS
+```
+
+This is a transport result only:
+
+```text
+SMN_TRANSPORT_PROVEN != DOMAIN6_POWER_PROVEN
+SMN_TRANSPORT_PROVEN != VCN_VCPU_EXECUTION
+SMN_TRANSPORT_PROVEN != VCN_RING_EXECUTION
+```
+
 ## Current research direction
 
-The next major problem is not the NBIO doorbell-range transaction itself. It is identifying and minimally proving the actual VCN power/liveness condition before authorizing firmware/VCPU or ring execution.
+The next local boundary is a narrowly bounded read-only observation of the domain-6 sequencer through the now locally proven BC-250 SMN transport. The first candidate is the externally documented domain-6 status register, with raw-value observation kept separate from any later power-state interpretation.
 
-External SMU/domain-6 research is being used as static comparison material, but invasive external tooling is not treated as locally reproduced or automatically safe.
+External SMU/domain-6 research remains comparison material until the corresponding state is reproduced locally. Invasive external enable tooling is not treated as locally reproduced or automatically safe.
