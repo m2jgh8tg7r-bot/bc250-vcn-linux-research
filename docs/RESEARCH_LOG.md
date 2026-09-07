@@ -215,8 +215,42 @@ OUTER_WHOLE_BLOCK_VCN_POWER=UNPROVEN
 
 The whole-block power marker remains unproven because the external work itself documents a later state where the domain-6 sequencer reports the up-residue pattern while the VCN register block still appears closed, leaving isolation/reset/liveness as separate boundaries.
 
+## R117B — low-vs-high domain-6 frame discriminator
+
+A second bounded read targeted only the alternate full-width spelling of the same domain-6 status offset. The governor was temporarily quiesced, the SMN selector was confirmed stable, and the original selector was restored before the governor was restarted.
+
+Observed pair:
+
+```text
+low-frame  0x0006d190 -> 0x01010101
+high-frame 0x0116d190 -> 0x00000000
+```
+
+The high-frame transaction itself returned:
+
+```text
+old selector          = 0x03b10a68
+second old read       = 0x03b10a68
+selected target       = 0x0116d190
+raw data              = 0x00000000
+restored selector     = 0x03b10a68
+error                 = none
+governor after test   = active
+```
+
+This locally reproduces the pinned external low-frame discriminator and establishes the live domain-6 sequencer spelling on this card as the low SMN frame.
+
+Classification:
+
+```text
+R117B_RESULT=HIGH_FRAME_DEAD_ZERO_DISCRIMINATOR_FULL_PASS
+DOMAIN6_LOW_FRAME_SPELLING=LOCALLY_PROVEN
+```
+
+This remains a mapping/reachability result. It does not establish VCN de-isolation, register-file accessibility, VCPU execution, or ring execution.
+
 ## Current research direction
 
-The next question is no longer whether the BC-250 SMN transport reaches the domain-6 sequencer: it does. The next boundary is determining which additional read-only observation can distinguish sequencer-up residue from a genuinely accessible, de-isolated VCN block without jumping directly to risky VCN-core MMIO.
+The low-frame domain-6 sequencer path is now locally reproduced at both the status-value and frame-discriminator levels. The next safe boundary is to investigate whether any independently readable SMN responder corresponds to the externally suspected isolation/reset family, while keeping speculative unknown-register writes and direct VCN-core MMIO out of scope.
 
 External SMU/domain-6 research remains comparison material for those later boundaries. Invasive external enable tooling is not treated as locally reproduced or automatically safe.
