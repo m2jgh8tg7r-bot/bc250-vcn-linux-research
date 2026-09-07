@@ -188,8 +188,35 @@ SMN_TRANSPORT_PROVEN != VCN_VCPU_EXECUTION
 SMN_TRANSPORT_PROVEN != VCN_RING_EXECUTION
 ```
 
+## R116B — first local domain-6 status observation
+
+Using the locally proven `0xB8/0xBC` transport, one bounded selector/read/restore transaction targeted only the externally documented domain-6 status register:
+
+```text
+target SMN            = 0x0006d190
+selector readback     = 0x0006d190
+raw status            = 0x01010101
+restored selector     = 0x03b10a68
+restored prior data   = 0x00000001
+error                 = none
+```
+
+No `0xBC` write, SMU mailbox command, domain-6 write, VCN-core MMIO access, firmware load, or ring execution occurred.
+
+The raw value exactly matches the `0x01010101` domain-6 up-residue signature reported by the pinned matching-platform external research. This locally reproduces the **sequencer status signature**, not yet the complete VCN power state.
+
+Classification:
+
+```text
+R116B_RESULT=LOCAL_DOMAIN6_STATUS_UP_RESIDUE_MATCH_PASS
+DOMAIN6_SEQUENCER_UP_RESIDUE=LOCALLY_OBSERVED
+OUTER_WHOLE_BLOCK_VCN_POWER=UNPROVEN
+```
+
+The whole-block power marker remains unproven because the external work itself documents a later state where the domain-6 sequencer reports the up-residue pattern while the VCN register block still appears closed, leaving isolation/reset/liveness as separate boundaries.
+
 ## Current research direction
 
-The next local boundary is a narrowly bounded read-only observation of the domain-6 sequencer through the now locally proven BC-250 SMN transport. The first candidate is the externally documented domain-6 status register, with raw-value observation kept separate from any later power-state interpretation.
+The next question is no longer whether the BC-250 SMN transport reaches the domain-6 sequencer: it does. The next boundary is determining which additional read-only observation can distinguish sequencer-up residue from a genuinely accessible, de-isolated VCN block without jumping directly to risky VCN-core MMIO.
 
-External SMU/domain-6 research remains comparison material until the corresponding state is reproduced locally. Invasive external enable tooling is not treated as locally reproduced or automatically safe.
+External SMU/domain-6 research remains comparison material for those later boundaries. Invasive external enable tooling is not treated as locally reproduced or automatically safe.
