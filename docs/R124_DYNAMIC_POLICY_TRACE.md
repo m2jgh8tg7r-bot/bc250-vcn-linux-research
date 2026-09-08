@@ -90,17 +90,48 @@ The nearby sequence then loads event/index `0x18`, loads the function pointer st
 0x000181dc -> 0x0002e448
 ```
 
-So the policy applicator function pointer is explicitly passed through a registration-shaped `FUN_0001b1e4(0x18, callback)` call during init. The exact abstract semantics of `FUN_0001b1e4` are not claimed here until that helper is independently decompiled, but the argument shape is consistent with the many other ID+function-pointer call sites in the firmware.
+So the policy applicator function pointer is explicitly passed through a registration-shaped `FUN_0001b1e4(0x18, callback)` call during init. The normal command/control path also converges on profile 0: `FUN_0002e0e8` calls `FUN_0002e190(0)`, which passes that zero unchanged to `FUN_0002e69c`.
 
-The normal command/control path also converges on profile 0. `FUN_0002e0e8` calls:
+## R124E — exact profile-0 contents and callback table setter
+
+R124E statically recovered the exact profile-0 source values loaded from:
 
 ```text
-FUN_0002e190(0)
+profile base       = 0x00007b54
+profile value base = 0x00007b9c
 ```
 
-and `FUN_0002e190` passes that zero unchanged to `FUN_0002e69c`.
+All 20 recovered source dwords are zero. In particular, the Domain6-related entries are:
 
-This materially narrows the next question: the clean live Domain6 baseline should now be compared against the **profile-0 source data** at the recovered profile table, rather than against zero-filled mutable runtime storage.
+```text
+slot 0x18 -> 0
+slot 0x16 -> 0
+slot 0x17 -> 0
+```
+
+Therefore profile 0 does **not** explain the clean live `slot17-only` Domain6 baseline by containing a nonzero slot-17 target. The cause must lie elsewhere in runtime state, a separate control path, initial hardware residue, or another policy layer.
+
+R124E also independently decompiled `FUN_0001b1e4`:
+
+```c
+void FUN_0001b1e4(int index, undefined4 fn)
+{
+    *(undefined4 *)(PTR_DAT_00017090 + index * 4) = fn;
+}
+```
+
+This closes the earlier call-shape inference: `FUN_0001b1e4` is a generic indexed function-pointer table setter. The init sequence therefore stores `FUN_0002e448` into table entry/index `0x18`.
+
+Classification:
+
+```text
+PROFILE0_ALL_20_SOURCE_VALUES_ZERO=PROVEN_STATIC
+DOMAIN6_PROFILE0_SLOT18=0
+DOMAIN6_PROFILE0_SLOT16=0
+DOMAIN6_PROFILE0_SLOT17=0
+FUN_0001b1e4=INDEXED_FUNCTION_POINTER_TABLE_SETTER
+POLICY_APPLICATOR_REGISTERED_AT_INDEX_0x18=PROVEN_STATIC
+```
 
 ## Proof boundary
 
@@ -117,4 +148,4 @@ VCN_RING_HARDWARE_EXECUTION=UNPROVEN
 
 ## Next static task
 
-Recover profile-0 values from the source table at `0x00007b54`, map its 20 values onto the already recovered slot-ID order, and compare slot `0x16`, `0x17`, and `0x18` directly. Separately decompile `FUN_0001b1e4` to close the callback-registration semantics without relying on call-shape inference.
+Since profile 0 itself is all-zero, the next task is to trace who consumes function-pointer table entry `0x18`, and to identify any independent runtime path that can assert Domain6 slot 17 outside the profile-0 target array. Static tracing should continue before any new live Domain6 write or VCN-core access is considered.
