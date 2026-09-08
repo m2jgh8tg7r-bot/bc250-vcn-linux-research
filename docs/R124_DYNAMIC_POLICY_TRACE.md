@@ -69,9 +69,38 @@ FUN_0002e190(param)
 
 The wrapper passes `param` unchanged into the profile loader.
 
-A second call to `FUN_0002e69c` exists at `0x0002e3ed` in code not currently assigned to a function by the existing Ghidra project. Nearby, `FUN_0002e448` appears as a parameter reference around `0x0002e3f5` associated with a call to `FUN_0001b1e4`, and a data reference to the applicator exists at `0x000181dc`. This is a strong lead for init/callback registration and is the next static trace target.
-
 The dynamic setter `FUN_0002e6c8` has no direct xrefs in the current database; this does not establish that it is unused because callback/table dispatch remains possible.
+
+## R124D — initial profile and callback-shaped init path
+
+The previously orphaned region around `0x0002e3e8` is now resolved at the instruction level.
+
+It performs:
+
+```text
+movi a10, 0
+call FUN_0002e69c
+```
+
+Therefore the init path directly loads **profile 0**.
+
+The nearby sequence then loads event/index `0x18`, loads the function pointer stored at `0x000181dc`, and calls `FUN_0001b1e4`:
+
+```text
+0x000181dc -> 0x0002e448
+```
+
+So the policy applicator function pointer is explicitly passed through a registration-shaped `FUN_0001b1e4(0x18, callback)` call during init. The exact abstract semantics of `FUN_0001b1e4` are not claimed here until that helper is independently decompiled, but the argument shape is consistent with the many other ID+function-pointer call sites in the firmware.
+
+The normal command/control path also converges on profile 0. `FUN_0002e0e8` calls:
+
+```text
+FUN_0002e190(0)
+```
+
+and `FUN_0002e190` passes that zero unchanged to `FUN_0002e69c`.
+
+This materially narrows the next question: the clean live Domain6 baseline should now be compared against the **profile-0 source data** at the recovered profile table, rather than against zero-filled mutable runtime storage.
 
 ## Proof boundary
 
@@ -88,4 +117,4 @@ VCN_RING_HARDWARE_EXECUTION=UNPROVEN
 
 ## Next static task
 
-Trace the orphan/init region around `0x0002e3ed..0x0002e3f5`, the callback cell at `0x000181dc`, and the caller chain that selects the initial profile. The goal is to explain why the clean live Domain6 baseline singles out slot17 without treating mutable image defaults as runtime-policy proof.
+Recover profile-0 values from the source table at `0x00007b54`, map its 20 values onto the already recovered slot-ID order, and compare slot `0x16`, `0x17`, and `0x18` directly. Separately decompile `FUN_0001b1e4` to close the callback-registration semantics without relying on call-shape inference.
