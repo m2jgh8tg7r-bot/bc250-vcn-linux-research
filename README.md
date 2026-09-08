@@ -44,6 +44,7 @@ VAAPI_HARDWARE_ENCODE=UNPROVEN
 - [Reproducibility](docs/REPRODUCIBILITY.md)
 - [Research log](docs/RESEARCH_LOG.md)
 - [External research comparison](docs/EXTERNAL_COMPARISON.md)
+- [R124 dynamic Domain6 policy trace](docs/R124_DYNAMIC_POLICY_TRACE.md)
 - [Patch notes](patches/README.md)
 - [Sanitized log publication policy](logs/README.md)
 
