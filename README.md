@@ -4,7 +4,11 @@ Reverse-engineering and Linux enablement research for AMD BC-250 / Cyan Skillfis
 
 This repository documents reproducible findings from a staged Linux/amdgpu bring-up effort. The project separates software registration, firmware enrollment, power state, VCPU execution, ring execution, and end-user VA-API functionality instead of treating them as one milestone.
 
-## Current status
+## Latest handoff — 2026-09-14
+
+[Research update through R169 / ChatGPT向け引き継ぎ](docs/CHATGPT_HANDOFF_R169.md) supersedes the historical status below. R141 guarded software initialization and normal recovery were observed live; R157 is prepared but uninstalled and unbooted; R158–R169 add static and bounded CPU-model evidence. VCN hardware execution remains unproven. Research is stopped awaiting the next user instruction.
+
+## Historical status
 
 Confirmed on the tested BC-250:
 
