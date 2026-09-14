@@ -6,7 +6,9 @@ This repository documents reproducible findings from a staged Linux/amdgpu bring
 
 ## Latest handoff — 2026-09-14
 
-[R173 live findings and R180 next test / 最新引き継ぎ](docs/CHATGPT_HANDOFF_R180.md) supersedes the historical status below. R173 verified the host request and CPU payload comparison, but PSP returned `0xffff0008` and zero firmware placement. Normal recovery and user-observed display stability were confirmed. R180 is prepared and statically verified, but uninstalled and unbooted; it adds comparison logs to existing firmware loads. PSP VCN acceptance and VCN hardware execution remain unproven. The next step is attended R180 validation.
+[R180 live findings and R182 next experiment / 最新引き継ぎ](docs/CHATGPT_HANDOFF_R182.md) supersedes the historical status below. R180 captured 11 paired PSP load observations: five non-VCN requests met the project's successful-response conditions, while VCN returned `0xffff0008` and zero placement. Normal recovery and user-reported display stability were confirmed. R182 prepares a fixed-R180 cold-start comparison; it has not been executed, and root-only boot-file rereads still require local terminal authentication. VCN acceptance and hardware execution remain unproven.
+
+[Previous R180 pre-boot handoff](docs/CHATGPT_HANDOFF_R180.md) remains available as history.
 
 [Previous R169 handoff](docs/CHATGPT_HANDOFF_R169.md) remains available as history.
 
