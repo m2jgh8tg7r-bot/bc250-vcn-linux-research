@@ -6,6 +6,8 @@ This repository documents reproducible findings from a staged Linux/amdgpu bring
 
 ## Latest handoff — 2026-09-14
 
+[R195–R197 live API results and prepared firmware comparison](docs/CHATGPT_HANDOFF_R197.md) records measured zero VCN/JPEG available rings and VIDEO_CAPS EINVAL in the normal environment, the external compute-driver update, and a single official predecessor response-only experiment. The candidate image and parser are verified locally; installation and boot remain pending.
+
 [R191–R194 additional evidence checks / 最新引き継ぎ](docs/CHATGPT_HANDOFF_R194.md) adds upstream evidence for separating return codes, PSP responses, harvest metadata, codec lists, and actual VCN execution. Source versions are kept distinct; current early-sysfs behavior is not assigned to older live captures. No new VCN experiment or image was made, and no better-supported alternate firmware candidate emerged.
 
 [R186–R190 support evidence and upstream history](docs/CHATGPT_HANDOFF_R190.md) preserves the AMD product-support statement, standard-PSP default history, firmware catalogue, and five-project claim audit.
@@ -75,3 +77,4 @@ The purpose of publication is to make the work reusable by the wider BC-250 and 
 ## License
 
 GPL-3.0. See [LICENSE](LICENSE).
+
