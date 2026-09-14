@@ -6,7 +6,9 @@ This repository documents reproducible findings from a staged Linux/amdgpu bring
 
 ## Latest handoff — 2026-09-14
 
-[R186–R190 support evidence and upstream history / 最新引き継ぎ](docs/CHATGPT_HANDOFF_R190.md) updates the research direction. An AMD developer's July 2026 reply identifies VCN as outside the BC-250 product definition and states that compatible firmware was unavailable. Upstream history confirms the Skillfish2 standard-PSP default, while the current multimedia registration still omits VCN 2.0.3. Five public project documentation sets were audited; no unchanged-standard-PSP acceptance profile applicable to the tested board was obtained. No new hardware experiment or image was made. Physical failure and VCN execution remain unproven.
+[R191–R194 additional evidence checks / 最新引き継ぎ](docs/CHATGPT_HANDOFF_R194.md) adds upstream evidence for separating return codes, PSP responses, harvest metadata, codec lists, and actual VCN execution. Source versions are kept distinct; current early-sysfs behavior is not assigned to older live captures. No new VCN experiment or image was made, and no better-supported alternate firmware candidate emerged.
+
+[R186–R190 support evidence and upstream history](docs/CHATGPT_HANDOFF_R190.md) preserves the AMD product-support statement, standard-PSP default history, firmware catalogue, and five-project claim audit.
 
 [Previous R182 results and R183–R185 audit](docs/CHATGPT_HANDOFF_R185.md) preserves the live response baseline, normal recovery, and 21-version firmware audit.
 
