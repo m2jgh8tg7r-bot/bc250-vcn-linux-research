@@ -6,7 +6,9 @@ This repository documents reproducible findings from a staged Linux/amdgpu bring
 
 ## Latest handoff — 2026-09-14
 
-[R180 live findings and R182 next experiment / 最新引き継ぎ](docs/CHATGPT_HANDOFF_R182.md) supersedes the historical status below. R180 captured 11 paired PSP load observations: five non-VCN requests met the project's successful-response conditions, while VCN returned `0xffff0008` and zero placement. Normal recovery and user-reported display stability were confirmed. R182 prepares a fixed-R180 cold-start comparison; it has not been executed, and root-only boot-file rereads still require local terminal authentication. VCN acceptance and hardware execution remain unproven.
+[R182 completed results and R183–R185 static audit / 最新引き継ぎ](docs/CHATGPT_HANDOFF_R185.md) supersedes the historical status below. R182's user-reported power-removal boot matched all 11 R180 response patterns: VCN remained at `0xffff0008` with zero placement. Normal recovery and user-reported display stability were confirmed. The new audit checked 21 distinct official historical VCN payloads and documented fixed-parser limitations and next-experiment prerequisites. Cyan firmware compatibility and VCN execution remain unproven; no alternate image has been prepared.
+
+[Previous R182 pre-boot handoff](docs/CHATGPT_HANDOFF_R182.md) remains available as history.
 
 [Previous R180 pre-boot handoff](docs/CHATGPT_HANDOFF_R180.md) remains available as history.
 
