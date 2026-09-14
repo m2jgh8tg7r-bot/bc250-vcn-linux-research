@@ -6,13 +6,15 @@ This repository documents reproducible findings from a staged Linux/amdgpu bring
 
 ## Latest handoff — 2026-09-14
 
-[Research update through R169 / ChatGPT向け引き継ぎ](docs/CHATGPT_HANDOFF_R169.md) supersedes the historical status below. R141 guarded software initialization and normal recovery were observed live; R157 is prepared but uninstalled and unbooted; R158–R169 add static and bounded CPU-model evidence. VCN hardware execution remains unproven. Research is stopped awaiting the next user instruction.
+[R173 live findings and R180 next test / 最新引き継ぎ](docs/CHATGPT_HANDOFF_R180.md) supersedes the historical status below. R173 verified the host request and CPU payload comparison, but PSP returned `0xffff0008` and zero firmware placement. Normal recovery and user-observed display stability were confirmed. R180 is prepared and statically verified, but uninstalled and unbooted; it adds comparison logs to existing firmware loads. PSP VCN acceptance and VCN hardware execution remain unproven. The next step is attended R180 validation.
+
+[Previous R169 handoff](docs/CHATGPT_HANDOFF_R169.md) remains available as history.
 
 ## Historical status
 
 Confirmed on the tested BC-250:
 
-- Cyan Skillfish exposes a VCN 2.x IP block and accepts the expected VCN 2.0.3 firmware image.
+- Cyan Skillfish exposes a VCN 2.x IP block, and the host driver can acquire and parse the selected firmware image. This is not PSP acceptance: R171/R173 returned a nonzero PSP status and zero placement.
 - Real VCN software lifecycle (`early_init`, `sw_init`, `sw_fini`) can run under a quarantined custom amdgpu.
 - VCN software rings (`vcn_dec`, `vcn_enc0`, `vcn_enc1`) are registered, but hardware IB execution remains deliberately blocked.
 - Automatic Cyan PSP VCN firmware enrollment can be suppressed for controlled experiments.
