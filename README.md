@@ -6,7 +6,9 @@ This repository documents reproducible findings from a staged Linux/amdgpu bring
 
 ## Latest handoff — 2026-09-14
 
-[R182 completed results and R183–R185 static audit / 最新引き継ぎ](docs/CHATGPT_HANDOFF_R185.md) supersedes the historical status below. R182's user-reported power-removal boot matched all 11 R180 response patterns: VCN remained at `0xffff0008` with zero placement. Normal recovery and user-reported display stability were confirmed. The new audit checked 21 distinct official historical VCN payloads and documented fixed-parser limitations and next-experiment prerequisites. Cyan firmware compatibility and VCN execution remain unproven; no alternate image has been prepared.
+[R186–R190 support evidence and upstream history / 最新引き継ぎ](docs/CHATGPT_HANDOFF_R190.md) updates the research direction. An AMD developer's July 2026 reply identifies VCN as outside the BC-250 product definition and states that compatible firmware was unavailable. Upstream history confirms the Skillfish2 standard-PSP default, while the current multimedia registration still omits VCN 2.0.3. Five public project documentation sets were audited; no unchanged-standard-PSP acceptance profile applicable to the tested board was obtained. No new hardware experiment or image was made. Physical failure and VCN execution remain unproven.
+
+[Previous R182 results and R183–R185 audit](docs/CHATGPT_HANDOFF_R185.md) preserves the live response baseline, normal recovery, and 21-version firmware audit.
 
 [Previous R182 pre-boot handoff](docs/CHATGPT_HANDOFF_R182.md) remains available as history.
 
