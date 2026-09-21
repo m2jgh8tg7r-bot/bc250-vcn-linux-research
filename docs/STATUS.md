@@ -1,3 +1,5 @@
+> **2026-09-22 R223:** Disambiguate saved PSP type 0x13 as debug-unlock candidate; downgrade VCN fw_type numeric match. [Evidence and limits](CHATGPT_HANDOFF_R223.md).
+
 > **2026-09-22 R222:** Saved PSP directory type 0x13 candidate found and checksum verified; semantic identity remains unproven. [Evidence and limits](CHATGPT_HANDOFF_R222.md).
 
 > **2026-09-22 R221:** Update reusable packet with R220 external PSP findings [Evidence and limits](CHATGPT_HANDOFF_R221.md).
