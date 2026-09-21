@@ -1,3 +1,5 @@
+> **2026-09-22 R214:** Directory/body checksums verify that the second same-version SMU entry is zero-filled except version words and a marker. Cyan Linux callbacks do not establish the BIOS load range. [Evidence and live-test readiness](docs/CHATGPT_HANDOFF_R214.md).
+
 > **2026-09-22 R213:** Saved SMU header and checksum delimit a 256-KiB body plus a retained 256-byte signature trailer. Actual loader/runtime extent remains unproven. [Evidence and limits](docs/CHATGPT_HANDOFF_R213.md).
 
 # BC-250 VCN Linux research

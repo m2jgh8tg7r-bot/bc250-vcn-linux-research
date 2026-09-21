@@ -1,0 +1,86 @@
+{
+  "directory_offset": "0x8e0000",
+  "entry_count": 19,
+  "directory_checksum_matches": true,
+  "entries": [
+    {
+      "type": "0x1",
+      "index": 0,
+      "rom_offset": "0x8e0400",
+      "directory_size": 43008,
+      "ps1_magic_at_header_0x10": false,
+      "plaintext_loader_identified": false
+    },
+    {
+      "type": "0x8",
+      "index": 2,
+      "rom_offset": "0x8ff000",
+      "directory_size": 262656,
+      "header_rom_size": 262656,
+      "version": "0x580600",
+      "encrypted": 0,
+      "compressed": 0,
+      "signed": 1,
+      "signature_type": 0,
+      "body_size": 262144,
+      "body_sha256": "5c805026581ace101ba43ef4d0f6b34354f4a61461a1c78d2fa6a335a53d9936",
+      "body_checksum_matches": true,
+      "nonzero_byte_count": 144782
+    },
+    {
+      "type": "0x12",
+      "index": 4,
+      "rom_offset": "0x93f700",
+      "directory_size": 262656,
+      "header_rom_size": 262656,
+      "version": "0x580600",
+      "encrypted": 0,
+      "compressed": 0,
+      "signed": 1,
+      "signature_type": 0,
+      "body_size": 262144,
+      "body_sha256": "f22e2815c99e9bf4a4fbdcc8d6498d3eee59181dd46185f83a0130ff73190b06",
+      "body_checksum_matches": true,
+      "nonzero_byte_count": 8,
+      "zero_interval": [
+        "0x8",
+        "0x3fffc"
+      ],
+      "first_two_words": [
+        "0x580600",
+        "0x580600"
+      ],
+      "last_word": "0x11223344"
+    }
+  ],
+  "smu_body_different_bytes": 144782,
+  "first_difference": "0x100",
+  "last_difference": "0x3ffff",
+  "hardware_access": false,
+  "boot_selection_proven": false,
+  "runtime_identity_proven": false,
+  "distribution_checks": [
+    {
+      "distribution": "Robin1.00",
+      "structural_audit_matches": true
+    },
+    {
+      "distribution": "Robin3.00",
+      "structural_audit_matches": true
+    }
+  ],
+  "negative_checks": [
+    {
+      "changed_region": "directory_entry",
+      "rejected": true
+    },
+    {
+      "changed_region": "type8_body",
+      "rejected": true
+    },
+    {
+      "changed_region": "type12_body",
+      "rejected": true
+    }
+  ]
+}
