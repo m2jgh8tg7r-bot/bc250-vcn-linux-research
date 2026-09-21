@@ -4,7 +4,7 @@
 
 ## 新しい解析範囲と既存証拠
 
-R125U/WとR146が既に示した「selector A!=Bでのみ20項目を適用し最後にA=Bとする」「setterはtargetを変えるがselectorを更新しない」「callback slot24登録」を再発見として数えない。今回はfeature状態遷移との接続、未解読入口、無効化・resetとの順序を追加した。
+R125U/W・R146・R147が既に示した「selector A!=Bでのみ20項目を適用し最後にA=Bとする」「setterはtargetを変えるがselectorを更新しない」「callback slot24登録」を再発見として数えない。今回はfeature状態遷移との接続、未解読入口、無効化・resetとの順序を追加した。
 
 既存Ghidraには`0x1DA78..0x1DAC3`の命令がなく、`0x1D940`への参照にenable側が欠けていた。二つの保存handler pointer（`0x730C`、`0x7644`）と`0x1DA78`のentry bytesを根拠にこの76-byte区間だけを複製project上で解読。`readOnly`セッション終了時に変更を破棄し、新しい関数境界は作成していない。結果は次の通り。
 
@@ -46,7 +46,7 @@ descriptor6を含むが、これはSSC様設定の経路であり、その存在
 
 そのため、callback未登録だけでは、実際のapplicator entryでもA!=Bだったという条件下での不適用を説明できない。一方、保存されたgate readbackはそのentryでの値ではない。
 
-CPUだけの抽象順序モデルで、readback後・setterのtarget store前に一回のbackground applyが完了すると、旧target0を適用してA=Bとし、後のdirect applyがskipする、という履歴が保存されたsoftware fieldsと一致することを確認した。background applyなしのモデルではdirect applyが1250を処理するので一致しない。
+この順序仮説とCPUモデルは既存R147の572ケース監査で確認済みであり、新発見ではない。今回の単純化した再検算でも、readback後・setterのtarget store前に一回のbackground applyが完了すると、旧target0を適用してA=Bとし、後のdirect applyがskipする、という履歴が保存されたsoftware fieldsと一致することを確認した。background applyなしのモデルではdirect applyが1250を処理するので一致しない。
 
 これは**CONSISTENT_WITH**の反例モデル。実際にそのcallbackが動いた証明、ハードウェアcode変換のシミュレーション、排他・割込みモデルではない。別firmware、別writer、reset、観測時刻の違い等を排除しない。旧実験の再実施には進まない。
 
