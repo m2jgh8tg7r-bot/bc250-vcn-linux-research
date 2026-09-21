@@ -24,7 +24,7 @@ PROVEN_STATICALLY: feature表index4はenable `0x23C24` / disable `0x23C34`。ena
 
 命令中のbaseは`0xF71C`なので、そこでのoffset `0x8C/0x76/0x74`をcanonical baseへ正規化した。usedならpower-onする処理ではなく、power-off要求を抑制する処理である。VCNのjobやVCPU実行状態を直接pollする判定ではない。
 
-Domain6に対応するslotは`0x16/0x17/0x18`。旧R125Bのcached codeは12/0/14だが、同時点のmode `+0x98`は揃っていない。mode0の非zero codeがあればusedになるという条件は示せても、旧実機で実際にどちらへ分岐したかは断定しない。
+Domain6に対応するslotは`0x16/0x17/0x18`。旧R125Bに保存されたslot codeは`0x12/0x00/0x14`（十進18/0/20）だが、同時点のmode `+0x98`は揃っていない。mode0の非zero codeがあればusedになるという条件は示せても、旧実機で実際にどちらへ分岐したかは断定しない。
 
 ## modeと周波数値の由来
 
@@ -46,3 +46,5 @@ REJECTED=FUNCTION_RETURN_ALONE_PROVES_PHYSICAL_POWER
 UNPROVEN=RUNTIME_FLAGS_WHOLE_VCN_POWER_EXECUTION
 NEXT=SAVED_METRICS_ABI_AUDIT
 ```
+
+2026-09-21 R207監査時訂正: 上記codeの16進表記を明示。以前の12/0/14表記は基数が不明瞭だった。保存レジスターcodeとSMU cached fieldの同時一致は別の証拠を要する。
