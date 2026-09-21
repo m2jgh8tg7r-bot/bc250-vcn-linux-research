@@ -1,0 +1,183 @@
+R210 COMMITTED SOURCE / SAVED REPORT ONLY; NO HARDWARE ACCESS
+{
+  "kernel_commit": "0bb924b042ab85b8f529aed6e4f3e24750584276",
+  "files": [
+    {
+      "path": "drivers/crypto/ccp/sp-pci.c",
+      "sha256": "58b1b12be5ccd2702bc26fa9a52a717a2446f1889c272da913fa530b9acd3bea",
+      "matched_lines": [
+        {
+          "line": 277,
+          "text": "sp->io_map = iomap_table[sp->dev_vdata->bar];"
+        },
+        {
+          "line": 484,
+          "text": ".bar = 2,"
+        },
+        {
+          "line": 490,
+          "text": ".bar = 2,"
+        },
+        {
+          "line": 499,
+          "text": ".bar = 2,"
+        },
+        {
+          "line": 505,
+          "text": ".bar = 2,"
+        },
+        {
+          "line": 514,
+          "text": ".bar = 2,"
+        },
+        {
+          "line": 523,
+          "text": ".bar = 2,"
+        },
+        {
+          "line": 529,
+          "text": ".bar = 2,"
+        },
+        {
+          "line": 535,
+          "text": ".bar = 2,"
+        },
+        {
+          "line": 541,
+          "text": ".bar = 2,"
+        },
+        {
+          "line": 547,
+          "text": ".bar = 2,"
+        }
+      ]
+    },
+    {
+      "path": "drivers/crypto/ccp/ccp-dev.h",
+      "sha256": "3c54f16b89c8007220e9269366630bd1103ee85a10d6d015f7fdc80bdbf4a2a7",
+      "matched_lines": [
+        {
+          "line": 42,
+          "text": "#define TRNG_OUT_REG\t\t\t0x00c"
+        },
+        {
+          "line": 80,
+          "text": "#define CMD5_Q_STATUS_BASE\t\t0x0100"
+        },
+        {
+          "line": 94,
+          "text": "#define CMD5_Q_STATUS_INCR\t\t0x1000"
+        }
+      ]
+    },
+    {
+      "path": "drivers/crypto/ccp/ccp-dev-v5.c",
+      "sha256": "ded7173a7944a67cd0faad2bf8feaade06b038a1ee227269d640ebffe87d0eac",
+      "matched_lines": [
+        {
+          "line": 844,
+          "text": "cmd_q->reg_control = ccp->io_regs +"
+        },
+        {
+          "line": 845,
+          "text": "CMD5_Q_STATUS_INCR * (i + 1);"
+        },
+        {
+          "line": 852,
+          "text": "cmd_q->reg_status = cmd_q->reg_control + CMD5_Q_STATUS_BASE;"
+        }
+      ]
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_doorbell_mgr.c",
+      "sha256": "94c9cfdca83d336c8fae56dac7549eaa63479a115f918eb66e9006214af4d7fc",
+      "matched_lines": [
+        {
+          "line": 198,
+          "text": "adev->doorbell.base = 0;"
+        },
+        {
+          "line": 199,
+          "text": "adev->doorbell.size = 0;"
+        },
+        {
+          "line": 210,
+          "text": "adev->doorbell.base = pci_resource_start(adev->pdev, 2);"
+        },
+        {
+          "line": 211,
+          "text": "adev->doorbell.size = pci_resource_len(adev->pdev, 2);"
+        }
+      ]
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_device.c",
+      "sha256": "0b3a8ebd2bf78d28dc30f4d89514a49164dd71b2cc8f7c87920d4ca00eacf436",
+      "matched_lines": [
+        {
+          "line": 1271,
+          "text": "if (adev->asic_type >= CHIP_BONAIRE)"
+        },
+        {
+          "line": 3904,
+          "text": "if (adev->asic_type >= CHIP_BONAIRE) {"
+        },
+        {
+          "line": 3905,
+          "text": "adev->rmmio_base = pci_resource_start(adev->pdev, 5);"
+        },
+        {
+          "line": 3906,
+          "text": "adev->rmmio_size = pci_resource_len(adev->pdev, 5);"
+        },
+        {
+          "line": 3908,
+          "text": "adev->rmmio_base = pci_resource_start(adev->pdev, 2);"
+        },
+        {
+          "line": 3909,
+          "text": "adev->rmmio_size = pci_resource_len(adev->pdev, 2);"
+        }
+      ]
+    }
+  ],
+  "hardware_access": false,
+  "external_report_sha256": "07a503338d71231731d5573a3cfae765011f804c2e741623efe99eb286d4b2d6",
+  "stored_external_manual": {
+    "commit": "6a460f1b7abc7577f25f90b501a9f54a410f161b",
+    "sha256": "bb7078baf37b38be8e8aea204046b3c95ebafa21c7c331ee3addcad94235fb65",
+    "local_measurement": false
+  },
+  "independent_local_full_bar2_capture_found": false
+}
+
+External scan provenance:
+{
+  "url": "https://raw.githubusercontent.com/Shalasere/bc250-vcn-research/edb222c65477b6ebc63834ef3562855009179539/code/toctou-analysis/ccp_bar_scan.py",
+  "git_blob": "269235b150887c0828ec4416eca639f41cb0d8c7",
+  "sha256": "7448be1d8a66f0fb98fafafd20a2175d6fc7269a7f1ec02fb8d4b0a777d8843b",
+  "executed": false
+}
+
+Static acquisition-method audit:
+{
+  "parsed_not_executed": true,
+  "functions": [
+    "r32",
+    "scan_bar",
+    "main"
+  ],
+  "contains_pack_into_writes": 4,
+  "scan_range": {
+    "BAR2": "0x100000",
+    "BAR5": "resource-file size (external report: 8 KiB)"
+  },
+  "candidate_live_filter": "value != 0xffffffff AND value != 0",
+  "max_printed_region_bytes": 256,
+  "write_test_range": "0x000..0x1ff",
+  "queue_bases_outside_write_test": true,
+  "device_enable_and_pci_command_changes": true,
+  "multiple_read_passes": true,
+  "raw_full_bar_snapshot_written_by_script": false,
+  "runtime_execution_proven": false
+}
