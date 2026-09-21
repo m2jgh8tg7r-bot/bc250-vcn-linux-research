@@ -1,3 +1,5 @@
+> **2026-09-22 R221:** Update reusable packet with R220 external PSP findings [Evidence and limits](docs/CHATGPT_HANDOFF_R221.md).
+
 > **2026-09-22 R220:** External evidence audit PSP AUTOLOAD fw_type 13 root clamp priority no hardware mutation [Evidence and limits](docs/CHATGPT_HANDOFF_R220.md).
 
 > **2026-09-22 R219:** Reusable R218 continuation packet for ChatGPT review and next-week direction setting. [Evidence and limits](docs/CHATGPT_HANDOFF_R219.md).
