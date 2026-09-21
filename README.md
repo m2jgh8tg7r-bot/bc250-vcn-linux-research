@@ -1,3 +1,5 @@
+> **2026-09-22 R222:** Saved PSP directory type 0x13 candidate found and checksum verified; semantic identity remains unproven. [Evidence and limits](docs/CHATGPT_HANDOFF_R222.md).
+
 > **2026-09-22 R221:** Update reusable packet with R220 external PSP findings [Evidence and limits](docs/CHATGPT_HANDOFF_R221.md).
 
 > **2026-09-22 R220:** External evidence audit PSP AUTOLOAD fw_type 13 root clamp priority no hardware mutation [Evidence and limits](docs/CHATGPT_HANDOFF_R220.md).
