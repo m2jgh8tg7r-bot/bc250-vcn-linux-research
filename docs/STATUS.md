@@ -2,6 +2,8 @@
 
 ## Latest research — 2026-09-21
 
+[R210: Session15 BAR/window evidence audit](CHATGPT_HANDOFF_R210.md) distinguishes PSP/CCP and GPU BAR identities. The saved external scan filters out both zero and all-ones values, rereads regions, and includes writes outside the queue bases. Its summary does not establish a complete all-ones snapshot or queue non-writability. Only static inspection was performed; the external script was not run.
+
 [R209: saved Domain6 status predicates](CHATGPT_HANDOFF_R209.md) shows that historical R125A/B values already satisfy the fixed helper's request1 polling predicates. Success or the same status value alone cannot establish a new power transition. Together with R207–R208, this tightens the observation requirements while preserving all physical-power and execution boundaries. No new hardware access occurred.
 
 [R208: observation and feature contract](CHATGPT_HANDOFF_R208.md) connects saved profile targets to the metrics producer: DCLK's target can stay 1111 while VCLK's target changes. DCLK remaining unchanged alone cannot decide that outcome. Cyan bit4/5 definitions and fixed callbacks also differ from the external VCLK/DCLK labels. The handoff consolidates verified evidence and unresolved version/physical-state boundaries.
