@@ -1,3 +1,5 @@
+> **2026-09-22 R213:** Saved SMU header and checksum delimit a 256-KiB body plus a retained 256-byte signature trailer. Actual loader/runtime extent remains unproven. [Evidence and limits](CHATGPT_HANDOFF_R213.md).
+
 # Current status
 
 ## Latest research — 2026-09-21
