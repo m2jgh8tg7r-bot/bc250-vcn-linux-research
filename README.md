@@ -6,21 +6,13 @@ This repository documents reproducible findings from a staged Linux/amdgpu bring
 
 ## Latest handoff — 2026-09-21
 
-[R210: Session15 BAR/window evidence audit](docs/CHATGPT_HANDOFF_R210.md) distinguishes PSP/CCP and GPU BAR identities. The saved external scan filters out both zero and all-ones values, rereads regions, and includes writes outside the queue bases. Its summary does not establish a complete all-ones snapshot or queue non-writability. Only static inspection was performed; the external script was not run.
+[R211: SSC caller lifecycle](docs/CHATGPT_HANDOFF_R211.md) connects the original `0xCEE1` candidate to state-transition callbacks, strengthening the SSC interpretation. [R210](docs/CHATGPT_HANDOFF_R210.md) audits Session15 BAR evidence and acquisition limits. Research remains saved-file static/read-only; physical VCN power and execution are unproven.
 
-[R209: saved Domain6 status predicates](docs/CHATGPT_HANDOFF_R209.md) shows that historical R125A/B values already satisfy the fixed helper's request1 polling predicates. Success or the same status value alone cannot establish a new power transition. Together with R207–R208, this tightens the observation requirements while preserving all physical-power and execution boundaries. No new hardware access occurred.
+Recent evidence:
 
-[R208: observation and feature contract](docs/CHATGPT_HANDOFF_R208.md) connects saved profile targets to the metrics producer: DCLK's target can stay 1111 while VCLK's target changes. DCLK remaining unchanged alone cannot decide that outcome. Cyan bit4/5 definitions and fixed callbacks also differ from the external VCLK/DCLK labels. The handoff consolidates verified evidence and unresolved version/physical-state boundaries.
-
-[R207: metrics record contract audit](docs/CHATGPT_HANDOFF_R207.md) verifies the saved HEX and identifies conditional overlap between expanded average fields and unchanged timestamp/count storage, plus a 244-byte reset versus 284-byte export. This is a static combination audit, not evidence that the external machine ran that exact combination. Saved R125A also records 1111 as a normal policy target; the value alone does not establish a halt sentinel.
-
-[R206: saved metrics producer trace](docs/CHATGPT_HANDOFF_R206.md) confirms that the saved metrics-format patch moves the DCLK store from internal offset 76 to 96, supporting R205's layout-mismatch explanation. The original producer reads calculated clock-slot values; average and current fields are not independent physical-liveness observations. External patch/driver identity remains unproven. No hardware access or patch application occurred.
-
-[R205: metrics layout mismatch qualification](docs/CHATGPT_HANDOFF_R205.md) adds a conditional CPU model: an 8-core PMFW record decoded by a 6-core driver can place DCLK-derived data into the power field at offset 44 without changing the Linux ABI. Thus R204's field-name finding alone cannot disprove the external value's DCLK origin. The actual external producer/decoder pairing and physical clock state remain unproven.
-
-[R204: saved metrics ABI audit](docs/CHATGPT_HANDOFF_R204.md) finds that byte offset 44 is `average_soc_power`, not DCLK, in the verified local v2.2 format. The saved native R72 sample has 1111 there; external format/decoder provenance remains unresolved. [R203](docs/CHATGPT_HANDOFF_R203.md) separates Domain6 power bookkeeping from physical state and reconstructs the cached-slot power policy. [R202](docs/CHATGPT_HANDOFF_R202.md) connects feature lifecycle with callback registration. All work used saved files; no new hardware access.
-
-[R201: independent Robin1 control-flow reconstruction](docs/CHATGPT_HANDOFF_R201.md) corrects the external call/branch targets in the fixed local image. The candidate is strongly consistent with GDDR6 clock spread-spectrum configuration, not an established VCN power-up route. Sanitized instruction evidence and a CPU-only checker are included. Research remains static/read-only.
+- Candidate, feature lifecycle, and bookkeeping: [R201](docs/CHATGPT_HANDOFF_R201.md), [R202](docs/CHATGPT_HANDOFF_R202.md), [R203](docs/CHATGPT_HANDOFF_R203.md).
+- Metrics ABI, producer, and record boundaries: [R204](docs/CHATGPT_HANDOFF_R204.md), [R205](docs/CHATGPT_HANDOFF_R205.md), [R206](docs/CHATGPT_HANDOFF_R206.md), [R207](docs/CHATGPT_HANDOFF_R207.md).
+- Observation/feature interpretation and saved Domain6 status: [R208](docs/CHATGPT_HANDOFF_R208.md), [R209](docs/CHATGPT_HANDOFF_R209.md).
 
 R197 was subsequently booted on 2026-09-14: VCN response remained `0xffff0008` with zero placement. Normal recovery and later R198/R199 results are preserved in the R201 handoff; the prepared-stage note below is historical.
 
