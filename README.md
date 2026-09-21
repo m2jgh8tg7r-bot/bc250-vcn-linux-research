@@ -6,6 +6,8 @@ This repository documents reproducible findings from a staged Linux/amdgpu bring
 
 ## Latest handoff — 2026-09-21
 
+[R212: saved BIOS image identity](docs/CHATGPT_HANDOFF_R212.md) verifies the complete analysis window in both saved P3 captures and stored Robin1/Robin3 distributions. Running SRAM identity remains unproven.
+
 [R211: SSC caller lifecycle](docs/CHATGPT_HANDOFF_R211.md) connects the original `0xCEE1` candidate to state-transition callbacks, strengthening the SSC interpretation. [R210](docs/CHATGPT_HANDOFF_R210.md) audits Session15 BAR evidence and acquisition limits. Research remains saved-file static/read-only; physical VCN power and execution are unproven.
 
 Recent evidence:
