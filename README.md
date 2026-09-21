@@ -1,3 +1,5 @@
+> **2026-09-22 R224:** saved type-2 TOS confirms the static t02 SVC-F2 path; Linux source confirms command fw_type 13 is VCN, distinct from BIOS directory type 0x13 [Evidence and limits](docs/CHATGPT_HANDOFF_R224.md).
+
 > **2026-09-22 R223:** Disambiguate saved PSP type 0x13 as debug-unlock candidate; downgrade VCN fw_type numeric match. [Evidence and limits](docs/CHATGPT_HANDOFF_R223.md).
 
 > **2026-09-22 R222:** Saved PSP directory type 0x13 candidate found and checksum verified; semantic identity remains unproven. [Evidence and limits](docs/CHATGPT_HANDOFF_R222.md).
