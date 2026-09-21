@@ -1,5 +1,15 @@
 # Current status
 
+## Latest research — 2026-09-21
+
+[R201 static reconstruction and handoff](CHATGPT_HANDOFF_R201.md) is the current research checkpoint. The fixed Robin1 image calls `0x1DB54(11)` and branches to `0x1EEB4`, correcting the external `0x1CB58`/`0x1EEB8` account for this image. The `0xCEE1` flag and descriptor 3/4 operations strongly support a GDDR6 clock SSC interpretation. This candidate is not established as a VCN power/isolation path.
+
+Historical live baseline: R197 and R199 failed to meet VCN PSP acceptance conditions (`0xffff0008`, zero placement), followed by normal recovery. R197 is not an unbooted pending experiment. There was no new hardware access in R201.
+
+Current policy: saved-image static/read-only analysis. No R197 reboot, firmware/initramfs/boot modification, unknown SMU/PSP/SVC calls, register writes, new broad BAR scans, or ring/VCPU execution. A future live proposal must establish six conditions: version-matched VCN relevance, prerequisites, exact target, discriminating observation, recovery, and more information value than R197.
+
+The platform and earlier milestones below remain historical evidence.
+
 ## Platform
 
 - AMD BC-250 / Cyan Skillfish
@@ -84,13 +94,11 @@ VAAPI_HARDWARE_ENCODE=UNPROVEN
 
 ## Current stage
 
-The successful NBIO transaction is closed and the live entry has been quarantined. The next research boundary is VCN power/liveness.
-
-Before any broader live action, external BC-250 work on SMU domain-6, power sequencing, and direct VCN bring-up is being compared statically with the locally verified register and software-lifecycle findings.
+R201 completed the targeted static comparison of the external `0x1EDD4` candidate. Its relevance as a direct VCN gate is weakened. Next, inspect unresolved Domain6 policy initialization and callback reachability using saved evidence; preserve all hardware proof boundaries.
 
 ## Remaining major milestones
 
-The shortest plausible route still contains roughly five major technical boundaries, with additional safety/audit stages likely between them:
+These historical milestone categories describe unresolved work, not authorized live actions:
 
 1. stock recovery / post-R113 closure and static comparison,
 2. minimal VCN power/liveness probe design and audit,
