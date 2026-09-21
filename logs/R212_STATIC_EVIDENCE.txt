@@ -1,0 +1,32 @@
+{
+  "hardware_access": false,
+  "saved_capture_A_equals_B": true,
+  "saved_capture_size": 16777216,
+  "analysis_file_size": 262400,
+  "analysis_file_sha256": "8c29cf0b1c5ea713f1f8ae95ed4c1dc547d00c530530c131950cfd5eb08c6675",
+  "rom_match_offset": "0x8ff100",
+  "rom_match_end_exclusive": "0x93f200",
+  "full_match_count_per_capture": 1,
+  "distribution_comparisons": [
+    {
+      "archive": "Robin1.00.zip",
+      "member": "Robin1.00",
+      "size": 16777216,
+      "full_firmware_match_offset": "0x8ff100",
+      "match_count": 1,
+      "archive_sha256": "d97d43b9c917ac5d7d5336cd313200e8e1087d9c9473f7bec7764e0b29d9cb32"
+    },
+    {
+      "archive": "Robin3.00.zip",
+      "member": "Robin3.00",
+      "size": 16777216,
+      "full_firmware_match_offset": "0x8ff100",
+      "match_count": 1,
+      "archive_sha256": "902779f1dd7370b23273d755f6d8004c06e4d7edf6b3ba009edb3f7e5344397a"
+    }
+  ],
+  "local_stage5_hash_record_matches_captures": true,
+  "runtime_sram_identity_proven": false,
+  "firmware_loader_extent_proven": false,
+  "whole_board_rom_hash_published": false
+}
