@@ -2,7 +2,9 @@
 
 ## Latest research — 2026-09-21
 
-[R201 static reconstruction and handoff](CHATGPT_HANDOFF_R201.md) is the current research checkpoint. The fixed Robin1 image calls `0x1DB54(11)` and branches to `0x1EEB4`, correcting the external `0x1CB58`/`0x1EEB8` account for this image. The `0xCEE1` flag and descriptor 3/4 operations strongly support a GDDR6 clock SSC interpretation. This candidate is not established as a VCN power/isolation path.
+[R204: saved metrics ABI audit](CHATGPT_HANDOFF_R204.md) finds that byte offset 44 is `average_soc_power`, not DCLK, in the verified local v2.2 format. The saved native R72 sample has 1111 there; external format/decoder provenance remains unresolved. [R203](CHATGPT_HANDOFF_R203.md) separates Domain6 power bookkeeping from physical state and reconstructs the cached-slot power policy. [R202](CHATGPT_HANDOFF_R202.md) connects feature lifecycle with callback registration. All work used saved files; no new hardware access.
+
+[R201 static reconstruction and handoff](CHATGPT_HANDOFF_R201.md) preserves the initial candidate reconstruction. The fixed Robin1 image calls `0x1DB54(11)` and branches to `0x1EEB4`, correcting the external `0x1CB58`/`0x1EEB8` account for this image. The `0xCEE1` flag and descriptor 3/4 operations strongly support a GDDR6 clock SSC interpretation. This candidate is not established as a VCN power/isolation path.
 
 Historical live baseline: R197 and R199 failed to meet VCN PSP acceptance conditions (`0xffff0008`, zero placement), followed by normal recovery. R197 is not an unbooted pending experiment. There was no new hardware access in R201.
 
@@ -94,7 +96,7 @@ VAAPI_HARDWARE_ENCODE=UNPROVEN
 
 ## Current stage
 
-R201 completed the targeted static comparison of the external `0x1EDD4` candidate. Its relevance as a direct VCN gate is weakened. Next, inspect unresolved Domain6 policy initialization and callback reachability using saved evidence; preserve all hardware proof boundaries.
+R202–R204 add feature/callback lifecycle, conditional power-helper execution, automatic cached-slot policy, and a saved Linux metrics ABI audit. Next, seek existing external decoder/header provenance and continue version-matched static analysis. A function return, cached power flag, or clock field does not establish whole-block power, firmware placement, or execution.
 
 ## Remaining major milestones
 
