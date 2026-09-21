@@ -1,3 +1,5 @@
+> **2026-09-22 R218:** Service-1 bootstrap traced to SVC-derived mapped input; user-section mapping and kernel source-base chain checked. [Evidence and limits](CHATGPT_HANDOFF_R218.md).
+
 > **2026-09-22 R217:** Saved PSP TOS command-6 status transport and mutable service routing verified; rejection producer remains unknown. [Evidence and limits](CHATGPT_HANDOFF_R217.md).
 
 > **2026-09-22 R216:** The saved setter enters priority6 and the walker priority4. A queue-backed witness explains gate consumption before setter entry without requiring mid-handler preemption; historical timing remains unproven. R217 continues PSP analysis. [Evidence and limits](CHATGPT_HANDOFF_R216.md).
