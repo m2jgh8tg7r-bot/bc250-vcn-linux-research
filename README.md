@@ -1,3 +1,5 @@
+> **2026-09-22 R226:** TOS initialization calls the saved 0x5244/SVC-F2 walker; 0x286000 alignment requires an unproven runtime load bias [Evidence and limits](docs/CHATGPT_HANDOFF_R226.md).
+
 > **2026-09-22 R225:** saved TOS matches the external t02 0x5244/SVC-F2 pattern, while runtime address and 31-versus-32 entry interpretation remain open [Evidence and limits](docs/CHATGPT_HANDOFF_R225.md).
 
 > **2026-09-22 R224:** saved type-2 TOS confirms the static t02 SVC-F2 path; Linux source confirms command fw_type 13 is VCN, distinct from BIOS directory type 0x13 [Evidence and limits](docs/CHATGPT_HANDOFF_R224.md).
