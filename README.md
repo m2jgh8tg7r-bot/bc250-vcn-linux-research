@@ -6,6 +6,8 @@ This repository documents reproducible findings from a staged Linux/amdgpu bring
 
 ## Latest handoff — 2026-09-21
 
+[R206: saved metrics producer trace](docs/CHATGPT_HANDOFF_R206.md) confirms that the saved metrics-format patch moves the DCLK store from internal offset 76 to 96, supporting R205's layout-mismatch explanation. The original producer reads calculated clock-slot values; average and current fields are not independent physical-liveness observations. External patch/driver identity remains unproven. No hardware access or patch application occurred.
+
 [R205: metrics layout mismatch qualification](docs/CHATGPT_HANDOFF_R205.md) adds a conditional CPU model: an 8-core PMFW record decoded by a 6-core driver can place DCLK-derived data into the power field at offset 44 without changing the Linux ABI. Thus R204's field-name finding alone cannot disprove the external value's DCLK origin. The actual external producer/decoder pairing and physical clock state remain unproven.
 
 [R204: saved metrics ABI audit](docs/CHATGPT_HANDOFF_R204.md) finds that byte offset 44 is `average_soc_power`, not DCLK, in the verified local v2.2 format. The saved native R72 sample has 1111 there; external format/decoder provenance remains unresolved. [R203](docs/CHATGPT_HANDOFF_R203.md) separates Domain6 power bookkeeping from physical state and reconstructs the cached-slot power policy. [R202](docs/CHATGPT_HANDOFF_R202.md) connects feature lifecycle with callback registration. All work used saved files; no new hardware access.
