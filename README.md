@@ -4,9 +4,13 @@ Reverse-engineering and Linux enablement research for AMD BC-250 / Cyan Skillfis
 
 This repository documents reproducible findings from a staged Linux/amdgpu bring-up effort. The project separates software registration, firmware enrollment, power state, VCPU execution, ring execution, and end-user VA-API functionality instead of treating them as one milestone.
 
-## Latest handoff — 2026-09-14
+## Latest handoff — 2026-09-21
 
-[R195–R197 live API results and prepared firmware comparison](docs/CHATGPT_HANDOFF_R197.md) records measured zero VCN/JPEG available rings and VIDEO_CAPS EINVAL in the normal environment, the external compute-driver update, and a single official predecessor response-only experiment. The candidate image and parser are verified locally; installation and boot remain pending.
+[R201: independent Robin1 control-flow reconstruction](docs/CHATGPT_HANDOFF_R201.md) corrects the external call/branch targets in the fixed local image. The candidate is strongly consistent with GDDR6 clock spread-spectrum configuration, not an established VCN power-up route. Sanitized instruction evidence and a CPU-only checker are included. Research remains static/read-only.
+
+R197 was subsequently booted on 2026-09-14: VCN response remained `0xffff0008` with zero placement. Normal recovery and later R198/R199 results are preserved in the R201 handoff; the prepared-stage note below is historical.
+
+[R195–R197 live API results and prepared firmware comparison](docs/CHATGPT_HANDOFF_R197.md) records measured zero VCN/JPEG available rings and VIDEO_CAPS EINVAL in the normal environment, the external compute-driver update, and a single official predecessor response-only experiment. That note records preparation; the subsequent boot and recovery are summarized in R201.
 
 [R191–R194 additional evidence checks / 最新引き継ぎ](docs/CHATGPT_HANDOFF_R194.md) adds upstream evidence for separating return codes, PSP responses, harvest metadata, codec lists, and actual VCN execution. Source versions are kept distinct; current early-sysfs behavior is not assigned to older live captures. No new VCN experiment or image was made, and no better-supported alternate firmware candidate emerged.
 
