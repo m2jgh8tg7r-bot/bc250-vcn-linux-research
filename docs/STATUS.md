@@ -2,6 +2,8 @@
 
 ## Latest research — 2026-09-21
 
+[R209: saved Domain6 status predicates](CHATGPT_HANDOFF_R209.md) shows that historical R125A/B values already satisfy the fixed helper's request1 polling predicates. Success or the same status value alone cannot establish a new power transition. Together with R207–R208, this tightens the observation requirements while preserving all physical-power and execution boundaries. No new hardware access occurred.
+
 [R208: observation and feature contract](CHATGPT_HANDOFF_R208.md) connects saved profile targets to the metrics producer: DCLK's target can stay 1111 while VCLK's target changes. DCLK remaining unchanged alone cannot decide that outcome. Cyan bit4/5 definitions and fixed callbacks also differ from the external VCLK/DCLK labels. The handoff consolidates verified evidence and unresolved version/physical-state boundaries.
 
 [R207: metrics record contract audit](CHATGPT_HANDOFF_R207.md) verifies the saved HEX and identifies conditional overlap between expanded average fields and unchanged timestamp/count storage, plus a 244-byte reset versus 284-byte export. This is a static combination audit, not evidence that the external machine ran that exact combination. Saved R125A also records 1111 as a normal policy target; the value alone does not establish a halt sentinel.
