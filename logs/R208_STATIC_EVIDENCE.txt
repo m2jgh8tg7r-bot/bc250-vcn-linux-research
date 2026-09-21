@@ -1,0 +1,186 @@
+R208 STATIC AND HISTORICAL SAVED CAPTURE; NO LIVE ACCESS
+{
+  "image_sha256": "8c29cf0b1c5ea713f1f8ae95ed4c1dc547d00c530530c131950cfd5eb08c6675",
+  "profile_capture_sha256": "3bc1668708569771b719db3143760ab908bf5508eaf70223ab6172ea4d6a1b3d",
+  "header_sha256": "8893329478e28c2f36b0298b2aeb0fc4b5902a77e76e82db57e2884fe0a82966",
+  "slot_map": [
+    13,
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    10,
+    24,
+    19,
+    20,
+    21,
+    22,
+    23,
+    11,
+    8,
+    9,
+    12
+  ],
+  "saved_profile_targets": [
+    {
+      "profile": 0,
+      "S16_ENTRY14": 1111,
+      "S17_ENTRY15": 0
+    },
+    {
+      "profile": 1,
+      "S16_ENTRY14": 1111,
+      "S17_ENTRY15": 1250
+    },
+    {
+      "profile": 2,
+      "S16_ENTRY14": 1111,
+      "S17_ENTRY15": 1250
+    },
+    {
+      "profile": 3,
+      "S16_ENTRY14": 1111,
+      "S17_ENTRY15": 1250
+    },
+    {
+      "profile": 4,
+      "S16_ENTRY14": 1111,
+      "S17_ENTRY15": 1250
+    },
+    {
+      "profile": 5,
+      "S16_ENTRY14": 1111,
+      "S17_ENTRY15": 1250
+    },
+    {
+      "profile": 6,
+      "S16_ENTRY14": 1111,
+      "S17_ENTRY15": 1250
+    },
+    {
+      "profile": 7,
+      "S16_ENTRY14": 0,
+      "S17_ENTRY15": 0
+    }
+  ],
+  "external_reported_bitmap": "0xdd602c7d",
+  "relevant_bits": {
+    "4": 1,
+    "5": 1,
+    "13": 1
+  },
+  "header_names": {
+    "4": "FEATURE_PLL_POWER_DOWN_BIT",
+    "5": "FEATURE_FCLK_DPM_BIT",
+    "13": "FEATURE_SOC_DPM_BIT"
+  },
+  "firmware_enable_callbacks": {
+    "4": "0x23c24",
+    "5": "0x1ded8",
+    "13": "0x2e3e8"
+  }
+}
+
+Feature5 existing-function disassembly:
+PROGRAM=robin1-full.bin
+LANGUAGE=Xtensa:LE:32:default
+EXECUTABLE_SHA256=8c29cf0b1c5ea713f1f8ae95ed4c1dc547d00c530530c131950cfd5eb08c6675
+TARGET=0001ded8 EXISTING_FUNCTION=FUN_0001ded8
+FUNCTION=0001ded8 BODY=[[0001ded8, 0001df07]]
+XREF=From: 0000ccbc To: 0001ded8 Type: DATA Op: 0 DEFAULT PARENT=null
+DECOMPILE_COMPLETED=true ERROR=
+
+void FUN_0001ded8(void)
+
+{
+  undefined *puVar1;
+  undefined4 uVar2;
+  int iVar3;
+  
+  uVar2 = DAT_000173b0;
+  puVar1 = PTR_DAT_000171d4;
+  *(undefined4 *)(PTR_DAT_000171d4 + 0x108) = 0;
+  *(undefined4 *)(puVar1 + 0x10c) = 0;
+  *(undefined4 *)(puVar1 + 0x110) = uVar2;
+  FUN_0002e184();
+  iVar3 = FUN_0001bc20();
+  FUN_0001e750(*(undefined1 *)(iVar3 + 0xc));
+  FUN_0001b1e4(0x17,PTR_FUN_000173b4);
+  puVar1[0x13] = 1;
+  return;
+}
+
+
+INS=0001ded8 entry a1,0x20
+INS=0001dedb l32r a3,0x000171d4
+REF=From: 0001dedb To: 000171d4 Type: READ Op: 1 DEFAULT U32=0x0000cec8
+INS=0001dede l32r a8,0x000173b0
+REF=From: 0001dede To: 000173b0 Type: READ Op: 1 DEFAULT U32=0x4f800000
+INS=0001dee1 const.sf f0,0x0
+INS=0001dee4 ssi f0,a3,0x108
+REF=From: 0001dee4 To: 0000cfd0 Type: WRITE Op: 2 ANALYSIS U32=0x00000000
+INS=0001dee7 ssi f0,a3,0x10c
+REF=From: 0001dee7 To: 0000cfd4 Type: WRITE Op: 2 ANALYSIS U32=0x00000000
+INS=0001deea s32i a8,a3,0x110
+REF=From: 0001deea To: 0000cfd8 Type: WRITE Op: 2 ANALYSIS U32=0x4f800000
+INS=0001deed call8 0x0002e184
+REF=From: 0001deed To: 0002e184 Type: UNCONDITIONAL_CALL Op: 0 DEFAULT
+INS=0001def0 call8 0x0001bc20
+REF=From: 0001def0 To: 0001bc20 Type: UNCONDITIONAL_CALL Op: 0 DEFAULT
+INS=0001def3 l8ui a10,a10,0xc
+INS=0001def6 call8 0x0001e750
+REF=From: 0001def6 To: 0001e750 Type: UNCONDITIONAL_CALL Op: 0 DEFAULT
+INS=0001def9 movi.n a10,0x17
+INS=0001defb l32r a11,0x000173b4
+REF=From: 0001defb To: 000173b4 Type: READ Op: 1 DEFAULT U32=0x0001df74
+INS=0001defe call8 0x0001b1e4
+REF=From: 0001defe To: 0001b1e4 Type: UNCONDITIONAL_CALL Op: 0 DEFAULT
+REF=From: 0001defe To: 0001df74 Type: PARAM Op: 0 ANALYSIS U32=0xa1004136
+INS=0001df01 movi.n a2,0x1
+INS=0001df03 s8i a2,a3,0x13
+REF=From: 0001df03 To: 0000cedb Type: WRITE Op: 2 ANALYSIS U32=0x00000000
+INS=0001df06 retw.n
+END_FUNCTION=0001ded8
+RECOVERY_COMPLETE=YES
+
+Feature getter, previously recovered from same image:
+PROGRAM=robin1-full.bin
+LANGUAGE=Xtensa:LE:32:default
+EXECUTABLE_SHA256=8c29cf0b1c5ea713f1f8ae95ed4c1dc547d00c530530c131950cfd5eb08c6675
+TARGET=0001db14 EXISTING_FUNCTION=FUN_0001db14
+FUNCTION=0001db14 BODY=[[0001db14, 0001db2e]]
+DECOMPILE_COMPLETED=true ERROR=
+
+void FUN_0001db14(undefined4 param_1)
+
+{
+  undefined4 *puVar1;
+  
+  puVar1 = (undefined4 *)FUN_00001014(param_1);
+  memw();
+  *puVar1 = *(undefined4 *)(PTR_DAT_00017374 + 8);
+  FUN_00000fa8(param_1,1);
+  return;
+}
+
+
+INS=0001db14 entry a1,0x20
+INS=0001db17 mov.n a10,a2
+INS=0001db19 call8 0x00001014
+REF=From: 0001db19 To: 00001014 Type: UNCONDITIONAL_CALL Op: 0 DEFAULT
+INS=0001db1c l32r a8,0x00017374
+REF=From: 0001db1c To: 00017374 Type: READ Op: 1 DEFAULT U32=0x0000cc98
+INS=0001db1f l32i.n a8,a8,0x8
+REF=From: 0001db1f To: 0000cca0 Type: READ Op: 2 ANALYSIS U32=0x00000000
+INS=0001db21 memw
+INS=0001db24 s32i.n a8,a10,0x0
+INS=0001db26 movi.n a11,0x1
+INS=0001db28 mov.n a10,a2
+INS=0001db2a call8 0x00000fa8
+REF=From: 0001db2a To: 00000fa8 Type: UNCONDITIONAL_CALL Op: 0 DEFAULT
+INS=0001db2d retw.n
+END_FUNCTION=0001db14
