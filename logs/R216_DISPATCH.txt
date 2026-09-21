@@ -1,0 +1,580 @@
+Saved Robin1 SHA256 8c29cf0b1c5ea713f1f8ae95ed4c1dc547d00c530530c131950cfd5eb08c6675
+TARGET=00000ebc EXISTING_FUNCTION=FUN_00000ebc
+FUNCTION=00000ebc BODY=[[00000ebc, 00000f74]]
+DECOMPILE_COMPLETED=true ERROR=
+
+void FUN_00000ebc(int param_1)
+
+{
+  byte bVar1;
+  undefined *puVar2;
+  uint uVar3;
+  int *piVar4;
+  int iVar5;
+  
+  uVar3 = FUN_00000f90(param_1);
+  puVar2 = PTR_DAT_00000b88;
+  if (*(ushort *)(PTR_DAT_00000b84 + param_1 * 2 + 0xfc) <= uVar3) {
+    FUN_00000fc0(param_1,0xfe);
+    return;
+  }
+  piVar4 = (int *)(uVar3 * 8 + *(int *)(PTR_DAT_00000b88 + param_1 * 4 + 0x1fc));
+  bVar1 = *(byte *)((int)piVar4 + 5);
+  if (*piVar4 == 0) {
+    FUN_00000fc0(param_1,0xfe);
+    return;
+  }
+  iVar5 = *(int *)(PTR_DAT_00000b8c + 100);
+  uVar3 = *(uint *)(PTR_DAT_00000b88 + 0x240) & 0xfffffffd;
+  *(uint *)(PTR_DAT_00000b88 + 0x240) = uVar3;
+  if ((iVar5 == 0) || (memw(), *(int *)(DAT_00000b94 + 0x264) == DAT_00000b90)) {
+    uVar3 = uVar3 | 2;
+    *(uint *)(puVar2 + 0x240) = uVar3;
+  }
+  if ((~uVar3 & bVar1 & 0x7f) != 0) {
+    FUN_00000fc0(param_1,0xfd);
+    return;
+  }
+  if ((*(byte *)((int)piVar4 + 5) & 0x80) != 0) {
+    (*(code *)*piVar4)(param_1);
+    return;
+  }
+  iVar5 = FUN_000026b4((code *)*piVar4,(char)piVar4[1],param_1,0,0,0);
+  if (iVar5 == 2) {
+    *(int *)PTR_DAT_00000b98 = *(int *)PTR_DAT_00000b98 + 2;
+    FUN_00000fc0(param_1,0xfc);
+    return;
+  }
+  if ((*(uint *)PTR_DAT_00000b9c & 1) != 0) {
+    FUN_0000305c(param_1);
+  }
+  return;
+}
+
+
+INS=00000ebc entry a1,0x20
+INS=00000ebf mov.n a10,a2
+INS=00000ec1 call8 0x00000f90
+REF=From: 00000ec1 To: 00000f90 Type: UNCONDITIONAL_CALL Op: 0 DEFAULT
+INS=00000ec4 l32r a8,0x00000b84
+REF=From: 00000ec4 To: 00000b84 Type: READ Op: 1 DEFAULT U32=0x000079b0
+INS=00000ec7 l32r a13,0x00000b88
+REF=From: 00000ec7 To: 00000b88 Type: READ Op: 1 DEFAULT U32=0x00007890
+INS=00000eca addx2 a8,a2,a8
+INS=00000ecd l16ui a8,a8,0xfc
+REF=From: 00000ecd To: 00007aac Type: DATA Op: 2 ANALYSIS U32=0x0011003e
+INS=00000ed0 addx4 a11,a2,a13
+INS=00000ed3 l32i a11,a11,0x1fc
+REF=From: 00000ed3 To: 00007a8c Type: DATA Op: 2 ANALYSIS U32=0x0000706c
+INS=00000ed6 bltu a10,a8,0x00000ee3
+REF=From: 00000ed6 To: 00000ee3 Type: CONDITIONAL_JUMP Op: 2 DEFAULT
+INS=00000ed9 mov.n a10,a2
+INS=00000edb movi a11,0xfe
+INS=00000ede call8 0x00000fc0
+REF=From: 00000ede To: 00000fc0 Type: UNCONDITIONAL_CALL Op: 0 DEFAULT
+REF=From: 00000ede To: 00007890 Type: PARAM Op: 0 ANALYSIS U32=0x00000006
+INS=00000ee1 retw.n
+INS=00000ee3 addx8 a11,a10,a11
+INS=00000ee6 l32i.n a9,a11,0x0
+INS=00000ee8 movi.n a15,0xfd
+INS=00000eea l8ui a12,a11,0x5
+INS=00000eed bnez.n a9,0x00000ef9
+REF=From: 00000eed To: 00000ef9 Type: CONDITIONAL_JUMP Op: 1 DEFAULT
+INS=00000eef mov.n a10,a2
+INS=00000ef1 movi a11,0xfe
+INS=00000ef4 call8 0x00000fc0
+REF=From: 00000ef4 To: 00000fc0 Type: UNCONDITIONAL_CALL Op: 0 DEFAULT
+INS=00000ef7 retw.n
+INS=00000ef9 l32r a14,0x00000b8c
+REF=From: 00000ef9 To: 00000b8c Type: READ Op: 1 DEFAULT U32=0x00007ad8
+INS=00000efc l32i a10,a13,0x240
+REF=From: 00000efc To: 00007ad0 Type: READ Op: 2 ANALYSIS U32=0x00000000
+INS=00000eff extui a12,a12,0x0,0x7
+INS=00000f02 l32i a14,a14,0x64
+REF=From: 00000f02 To: 00007b3c Type: READ Op: 2 ANALYSIS U32=0x00000000
+INS=00000f05 and a10,a10,a15
+INS=00000f08 s32i a10,a13,0x240
+REF=From: 00000f08 To: 00007ad0 Type: WRITE Op: 2 ANALYSIS U32=0x00000000
+INS=00000f0b beqz.n a14,0x00000f1c
+REF=From: 00000f0b To: 00000f1c Type: CONDITIONAL_JUMP Op: 1 DEFAULT
+INS=00000f0d l32r a8,0x00000b94
+REF=From: 00000f0d To: 00000b94 Type: READ Op: 1 DEFAULT U32=0x0320fe00
+INS=00000f10 l32r a9,0x00000b90
+REF=From: 00000f10 To: 00000b90 Type: READ Op: 1 DEFAULT U32=0x80000000
+INS=00000f13 memw
+INS=00000f16 l32i a8,a8,0x264
+REF=From: 00000f16 To: 03210064 Type: READ Op: 2 ANALYSIS
+INS=00000f19 bne a8,a9,0x00000f24
+REF=From: 00000f19 To: 00000f24 Type: CONDITIONAL_JUMP Op: 2 DEFAULT
+INS=00000f1c movi.n a9,0x2
+INS=00000f1e or a10,a10,a9
+INS=00000f21 s32i a10,a13,0x240
+REF=From: 00000f21 To: 00007ad0 Type: WRITE Op: 2 ANALYSIS U32=0x00000000
+INS=00000f24 ball 0x00000f31,a10,a12
+REF=From: 00000f24 To: 00000f31 Type: CONDITIONAL_JUMP Op: 0 DEFAULT
+INS=00000f27 mov.n a10,a2
+INS=00000f29 movi a11,0xfd
+INS=00000f2c call8 0x00000fc0
+REF=From: 00000f2c To: 00000fc0 Type: UNCONDITIONAL_CALL Op: 0 DEFAULT
+REF=From: 00000f2c To: 00007890 Type: PARAM Op: 0 ANALYSIS U32=0x00000006
+INS=00000f2f retw.n
+INS=00000f31 l8ui a10,a11,0x5
+INS=00000f34 l32i.n a12,a11,0x0
+INS=00000f36 bbci a10,0x7,0x00000f40
+REF=From: 00000f36 To: 00000f40 Type: CONDITIONAL_JUMP Op: 2 DEFAULT
+INS=00000f39 mov.n a10,a2
+INS=00000f3b callx8 a12
+INS=00000f3e retw.n
+INS=00000f40 l8ui a11,a11,0x4
+INS=00000f43 movi.n a13,0x0
+INS=00000f45 movi.n a14,0x0
+INS=00000f47 mov.n a10,a12
+INS=00000f49 movi.n a15,0x0
+INS=00000f4b mov.n a12,a2
+INS=00000f4d call8 0x000026b4
+REF=From: 00000f4d To: 000026b4 Type: UNCONDITIONAL_CALL Op: 0 DEFAULT
+INS=00000f50 bnei a10,0x2,0x00000f66
+REF=From: 00000f50 To: 00000f66 Type: CONDITIONAL_JUMP Op: 2 DEFAULT
+INS=00000f53 l32r a13,0x00000b98
+REF=From: 00000f53 To: 00000b98 Type: READ Op: 1 DEFAULT U32=0x0000848c
+INS=00000f56 l32i.n a12,a13,0x0
+REF=From: 00000f56 To: 0000848c Type: READ Op: 1 ANALYSIS U32=0x00000000
+INS=00000f58 mov.n a10,a2
+INS=00000f5a movi a11,0xfc
+INS=00000f5d addi.n a12,a12,0x2
+INS=00000f5f s32i.n a12,a13,0x0
+REF=From: 00000f5f To: 0000848c Type: WRITE Op: 1 ANALYSIS U32=0x00000000
+INS=00000f61 call8 0x00000fc0
+REF=From: 00000f61 To: 00000fc0 Type: UNCONDITIONAL_CALL Op: 0 DEFAULT
+INS=00000f64 retw.n
+INS=00000f66 l32r a13,0x00000b9c
+REF=From: 00000f66 To: 00000b9c Type: READ Op: 1 DEFAULT U32=0x00008b00
+INS=00000f69 l32i.n a13,a13,0x0
+REF=From: 00000f69 To: 00008b00 Type: READ Op: 0 ANALYSIS U32=0x00000000
+INS=00000f6b bbci a13,0x0,0x00000f73
+REF=From: 00000f6b To: 00000f73 Type: CONDITIONAL_JUMP Op: 2 DEFAULT
+INS=00000f6e mov.n a10,a2
+INS=00000f70 call8 0x0000305c
+REF=From: 00000f70 To: 0000305c Type: UNCONDITIONAL_CALL Op: 0 DEFAULT
+INS=00000f73 retw.n
+END_FUNCTION=00000ebc
+TARGET=000026b4 EXISTING_FUNCTION=FUN_000026b4
+FUNCTION=000026b4 BODY=[[000026b4, 000027f6]]
+DECOMPILE_COMPLETED=true ERROR=
+
+undefined4
+FUN_000026b4(undefined4 param_1,byte param_2,undefined4 param_3,undefined2 param_4,int param_5,
+            byte param_6)
+
+{
+  byte bVar1;
+  byte bVar2;
+  bool bVar3;
+  undefined *puVar4;
+  undefined *puVar5;
+  undefined4 unaff_retaddr;
+  int iVar6;
+  undefined4 *puVar7;
+  char cVar8;
+  int iVar9;
+  uint uVar10;
+  undefined4 uVar11;
+  undefined4 uVar12;
+  code *UNRECOVERED_JUMPTABLE;
+  int in_LCOUNT;
+  undefined1 in_MISC1;
+  
+  puVar5 = PTR_DAT_00000d28;
+  uVar10 = (uint)param_2;
+  bVar3 = false;
+  uVar12 = 0;
+  uVar11 = rsil(2);
+  if ((param_5 == 0) && (0xe < (byte)PTR_DAT_00000d28[0xbc])) {
+    wsr(0,uVar11);
+    return 2;
+  }
+  if (PTR_DAT_00000d28[0xbc] == 0x14) {
+    memw();
+                    /* WARNING: Subroutine does not return */
+    FUN_00001b78(1,9,0,*(undefined4 *)(DAT_00000b68 + 0x228));
+  }
+  bVar1 = PTR_DAT_00000d28[0xbe];
+  puVar7 = (undefined4 *)(PTR_DAT_00000cb0 + (uint)bVar1 * 0xc);
+  PTR_DAT_00000d28[0xbe] = *(undefined1 *)((int)puVar7 + 10);
+  *(undefined2 *)(puVar7 + 2) = param_4;
+  puVar7[1] = param_3;
+  *puVar7 = param_1;
+  *(byte *)((int)puVar7 + 0xb) = *(byte *)((int)puVar7 + 0xb) & 0xf0 | param_2 & 0xf;
+  *(byte *)((int)puVar7 + 0xb) = *(byte *)((int)puVar7 + 0xb) & 0xef | (param_6 & 1) << 4;
+  puVar4 = PTR_DAT_00000cb0;
+  if (puVar5[0xbc] != '\0') {
+    if (PTR_DAT_00000cb0[uVar10 + 0xf0] != '\0') {
+      *(undefined *)((int)puVar7 + 10) =
+           PTR_DAT_00000cb0[(uint)(byte)PTR_DAT_00000cb0[uVar10 + 0xf8] * 0xc + 10];
+      bVar2 = puVar4[uVar10 + 0xf8];
+LAB_00002752:
+      puVar4[(uint)bVar2 * 0xc + 10] = bVar1;
+      goto LAB_00002758;
+    }
+    if (uVar10 == 0) {
+      *(undefined *)((int)puVar7 + 10) = puVar5[0xbd];
+    }
+    else {
+      cVar8 = (char)(uVar10 - 1);
+      iVar6 = (int)cVar8;
+      if ((uVar10 - 1 & 0x80) == 0) {
+        iVar9 = (uint)(uVar10 == 0) + (uVar10 != 0) * uVar10;
+        in_LCOUNT = iVar9 + -1;
+        UNRECOVERED_JUMPTABLE = (code *)0x27c9;
+        if (iVar9 != 0) {
+          if (PTR_DAT_00000cb0[iVar6 + 0xf0] == '\0') {
+            iVar6 = (int)(char)(cVar8 + -1);
+          }
+          else {
+            bVar3 = true;
+          }
+        }
+      }
+                    /* WARNING: Could not recover jumptable at 0x000027d5. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+      if (in_LCOUNT != 0) {
+        uVar11 = (*UNRECOVERED_JUMPTABLE)();
+        return uVar11;
+      }
+      if (bVar3) {
+        *(undefined *)((int)puVar7 + 10) =
+             PTR_DAT_00000cb0[(uint)(byte)PTR_DAT_00000cb0[iVar6 + 0xf8] * 0xc + 10];
+        bVar2 = puVar4[iVar6 + 0xf8];
+        goto LAB_00002752;
+      }
+      *(undefined *)((int)puVar7 + 10) = puVar5[0xbd];
+    }
+  }
+  puVar5[0xbd] = bVar1;
+LAB_00002758:
+  puVar4[uVar10 + 0xf0] = puVar4[uVar10 + 0xf0] + '\x01';
+  puVar5[0xbc] = puVar5[0xbc] + '\x01';
+  puVar4[uVar10 + 0xf8] = bVar1;
+  bVar1 = puVar5[0xbc];
+  if ((0xe < bVar1) && (param_5 == 1)) {
+    uVar12 = 1;
+  }
+  bVar2 = puVar5[0xc0];
+  puVar5[0xc0] = (bVar2 < bVar1) * bVar1 + (bVar2 >= bVar1) * bVar2;
+  if ((*(int *)(puVar5 + 0xf0) == 0) && (uVar10 < *(byte *)(*(int *)(puVar5 + 0xec) + 0x29))) {
+    wsr(0,uVar11);
+    wsr(in_MISC1,unaff_retaddr);
+    FUN_00002de8();
+  }
+  else {
+    wsr(0,uVar11);
+  }
+  return uVar12;
+}
+
+
+INS=000026b4 entry a1,0x20
+INS=000026b7 extui a10,a3,0x0,0x8
+INS=000026ba movi.n a15,0x0
+INS=000026bc movi.n a14,0x0
+INS=000026be movi.n a12,0xe
+INS=000026c0 l32r a11,0x00000d28
+REF=From: 000026c0 To: 00000d28 Type: READ Op: 1 DEFAULT U32=0x0000add4
+INS=000026c3 rsil a13,0x2
+INS=000026c6 l8ui a3,a11,0xbc
+REF=From: 000026c6 To: 0000ae90 Type: READ Op: 2 ANALYSIS U32=0x14000000
+INS=000026c9 bnez.n a6,0x000026d5
+REF=From: 000026c9 To: 000026d5 Type: CONDITIONAL_JUMP Op: 1 DEFAULT
+INS=000026cb bgeu a12,a3,0x000026d5
+REF=From: 000026cb To: 000026d5 Type: CONDITIONAL_JUMP Op: 2 DEFAULT
+INS=000026ce wsr a13,PS
+INS=000026d1 movi.n a2,0x2
+INS=000026d3 retw.n
+INS=000026d5 movi.n a8,0x14
+INS=000026d7 bne a3,a8,0x000026ec
+REF=From: 000026d7 To: 000026ec Type: CONDITIONAL_JUMP Op: 2 DEFAULT
+INS=000026da movi.n a12,0x0
+INS=000026dc movi.n a11,0x9
+INS=000026de l32r a13,0x00000b68
+REF=From: 000026de To: 00000b68 Type: READ Op: 1 DEFAULT U32=0x0300fe00
+INS=000026e1 movi.n a10,0x1
+INS=000026e3 memw
+INS=000026e6 l32i a13,a13,0x228
+REF=From: 000026e6 To: 03010028 Type: READ Op: 2 ANALYSIS
+INS=000026e9 call8 0x00001b78
+REF=From: 000026e9 To: 00001b78 Type: UNCONDITIONAL_CALL Op: 0 DEFAULT
+INS=000026ec l8ui a12,a11,0xbe
+REF=From: 000026ec To: 0000ae92 Type: READ Op: 2 ANALYSIS U32=0x00001400
+INS=000026ef l32r a8,0x00000cb0
+REF=From: 000026ef To: 00000cb0 Type: READ Op: 1 DEFAULT U32=0x0000ad90
+INS=000026f2 slli a3,a7,0x4
+INS=000026f5 addx2 a7,a12,a12
+INS=000026f8 addx4 a7,a7,a8
+INS=000026fb movi.n a8,0xf0
+INS=000026fd l8ui a9,a7,0xa
+REF=From: 000026fd To: 0000ad9a Type: DATA Op: 2 ANALYSIS U32=0x00000001
+INS=00002700 s8i a9,a11,0xbe
+REF=From: 00002700 To: 0000ae92 Type: WRITE Op: 2 ANALYSIS U32=0x00001400
+INS=00002703 s16i a5,a7,0x8
+REF=From: 00002703 To: 0000ad98 Type: DATA Op: 2 ANALYSIS U32=0x00010000
+INS=00002706 l8ui a9,a7,0xb
+REF=From: 00002706 To: 0000ad9b Type: DATA Op: 2 ANALYSIS U32=0x00000000
+INS=00002709 s32i.n a4,a7,0x4
+REF=From: 00002709 To: 0000ad94 Type: DATA Op: 2 ANALYSIS U32=0x00000000
+INS=0000270b s32i.n a2,a7,0x0
+REF=From: 0000270b To: 0000ad90 Type: DATA Op: 2 ANALYSIS U32=0x00000000
+INS=0000270d and a9,a9,a8
+INS=00002710 extui a8,a10,0x0,0x4
+INS=00002713 or a9,a9,a8
+INS=00002716 movi.n a8,0x10
+INS=00002718 s8i a9,a7,0xb
+REF=From: 00002718 To: 0000ad9b Type: DATA Op: 2 ANALYSIS U32=0x00000000
+INS=0000271b l8ui a9,a7,0xb
+REF=From: 0000271b To: 0000ad9b Type: DATA Op: 2 ANALYSIS U32=0x00000000
+INS=0000271e and a3,a3,a8
+INS=00002721 movi.n a8,0xef
+INS=00002723 and a9,a9,a8
+INS=00002726 or a9,a9,a3
+INS=00002729 s8i a9,a7,0xb
+REF=From: 00002729 To: 0000ad9b Type: DATA Op: 2 ANALYSIS U32=0x00000000
+INS=0000272c l32r a9,0x00000cb0
+REF=From: 0000272c To: 00000cb0 Type: READ Op: 1 DEFAULT U32=0x0000ad90
+INS=0000272f l8ui a8,a11,0xbc
+REF=From: 0000272f To: 0000ae90 Type: READ Op: 2 ANALYSIS U32=0x14000000
+INS=00002732 add.n a2,a10,a9
+INS=00002734 beqz a8,0x000027b3
+REF=From: 00002734 To: 000027b3 Type: CONDITIONAL_JUMP Op: 1 DEFAULT
+INS=00002737 l8ui a8,a2,0xf0
+REF=From: 00002737 To: 0000ae80 Type: DATA Op: 2 ANALYSIS U32=0x00000000
+INS=0000273a beqz a8,0x000027a2
+REF=From: 0000273a To: 000027a2 Type: CONDITIONAL_JUMP Op: 1 DEFAULT
+INS=0000273d l8ui a8,a2,0xf8
+REF=From: 0000273d To: 0000ae88 Type: DATA Op: 2 ANALYSIS U32=0x00000000
+INS=00002740 addx2 a8,a8,a8
+INS=00002743 addx4 a8,a8,a9
+INS=00002746 l8ui a8,a8,0xa
+REF=From: 00002746 To: 0000ad9a Type: DATA Op: 2 ANALYSIS U32=0x00000001
+INS=00002749 s8i a8,a7,0xa
+REF=From: 00002749 To: 0000ad9a Type: DATA Op: 2 ANALYSIS U32=0x00000001
+INS=0000274c l8ui a15,a2,0xf8
+REF=From: 0000274c To: 0000ae88 Type: DATA Op: 2 ANALYSIS U32=0x00000000
+INS=0000274f addx2 a15,a15,a15
+INS=00002752 addx4 a8,a15,a9
+INS=00002755 s8i a12,a8,0xa
+REF=From: 00002755 To: 0000ad9a Type: DATA Op: 2 ANALYSIS U32=0x00000001
+INS=00002758 l8ui a3,a2,0xf0
+REF=From: 00002758 To: 0000ae80 Type: DATA Op: 2 ANALYSIS U32=0x00000000
+INS=0000275b addi.n a3,a3,0x1
+INS=0000275d s8i a3,a2,0xf0
+REF=From: 0000275d To: 0000ae80 Type: DATA Op: 2 ANALYSIS U32=0x00000000
+INS=00002760 l8ui a15,a11,0xbc
+REF=From: 00002760 To: 0000ae90 Type: READ Op: 2 ANALYSIS U32=0x14000000
+INS=00002763 addi.n a15,a15,0x1
+INS=00002765 s8i a15,a11,0xbc
+REF=From: 00002765 To: 0000ae90 Type: WRITE Op: 2 ANALYSIS U32=0x14000000
+INS=00002768 s8i a12,a2,0xf8
+REF=From: 00002768 To: 0000ae88 Type: DATA Op: 2 ANALYSIS U32=0x00000000
+INS=0000276b l8ui a3,a11,0xbc
+REF=From: 0000276b To: 0000ae90 Type: READ Op: 2 ANALYSIS U32=0x14000000
+INS=0000276e l32i a8,a11,0xf0
+REF=From: 0000276e To: 0000aec4 Type: READ Op: 2 ANALYSIS U32=0x00000000
+INS=00002771 movi.n a9,0xe
+INS=00002773 bgeu a9,a3,0x0000277b
+REF=From: 00002773 To: 0000277b Type: CONDITIONAL_JUMP Op: 2 DEFAULT
+INS=00002776 bnei a6,0x1,0x0000277b
+REF=From: 00002776 To: 0000277b Type: CONDITIONAL_JUMP Op: 2 DEFAULT
+INS=00002779 movi.n a14,0x1
+INS=0000277b l8ui a9,a11,0xc0
+REF=From: 0000277b To: 0000ae94 Type: READ Op: 2 ANALYSIS U32=0x00000000
+INS=0000277e l32i a12,a11,0xec
+REF=From: 0000277e To: 0000aec0 Type: READ Op: 2 ANALYSIS U32=0x00000000
+INS=00002781 maxu a9,a9,a3
+INS=00002784 s8i a9,a11,0xc0
+REF=From: 00002784 To: 0000ae94 Type: WRITE Op: 2 ANALYSIS U32=0x00000000
+INS=00002787 bnez.n a8,0x0000279b
+REF=From: 00002787 To: 0000279b Type: CONDITIONAL_JUMP Op: 1 DEFAULT
+INS=00002789 l8ui a12,a12,0x29
+INS=0000278c bgeu a10,a12,0x0000279b
+REF=From: 0000278c To: 0000279b Type: CONDITIONAL_JUMP Op: 2 DEFAULT
+INS=0000278f wsr a13,PS
+INS=00002792 wsr a0,MISC1
+INS=00002795 call0 0x00002de8
+REF=From: 00002795 To: 00002de8 Type: UNCONDITIONAL_CALL Op: 0 DEFAULT
+INS=00002798 j 0x0000279e
+REF=From: 00002798 To: 0000279e Type: UNCONDITIONAL_JUMP Op: 0 DEFAULT
+INS=0000279b wsr a13,PS
+INS=0000279e mov.n a2,a14
+INS=000027a0 retw.n
+INS=000027a2 bnez.n a10,0x000027b9
+REF=From: 000027a2 To: 000027b9 Type: CONDITIONAL_JUMP Op: 1 DEFAULT
+INS=000027a4 l8ui a15,a11,0xbd
+REF=From: 000027a4 To: 0000ae91 Type: READ Op: 2 ANALYSIS U32=0x00140000
+INS=000027a7 s8i a15,a7,0xa
+REF=From: 000027a7 To: 0000ad9a Type: DATA Op: 2 ANALYSIS U32=0x00000001
+INS=000027aa j 0x000027b3
+REF=From: 000027aa To: 000027b3 Type: UNCONDITIONAL_JUMP Op: 0 DEFAULT
+INS=000027ad l8ui a8,a11,0xbd
+REF=From: 000027ad To: 0000ae91 Type: READ Op: 2 ANALYSIS U32=0x00140000
+INS=000027b0 s8i a8,a7,0xa
+REF=From: 000027b0 To: 0000ad9a Type: DATA Op: 2 ANALYSIS U32=0x00000001
+INS=000027b3 s8i a12,a11,0xbd
+REF=From: 000027b3 To: 0000ae91 Type: WRITE Op: 2 ANALYSIS U32=0x00140000
+INS=000027b6 j 0x00002758
+REF=From: 000027b6 To: 00002758 Type: UNCONDITIONAL_JUMP Op: 0 DEFAULT
+INS=000027b9 addi.n a8,a10,-0x1
+INS=000027bb sext a3,a8,7
+INS=000027be bbsi a8,0x7,0x000027d5
+REF=From: 000027be To: 000027d5 Type: CONDITIONAL_JUMP Op: 2 DEFAULT
+INS=000027c1 movi.n a8,0x1
+INS=000027c3 max a8,a10,a8
+INS=000027c6 loopgtz a8,0x000027d5
+REF=From: 000027c6 To: 000027d5 Type: CONDITIONAL_JUMP Op: 1 DEFAULT
+INS=000027c9 add.n a8,a3,a9
+INS=000027cb l8ui a8,a8,0xf0
+REF=From: 000027cb To: 0000ae80 Type: DATA Op: 2 ANALYSIS U32=0x00000000
+INS=000027ce bnez.n a8,0x000027f2
+REF=From: 000027ce To: 000027f2 Type: CONDITIONAL_JUMP Op: 1 DEFAULT
+INS=000027d0 addi.n a3,a3,-0x1
+INS=000027d2 sext a3,a3,7
+INS=000027d5 beqz a15,0x000027ad
+REF=From: 000027d5 To: 000027ad Type: CONDITIONAL_JUMP Op: 1 DEFAULT
+REF=From: 000027d5 To: 000027c9 Type: INVALID Op: -1 ANALYSIS
+INS=000027d8 add.n a15,a3,a9
+INS=000027da l8ui a8,a15,0xf8
+REF=From: 000027da To: 0000ae88 Type: DATA Op: 2 ANALYSIS U32=0x00000000
+INS=000027dd addx2 a8,a8,a8
+INS=000027e0 addx4 a8,a8,a9
+INS=000027e3 l8ui a8,a8,0xa
+REF=From: 000027e3 To: 0000ad9a Type: DATA Op: 2 ANALYSIS U32=0x00000001
+INS=000027e6 s8i a8,a7,0xa
+REF=From: 000027e6 To: 0000ad9a Type: DATA Op: 2 ANALYSIS U32=0x00000001
+INS=000027e9 l8ui a15,a15,0xf8
+REF=From: 000027e9 To: 0000ae88 Type: DATA Op: 2 ANALYSIS U32=0x00000000
+INS=000027ec addx2 a15,a15,a15
+INS=000027ef j 0x00002752
+REF=From: 000027ef To: 00002752 Type: UNCONDITIONAL_JUMP Op: 0 DEFAULT
+INS=000027f2 movi.n a15,0x1
+INS=000027f4 j 0x000027d5
+REF=From: 000027f4 To: 000027d5 Type: UNCONDITIONAL_JUMP Op: 0 DEFAULT
+END_FUNCTION=000026b4
+TARGET=00001fc4 EXISTING_FUNCTION=FUN_00001fc4
+FUNCTION=00001fc4 BODY=[[00001fc4, 0000203e]]
+DECOMPILE_COMPLETED=true ERROR=
+
+void FUN_00001fc4(undefined4 *param_1)
+
+{
+  undefined1 uVar1;
+  undefined *puVar2;
+  undefined *puVar3;
+  undefined4 unaff_retaddr;
+  undefined4 uVar4;
+  int iVar5;
+  undefined4 uVar6;
+  int iVar7;
+  uint uVar8;
+  undefined1 uVar9;
+  undefined1 in_MISC1;
+  
+  puVar3 = PTR_DAT_00000d00;
+  uVar4 = rsil(2);
+  iVar5 = *(int *)(PTR_DAT_00000d00 + 0x40);
+  uVar9 = 0;
+  FUN_000027f8(param_1,*(undefined1 *)(iVar5 + 0x2b));
+  if ((*(byte *)((int)param_1 + 0xb) & 1) != 0) {
+    uVar6 = *param_1;
+    uVar1 = *(undefined1 *)((int)param_1 + 10);
+    *(undefined1 *)(iVar5 + 0x29) = uVar1;
+    *(undefined1 *)(iVar5 + 0x2a) = uVar1;
+    *(undefined4 *)(iVar5 + 0x34) = uVar6;
+    FUN_00001f74(iVar5,1);
+    puVar2 = PTR_DAT_00000cfc;
+    memw();
+    *(undefined4 *)(iVar5 + 0x4c) = *(undefined4 *)(DAT_00000be8 + 0x3f0);
+    iVar7 = *(int *)(puVar3 + 0xc4);
+    uVar8 = *(uint *)(puVar3 + 0xc0);
+    *(uint *)(iVar5 + 0x50) = uVar8;
+    *(int *)(iVar5 + 0x54) = iVar7;
+    if (uVar8 + 1 < uVar8) {
+      iVar7 = iVar7 + 1;
+    }
+    *(int *)(puVar3 + 0xc4) = iVar7;
+    *(uint *)(puVar3 + 0xc0) = uVar8 + 1;
+    puVar2[*(byte *)((int)param_1 + 10) + 0x20] =
+         puVar2[*(byte *)((int)param_1 + 10) + 0x20] + '\x01';
+    puVar3[0x5c] = puVar3[0x5c] + '\x01';
+    wsr(uVar9,uVar4);
+    return;
+  }
+  wsr(uVar9,uVar4);
+  wsr(in_MISC1,unaff_retaddr);
+  FUN_00002de8(param_1,uVar4);
+  return;
+}
+
+
+INS=00001fc4 entry a1,0x20
+INS=00001fc7 l32r a5,0x00000d00
+REF=From: 00001fc7 To: 00000d00 Type: READ Op: 1 DEFAULT U32=0x0000ae80
+INS=00001fca rsil a3,0x2
+INS=00001fcd l32i a4,a5,0x40
+REF=From: 00001fcd To: 0000aec0 Type: READ Op: 2 ANALYSIS U32=0x00000000
+INS=00001fd0 mov.n a10,a2
+INS=00001fd2 l8ui a11,a4,0x2b
+INS=00001fd5 call8 0x000027f8
+REF=From: 00001fd5 To: 000027f8 Type: UNCONDITIONAL_CALL Op: 0 DEFAULT
+REF=From: 00001fd5 To: 0000ae80 Type: PARAM Op: 0 ANALYSIS U32=0x00000000
+INS=00001fd8 l8ui a8,a2,0xb
+INS=00001fdb bbci a8,0x0,0x00002034
+REF=From: 00001fdb To: 00002034 Type: CONDITIONAL_JUMP Op: 2 DEFAULT
+INS=00001fde movi.n a11,0x1
+INS=00001fe0 l32i.n a9,a2,0x0
+INS=00001fe2 l8ui a10,a2,0xa
+INS=00001fe5 s8i a10,a4,0x29
+INS=00001fe8 s8i a10,a4,0x2a
+INS=00001feb s32i.n a9,a4,0x34
+INS=00001fed mov.n a10,a4
+INS=00001fef call8 0x00001f74
+REF=From: 00001fef To: 00001f74 Type: UNCONDITIONAL_CALL Op: 0 DEFAULT
+INS=00001ff2 l32r a13,0x00000be8
+REF=From: 00001ff2 To: 00000be8 Type: READ Op: 1 DEFAULT U32=0x031ffe00
+INS=00001ff5 memw
+INS=00001ff8 l32r a9,0x00000cfc
+REF=From: 00001ff8 To: 00000cfc Type: READ Op: 1 DEFAULT U32=0x0000aec0
+INS=00001ffb l32i a13,a13,0x3f0
+REF=From: 00001ffb To: 032001f0 Type: READ Op: 2 ANALYSIS
+INS=00001ffe s32i a13,a4,0x4c
+INS=00002001 l32i a10,a5,0xc4
+REF=From: 00002001 To: 0000af44 Type: READ Op: 2 ANALYSIS U32=0x00000000
+INS=00002004 l32i a12,a5,0xc0
+REF=From: 00002004 To: 0000af40 Type: READ Op: 2 ANALYSIS U32=0x00000000
+INS=00002007 s32i a12,a4,0x50
+INS=0000200a s32i a10,a4,0x54
+INS=0000200d addi.n a11,a12,0x1
+INS=0000200f bgeu a11,a12,0x00002014
+REF=From: 0000200f To: 00002014 Type: CONDITIONAL_JUMP Op: 2 DEFAULT
+INS=00002012 addi.n a10,a10,0x1
+INS=00002014 s32i a10,a5,0xc4
+REF=From: 00002014 To: 0000af44 Type: WRITE Op: 2 ANALYSIS U32=0x00000000
+INS=00002017 s32i a11,a5,0xc0
+REF=From: 00002017 To: 0000af40 Type: WRITE Op: 2 ANALYSIS U32=0x00000000
+INS=0000201a l8ui a8,a2,0xa
+INS=0000201d add.n a8,a8,a9
+INS=0000201f l8ui a15,a8,0x20
+REF=From: 0000201f To: 0000aee0 Type: DATA Op: 2 ANALYSIS U32=0x00000000
+INS=00002022 addi.n a15,a15,0x1
+INS=00002024 s8i a15,a8,0x20
+REF=From: 00002024 To: 0000aee0 Type: DATA Op: 2 ANALYSIS U32=0x00000000
+INS=00002027 l8ui a14,a5,0x5c
+REF=From: 00002027 To: 0000aedc Type: READ Op: 2 ANALYSIS U32=0x00000000
+INS=0000202a addi.n a14,a14,0x1
+INS=0000202c s8i a14,a5,0x5c
+REF=From: 0000202c To: 0000aedc Type: WRITE Op: 2 ANALYSIS U32=0x00000000
+INS=0000202f wsr a3,PS
+INS=00002032 retw.n
+INS=00002034 wsr a3,PS
+INS=00002037 wsr a0,MISC1
+INS=0000203a call0 0x00002de8
+REF=From: 0000203a To: 00002de8 Type: UNCONDITIONAL_CALL Op: 0 DEFAULT
+INS=0000203d retw.n
+END_FUNCTION=00001fc4

@@ -1,3 +1,5 @@
+> **2026-09-22 R216:** The saved setter enters priority6 and the walker priority4. A queue-backed witness explains gate consumption before setter entry without requiring mid-handler preemption; historical timing remains unproven. R217 continues PSP analysis. [Evidence and limits](docs/CHATGPT_HANDOFF_R216.md).
+
 > **2026-09-22 R215:** Resource claims and grants are distinct; saved interrupt state is restored before return or scheduler transfer. A bounded instruction model passes 4096 cases. R216 is tracing outer dispatch. [Evidence and limits](docs/CHATGPT_HANDOFF_R215.md).
 
 > **2026-09-22 R214:** Directory/body checksums verify that the second same-version SMU entry is zero-filled except version words and a marker. Cyan Linux callbacks do not establish the BIOS load range. [Evidence and live-test readiness](docs/CHATGPT_HANDOFF_R214.md).
