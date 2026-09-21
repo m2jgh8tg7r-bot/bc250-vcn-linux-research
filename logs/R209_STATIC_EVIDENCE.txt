@@ -1,0 +1,225 @@
+R209 SAVED EVIDENCE ONLY; NO HARDWARE ACCESS
+{
+  "hardware_access": false,
+  "sources": [
+    {
+      "artifact": "bc250-vcn-r125a-runtime-truth-raw.txt",
+      "sha256": "3bc1668708569771b719db3143760ab908bf5508eaf70223ab6172ea4d6a1b3d"
+    },
+    {
+      "artifact": "bc250-vcn-r125b-policy-gate-force-1250-raw.txt",
+      "sha256": "1dd52d4f54a9ecd5150a56679ef663ad790f6fc0c58d394c50863f9ef8a5e93f"
+    }
+  ],
+  "samples": [
+    {
+      "capture": "R125A",
+      "phase": "PRE",
+      "status": "0x1010101",
+      "sequence": "0x0",
+      "request1_status_bit8_set": true,
+      "request1_sequence_bit16_clear": true,
+      "request0_status_bit12_set": false,
+      "request0_sequence_bit0_clear": true
+    },
+    {
+      "capture": "R125A",
+      "phase": "POST",
+      "status": "0x1010101",
+      "sequence": "0x0",
+      "request1_status_bit8_set": true,
+      "request1_sequence_bit16_clear": true,
+      "request0_status_bit12_set": false,
+      "request0_sequence_bit0_clear": true
+    },
+    {
+      "capture": "R125B",
+      "phase": "PRE",
+      "status": "0x1010101",
+      "sequence": "0x0",
+      "request1_status_bit8_set": true,
+      "request1_sequence_bit16_clear": true,
+      "request0_status_bit12_set": false,
+      "request0_sequence_bit0_clear": true
+    },
+    {
+      "capture": "R125B",
+      "phase": "MID",
+      "status": "0x1010101",
+      "sequence": "0x0",
+      "request1_status_bit8_set": true,
+      "request1_sequence_bit16_clear": true,
+      "request0_status_bit12_set": false,
+      "request0_sequence_bit0_clear": true
+    },
+    {
+      "capture": "R125B",
+      "phase": "POST",
+      "status": "0x1010101",
+      "sequence": "0x0",
+      "request1_status_bit8_set": true,
+      "request1_sequence_bit16_clear": true,
+      "request0_status_bit12_set": false,
+      "request0_sequence_bit0_clear": true
+    }
+  ],
+  "same_time_atomic_snapshot": false,
+  "interpretation": "Existing saved values satisfy request1 poll predicates; no new transition or whole-block power proven."
+}
+
+Same-image helper proof:
+PROGRAM=robin1-full.bin
+LANGUAGE=Xtensa:LE:32:default
+EXECUTABLE_SHA256=8c29cf0b1c5ea713f1f8ae95ed4c1dc547d00c530530c131950cfd5eb08c6675
+TARGET=00023b14 EXISTING_FUNCTION=FUN_00023b14
+FUNCTION=00023b14 BODY=[[00023b14, 00023bb7]]
+XREF=From: 00023652 To: 00023b14 Type: UNCONDITIONAL_CALL Op: 0 DEFAULT PARENT=FUN_0002362c
+XREF=From: 000246ee To: 00023b14 Type: UNCONDITIONAL_CALL Op: 0 DEFAULT PARENT=FUN_000246c8
+XREF=From: 000246c3 To: 00023b14 Type: UNCONDITIONAL_CALL Op: 0 DEFAULT PARENT=FUN_000246a8
+XREF=From: 0002475e To: 00023b14 Type: UNCONDITIONAL_CALL Op: 0 DEFAULT PARENT=FUN_00024748
+XREF=From: 0002477a To: 00023b14 Type: UNCONDITIONAL_CALL Op: 0 DEFAULT PARENT=FUN_00024764
+XREF=From: 00023c10 To: 00023b14 Type: UNCONDITIONAL_CALL Op: 0 DEFAULT PARENT=null
+DECOMPILE_COMPLETED=true ERROR=
+
+void FUN_00023b14(int param_1,uint param_2)
+
+{
+  uint uVar1;
+  int iVar2;
+  undefined *puVar3;
+  uint uVar4;
+  uint uVar5;
+  undefined1 uVar6;
+  int iVar7;
+  uint uVar8;
+  int iVar9;
+  
+  puVar3 = PTR_DAT_00017434;
+  iVar2 = DAT_00017148;
+  uVar1 = DAT_0001711c;
+  if ((byte)PTR_DAT_00017434[param_1 * 0x48 + 0x14] != param_2) {
+    iVar9 = *(int *)(PTR_DAT_00017434 + param_1 * 0x48 + 8);
+    iVar7 = *(int *)(PTR_DAT_00017434 + param_1 * 0x48 + 0x34);
+    uVar8 = *(int *)(PTR_DAT_00017434 + param_1 * 0x48 + 0x38) + iVar9;
+    uVar5 = *(int *)(PTR_DAT_00017434 + param_1 * 0x48 + 0x3c) + iVar9;
+    memw();
+    uVar4 = *(uint *)((uVar8 & DAT_0001711c) + DAT_00017148 + 0x200);
+    if (param_2 == 0) {
+      FUN_000233e8(uVar5,1);
+      do {
+        memw();
+      } while ((*(uint *)((uVar5 & uVar1) + iVar2 + 0x200) & 1) != 0);
+      FUN_000233e8(uVar8,uVar4 | 0x10);
+      do {
+        memw();
+      } while ((*(uint *)((iVar7 + iVar9 & uVar1) + iVar2 + 0x200) & 0x1000) == 0);
+      uVar6 = 0;
+    }
+    else {
+      FUN_000233e8(uVar8,uVar4 | 1);
+      do {
+        memw();
+      } while ((*(uint *)((iVar7 + iVar9 & uVar1) + iVar2 + 0x200) & 0x100) == 0);
+      FUN_000233e8(uVar5,PTR_DAT_00017538);
+      uVar6 = 1;
+      do {
+        memw();
+      } while ((*(uint *)((uVar5 & uVar1) + iVar2 + 0x200) & 0x10000) != 0);
+    }
+    puVar3[param_1 * 0x48 + 0x14] = uVar6;
+    return;
+  }
+  return;
+}
+
+
+INS=00023b14 entry a1,0x30
+INS=00023b17 l32r a8,0x00017434
+REF=From: 00023b17 To: 00017434 Type: READ Op: 1 DEFAULT U32=0x0000f550
+INS=00023b1a mov.n a11,a3
+INS=00023b1c addx8 a7,a2,a2
+INS=00023b1f addx8 a7,a7,a8
+INS=00023b22 l8ui a8,a7,0x14
+REF=From: 00023b22 To: 0000f564 Type: DATA Op: 2 ANALYSIS U32=0x00000001
+INS=00023b25 l32r a4,0x0001711c
+REF=From: 00023b25 To: 0001711c Type: READ Op: 1 DEFAULT U32=0x000fffff
+INS=00023b28 l32r a2,0x00017148
+REF=From: 00023b28 To: 00017148 Type: READ Op: 1 DEFAULT U32=0x010ffe00
+INS=00023b2b beq a8,a3,0x00023b80
+REF=From: 00023b2b To: 00023b80 Type: CONDITIONAL_JUMP Op: 2 DEFAULT
+INS=00023b2e l32i.n a12,a7,0x8
+REF=From: 00023b2e To: 0000f558 Type: DATA Op: 2 ANALYSIS U32=0x0005b000
+INS=00023b30 l32i.n a6,a7,0x34
+REF=From: 00023b30 To: 0000f584 Type: DATA Op: 2 ANALYSIS U32=0x0000026c
+INS=00023b32 l32i.n a10,a7,0x38
+REF=From: 00023b32 To: 0000f588 Type: DATA Op: 2 ANALYSIS U32=0x00000258
+INS=00023b34 l32i.n a5,a7,0x3c
+REF=From: 00023b34 To: 0000f58c Type: DATA Op: 2 ANALYSIS U32=0x00000260
+INS=00023b36 add.n a6,a6,a12
+INS=00023b38 add.n a10,a10,a12
+INS=00023b3a s32i.n a10,a1,0x4
+INS=00023b3c s32i.n a6,a1,0x0
+REF=From: 00023b3c To: Stack[-0x30] Type: DATA Op: 1 ANALYSIS
+INS=00023b3e add.n a5,a5,a12
+INS=00023b40 and a3,a10,a4
+INS=00023b43 add.n a3,a3,a2
+INS=00023b45 movi.n a6,0x1
+INS=00023b47 memw
+INS=00023b4a l32i a3,a3,0x200
+INS=00023b4d beqz.n a11,0x00023b82
+REF=From: 00023b4d To: 00023b82 Type: CONDITIONAL_JUMP Op: 1 DEFAULT
+INS=00023b4f or a11,a3,a6
+INS=00023b52 call8 0x000233e8
+REF=From: 00023b52 To: 000233e8 Type: UNCONDITIONAL_CALL Op: 0 DEFAULT
+INS=00023b55 l32i.n a9,a1,0x0
+REF=From: 00023b55 To: Stack[-0x30] Type: DATA Op: 1 ANALYSIS
+INS=00023b57 and a9,a9,a4
+INS=00023b5a add.n a9,a9,a2
+INS=00023b5c memw
+INS=00023b5f l32i a10,a9,0x200
+INS=00023b62 bbci a10,0x8,0x00023b5c
+REF=From: 00023b62 To: 00023b5c Type: CONDITIONAL_JUMP Op: 2 DEFAULT
+INS=00023b65 mov.n a10,a5
+INS=00023b67 l32r a11,0x00017538
+REF=From: 00023b67 To: 00017538 Type: READ Op: 1 DEFAULT U32=0x00010000
+INS=00023b6a call8 0x000233e8
+REF=From: 00023b6a To: 000233e8 Type: UNCONDITIONAL_CALL Op: 0 DEFAULT
+REF=From: 00023b6a To: 00010000 Type: PARAM Op: 0 ANALYSIS U32=0x00000000
+INS=00023b6d and a9,a5,a4
+INS=00023b70 add.n a9,a9,a2
+INS=00023b72 memw
+INS=00023b75 l32i a10,a9,0x200
+INS=00023b78 bbsi a10,0x10,0x00023b72
+REF=From: 00023b78 To: 00023b72 Type: CONDITIONAL_JUMP Op: 2 DEFAULT
+INS=00023b7b s8i a6,a7,0x14
+REF=From: 00023b7b To: 0000f564 Type: DATA Op: 2 ANALYSIS U32=0x00000001
+INS=00023b7e retw.n
+INS=00023b80 retw.n
+INS=00023b82 l32i.n a6,a1,0x4
+INS=00023b84 mov.n a10,a5
+INS=00023b86 movi.n a11,0x1
+INS=00023b88 call8 0x000233e8
+REF=From: 00023b88 To: 000233e8 Type: UNCONDITIONAL_CALL Op: 0 DEFAULT
+INS=00023b8b and a9,a5,a4
+INS=00023b8e add.n a9,a9,a2
+INS=00023b90 memw
+INS=00023b93 l32i a10,a9,0x200
+INS=00023b96 bbsi a10,0x0,0x00023b90
+REF=From: 00023b96 To: 00023b90 Type: CONDITIONAL_JUMP Op: 2 DEFAULT
+INS=00023b99 mov.n a10,a6
+INS=00023b9b movi.n a11,0x10
+INS=00023b9d or a11,a3,a11
+INS=00023ba0 call8 0x000233e8
+REF=From: 00023ba0 To: 000233e8 Type: UNCONDITIONAL_CALL Op: 0 DEFAULT
+INS=00023ba3 l32i.n a9,a1,0x0
+REF=From: 00023ba3 To: Stack[-0x30] Type: DATA Op: 1 ANALYSIS
+INS=00023ba5 and a9,a9,a4
+INS=00023ba8 add.n a9,a9,a2
+INS=00023baa memw
+INS=00023bad l32i a10,a9,0x200
+INS=00023bb0 bbci a10,0xc,0x00023baa
+REF=From: 00023bb0 To: 00023baa Type: CONDITIONAL_JUMP Op: 2 DEFAULT
+INS=00023bb3 movi.n a6,0x0
+INS=00023bb5 j 0x00023b7b
+REF=From: 00023bb5 To: 00023b7b Type: UNCONDITIONAL_JUMP Op: 0 DEFAULT
+END_FUNCTION=00023b14
