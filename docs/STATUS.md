@@ -2,6 +2,8 @@
 
 ## Latest research — 2026-09-21
 
+[R208: observation and feature contract](CHATGPT_HANDOFF_R208.md) connects saved profile targets to the metrics producer: DCLK's target can stay 1111 while VCLK's target changes. DCLK remaining unchanged alone cannot decide that outcome. Cyan bit4/5 definitions and fixed callbacks also differ from the external VCLK/DCLK labels. The handoff consolidates verified evidence and unresolved version/physical-state boundaries.
+
 [R207: metrics record contract audit](CHATGPT_HANDOFF_R207.md) verifies the saved HEX and identifies conditional overlap between expanded average fields and unchanged timestamp/count storage, plus a 244-byte reset versus 284-byte export. This is a static combination audit, not evidence that the external machine ran that exact combination. Saved R125A also records 1111 as a normal policy target; the value alone does not establish a halt sentinel.
 
 [R206: saved metrics producer trace](CHATGPT_HANDOFF_R206.md) confirms that the saved metrics-format patch moves the DCLK store from internal offset 76 to 96, supporting R205's layout-mismatch explanation. The original producer reads calculated clock-slot values; average and current fields are not independent physical-liveness observations. External patch/driver identity remains unproven. No hardware access or patch application occurred.
