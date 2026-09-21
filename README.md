@@ -1,3 +1,5 @@
+> **2026-09-22 R220:** External evidence audit PSP AUTOLOAD fw_type 13 root clamp priority no hardware mutation [Evidence and limits](docs/CHATGPT_HANDOFF_R220.md).
+
 > **2026-09-22 R219:** Reusable R218 continuation packet for ChatGPT review and next-week direction setting. [Evidence and limits](docs/CHATGPT_HANDOFF_R219.md).
 
 > **2026-09-22 R218:** Service-1 bootstrap traced to SVC-derived mapped input; user-section mapping and kernel source-base chain checked. [Evidence and limits](docs/CHATGPT_HANDOFF_R218.md).
