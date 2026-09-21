@@ -2,9 +2,11 @@
 
 ## Latest research — 2026-09-21
 
+[R212](CHATGPT_HANDOFF_R212.md) verifies full analysis-window byte identity in saved P3 BIOS captures and stored Robin1/Robin3 distributions. This establishes saved-image provenance, not loader extent or running SRAM identity.
+
 [R211](CHATGPT_HANDOFF_R211.md) connects the SSC candidate to saved state-transition callbacks. [R210](CHATGPT_HANDOFF_R210.md) separates external BAR scan evidence from broader claims. [R209](CHATGPT_HANDOFF_R209.md) shows existing Domain6 status already satisfies the helper's request1 predicates. Earlier [metrics/observation findings](CHATGPT_HANDOFF_R208.md) remain qualified; none establishes physical VCN power or execution.
 
-Historical live baseline: R197 and R199 returned VCN PSP response `0xffff0008` with zero placement, followed by normal recovery. R197 is not an unbooted pending experiment. R201–R211 performed no new hardware access.
+Historical live baseline: R197 and R199 returned VCN PSP response `0xffff0008` with zero placement, followed by normal recovery. R197 is not an unbooted pending experiment. R201–R212 performed no new hardware access.
 
 Current policy: saved-image static/read-only analysis. No R197 reboot, firmware/initramfs/boot modification, unknown SMU/PSP/SVC calls, register writes, new broad BAR scans, or ring/VCPU execution. A future live proposal requires all six conditions: version-matched VCN relevance, prerequisites, exact target, discriminating observation, recovery, and more information value than R197.
 
@@ -94,7 +96,7 @@ VAAPI_HARDWARE_ENCODE=UNPROVEN
 
 ## Current stage
 
-R202–R204 add feature/callback lifecycle, conditional power-helper execution, automatic cached-slot policy, and a saved Linux metrics ABI audit. Next, seek existing external decoder/header provenance and continue version-matched static analysis. A function return, cached power flag, or clock field does not establish whole-block power, firmware placement, or execution.
+R212 verifies saved-image provenance. R201–R211 reconstruct SSC/state callbacks, Domain6 bookkeeping and status predicates, metrics producer/decoder contracts, and external acquisition limits. Continue version-matched static analysis; the live-proposal gate remains unmet.
 
 ## Remaining major milestones
 
