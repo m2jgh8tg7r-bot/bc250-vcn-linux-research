@@ -1,0 +1,14 @@
+{
+  "container_offset": "0x8eac00",
+  "container_size": 82768,
+  "body_size": 82256,
+  "body_sha256": "19f091ded7bea3ee3c61adc3b6a7e1d2a48c8a7817f885bdb43b9c1f2b6bc43d",
+  "version": "0x1c0002",
+  "body_checksum_matches": true,
+  "matching_distribution_members": [
+    "Robin1.00",
+    "Robin3.00"
+  ],
+  "hardware_access": false,
+  "runtime_identity": "UNPROVEN"
+}

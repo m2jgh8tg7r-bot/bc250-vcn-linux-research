@@ -1,0 +1,14 @@
+{
+  "evidence": "PROVEN_STATICALLY",
+  "body_sha256": "19f091ded7bea3ee3c61adc3b6a7e1d2a48c8a7817f885bdb43b9c1f2b6bc43d",
+  "instruction_byte_matches": 655,
+  "command6_target": "body+0x10616",
+  "svc_f2_target": "body+0x4f74 -> body+0x1ab8",
+  "svc_74_target": "body+0x4c82 -> body+0x37ec",
+  "service_map_literal": "0x8430",
+  "service_map_writer": "body+0x3806",
+  "runtime_identity": "UNPROVEN",
+  "runtime_service_registration": "UNPROVEN",
+  "rejection_cause": "UNPROVEN",
+  "hardware_access": false
+}
