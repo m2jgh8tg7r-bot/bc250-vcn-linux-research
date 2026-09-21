@@ -2,6 +2,8 @@
 
 2026-09-21。保存済みソースとR72サンプルのみ使用。新規gpu_metrics読出し・SMU要求・実機操作なし。
 
+> **R205補足:** 内部8-core形式を6-core driverが読む場合、DCLK由来値がoffset44の電力欄へ入る条件付きCPUモデルを確認。欄名だけでは外部値の由来を否定できない。[詳細](CHATGPT_HANDOFF_R205.md)。
+
 ## 結果
 
 外部報告はgpu_metricsのoffset44で1111が不変だったことをDCLK proxyとして扱う。一方、版を固定したローカルCyanドライバーの出力形式は`gpu_metrics_v2_2`であり、**offset44はDCLKではなく`average_soc_power`**である。
