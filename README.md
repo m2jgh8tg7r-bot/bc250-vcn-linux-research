@@ -1,3 +1,5 @@
+> **2026-09-23 External review complete; R232 plan decided:** New VA-API decoding is CPU-based; platform-mailbox support does not establish VCN execution. Next: version-matched PSP registration/dispatch evidence. R228–R230 supersede the historical table-base uncertainty below: saved code computes 0x286000, while live occupancy and SVC64 semantics remain unproven. [Review and plan](docs/R232_PLAN_EXTERNAL_REVIEW_20260923.md).
+
 > **2026-09-22 R226:** TOS initialization calls the saved 0x5244/SVC-F2 walker; 0x286000 alignment requires an unproven runtime load bias [Evidence and limits](docs/CHATGPT_HANDOFF_R226.md).
 
 > **2026-09-22 R225:** saved TOS matches the external t02 0x5244/SVC-F2 pattern, while runtime address and 31-versus-32 entry interpretation remain open [Evidence and limits](docs/CHATGPT_HANDOFF_R225.md).
