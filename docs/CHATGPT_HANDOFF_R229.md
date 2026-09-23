@@ -1,3 +1,5 @@
+> **R232 correction — 2026-09-23:** Use one dereference at user VA0x206080 for the context base; do not equate it with body0x6080. SVC64 allocation1..31 for loader classes is already in R218 and reverified in R232. [Evidence](CHATGPT_HANDOFF_R232.md). The original text below is historical.
+
 # R229 — TOS image loader populates the same 0x5244 table
 
 Date: 2026-09-22. Static saved-image analysis only; no hardware access or mutation.

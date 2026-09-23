@@ -1,3 +1,5 @@
+> **R232 correction — 2026-09-23:** SVC64 implementation was already saved and explained in R218. Its first-fit allocation1..31 for loader classes is reverified in R232; live occupancy remains unproven. [Evidence](../docs/CHATGPT_HANDOFF_R232.md). The original text below is historical.
+
 # R230 — duplicate match and PSP slot assignment are separate paths
 
 Date: 2026-09-22. Static saved-image analysis only; no hardware access or mutation.

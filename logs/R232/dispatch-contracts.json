@@ -1,0 +1,133 @@
+{
+  "classification": "PROVEN_STATICALLY",
+  "body_sha256": "19f091ded7bea3ee3c61adc3b6a7e1d2a48c8a7817f885bdb43b9c1f2b6bc43d",
+  "code_coordinates": "body offsets; saved exports add artificial 0x200000",
+  "runtime_identity": "UNPROVEN",
+  "hardware_access": false,
+  "identifier_domains": {
+    "descriptor_slot": {
+      "loader_classes": [
+        2,
+        4,
+        5,
+        6
+      ],
+      "successful_output_range": [
+        1,
+        31
+      ],
+      "class1_exception": "initializes descriptor0; does not write output pointer"
+    },
+    "user_row": {
+      "startup_context_base": "0x280000",
+      "offset": "0x6000",
+      "stride": "0x54",
+      "selector_field": "0x18",
+      "live_occupancy": "UNPROVEN"
+    },
+    "service_selector": {
+      "range": [
+        0,
+        15
+      ],
+      "map_literal": "0x8430",
+      "map_value0": "F2 rejects with 0x2f"
+    },
+    "linux_load_fw_type": {
+      "VCN": 13,
+      "not_equivalent_to": "BIOS PSP-directory entry type 0x13"
+    },
+    "linux_host_command": {
+      "LOAD_IP_FW": 6,
+      "SAVE_RESTORE": 8,
+      "AUTOLOAD_RLC": 33
+    },
+    "external_operation_array_id8": {
+      "relationship_to_host_command8": "UNPROVEN"
+    }
+  },
+  "service1_requests": [
+    {
+      "command": "0x1007",
+      "wrapper": "0xf3ca",
+      "known_host_command": 6,
+      "call_site": "0x10624"
+    },
+    {
+      "command": "0x1024",
+      "wrapper": "0xf18c",
+      "known_host_command": 8,
+      "call_site": "0x1065a"
+    },
+    {
+      "command": "0x1009",
+      "wrapper": "0xf10e",
+      "caller": "0xfe64",
+      "key": "amd.dr.driverID"
+    },
+    {
+      "command": "0x103b",
+      "wrapper": "0x1002c",
+      "purpose_in_caller": "query request layout; cache nonzero result or fallback1 on error"
+    },
+    {
+      "command": "0x1001",
+      "wrapper": "0xf168",
+      "caller": "0x13106",
+      "argument": "slot at request+0x38"
+    }
+  ],
+  "row_lifecycle": {
+    "register_selector_store": "0x121ee",
+    "register_svc74": "0x121f6",
+    "initial_notify": {
+      "command": "0xffff0002",
+      "excludes_selectors": [
+        1,
+        3
+      ]
+    },
+    "cleanup_notify": {
+      "command": "0xffff0003",
+      "helper": "0x13020",
+      "excludes_selector": 1,
+      "map_clear_attempt": "SVC74(selector,0)",
+      "cleared_fields": [
+        "0x0",
+        "0x8",
+        "byte0x1d"
+      ],
+      "stale_field": "0x18",
+      "svc_return_checks": "several ignored; do not infer actual cleanup completion"
+    }
+  },
+  "walker": {
+    "entry": "0xfc50",
+    "known_direct_caller": "0x1174c",
+    "mode_byte": "0x2060f5",
+    "mode_writer": "UNPROVEN",
+    "first_phase_order": "31 down to 0",
+    "second_phase_order": "0 up to 31",
+    "tag": "0x5244",
+    "mode1_commands": [
+      "0xffff0000",
+      "0xffff0001"
+    ],
+    "other_mode_commands": [
+      "0xffff0004",
+      "0xffff0005"
+    ],
+    "service3": "first phase only when mode2, F2(3,1), immediate1; return not assigned to result",
+    "first_phase_failure": "retry same ordinary row until zero",
+    "second_phase_failure": "stop first nonzero",
+    "AUTOLOAD_identity": "UNPROVEN"
+  },
+  "open_links": [
+    "SVC67 helper0xcb4 implementation",
+    "service1 image bytes and provenance",
+    "nonzero walker mode writer",
+    "version-matched external operation8-to-t28 chain",
+    "runtime registration and occupancy",
+    "VCN acceptance and execution"
+  ]
+}

@@ -1,3 +1,5 @@
+> **R232 correction — 2026-09-23:** R232 research is complete. SVC64 was found in existing R218 exports; the plan's allocator-unknown statement is superseded. See the completed evidence and corrections. [Evidence](CHATGPT_HANDOFF_R232.md). The original text below is historical.
+
 # 外部研究照合とR232方針 — 2026-09-23
 
 ユーザー指定の外部情報収集・既存証拠照合・方針決定を完了。R232の解析本体は未実施。実機アクセス・変更・外部コード実行なし。別ChatGPTからの回答ではなく、公開一次資料を直接取得した結果。

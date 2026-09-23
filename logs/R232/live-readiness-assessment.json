@@ -1,0 +1,26 @@
+{
+  "stage": "R232",
+  "evaluated_during_research": true,
+  "new_hardware_test_needed_now": false,
+  "new_hardware_test_ready": false,
+  "reason": "Static corrections are discriminated by existing saved text and CPU checks. No identified live transport exposes the PSP-private registration state or identifies the service1 image. Repeating LOAD_IP_FW or adding ccp platform access does not resolve those links.",
+  "prepared_boot_image": false,
+  "installed": false,
+  "booted": false,
+  "hardware_access": false,
+  "hardware_mutation": false,
+  "last_experimental_baseline": {
+    "stage": "R199_R173",
+    "psp_status": "0xffff0008",
+    "returned_placement": 0,
+    "normal_recovery": "PROVEN_LIVE from historical record; not remeasured this session"
+  },
+  "next_live_gate": [
+    "Version/target-specific hypothesis tied to VCN",
+    "A concrete observation distinguishing outcomes",
+    "One experimental variable and exact transport",
+    "Normal-boot rollback and applicable cold-recovery evidence",
+    "No repeat of a previously hanging write"
+  ],
+  "next_static_action": "Resolve service1 image provenance and obtain version-matched existing text for missing dispatch links; no SVC64 re-search needed"
+}

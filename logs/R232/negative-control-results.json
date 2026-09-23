@@ -1,0 +1,23 @@
+{
+  "result": "PASS",
+  "negative_controls": [
+    {
+      "control": "Omit pre-boundary factor7, producing alleged stride12",
+      "rejected": true,
+      "method": "expected row field was never written"
+    },
+    {
+      "control": "Exclude eligible slot31",
+      "rejected": true,
+      "method": "expectation assertion"
+    },
+    {
+      "control": "Treat service selectors as 32 instead of16",
+      "rejected": true,
+      "method": "expectation assertion"
+    }
+  ],
+  "hardware_access": false,
+  "firmware_modified": false,
+  "classification": "PROVEN_STATICALLY"
+}

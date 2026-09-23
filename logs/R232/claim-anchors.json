@@ -1,0 +1,358 @@
+{
+  "body_sha256": "19f091ded7bea3ee3c61adc3b6a7e1d2a48c8a7817f885bdb43b9c1f2b6bc43d",
+  "classification": "PROVEN_STATICALLY",
+  "anchors": [
+    {
+      "claim": "normal_driver_property_call",
+      "body_offset": "0x11bcc",
+      "instruction": "bl 0x0020fe64",
+      "bytes": "fef74af9",
+      "sources": [
+        {
+          "path": "r217-tos-load-response/instructions.txt",
+          "line": 2452
+        },
+        {
+          "path": "r218-service-image-provenance/image-loader.txt",
+          "line": 651
+        },
+        {
+          "path": "r218-service-image-provenance/instructions.txt",
+          "line": 3476
+        }
+      ]
+    },
+    {
+      "claim": "selector_class_branch",
+      "body_offset": "0x11bd0",
+      "instruction": "cmp r0,#0x3",
+      "bytes": "0328",
+      "sources": [
+        {
+          "path": "r217-tos-load-response/instructions.txt",
+          "line": 2453
+        },
+        {
+          "path": "r218-service-image-provenance/image-loader.txt",
+          "line": 653
+        },
+        {
+          "path": "r218-service-image-provenance/instructions.txt",
+          "line": 3477
+        }
+      ]
+    },
+    {
+      "claim": "duplicate_lookup",
+      "body_offset": "0x11be4",
+      "instruction": "bl 0x0020fe08",
+      "bytes": "fef710f9",
+      "sources": [
+        {
+          "path": "r217-tos-load-response/instructions.txt",
+          "line": 2462
+        },
+        {
+          "path": "r218-service-image-provenance/image-loader.txt",
+          "line": 665
+        },
+        {
+          "path": "r218-service-image-provenance/instructions.txt",
+          "line": 3486
+        }
+      ]
+    },
+    {
+      "claim": "allocator_call",
+      "body_offset": "0x11cc0",
+      "instruction": "svc 0x64",
+      "bytes": "64df",
+      "sources": [
+        {
+          "path": "r217-tos-load-response/instructions.txt",
+          "line": 2541
+        },
+        {
+          "path": "r218-service-image-provenance/image-loader.txt",
+          "line": 763
+        },
+        {
+          "path": "r218-service-image-provenance/instructions.txt",
+          "line": 3565
+        }
+      ]
+    },
+    {
+      "claim": "row_zero",
+      "body_offset": "0x11ce0",
+      "instruction": "bl 0x0020e28c",
+      "bytes": "fcf7d4fa",
+      "sources": [
+        {
+          "path": "r217-tos-load-response/instructions.txt",
+          "line": 2552
+        },
+        {
+          "path": "r218-service-image-provenance/image-loader.txt",
+          "line": 776
+        },
+        {
+          "path": "r218-service-image-provenance/instructions.txt",
+          "line": 3576
+        }
+      ]
+    },
+    {
+      "claim": "svc67_output",
+      "body_offset": "0x11d5e",
+      "instruction": "svc 0x67",
+      "bytes": "67df",
+      "sources": [
+        {
+          "path": "r217-tos-load-response/instructions.txt",
+          "line": 2588
+        },
+        {
+          "path": "r218-service-image-provenance/image-loader.txt",
+          "line": 814
+        },
+        {
+          "path": "r218-service-image-provenance/instructions.txt",
+          "line": 3612
+        }
+      ]
+    },
+    {
+      "claim": "row_payload_base",
+      "body_offset": "0x11d82",
+      "instruction": "str r1,[r2,#0x0]",
+      "bytes": "1160",
+      "sources": [
+        {
+          "path": "r217-tos-load-response/instructions.txt",
+          "line": 2600
+        },
+        {
+          "path": "r218-service-image-provenance/image-loader.txt",
+          "line": 828
+        },
+        {
+          "path": "r218-service-image-provenance/instructions.txt",
+          "line": 3624
+        }
+      ]
+    },
+    {
+      "claim": "row_payload_size",
+      "body_offset": "0x11d9a",
+      "instruction": "str r2,[r0,#0x4]",
+      "bytes": "4260",
+      "sources": [
+        {
+          "path": "r217-tos-load-response/instructions.txt",
+          "line": 2607
+        },
+        {
+          "path": "r218-service-image-provenance/image-loader.txt",
+          "line": 835
+        },
+        {
+          "path": "r218-service-image-provenance/instructions.txt",
+          "line": 3631
+        }
+      ]
+    },
+    {
+      "claim": "driver_skips_ta",
+      "body_offset": "0x120ca",
+      "instruction": "bne 0x002121be",
+      "bytes": "78d1",
+      "sources": [
+        {
+          "path": "r217-tos-load-response/instructions.txt",
+          "line": 2904
+        },
+        {
+          "path": "r218-service-image-provenance/image-loader.txt",
+          "line": 1179
+        },
+        {
+          "path": "r218-service-image-provenance/instructions.txt",
+          "line": 3928
+        }
+      ]
+    },
+    {
+      "claim": "stride_factor7",
+      "body_offset": "0x121da",
+      "instruction": "rsb r0,r0,r0, lsl #0x3",
+      "bytes": "c0ebc000",
+      "sources": [
+        {
+          "path": "r217-tos-load-response/instructions.txt",
+          "line": 3000
+        },
+        {
+          "path": "r218-service-image-provenance/image-loader.txt",
+          "line": 1289
+        },
+        {
+          "path": "r218-service-image-provenance/instructions.txt",
+          "line": 4024
+        }
+      ]
+    },
+    {
+      "claim": "stride_factor3",
+      "body_offset": "0x121de",
+      "instruction": "add.w r1,r0,r0, lsl #0x1",
+      "bytes": "00eb4001",
+      "sources": [
+        {
+          "path": "r217-tos-load-response/instructions.txt",
+          "line": 3001
+        },
+        {
+          "path": "r217-tos-load-response/registration-caller.txt",
+          "line": 115
+        },
+        {
+          "path": "r218-service-image-provenance/instructions.txt",
+          "line": 4025
+        }
+      ]
+    },
+    {
+      "claim": "stride_factor4",
+      "body_offset": "0x121e6",
+      "instruction": "add.w r0,r0,r1, lsl #0x2",
+      "bytes": "00eb8100",
+      "sources": [
+        {
+          "path": "r217-tos-load-response/instructions.txt",
+          "line": 3004
+        },
+        {
+          "path": "r217-tos-load-response/registration-caller.txt",
+          "line": 119
+        },
+        {
+          "path": "r218-service-image-provenance/instructions.txt",
+          "line": 4028
+        }
+      ]
+    },
+    {
+      "claim": "selector_store",
+      "body_offset": "0x121ee",
+      "instruction": "str r5,[r0,#0x18]",
+      "bytes": "8561",
+      "sources": [
+        {
+          "path": "r217-tos-load-response/instructions.txt",
+          "line": 3006
+        },
+        {
+          "path": "r217-tos-load-response/registration-caller.txt",
+          "line": 121
+        },
+        {
+          "path": "r218-service-image-provenance/instructions.txt",
+          "line": 4030
+        }
+      ]
+    },
+    {
+      "claim": "service_registration",
+      "body_offset": "0x121f6",
+      "instruction": "svc 0x74",
+      "bytes": "74df",
+      "sources": [
+        {
+          "path": "r217-tos-load-response/instructions.txt",
+          "line": 3009
+        },
+        {
+          "path": "r217-tos-load-response/registration-caller.txt",
+          "line": 124
+        },
+        {
+          "path": "r218-service-image-provenance/instructions.txt",
+          "line": 4033
+        }
+      ]
+    },
+    {
+      "claim": "first_notification",
+      "body_offset": "0x1220c",
+      "instruction": "svc 0xf2",
+      "bytes": "f2df",
+      "sources": [
+        {
+          "path": "r217-tos-load-response/instructions.txt",
+          "line": 3020
+        },
+        {
+          "path": "r217-tos-load-response/registration-caller.txt",
+          "line": 139
+        },
+        {
+          "path": "r218-service-image-provenance/instructions.txt",
+          "line": 4044
+        }
+      ]
+    },
+    {
+      "claim": "walker_direct_caller",
+      "body_offset": "0x1174c",
+      "instruction": "bl 0x0020fc50",
+      "bytes": "fef780fa",
+      "sources": [
+        {
+          "path": "r218-service-image-provenance/instructions.txt",
+          "line": 3109
+        },
+        {
+          "path": "r218-service-image-provenance/user-entry.txt",
+          "line": 202
+        }
+      ]
+    },
+    {
+      "claim": "host_command8_wrapper",
+      "body_offset": "0x1065a",
+      "instruction": "bl 0x0020f18c",
+      "bytes": "fef797fd",
+      "sources": [
+        {
+          "path": "r217-tos-load-response/branches.txt",
+          "line": 103
+        },
+        {
+          "path": "r217-tos-load-response/instructions.txt",
+          "line": 1856
+        },
+        {
+          "path": "r218-service-image-provenance/instructions.txt",
+          "line": 2574
+        }
+      ]
+    },
+    {
+      "claim": "service1_cleanup",
+      "body_offset": "0x13106",
+      "instruction": "bl 0x0020f168",
+      "bytes": "fcf72ff8",
+      "sources": [
+        {
+          "path": "r217-tos-load-response/instructions.txt",
+          "line": 3425
+        },
+        {
+          "path": "r218-service-image-provenance/instructions.txt",
+          "line": 4752
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "classification": "PROVEN_STATICALLY",
+  "hardware_access": false,
+  "cleanup_cases": 432,
+  "f2_predispatch_cases": 2475,
+  "result": "PASS",
+  "limits": [
+    "Cleanup service return values are hypothetical hooks",
+    "F2 success stops before context copy, scheduling, or service execution"
+  ]
+}

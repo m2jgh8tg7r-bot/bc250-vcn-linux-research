@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-09-23T12:10:02.042032+00:00",
+  "source_url": "https://raw.githubusercontent.com/torvalds/linux/704340f1cd0dcef829eb62f5b48ae95a2ce17bdf/drivers/gpu/drm/amd/amdgpu/psp_v11_0_8.c",
+  "retrieval": "Web text reader succeeded; separate urllib request returned HTTP429; no repeated download",
+  "local_source_sha256": "a89117eb6066a668f23980936d77fa781873759befdf6a2aff21f1fc2fcae52f",
+  "local_source_revision": "0bb924b042ab85b8f529aed6e4f3e24750584276",
+  "full_file_byte_identity": "NOT_CLAIMED",
+  "reviewed_contract": {
+    "selection": "MP0 11.0.8 plus AMD_APU_IS_CYAN_SKILLFISH2 -> psp_v11_0_8 funcs",
+    "non_vf_ring_control": "C2PMSG64,69,70,71",
+    "non_vf_wptr": "C2PMSG67",
+    "upstream_autoload_supported": false
+  },
+  "hardware_access": false
+}

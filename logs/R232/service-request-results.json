@@ -1,0 +1,10 @@
+{
+  "classification": "PROVEN_STATICALLY",
+  "hardware_access": false,
+  "service_request_cases": 90,
+  "result": "PASS",
+  "limits": [
+    "Request construction and return propagation only; service body is not modeled",
+    "No equivalence to external operation-array id 8 or t28 handler is assumed"
+  ]
+}

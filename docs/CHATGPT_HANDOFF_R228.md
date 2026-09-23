@@ -1,3 +1,5 @@
+> **R232 correction — 2026-09-23:** The table expression0x286000 remains supported. The parenthetical body0x6068/body0x6080 mapping and claimed initial0x16000 user-context value are corrected using R218's separate user-section coordinates. [Evidence](CHATGPT_HANDOFF_R232.md). The original text below is historical.
+
 # R228 — saved TOS computes the external t02 table address
 
 Date: 2026-09-22. Static analysis of the saved PSP type-2 TOS body only; no hardware access or mutation.

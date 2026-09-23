@@ -1,0 +1,21 @@
+{
+  "classification": "PROVEN_STATICALLY",
+  "user_section_mapping": "STRONGLY_SUPPORTED, not live relocation",
+  "coordinate_pairs": [
+    {
+      "user_va": "0x206068",
+      "candidate_body_offset": "0x14068",
+      "wrong_uniform_base_offset": "0x6068",
+      "candidate_saved_u32": "0x0",
+      "wrong_offset_saved_u32": "0x0"
+    },
+    {
+      "user_va": "0x206080",
+      "candidate_body_offset": "0x14080",
+      "wrong_uniform_base_offset": "0x6080",
+      "candidate_saved_u32": "0x0",
+      "wrong_offset_saved_u32": "0x16000"
+    }
+  ],
+  "conclusion": "Do not call body0x6080 the user pointer at VA0x206080. Runtime initial contents remain unproven; startup store0x280000 is independent of this erroneous initial-value claim."
+}

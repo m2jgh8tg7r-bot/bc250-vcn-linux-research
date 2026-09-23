@@ -1,0 +1,13 @@
+{
+  "classification": "PROVEN_STATICALLY",
+  "hardware_access": false,
+  "svc64_wrapper_cases": 216,
+  "svc74_wrapper_cases": 80,
+  "selector_class_cases": 20,
+  "svc67_caller_cases": 81,
+  "result": "PASS",
+  "limits": [
+    "Validation, allocation, property, and SVC67 results are hypothetical hooks",
+    "SVC67 worker implementation is not recovered or modeled"
+  ]
+}

@@ -1,3 +1,5 @@
+> **R232 correction — 2026-09-23:** The body0x6080/user VA0x206080 identification is not valid under the R218 user-section mapping. The saved startup explicitly stores0x280000; R228/R232 establish the conditional0x286000 expression. [Evidence](CHATGPT_HANDOFF_R232.md). The original text below is historical.
+
 # R226 — TOS context initialization and candidate t02 runtime base
 
 Date: 2026-09-22. Static saved-image analysis only; no hardware access or mutation.

@@ -1,3 +1,5 @@
+> **R232 correction — 2026-09-23:** The claim that saved SVC64 implementation is unavailable was a handoff regression. R218 already contained0x49ba→0x180c. R232 restores and verifies that evidence without fetching or reversing another AMD public binary. [Evidence](../docs/CHATGPT_HANDOFF_R232.md). The original text below is historical.
+
 # R231 — SVC64 semantics remain unresolved; use public text sources only
 
 Date: 2026-09-22. No hardware access or mutation.

@@ -1,0 +1,21 @@
+{
+  "classification": "PROVEN_STATICALLY",
+  "model": "saved instruction-text subset",
+  "counts": {
+    "allocator_differential_cases": 4096,
+    "allocator_class1_edge_cases": 1,
+    "registration_differential_cases": 1330,
+    "row_write_differential_cases": 288,
+    "loader_registration_lifecycle_cases": 63,
+    "walker_order_and_mode_cases": 27,
+    "walker_failure_behavior_cases": 4,
+    "driver_property_request_cases": 360
+  },
+  "result": "PASS",
+  "hardware_access": false,
+  "limits": [
+    "SVC/call hooks are assumptions",
+    "No live TOS identity or occupancy proof",
+    "No firmware acceptance or VCN execution proof"
+  ]
+}

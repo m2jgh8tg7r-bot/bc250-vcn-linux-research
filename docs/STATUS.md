@@ -1,4 +1,17 @@
-> **2026-09-23 External review complete; R232 plan decided:** New VA-API decoding is CPU-based; platform-mailbox support does not establish VCN execution. Next: version-matched PSP registration/dispatch evidence. R228–R230 supersede the historical table-base uncertainty below: saved code computes 0x286000, while live occupancy and SVC64 semantics remain unproven. [Review and plan](R232_PLAN_EXTERNAL_REVIEW_20260923.md).
+# Current status
+
+## Latest — R232, 2026-09-23
+
+[R232 handoff](CHATGPT_HANDOFF_R232.md) restores the already-saved R218 SVC64 allocator evidence, corrects the row writer to stride0x54, and separates user pointers from file offsets. Driver-selector acquisition, registration, cleanup and the mode-dependent F2 walker are checked in 9,563 CPU-model cases. These are static results: running-image identity, live occupancy and VCN execution remain unproven.
+
+[Transport comparison](R232_TRANSPORT_CONTRACT.md) · [External evidence questions](R232_EXTERNAL_EVIDENCE_QUESTIONS.md) · [Earlier external review](R232_PLAN_EXTERNAL_REVIEW_20260923.md).
+
+The requested one-hour research session is complete. No hardware access or mutation occurred. No new hardware test is ready or needed to establish these static corrections; the next step is service-image provenance.
+
+<details>
+<summary>Historical update notices (superseded where R232 corrects them)</summary>
+
+> **2026-09-23 External review complete; R232 plan decided:** New VA-API decoding is CPU-based; platform-mailbox support does not establish VCN execution. Next: version-matched PSP registration/dispatch evidence. R228–R230 supersede the historical table-base uncertainty below: saved code computes 0x286000, while live occupancy remains unproven; SVC64 is corrected in R232. [Review and plan](R232_PLAN_EXTERNAL_REVIEW_20260923.md).
 
 > **2026-09-22 R226:** TOS initialization calls the saved 0x5244/SVC-F2 walker; 0x286000 alignment requires an unproven runtime load bias [Evidence and limits](CHATGPT_HANDOFF_R226.md).
 
@@ -28,9 +41,10 @@
 
 > **2026-09-22 R213:** Saved SMU header and checksum delimit a 256-KiB body plus a retained 256-byte signature trailer. Actual loader/runtime extent remains unproven. [Evidence and limits](CHATGPT_HANDOFF_R213.md).
 
-# Current status
+</details>
 
-## Latest research — 2026-09-21
+
+## Earlier research — through 2026-09-21
 
 [R212](CHATGPT_HANDOFF_R212.md) verifies full analysis-window byte identity in saved P3 BIOS captures and stored Robin1/Robin3 distributions. This establishes saved-image provenance, not loader extent or running SRAM identity.
 

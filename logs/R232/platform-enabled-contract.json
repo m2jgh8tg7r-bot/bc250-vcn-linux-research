@@ -1,0 +1,10 @@
+{
+  "classification": "PROVEN_STATICALLY",
+  "file_sha256": "5e45c8a560448bd196813cc3774e2e1364673616a21a5a317b3eb31ae5c545af",
+  "function": "platform_access_dev_init",
+  "first_line": 206,
+  "notification": "platform access enabled",
+  "finding": "Initialization allocates and configures software structures and mutexes, then logs enabled. No mailbox send appears in this function.",
+  "hardware_access": false,
+  "status4_from_external_patch": "separate author-reported command response, not success"
+}

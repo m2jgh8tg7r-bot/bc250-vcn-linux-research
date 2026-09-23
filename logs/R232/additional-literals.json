@@ -1,0 +1,26 @@
+{
+  "body_sha256": "19f091ded7bea3ee3c61adc3b6a7e1d2a48c8a7817f885bdb43b9c1f2b6bc43d",
+  "source": "Existing saved TOS, raw LE32 comparison only; no new disassembly",
+  "records": [
+    {
+      "body_offset": "0x13124",
+      "bytes": "c4602000",
+      "u32": "0x2060c4"
+    },
+    {
+      "body_offset": "0x13128",
+      "bytes": "80602000",
+      "u32": "0x206080"
+    },
+    {
+      "body_offset": "0x1312c",
+      "bytes": "0300ffff",
+      "u32": "0xffff0003"
+    },
+    {
+      "body_offset": "0x13130",
+      "bytes": "7d602000",
+      "u32": "0x20607d"
+    }
+  ]
+}

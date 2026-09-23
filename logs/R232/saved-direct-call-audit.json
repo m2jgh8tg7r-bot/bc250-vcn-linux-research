@@ -1,0 +1,67 @@
+{
+  "classification": "PROVEN_STATICALLY",
+  "scope": "Merged 4963 saved instruction records; not an exhaustive call graph or proof against indirect calls",
+  "records": [
+    {
+      "target_body_offset": "0x180c",
+      "name": "allocator",
+      "saved_direct_calls": [
+        {
+          "body_offset": "0x49e6",
+          "asm": "bl 0x0020180c"
+        }
+      ]
+    },
+    {
+      "target_body_offset": "0x37ec",
+      "name": "service map writer",
+      "saved_direct_calls": [
+        {
+          "body_offset": "0x4c88",
+          "asm": "bl 0x002037ec"
+        }
+      ]
+    },
+    {
+      "target_body_offset": "0xfc50",
+      "name": "walker",
+      "saved_direct_calls": [
+        {
+          "body_offset": "0x1174c",
+          "asm": "bl 0x0020fc50"
+        }
+      ]
+    },
+    {
+      "target_body_offset": "0xf18c",
+      "name": "request1024",
+      "saved_direct_calls": [
+        {
+          "body_offset": "0x1065a",
+          "asm": "bl 0x0020f18c"
+        }
+      ]
+    },
+    {
+      "target_body_offset": "0xfe64",
+      "name": "driver property",
+      "saved_direct_calls": [
+        {
+          "body_offset": "0x11bcc",
+          "asm": "bl 0x0020fe64"
+        }
+      ]
+    },
+    {
+      "target_body_offset": "0xf168",
+      "name": "request1001",
+      "saved_direct_calls": [
+        {
+          "body_offset": "0x13106",
+          "asm": "bl 0x0020f168"
+        }
+      ]
+    }
+  ],
+  "hardware_access": false
+}

@@ -1,0 +1,12 @@
+{
+  "result": "PASS",
+  "classification": "PROVEN_STATICALLY",
+  "body_sha256": "19f091ded7bea3ee3c61adc3b6a7e1d2a48c8a7817f885bdb43b9c1f2b6bc43d",
+  "instruction_byte_matches": 586,
+  "text_only_instructions": 0,
+  "literal_matches": 95,
+  "source_files_checked": 28,
+  "dispatch_entries_checked": 7,
+  "hardware_access": false,
+  "method": "Byte and source-text equality; no fresh disassembly"
+}

@@ -1,0 +1,102 @@
+[
+  {
+    "upstream_commit": "704340f1cd0dcef829eb62f5b48ae95a2ce17bdf",
+    "path": "drivers/crypto/ccp/sp-pci.c",
+    "url": "https://raw.githubusercontent.com/torvalds/linux/704340f1cd0dcef829eb62f5b48ae95a2ce17bdf/drivers/crypto/ccp/sp-pci.c",
+    "sha256": "58b1b12be5ccd2702bc26fa9a52a717a2446f1889c272da913fa530b9acd3bea",
+    "bytes": 14920,
+    "fetched_at": "2026-09-23T11:51:32.734204+00:00",
+    "local_r152_sha256": "58b1b12be5ccd2702bc26fa9a52a717a2446f1889c272da913fa530b9acd3bea",
+    "local_matches": true
+  },
+  {
+    "upstream_commit": "704340f1cd0dcef829eb62f5b48ae95a2ce17bdf",
+    "path": "drivers/crypto/ccp/platform-access.c",
+    "url": "https://raw.githubusercontent.com/torvalds/linux/704340f1cd0dcef829eb62f5b48ae95a2ce17bdf/drivers/crypto/ccp/platform-access.c",
+    "sha256": "5e45c8a560448bd196813cc3774e2e1364673616a21a5a317b3eb31ae5c545af",
+    "bytes": 5670,
+    "fetched_at": "2026-09-23T11:51:32.749712+00:00",
+    "local_r152_sha256": "5e45c8a560448bd196813cc3774e2e1364673616a21a5a317b3eb31ae5c545af",
+    "local_matches": true
+  },
+  {
+    "upstream_commit": "704340f1cd0dcef829eb62f5b48ae95a2ce17bdf",
+    "path": "drivers/crypto/ccp/psp-dev.c",
+    "url": "https://raw.githubusercontent.com/torvalds/linux/704340f1cd0dcef829eb62f5b48ae95a2ce17bdf/drivers/crypto/ccp/psp-dev.c",
+    "sha256": "acae4587ea5199dadbd74dec937ca81f11a92bcef8b39b097128c9b7b41596c3",
+    "bytes": 7924,
+    "fetched_at": "2026-09-23T11:51:32.804163+00:00",
+    "local_r152_sha256": "acae4587ea5199dadbd74dec937ca81f11a92bcef8b39b097128c9b7b41596c3",
+    "local_matches": true
+  },
+  {
+    "upstream_commit": "704340f1cd0dcef829eb62f5b48ae95a2ce17bdf",
+    "path": "drivers/crypto/ccp/psp-dev.h",
+    "url": "https://raw.githubusercontent.com/torvalds/linux/704340f1cd0dcef829eb62f5b48ae95a2ce17bdf/drivers/crypto/ccp/psp-dev.h",
+    "sha256": "bd0d872310f1ca6f7fe8347e75e9ff895dbd71f761d9b4a2c1a89ef98273b6fa",
+    "bytes": 3573,
+    "fetched_at": "2026-09-23T11:51:32.826333+00:00",
+    "local_r152_sha256": "bd0d872310f1ca6f7fe8347e75e9ff895dbd71f761d9b4a2c1a89ef98273b6fa",
+    "local_matches": true
+  },
+  {
+    "upstream_commit": "704340f1cd0dcef829eb62f5b48ae95a2ce17bdf",
+    "path": "drivers/crypto/ccp/tee-dev.c",
+    "url": "https://raw.githubusercontent.com/torvalds/linux/704340f1cd0dcef829eb62f5b48ae95a2ce17bdf/drivers/crypto/ccp/tee-dev.c",
+    "sha256": "063555e0371eca0517271f2bc4b9b71529c0aa318d30d51ba672fde6bb5e7df3",
+    "bytes": 8847,
+    "fetched_at": "2026-09-23T11:51:33.199821+00:00",
+    "local_r152_sha256": "063555e0371eca0517271f2bc4b9b71529c0aa318d30d51ba672fde6bb5e7df3",
+    "local_matches": true
+  },
+  {
+    "upstream_commit": "704340f1cd0dcef829eb62f5b48ae95a2ce17bdf",
+    "path": "include/linux/psp-platform-access.h",
+    "url": "https://raw.githubusercontent.com/torvalds/linux/704340f1cd0dcef829eb62f5b48ae95a2ce17bdf/include/linux/psp-platform-access.h",
+    "sha256": "1a106b6a82e6194fec91180dee77513171af905238094a8089438e62fd945f98",
+    "bytes": 1952,
+    "fetched_at": "2026-09-23T11:51:33.203733+00:00",
+    "local_r152_sha256": "1a106b6a82e6194fec91180dee77513171af905238094a8089438e62fd945f98",
+    "local_matches": true
+  },
+  {
+    "upstream_commit": "704340f1cd0dcef829eb62f5b48ae95a2ce17bdf",
+    "path": "include/linux/psp.h",
+    "url": "https://raw.githubusercontent.com/torvalds/linux/704340f1cd0dcef829eb62f5b48ae95a2ce17bdf/include/linux/psp.h",
+    "sha256": "d63c70bd9306dedf1a0a55a455a622c036652fc0f15758f89a13186b84c40946",
+    "bytes": 771,
+    "fetched_at": "2026-09-23T11:51:33.332955+00:00",
+    "local_r152_sha256": "d63c70bd9306dedf1a0a55a455a622c036652fc0f15758f89a13186b84c40946",
+    "local_matches": true
+  },
+  {
+    "upstream_commit": "704340f1cd0dcef829eb62f5b48ae95a2ce17bdf",
+    "path": "drivers/gpu/drm/amd/amdgpu/psp_gfx_if.h",
+    "url": "https://raw.githubusercontent.com/torvalds/linux/704340f1cd0dcef829eb62f5b48ae95a2ce17bdf/drivers/gpu/drm/amd/amdgpu/psp_gfx_if.h",
+    "sha256": "e12b7894cc9cb30a7de5e6707d7af60908941e85fcdcd562dc27b58a9d80f6ee",
+    "bytes": 26757,
+    "fetched_at": "2026-09-23T11:51:33.502092+00:00",
+    "local_r152_sha256": "e12b7894cc9cb30a7de5e6707d7af60908941e85fcdcd562dc27b58a9d80f6ee",
+    "local_matches": true
+  },
+  {
+    "upstream_commit": "704340f1cd0dcef829eb62f5b48ae95a2ce17bdf",
+    "path": "drivers/gpu/drm/amd/amdgpu/psp_v11_0.c",
+    "url": "https://raw.githubusercontent.com/torvalds/linux/704340f1cd0dcef829eb62f5b48ae95a2ce17bdf/drivers/gpu/drm/amd/amdgpu/psp_v11_0.c",
+    "sha256": "de669f64d59a8b90b5a313452bd075fb506bcb99837ddc0c543344d0c7ca0af5",
+    "bytes": 20436,
+    "fetched_at": "2026-09-23T11:51:33.836094+00:00",
+    "local_r152_sha256": "4b637b67ba0a8c42b42189e9072b0752b62322120fc065fc66c9b73af380886f",
+    "local_matches": false
+  },
+  {
+    "upstream_commit": "704340f1cd0dcef829eb62f5b48ae95a2ce17bdf",
+    "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_psp.c",
+    "url": "https://raw.githubusercontent.com/torvalds/linux/704340f1cd0dcef829eb62f5b48ae95a2ce17bdf/drivers/gpu/drm/amd/amdgpu/amdgpu_psp.c",
+    "sha256": "4eb9ce8a315de3812a18aa28b412cde9b86749cdf7b9906cf3383f60abdfab7b",
+    "bytes": 140515,
+    "fetched_at": "2026-09-23T11:51:33.786179+00:00",
+    "local_r152_sha256": "d0513be4c77d71d72a21ab47764cad16f958e5d193ff21d26d7844ec3be54b1d",
+    "local_matches": false
+  }
+]

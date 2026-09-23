@@ -1,0 +1,67 @@
+{
+  "body_sha256": "19f091ded7bea3ee3c61adc3b6a7e1d2a48c8a7817f885bdb43b9c1f2b6bc43d",
+  "method": "compare saved text bytes and relative jump-table arithmetic; no instruction decoding",
+  "svc_targets": {
+    "0x64": {
+      "table_body_offset": "0x4630",
+      "raw_le": "d6030000",
+      "relative": "0x3d6",
+      "target_body_offset": "0x49ba"
+    },
+    "0x67": {
+      "table_body_offset": "0x463c",
+      "raw_le": "2e040000",
+      "relative": "0x42e",
+      "target_body_offset": "0x4a12"
+    },
+    "0x71": {
+      "table_body_offset": "0x4664",
+      "raw_le": "b0040000",
+      "relative": "0x4b0",
+      "target_body_offset": "0x4a94"
+    },
+    "0x73": {
+      "table_body_offset": "0x466c",
+      "raw_le": "9a060000",
+      "relative": "0x69a",
+      "target_body_offset": "0x4c7e"
+    },
+    "0x74": {
+      "table_body_offset": "0x4670",
+      "raw_le": "9e060000",
+      "relative": "0x69e",
+      "target_body_offset": "0x4c82"
+    },
+    "0x77": {
+      "table_body_offset": "0x467c",
+      "raw_le": "e6060000",
+      "relative": "0x6e6",
+      "target_body_offset": "0x4cca"
+    },
+    "0x80": {
+      "table_body_offset": "0x46a0",
+      "raw_le": "8a050000",
+      "relative": "0x58a",
+      "target_body_offset": "0x4b6e"
+    }
+  },
+  "driver_property": {
+    "body_offset": "0xfe8c",
+    "bytes": "616d642e64722e647269766572494400",
+    "text": "amd.dr.driverID\u0000"
+  },
+  "host_command_targets": {
+    "6": {
+      "table_body_offset": "0x10588",
+      "raw_u8": "0x4a",
+      "target_body_offset": "0x10616",
+      "formula": "0x10582 + 2 * raw_u8"
+    },
+    "8": {
+      "table_body_offset": "0x1058a",
+      "raw_u8": "0x66",
+      "target_body_offset": "0x1064e",
+      "formula": "0x10582 + 2 * raw_u8"
+    }
+  }
+}

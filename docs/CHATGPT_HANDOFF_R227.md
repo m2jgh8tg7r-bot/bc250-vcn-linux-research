@@ -1,3 +1,5 @@
+> **R232 correction — 2026-09-23:** The inherited initial-value0x16000 interpretation uses the wrong user-pointer/file mapping. R228/R232 retain the explicit startup0x280000 store and conditional table0x286000. [Evidence](CHATGPT_HANDOFF_R232.md). The original text below is historical.
+
 # R227 — SVC 0x62 mapping call and the 0x280000 window
 
 Date: 2026-09-22. Static analysis of the saved type-2 TOS body only; no hardware access or mutation.

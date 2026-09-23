@@ -1,0 +1,155 @@
+{
+  "body_sha256": "19f091ded7bea3ee3c61adc3b6a7e1d2a48c8a7817f885bdb43b9c1f2b6bc43d",
+  "sources": [
+    {
+      "path": "r217-tos-load-response/branches.txt",
+      "sha256": "7bfa44e575cd366d94b8f6fc8f710494268634d7032a3a749476ff2642a1c795",
+      "bytes": 7144
+    },
+    {
+      "path": "r217-tos-load-response/dispatcher.txt",
+      "sha256": "9643a7dac7476870b2739cb83b8495d065bd0aa54c699a6fc205fce213926856",
+      "bytes": 14094
+    },
+    {
+      "path": "r217-tos-load-response/instructions.txt",
+      "sha256": "b71885f874f829bf77d7d6c8d93353b9302db9fb9590875186bc391dec53b39a",
+      "bytes": 121921
+    },
+    {
+      "path": "r217-tos-load-response/load-and-response.txt",
+      "sha256": "1610c06b3f630fb01f6af01a4293c9b3f6e68f983410efdd26f3cd9c0706f003",
+      "bytes": 15609
+    },
+    {
+      "path": "r217-tos-load-response/regions.txt",
+      "sha256": "4c8e5e7f1576717e333ef4aa65d3e66b2d1f5e1fc5e3e77ef9f968bbbf4882e1",
+      "bytes": 54
+    },
+    {
+      "path": "r217-tos-load-response/registration-caller.txt",
+      "sha256": "86fa5efc2952bc5cce754e910caf007efcdee10554df0e34ac81febc41dcc058",
+      "bytes": 6709
+    },
+    {
+      "path": "r217-tos-load-response/service-instructions.txt",
+      "sha256": "ccf571e886a8bc64b7caa368d66f3d3d6c6e3ee4957123894add40a0919d167c",
+      "bytes": 6669
+    },
+    {
+      "path": "r217-tos-load-response/service-registration.txt",
+      "sha256": "b1c6be030440cdce9fb593bf174eef76a04e87c4f2023f0bc72633304a368eac",
+      "bytes": 13700
+    },
+    {
+      "path": "r217-tos-load-response/svc-dispatch.txt",
+      "sha256": "7645ebc8a2552e3af5d69f998f4de052ba5f81901f12ed6fc04d08a28458e7b4",
+      "bytes": 25672
+    },
+    {
+      "path": "r217-tos-load-response/t02-candidate-functions.txt",
+      "sha256": "c3a2bd3ad5ac2ad04c269c5bc0b0ab58410cc223219960d29be643089fc4954d",
+      "bytes": 10946
+    },
+    {
+      "path": "r217-tos-load-response/t02-candidate-instructions.txt",
+      "sha256": "59765a68adb89e6d640e073d8ed5f6f2e2f41e5439d8cbfb9874e3df163502d6",
+      "bytes": 2795
+    },
+    {
+      "path": "r217-tos-load-response/type2-table-candidates.txt",
+      "sha256": "3057697df530e72409f816fc4b89190443231e8238d13e75db48c18ba88efd13",
+      "bytes": 2514
+    },
+    {
+      "path": "r218-service-image-provenance/boot-base.txt",
+      "sha256": "8315092756d035681fa9bd21677506b3099a9cce53cd68b5339ef589efcc7545",
+      "bytes": 5655
+    },
+    {
+      "path": "r218-service-image-provenance/boot-descriptor-svcs.txt",
+      "sha256": "530d426d2eb1c9b1e8058f3504a75a929a99b6936d4be5aae4f77a9388a2e6cd",
+      "bytes": 6758
+    },
+    {
+      "path": "r218-service-image-provenance/bootstrap.txt",
+      "sha256": "ff1df3c84b9625bec5d45c298ba1e12f425db1dee920b448d5c3d7b2510a214c",
+      "bytes": 10537
+    },
+    {
+      "path": "r218-service-image-provenance/call-regions.txt",
+      "sha256": "5048cd7c0b6c3279b78efa2fede4841315730dba818276750d5e39a8780847b1",
+      "bytes": 1927
+    },
+    {
+      "path": "r218-service-image-provenance/descriptor-source.txt",
+      "sha256": "2ed6d9eb8cfb233d657ea79d162b27a2e491f8b764f3eab1441854bd68fb2411",
+      "bytes": 7678
+    },
+    {
+      "path": "r218-service-image-provenance/image-loader.txt",
+      "sha256": "a269663172eef00753ca887ce6b97d09dee02303cbef0c458813718cc362d073",
+      "bytes": 45345
+    },
+    {
+      "path": "r218-service-image-provenance/instructions.txt",
+      "sha256": "a3b15318544d2402290591e038244ed3be8bb3977040ac2c2ece6f15cca99298",
+      "bytes": 168745
+    },
+    {
+      "path": "r218-service-image-provenance/selector.txt",
+      "sha256": "b23a1a048d2d17c06c0a452b0e25f2c69a6bb5989134a311f799447b8900f37e",
+      "bytes": 1310
+    },
+    {
+      "path": "r218-service-image-provenance/startup-caller.txt",
+      "sha256": "0fa764247fc4b3ae46457670feb2dec7f66f8c77d5b28afd825e3ddfe02ff036",
+      "bytes": 9296
+    },
+    {
+      "path": "r218-service-image-provenance/user-entry.txt",
+      "sha256": "1c7c579ce557b9ace72a8a4b705356627e6219726ed603d50910726461769c45",
+      "bytes": 7236
+    },
+    {
+      "path": "r227-svc62-map-window/map-functions.txt",
+      "sha256": "7b6863390c4df741de007648dea14c8f74f1ebcacdc54baa774c6e0fc5a9b054",
+      "bytes": 14185
+    },
+    {
+      "path": "r227-svc62-map-window/map-instructions.txt",
+      "sha256": "1551f074c5ca453fd246b8b1f73b4b471583e15acfe393f7a167831bb45d9ed4",
+      "bytes": 4199
+    },
+    {
+      "path": "r228-map-helper/map-helper-functions.txt",
+      "sha256": "665366539c2b0595d02c22ba8dd0af43dc47a3917c4e120d3216febb98de37c2",
+      "bytes": 8384
+    },
+    {
+      "path": "r228-map-helper/map-helper-instructions.txt",
+      "sha256": "b987112bd5dd2d7c6a043ffbed31b7f7b68c4fe156832c181ee76c00536e9c88",
+      "bytes": 3909
+    },
+    {
+      "path": "r230-slot-selector/slot-functions.txt",
+      "sha256": "69443cdc7c69178ba04b8814890bd6c6dc927ae13dfd1956cf0919fdc15f43d5",
+      "bytes": 5247
+    },
+    {
+      "path": "r230-slot-selector/slot-instructions.txt",
+      "sha256": "973a829c5904991888d8c6fef4fc9b2651a0918516dea0b5f2e2d79b132d7a31",
+      "bytes": 3555
+    }
+  ],
+  "instruction_count": 586,
+  "byte_backed_instructions": 586,
+  "verified_literals": 95,
+  "conflicts": [],
+  "original_merged_counts": {
+    "instruction_count": 4963,
+    "byte_backed_instructions": 4926,
+    "verified_literals": 91
+  },
+  "index_scope": "Modeled instructions plus documentary anchors; original sources are retained locally"
+}
