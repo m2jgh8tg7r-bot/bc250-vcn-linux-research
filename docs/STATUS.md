@@ -1,6 +1,12 @@
 # Current status
 
-## Latest — R233, 2026-09-27
+## Latest — R235, 2026-09-27
+
+[R235 signer controls](CHATGPT_HANDOFF_R235.md) add a positive contrast: retained non-VCN main-image signer IDs match saved type51 KDB records; the VCN signer does not. Two historical captures were revalidated. Ten saved KDB occurrences reduce to two distinct bodies. Runtime KDB identity and VCN rejection cause remain unproven; control-file whole-payload CRC discrepancies are explicitly unresolved.
+
+[R234 interface audit](CHATGPT_HANDOFF_R234.md) shows that SOS version displays share driver fields and that the saved firmware-attestation interface excludes Cyan APUs. These interfaces do not establish runtime byte identity. Local Q36 reviewed the bounded argument using authorized GPU compute; no new PSP/VCN experiment or system configuration change occurred.
+
+### Previous R233 checkpoint
 
 [R233 handoff](CHATGPT_HANDOFF_R233.md) completes the saved-image checkpoint: 14 CPU model suites (8,191 cases), byte-provenance controls, saved signer metadata, and the Cyan PSP host-loader callback contract were revalidated. The saved no-signer rejection is consistent with the historical response; runtime service-image/KDB identity and VCN execution remain unproven. September 25–26 local progress and fresh external updates are incorporated.
 

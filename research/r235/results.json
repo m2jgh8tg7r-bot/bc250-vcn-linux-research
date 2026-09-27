@@ -1,0 +1,954 @@
+{
+  "result": "PASS",
+  "scope": "Saved metadata and revalidated historical captures, not new hardware observations",
+  "captures": [
+    {
+      "label": "capture_1",
+      "capture_hashes_verified": 14,
+      "journal_sha256": "91a3b047c5f4cee5de9def95b6d434f11eff7bc062ccb92f0efef2a3e228dfd7",
+      "pairs": [
+        {
+          "begin": {
+            "id": 1,
+            "command": 6,
+            "fw_type": 9,
+            "size": 33536,
+            "fence_expected": 2,
+            "source_aligned": 1,
+            "source_matches": 1
+          },
+          "end": {
+            "id": 1,
+            "fence_expected": 2,
+            "ret": 0,
+            "submitted": 1,
+            "response_valid": 1,
+            "status": 0,
+            "fence_observed": 2,
+            "timeout_left": 19981,
+            "ras_intr": 0,
+            "fw_addr_nonzero": 0
+          }
+        },
+        {
+          "begin": {
+            "id": 2,
+            "command": 6,
+            "fw_type": 10,
+            "size": 33536,
+            "fence_expected": 3,
+            "source_aligned": 1,
+            "source_matches": 1
+          },
+          "end": {
+            "id": 2,
+            "fence_expected": 3,
+            "ret": 0,
+            "submitted": 1,
+            "response_valid": 1,
+            "status": 0,
+            "fence_observed": 3,
+            "timeout_left": 19981,
+            "ras_intr": 0,
+            "fw_addr_nonzero": 0
+          }
+        },
+        {
+          "begin": {
+            "id": 12,
+            "command": 6,
+            "fw_type": 3,
+            "size": 263040,
+            "fence_expected": 4,
+            "source_aligned": 1,
+            "source_matches": 1
+          },
+          "end": {
+            "id": 12,
+            "fence_expected": 4,
+            "ret": 0,
+            "submitted": 1,
+            "response_valid": 1,
+            "status": 0,
+            "fence_observed": 4,
+            "timeout_left": 19941,
+            "ras_intr": 0,
+            "fw_addr_nonzero": 1
+          }
+        },
+        {
+          "begin": {
+            "id": 13,
+            "command": 6,
+            "fw_type": 2,
+            "size": 263168,
+            "fence_expected": 5,
+            "source_aligned": 1,
+            "source_matches": 1
+          },
+          "end": {
+            "id": 13,
+            "fence_expected": 5,
+            "ret": 0,
+            "submitted": 1,
+            "response_valid": 1,
+            "status": 0,
+            "fence_observed": 5,
+            "timeout_left": 19941,
+            "ras_intr": 0,
+            "fw_addr_nonzero": 1
+          }
+        },
+        {
+          "begin": {
+            "id": 14,
+            "command": 6,
+            "fw_type": 1,
+            "size": 263168,
+            "fence_expected": 6,
+            "source_aligned": 1,
+            "source_matches": 1
+          },
+          "end": {
+            "id": 14,
+            "fence_expected": 6,
+            "ret": 0,
+            "submitted": 1,
+            "response_valid": 1,
+            "status": 0,
+            "fence_observed": 6,
+            "timeout_left": 19941,
+            "ras_intr": 0,
+            "fw_addr_nonzero": 1
+          }
+        },
+        {
+          "begin": {
+            "id": 26,
+            "command": 6,
+            "fw_type": 4,
+            "size": 267440,
+            "fence_expected": 7,
+            "source_aligned": 1,
+            "source_matches": 1
+          },
+          "end": {
+            "id": 26,
+            "fence_expected": 7,
+            "ret": 0,
+            "submitted": 1,
+            "response_valid": 1,
+            "status": 0,
+            "fence_observed": 7,
+            "timeout_left": 19941,
+            "ras_intr": 0,
+            "fw_addr_nonzero": 1
+          }
+        },
+        {
+          "begin": {
+            "id": 27,
+            "command": 6,
+            "fw_type": 5,
+            "size": 896,
+            "fence_expected": 8,
+            "source_aligned": 1,
+            "source_matches": 1
+          },
+          "end": {
+            "id": 27,
+            "fence_expected": 8,
+            "ret": 0,
+            "submitted": 1,
+            "response_valid": 1,
+            "status": 0,
+            "fence_observed": 8,
+            "timeout_left": 19999,
+            "ras_intr": 0,
+            "fw_addr_nonzero": 0
+          }
+        },
+        {
+          "begin": {
+            "id": 28,
+            "command": 6,
+            "fw_type": 4,
+            "size": 267440,
+            "fence_expected": 9,
+            "source_aligned": 1,
+            "source_matches": 1
+          },
+          "end": {
+            "id": 28,
+            "fence_expected": 9,
+            "ret": 0,
+            "submitted": 1,
+            "response_valid": 1,
+            "status": 0,
+            "fence_observed": 9,
+            "timeout_left": 19939,
+            "ras_intr": 0,
+            "fw_addr_nonzero": 1
+          }
+        },
+        {
+          "begin": {
+            "id": 29,
+            "command": 6,
+            "fw_type": 6,
+            "size": 896,
+            "fence_expected": 10,
+            "source_aligned": 1,
+            "source_matches": 1
+          },
+          "end": {
+            "id": 29,
+            "fence_expected": 10,
+            "ret": 0,
+            "submitted": 1,
+            "response_valid": 1,
+            "status": 0,
+            "fence_observed": 10,
+            "timeout_left": 19999,
+            "ras_intr": 0,
+            "fw_addr_nonzero": 0
+          }
+        },
+        {
+          "begin": {
+            "id": 50,
+            "command": 6,
+            "fw_type": 8,
+            "size": 25088,
+            "fence_expected": 11,
+            "source_aligned": 1,
+            "source_matches": 1
+          },
+          "end": {
+            "id": 50,
+            "fence_expected": 11,
+            "ret": 0,
+            "submitted": 1,
+            "response_valid": 1,
+            "status": 0,
+            "fence_observed": 11,
+            "timeout_left": 19983,
+            "ras_intr": 0,
+            "fw_addr_nonzero": 0
+          }
+        },
+        {
+          "begin": {
+            "id": 57,
+            "command": 6,
+            "fw_type": 13,
+            "size": 405696,
+            "fence_expected": 12,
+            "source_aligned": 1,
+            "source_matches": 1
+          },
+          "end": {
+            "id": 57,
+            "fence_expected": 12,
+            "ret": 0,
+            "submitted": 1,
+            "response_valid": 1,
+            "status": 4294901768,
+            "fence_observed": 12,
+            "timeout_left": 19998,
+            "ras_intr": 0,
+            "fw_addr_nonzero": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "capture_2",
+      "capture_hashes_verified": 14,
+      "journal_sha256": "c7b10805e5d9715cd55c4011fb35c44e8df8c721ebbc4332c5bd221b0d47b9d9",
+      "pairs": [
+        {
+          "begin": {
+            "id": 1,
+            "command": 6,
+            "fw_type": 9,
+            "size": 33536,
+            "fence_expected": 2,
+            "source_aligned": 1,
+            "source_matches": 1
+          },
+          "end": {
+            "id": 1,
+            "fence_expected": 2,
+            "ret": 0,
+            "submitted": 1,
+            "response_valid": 1,
+            "status": 0,
+            "fence_observed": 2,
+            "timeout_left": 19982,
+            "ras_intr": 0,
+            "fw_addr_nonzero": 0
+          }
+        },
+        {
+          "begin": {
+            "id": 2,
+            "command": 6,
+            "fw_type": 10,
+            "size": 33536,
+            "fence_expected": 3,
+            "source_aligned": 1,
+            "source_matches": 1
+          },
+          "end": {
+            "id": 2,
+            "fence_expected": 3,
+            "ret": 0,
+            "submitted": 1,
+            "response_valid": 1,
+            "status": 0,
+            "fence_observed": 3,
+            "timeout_left": 19981,
+            "ras_intr": 0,
+            "fw_addr_nonzero": 0
+          }
+        },
+        {
+          "begin": {
+            "id": 12,
+            "command": 6,
+            "fw_type": 3,
+            "size": 263040,
+            "fence_expected": 4,
+            "source_aligned": 1,
+            "source_matches": 1
+          },
+          "end": {
+            "id": 12,
+            "fence_expected": 4,
+            "ret": 0,
+            "submitted": 1,
+            "response_valid": 1,
+            "status": 0,
+            "fence_observed": 4,
+            "timeout_left": 19940,
+            "ras_intr": 0,
+            "fw_addr_nonzero": 1
+          }
+        },
+        {
+          "begin": {
+            "id": 13,
+            "command": 6,
+            "fw_type": 2,
+            "size": 263168,
+            "fence_expected": 5,
+            "source_aligned": 1,
+            "source_matches": 1
+          },
+          "end": {
+            "id": 13,
+            "fence_expected": 5,
+            "ret": 0,
+            "submitted": 1,
+            "response_valid": 1,
+            "status": 0,
+            "fence_observed": 5,
+            "timeout_left": 19941,
+            "ras_intr": 0,
+            "fw_addr_nonzero": 1
+          }
+        },
+        {
+          "begin": {
+            "id": 14,
+            "command": 6,
+            "fw_type": 1,
+            "size": 263168,
+            "fence_expected": 6,
+            "source_aligned": 1,
+            "source_matches": 1
+          },
+          "end": {
+            "id": 14,
+            "fence_expected": 6,
+            "ret": 0,
+            "submitted": 1,
+            "response_valid": 1,
+            "status": 0,
+            "fence_observed": 6,
+            "timeout_left": 19940,
+            "ras_intr": 0,
+            "fw_addr_nonzero": 1
+          }
+        },
+        {
+          "begin": {
+            "id": 26,
+            "command": 6,
+            "fw_type": 4,
+            "size": 267440,
+            "fence_expected": 7,
+            "source_aligned": 1,
+            "source_matches": 1
+          },
+          "end": {
+            "id": 26,
+            "fence_expected": 7,
+            "ret": 0,
+            "submitted": 1,
+            "response_valid": 1,
+            "status": 0,
+            "fence_observed": 7,
+            "timeout_left": 19940,
+            "ras_intr": 0,
+            "fw_addr_nonzero": 1
+          }
+        },
+        {
+          "begin": {
+            "id": 27,
+            "command": 6,
+            "fw_type": 5,
+            "size": 896,
+            "fence_expected": 8,
+            "source_aligned": 1,
+            "source_matches": 1
+          },
+          "end": {
+            "id": 27,
+            "fence_expected": 8,
+            "ret": 0,
+            "submitted": 1,
+            "response_valid": 1,
+            "status": 0,
+            "fence_observed": 8,
+            "timeout_left": 19999,
+            "ras_intr": 0,
+            "fw_addr_nonzero": 0
+          }
+        },
+        {
+          "begin": {
+            "id": 28,
+            "command": 6,
+            "fw_type": 4,
+            "size": 267440,
+            "fence_expected": 9,
+            "source_aligned": 1,
+            "source_matches": 1
+          },
+          "end": {
+            "id": 28,
+            "fence_expected": 9,
+            "ret": 0,
+            "submitted": 1,
+            "response_valid": 1,
+            "status": 0,
+            "fence_observed": 9,
+            "timeout_left": 19940,
+            "ras_intr": 0,
+            "fw_addr_nonzero": 1
+          }
+        },
+        {
+          "begin": {
+            "id": 29,
+            "command": 6,
+            "fw_type": 6,
+            "size": 896,
+            "fence_expected": 10,
+            "source_aligned": 1,
+            "source_matches": 1
+          },
+          "end": {
+            "id": 29,
+            "fence_expected": 10,
+            "ret": 0,
+            "submitted": 1,
+            "response_valid": 1,
+            "status": 0,
+            "fence_observed": 10,
+            "timeout_left": 19999,
+            "ras_intr": 0,
+            "fw_addr_nonzero": 0
+          }
+        },
+        {
+          "begin": {
+            "id": 50,
+            "command": 6,
+            "fw_type": 8,
+            "size": 25088,
+            "fence_expected": 11,
+            "source_aligned": 1,
+            "source_matches": 1
+          },
+          "end": {
+            "id": 50,
+            "fence_expected": 11,
+            "ret": 0,
+            "submitted": 1,
+            "response_valid": 1,
+            "status": 0,
+            "fence_observed": 11,
+            "timeout_left": 19983,
+            "ras_intr": 0,
+            "fw_addr_nonzero": 0
+          }
+        },
+        {
+          "begin": {
+            "id": 57,
+            "command": 6,
+            "fw_type": 13,
+            "size": 405696,
+            "fence_expected": 12,
+            "source_aligned": 1,
+            "source_matches": 1
+          },
+          "end": {
+            "id": 57,
+            "fence_expected": 12,
+            "ret": 0,
+            "submitted": 1,
+            "response_valid": 1,
+            "status": 4294901768,
+            "fence_observed": 12,
+            "timeout_left": 19998,
+            "ras_intr": 0,
+            "fw_addr_nonzero": 0
+          }
+        }
+      ]
+    }
+  ],
+  "control_files": [
+    {
+      "id": 1,
+      "fw_type": 9,
+      "file": "cyan_skillfish2_sdma.bin.xz",
+      "stored_sha256": "27a3e325d54a7dac361f54b3afe62fbc40428f54daff0ebc4fdd075a110bcf85",
+      "metadata": {
+        "file_sha256": "15d0d3626da7f2513f03b13bb7e02eeeeccab276276ae27d0b6067b5f25e9e95",
+        "payload_sha256": "acba51d3d734637f5acbbabf3a7da5cecdc4909628d79a40f29f5a39eb1338fe",
+        "size": 33536,
+        "offset": 256,
+        "signer": "30b8865125424499aeff3ac35ce621a6",
+        "header_7f": 0,
+        "header_crc": "0xf2f45029",
+        "whole_payload_zlib_crc": "0xfe02efe4",
+        "whole_payload_crc_matches": false
+      },
+      "submitted_size": 33536,
+      "matches": [
+        {
+          "image": "bios-p3-read1.bin",
+          "directory_type": "0x51",
+          "usage": 10
+        },
+        {
+          "image": "bios-p3-read2.bin",
+          "directory_type": "0x51",
+          "usage": 10
+        },
+        {
+          "image": "Robin1.00.zip",
+          "directory_type": "0x51",
+          "usage": 10
+        },
+        {
+          "image": "Robin3.00.zip",
+          "directory_type": "0x51",
+          "usage": 10
+        },
+        {
+          "image": "Robin5.00.zip",
+          "directory_type": "0x51",
+          "usage": 10
+        }
+      ],
+      "second_saved_copy_identical": true,
+      "historical_status": "0x0",
+      "placement_nonzero": false
+    },
+    {
+      "id": 2,
+      "fw_type": 10,
+      "file": "cyan_skillfish2_sdma1.bin.xz",
+      "stored_sha256": "0b05a4a1c528364648cd483b35e8a07185667c31efd5e2e3ca2ee6b1cf58319f",
+      "metadata": {
+        "file_sha256": "bd1c0b0f6a6a4f17ede034f2c844b6553fc444e08915c7bb500c09fde59d6255",
+        "payload_sha256": "cede83dfe93f987a0ded93766c685785ce786c9048845596596e34c9c8c2a639",
+        "size": 33536,
+        "offset": 256,
+        "signer": "30b8865125424499aeff3ac35ce621a6",
+        "header_7f": 0,
+        "header_crc": "0xdb3e0be6",
+        "whole_payload_zlib_crc": "0xd7c8b42b",
+        "whole_payload_crc_matches": false
+      },
+      "submitted_size": 33536,
+      "matches": [
+        {
+          "image": "bios-p3-read1.bin",
+          "directory_type": "0x51",
+          "usage": 10
+        },
+        {
+          "image": "bios-p3-read2.bin",
+          "directory_type": "0x51",
+          "usage": 10
+        },
+        {
+          "image": "Robin1.00.zip",
+          "directory_type": "0x51",
+          "usage": 10
+        },
+        {
+          "image": "Robin3.00.zip",
+          "directory_type": "0x51",
+          "usage": 10
+        },
+        {
+          "image": "Robin5.00.zip",
+          "directory_type": "0x51",
+          "usage": 10
+        }
+      ],
+      "second_saved_copy_identical": true,
+      "historical_status": "0x0",
+      "placement_nonzero": false
+    },
+    {
+      "id": 12,
+      "fw_type": 3,
+      "file": "cyan_skillfish2_ce.bin.xz",
+      "stored_sha256": "6444df953f6c4aff9ad757ceb6c9c1fb8d4fd12a8b1f9f09ce2548981a77265e",
+      "metadata": {
+        "file_sha256": "5946efbf7e46ccfe7e9f965da56c35b1187469d1c1a49c8a9eff433eb3ab4723",
+        "payload_sha256": "faeb5f1356057e3c16f7d07f5f30783bdc4e17394570a1497a97458517130057",
+        "size": 263040,
+        "offset": 256,
+        "signer": "30b8865125424499aeff3ac35ce621a6",
+        "header_7f": 0,
+        "header_crc": "0x14f5bfff",
+        "whole_payload_zlib_crc": "0xca1135c3",
+        "whole_payload_crc_matches": false
+      },
+      "submitted_size": 263040,
+      "matches": [
+        {
+          "image": "bios-p3-read1.bin",
+          "directory_type": "0x51",
+          "usage": 10
+        },
+        {
+          "image": "bios-p3-read2.bin",
+          "directory_type": "0x51",
+          "usage": 10
+        },
+        {
+          "image": "Robin1.00.zip",
+          "directory_type": "0x51",
+          "usage": 10
+        },
+        {
+          "image": "Robin3.00.zip",
+          "directory_type": "0x51",
+          "usage": 10
+        },
+        {
+          "image": "Robin5.00.zip",
+          "directory_type": "0x51",
+          "usage": 10
+        }
+      ],
+      "second_saved_copy_identical": true,
+      "historical_status": "0x0",
+      "placement_nonzero": true
+    },
+    {
+      "id": 13,
+      "fw_type": 2,
+      "file": "cyan_skillfish2_pfp.bin.xz",
+      "stored_sha256": "8208398ba789013fa3bbca84954a16048c59849c3ff3fe6ecd9a45a53912e07b",
+      "metadata": {
+        "file_sha256": "50e56dc1913571ff589425d2b059bddfc5e8a2b4bc22d3eb78cac75d1e0479a1",
+        "payload_sha256": "5aa30f3b2e1c697ad2bfe02643777552d5351ec6813572271f01320f65ca7367",
+        "size": 263168,
+        "offset": 256,
+        "signer": "30b8865125424499aeff3ac35ce621a6",
+        "header_7f": 0,
+        "header_crc": "0x5ce9e15d",
+        "whole_payload_zlib_crc": "0xe35fedd9",
+        "whole_payload_crc_matches": false
+      },
+      "submitted_size": 263168,
+      "matches": [
+        {
+          "image": "bios-p3-read1.bin",
+          "directory_type": "0x51",
+          "usage": 10
+        },
+        {
+          "image": "bios-p3-read2.bin",
+          "directory_type": "0x51",
+          "usage": 10
+        },
+        {
+          "image": "Robin1.00.zip",
+          "directory_type": "0x51",
+          "usage": 10
+        },
+        {
+          "image": "Robin3.00.zip",
+          "directory_type": "0x51",
+          "usage": 10
+        },
+        {
+          "image": "Robin5.00.zip",
+          "directory_type": "0x51",
+          "usage": 10
+        }
+      ],
+      "second_saved_copy_identical": true,
+      "historical_status": "0x0",
+      "placement_nonzero": true
+    },
+    {
+      "id": 14,
+      "fw_type": 1,
+      "file": "cyan_skillfish2_me.bin.xz",
+      "stored_sha256": "9834a714d556a00ec05fcbaed7a6b21fcd0bdc52d48f09bf39949bd2481979f9",
+      "metadata": {
+        "file_sha256": "d4ed4d968de0d7720f7c8215d42fdae727bf99cdf43cee6f8f864dc2584b17e2",
+        "payload_sha256": "47eb26bb1a22a4fcd6d3350012a52a7eb9192278e810b670a39651a1d71ce030",
+        "size": 263168,
+        "offset": 256,
+        "signer": "30b8865125424499aeff3ac35ce621a6",
+        "header_7f": 0,
+        "header_crc": "0x9709de5e",
+        "whole_payload_zlib_crc": "0x28bfd2da",
+        "whole_payload_crc_matches": false
+      },
+      "submitted_size": 263168,
+      "matches": [
+        {
+          "image": "bios-p3-read1.bin",
+          "directory_type": "0x51",
+          "usage": 10
+        },
+        {
+          "image": "bios-p3-read2.bin",
+          "directory_type": "0x51",
+          "usage": 10
+        },
+        {
+          "image": "Robin1.00.zip",
+          "directory_type": "0x51",
+          "usage": 10
+        },
+        {
+          "image": "Robin3.00.zip",
+          "directory_type": "0x51",
+          "usage": 10
+        },
+        {
+          "image": "Robin5.00.zip",
+          "directory_type": "0x51",
+          "usage": 10
+        }
+      ],
+      "second_saved_copy_identical": true,
+      "historical_status": "0x0",
+      "placement_nonzero": true
+    },
+    {
+      "id": 26,
+      "fw_type": 4,
+      "file": "cyan_skillfish2_mec.bin.xz",
+      "stored_sha256": "0dc92507a09e677d3ea7274563bebbaff9b6b57cb05a95f2664183521c42815b",
+      "metadata": {
+        "file_sha256": "b1c1f843a8faaa2de537d6ba05052a3776b5a1b73f8a3c3f5ed9d568489776a4",
+        "payload_sha256": "3e1fdf268a6580fe755f4a8a506181a670da71c28e599a77318e5b2d65e597a2",
+        "size": 268336,
+        "offset": 256,
+        "signer": "30b8865125424499aeff3ac35ce621a6",
+        "header_7f": 0,
+        "header_crc": "0x3bb301c1",
+        "whole_payload_zlib_crc": "0x6c21b32a",
+        "whole_payload_crc_matches": false
+      },
+      "submitted_size": 267440,
+      "matches": [
+        {
+          "image": "bios-p3-read1.bin",
+          "directory_type": "0x51",
+          "usage": 10
+        },
+        {
+          "image": "bios-p3-read2.bin",
+          "directory_type": "0x51",
+          "usage": 10
+        },
+        {
+          "image": "Robin1.00.zip",
+          "directory_type": "0x51",
+          "usage": 10
+        },
+        {
+          "image": "Robin3.00.zip",
+          "directory_type": "0x51",
+          "usage": 10
+        },
+        {
+          "image": "Robin5.00.zip",
+          "directory_type": "0x51",
+          "usage": 10
+        }
+      ],
+      "second_saved_copy_identical": true,
+      "historical_status": "0x0",
+      "placement_nonzero": true
+    },
+    {
+      "id": 28,
+      "fw_type": 4,
+      "file": "cyan_skillfish2_mec2.bin.xz",
+      "stored_sha256": "0dc92507a09e677d3ea7274563bebbaff9b6b57cb05a95f2664183521c42815b",
+      "metadata": {
+        "file_sha256": "b1c1f843a8faaa2de537d6ba05052a3776b5a1b73f8a3c3f5ed9d568489776a4",
+        "payload_sha256": "3e1fdf268a6580fe755f4a8a506181a670da71c28e599a77318e5b2d65e597a2",
+        "size": 268336,
+        "offset": 256,
+        "signer": "30b8865125424499aeff3ac35ce621a6",
+        "header_7f": 0,
+        "header_crc": "0x3bb301c1",
+        "whole_payload_zlib_crc": "0x6c21b32a",
+        "whole_payload_crc_matches": false
+      },
+      "submitted_size": 267440,
+      "matches": [
+        {
+          "image": "bios-p3-read1.bin",
+          "directory_type": "0x51",
+          "usage": 10
+        },
+        {
+          "image": "bios-p3-read2.bin",
+          "directory_type": "0x51",
+          "usage": 10
+        },
+        {
+          "image": "Robin1.00.zip",
+          "directory_type": "0x51",
+          "usage": 10
+        },
+        {
+          "image": "Robin3.00.zip",
+          "directory_type": "0x51",
+          "usage": 10
+        },
+        {
+          "image": "Robin5.00.zip",
+          "directory_type": "0x51",
+          "usage": 10
+        }
+      ],
+      "second_saved_copy_identical": true,
+      "historical_status": "0x0",
+      "placement_nonzero": true
+    },
+    {
+      "id": 50,
+      "fw_type": 8,
+      "file": "cyan_skillfish2_rlc.bin.xz",
+      "stored_sha256": "0ac986aa9baef21f2253d5ff54b91e4de9ca37e6ec5b59b72f8468499ff467f9",
+      "metadata": {
+        "file_sha256": "20acefdb6128a36275f4382425a109a7c9927f6053eab685bb51164ff1d18cfb",
+        "payload_sha256": "16794b4817ccb8e82e45fe3524aec7a8a0e58d032e76ac1c3385c417a145be48",
+        "size": 25088,
+        "offset": 256,
+        "signer": "30b8865125424499aeff3ac35ce621a6",
+        "header_7f": 0,
+        "header_crc": "0x776a0649",
+        "whole_payload_zlib_crc": "0x7383498f",
+        "whole_payload_crc_matches": false
+      },
+      "submitted_size": 25088,
+      "matches": [
+        {
+          "image": "bios-p3-read1.bin",
+          "directory_type": "0x51",
+          "usage": 10
+        },
+        {
+          "image": "bios-p3-read2.bin",
+          "directory_type": "0x51",
+          "usage": 10
+        },
+        {
+          "image": "Robin1.00.zip",
+          "directory_type": "0x51",
+          "usage": 10
+        },
+        {
+          "image": "Robin3.00.zip",
+          "directory_type": "0x51",
+          "usage": 10
+        },
+        {
+          "image": "Robin5.00.zip",
+          "directory_type": "0x51",
+          "usage": 10
+        }
+      ],
+      "second_saved_copy_identical": true,
+      "historical_status": "0x0",
+      "placement_nonzero": false
+    }
+  ],
+  "vcn": {
+    "file_sha256": "a9ec155695b5020009d3986cfd4ebd00ad9ddbd12ac7e5fa15ec86b8a571dbe5",
+    "payload_sha256": "d2a57f82ab8fe7911822052af12f25563d76c1ddefa0978049cf98efb8c671b3",
+    "size": 405696,
+    "offset": 256,
+    "signer": "c37290c310e64a62b027c56695492368",
+    "header_7f": 0,
+    "header_crc": "0xc52dcf97",
+    "whole_payload_zlib_crc": "0xc52dcf97",
+    "whole_payload_crc_matches": true
+  },
+  "distinct_control_file_hashes": [
+    "15d0d3626da7f2513f03b13bb7e02eeeeccab276276ae27d0b6067b5f25e9e95",
+    "20acefdb6128a36275f4382425a109a7c9927f6053eab685bb51164ff1d18cfb",
+    "50e56dc1913571ff589425d2b059bddfc5e8a2b4bc22d3eb78cac75d1e0479a1",
+    "5946efbf7e46ccfe7e9f965da56c35b1187469d1c1a49c8a9eff433eb3ab4723",
+    "b1c1f843a8faaa2de537d6ba05052a3776b5a1b73f8a3c3f5ed9d568489776a4",
+    "bd1c0b0f6a6a4f17ede034f2c844b6553fc444e08915c7bb500c09fde59d6255",
+    "d4ed4d968de0d7720f7c8215d42fdae727bf99cdf43cee6f8f864dc2584b17e2"
+  ],
+  "distinct_kdb_body_hashes": [
+    "cce2f63bde701768c46630aed958941f4f913859560857e2602cbe49e83197bf",
+    "cfc1b0ef089c8dd021f7d1abd7f1fe9da525119d1e5919751e8a9354deac8803"
+  ],
+  "kdb_metadata_sha256": "8da8e7ff14274b246b72e59b324d3b4746935b16cb75738232ba4d67a8dff9dc",
+  "negative_controls_rejected": [
+    "truncated_payload",
+    "changed_vcn_payload",
+    "short_header"
+  ],
+  "excluded_ids": [
+    27,
+    29
+  ],
+  "excluded_reason": "MEC jump-table subpayloads; do not apply outer signer-header parsing to them",
+  "limits": [
+    "Same-log ID/type/size consistency does not prove retained file equals every PSP-visible historical byte",
+    "No claim of signature authentication, actual KDB selection or VCN failure root cause",
+    "Five saved images contain only two distinct KDB bodies; not ten independent KDBs",
+    "Control-file header CRC does not match zlib CRC over the whole declared payload; checksum convention/origin unresolved, files hash-pinned and identical in two retained trees",
+    "A matching public signer record is necessary only under the candidate lookup assumptions, not sufficient for acceptance"
+  ]
+}

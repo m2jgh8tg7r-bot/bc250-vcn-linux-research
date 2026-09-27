@@ -1,0 +1,43 @@
+{
+  "result": "PASS",
+  "source_commit": "0bb924b042ab85b8f529aed6e4f3e24750584276",
+  "source_excerpts": [
+    {
+      "label": "host_validation",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_ucode.c",
+      "sha256": "42253cf0e7495c935adcd441a97786c25cf712aa3ddb12d95cddb93972821747",
+      "line": 535,
+      "excerpt": "static int amdgpu_ucode_validate(const struct firmware *fw)\n{\n\tconst struct common_firmware_header *hdr =\n\t\t(const struct common_firmware_header *)fw->data;\n\n\tif (fw->size == le32_to_cpu(hdr->size_bytes))\n\t\treturn 0;\n\n\treturn -EINVAL;\n}"
+    },
+    {
+      "label": "mec_payload_split",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_ucode.c",
+      "sha256": "42253cf0e7495c935adcd441a97786c25cf712aa3ddb12d95cddb93972821747",
+      "line": 906,
+      "excerpt": "case AMDGPU_UCODE_ID_CP_MEC1:\n\t\tcase AMDGPU_UCODE_ID_CP_MEC2:\n\t\t\tucode->ucode_size = le32_to_cpu(header->ucode_size_bytes) -\n\t\t\t\tle32_to_cpu(cp_hdr->jt_size) * 4;\n\t\t\tucode_addr = (u8 *)ucode->fw->data +\n\t\t\t\tle32_to_cpu(header->ucode_array_offset_bytes);\n\t\t\tbreak;\n\t\tcase AMDGPU_UCODE_ID_CP_MEC1_JT:\n\t\tcase AMDGPU_UCODE_ID_CP_MEC2_JT:\n\t\t\tucode->ucode_size = le32_to_cpu(cp_hdr->jt_size) * 4;\n\t\t\tucode_addr = (u8 *)ucode->fw->data +\n\t\t\t\tle32_to_cpu(header->ucode_array_offset_bytes) +\n\t\t\t\tle32_to_cpu(cp_hdr->jt_offset) * 4;\n\t\t\tbreak;\n\t\tcase AMDGPU_UCODE_ID_RLC_RESTORE_LIST_CNTL:"
+    },
+    {
+      "label": "header_layout",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_ucode.h",
+      "sha256": "222b508dfd40897ead5aecd207ab54c015c311c50e96246a962c1eb29c63b1e0",
+      "line": 30,
+      "excerpt": "struct common_firmware_header {\n\tuint32_t size_bytes; /* size of the entire header+image(s) in bytes */\n\tuint32_t header_size_bytes; /* size of just the header in bytes */\n\tuint16_t header_version_major; /* header version */\n\tuint16_t header_version_minor; /* header version */\n\tuint16_t ip_version_major; /* IP version */\n\tuint16_t ip_version_minor; /* IP version */\n\tuint32_t ucode_version;\n\tuint32_t ucode_size_bytes; /* size of ucode in bytes */\n\tuint32_t ucode_array_offset_bytes; /* payload offset from the start of the header */\n\tuint32_t crc32;  /* crc32 checksum of the payload */\n};"
+    },
+    {
+      "label": "gfx_header_layout",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_ucode.h",
+      "sha256": "222b508dfd40897ead5aecd207ab54c015c311c50e96246a962c1eb29c63b1e0",
+      "line": 181,
+      "excerpt": "struct gfx_firmware_header_v1_0 {\n\tstruct common_firmware_header header;\n\tuint32_t ucode_feature_version;\n\tuint32_t jt_offset; /* jt location */\n\tuint32_t jt_size;  /* size of jt */\n};"
+    }
+  ],
+  "retained_input_hashes": {
+    "r180-load-response-observation/analyze_collected.py": "0abcfaf250a217a45183c99082d0ae261c7a0f0897dbde5731fada89f04e6d0d",
+    "r180-load-response-observation/analyze_controls.py": "1d75d5e2c1c9c7d245e8bddc1368ab0450a2fee6dfabd27c3c7f0f2c6fb77a8f",
+    "r175-response-consistency/analyze_consistency.py": "5bb26f081c4b348fcac4ed5547e074ca7cb6062deef86ed32dc62f1be28cf553",
+    "r149-loaded-module-identity/collect_identity.py": "f4e9b3927613875fccb06910000b852bed621b0c689b017380185fc7131327dc",
+    "r180-load-response-observation/expected-r180.json": "821f0a95199fb17df544a6dc375a96b18f88ca9a18e564d68e62b4d4c94ae0b8",
+    "r233-service1-bootstrap-provenance/key-metadata-audit.json": "8da8e7ff14274b246b72e59b324d3b4746935b16cb75738232ba4d67a8dff9dc"
+  },
+  "checksum_attempt_note": "Initial all-control whole-payload CRC assertion failed. Corrected to preserve per-file mismatch; CRC mandatory only for VCN-specific checks. No hardware conclusion follows."
+}
