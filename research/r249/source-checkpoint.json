@@ -1,0 +1,16 @@
+{
+  "classification": "PROVEN_STATICALLY",
+  "source_commit": "7d9c38bdfdc469505eeb94864a203c0b4ffee12c",
+  "diagnostic_harness_sha256": "65ec985ef4e19dab9a3f5ab69f9b96b5ec0e3c84f419737738a7d473ea54ad26",
+  "findings": [
+    "write_out copies completed planes into an output queue instead of immediately writing the output file",
+    "drain sorts queued pictures by POC and writes all queued frames",
+    "drain is called before a new IDR and at end-of-stream"
+  ],
+  "limits": [
+    "Standalone test harness only; separate VAAPI path not measured",
+    "Output-delivery timing is not yet measured at this checkpoint",
+    "No vulnerability, malformed-input or queue-capacity testing"
+  ],
+  "source_url": "https://github.com/simpmix/bc250-encoding-decoding-fix/blob/7d9c38bdfdc469505eeb94864a203c0b4ffee12c/approach1-compute-encoder/tools/h264dec.c"
+}

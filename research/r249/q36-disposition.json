@@ -1,0 +1,10 @@
+{
+  "seconds": 33.39760084799855,
+  "accepted": [
+    "Record actual pipe capacity, not an assumed64KiB",
+    "Keep hash verification outside timing trials",
+    "Keep cache/frequency/background limitations explicit"
+  ],
+  "timing_overlap": false,
+  "source_of_facts": "Local source and measured data, not model output"
+}
