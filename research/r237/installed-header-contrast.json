@@ -1,0 +1,61 @@
+{
+  "scope": "Installed ordinary package files; header/checksum metadata only, no firmware decoding or execution",
+  "rows": [
+    {
+      "file": "navi10_ce.bin.xz",
+      "sha256": "f29dc48a371fc27a41a9c29afbbe4668c5655a73d917c3ff833c2dbbe546fd3a",
+      "crc_field": "0xe75f60e1",
+      "whole_payload_crc_match": false,
+      "ucode_version": "0x26"
+    },
+    {
+      "file": "navi10_me.bin.xz",
+      "sha256": "44bbf5fa1d0fc04a1b5ebc5159b8139a93c8a5026ffa5801c3ce17ab0a51fd42",
+      "crc_field": "0x13f2c66d",
+      "whole_payload_crc_match": false,
+      "ucode_version": "0x65"
+    },
+    {
+      "file": "navi10_mec.bin.xz",
+      "sha256": "5883403c6bdfdf10b4ad7870b6111f95fb09374f937f964d7bd9f4bc72743b0f",
+      "crc_field": "0x65e2e0fe",
+      "whole_payload_crc_match": false,
+      "ucode_version": "0x9d"
+    },
+    {
+      "file": "navi10_mec2.bin.xz",
+      "sha256": "5883403c6bdfdf10b4ad7870b6111f95fb09374f937f964d7bd9f4bc72743b0f",
+      "crc_field": "0x65e2e0fe",
+      "whole_payload_crc_match": false,
+      "ucode_version": "0x9d"
+    },
+    {
+      "file": "navi10_pfp.bin.xz",
+      "sha256": "6245765e4dfd86bff9ae99abdf1829f1d68e64ff71ea4c34d23c6f197f14aba4",
+      "crc_field": "0x9012a2c6",
+      "whole_payload_crc_match": false,
+      "ucode_version": "0xa0"
+    },
+    {
+      "file": "navi10_rlc.bin.xz",
+      "sha256": "1f52478fb78dee904361b93ad67955fcff151bb7a7772bbfbd2c448c814be1f5",
+      "crc_field": "0x196df302",
+      "whole_payload_crc_match": false,
+      "ucode_version": "0x80"
+    },
+    {
+      "file": "navi10_sdma.bin.xz",
+      "sha256": "1f06e4691b730191ba9e22647c6c4bec231dbe5ca0e1bfcacf35fb7b790119f0",
+      "crc_field": "0xfa434096",
+      "whole_payload_crc_match": false,
+      "ucode_version": "0x23"
+    },
+    {
+      "file": "navi10_sdma1.bin.xz",
+      "sha256": "1f474ed127b33cc41fb610e9c3b276b6bc9688b700d4e2987cdc72603eebc429",
+      "crc_field": "0x3743bf7d",
+      "whole_payload_crc_match": false,
+      "ucode_version": "0x23"
+    }
+  ]
+}

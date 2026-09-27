@@ -1,0 +1,152 @@
+{
+  "result": "PASS",
+  "scope": "Normal generated clips; whole-frame hash permutation, original ordered comparison remains failed",
+  "hypothesis": "Harness type2 POC formula omits frame number wrap offset; Gop32 order alternates frames0/16,1/17,...",
+  "rows": [
+    {
+      "case": "640x360-baseline-s1",
+      "all_frame_bytes_present_exactly": true,
+      "reference_frames_unique": true,
+      "matches_gop32_frame_number_wrap_sort": true,
+      "same_order_frames": 6,
+      "frames": 96
+    },
+    {
+      "case": "640x360-baseline-s4",
+      "all_frame_bytes_present_exactly": true,
+      "reference_frames_unique": true,
+      "matches_gop32_frame_number_wrap_sort": true,
+      "same_order_frames": 6,
+      "frames": 96
+    },
+    {
+      "case": "640x360-main-s1",
+      "all_frame_bytes_present_exactly": true,
+      "reference_frames_unique": true,
+      "matches_gop32_frame_number_wrap_sort": true,
+      "same_order_frames": 6,
+      "frames": 96
+    },
+    {
+      "case": "640x360-main-s4",
+      "all_frame_bytes_present_exactly": true,
+      "reference_frames_unique": true,
+      "matches_gop32_frame_number_wrap_sort": true,
+      "same_order_frames": 6,
+      "frames": 96
+    },
+    {
+      "case": "640x360-high-s1",
+      "all_frame_bytes_present_exactly": true,
+      "reference_frames_unique": true,
+      "matches_gop32_frame_number_wrap_sort": true,
+      "same_order_frames": 6,
+      "frames": 96
+    },
+    {
+      "case": "640x360-high-s4",
+      "all_frame_bytes_present_exactly": true,
+      "reference_frames_unique": true,
+      "matches_gop32_frame_number_wrap_sort": true,
+      "same_order_frames": 6,
+      "frames": 96
+    },
+    {
+      "case": "1280x720-baseline-s1",
+      "all_frame_bytes_present_exactly": true,
+      "reference_frames_unique": true,
+      "matches_gop32_frame_number_wrap_sort": true,
+      "same_order_frames": 6,
+      "frames": 96
+    },
+    {
+      "case": "1280x720-baseline-s4",
+      "all_frame_bytes_present_exactly": true,
+      "reference_frames_unique": true,
+      "matches_gop32_frame_number_wrap_sort": true,
+      "same_order_frames": 6,
+      "frames": 96
+    },
+    {
+      "case": "1280x720-main-s1",
+      "all_frame_bytes_present_exactly": true,
+      "reference_frames_unique": true,
+      "matches_gop32_frame_number_wrap_sort": true,
+      "same_order_frames": 6,
+      "frames": 96
+    },
+    {
+      "case": "1280x720-main-s4",
+      "all_frame_bytes_present_exactly": true,
+      "reference_frames_unique": true,
+      "matches_gop32_frame_number_wrap_sort": true,
+      "same_order_frames": 6,
+      "frames": 96
+    },
+    {
+      "case": "1280x720-high-s1",
+      "all_frame_bytes_present_exactly": true,
+      "reference_frames_unique": true,
+      "matches_gop32_frame_number_wrap_sort": true,
+      "same_order_frames": 6,
+      "frames": 96
+    },
+    {
+      "case": "1280x720-high-s4",
+      "all_frame_bytes_present_exactly": true,
+      "reference_frames_unique": true,
+      "matches_gop32_frame_number_wrap_sort": true,
+      "same_order_frames": 6,
+      "frames": 96
+    },
+    {
+      "case": "1920x1080-baseline-s1",
+      "all_frame_bytes_present_exactly": true,
+      "reference_frames_unique": true,
+      "matches_gop32_frame_number_wrap_sort": true,
+      "same_order_frames": 6,
+      "frames": 96
+    },
+    {
+      "case": "1920x1080-baseline-s4",
+      "all_frame_bytes_present_exactly": true,
+      "reference_frames_unique": true,
+      "matches_gop32_frame_number_wrap_sort": true,
+      "same_order_frames": 6,
+      "frames": 96
+    },
+    {
+      "case": "1920x1080-main-s1",
+      "all_frame_bytes_present_exactly": true,
+      "reference_frames_unique": true,
+      "matches_gop32_frame_number_wrap_sort": true,
+      "same_order_frames": 6,
+      "frames": 96
+    },
+    {
+      "case": "1920x1080-main-s4",
+      "all_frame_bytes_present_exactly": true,
+      "reference_frames_unique": true,
+      "matches_gop32_frame_number_wrap_sort": true,
+      "same_order_frames": 6,
+      "frames": 96
+    },
+    {
+      "case": "1920x1080-high-s1",
+      "all_frame_bytes_present_exactly": true,
+      "reference_frames_unique": true,
+      "matches_gop32_frame_number_wrap_sort": true,
+      "same_order_frames": 6,
+      "frames": 96
+    },
+    {
+      "case": "1920x1080-high-s4",
+      "all_frame_bytes_present_exactly": true,
+      "reference_frames_unique": true,
+      "matches_gop32_frame_number_wrap_sort": true,
+      "same_order_frames": 6,
+      "frames": 96
+    }
+  ],
+  "full_frame_hashes": "retained locally; can be regenerated from the ordinary clip matrix"
+}

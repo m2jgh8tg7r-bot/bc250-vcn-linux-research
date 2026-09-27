@@ -1,0 +1,31 @@
+{
+  "returncode": 0,
+  "seconds": 848.816460968,
+  "tool_rounds": 73,
+  "final_context_limited": 0,
+  "intermediate_compactions_observed": true,
+  "accepted": "Only claims independently rechecked against cited source",
+  "rejected_claims": [
+    {
+      "claim": "HEVC encoding not implemented",
+      "reason": "va_backend.c638 and1621 call existing hevc_encoder_create_depth/encode_frame; encoder_h265.c defines them"
+    },
+    {
+      "claim": "gpu mode means no CPU involvement",
+      "reason": "Mode disables governor CPU offload; host C bitstream/slice writing remains"
+    },
+    {
+      "claim": "All encoding is vkCmdDispatch",
+      "reason": "Default H264 x264 and host HEVC portions contradict this"
+    },
+    {
+      "claim": "Only one VCN mention across codebase",
+      "reason": "Search scope and token occurrence are not whole implementation proof"
+    },
+    {
+      "claim": "x264 compile availability unconditionally selects functioning encoder",
+      "reason": "Selection requires allocation success; encoder opening occurs later and may fail"
+    }
+  ],
+  "hardware": "GPU_COMPUTE AI inference only"
+}

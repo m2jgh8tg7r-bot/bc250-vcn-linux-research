@@ -1,0 +1,13 @@
+{
+  "result": "PASS",
+  "original_needed": [
+    "libm.so.6",
+    "libc.so.6"
+  ],
+  "variant_needed": [
+    "libm.so.6",
+    "libc.so.6"
+  ],
+  "device_check": "NO_DRI_DEVICE",
+  "scope": "dynamic dependencies and sandbox exposure; not a whole-program formal proof"
+}

@@ -1,0 +1,67 @@
+{
+  "tag": "v1.3.290",
+  "commit": "b379292b2ab6df5771ba9870d53cf8b2c9295daf",
+  "headers_only_no_runtime": true,
+  "files": [
+    {
+      "file": "include/vk_video/vulkan_video_codec_av1std.h",
+      "sha256": "f3ab53dbfdeb36a349f674656d50bd507f2e4b3c883343da74aace0df4f02a02",
+      "source": "https://raw.githubusercontent.com/KhronosGroup/Vulkan-Headers/b379292b2ab6df5771ba9870d53cf8b2c9295daf/include/vk_video/vulkan_video_codec_av1std.h"
+    },
+    {
+      "file": "include/vk_video/vulkan_video_codec_av1std_decode.h",
+      "sha256": "96f923dc01cd3e266c081d88fa020525a20d63ffe4ce09a4c807a04ef3aaf97e",
+      "source": "https://raw.githubusercontent.com/KhronosGroup/Vulkan-Headers/b379292b2ab6df5771ba9870d53cf8b2c9295daf/include/vk_video/vulkan_video_codec_av1std_decode.h"
+    },
+    {
+      "file": "include/vk_video/vulkan_video_codec_h264std.h",
+      "sha256": "072ee6eac80e73d93bb4bfe0059f99e581fc8b55b1437236185bb4ff377914b1",
+      "source": "https://raw.githubusercontent.com/KhronosGroup/Vulkan-Headers/b379292b2ab6df5771ba9870d53cf8b2c9295daf/include/vk_video/vulkan_video_codec_h264std.h"
+    },
+    {
+      "file": "include/vk_video/vulkan_video_codec_h264std_decode.h",
+      "sha256": "e1708b3996a740eeedb79f51d0f0e379f9bcae13566538375acaf73301023b58",
+      "source": "https://raw.githubusercontent.com/KhronosGroup/Vulkan-Headers/b379292b2ab6df5771ba9870d53cf8b2c9295daf/include/vk_video/vulkan_video_codec_h264std_decode.h"
+    },
+    {
+      "file": "include/vk_video/vulkan_video_codec_h264std_encode.h",
+      "sha256": "052a6e357be8d88bf4be0db1b3da5a9cc1a6011cf4b3533759ff588e1e26f9f1",
+      "source": "https://raw.githubusercontent.com/KhronosGroup/Vulkan-Headers/b379292b2ab6df5771ba9870d53cf8b2c9295daf/include/vk_video/vulkan_video_codec_h264std_encode.h"
+    },
+    {
+      "file": "include/vk_video/vulkan_video_codec_h265std.h",
+      "sha256": "0cbdfd6c45ee8ca902e9c961cd7e49a4d601d443ea0ef2a60a8496b127ed397c",
+      "source": "https://raw.githubusercontent.com/KhronosGroup/Vulkan-Headers/b379292b2ab6df5771ba9870d53cf8b2c9295daf/include/vk_video/vulkan_video_codec_h265std.h"
+    },
+    {
+      "file": "include/vk_video/vulkan_video_codec_h265std_decode.h",
+      "sha256": "800946aa19d83d305d504e2e4141bc938f989e0cf8872cef97480238eefef1ea",
+      "source": "https://raw.githubusercontent.com/KhronosGroup/Vulkan-Headers/b379292b2ab6df5771ba9870d53cf8b2c9295daf/include/vk_video/vulkan_video_codec_h265std_decode.h"
+    },
+    {
+      "file": "include/vk_video/vulkan_video_codec_h265std_encode.h",
+      "sha256": "7239f9f4e811546639111e562a8be1ec73ad5bef1c23d5fad80889f35e125e9c",
+      "source": "https://raw.githubusercontent.com/KhronosGroup/Vulkan-Headers/b379292b2ab6df5771ba9870d53cf8b2c9295daf/include/vk_video/vulkan_video_codec_h265std_encode.h"
+    },
+    {
+      "file": "include/vk_video/vulkan_video_codecs_common.h",
+      "sha256": "78cf3c99d3d57afa7ab1782ec6018b4bcdbe273f2843d76e3375282db875b71e",
+      "source": "https://raw.githubusercontent.com/KhronosGroup/Vulkan-Headers/b379292b2ab6df5771ba9870d53cf8b2c9295daf/include/vk_video/vulkan_video_codecs_common.h"
+    },
+    {
+      "file": "include/vulkan/vk_platform.h",
+      "sha256": "c4cabbcf699c90cde344095ae54da9435d117951aad114ba3a540c5997d7906f",
+      "source": "https://raw.githubusercontent.com/KhronosGroup/Vulkan-Headers/b379292b2ab6df5771ba9870d53cf8b2c9295daf/include/vulkan/vk_platform.h"
+    },
+    {
+      "file": "include/vulkan/vulkan.h",
+      "sha256": "52297513cc6b6cc8db2921aa849f72e3f55d678b3a58a2c3eb297c02ded7a837",
+      "source": "https://raw.githubusercontent.com/KhronosGroup/Vulkan-Headers/b379292b2ab6df5771ba9870d53cf8b2c9295daf/include/vulkan/vulkan.h"
+    },
+    {
+      "file": "include/vulkan/vulkan_core.h",
+      "sha256": "24b258dbfc5f177206fbffcf35f3a87cf756ee6f883167b92ecaeab16a5aa005",
+      "source": "https://raw.githubusercontent.com/KhronosGroup/Vulkan-Headers/b379292b2ab6df5771ba9870d53cf8b2c9295daf/include/vulkan/vulkan_core.h"
+    }
+  ]
+}

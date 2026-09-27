@@ -1,0 +1,208 @@
+{
+  "result": "PASS",
+  "metadata_sha256": "8ae1dead6e1d3117c3081a1ed6d8ea672d4df6b7cad7cc6feead255a87b9a46d",
+  "observations": 24,
+  "matching": 19,
+  "by_ref": {
+    "f704766b41b9324e3d679156e0ad5ff9428d7146": [
+      {
+        "file": "cyan_skillfish2_ce.bin",
+        "matches": false,
+        "sha256_matches": false,
+        "git_blob_matches": false,
+        "size_matches": true,
+        "last_commit": "f704766b41b9324e3d679156e0ad5ff9428d7146"
+      },
+      {
+        "file": "cyan_skillfish2_me.bin",
+        "matches": false,
+        "sha256_matches": false,
+        "git_blob_matches": false,
+        "size_matches": true,
+        "last_commit": "f704766b41b9324e3d679156e0ad5ff9428d7146"
+      },
+      {
+        "file": "cyan_skillfish2_mec.bin",
+        "matches": false,
+        "sha256_matches": false,
+        "git_blob_matches": false,
+        "size_matches": true,
+        "last_commit": "f704766b41b9324e3d679156e0ad5ff9428d7146"
+      },
+      {
+        "file": "cyan_skillfish2_mec2.bin",
+        "matches": false,
+        "sha256_matches": false,
+        "git_blob_matches": false,
+        "size_matches": true,
+        "last_commit": "f704766b41b9324e3d679156e0ad5ff9428d7146"
+      },
+      {
+        "file": "cyan_skillfish2_pfp.bin",
+        "matches": false,
+        "sha256_matches": false,
+        "git_blob_matches": false,
+        "size_matches": true,
+        "last_commit": "f704766b41b9324e3d679156e0ad5ff9428d7146"
+      },
+      {
+        "file": "cyan_skillfish2_rlc.bin",
+        "matches": true,
+        "sha256_matches": true,
+        "git_blob_matches": true,
+        "size_matches": true,
+        "last_commit": "f704766b41b9324e3d679156e0ad5ff9428d7146"
+      },
+      {
+        "file": "cyan_skillfish2_sdma.bin",
+        "matches": true,
+        "sha256_matches": true,
+        "git_blob_matches": true,
+        "size_matches": true,
+        "last_commit": "f704766b41b9324e3d679156e0ad5ff9428d7146"
+      },
+      {
+        "file": "cyan_skillfish2_sdma1.bin",
+        "matches": true,
+        "sha256_matches": true,
+        "git_blob_matches": true,
+        "size_matches": true,
+        "last_commit": "f704766b41b9324e3d679156e0ad5ff9428d7146"
+      }
+    ],
+    "d371ae3b6888b260e4c37b327a020401cfaaaefd": [
+      {
+        "file": "cyan_skillfish2_ce.bin",
+        "matches": true,
+        "sha256_matches": true,
+        "git_blob_matches": true,
+        "size_matches": true,
+        "last_commit": "9f84af7645b9e63a616b4e8384b2ae19bad7b2bc"
+      },
+      {
+        "file": "cyan_skillfish2_me.bin",
+        "matches": true,
+        "sha256_matches": true,
+        "git_blob_matches": true,
+        "size_matches": true,
+        "last_commit": "9f84af7645b9e63a616b4e8384b2ae19bad7b2bc"
+      },
+      {
+        "file": "cyan_skillfish2_mec.bin",
+        "matches": true,
+        "sha256_matches": true,
+        "git_blob_matches": true,
+        "size_matches": true,
+        "last_commit": "9f84af7645b9e63a616b4e8384b2ae19bad7b2bc"
+      },
+      {
+        "file": "cyan_skillfish2_mec2.bin",
+        "matches": true,
+        "sha256_matches": true,
+        "git_blob_matches": true,
+        "size_matches": true,
+        "last_commit": "9f84af7645b9e63a616b4e8384b2ae19bad7b2bc"
+      },
+      {
+        "file": "cyan_skillfish2_pfp.bin",
+        "matches": true,
+        "sha256_matches": true,
+        "git_blob_matches": true,
+        "size_matches": true,
+        "last_commit": "9f84af7645b9e63a616b4e8384b2ae19bad7b2bc"
+      },
+      {
+        "file": "cyan_skillfish2_rlc.bin",
+        "matches": true,
+        "sha256_matches": true,
+        "git_blob_matches": true,
+        "size_matches": true,
+        "last_commit": "f704766b41b9324e3d679156e0ad5ff9428d7146"
+      },
+      {
+        "file": "cyan_skillfish2_sdma.bin",
+        "matches": true,
+        "sha256_matches": true,
+        "git_blob_matches": true,
+        "size_matches": true,
+        "last_commit": "f704766b41b9324e3d679156e0ad5ff9428d7146"
+      },
+      {
+        "file": "cyan_skillfish2_sdma1.bin",
+        "matches": true,
+        "sha256_matches": true,
+        "git_blob_matches": true,
+        "size_matches": true,
+        "last_commit": "f704766b41b9324e3d679156e0ad5ff9428d7146"
+      }
+    ],
+    "9b858e5bb58d7bf1fc4d8818cb9100aed6d46f6a": [
+      {
+        "file": "cyan_skillfish2_ce.bin",
+        "matches": true,
+        "sha256_matches": true,
+        "git_blob_matches": true,
+        "size_matches": true,
+        "last_commit": "9f84af7645b9e63a616b4e8384b2ae19bad7b2bc"
+      },
+      {
+        "file": "cyan_skillfish2_me.bin",
+        "matches": true,
+        "sha256_matches": true,
+        "git_blob_matches": true,
+        "size_matches": true,
+        "last_commit": "9f84af7645b9e63a616b4e8384b2ae19bad7b2bc"
+      },
+      {
+        "file": "cyan_skillfish2_mec.bin",
+        "matches": true,
+        "sha256_matches": true,
+        "git_blob_matches": true,
+        "size_matches": true,
+        "last_commit": "9f84af7645b9e63a616b4e8384b2ae19bad7b2bc"
+      },
+      {
+        "file": "cyan_skillfish2_mec2.bin",
+        "matches": true,
+        "sha256_matches": true,
+        "git_blob_matches": true,
+        "size_matches": true,
+        "last_commit": "9f84af7645b9e63a616b4e8384b2ae19bad7b2bc"
+      },
+      {
+        "file": "cyan_skillfish2_pfp.bin",
+        "matches": true,
+        "sha256_matches": true,
+        "git_blob_matches": true,
+        "size_matches": true,
+        "last_commit": "9f84af7645b9e63a616b4e8384b2ae19bad7b2bc"
+      },
+      {
+        "file": "cyan_skillfish2_rlc.bin",
+        "matches": true,
+        "sha256_matches": true,
+        "git_blob_matches": true,
+        "size_matches": true,
+        "last_commit": "f704766b41b9324e3d679156e0ad5ff9428d7146"
+      },
+      {
+        "file": "cyan_skillfish2_sdma.bin",
+        "matches": true,
+        "sha256_matches": true,
+        "git_blob_matches": true,
+        "size_matches": true,
+        "last_commit": "f704766b41b9324e3d679156e0ad5ff9428d7146"
+      },
+      {
+        "file": "cyan_skillfish2_sdma1.bin",
+        "matches": true,
+        "sha256_matches": true,
+        "git_blob_matches": true,
+        "size_matches": true,
+        "last_commit": "f704766b41b9324e3d679156e0ad5ff9428d7146"
+      }
+    ]
+  },
+  "scope": "Decompressed file provenance; no signature validation or live identity",
+  "caveat": "HEAD metadata is an HTTPS server claim, not a locally cloned Git object or signed attestation"
+}

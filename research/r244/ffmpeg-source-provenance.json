@@ -1,0 +1,5 @@
+{
+  "url": "https://raw.githubusercontent.com/FFmpeg/FFmpeg/n8.1.2/libavcodec/h264_parse.c",
+  "sha256": "6da29f6f210cb787b5aa2fd4550a17580669db5a458f315b6c428b7cec8a34c3",
+  "scope": "source comparison, not a claim distro binary equals this exact source tree"
+}

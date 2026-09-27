@@ -1,0 +1,154 @@
+{
+  "result": "PASS",
+  "source_kind": "retained working tree; hashes identify exact bytes",
+  "source_evidence": [
+    {
+      "label": "status_tolerance",
+      "file": "amdgpu_psp.c",
+      "sha256": "d0513be4c77d71d72a21ab47764cad16f958e5d193ff21d26d7844ec3be54b1d",
+      "start_line": 775,
+      "end_line": 807
+    },
+    {
+      "label": "returned_address_copy",
+      "file": "amdgpu_psp.c",
+      "sha256": "d0513be4c77d71d72a21ab47764cad16f958e5d193ff21d26d7844ec3be54b1d",
+      "start_line": 810,
+      "end_line": 813
+    },
+    {
+      "label": "response_field_definition",
+      "file": "psp_gfx_if.h",
+      "sha256": "e12b7894cc9cb30a7de5e6707d7af60908941e85fcdcd562dc27b58a9d80f6ee",
+      "start_line": 440,
+      "end_line": 456
+    },
+    {
+      "label": "VCN_address_consumer",
+      "file": "vcn_v2_0.c",
+      "sha256": "eb62b3f8575eff45019712ebc3f68acf4d190834900eb591b5ff7416a42ff075",
+      "start_line": 435,
+      "end_line": 450
+    },
+    {
+      "label": "MEC_partition",
+      "file": "amdgpu_ucode.c",
+      "sha256": "42253cf0e7495c935adcd441a97786c25cf712aa3ddb12d95cddb93972821747",
+      "start_line": 906,
+      "end_line": 919
+    }
+  ],
+  "bounded_reference_counts": {
+    "gfx_v10_0.c": {
+      "tmr_mc_addr_lo_references": 0,
+      "tmr_mc_addr_hi_references": 0,
+      "sha256": "39de93ff6255423855ad3434d415d867b55dc0c0c268410fba3950af9355a473"
+    },
+    "sdma_v5_2.c": {
+      "tmr_mc_addr_lo_references": 0,
+      "tmr_mc_addr_hi_references": 0,
+      "sha256": "9bee44cfb45798f2192031994b19f053ba8ab4c14660e1947c3e7da9d7bcefb8"
+    },
+    "vcn_v2_0.c": {
+      "tmr_mc_addr_lo_references": 3,
+      "tmr_mc_addr_hi_references": 3,
+      "sha256": "eb62b3f8575eff45019712ebc3f68acf4d190834900eb591b5ff7416a42ff075"
+    }
+  },
+  "historical_pairs": [
+    {
+      "id": 1,
+      "fw_type": 9,
+      "size": 33536,
+      "status": "0x0",
+      "address_nonzero": false
+    },
+    {
+      "id": 2,
+      "fw_type": 10,
+      "size": 33536,
+      "status": "0x0",
+      "address_nonzero": false
+    },
+    {
+      "id": 12,
+      "fw_type": 3,
+      "size": 263040,
+      "status": "0x0",
+      "address_nonzero": true
+    },
+    {
+      "id": 13,
+      "fw_type": 2,
+      "size": 263168,
+      "status": "0x0",
+      "address_nonzero": true
+    },
+    {
+      "id": 14,
+      "fw_type": 1,
+      "size": 263168,
+      "status": "0x0",
+      "address_nonzero": true
+    },
+    {
+      "id": 26,
+      "fw_type": 4,
+      "size": 267440,
+      "status": "0x0",
+      "address_nonzero": true
+    },
+    {
+      "id": 27,
+      "fw_type": 5,
+      "size": 896,
+      "status": "0x0",
+      "address_nonzero": false
+    },
+    {
+      "id": 28,
+      "fw_type": 4,
+      "size": 267440,
+      "status": "0x0",
+      "address_nonzero": true
+    },
+    {
+      "id": 29,
+      "fw_type": 6,
+      "size": 896,
+      "status": "0x0",
+      "address_nonzero": false
+    },
+    {
+      "id": 50,
+      "fw_type": 8,
+      "size": 25088,
+      "status": "0x0",
+      "address_nonzero": false
+    },
+    {
+      "id": 57,
+      "fw_type": 13,
+      "size": 405696,
+      "status": "0xffff0008",
+      "address_nonzero": false
+    }
+  ],
+  "status_zero_controls": 10,
+  "status_zero_nonzero_address_controls": 5,
+  "not_a_universal_acceptance_rule": true,
+  "current_upstream_corroboration": [
+    {
+      "claim": "status_tolerance_comment",
+      "file": "drivers/gpu/drm/amd/amdgpu/amdgpu_psp.c",
+      "line": 772,
+      "source_url": "https://github.com/torvalds/linux/blob/fd179f8a05be3ccae366b9b96e176b51fbe54aab/drivers/gpu/drm/amd/amdgpu/amdgpu_psp.c#L772"
+    },
+    {
+      "claim": "returned_address_copy",
+      "file": "drivers/gpu/drm/amd/amdgpu/amdgpu_psp.c",
+      "line": 802,
+      "source_url": "https://github.com/torvalds/linux/blob/fd179f8a05be3ccae366b9b96e176b51fbe54aab/drivers/gpu/drm/amd/amdgpu/amdgpu_psp.c#L802"
+    }
+  ]
+}

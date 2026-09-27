@@ -1,0 +1,14 @@
+{
+  "image_id": "20edf197e69eecb12f76b3307e960e56e0a7e2f6471d1f046ce13d2095309313",
+  "compiler": "gcc (GCC) 16.2.1 20260819 (Red Hat 16.2.1-2)",
+  "libc": "ldd (GNU libc) 2.43",
+  "host_ffmpeg": "ffmpeg version 8.1.2 Copyright (c) 2000-2026 the FFmpeg developers",
+  "host_reference_device_mode": "-hwaccel none -c:v h264",
+  "candidate_device_mode": "no /dev/dri in rootless container; CPU harness receives NULL GPU context",
+  "raw_reference_is_not_original_source_frames": true,
+  "fixture_encoder_version_from_bitstreams": [
+    "x264 - core 165"
+  ],
+  "host_ffmpeg_executable_sha256": "a7ee46028d7b538b8b996ac3fa92785c858843d134aab12f6ecc3fe2b72663a2",
+  "full_dynamic_library_environment_pinned": false
+}

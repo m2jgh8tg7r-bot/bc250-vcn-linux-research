@@ -1,6 +1,12 @@
 # Current status
 
-## Latest — R235, 2026-09-27
+## Latest — R244, 2026-09-27
+
+[R236–R244 research handoff](CHATGPT_HANDOFF_R244.md) adds official control-file provenance, ten verified container checksums, 21-version VCN signer metadata and current source/interface checks. Running PSP/KDB identity and dedicated VCN operation remain unproven.
+
+A GPU-free CPU video control exposed a standalone harness frame-ordering defect: the original short-GOP matrix passed 18/18; an isolated ordering variant passed both matrices 36/36. This is CPU-only evidence, not VCN activation or a production-complete patch. Q36 assistance was independently checked and its incorrect conclusions rejected.
+
+### Previous — R235, 2026-09-27
 
 [R235 signer controls](CHATGPT_HANDOFF_R235.md) add a positive contrast: retained non-VCN main-image signer IDs match saved type51 KDB records; the VCN signer does not. Two historical captures were revalidated. Ten saved KDB occurrences reduce to two distinct bodies. Runtime KDB identity and VCN rejection cause remain unproven; control-file whole-payload CRC discrepancies are explicitly unresolved.
 

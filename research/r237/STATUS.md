@@ -1,0 +1,9 @@
+# R237 — control container integrity and MEC jump tables
+
+Static checkpoint verified 2026-09-27. Eight saved control filenames contain ten signed-container occurrences: eight main containers and two separate MEC/MEC2 jump-table containers. These are seven distinct decompressed files and eight distinct complete containers. All ten uncompressed, unencrypted containers have bounded header/body/signature layout and matching stored body SHA-256. Five malformed metadata/body controls are rejected. No signature is cryptographically verified.
+
+The separate 896-byte MEC jump-table containers contain 256-byte header, 384-byte body and 256-byte signature field. Their signer metadata is the same `30b8865125424499aeff3ac35ce621a6` as the main control containers. R235 excluded these two from signer parsing pending a layout check; that missing metadata is now supplied. Their historic status-zero/placement-zero result remains unchanged, and the count satisfying the previously defined full control acceptance predicate remains **five**.
+
+The Linux outer CRC32 field does not match the entire declared payload for any of the eight files. Neither the bounded alternative body/header/signature spans nor dword byte swapping explains it. Eight installed Navi10 control files provide a metadata-only contrast with the same full-payload mismatch. This is an unresolved packaging convention, not proof that every CRC is invalid. Inner SHA256 consistency, official whole-file provenance (R236), cryptographic authentication and live image identity are separate claims.
+
+References: saved Linux `amdgpu_ucode.h` common header and MEC header fields; pinned PSPTool `header_file.py` at `6112e48dc24d77fbeb2aa646d4a9ed3403fdd601` for container SHA256 fields. No executable firmware was decoded or run in this stage.

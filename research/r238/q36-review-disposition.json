@@ -1,0 +1,24 @@
+{
+  "first_tool_review": {
+    "accepted": false,
+    "seconds": 425.240862799,
+    "tool_rounds": 33,
+    "context_limited": 1,
+    "reason": "Compaction lost identity task; unrelated assertions discarded"
+  },
+  "bounded_review": {
+    "accepted_as_advisory_only": true,
+    "seconds": 60.012875085,
+    "tool_rounds": 0,
+    "context_limited": 0,
+    "generated_tokens": 2010,
+    "host_corrections": [
+      "Register offset fields are scalar nonzero tests, not pointer non-NULL tests",
+      "Visibility also requires non-null psp",
+      "No demonstrated equivalence is not proof of physical or firmware separation",
+      "Vendor values independently checked in pci_ids.h after reviewer correctly noted missing excerpt"
+    ]
+  },
+  "hardware_access": "GPU_COMPUTE inference only",
+  "research_hardware_transactions": false
+}

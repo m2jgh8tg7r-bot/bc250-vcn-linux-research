@@ -1,0 +1,43 @@
+{
+  "result": "PASS",
+  "pinned_official_head": "9b858e5bb58d7bf1fc4d8818cb9100aed6d46f6a",
+  "scope": "metadata only; no binary downloaded",
+  "rows": [
+    {
+      "file": "navi10_vcn.bin",
+      "method": "HEAD",
+      "url": "https://gitlab.com/api/v4/projects/kernel-firmware%2Flinux-firmware/repository/files/amdgpu%2Fnavi10_vcn.bin?ref=9b858e5bb58d7bf1fc4d8818cb9100aed6d46f6a",
+      "metadata": {
+        "content-sha256": "a9ec155695b5020009d3986cfd4ebd00ad9ddbd12ac7e5fa15ec86b8a571dbe5",
+        "blob-id": "d2b9ad45b807e39b4971041ea5e9dd7c151744fe",
+        "size": "405952",
+        "commit-id": "9b858e5bb58d7bf1fc4d8818cb9100aed6d46f6a",
+        "last-commit-id": "b5cbed93dce01a2177fa994d8de75170ef00d11b"
+      }
+    },
+    {
+      "file": "navi12_vcn.bin",
+      "method": "HEAD",
+      "url": "https://gitlab.com/api/v4/projects/kernel-firmware%2Flinux-firmware/repository/files/amdgpu%2Fnavi12_vcn.bin?ref=9b858e5bb58d7bf1fc4d8818cb9100aed6d46f6a",
+      "metadata": {
+        "content-sha256": "a9ec155695b5020009d3986cfd4ebd00ad9ddbd12ac7e5fa15ec86b8a571dbe5",
+        "blob-id": "d2b9ad45b807e39b4971041ea5e9dd7c151744fe",
+        "size": "405952",
+        "commit-id": "9b858e5bb58d7bf1fc4d8818cb9100aed6d46f6a",
+        "last-commit-id": "da93e66cc40ae6d379ff102bec3dd859be01ae21"
+      }
+    },
+    {
+      "file": "navi14_vcn.bin",
+      "method": "HEAD",
+      "url": "https://gitlab.com/api/v4/projects/kernel-firmware%2Flinux-firmware/repository/files/amdgpu%2Fnavi14_vcn.bin?ref=9b858e5bb58d7bf1fc4d8818cb9100aed6d46f6a",
+      "metadata": {
+        "content-sha256": "a9ec155695b5020009d3986cfd4ebd00ad9ddbd12ac7e5fa15ec86b8a571dbe5",
+        "blob-id": "d2b9ad45b807e39b4971041ea5e9dd7c151744fe",
+        "size": "405952",
+        "commit-id": "9b858e5bb58d7bf1fc4d8818cb9100aed6d46f6a",
+        "last-commit-id": "f1a2554fa8a93b5c39c3df0af95bd892445b89f7"
+      }
+    }
+  ]
+}

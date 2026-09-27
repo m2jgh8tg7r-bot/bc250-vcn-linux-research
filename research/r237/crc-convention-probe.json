@@ -1,0 +1,293 @@
+{
+  "scope": "Bounded conventional CRC32 spans; no claim about unknown packaging process",
+  "rows": [
+    {
+      "file": "cyan_skillfish2_ce.bin.xz",
+      "stored_crc": "0x14f5bfff",
+      "candidates": {
+        "full_payload": {
+          "crc32": "0xca1135c3",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0x9d113c02",
+          "dword_swapped_match": false
+        },
+        "body": {
+          "crc32": "0xdfcc71d6",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0x1d1d5615",
+          "dword_swapped_match": false
+        },
+        "header_body": {
+          "crc32": "0xef536789",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0x95e103ce",
+          "dword_swapped_match": false
+        },
+        "body_signature": {
+          "crc32": "0xad983b2",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0xb9d83238",
+          "dword_swapped_match": false
+        },
+        "full_payload_no_header": {
+          "crc32": "0xad983b2",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0xb9d83238",
+          "dword_swapped_match": false
+        }
+      }
+    },
+    {
+      "file": "cyan_skillfish2_me.bin.xz",
+      "stored_crc": "0x9709de5e",
+      "candidates": {
+        "full_payload": {
+          "crc32": "0x28bfd2da",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0xa9486fb5",
+          "dword_swapped_match": false
+        },
+        "body": {
+          "crc32": "0xa6209b8e",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0xfd8e3e68",
+          "dword_swapped_match": false
+        },
+        "header_body": {
+          "crc32": "0xdbcf3e66",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0xfbd858b3",
+          "dword_swapped_match": false
+        },
+        "body_signature": {
+          "crc32": "0x1c301057",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0xce725951",
+          "dword_swapped_match": false
+        },
+        "full_payload_no_header": {
+          "crc32": "0x1c301057",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0xce725951",
+          "dword_swapped_match": false
+        }
+      }
+    },
+    {
+      "file": "cyan_skillfish2_mec.bin.xz",
+      "stored_crc": "0x3bb301c1",
+      "candidates": {
+        "full_payload": {
+          "crc32": "0x6c21b32a",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0x5d7ff1c8",
+          "dword_swapped_match": false
+        },
+        "body": {
+          "crc32": "0xa7350ff0",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0x2b37f910",
+          "dword_swapped_match": false
+        },
+        "header_body": {
+          "crc32": "0x18b79a78",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0xdfecd225",
+          "dword_swapped_match": false
+        },
+        "body_signature": {
+          "crc32": "0xb6efdf93",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0xbcb35748",
+          "dword_swapped_match": false
+        },
+        "full_payload_no_header": {
+          "crc32": "0x54bd9019",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0x5aa812cb",
+          "dword_swapped_match": false
+        }
+      }
+    },
+    {
+      "file": "cyan_skillfish2_mec2.bin.xz",
+      "stored_crc": "0x3bb301c1",
+      "candidates": {
+        "full_payload": {
+          "crc32": "0x6c21b32a",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0x5d7ff1c8",
+          "dword_swapped_match": false
+        },
+        "body": {
+          "crc32": "0xa7350ff0",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0x2b37f910",
+          "dword_swapped_match": false
+        },
+        "header_body": {
+          "crc32": "0x18b79a78",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0xdfecd225",
+          "dword_swapped_match": false
+        },
+        "body_signature": {
+          "crc32": "0xb6efdf93",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0xbcb35748",
+          "dword_swapped_match": false
+        },
+        "full_payload_no_header": {
+          "crc32": "0x54bd9019",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0x5aa812cb",
+          "dword_swapped_match": false
+        }
+      }
+    },
+    {
+      "file": "cyan_skillfish2_pfp.bin.xz",
+      "stored_crc": "0x5ce9e15d",
+      "candidates": {
+        "full_payload": {
+          "crc32": "0xe35fedd9",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0x6e67ff81",
+          "dword_swapped_match": false
+        },
+        "body": {
+          "crc32": "0x1e005577",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0x4fce3264",
+          "dword_swapped_match": false
+        },
+        "header_body": {
+          "crc32": "0x1cb3c197",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0x39dec52f",
+          "dword_swapped_match": false
+        },
+        "body_signature": {
+          "crc32": "0x5b50f8ec",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0x387614e5",
+          "dword_swapped_match": false
+        },
+        "full_payload_no_header": {
+          "crc32": "0x5b50f8ec",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0x387614e5",
+          "dword_swapped_match": false
+        }
+      }
+    },
+    {
+      "file": "cyan_skillfish2_rlc.bin.xz",
+      "stored_crc": "0x776a0649",
+      "candidates": {
+        "full_payload": {
+          "crc32": "0x7383498f",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0xcd212d6c",
+          "dword_swapped_match": false
+        },
+        "body": {
+          "crc32": "0x175f745e",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0xffd90445",
+          "dword_swapped_match": false
+        },
+        "header_body": {
+          "crc32": "0x43113e78",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0x51ad5e73",
+          "dword_swapped_match": false
+        },
+        "body_signature": {
+          "crc32": "0x89426db2",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0x21f56ecb",
+          "dword_swapped_match": false
+        },
+        "full_payload_no_header": {
+          "crc32": "0x89426db2",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0x21f56ecb",
+          "dword_swapped_match": false
+        }
+      }
+    },
+    {
+      "file": "cyan_skillfish2_sdma.bin.xz",
+      "stored_crc": "0xf2f45029",
+      "candidates": {
+        "full_payload": {
+          "crc32": "0xfe02efe4",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0x446b696c",
+          "dword_swapped_match": false
+        },
+        "body": {
+          "crc32": "0x49551015",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0xbc995a16",
+          "dword_swapped_match": false
+        },
+        "header_body": {
+          "crc32": "0x25923a5",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0x324bbfa6",
+          "dword_swapped_match": false
+        },
+        "body_signature": {
+          "crc32": "0xa72103b2",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0xf94e9cf5",
+          "dword_swapped_match": false
+        },
+        "full_payload_no_header": {
+          "crc32": "0xa72103b2",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0xf94e9cf5",
+          "dword_swapped_match": false
+        }
+      }
+    },
+    {
+      "file": "cyan_skillfish2_sdma1.bin.xz",
+      "stored_crc": "0xdb3e0be6",
+      "candidates": {
+        "full_payload": {
+          "crc32": "0xd7c8b42b",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0x552c1fba",
+          "dword_swapped_match": false
+        },
+        "body": {
+          "crc32": "0x49551015",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0xbc995a16",
+          "dword_swapped_match": false
+        },
+        "header_body": {
+          "crc32": "0x1c938bf9",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0x92a38db2",
+          "dword_swapped_match": false
+        },
+        "body_signature": {
+          "crc32": "0x946c1284",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0x1258e840",
+          "dword_swapped_match": false
+        },
+        "full_payload_no_header": {
+          "crc32": "0x946c1284",
+          "crc32_match": false,
+          "dword_swapped_crc32": "0x1258e840",
+          "dword_swapped_match": false
+        }
+      }
+    }
+  ]
+}

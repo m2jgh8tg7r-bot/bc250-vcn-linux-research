@@ -1,0 +1,107 @@
+{
+  "result": "PASS",
+  "scope": "pinned source identity interfaces; no live reads",
+  "commit": "0bb924b042ab85b8f529aed6e4f3e24750584276",
+  "source_evidence": [
+    {
+      "label": "register_backed_show",
+      "file": "drivers/crypto/ccp/sp-pci.c",
+      "sha256": "58b1b12be5ccd2702bc26fa9a52a717a2446f1889c272da913fa530b9acd3bea",
+      "start_line": 43,
+      "end_line": 60,
+      "official_source_url": "https://github.com/torvalds/linux/blob/fd179f8a05be3ccae366b9b96e176b51fbe54aab/drivers/crypto/ccp/sp-pci.c#L43"
+    },
+    {
+      "label": "visibility_gates",
+      "file": "drivers/crypto/ccp/sp-pci.c",
+      "sha256": "58b1b12be5ccd2702bc26fa9a52a717a2446f1889c272da913fa530b9acd3bea",
+      "start_line": 68,
+      "end_line": 91,
+      "official_source_url": "https://github.com/torvalds/linux/blob/fd179f8a05be3ccae366b9b96e176b51fbe54aab/drivers/crypto/ccp/sp-pci.c#L68"
+    },
+    {
+      "label": "driver_binding",
+      "file": "drivers/crypto/ccp/sp-pci.c",
+      "sha256": "58b1b12be5ccd2702bc26fa9a52a717a2446f1889c272da913fa530b9acd3bea",
+      "start_line": 554,
+      "end_line": 587,
+      "official_source_url": "https://github.com/torvalds/linux/blob/fd179f8a05be3ccae366b9b96e176b51fbe54aab/drivers/crypto/ccp/sp-pci.c#L554"
+    },
+    {
+      "label": "platform_capability_gate",
+      "file": "drivers/crypto/ccp/psp-dev.c",
+      "sha256": "acae4587ea5199dadbd74dec937ca81f11a92bcef8b39b097128c9b7b41596c3",
+      "start_line": 144,
+      "end_line": 161,
+      "official_source_url": "https://github.com/torvalds/linux/blob/fd179f8a05be3ccae366b9b96e176b51fbe54aab/drivers/crypto/ccp/psp-dev.c#L144"
+    },
+    {
+      "label": "tee_capability_gate",
+      "file": "drivers/crypto/ccp/psp-dev.c",
+      "sha256": "acae4587ea5199dadbd74dec937ca81f11a92bcef8b39b097128c9b7b41596c3",
+      "start_line": 175,
+      "end_line": 184,
+      "official_source_url": "https://github.com/torvalds/linux/blob/fd179f8a05be3ccae366b9b96e176b51fbe54aab/drivers/crypto/ccp/psp-dev.c#L175"
+    },
+    {
+      "label": "static_ioctl_identity",
+      "file": "drivers/tee/amdtee/core.c",
+      "sha256": "dbf8f2b32112605259188293aa8bf86e02356eeb8b0b0eee5a4e33732fdc3ca0",
+      "start_line": 26,
+      "end_line": 35,
+      "official_source_url": "https://github.com/torvalds/linux/blob/fd179f8a05be3ccae366b9b96e176b51fbe54aab/drivers/tee/amdtee/core.c#L26"
+    },
+    {
+      "label": "ioctl_contract",
+      "file": "include/uapi/linux/tee.h",
+      "sha256": "dc4f02e4293f4fede11633a073a4dd15e186655b9f1ceaab7128e7ffdcd5a519",
+      "start_line": 70,
+      "end_line": 83,
+      "official_source_url": "https://github.com/torvalds/linux/blob/fd179f8a05be3ccae366b9b96e176b51fbe54aab/include/uapi/linux/tee.h#L70"
+    },
+    {
+      "label": "vendor_ati",
+      "file": "include/linux/pci_ids.h",
+      "sha256": "55928d1f2c4f7e6b912c54baf64b876fc8cd4d083d2016a45a87ca33ebc9439d",
+      "start_line": 248,
+      "end_line": 248
+    },
+    {
+      "label": "vendor_amd",
+      "file": "include/linux/pci_ids.h",
+      "sha256": "55928d1f2c4f7e6b912c54baf64b876fc8cd4d083d2016a45a87ca33ebc9439d",
+      "start_line": 540,
+      "end_line": 540
+    }
+  ],
+  "ccp_vendor": "0x1022",
+  "ccp_device_ids": [
+    "0x1537",
+    "0x1456",
+    "0x1468",
+    "0x1486",
+    "0x15DF",
+    "0x14CA",
+    "0x15C7",
+    "0x1649",
+    "0x1134",
+    "0x17E0",
+    "0x156E",
+    "0x17D8",
+    "0x115A"
+  ],
+  "cyan_vendor": "0x1002",
+  "cyan_bindings": [
+    {
+      "line": 2178
+    },
+    {
+      "line": 2179
+    }
+  ],
+  "distinct_driver_endpoints": true,
+  "same_physical_psp_or_firmware_identity": "UNPROVEN",
+  "version_attribute_absence_is_ambiguous": true,
+  "tee_ioctl_returns_firmware_digest": false,
+  "running_kdb_identity": "UNPROVEN"
+}

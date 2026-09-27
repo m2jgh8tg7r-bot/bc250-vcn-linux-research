@@ -1,0 +1,46 @@
+{
+  "result": "VERIFIED_CPU_DIAGNOSTIC",
+  "source_commit": "7d9c38bdfdc469505eeb94864a203c0b4ffee12c",
+  "original_gop32": {
+    "cases": 18,
+    "ordered_matches": 0,
+    "frames_per_case": 96,
+    "all_frames_pixel_identical_up_to_order": true,
+    "all_cases_match_wrap_sort_permutation": true
+  },
+  "original_gop12": {
+    "cases": 18,
+    "ordered_matches": 18,
+    "frames": 1728
+  },
+  "diagnostic_variant": {
+    "cases": 36,
+    "ordered_matches": 36,
+    "frames": 3456,
+    "only_modified_file": "standalone tools/h264dec.c",
+    "decoder_core_modified": false,
+    "production_fix": false
+  },
+  "gpu_device_exposed": false,
+  "vaapi_driver_integration_tested": false,
+  "vcn_execution_tested": false,
+  "performance_benchmark": false,
+  "sources": [
+    {
+      "url": "https://www.itu.int/rec/dologin_pub.asp?id=T-REC-H.264-202408-I%21%21PDF-E&lang=e&type=items",
+      "section": "8.2.1.3",
+      "supports": "type2 picture order uses frame-number wrap offset"
+    },
+    {
+      "url": "https://github.com/FFmpeg/FFmpeg/blob/n8.1.2/libavcodec/h264_parse.c#L287",
+      "supports": "independent implementation of frame_num_offset and type2 POC"
+    }
+  ],
+  "evidence_sha256": {
+    "results.json": "e332d17893707397eeb4f4639914429818780916ab9107e2af7c1467c4e885e4",
+    "gop12-control/results.json": "6b148216fdb4b87566dc051310e2dd571efee06d7d8cd384c333b39b3b104311",
+    "frame-order-analysis.json": "63bd0f87b24dac33960bc5e01c48b7f57b7e3d042ac9f5b81dd34ae75d1dffbc",
+    "type2-wrap-variant/replay/results.json": "6ad4464a015b3e99b115acd4b8f4d501698527c8073991db89fa11dae1ae8642",
+    "type2-wrap-variant/variant.json": "6c3a5e4797d0705e22c78f88847a77a98ac409a4979cd45c8542cabd38909cce"
+  }
+}

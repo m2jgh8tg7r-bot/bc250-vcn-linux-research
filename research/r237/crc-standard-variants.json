@@ -1,0 +1,49 @@
+{
+  "scope": "IEEE polynomial reflected/nonreflected seed/final variants on four declared spans; no packaging semantics inferred",
+  "known_vectors": [
+    "CRC32/MPEG-2 123456789=0376e6e7",
+    "CRC32/CKSUM 123456789=765e7680"
+  ],
+  "rows": [
+    {
+      "file": "cyan_skillfish2_ce.bin.xz",
+      "stored_crc": "0x14f5bfff",
+      "matches": []
+    },
+    {
+      "file": "cyan_skillfish2_me.bin.xz",
+      "stored_crc": "0x9709de5e",
+      "matches": []
+    },
+    {
+      "file": "cyan_skillfish2_mec.bin.xz",
+      "stored_crc": "0x3bb301c1",
+      "matches": []
+    },
+    {
+      "file": "cyan_skillfish2_mec2.bin.xz",
+      "stored_crc": "0x3bb301c1",
+      "matches": []
+    },
+    {
+      "file": "cyan_skillfish2_pfp.bin.xz",
+      "stored_crc": "0x5ce9e15d",
+      "matches": []
+    },
+    {
+      "file": "cyan_skillfish2_rlc.bin.xz",
+      "stored_crc": "0x776a0649",
+      "matches": []
+    },
+    {
+      "file": "cyan_skillfish2_sdma.bin.xz",
+      "stored_crc": "0xf2f45029",
+      "matches": []
+    },
+    {
+      "file": "cyan_skillfish2_sdma1.bin.xz",
+      "stored_crc": "0xdb3e0be6",
+      "matches": []
+    }
+  ]
+}

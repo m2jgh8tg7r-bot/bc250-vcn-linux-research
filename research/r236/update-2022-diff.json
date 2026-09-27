@@ -1,0 +1,46 @@
+{
+  "commit": "9f84af7645b9e63a616b4e8384b2ae19bad7b2bc",
+  "source": "https://gitlab.com/api/v4/projects/kernel-firmware%2Flinux-firmware/repository/commits/9f84af7645b9e63a616b4e8384b2ae19bad7b2bc/diff?per_page=100",
+  "diff": [
+    {
+      "old_path": "amdgpu/cyan_skillfish2_ce.bin",
+      "new_path": "amdgpu/cyan_skillfish2_ce.bin",
+      "new_file": false,
+      "deleted_file": false,
+      "renamed_file": false,
+      "diff": "Binary files a/amdgpu/cyan_skillfish2_ce.bin and b/amdgpu/cyan_skillfish2_ce.bin differ\n"
+    },
+    {
+      "old_path": "amdgpu/cyan_skillfish2_me.bin",
+      "new_path": "amdgpu/cyan_skillfish2_me.bin",
+      "new_file": false,
+      "deleted_file": false,
+      "renamed_file": false,
+      "diff": "Binary files a/amdgpu/cyan_skillfish2_me.bin and b/amdgpu/cyan_skillfish2_me.bin differ\n"
+    },
+    {
+      "old_path": "amdgpu/cyan_skillfish2_mec.bin",
+      "new_path": "amdgpu/cyan_skillfish2_mec.bin",
+      "new_file": false,
+      "deleted_file": false,
+      "renamed_file": false,
+      "diff": "Binary files a/amdgpu/cyan_skillfish2_mec.bin and b/amdgpu/cyan_skillfish2_mec.bin differ\n"
+    },
+    {
+      "old_path": "amdgpu/cyan_skillfish2_mec2.bin",
+      "new_path": "amdgpu/cyan_skillfish2_mec2.bin",
+      "new_file": false,
+      "deleted_file": false,
+      "renamed_file": false,
+      "diff": "Binary files a/amdgpu/cyan_skillfish2_mec2.bin and b/amdgpu/cyan_skillfish2_mec2.bin differ\n"
+    },
+    {
+      "old_path": "amdgpu/cyan_skillfish2_pfp.bin",
+      "new_path": "amdgpu/cyan_skillfish2_pfp.bin",
+      "new_file": false,
+      "deleted_file": false,
+      "renamed_file": false,
+      "diff": "Binary files a/amdgpu/cyan_skillfish2_pfp.bin and b/amdgpu/cyan_skillfish2_pfp.bin differ\n"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "result": "PASS",
+  "cases": [
+    {
+      "case": "duplicate_pair",
+      "rejected": true,
+      "reason": "duplicate or missing file/ref pair"
+    },
+    {
+      "case": "wrong_path_binding",
+      "rejected": true,
+      "reason": "metadata assertion"
+    },
+    {
+      "case": "wrong_digest",
+      "rejected": true,
+      "reason": "metadata assertion"
+    },
+    {
+      "case": "wrong_commit_binding",
+      "rejected": true,
+      "reason": "metadata assertion"
+    }
+  ]
+}

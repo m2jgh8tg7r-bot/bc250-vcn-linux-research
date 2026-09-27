@@ -1,0 +1,229 @@
+{
+  "commit": "0bb924b042ab85b8f529aed6e4f3e24750584276",
+  "files": [
+    {
+      "path": "Documentation/ABI/testing/sysfs-driver-ccp",
+      "sha256": "3412d5bccc6265ad88672fb648795779f66e9d41bfed8eba68ead5bc5558f014"
+    },
+    {
+      "path": "Documentation/driver-api/tee.rst",
+      "sha256": "1c80c704b36e322382153fdb37bc79517b59d6e24a1a5a65a8ebc1af2f3c6bc0"
+    },
+    {
+      "path": "Documentation/tee/amd-tee.rst",
+      "sha256": "3955d53437118a57ee497e561d47d3dc415bfd9ddb474ee6157f2dc567fdee02"
+    },
+    {
+      "path": "Documentation/tee/index.rst",
+      "sha256": "86edf72e322b8a6bda2999362fa70a7761d4152418a19f544721a25740ad21c2"
+    },
+    {
+      "path": "Documentation/tee/op-tee.rst",
+      "sha256": "d0726fbe733e02a3037dec42b39d5f42e6bb41e2179aaa291aa72845ea5fbe0b"
+    },
+    {
+      "path": "Documentation/tee/qtee.rst",
+      "sha256": "e3c94fbccb0b9564c3c40fc79878b240ae30f525b522e73b1c90dd1074974ec5"
+    },
+    {
+      "path": "Documentation/tee/tee.rst",
+      "sha256": "2da4bfdb86e4463815a72ffa5fa8f211d39d0ae889ba1ff3f73495fd11997b04"
+    },
+    {
+      "path": "Documentation/tee/ts-tee.rst",
+      "sha256": "ff58c6d30d9f28ebceca57eab185e76f110b92c53b2758a44425d959f0d6ef6c"
+    },
+    {
+      "path": "Documentation/userspace-api/tee.rst",
+      "sha256": "edb3c707a79f4324f58efcf48267927442ff6e253d7975f72c21d422f7b23479"
+    },
+    {
+      "path": "drivers/crypto/ccp/ccp-crypto-aes-cmac.c",
+      "sha256": "7d5cbda1c15ea490611fe54b9d14efa524f6f416ccec11b52a2bfec990d62a1d"
+    },
+    {
+      "path": "drivers/crypto/ccp/ccp-crypto-aes-galois.c",
+      "sha256": "70e39268deb8b5622505a3defa5d406cc69e4fae063f67bb6b86b738b793619c"
+    },
+    {
+      "path": "drivers/crypto/ccp/ccp-crypto-aes-xts.c",
+      "sha256": "b43f16ac57e91edc2443d9d7771b0ee80adf434e619d046f9df8947a42ca95ec"
+    },
+    {
+      "path": "drivers/crypto/ccp/ccp-crypto-aes.c",
+      "sha256": "e1571da17f0dcabfbe288eac2612d09f2b7f00c4851a6ae7aa0289f3d2c6e432"
+    },
+    {
+      "path": "drivers/crypto/ccp/ccp-crypto-des3.c",
+      "sha256": "a5af0faefa8af298e5326d28214d8e6b055b4e2c5f777f3b7815d7cc905f6609"
+    },
+    {
+      "path": "drivers/crypto/ccp/ccp-crypto-main.c",
+      "sha256": "7905528b5592fe4f55eafbd6902be6efe502008d7febf92d42b082ca487eeb4b"
+    },
+    {
+      "path": "drivers/crypto/ccp/ccp-crypto-rsa.c",
+      "sha256": "2bb4a0549e2a4d345c6fcd8c256182a0d332697278478d4ff2601a9c41996747"
+    },
+    {
+      "path": "drivers/crypto/ccp/ccp-crypto-sha.c",
+      "sha256": "dffa6f69861ae9620d8cc645728406dce9828e8d7c266019c134f6928614f19c"
+    },
+    {
+      "path": "drivers/crypto/ccp/ccp-crypto.h",
+      "sha256": "140a1254fede1062b5880048098a41071544c50e84ac0682b05788c70a8b090a"
+    },
+    {
+      "path": "drivers/crypto/ccp/ccp-debugfs.c",
+      "sha256": "cbdffb6b8247e413526d979abfe2ce71af4699c4d39297f95228020d2713c6e7"
+    },
+    {
+      "path": "drivers/crypto/ccp/ccp-dev-v3.c",
+      "sha256": "7c0833b75c15b40a78b8cf444333be27cdaf18683e38432d84f57122b7393975"
+    },
+    {
+      "path": "drivers/crypto/ccp/ccp-dev-v5.c",
+      "sha256": "ded7173a7944a67cd0faad2bf8feaade06b038a1ee227269d640ebffe87d0eac"
+    },
+    {
+      "path": "drivers/crypto/ccp/ccp-dev.c",
+      "sha256": "413723f131bc1667ac2ba22fa2c16b2cbb82347136df25a42c6eba78307b5f64"
+    },
+    {
+      "path": "drivers/crypto/ccp/ccp-dev.h",
+      "sha256": "3c54f16b89c8007220e9269366630bd1103ee85a10d6d015f7fdc80bdbf4a2a7"
+    },
+    {
+      "path": "drivers/crypto/ccp/ccp-dmaengine.c",
+      "sha256": "2ddb303d66eebf3350c8c731b3f1db0ace32c281aa3df6342ab40e2751342f4c"
+    },
+    {
+      "path": "drivers/crypto/ccp/ccp-ops.c",
+      "sha256": "9d3887b783513290fe2e44a574fa2820c65888708e250be5737716b70354a977"
+    },
+    {
+      "path": "drivers/crypto/ccp/dbc.c",
+      "sha256": "78a7b856ac8e5d825b7fd653e13cfed8fb4d3f724f4253c64b3f268862c02fbe"
+    },
+    {
+      "path": "drivers/crypto/ccp/dbc.h",
+      "sha256": "ce0e3a88c76bae2a6c1497a90021508e24b9b4a6c36ff9f581b8868ed9b59c5c"
+    },
+    {
+      "path": "drivers/crypto/ccp/hsti.c",
+      "sha256": "6ffc2333b85648cb677b70610ff27821c69a9f4adf1c428ac542d0b5aba5eb84"
+    },
+    {
+      "path": "drivers/crypto/ccp/hsti.h",
+      "sha256": "7882548f093f527fc53cfdb73d11f55065ae053badc35c1ff0e5b4c2f0398c37"
+    },
+    {
+      "path": "drivers/crypto/ccp/platform-access.c",
+      "sha256": "5e45c8a560448bd196813cc3774e2e1364673616a21a5a317b3eb31ae5c545af"
+    },
+    {
+      "path": "drivers/crypto/ccp/platform-access.h",
+      "sha256": "f1b37bf5cdce125e7b4d7fac36ea8854702ed119ffc60bdb9e7cb21829214bd7"
+    },
+    {
+      "path": "drivers/crypto/ccp/psp-dev.c",
+      "sha256": "acae4587ea5199dadbd74dec937ca81f11a92bcef8b39b097128c9b7b41596c3"
+    },
+    {
+      "path": "drivers/crypto/ccp/psp-dev.h",
+      "sha256": "bd0d872310f1ca6f7fe8347e75e9ff895dbd71f761d9b4a2c1a89ef98273b6fa"
+    },
+    {
+      "path": "drivers/crypto/ccp/sev-dev-tio.c",
+      "sha256": "56ab49f8a28ef359fd385bbf3a777a3d67f74edae24eb1d9d20b5cd7fb7507a2"
+    },
+    {
+      "path": "drivers/crypto/ccp/sev-dev-tio.h",
+      "sha256": "05875d43d79695ba517feb48d6bd37d636a253d8322373088ef6abf6213f9f32"
+    },
+    {
+      "path": "drivers/crypto/ccp/sev-dev-tsm.c",
+      "sha256": "450a56d0bd91411e11e97b79efe369b1d911aa46bac6941c929883f6c0d897ba"
+    },
+    {
+      "path": "drivers/crypto/ccp/sev-dev.c",
+      "sha256": "f294446bdea8e61b4e8a346e157b9309d6f9d5f0f8b109bc0366984038540ad8"
+    },
+    {
+      "path": "drivers/crypto/ccp/sev-dev.h",
+      "sha256": "7494948e076ffa659c96f8fa0f7a254295dce2992b1b1d699faa42b7ab226fe7"
+    },
+    {
+      "path": "drivers/crypto/ccp/sfs.c",
+      "sha256": "7675d171e40288f0a89707998febc05c960a6ea978e2e69c31d913b0c48c426c"
+    },
+    {
+      "path": "drivers/crypto/ccp/sfs.h",
+      "sha256": "32d54fc18a9743f7a88c6a5b032cbe622855a224e5304bd72dba734a84d97992"
+    },
+    {
+      "path": "drivers/crypto/ccp/sp-dev.c",
+      "sha256": "ab2467b3dbd88c21144143c017ecae0ec71fecf736b7f1d81f45b5ee5db3320d"
+    },
+    {
+      "path": "drivers/crypto/ccp/sp-dev.h",
+      "sha256": "f6d1e253e894303e94c216f0169684147a911ca4b9c2edbbdbbe87d0e77cf2ff"
+    },
+    {
+      "path": "drivers/crypto/ccp/sp-pci.c",
+      "sha256": "58b1b12be5ccd2702bc26fa9a52a717a2446f1889c272da913fa530b9acd3bea"
+    },
+    {
+      "path": "drivers/crypto/ccp/sp-platform.c",
+      "sha256": "1418eab31d6f2176ce957401f5defaa63494e139ba2063c6f1ab2143b6d1e8d4"
+    },
+    {
+      "path": "drivers/crypto/ccp/tee-dev.c",
+      "sha256": "063555e0371eca0517271f2bc4b9b71529c0aa318d30d51ba672fde6bb5e7df3"
+    },
+    {
+      "path": "drivers/crypto/ccp/tee-dev.h",
+      "sha256": "fb3f535b608d70250e03027737b3fe81d41552bb9668e81a53a3096dee73aa56"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c",
+      "sha256": "d48a1009e0c3594aaa1fa3300093e575be2a1c6c44f5227046d2b43749cd2229"
+    },
+    {
+      "path": "drivers/tee/amdtee/amdtee_if.h",
+      "sha256": "a092351e883a59262a50adbea64719b4de6d020007d9f967ebcf4fb0bd6ae668"
+    },
+    {
+      "path": "drivers/tee/amdtee/amdtee_private.h",
+      "sha256": "c851bf6157d608db27812a4e08e8e1e0dc95ae6caae5d6b4ed2bb19d3f8cfb23"
+    },
+    {
+      "path": "drivers/tee/amdtee/call.c",
+      "sha256": "ed63b0ef2688eaa9281f849cda67ff31a1a9a9350766baaf4509f276f0c46072"
+    },
+    {
+      "path": "drivers/tee/amdtee/core.c",
+      "sha256": "dbf8f2b32112605259188293aa8bf86e02356eeb8b0b0eee5a4e33732fdc3ca0"
+    },
+    {
+      "path": "drivers/tee/amdtee/shm_pool.c",
+      "sha256": "2eaad4fc9f4b6244ed320d581a613ef78e05e1af91e60b957e48fab54c45f735"
+    },
+    {
+      "path": "include/linux/pci_ids.h",
+      "sha256": "55928d1f2c4f7e6b912c54baf64b876fc8cd4d083d2016a45a87ca33ebc9439d"
+    },
+    {
+      "path": "include/linux/psp-platform-access.h",
+      "sha256": "1a106b6a82e6194fec91180dee77513171af905238094a8089438e62fd945f98"
+    },
+    {
+      "path": "include/linux/psp-tee.h",
+      "sha256": "aea3f1e118c6c4fde9eaf5a11d303330c66c30a85b3e2847aa99cd6e4e498899"
+    },
+    {
+      "path": "include/uapi/linux/tee.h",
+      "sha256": "dc4f02e4293f4fede11633a073a4dd15e186655b9f1ceaab7128e7ffdcd5a519"
+    }
+  ]
+}

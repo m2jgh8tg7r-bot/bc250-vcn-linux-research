@@ -1,0 +1,17 @@
+{
+  "seconds": 54.104638764,
+  "tool_rounds": 0,
+  "generated_tokens": 2028,
+  "context_limited": 0,
+  "adopted": [
+    "Explicit single-field signer wording",
+    "Clear separation of status and address",
+    "Source routes are not live VA-API results"
+  ],
+  "rejected": [
+    "Decompression/source fidelity unverified: saved decompressed SHA/blob/size were explicitly checked",
+    "Five zero-address count unsupported:10 minus5 historical observations establishes this count",
+    "CRC conventions wholly unexamined: bounded variants were tested; actual convention remains unresolved"
+  ],
+  "advisory_only": true
+}

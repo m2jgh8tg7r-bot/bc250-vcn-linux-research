@@ -1,0 +1,61 @@
+{
+  "upstream_commit": "fd179f8a05be3ccae366b9b96e176b51fbe54aab",
+  "files": [
+    {
+      "file": "drivers/crypto/ccp/sp-pci.c",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/fd179f8a05be3ccae366b9b96e176b51fbe54aab/drivers/crypto/ccp/sp-pci.c",
+      "upstream_sha256": "58b1b12be5ccd2702bc26fa9a52a717a2446f1889c272da913fa530b9acd3bea",
+      "local_sha256": "58b1b12be5ccd2702bc26fa9a52a717a2446f1889c272da913fa530b9acd3bea",
+      "whole_file_identical": true
+    },
+    {
+      "file": "drivers/crypto/ccp/psp-dev.c",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/fd179f8a05be3ccae366b9b96e176b51fbe54aab/drivers/crypto/ccp/psp-dev.c",
+      "upstream_sha256": "acae4587ea5199dadbd74dec937ca81f11a92bcef8b39b097128c9b7b41596c3",
+      "local_sha256": "acae4587ea5199dadbd74dec937ca81f11a92bcef8b39b097128c9b7b41596c3",
+      "whole_file_identical": true
+    },
+    {
+      "file": "drivers/tee/amdtee/core.c",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/fd179f8a05be3ccae366b9b96e176b51fbe54aab/drivers/tee/amdtee/core.c",
+      "upstream_sha256": "dbf8f2b32112605259188293aa8bf86e02356eeb8b0b0eee5a4e33732fdc3ca0",
+      "local_sha256": "dbf8f2b32112605259188293aa8bf86e02356eeb8b0b0eee5a4e33732fdc3ca0",
+      "whole_file_identical": true
+    },
+    {
+      "file": "include/uapi/linux/tee.h",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/fd179f8a05be3ccae366b9b96e176b51fbe54aab/include/uapi/linux/tee.h",
+      "upstream_sha256": "dc4f02e4293f4fede11633a073a4dd15e186655b9f1ceaab7128e7ffdcd5a519",
+      "local_sha256": "dc4f02e4293f4fede11633a073a4dd15e186655b9f1ceaab7128e7ffdcd5a519",
+      "whole_file_identical": true
+    },
+    {
+      "file": "include/linux/pci_ids.h",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/fd179f8a05be3ccae366b9b96e176b51fbe54aab/include/linux/pci_ids.h",
+      "upstream_sha256": "020fac001871c0f8441c1294f787231fb6cfbf2c55915ca8f918262e2db4487c",
+      "local_sha256": "55928d1f2c4f7e6b912c54baf64b876fc8cd4d083d2016a45a87ca33ebc9439d",
+      "whole_file_identical": false
+    },
+    {
+      "file": "Documentation/ABI/testing/sysfs-driver-ccp",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/fd179f8a05be3ccae366b9b96e176b51fbe54aab/Documentation/ABI/testing/sysfs-driver-ccp",
+      "upstream_sha256": "3412d5bccc6265ad88672fb648795779f66e9d41bfed8eba68ead5bc5558f014",
+      "local_sha256": "3412d5bccc6265ad88672fb648795779f66e9d41bfed8eba68ead5bc5558f014",
+      "whole_file_identical": true
+    }
+  ],
+  "changed_pci_header_vendor_definitions_verified": [
+    {
+      "macro": "PCI_VENDOR_ID_ATI",
+      "value": "0x1002",
+      "line": 248,
+      "source_url": "https://github.com/torvalds/linux/blob/fd179f8a05be3ccae366b9b96e176b51fbe54aab/include/linux/pci_ids.h#L248"
+    },
+    {
+      "macro": "PCI_VENDOR_ID_AMD",
+      "value": "0x1022",
+      "line": 540,
+      "source_url": "https://github.com/torvalds/linux/blob/fd179f8a05be3ccae366b9b96e176b51fbe54aab/include/linux/pci_ids.h#L540"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "result": "PASS",
+  "scope": "pinned selected public source; no VCN execution or benchmark",
+  "source_evidence": [
+    {
+      "claim": "optional_x264_build_default",
+      "file": "approach1-compute-encoder/CMakeLists.txt",
+      "sha256": "39935623e7b6478b68a10b7aa1e1a2efda681f33206533e9a38d94c8fd5579d4",
+      "start_line": 261,
+      "end_line": 275,
+      "source_url": "https://github.com/simpmix/bc250-encoding-decoding-fix/blob/7d9c38bdfdc469505eeb94864a203c0b4ffee12c/approach1-compute-encoder/CMakeLists.txt#L261"
+    },
+    {
+      "claim": "conditional_x264_selection",
+      "file": "approach1-compute-encoder/src/encoder_h264.c",
+      "sha256": "8cdd02aceb7843da91653192b17c16d9890c4898acd262ec2d1b93feaf16f3bf",
+      "start_line": 1961,
+      "end_line": 1991,
+      "source_url": "https://github.com/simpmix/bc250-encoding-decoding-fix/blob/7d9c38bdfdc469505eeb94864a203c0b4ffee12c/approach1-compute-encoder/src/encoder_h264.c#L1961"
+    },
+    {
+      "claim": "x264_allocation_and_later_open",
+      "file": "approach1-compute-encoder/src/encoder_x264.c",
+      "sha256": "99f3ce65c2d9ccd87e78d128243b186fd12131d8194305332928801e6d766392",
+      "start_line": 334,
+      "end_line": 352,
+      "source_url": "https://github.com/simpmix/bc250-encoding-decoding-fix/blob/7d9c38bdfdc469505eeb94864a203c0b4ffee12c/approach1-compute-encoder/src/encoder_x264.c#L334"
+    },
+    {
+      "claim": "hevc_encoder_creation",
+      "file": "approach1-compute-encoder/src/va_backend.c",
+      "sha256": "d249df6016af6c0b1e53294fad6ca875dc64f4c3216fb7cb925e0a419b7c097d",
+      "start_line": 635,
+      "end_line": 641,
+      "source_url": "https://github.com/simpmix/bc250-encoding-decoding-fix/blob/7d9c38bdfdc469505eeb94864a203c0b4ffee12c/approach1-compute-encoder/src/va_backend.c#L635"
+    },
+    {
+      "claim": "hevc_encode_dispatch",
+      "file": "approach1-compute-encoder/src/va_backend.c",
+      "sha256": "d249df6016af6c0b1e53294fad6ca875dc64f4c3216fb7cb925e0a419b7c097d",
+      "start_line": 1615,
+      "end_line": 1625,
+      "source_url": "https://github.com/simpmix/bc250-encoding-decoding-fix/blob/7d9c38bdfdc469505eeb94864a203c0b4ffee12c/approach1-compute-encoder/src/va_backend.c#L1615"
+    },
+    {
+      "claim": "main10_disables_compute_motion_search",
+      "file": "approach1-compute-encoder/src/encoder_h265.c",
+      "sha256": "3db0f96003ebbaa8e9426fd851621196534bea040a21609859312ff376a0241f",
+      "start_line": 1638,
+      "end_line": 1678,
+      "source_url": "https://github.com/simpmix/bc250-encoding-decoding-fix/blob/7d9c38bdfdc469505eeb94864a203c0b4ffee12c/approach1-compute-encoder/src/encoder_h265.c#L1638"
+    },
+    {
+      "claim": "cpu_decoded_planes_then_gpu_upload",
+      "file": "approach1-compute-encoder/src/decoder_h264.c",
+      "sha256": "70c3e60698a4cc666bbe6d95ceeb41a799c0487309b0381d97237a7f3e2138b6",
+      "start_line": 491,
+      "end_line": 514,
+      "source_url": "https://github.com/simpmix/bc250-encoding-decoding-fix/blob/7d9c38bdfdc469505eeb94864a203c0b4ffee12c/approach1-compute-encoder/src/decoder_h264.c#L491"
+    },
+    {
+      "claim": "h264_cpu_slice_and_output_route",
+      "file": "approach1-compute-encoder/src/va_decode.c",
+      "sha256": "e0531469d85cd6350e68ef30c72fa5d2cde557685d052e8838854af24f006c7d",
+      "start_line": 333,
+      "end_line": 349,
+      "source_url": "https://github.com/simpmix/bc250-encoding-decoding-fix/blob/7d9c38bdfdc469505eeb94864a203c0b4ffee12c/approach1-compute-encoder/src/va_decode.c#L333"
+    },
+    {
+      "claim": "hevc_cpu_slice_and_output_route",
+      "file": "approach1-compute-encoder/src/va_decode_hevc.c",
+      "sha256": "1c838c3f71cac666c58fd6dbd31c355e0528d811dec76a6b773c3a57acfb4bd6",
+      "start_line": 706,
+      "end_line": 720,
+      "source_url": "https://github.com/simpmix/bc250-encoding-decoding-fix/blob/7d9c38bdfdc469505eeb94864a203c0b4ffee12c/approach1-compute-encoder/src/va_decode_hevc.c#L706"
+    },
+    {
+      "claim": "host_bitstream_writing",
+      "file": "approach1-compute-encoder/src/encoder_h264.c",
+      "sha256": "8cdd02aceb7843da91653192b17c16d9890c4898acd262ec2d1b93feaf16f3bf",
+      "start_line": 3158,
+      "end_line": 3171,
+      "source_url": "https://github.com/simpmix/bc250-encoding-decoding-fix/blob/7d9c38bdfdc469505eeb94864a203c0b4ffee12c/approach1-compute-encoder/src/encoder_h264.c#L3158"
+    }
+  ],
+  "bounded_gpu_source_search": [
+    {
+      "owner": "simpmix",
+      "file": "approach1-compute-encoder/src/gpu_compute.c",
+      "sha256": "0224bb0d09042e85a9ce9f1f75d73f71d3789822b9e507b0aa848e2310e00123",
+      "vkCmdDispatch": 10,
+      "vkCmdDecodeVideoKHR": 0,
+      "vkCmdEncodeVideoKHR": 0,
+      "VK_KHR_video_tokens": 0
+    },
+    {
+      "owner": "Shalasere",
+      "file": "approach1-compute-encoder/src/gpu_compute.c",
+      "sha256": "5c945d70e8756967e0ee3a4eabe5d4cee97d973acfa64c6d037fbc67b4d219fd",
+      "vkCmdDispatch": 10,
+      "vkCmdDecodeVideoKHR": 0,
+      "vkCmdEncodeVideoKHR": 0,
+      "VK_KHR_video_tokens": 0
+    }
+  ],
+  "q36_not_authoritative": true,
+  "performance_claims_independently_verified": false,
+  "physical_fuse_claim_adopted": false
+}

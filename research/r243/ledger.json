@@ -1,0 +1,120 @@
+{
+  "status": "VERIFIED",
+  "facts": [
+    {
+      "id": "official_control_provenance",
+      "stage": "R236",
+      "observation": "8 decompressed files equal official SHA256/blob/size at two newer refs",
+      "supports": "Saved bytes agree with official distribution metadata",
+      "does_not_support": [
+        "Authentic signed provenance attestation",
+        "Historical submitted control bytes",
+        "Running image identity"
+      ]
+    },
+    {
+      "id": "control_body_integrity",
+      "stage": "R237",
+      "observation": "10 container body SHA256 checks pass; 8 distinct complete containers",
+      "supports": "Internal saved-data consistency under bounded layout",
+      "does_not_support": [
+        "Public-key signature verification",
+        "Compatibility",
+        "Execution"
+      ]
+    },
+    {
+      "id": "outer_crc",
+      "stage": "R236/R237",
+      "observation": "8 outer CRC fields mismatch conventional full payload calculation, official file metadata agrees",
+      "supports": "Mismatch is not explained solely by local copying corruption",
+      "does_not_support": [
+        "Every CRC algorithm or pre-signing packaging convention rejected",
+        "Firmware cryptographically invalid"
+      ]
+    },
+    {
+      "id": "control_key_membership",
+      "stage": "R235/R237",
+      "observation": "Control signer metadata matches saved type51 usage10, including the newly parsed jump-table containers",
+      "supports": "Static saved-key membership; type51 fits these controls better",
+      "does_not_support": [
+        "Live type51 selection",
+        "Signature authentication",
+        "5 zero-address controls failed"
+      ]
+    },
+    {
+      "id": "vcn_version_history",
+      "stage": "R240",
+      "observation": "21 distinct saved payloads have the same signer metadata, absent saved KDB candidates",
+      "supports": "No diversity in the specific signer metadata field compared",
+      "does_not_support": [
+        "All21 tested live",
+        "All possible firmware incompatible",
+        "Missing metadata is proven sole runtime rejection cause"
+      ]
+    },
+    {
+      "id": "response_observation",
+      "stage": "R239",
+      "observation": "10 historic control responses have status0, of which5 have nonzero returned address; VCN has nonzero response status and address0",
+      "supports": "Different observed outcomes on a completed historical transport path",
+      "does_not_support": [
+        "Universal requirement that every IP return an address",
+        "Host return0 proves acceptance",
+        "VCN execution or physical fuse state"
+      ]
+    },
+    {
+      "id": "platform_versions",
+      "stage": "R238",
+      "observation": "CCP sysfs versions are register-backed; TEE_IOC_VERSION uses constants; CCP and GPU bind different PCI vendor/device tables",
+      "supports": "Version producers and endpoint scopes differ",
+      "does_not_support": [
+        "Physical PSPs necessarily distinct",
+        "Identical firmware environments",
+        "GPU service1/KDB hash identity",
+        "Absent attribute uniquely diagnoses hardware state"
+      ]
+    },
+    {
+      "id": "community_vaapi",
+      "stage": "R241",
+      "observation": "Pinned code selects optional CPU x264 by default, has HEVC host/compute encoding, CPU decoding followed by GPU output transfer",
+      "supports": "Specific implementation routes in inspected source, separate from driver advertisement",
+      "does_not_support": [
+        "VAEntrypointVLD advertisement alone proves VCN",
+        "GPU activity alone proves video-engine execution",
+        "README permanent-fuse claim proves this board state",
+        "Source route implies current VA-API runtime usage or successful integration"
+      ]
+    },
+    {
+      "id": "upstream_contract",
+      "stage": "R242",
+      "observation": "Pinned current upstream skips VCN2.0.3 registration; codec query lacks2.0.3; PSP five ring callbacks",
+      "supports": "Current inspected upstream software support remains limited",
+      "does_not_support": [
+        "Permanent silicon disablement",
+        "Universal impossibility of video",
+        "Live running firmware identity"
+      ]
+    },
+    {
+      "id": "cpu_decode_experiment",
+      "stage": "R244",
+      "observation": "Original GOP12 matrix18/18 exact; GOP32 all pixels correct but wrong order; CPU-only harness ordering variant36/36 exact",
+      "supports": "CPU reconstruction and isolated standalone ordering diagnosis on generated I/P clips",
+      "does_not_support": [
+        "VA-API integration tested",
+        "Dedicated VCN execution",
+        "Full codec conformance",
+        "Production-complete harness patch",
+        "Universal defect in third-party decoder core"
+      ]
+    }
+  ],
+  "research_hardware_transactions": false,
+  "q36_hardware": "GPU_COMPUTE inference separately recorded"
+}

@@ -1,0 +1,467 @@
+{
+  "checked_at": "2026-09-27T10:06:33.074709+00:00",
+  "official_head": {
+    "sha": "9b858e5bb58d7bf1fc4d8818cb9100aed6d46f6a",
+    "date": "2026-09-26T12:42:39.000+00:00",
+    "title": "Merge branch 'rubikpi3-adsp-00249.1' into 'main'"
+  },
+  "scope": "Official GitLab file metadata only; no firmware payload downloaded",
+  "results": [
+    {
+      "ref": "f704766b41b9324e3d679156e0ad5ff9428d7146",
+      "file": "cyan_skillfish2_ce.bin",
+      "url": "https://gitlab.com/api/v4/projects/kernel-firmware%2Flinux-firmware/repository/files/amdgpu%2Fcyan_skillfish2_ce.bin?ref=f704766b41b9324e3d679156e0ad5ff9428d7146",
+      "method": "HEAD",
+      "metadata": {
+        "blob-id": "35cbaed44d6645d0898bb9e92fdcddb3ac16fc07",
+        "commit-id": "f704766b41b9324e3d679156e0ad5ff9428d7146",
+        "content-sha256": "185c75b5737dbaa6dac984b6e9ada836d6b55203955272efa254b340e0de029d",
+        "file-path": "amdgpu/cyan_skillfish2_ce.bin",
+        "last-commit-id": "f704766b41b9324e3d679156e0ad5ff9428d7146",
+        "size": "263296"
+      },
+      "local_sha256": "5946efbf7e46ccfe7e9f965da56c35b1187469d1c1a49c8a9eff433eb3ab4723",
+      "local_git_blob_sha1": "3daf4d047cab39e39df827d512eed71828af64a6",
+      "sha256_matches": false,
+      "blob_matches": false,
+      "size_matches": true
+    },
+    {
+      "ref": "f704766b41b9324e3d679156e0ad5ff9428d7146",
+      "file": "cyan_skillfish2_me.bin",
+      "url": "https://gitlab.com/api/v4/projects/kernel-firmware%2Flinux-firmware/repository/files/amdgpu%2Fcyan_skillfish2_me.bin?ref=f704766b41b9324e3d679156e0ad5ff9428d7146",
+      "method": "HEAD",
+      "metadata": {
+        "blob-id": "ffd7242c5718de030024a7c7f968ac62ad56b1fb",
+        "commit-id": "f704766b41b9324e3d679156e0ad5ff9428d7146",
+        "content-sha256": "d1fffb30a3373ec1d7749604fa58938509844e7863cfd4eea0a644c309277690",
+        "file-path": "amdgpu/cyan_skillfish2_me.bin",
+        "last-commit-id": "f704766b41b9324e3d679156e0ad5ff9428d7146",
+        "size": "263424"
+      },
+      "local_sha256": "d4ed4d968de0d7720f7c8215d42fdae727bf99cdf43cee6f8f864dc2584b17e2",
+      "local_git_blob_sha1": "517f4793bcab4b059fb7c0911ec35fbf5f4f67bd",
+      "sha256_matches": false,
+      "blob_matches": false,
+      "size_matches": true
+    },
+    {
+      "ref": "f704766b41b9324e3d679156e0ad5ff9428d7146",
+      "file": "cyan_skillfish2_mec.bin",
+      "url": "https://gitlab.com/api/v4/projects/kernel-firmware%2Flinux-firmware/repository/files/amdgpu%2Fcyan_skillfish2_mec.bin?ref=f704766b41b9324e3d679156e0ad5ff9428d7146",
+      "method": "HEAD",
+      "metadata": {
+        "blob-id": "54ed167ad77125b7a508f45820de6f201da4b95e",
+        "commit-id": "f704766b41b9324e3d679156e0ad5ff9428d7146",
+        "content-sha256": "53d0f871a6f47181796f40820f5a0bb71d457942241203f8961454576b4fdfa7",
+        "file-path": "amdgpu/cyan_skillfish2_mec.bin",
+        "last-commit-id": "f704766b41b9324e3d679156e0ad5ff9428d7146",
+        "size": "268592"
+      },
+      "local_sha256": "b1c1f843a8faaa2de537d6ba05052a3776b5a1b73f8a3c3f5ed9d568489776a4",
+      "local_git_blob_sha1": "9615286f965fe7e27008eaa52239dd4a57f30b29",
+      "sha256_matches": false,
+      "blob_matches": false,
+      "size_matches": true
+    },
+    {
+      "ref": "f704766b41b9324e3d679156e0ad5ff9428d7146",
+      "file": "cyan_skillfish2_mec2.bin",
+      "url": "https://gitlab.com/api/v4/projects/kernel-firmware%2Flinux-firmware/repository/files/amdgpu%2Fcyan_skillfish2_mec2.bin?ref=f704766b41b9324e3d679156e0ad5ff9428d7146",
+      "method": "HEAD",
+      "metadata": {
+        "blob-id": "54ed167ad77125b7a508f45820de6f201da4b95e",
+        "commit-id": "f704766b41b9324e3d679156e0ad5ff9428d7146",
+        "content-sha256": "53d0f871a6f47181796f40820f5a0bb71d457942241203f8961454576b4fdfa7",
+        "file-path": "amdgpu/cyan_skillfish2_mec2.bin",
+        "last-commit-id": "f704766b41b9324e3d679156e0ad5ff9428d7146",
+        "size": "268592"
+      },
+      "local_sha256": "b1c1f843a8faaa2de537d6ba05052a3776b5a1b73f8a3c3f5ed9d568489776a4",
+      "local_git_blob_sha1": "9615286f965fe7e27008eaa52239dd4a57f30b29",
+      "sha256_matches": false,
+      "blob_matches": false,
+      "size_matches": true
+    },
+    {
+      "ref": "f704766b41b9324e3d679156e0ad5ff9428d7146",
+      "file": "cyan_skillfish2_pfp.bin",
+      "url": "https://gitlab.com/api/v4/projects/kernel-firmware%2Flinux-firmware/repository/files/amdgpu%2Fcyan_skillfish2_pfp.bin?ref=f704766b41b9324e3d679156e0ad5ff9428d7146",
+      "method": "HEAD",
+      "metadata": {
+        "blob-id": "183aa791d1198426a49bae1cb1a031ce7c03a531",
+        "commit-id": "f704766b41b9324e3d679156e0ad5ff9428d7146",
+        "content-sha256": "151ab99403b0c2cda52a914cec553dd9000090aaa54c537914a6fba3beb98ab3",
+        "file-path": "amdgpu/cyan_skillfish2_pfp.bin",
+        "last-commit-id": "f704766b41b9324e3d679156e0ad5ff9428d7146",
+        "size": "263424"
+      },
+      "local_sha256": "50e56dc1913571ff589425d2b059bddfc5e8a2b4bc22d3eb78cac75d1e0479a1",
+      "local_git_blob_sha1": "52bf494e56d261e99bc4185bf1ac55e5e75515fa",
+      "sha256_matches": false,
+      "blob_matches": false,
+      "size_matches": true
+    },
+    {
+      "ref": "f704766b41b9324e3d679156e0ad5ff9428d7146",
+      "file": "cyan_skillfish2_rlc.bin",
+      "url": "https://gitlab.com/api/v4/projects/kernel-firmware%2Flinux-firmware/repository/files/amdgpu%2Fcyan_skillfish2_rlc.bin?ref=f704766b41b9324e3d679156e0ad5ff9428d7146",
+      "method": "HEAD",
+      "metadata": {
+        "blob-id": "8ae6b12ae7a3dbdcacdc6eb91fa94fbdf735a407",
+        "commit-id": "f704766b41b9324e3d679156e0ad5ff9428d7146",
+        "content-sha256": "20acefdb6128a36275f4382425a109a7c9927f6053eab685bb51164ff1d18cfb",
+        "file-path": "amdgpu/cyan_skillfish2_rlc.bin",
+        "last-commit-id": "f704766b41b9324e3d679156e0ad5ff9428d7146",
+        "size": "25344"
+      },
+      "local_sha256": "20acefdb6128a36275f4382425a109a7c9927f6053eab685bb51164ff1d18cfb",
+      "local_git_blob_sha1": "8ae6b12ae7a3dbdcacdc6eb91fa94fbdf735a407",
+      "sha256_matches": true,
+      "blob_matches": true,
+      "size_matches": true
+    },
+    {
+      "ref": "f704766b41b9324e3d679156e0ad5ff9428d7146",
+      "file": "cyan_skillfish2_sdma.bin",
+      "url": "https://gitlab.com/api/v4/projects/kernel-firmware%2Flinux-firmware/repository/files/amdgpu%2Fcyan_skillfish2_sdma.bin?ref=f704766b41b9324e3d679156e0ad5ff9428d7146",
+      "method": "HEAD",
+      "metadata": {
+        "blob-id": "c3a42f3b70b4092672d394a6f58a709b1f44c576",
+        "commit-id": "f704766b41b9324e3d679156e0ad5ff9428d7146",
+        "content-sha256": "15d0d3626da7f2513f03b13bb7e02eeeeccab276276ae27d0b6067b5f25e9e95",
+        "file-path": "amdgpu/cyan_skillfish2_sdma.bin",
+        "last-commit-id": "f704766b41b9324e3d679156e0ad5ff9428d7146",
+        "size": "33792"
+      },
+      "local_sha256": "15d0d3626da7f2513f03b13bb7e02eeeeccab276276ae27d0b6067b5f25e9e95",
+      "local_git_blob_sha1": "c3a42f3b70b4092672d394a6f58a709b1f44c576",
+      "sha256_matches": true,
+      "blob_matches": true,
+      "size_matches": true
+    },
+    {
+      "ref": "f704766b41b9324e3d679156e0ad5ff9428d7146",
+      "file": "cyan_skillfish2_sdma1.bin",
+      "url": "https://gitlab.com/api/v4/projects/kernel-firmware%2Flinux-firmware/repository/files/amdgpu%2Fcyan_skillfish2_sdma1.bin?ref=f704766b41b9324e3d679156e0ad5ff9428d7146",
+      "method": "HEAD",
+      "metadata": {
+        "blob-id": "ea269391c227e1031b51812339d71c6d0ffc3200",
+        "commit-id": "f704766b41b9324e3d679156e0ad5ff9428d7146",
+        "content-sha256": "bd1c0b0f6a6a4f17ede034f2c844b6553fc444e08915c7bb500c09fde59d6255",
+        "file-path": "amdgpu/cyan_skillfish2_sdma1.bin",
+        "last-commit-id": "f704766b41b9324e3d679156e0ad5ff9428d7146",
+        "size": "33792"
+      },
+      "local_sha256": "bd1c0b0f6a6a4f17ede034f2c844b6553fc444e08915c7bb500c09fde59d6255",
+      "local_git_blob_sha1": "ea269391c227e1031b51812339d71c6d0ffc3200",
+      "sha256_matches": true,
+      "blob_matches": true,
+      "size_matches": true
+    },
+    {
+      "ref": "d371ae3b6888b260e4c37b327a020401cfaaaefd",
+      "file": "cyan_skillfish2_ce.bin",
+      "url": "https://gitlab.com/api/v4/projects/kernel-firmware%2Flinux-firmware/repository/files/amdgpu%2Fcyan_skillfish2_ce.bin?ref=d371ae3b6888b260e4c37b327a020401cfaaaefd",
+      "method": "HEAD",
+      "metadata": {
+        "blob-id": "3daf4d047cab39e39df827d512eed71828af64a6",
+        "commit-id": "d371ae3b6888b260e4c37b327a020401cfaaaefd",
+        "content-sha256": "5946efbf7e46ccfe7e9f965da56c35b1187469d1c1a49c8a9eff433eb3ab4723",
+        "file-path": "amdgpu/cyan_skillfish2_ce.bin",
+        "last-commit-id": "9f84af7645b9e63a616b4e8384b2ae19bad7b2bc",
+        "size": "263296"
+      },
+      "local_sha256": "5946efbf7e46ccfe7e9f965da56c35b1187469d1c1a49c8a9eff433eb3ab4723",
+      "local_git_blob_sha1": "3daf4d047cab39e39df827d512eed71828af64a6",
+      "sha256_matches": true,
+      "blob_matches": true,
+      "size_matches": true
+    },
+    {
+      "ref": "d371ae3b6888b260e4c37b327a020401cfaaaefd",
+      "file": "cyan_skillfish2_me.bin",
+      "url": "https://gitlab.com/api/v4/projects/kernel-firmware%2Flinux-firmware/repository/files/amdgpu%2Fcyan_skillfish2_me.bin?ref=d371ae3b6888b260e4c37b327a020401cfaaaefd",
+      "method": "HEAD",
+      "metadata": {
+        "blob-id": "517f4793bcab4b059fb7c0911ec35fbf5f4f67bd",
+        "commit-id": "d371ae3b6888b260e4c37b327a020401cfaaaefd",
+        "content-sha256": "d4ed4d968de0d7720f7c8215d42fdae727bf99cdf43cee6f8f864dc2584b17e2",
+        "file-path": "amdgpu/cyan_skillfish2_me.bin",
+        "last-commit-id": "9f84af7645b9e63a616b4e8384b2ae19bad7b2bc",
+        "size": "263424"
+      },
+      "local_sha256": "d4ed4d968de0d7720f7c8215d42fdae727bf99cdf43cee6f8f864dc2584b17e2",
+      "local_git_blob_sha1": "517f4793bcab4b059fb7c0911ec35fbf5f4f67bd",
+      "sha256_matches": true,
+      "blob_matches": true,
+      "size_matches": true
+    },
+    {
+      "ref": "d371ae3b6888b260e4c37b327a020401cfaaaefd",
+      "file": "cyan_skillfish2_mec.bin",
+      "url": "https://gitlab.com/api/v4/projects/kernel-firmware%2Flinux-firmware/repository/files/amdgpu%2Fcyan_skillfish2_mec.bin?ref=d371ae3b6888b260e4c37b327a020401cfaaaefd",
+      "method": "HEAD",
+      "metadata": {
+        "blob-id": "9615286f965fe7e27008eaa52239dd4a57f30b29",
+        "commit-id": "d371ae3b6888b260e4c37b327a020401cfaaaefd",
+        "content-sha256": "b1c1f843a8faaa2de537d6ba05052a3776b5a1b73f8a3c3f5ed9d568489776a4",
+        "file-path": "amdgpu/cyan_skillfish2_mec.bin",
+        "last-commit-id": "9f84af7645b9e63a616b4e8384b2ae19bad7b2bc",
+        "size": "268592"
+      },
+      "local_sha256": "b1c1f843a8faaa2de537d6ba05052a3776b5a1b73f8a3c3f5ed9d568489776a4",
+      "local_git_blob_sha1": "9615286f965fe7e27008eaa52239dd4a57f30b29",
+      "sha256_matches": true,
+      "blob_matches": true,
+      "size_matches": true
+    },
+    {
+      "ref": "d371ae3b6888b260e4c37b327a020401cfaaaefd",
+      "file": "cyan_skillfish2_mec2.bin",
+      "url": "https://gitlab.com/api/v4/projects/kernel-firmware%2Flinux-firmware/repository/files/amdgpu%2Fcyan_skillfish2_mec2.bin?ref=d371ae3b6888b260e4c37b327a020401cfaaaefd",
+      "method": "HEAD",
+      "metadata": {
+        "blob-id": "9615286f965fe7e27008eaa52239dd4a57f30b29",
+        "commit-id": "d371ae3b6888b260e4c37b327a020401cfaaaefd",
+        "content-sha256": "b1c1f843a8faaa2de537d6ba05052a3776b5a1b73f8a3c3f5ed9d568489776a4",
+        "file-path": "amdgpu/cyan_skillfish2_mec2.bin",
+        "last-commit-id": "9f84af7645b9e63a616b4e8384b2ae19bad7b2bc",
+        "size": "268592"
+      },
+      "local_sha256": "b1c1f843a8faaa2de537d6ba05052a3776b5a1b73f8a3c3f5ed9d568489776a4",
+      "local_git_blob_sha1": "9615286f965fe7e27008eaa52239dd4a57f30b29",
+      "sha256_matches": true,
+      "blob_matches": true,
+      "size_matches": true
+    },
+    {
+      "ref": "d371ae3b6888b260e4c37b327a020401cfaaaefd",
+      "file": "cyan_skillfish2_pfp.bin",
+      "url": "https://gitlab.com/api/v4/projects/kernel-firmware%2Flinux-firmware/repository/files/amdgpu%2Fcyan_skillfish2_pfp.bin?ref=d371ae3b6888b260e4c37b327a020401cfaaaefd",
+      "method": "HEAD",
+      "metadata": {
+        "blob-id": "52bf494e56d261e99bc4185bf1ac55e5e75515fa",
+        "commit-id": "d371ae3b6888b260e4c37b327a020401cfaaaefd",
+        "content-sha256": "50e56dc1913571ff589425d2b059bddfc5e8a2b4bc22d3eb78cac75d1e0479a1",
+        "file-path": "amdgpu/cyan_skillfish2_pfp.bin",
+        "last-commit-id": "9f84af7645b9e63a616b4e8384b2ae19bad7b2bc",
+        "size": "263424"
+      },
+      "local_sha256": "50e56dc1913571ff589425d2b059bddfc5e8a2b4bc22d3eb78cac75d1e0479a1",
+      "local_git_blob_sha1": "52bf494e56d261e99bc4185bf1ac55e5e75515fa",
+      "sha256_matches": true,
+      "blob_matches": true,
+      "size_matches": true
+    },
+    {
+      "ref": "d371ae3b6888b260e4c37b327a020401cfaaaefd",
+      "file": "cyan_skillfish2_rlc.bin",
+      "url": "https://gitlab.com/api/v4/projects/kernel-firmware%2Flinux-firmware/repository/files/amdgpu%2Fcyan_skillfish2_rlc.bin?ref=d371ae3b6888b260e4c37b327a020401cfaaaefd",
+      "method": "HEAD",
+      "metadata": {
+        "blob-id": "8ae6b12ae7a3dbdcacdc6eb91fa94fbdf735a407",
+        "commit-id": "d371ae3b6888b260e4c37b327a020401cfaaaefd",
+        "content-sha256": "20acefdb6128a36275f4382425a109a7c9927f6053eab685bb51164ff1d18cfb",
+        "file-path": "amdgpu/cyan_skillfish2_rlc.bin",
+        "last-commit-id": "f704766b41b9324e3d679156e0ad5ff9428d7146",
+        "size": "25344"
+      },
+      "local_sha256": "20acefdb6128a36275f4382425a109a7c9927f6053eab685bb51164ff1d18cfb",
+      "local_git_blob_sha1": "8ae6b12ae7a3dbdcacdc6eb91fa94fbdf735a407",
+      "sha256_matches": true,
+      "blob_matches": true,
+      "size_matches": true
+    },
+    {
+      "ref": "d371ae3b6888b260e4c37b327a020401cfaaaefd",
+      "file": "cyan_skillfish2_sdma.bin",
+      "url": "https://gitlab.com/api/v4/projects/kernel-firmware%2Flinux-firmware/repository/files/amdgpu%2Fcyan_skillfish2_sdma.bin?ref=d371ae3b6888b260e4c37b327a020401cfaaaefd",
+      "method": "HEAD",
+      "metadata": {
+        "blob-id": "c3a42f3b70b4092672d394a6f58a709b1f44c576",
+        "commit-id": "d371ae3b6888b260e4c37b327a020401cfaaaefd",
+        "content-sha256": "15d0d3626da7f2513f03b13bb7e02eeeeccab276276ae27d0b6067b5f25e9e95",
+        "file-path": "amdgpu/cyan_skillfish2_sdma.bin",
+        "last-commit-id": "f704766b41b9324e3d679156e0ad5ff9428d7146",
+        "size": "33792"
+      },
+      "local_sha256": "15d0d3626da7f2513f03b13bb7e02eeeeccab276276ae27d0b6067b5f25e9e95",
+      "local_git_blob_sha1": "c3a42f3b70b4092672d394a6f58a709b1f44c576",
+      "sha256_matches": true,
+      "blob_matches": true,
+      "size_matches": true
+    },
+    {
+      "ref": "d371ae3b6888b260e4c37b327a020401cfaaaefd",
+      "file": "cyan_skillfish2_sdma1.bin",
+      "url": "https://gitlab.com/api/v4/projects/kernel-firmware%2Flinux-firmware/repository/files/amdgpu%2Fcyan_skillfish2_sdma1.bin?ref=d371ae3b6888b260e4c37b327a020401cfaaaefd",
+      "method": "HEAD",
+      "metadata": {
+        "blob-id": "ea269391c227e1031b51812339d71c6d0ffc3200",
+        "commit-id": "d371ae3b6888b260e4c37b327a020401cfaaaefd",
+        "content-sha256": "bd1c0b0f6a6a4f17ede034f2c844b6553fc444e08915c7bb500c09fde59d6255",
+        "file-path": "amdgpu/cyan_skillfish2_sdma1.bin",
+        "last-commit-id": "f704766b41b9324e3d679156e0ad5ff9428d7146",
+        "size": "33792"
+      },
+      "local_sha256": "bd1c0b0f6a6a4f17ede034f2c844b6553fc444e08915c7bb500c09fde59d6255",
+      "local_git_blob_sha1": "ea269391c227e1031b51812339d71c6d0ffc3200",
+      "sha256_matches": true,
+      "blob_matches": true,
+      "size_matches": true
+    },
+    {
+      "ref": "9b858e5bb58d7bf1fc4d8818cb9100aed6d46f6a",
+      "file": "cyan_skillfish2_ce.bin",
+      "url": "https://gitlab.com/api/v4/projects/kernel-firmware%2Flinux-firmware/repository/files/amdgpu%2Fcyan_skillfish2_ce.bin?ref=9b858e5bb58d7bf1fc4d8818cb9100aed6d46f6a",
+      "method": "HEAD",
+      "metadata": {
+        "blob-id": "3daf4d047cab39e39df827d512eed71828af64a6",
+        "commit-id": "9b858e5bb58d7bf1fc4d8818cb9100aed6d46f6a",
+        "content-sha256": "5946efbf7e46ccfe7e9f965da56c35b1187469d1c1a49c8a9eff433eb3ab4723",
+        "file-path": "amdgpu/cyan_skillfish2_ce.bin",
+        "last-commit-id": "9f84af7645b9e63a616b4e8384b2ae19bad7b2bc",
+        "size": "263296"
+      },
+      "local_sha256": "5946efbf7e46ccfe7e9f965da56c35b1187469d1c1a49c8a9eff433eb3ab4723",
+      "local_git_blob_sha1": "3daf4d047cab39e39df827d512eed71828af64a6",
+      "sha256_matches": true,
+      "blob_matches": true,
+      "size_matches": true
+    },
+    {
+      "ref": "9b858e5bb58d7bf1fc4d8818cb9100aed6d46f6a",
+      "file": "cyan_skillfish2_me.bin",
+      "url": "https://gitlab.com/api/v4/projects/kernel-firmware%2Flinux-firmware/repository/files/amdgpu%2Fcyan_skillfish2_me.bin?ref=9b858e5bb58d7bf1fc4d8818cb9100aed6d46f6a",
+      "method": "HEAD",
+      "metadata": {
+        "blob-id": "517f4793bcab4b059fb7c0911ec35fbf5f4f67bd",
+        "commit-id": "9b858e5bb58d7bf1fc4d8818cb9100aed6d46f6a",
+        "content-sha256": "d4ed4d968de0d7720f7c8215d42fdae727bf99cdf43cee6f8f864dc2584b17e2",
+        "file-path": "amdgpu/cyan_skillfish2_me.bin",
+        "last-commit-id": "9f84af7645b9e63a616b4e8384b2ae19bad7b2bc",
+        "size": "263424"
+      },
+      "local_sha256": "d4ed4d968de0d7720f7c8215d42fdae727bf99cdf43cee6f8f864dc2584b17e2",
+      "local_git_blob_sha1": "517f4793bcab4b059fb7c0911ec35fbf5f4f67bd",
+      "sha256_matches": true,
+      "blob_matches": true,
+      "size_matches": true
+    },
+    {
+      "ref": "9b858e5bb58d7bf1fc4d8818cb9100aed6d46f6a",
+      "file": "cyan_skillfish2_mec.bin",
+      "url": "https://gitlab.com/api/v4/projects/kernel-firmware%2Flinux-firmware/repository/files/amdgpu%2Fcyan_skillfish2_mec.bin?ref=9b858e5bb58d7bf1fc4d8818cb9100aed6d46f6a",
+      "method": "HEAD",
+      "metadata": {
+        "blob-id": "9615286f965fe7e27008eaa52239dd4a57f30b29",
+        "commit-id": "9b858e5bb58d7bf1fc4d8818cb9100aed6d46f6a",
+        "content-sha256": "b1c1f843a8faaa2de537d6ba05052a3776b5a1b73f8a3c3f5ed9d568489776a4",
+        "file-path": "amdgpu/cyan_skillfish2_mec.bin",
+        "last-commit-id": "9f84af7645b9e63a616b4e8384b2ae19bad7b2bc",
+        "size": "268592"
+      },
+      "local_sha256": "b1c1f843a8faaa2de537d6ba05052a3776b5a1b73f8a3c3f5ed9d568489776a4",
+      "local_git_blob_sha1": "9615286f965fe7e27008eaa52239dd4a57f30b29",
+      "sha256_matches": true,
+      "blob_matches": true,
+      "size_matches": true
+    },
+    {
+      "ref": "9b858e5bb58d7bf1fc4d8818cb9100aed6d46f6a",
+      "file": "cyan_skillfish2_mec2.bin",
+      "url": "https://gitlab.com/api/v4/projects/kernel-firmware%2Flinux-firmware/repository/files/amdgpu%2Fcyan_skillfish2_mec2.bin?ref=9b858e5bb58d7bf1fc4d8818cb9100aed6d46f6a",
+      "method": "HEAD",
+      "metadata": {
+        "blob-id": "9615286f965fe7e27008eaa52239dd4a57f30b29",
+        "commit-id": "9b858e5bb58d7bf1fc4d8818cb9100aed6d46f6a",
+        "content-sha256": "b1c1f843a8faaa2de537d6ba05052a3776b5a1b73f8a3c3f5ed9d568489776a4",
+        "file-path": "amdgpu/cyan_skillfish2_mec2.bin",
+        "last-commit-id": "9f84af7645b9e63a616b4e8384b2ae19bad7b2bc",
+        "size": "268592"
+      },
+      "local_sha256": "b1c1f843a8faaa2de537d6ba05052a3776b5a1b73f8a3c3f5ed9d568489776a4",
+      "local_git_blob_sha1": "9615286f965fe7e27008eaa52239dd4a57f30b29",
+      "sha256_matches": true,
+      "blob_matches": true,
+      "size_matches": true
+    },
+    {
+      "ref": "9b858e5bb58d7bf1fc4d8818cb9100aed6d46f6a",
+      "file": "cyan_skillfish2_pfp.bin",
+      "url": "https://gitlab.com/api/v4/projects/kernel-firmware%2Flinux-firmware/repository/files/amdgpu%2Fcyan_skillfish2_pfp.bin?ref=9b858e5bb58d7bf1fc4d8818cb9100aed6d46f6a",
+      "method": "HEAD",
+      "metadata": {
+        "blob-id": "52bf494e56d261e99bc4185bf1ac55e5e75515fa",
+        "commit-id": "9b858e5bb58d7bf1fc4d8818cb9100aed6d46f6a",
+        "content-sha256": "50e56dc1913571ff589425d2b059bddfc5e8a2b4bc22d3eb78cac75d1e0479a1",
+        "file-path": "amdgpu/cyan_skillfish2_pfp.bin",
+        "last-commit-id": "9f84af7645b9e63a616b4e8384b2ae19bad7b2bc",
+        "size": "263424"
+      },
+      "local_sha256": "50e56dc1913571ff589425d2b059bddfc5e8a2b4bc22d3eb78cac75d1e0479a1",
+      "local_git_blob_sha1": "52bf494e56d261e99bc4185bf1ac55e5e75515fa",
+      "sha256_matches": true,
+      "blob_matches": true,
+      "size_matches": true
+    },
+    {
+      "ref": "9b858e5bb58d7bf1fc4d8818cb9100aed6d46f6a",
+      "file": "cyan_skillfish2_rlc.bin",
+      "url": "https://gitlab.com/api/v4/projects/kernel-firmware%2Flinux-firmware/repository/files/amdgpu%2Fcyan_skillfish2_rlc.bin?ref=9b858e5bb58d7bf1fc4d8818cb9100aed6d46f6a",
+      "method": "HEAD",
+      "metadata": {
+        "blob-id": "8ae6b12ae7a3dbdcacdc6eb91fa94fbdf735a407",
+        "commit-id": "9b858e5bb58d7bf1fc4d8818cb9100aed6d46f6a",
+        "content-sha256": "20acefdb6128a36275f4382425a109a7c9927f6053eab685bb51164ff1d18cfb",
+        "file-path": "amdgpu/cyan_skillfish2_rlc.bin",
+        "last-commit-id": "f704766b41b9324e3d679156e0ad5ff9428d7146",
+        "size": "25344"
+      },
+      "local_sha256": "20acefdb6128a36275f4382425a109a7c9927f6053eab685bb51164ff1d18cfb",
+      "local_git_blob_sha1": "8ae6b12ae7a3dbdcacdc6eb91fa94fbdf735a407",
+      "sha256_matches": true,
+      "blob_matches": true,
+      "size_matches": true
+    },
+    {
+      "ref": "9b858e5bb58d7bf1fc4d8818cb9100aed6d46f6a",
+      "file": "cyan_skillfish2_sdma.bin",
+      "url": "https://gitlab.com/api/v4/projects/kernel-firmware%2Flinux-firmware/repository/files/amdgpu%2Fcyan_skillfish2_sdma.bin?ref=9b858e5bb58d7bf1fc4d8818cb9100aed6d46f6a",
+      "method": "HEAD",
+      "metadata": {
+        "blob-id": "c3a42f3b70b4092672d394a6f58a709b1f44c576",
+        "commit-id": "9b858e5bb58d7bf1fc4d8818cb9100aed6d46f6a",
+        "content-sha256": "15d0d3626da7f2513f03b13bb7e02eeeeccab276276ae27d0b6067b5f25e9e95",
+        "file-path": "amdgpu/cyan_skillfish2_sdma.bin",
+        "last-commit-id": "f704766b41b9324e3d679156e0ad5ff9428d7146",
+        "size": "33792"
+      },
+      "local_sha256": "15d0d3626da7f2513f03b13bb7e02eeeeccab276276ae27d0b6067b5f25e9e95",
+      "local_git_blob_sha1": "c3a42f3b70b4092672d394a6f58a709b1f44c576",
+      "sha256_matches": true,
+      "blob_matches": true,
+      "size_matches": true
+    },
+    {
+      "ref": "9b858e5bb58d7bf1fc4d8818cb9100aed6d46f6a",
+      "file": "cyan_skillfish2_sdma1.bin",
+      "url": "https://gitlab.com/api/v4/projects/kernel-firmware%2Flinux-firmware/repository/files/amdgpu%2Fcyan_skillfish2_sdma1.bin?ref=9b858e5bb58d7bf1fc4d8818cb9100aed6d46f6a",
+      "method": "HEAD",
+      "metadata": {
+        "blob-id": "ea269391c227e1031b51812339d71c6d0ffc3200",
+        "commit-id": "9b858e5bb58d7bf1fc4d8818cb9100aed6d46f6a",
+        "content-sha256": "bd1c0b0f6a6a4f17ede034f2c844b6553fc444e08915c7bb500c09fde59d6255",
+        "file-path": "amdgpu/cyan_skillfish2_sdma1.bin",
+        "last-commit-id": "f704766b41b9324e3d679156e0ad5ff9428d7146",
+        "size": "33792"
+      },
+      "local_sha256": "bd1c0b0f6a6a4f17ede034f2c844b6553fc444e08915c7bb500c09fde59d6255",
+      "local_git_blob_sha1": "ea269391c227e1031b51812339d71c6d0ffc3200",
+      "sha256_matches": true,
+      "blob_matches": true,
+      "size_matches": true
+    }
+  ]
+}

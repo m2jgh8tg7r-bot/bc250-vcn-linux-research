@@ -1,0 +1,25 @@
+{
+  "kind": "saved working source with historical research instrumentation; not claimed identical to git HEAD",
+  "files": [
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_psp.c",
+      "sha256": "d0513be4c77d71d72a21ab47764cad16f958e5d193ff21d26d7844ec3be54b1d"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/psp_gfx_if.h",
+      "sha256": "e12b7894cc9cb30a7de5e6707d7af60908941e85fcdcd562dc27b58a9d80f6ee"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "sha256": "eb62b3f8575eff45019712ebc3f68acf4d190834900eb591b5ff7416a42ff075"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/gfx_v10_0.c",
+      "sha256": "39de93ff6255423855ad3434d415d867b55dc0c0c268410fba3950af9355a473"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/sdma_v5_2.c",
+      "sha256": "9bee44cfb45798f2192031994b19f053ba8ab4c14660e1947c3e7da9d7bcefb8"
+    }
+  ]
+}

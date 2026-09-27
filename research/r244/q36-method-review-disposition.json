@@ -1,0 +1,24 @@
+{
+  "tool_enabled_review": {
+    "seconds": 425.03076490999956,
+    "returncode": 137,
+    "disposition": "Stopped by operator after repeated compaction failed to retain comparison state; no findings adopted",
+    "termination": "Intentional podman stop followed by SIGKILL after grace period; not an inferred OOM or hardware fault"
+  },
+  "bounded_review": {
+    "seconds": 69.19942060500034,
+    "returncode": 0,
+    "tool_rounds": 1,
+    "final_generated_tokens": 824,
+    "context_limited": 0,
+    "attempted_unavailable_file_read": true,
+    "extra_data_obtained": false,
+    "adopted": "Arithmetic and scope agreement only, already independently checked",
+    "rejected": [
+      "Incorrect even/odd paraphrase of0,16,1,17 permutation",
+      "Broad claim that diagnostic patch equals complete reference POC logic"
+    ]
+  },
+  "research_basis": "Frame hashes, exact source, ordinary generated fixtures and supported standards; model agreement is not evidence",
+  "hardware_access": "GPU_COMPUTE inference only"
+}

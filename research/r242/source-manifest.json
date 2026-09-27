@@ -1,0 +1,45 @@
+{
+  "head": {
+    "sha": "fd179f8a05be3ccae366b9b96e176b51fbe54aab",
+    "date": "2026-09-26T18:14:35Z",
+    "title": "Merge tag 'ata-7.3-rc5' of git://git.kernel.org/pub/scm/linux/kernel/git/libata/linux"
+  },
+  "files": [
+    {
+      "file": "nv.c",
+      "sha256": "341c3b49935f6915dca1cb5d8389dfecfeeddfffe2dafcad09bbda6a74f45013",
+      "bytes": 34189,
+      "url": "https://raw.githubusercontent.com/torvalds/linux/fd179f8a05be3ccae366b9b96e176b51fbe54aab/drivers/gpu/drm/amd/amdgpu/nv.c"
+    },
+    {
+      "file": "amdgpu_kms.c",
+      "sha256": "0c5080e1b1b3faed36368d4621af01b80aefea09bd1a01313292926461a5b22a",
+      "bytes": 60592,
+      "url": "https://raw.githubusercontent.com/torvalds/linux/fd179f8a05be3ccae366b9b96e176b51fbe54aab/drivers/gpu/drm/amd/amdgpu/amdgpu_kms.c"
+    },
+    {
+      "file": "psp_v11_0_8.c",
+      "sha256": "a89117eb6066a668f23980936d77fa781873759befdf6a2aff21f1fc2fcae52f",
+      "bytes": 6039,
+      "url": "https://raw.githubusercontent.com/torvalds/linux/fd179f8a05be3ccae366b9b96e176b51fbe54aab/drivers/gpu/drm/amd/amdgpu/psp_v11_0_8.c"
+    },
+    {
+      "file": "amdgpu_psp.c",
+      "sha256": "4eb9ce8a315de3812a18aa28b412cde9b86749cdf7b9906cf3383f60abdfab7b",
+      "bytes": 140515,
+      "url": "https://raw.githubusercontent.com/torvalds/linux/fd179f8a05be3ccae366b9b96e176b51fbe54aab/drivers/gpu/drm/amd/amdgpu/amdgpu_psp.c"
+    },
+    {
+      "file": "amdgpu_discovery.c",
+      "sha256": "076f5c3fb0a37ae041d7ee6b49b56dd850b3027c583a2744ce25f4d6c64e4ce1",
+      "bytes": 109302,
+      "url": "https://raw.githubusercontent.com/torvalds/linux/fd179f8a05be3ccae366b9b96e176b51fbe54aab/drivers/gpu/drm/amd/amdgpu/amdgpu_discovery.c"
+    },
+    {
+      "file": "amdgpu_drv.c",
+      "sha256": "88dd09d7310ed500a374457cd46427e414cc050950624550a75b28b99587582a",
+      "bytes": 104998,
+      "url": "https://raw.githubusercontent.com/torvalds/linux/fd179f8a05be3ccae366b9b96e176b51fbe54aab/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c"
+    }
+  ]
+}

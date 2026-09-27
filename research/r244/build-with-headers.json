@@ -1,0 +1,69 @@
+{
+  "returncode": 0,
+  "seconds": 6.581113273001392,
+  "source_files": [
+    {
+      "path": "tools/h264dec.c",
+      "sha256": "5035800be5553635d9948d889bfcdd637f09fd0a051a12d25658eb8043cae3fd"
+    },
+    {
+      "path": "src/decoder_h264.c",
+      "sha256": "70c3e60698a4cc666bbe6d95ceeb41a799c0487309b0381d97237a7f3e2138b6"
+    },
+    {
+      "path": "src/h264_mb_cabac.c",
+      "sha256": "5cb0933304e40a409ce97b058fde82601f495341bc2d5bf2309f92468b09e04e"
+    },
+    {
+      "path": "src/h264_mb_cavlc.c",
+      "sha256": "305b1d323050d4c4ba4b54fb291620b8a079a7bbd1e0cf14102ebb1625083476"
+    },
+    {
+      "path": "src/h264_cavlc_dec.c",
+      "sha256": "ff70d184eb0b01342f245dd02fc761f375d2ee2e875ffe57155f954867a18965"
+    },
+    {
+      "path": "src/h264_mb_motion.c",
+      "sha256": "5a0d1fe518a752748ed240fadbfdec140708006b36708ea84a1b34abe8fa9057"
+    },
+    {
+      "path": "src/h264_recon_mb.c",
+      "sha256": "e71a27486b07f176bb402645673fae289f7e96b51824d3399cd709507c04e843"
+    },
+    {
+      "path": "src/h264_recon.c",
+      "sha256": "f328f045d95a1b7eaf027d96e90ff315e4801d1f610dbc8fc632dd25abd99ed1"
+    },
+    {
+      "path": "src/h264_pred.c",
+      "sha256": "5e07e8023880d517184837ea2f62e603ee90dbcb1bcf98ca9d92bb5f4a34d71f"
+    },
+    {
+      "path": "src/h264_mc.c",
+      "sha256": "8f604223bf66cd3ec47afd8d6c5df81dccf2a9a9e0d34625ead75018fafcda28"
+    },
+    {
+      "path": "src/h264_deblock.c",
+      "sha256": "b86e7eb0f902ad2968911ed3a71cf2dee67cef4984c5585c45632f75d21eceeb"
+    },
+    {
+      "path": "src/h264_threads.c",
+      "sha256": "edc05c619d0fdb8d91673a0db5b55835e82dcb5e38c3084f594cfa4d2828a3bb"
+    },
+    {
+      "path": "src/h264_dec_tables.c",
+      "sha256": "071de129f3ef165317dd2db8620c5ebc70bd66048eeff19f48f2b6797b7c6091"
+    },
+    {
+      "path": "src/cabac.c",
+      "sha256": "37c3aa13f8f438ead8713b04c83061923553d45ba737b7655eec3748afdcab2b"
+    }
+  ],
+  "gpu_device_exposed": false,
+  "network": "none",
+  "container_image": "localhost/q36-agent-runtime:fedora44",
+  "source_read_only": true,
+  "binary_sha256": "e37300cdb2f86d943855e1af678de98779a5121e6cb25abe9e5dcc4270eafb47",
+  "only_writable_host_mount_is_output": true,
+  "temporary_tmpfs_writable": true
+}

@@ -1,0 +1,26 @@
+--- a/tools/h264dec.c
++++ b/tools/h264dec.c
+@@ -497,6 +497,8 @@
+     int n_refs = 0;
+     uint32_t next_surface = 1;
+     int prev_poc_lsb = 0, prev_poc_msb = 0;
++    /* R244 CPU experiment: ordinary type-2 I/P clips, no MMCO5 coverage. */
++    int type2_prev_frame_num = 0, type2_frame_num_offset = 0;
+     int in_progress = 0;
+     uint32_t current_surface = 0;
+     int current_reference = 0, current_poc = 0, current_frame_num = 0;
+@@ -585,7 +587,13 @@
+             if (nal_ref_idc) { prev_poc_lsb = lsb; prev_poc_msb = msb; }
+             if (pp->pic_order_present) br_read_se(&br);
+         } else if (sp->pic_order_cnt_type == 2) {
+-            poc = 2 * frame_num;
++            if (idr)
++                type2_frame_num_offset = 0;
++            else if (type2_prev_frame_num > frame_num)
++                type2_frame_num_offset += 1 << sp->log2_max_frame_num;
++            poc = 2 * (type2_frame_num_offset + frame_num);
++            if (!nal_ref_idc) poc--;
++            type2_prev_frame_num = frame_num;
+         } else {
+             fprintf(stderr, "pic_order_cnt_type 1 not implemented\n");
+             return 3;

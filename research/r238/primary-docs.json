@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-09-27",
+  "sources": [
+    {
+      "url": "https://docs.kernel.org/tee/amd-tee.html",
+      "supports": "AMDTEE implementation and capability identity; platform PSP communication; does not assert Cyan support"
+    },
+    {
+      "url": "https://kernel.org/doc/html/latest/userspace-api/tee.html",
+      "supports": "TEE_IOC_VERSION is TEE implementation and capabilities"
+    },
+    {
+      "url": "https://www.kernel.org/doc/html/v7.0/admin-guide/abi-testing.html",
+      "supports": "bootloader_version reports AGESA bootloader version; tee_version reports TEE firmware version"
+    }
+  ]
+}
