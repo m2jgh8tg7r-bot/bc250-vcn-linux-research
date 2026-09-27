@@ -1,6 +1,10 @@
 # Current status
 
-## Latest — R246, 2026-09-27
+## Latest — R248, 2026-09-27
+
+[R247–R248 handoff](CHATGPT_HANDOFF_R248.md) adds input-pacing pipeline controls and B-picture CPU throughput measurements. Rawvideo output packing is not the sole explanation for the higher paced CPU cost. The compared FFmpeg paths use software decoding; no boot-option change, firmware operation or dedicated VCN execution is involved.
+
+### Previous — R246, 2026-09-27
 
 [R245–R246 handoff](CHATGPT_HANDOFF_R246.md) adds a controlled CPU throughput comparison, input-paced CPU-load controls, and24 exact B-picture output checks. FFmpeg software decode is faster and lower-cost than the custom CPU harness in this synthetic I/P matrix. Paced CPU measurements exceed simple unpaced estimates. These results do not establish dedicated VCN or complete-player performance.
 

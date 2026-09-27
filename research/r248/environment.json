@@ -1,0 +1,64 @@
+{
+  "scope": "B-picture CPU throughput, original R246 fixtures",
+  "gpu_device_exposed": false,
+  "affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "cpu_max": "max 100000",
+  "cpu_stat_before": "usage_usec 101648\nuser_usec 49331\nsystem_usec 52316\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+  "candidate_sha256": "16067ad4f19e5fe217c093c14c84e4f6decce3cae412069c5253b7df1a318de5",
+  "ffmpeg_sha256": "a7ee46028d7b538b8b996ac3fa92785c858843d134aab12f6ecc3fe2b72663a2",
+  "frames_per_trial": 384,
+  "trials": 3,
+  "shuffle_seed": 248,
+  "container_launch_timed": false,
+  "process_startup_timed": true,
+  "output": "/dev/null rawvideo",
+  "q36_concurrent": false,
+  "fixtures": [
+    {
+      "case": "1280x720-high-s1-b3",
+      "original_sha256": "a6ed55976fbc29cb2ee01047e59732c0c24f850f59b691b89a45823ffb12aff2",
+      "extended_sha256": "06eb3098c950bef3a8e670bcd268639a6ba650cd1deea830f1613654b6e77f19",
+      "frames": 384,
+      "repeats": 4
+    },
+    {
+      "case": "1280x720-high-s4-b3",
+      "original_sha256": "41e323a65b3cba7fab680df09a242dbf80e6610bea395b6fe16376321c035532",
+      "extended_sha256": "0b644f3c583a636f04eff65f77003dd639bdac7be993eaf532e5c20c1ec7113c",
+      "frames": 384,
+      "repeats": 4
+    },
+    {
+      "case": "1920x1080-high-s1-b3",
+      "original_sha256": "f7f983a8d7b219d3a538ec9d872beffe0c9386052e6ad91405e4dff9dea35b9a",
+      "extended_sha256": "889141220045558838b9475b302609a1947e67233d44d8a6588e4c2a3f408594",
+      "frames": 384,
+      "repeats": 4
+    },
+    {
+      "case": "1920x1080-high-s4-b3",
+      "original_sha256": "6808bc2dc7e3a4fe3de543556a1a40ec4ca9ecb38e0316691966a376be725e4e",
+      "extended_sha256": "76134f837095cdfe01a94d3c57de4ea1d3a8e30c5b771168fa8bf614fd45f64d",
+      "frames": 384,
+      "repeats": 4
+    }
+  ],
+  "cpu_stat_after": "usage_usec 402738867\nuser_usec 380894711\nsystem_usec 21844155\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n"
+}

@@ -1,0 +1,28 @@
+{
+  "clips": [
+    {
+      "clip": "ip",
+      "source_stage": "r244",
+      "source_case": "1920x1080-high-s1",
+      "original_sha256": "3d705f58a205264cbebd3a9360c1ea41cd2c3f4ccf2f51206a084b11b3f5820d",
+      "original_reference_yuv_sha256": "27d44502909ce663b2ac4401fc223b431324e01a870e998894b9213aa1ac205b",
+      "sha256": "adbf3aacd48226cbb92792a701bca05522396667abb048abdd4a7cbc04a6828c",
+      "frames": 960,
+      "repetitions": 10,
+      "unique_frames": 96,
+      "nominal_fps": 30
+    },
+    {
+      "clip": "b3",
+      "source_stage": "r246",
+      "source_case": "1920x1080-high-s1-b3",
+      "original_sha256": "f7f983a8d7b219d3a538ec9d872beffe0c9386052e6ad91405e4dff9dea35b9a",
+      "original_reference_yuv_sha256": "b5737216074130ed2fcb5c6547ef3a8a3aa3ace31c6def0b201357ccaf53fbc4",
+      "sha256": "f5bf0158197134d836c19cabb8a43a019cffb7518e199250043bfe60f05a880b",
+      "frames": 960,
+      "repetitions": 10,
+      "unique_frames": 96,
+      "nominal_fps": 30
+    }
+  ]
+}

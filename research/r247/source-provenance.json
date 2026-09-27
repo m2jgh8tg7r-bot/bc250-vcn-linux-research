@@ -1,0 +1,55 @@
+{
+  "tag": "n8.1.2",
+  "commit": "38b88335f99e76ed89ff3c93f877fdefce736c13",
+  "files": [
+    {
+      "path": "fftools/ffmpeg_demux.c",
+      "sha256": "28e36593d954d053122ac028708a8cf10852d5986ccee201f4f3ea3993fdffb8",
+      "url": "https://raw.githubusercontent.com/FFmpeg/FFmpeg/38b88335f99e76ed89ff3c93f877fdefce736c13/fftools/ffmpeg_demux.c",
+      "bytes": 76931
+    },
+    {
+      "path": "libavcodec/wrapped_avframe.c",
+      "sha256": "a06d414f553fd90ab2ee5c90519f135cb5f6e7d350c136867aaccb1608a512c6",
+      "url": "https://raw.githubusercontent.com/FFmpeg/FFmpeg/38b88335f99e76ed89ff3c93f877fdefce736c13/libavcodec/wrapped_avframe.c",
+      "bytes": 3377
+    },
+    {
+      "path": "libavcodec/rawenc.c",
+      "sha256": "3104d187bbdd7f1d3b7d9f609f0508d42616c9e062431872fe581766b3d24071",
+      "url": "https://raw.githubusercontent.com/FFmpeg/FFmpeg/38b88335f99e76ed89ff3c93f877fdefce736c13/libavcodec/rawenc.c",
+      "bytes": 3126
+    },
+    {
+      "path": "libavformat/nullenc.c",
+      "sha256": "d57133442733786332860270090ddfc8b34982cecbb506eb6cb778dc64523f65",
+      "url": "https://raw.githubusercontent.com/FFmpeg/FFmpeg/38b88335f99e76ed89ff3c93f877fdefce736c13/libavformat/nullenc.c",
+      "bytes": 1409
+    },
+    {
+      "path": "libavutil/imgutils.c",
+      "sha256": "00db6789b8daf24cc1ba44b53a41876c95183e208cb2cf44f4c596949f30ee84",
+      "url": "https://raw.githubusercontent.com/FFmpeg/FFmpeg/38b88335f99e76ed89ff3c93f877fdefce736c13/libavutil/imgutils.c",
+      "bytes": 23314
+    },
+    {
+      "path": "libavutil/frame.c",
+      "sha256": "3f004de1ba09a2f1749eea93d7c75d1a942732532b669a165517091203566534",
+      "url": "https://raw.githubusercontent.com/FFmpeg/FFmpeg/38b88335f99e76ed89ff3c93f877fdefce736c13/libavutil/frame.c",
+      "bytes": 25268
+    },
+    {
+      "path": "libavutil/time.c",
+      "sha256": "e433f3f7563a94bd4cc661532de45de4096bea74775380ee2b9cd591a7728a86",
+      "url": "https://raw.githubusercontent.com/FFmpeg/FFmpeg/38b88335f99e76ed89ff3c93f877fdefce736c13/libavutil/time.c",
+      "bytes": 2365
+    },
+    {
+      "path": "fftools/ffmpeg.c",
+      "sha256": "35c7594ebc71119f0bd1c8ea9490905be5b80afc1bb10a41bc0a6dd9defe5cb7",
+      "url": "https://raw.githubusercontent.com/FFmpeg/FFmpeg/38b88335f99e76ed89ff3c93f877fdefce736c13/fftools/ffmpeg.c",
+      "bytes": 31504
+    }
+  ],
+  "relation_to_binary": "Upstream matching release source, not proof of exact distribution build source"
+}

@@ -1,0 +1,9 @@
+{
+  "library": "libavutil.so.60",
+  "sha256": "c236eb2712aceb413640cba3a8c2a3f098b60451d61462eb3d97575da50e3965",
+  "matches_R245_library": true,
+  "function": "av_usleep",
+  "nanosleep_call_present": true,
+  "classification": "PROVEN_STATICALLY in the measured runtime library",
+  "meaning": "Supports sleep-based helper; not a live syscall trace or cause attribution"
+}

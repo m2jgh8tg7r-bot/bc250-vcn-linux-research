@@ -1,0 +1,1215 @@
+{
+  "result": "PASS",
+  "configurations": 18,
+  "trials": 54,
+  "reported_picture_units": 51840,
+  "decoded_frames": 34560,
+  "streamcopy_picture_units": 17280,
+  "excluded_warmups": 6,
+  "excluded_measured_trials": 0,
+  "summary": [
+    {
+      "clip": "ip",
+      "mode": "copy_null",
+      "readrate": 0,
+      "trials": 3,
+      "fps": {
+        "median": 4797.01961167311,
+        "minimum": 4424.961829208452,
+        "maximum": 4820.667430598921
+      },
+      "wall_seconds": {
+        "median": 0.20012426000175765,
+        "minimum": 0.19914254899777006,
+        "maximum": 0.21695102399826283
+      },
+      "user_seconds": {
+        "median": 0.16770099999999388,
+        "minimum": 0.16508699999999976,
+        "maximum": 0.1758190000000468
+      },
+      "system_seconds": {
+        "median": 0.03922300000000001,
+        "minimum": 0.035295000000000076,
+        "maximum": 0.04376600000000064
+      },
+      "cpu_seconds": {
+        "median": 0.20430999999999977,
+        "minimum": 0.20299599999999396,
+        "maximum": 0.21958500000004744
+      },
+      "busy_core_equivalents": {
+        "median": 1.0193502143144058,
+        "minimum": 1.0121408784030708,
+        "maximum": 1.020915705063471
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.00021282291666666642,
+        "minimum": 0.00021145416666666037,
+        "maximum": 0.0002287343750000494
+      },
+      "voluntary_switches": {
+        "median": 1232,
+        "minimum": 1195,
+        "maximum": 1294
+      },
+      "involuntary_switches": {
+        "median": 2,
+        "minimum": 1,
+        "maximum": 6
+      },
+      "minor_faults": {
+        "median": 9529,
+        "minimum": 9518,
+        "maximum": 9536
+      },
+      "major_faults": {
+        "median": 0,
+        "minimum": 0,
+        "maximum": 0
+      }
+    },
+    {
+      "clip": "ip",
+      "mode": "copy_null",
+      "readrate": 1,
+      "trials": 3,
+      "fps": {
+        "median": 30.334843129043314,
+        "minimum": 30.325118891810018,
+        "maximum": 30.335723378319898
+      },
+      "wall_seconds": {
+        "median": 31.646776477999083,
+        "minimum": 31.645858185998804,
+        "maximum": 31.656924525999784
+      },
+      "user_seconds": {
+        "median": 0.23879399999999862,
+        "minimum": 0.23128500000001395,
+        "maximum": 0.23882700000001478
+      },
+      "system_seconds": {
+        "median": 0.050115000000000354,
+        "minimum": 0.048651,
+        "maximum": 0.05977600000000027
+      },
+      "cpu_seconds": {
+        "median": 0.2874449999999986,
+        "minimum": 0.2814000000000143,
+        "maximum": 0.29860300000001505
+      },
+      "busy_core_equivalents": {
+        "median": 0.009082915607528972,
+        "minimum": 0.008892158915270471,
+        "maximum": 0.00943247028797042
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.0002994218749999986,
+        "minimum": 0.0002931250000000149,
+        "maximum": 0.00031104479166668236
+      },
+      "voluntary_switches": {
+        "median": 2005,
+        "minimum": 1974,
+        "maximum": 2007
+      },
+      "involuntary_switches": {
+        "median": 3,
+        "minimum": 2,
+        "maximum": 4
+      },
+      "minor_faults": {
+        "median": 9520,
+        "minimum": 9509,
+        "maximum": 9543
+      },
+      "major_faults": {
+        "median": 0,
+        "minimum": 0,
+        "maximum": 0
+      }
+    },
+    {
+      "clip": "ip",
+      "mode": "copy_null",
+      "readrate": 2,
+      "trials": 3,
+      "fps": {
+        "median": 60.323072937756095,
+        "minimum": 60.31828291981726,
+        "maximum": 60.332405179736334
+      },
+      "wall_seconds": {
+        "median": 15.914308625997364,
+        "minimum": 15.91184699400037,
+        "maximum": 15.915572418998636
+      },
+      "user_seconds": {
+        "median": 0.2155159999999796,
+        "minimum": 0.20888199999998847,
+        "maximum": 0.2246279999999956
+      },
+      "system_seconds": {
+        "median": 0.04934300000000036,
+        "minimum": 0.04609099999999966,
+        "maximum": 0.05301900000000015
+      },
+      "cpu_seconds": {
+        "median": 0.26485899999997997,
+        "minimum": 0.2619009999999886,
+        "maximum": 0.27071899999999527
+      },
+      "busy_core_equivalents": {
+        "median": 0.016642821640854098,
+        "minimum": 0.0164594971343515,
+        "maximum": 0.01700969295184346
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.0002758947916666458,
+        "minimum": 0.0002728135416666548,
+        "maximum": 0.00028199895833332843
+      },
+      "voluntary_switches": {
+        "median": 1443,
+        "minimum": 1427,
+        "maximum": 1472
+      },
+      "involuntary_switches": {
+        "median": 2,
+        "minimum": 2,
+        "maximum": 4
+      },
+      "minor_faults": {
+        "median": 9525,
+        "minimum": 9517,
+        "maximum": 9526
+      },
+      "major_faults": {
+        "median": 0,
+        "minimum": 0,
+        "maximum": 0
+      }
+    },
+    {
+      "clip": "ip",
+      "mode": "decode_null",
+      "readrate": 0,
+      "trials": 3,
+      "fps": {
+        "median": 207.93513146477363,
+        "minimum": 207.84347782968123,
+        "maximum": 208.07517697188746
+      },
+      "wall_seconds": {
+        "median": 4.616824454999005,
+        "minimum": 4.6137170900001365,
+        "maximum": 4.6188603559967305
+      },
+      "user_seconds": {
+        "median": 4.711525999999992,
+        "minimum": 4.699217000000004,
+        "maximum": 4.720610999999998
+      },
+      "system_seconds": {
+        "median": 0.07345800000000002,
+        "minimum": 0.06858699999999995,
+        "maximum": 0.07576300000000025
+      },
+      "cpu_seconds": {
+        "median": 4.780112999999992,
+        "minimum": 4.774980000000005,
+        "maximum": 4.794068999999999
+      },
+      "busy_core_equivalents": {
+        "median": 1.034911781602989,
+        "minimum": 1.0342563479600686,
+        "maximum": 1.0390903704067076
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.004979284374999992,
+        "minimum": 0.004973937500000005,
+        "maximum": 0.0049938218749999985
+      },
+      "voluntary_switches": {
+        "median": 3865,
+        "minimum": 3859,
+        "maximum": 3866
+      },
+      "involuntary_switches": {
+        "median": 46,
+        "minimum": 40,
+        "maximum": 46
+      },
+      "minor_faults": {
+        "median": 14392,
+        "minimum": 14391,
+        "maximum": 14395
+      },
+      "major_faults": {
+        "median": 0,
+        "minimum": 0,
+        "maximum": 0
+      }
+    },
+    {
+      "clip": "ip",
+      "mode": "decode_null",
+      "readrate": 1,
+      "trials": 3,
+      "fps": {
+        "median": 30.32685395660173,
+        "minimum": 30.326366622113408,
+        "maximum": 30.328377741586205
+      },
+      "wall_seconds": {
+        "median": 31.655113364999124,
+        "minimum": 31.653522920998512,
+        "maximum": 31.65562205199967
+      },
+      "user_seconds": {
+        "median": 9.550838999999996,
+        "minimum": 9.532181999999999,
+        "maximum": 9.62962300000001
+      },
+      "system_seconds": {
+        "median": 0.08820800000000001,
+        "minimum": 0.07369300000000001,
+        "maximum": 0.09475899999999982
+      },
+      "cpu_seconds": {
+        "median": 9.645597999999996,
+        "minimum": 9.620389999999999,
+        "maximum": 9.70331600000001
+      },
+      "busy_core_equivalents": {
+        "median": 0.304724312174467,
+        "minimum": 0.30390778561220166,
+        "maximum": 0.3065323408612054
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.010047497916666663,
+        "minimum": 0.010021239583333333,
+        "maximum": 0.010107620833333343
+      },
+      "voluntary_switches": {
+        "median": 4853,
+        "minimum": 4852,
+        "maximum": 4858
+      },
+      "involuntary_switches": {
+        "median": 74,
+        "minimum": 67,
+        "maximum": 85
+      },
+      "minor_faults": {
+        "median": 14286,
+        "minimum": 14272,
+        "maximum": 14287
+      },
+      "major_faults": {
+        "median": 0,
+        "minimum": 0,
+        "maximum": 0
+      }
+    },
+    {
+      "clip": "ip",
+      "mode": "decode_null",
+      "readrate": 2,
+      "trials": 3,
+      "fps": {
+        "median": 60.247674333330814,
+        "minimum": 60.23569800578681,
+        "maximum": 60.25666457332487
+      },
+      "wall_seconds": {
+        "median": 15.934225024000625,
+        "minimum": 15.931847652002034,
+        "maximum": 15.9373931370028
+      },
+      "user_seconds": {
+        "median": 7.515231,
+        "minimum": 7.5139369999999985,
+        "maximum": 7.5261819999999915
+      },
+      "system_seconds": {
+        "median": 0.07873299999999994,
+        "minimum": 0.07791800000000038,
+        "maximum": 0.08341700000000007
+      },
+      "cpu_seconds": {
+        "median": 7.593964,
+        "minimum": 7.591854999999999,
+        "maximum": 7.609598999999991
+      },
+      "busy_core_equivalents": {
+        "median": 0.47665306409365044,
+        "minimum": 0.47635488029554435,
+        "maximum": 0.4775631691242076
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.007910379166666667,
+        "minimum": 0.007908182291666666,
+        "maximum": 0.00792666562499999
+      },
+      "voluntary_switches": {
+        "median": 4465,
+        "minimum": 4017,
+        "maximum": 4552
+      },
+      "involuntary_switches": {
+        "median": 60,
+        "minimum": 59,
+        "maximum": 63
+      },
+      "minor_faults": {
+        "median": 14305,
+        "minimum": 14273,
+        "maximum": 14314
+      },
+      "major_faults": {
+        "median": 0,
+        "minimum": 0,
+        "maximum": 0
+      }
+    },
+    {
+      "clip": "ip",
+      "mode": "decode_raw",
+      "readrate": 0,
+      "trials": 3,
+      "fps": {
+        "median": 206.90145836545454,
+        "minimum": 206.29068921881614,
+        "maximum": 207.2245059866666
+      },
+      "wall_seconds": {
+        "median": 4.639889963000314,
+        "minimum": 4.632656718997168,
+        "maximum": 4.653627381998376
+      },
+      "user_seconds": {
+        "median": 5.377424000000005,
+        "minimum": 5.3715620000000115,
+        "maximum": 5.380610999999988
+      },
+      "system_seconds": {
+        "median": 0.09089100000000006,
+        "minimum": 0.0741369999999999,
+        "maximum": 0.0928119999999999
+      },
+      "cpu_seconds": {
+        "median": 5.464374000000012,
+        "minimum": 5.451561000000005,
+        "maximum": 5.471501999999988
+      },
+      "busy_core_equivalents": {
+        "median": 1.1767677448762284,
+        "minimum": 1.175749915252217,
+        "maximum": 1.177694739223203
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.005692056250000012,
+        "minimum": 0.0056787093750000055,
+        "maximum": 0.005699481249999987
+      },
+      "voluntary_switches": {
+        "median": 3866,
+        "minimum": 3866,
+        "maximum": 3871
+      },
+      "involuntary_switches": {
+        "median": 45,
+        "minimum": 44,
+        "maximum": 61
+      },
+      "minor_faults": {
+        "median": 15905,
+        "minimum": 15898,
+        "maximum": 15924
+      },
+      "major_faults": {
+        "median": 0,
+        "minimum": 0,
+        "maximum": 0
+      }
+    },
+    {
+      "clip": "ip",
+      "mode": "decode_raw",
+      "readrate": 1,
+      "trials": 3,
+      "fps": {
+        "median": 30.322855126321627,
+        "minimum": 30.32131356698463,
+        "maximum": 30.33138333721027
+      },
+      "wall_seconds": {
+        "median": 31.659287886999664,
+        "minimum": 31.650386311997863,
+        "maximum": 31.660897469999327
+      },
+      "user_seconds": {
+        "median": 10.298806999999996,
+        "minimum": 10.270445000000024,
+        "maximum": 10.314757000000014
+      },
+      "system_seconds": {
+        "median": 0.11523499999999975,
+        "minimum": 0.09917700000000007,
+        "maximum": 0.11759199999999992
+      },
+      "cpu_seconds": {
+        "median": 10.416398999999997,
+        "minimum": 10.369622000000025,
+        "maximum": 10.429992000000015
+      },
+      "busy_core_equivalents": {
+        "median": 0.32910811568993087,
+        "minimum": 0.32752141690948233,
+        "maximum": 0.32944493373405626
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.010850415624999997,
+        "minimum": 0.010801689583333359,
+        "maximum": 0.010864575000000015
+      },
+      "voluntary_switches": {
+        "median": 4852,
+        "minimum": 4845,
+        "maximum": 4858
+      },
+      "involuntary_switches": {
+        "median": 98,
+        "minimum": 84,
+        "maximum": 101
+      },
+      "minor_faults": {
+        "median": 15810,
+        "minimum": 15801,
+        "maximum": 15810
+      },
+      "major_faults": {
+        "median": 0,
+        "minimum": 0,
+        "maximum": 0
+      }
+    },
+    {
+      "clip": "ip",
+      "mode": "decode_raw",
+      "readrate": 2,
+      "trials": 3,
+      "fps": {
+        "median": 60.23663310760894,
+        "minimum": 60.22808123665117,
+        "maximum": 60.258700619777876
+      },
+      "wall_seconds": {
+        "median": 15.93714572799945,
+        "minimum": 15.931309339997824,
+        "maximum": 15.939408665999508
+      },
+      "user_seconds": {
+        "median": 8.121667000000002,
+        "minimum": 8.085111000000012,
+        "maximum": 8.152669000000003
+      },
+      "system_seconds": {
+        "median": 0.09750300000000012,
+        "minimum": 0.0872379999999997,
+        "maximum": 0.10669799999999996
+      },
+      "cpu_seconds": {
+        "median": 8.208905000000001,
+        "minimum": 8.182614000000012,
+        "maximum": 8.259367000000003
+      },
+      "busy_core_equivalents": {
+        "median": 0.51500687208745,
+        "minimum": 0.5136184242845874,
+        "maximum": 0.5182463121667634
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.008550942708333335,
+        "minimum": 0.008523556250000012,
+        "maximum": 0.00860350729166667
+      },
+      "voluntary_switches": {
+        "median": 4405,
+        "minimum": 4383,
+        "maximum": 4452
+      },
+      "involuntary_switches": {
+        "median": 59,
+        "minimum": 52,
+        "maximum": 75
+      },
+      "minor_faults": {
+        "median": 15824,
+        "minimum": 15822,
+        "maximum": 15824
+      },
+      "major_faults": {
+        "median": 0,
+        "minimum": 0,
+        "maximum": 0
+      }
+    },
+    {
+      "clip": "b3",
+      "mode": "copy_null",
+      "readrate": 0,
+      "trials": 3,
+      "fps": {
+        "median": 5742.598948927979,
+        "minimum": 5704.013736161352,
+        "maximum": 5745.1810065028285
+      },
+      "wall_seconds": {
+        "median": 0.16717169500043383,
+        "minimum": 0.16709656300008646,
+        "maximum": 0.16830254000160494
+      },
+      "user_seconds": {
+        "median": 0.14138900000000376,
+        "minimum": 0.13205899999999815,
+        "maximum": 0.14206699999999728
+      },
+      "system_seconds": {
+        "median": 0.0312739999999998,
+        "minimum": 0.02938799999999997,
+        "maximum": 0.039252000000000065
+      },
+      "cpu_seconds": {
+        "median": 0.17145499999999725,
+        "minimum": 0.17131099999999821,
+        "maximum": 0.17266300000000356
+      },
+      "busy_core_equivalents": {
+        "median": 1.0259084622154666,
+        "minimum": 1.0247608005622821,
+        "maximum": 1.0260833431978402
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.00017859895833333047,
+        "minimum": 0.00017844895833333147,
+        "maximum": 0.00017985729166667037
+      },
+      "voluntary_switches": {
+        "median": 1242,
+        "minimum": 1178,
+        "maximum": 1326
+      },
+      "involuntary_switches": {
+        "median": 2,
+        "minimum": 0,
+        "maximum": 5
+      },
+      "minor_faults": {
+        "median": 6356,
+        "minimum": 6348,
+        "maximum": 6359
+      },
+      "major_faults": {
+        "median": 0,
+        "minimum": 0,
+        "maximum": 0
+      }
+    },
+    {
+      "clip": "b3",
+      "mode": "copy_null",
+      "readrate": 1,
+      "trials": 3,
+      "fps": {
+        "median": 30.443546949030853,
+        "minimum": 30.441582004053846,
+        "maximum": 30.44434344876144
+      },
+      "wall_seconds": {
+        "median": 31.533776324002247,
+        "minimum": 31.532951321998553,
+        "maximum": 31.535811768000713
+      },
+      "user_seconds": {
+        "median": 0.19981599999999844,
+        "minimum": 0.19616099999996095,
+        "maximum": 0.2039090000000101
+      },
+      "system_seconds": {
+        "median": 0.04986200000000007,
+        "minimum": 0.04450900000000013,
+        "maximum": 0.061161999999999495
+      },
+      "cpu_seconds": {
+        "median": 0.2496779999999985,
+        "minimum": 0.24841800000001024,
+        "maximum": 0.25732299999996044
+      },
+      "busy_core_equivalents": {
+        "median": 0.007917795744937584,
+        "minimum": 0.007878044698807011,
+        "maximum": 0.008159707506279108
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.00026008124999999846,
+        "minimum": 0.00025876875000001065,
+        "maximum": 0.0002680447916666255
+      },
+      "voluntary_switches": {
+        "median": 1980,
+        "minimum": 1964,
+        "maximum": 1984
+      },
+      "involuntary_switches": {
+        "median": 2,
+        "minimum": 1,
+        "maximum": 4
+      },
+      "minor_faults": {
+        "median": 6396,
+        "minimum": 6375,
+        "maximum": 6405
+      },
+      "major_faults": {
+        "median": 0,
+        "minimum": 0,
+        "maximum": 0
+      }
+    },
+    {
+      "clip": "b3",
+      "mode": "copy_null",
+      "readrate": 2,
+      "trials": 3,
+      "fps": {
+        "median": 60.58675114565565,
+        "minimum": 60.58148801254592,
+        "maximum": 60.58851118205265
+      },
+      "wall_seconds": {
+        "median": 15.845048328999837,
+        "minimum": 15.844588045998535,
+        "maximum": 15.846424898001715
+      },
+      "user_seconds": {
+        "median": 0.1983979999999974,
+        "minimum": 0.1911050000000003,
+        "maximum": 0.20286099999998441
+      },
+      "system_seconds": {
+        "median": 0.05349700000000002,
+        "minimum": 0.04259600000000008,
+        "maximum": 0.0563229999999999
+      },
+      "cpu_seconds": {
+        "median": 0.2454569999999845,
+        "minimum": 0.24460200000000032,
+        "maximum": 0.2547209999999973
+      },
+      "busy_core_equivalents": {
+        "median": 0.015489739899056816,
+        "minimum": 0.015437573970992147,
+        "maximum": 0.016075747748512906
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.00025568437499998387,
+        "minimum": 0.0002547937500000003,
+        "maximum": 0.0002653343749999972
+      },
+      "voluntary_switches": {
+        "median": 1946,
+        "minimum": 1941,
+        "maximum": 1951
+      },
+      "involuntary_switches": {
+        "median": 2,
+        "minimum": 1,
+        "maximum": 2
+      },
+      "minor_faults": {
+        "median": 6375,
+        "minimum": 6350,
+        "maximum": 6401
+      },
+      "major_faults": {
+        "median": 0,
+        "minimum": 0,
+        "maximum": 0
+      }
+    },
+    {
+      "clip": "b3",
+      "mode": "decode_null",
+      "readrate": 0,
+      "trials": 3,
+      "fps": {
+        "median": 183.63658884828132,
+        "minimum": 183.63521351166685,
+        "maximum": 184.43070524788058
+      },
+      "wall_seconds": {
+        "median": 5.227716360997874,
+        "minimum": 5.2052070110003115,
+        "maximum": 5.227755513999
+      },
+      "user_seconds": {
+        "median": 5.287932000000012,
+        "minimum": 5.266294000000016,
+        "maximum": 5.305123999999999
+      },
+      "system_seconds": {
+        "median": 0.0862400000000001,
+        "minimum": 0.07755199999999995,
+        "maximum": 0.10314899999999971
+      },
+      "cpu_seconds": {
+        "median": 5.374172000000012,
+        "minimum": 5.369443000000016,
+        "maximum": 5.382675999999999
+      },
+      "busy_core_equivalents": {
+        "median": 1.0296419369953242,
+        "minimum": 1.0280075236129416,
+        "maximum": 1.0315522492482279
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.005598095833333346,
+        "minimum": 0.005593169791666684,
+        "maximum": 0.005606954166666666
+      },
+      "voluntary_switches": {
+        "median": 3871,
+        "minimum": 3861,
+        "maximum": 3876
+      },
+      "involuntary_switches": {
+        "median": 56,
+        "minimum": 48,
+        "maximum": 74
+      },
+      "minor_faults": {
+        "median": 13039,
+        "minimum": 13033,
+        "maximum": 13056
+      },
+      "major_faults": {
+        "median": 0,
+        "minimum": 0,
+        "maximum": 0
+      }
+    },
+    {
+      "clip": "b3",
+      "mode": "decode_null",
+      "readrate": 1,
+      "trials": 3,
+      "fps": {
+        "median": 30.433586901738618,
+        "minimum": 30.432923335018284,
+        "maximum": 30.4350645541439
+      },
+      "wall_seconds": {
+        "median": 31.544096431996877,
+        "minimum": 31.542564934999973,
+        "maximum": 31.54478422700049
+      },
+      "user_seconds": {
+        "median": 10.406435999999985,
+        "minimum": 10.386220999999978,
+        "maximum": 10.500035999999994
+      },
+      "system_seconds": {
+        "median": 0.09232299999999949,
+        "minimum": 0.08120799999999972,
+        "maximum": 0.10374100000000008
+      },
+      "cpu_seconds": {
+        "median": 10.487643999999985,
+        "minimum": 10.478543999999978,
+        "maximum": 10.603776999999994
+      },
+      "busy_core_equivalents": {
+        "median": 0.33247565111301786,
+        "minimum": 0.3322032948681631,
+        "maximum": 0.3361499296902396
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.010924629166666651,
+        "minimum": 0.010915149999999978,
+        "maximum": 0.01104560104166666
+      },
+      "voluntary_switches": {
+        "median": 4846,
+        "minimum": 4843,
+        "maximum": 4850
+      },
+      "involuntary_switches": {
+        "median": 94,
+        "minimum": 86,
+        "maximum": 98
+      },
+      "minor_faults": {
+        "median": 12958,
+        "minimum": 12932,
+        "maximum": 12982
+      },
+      "major_faults": {
+        "median": 0,
+        "minimum": 0,
+        "maximum": 0
+      }
+    },
+    {
+      "clip": "b3",
+      "mode": "decode_null",
+      "readrate": 2,
+      "trials": 3,
+      "fps": {
+        "median": 60.55130788484058,
+        "minimum": 60.545302298204,
+        "maximum": 60.5585659297287
+      },
+      "wall_seconds": {
+        "median": 15.854323111001577,
+        "minimum": 15.852422943997226,
+        "maximum": 15.855895726999734
+      },
+      "user_seconds": {
+        "median": 7.251234000000011,
+        "minimum": 6.937872999999996,
+        "maximum": 7.280749999999998
+      },
+      "system_seconds": {
+        "median": 0.09002700000000008,
+        "minimum": 0.07057999999999987,
+        "maximum": 0.09059000000000017
+      },
+      "cpu_seconds": {
+        "median": 7.341261000000011,
+        "minimum": 7.028462999999997,
+        "maximum": 7.351329999999997
+      },
+      "busy_core_equivalents": {
+        "median": 0.46304474486872216,
+        "minimum": 0.4433683749689152,
+        "maximum": 0.4636338511915165
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.007647146875000011,
+        "minimum": 0.007321315624999996,
+        "maximum": 0.007657635416666664
+      },
+      "voluntary_switches": {
+        "median": 4811,
+        "minimum": 4807,
+        "maximum": 4817
+      },
+      "involuntary_switches": {
+        "median": 70,
+        "minimum": 48,
+        "maximum": 86
+      },
+      "minor_faults": {
+        "median": 12954,
+        "minimum": 12945,
+        "maximum": 12964
+      },
+      "major_faults": {
+        "median": 0,
+        "minimum": 0,
+        "maximum": 0
+      }
+    },
+    {
+      "clip": "b3",
+      "mode": "decode_raw",
+      "readrate": 0,
+      "trials": 3,
+      "fps": {
+        "median": 182.72977387009334,
+        "minimum": 182.62147311597695,
+        "maximum": 183.05241009315878
+      },
+      "wall_seconds": {
+        "median": 5.253659432000859,
+        "minimum": 5.244399674997112,
+        "maximum": 5.2567750309972325
+      },
+      "user_seconds": {
+        "median": 5.971007999999983,
+        "minimum": 5.939326999999992,
+        "maximum": 5.98809700000001
+      },
+      "system_seconds": {
+        "median": 0.09611299999999989,
+        "minimum": 0.084646,
+        "maximum": 0.11876100000000012
+      },
+      "cpu_seconds": {
+        "median": 6.067120999999983,
+        "minimum": 6.058087999999992,
+        "maximum": 6.072743000000011
+      },
+      "busy_core_equivalents": {
+        "median": 1.1551537593296277,
+        "minimum": 1.1548371337213454,
+        "maximum": 1.15522215886952
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.006319917708333316,
+        "minimum": 0.006310508333333325,
+        "maximum": 0.006325773958333345
+      },
+      "voluntary_switches": {
+        "median": 3870,
+        "minimum": 3864,
+        "maximum": 3875
+      },
+      "involuntary_switches": {
+        "median": 51,
+        "minimum": 43,
+        "maximum": 56
+      },
+      "minor_faults": {
+        "median": 15260,
+        "minimum": 15253,
+        "maximum": 15293
+      },
+      "major_faults": {
+        "median": 0,
+        "minimum": 0,
+        "maximum": 0
+      }
+    },
+    {
+      "clip": "b3",
+      "mode": "decode_raw",
+      "readrate": 1,
+      "trials": 3,
+      "fps": {
+        "median": 30.430981033135872,
+        "minimum": 30.430845456951193,
+        "maximum": 30.432429260257297
+      },
+      "wall_seconds": {
+        "median": 31.546797619001154,
+        "minimum": 31.54529636100051,
+        "maximum": 31.546938167000917
+      },
+      "user_seconds": {
+        "median": 11.138476999999995,
+        "minimum": 11.095252000000002,
+        "maximum": 11.179575999999997
+      },
+      "system_seconds": {
+        "median": 0.09987200000000007,
+        "minimum": 0.08483200000000002,
+        "maximum": 0.10631799999999991
+      },
+      "cpu_seconds": {
+        "median": 11.244794999999995,
+        "minimum": 11.195124000000002,
+        "maximum": 11.264407999999998
+      },
+      "busy_core_equivalents": {
+        "median": 0.3564480660067718,
+        "minimum": 0.35487196699521384,
+        "maximum": 0.3570867704361212
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.011713328124999995,
+        "minimum": 0.011661587500000003,
+        "maximum": 0.011733758333333332
+      },
+      "voluntary_switches": {
+        "median": 4848,
+        "minimum": 4846,
+        "maximum": 4850
+      },
+      "involuntary_switches": {
+        "median": 91,
+        "minimum": 86,
+        "maximum": 93
+      },
+      "minor_faults": {
+        "median": 15205,
+        "minimum": 15204,
+        "maximum": 15225
+      },
+      "major_faults": {
+        "median": 0,
+        "minimum": 0,
+        "maximum": 0
+      }
+    },
+    {
+      "clip": "b3",
+      "mode": "decode_raw",
+      "readrate": 2,
+      "trials": 3,
+      "fps": {
+        "median": 60.5358665591899,
+        "minimum": 60.516922941772066,
+        "maximum": 60.53915276880512
+      },
+      "wall_seconds": {
+        "median": 15.858367189001001,
+        "minimum": 15.85750635900331,
+        "maximum": 15.863331335000112
+      },
+      "user_seconds": {
+        "median": 7.501271000000003,
+        "minimum": 7.421401000000003,
+        "maximum": 7.995418999999998
+      },
+      "system_seconds": {
+        "median": 0.09981400000000029,
+        "minimum": 0.09206599999999998,
+        "maximum": 0.1077459999999999
+      },
+      "cpu_seconds": {
+        "median": 7.609017000000002,
+        "minimum": 7.521215000000003,
+        "maximum": 8.087484999999997
+      },
+      "busy_core_equivalents": {
+        "median": 0.4798369193577452,
+        "minimum": 0.47427423708643507,
+        "maximum": 0.5098226109768097
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.007926059375000002,
+        "minimum": 0.007834598958333336,
+        "maximum": 0.008424463541666665
+      },
+      "voluntary_switches": {
+        "median": 4810,
+        "minimum": 4695,
+        "maximum": 4813
+      },
+      "involuntary_switches": {
+        "median": 64,
+        "minimum": 62,
+        "maximum": 69
+      },
+      "minor_faults": {
+        "median": 15189,
+        "minimum": 15180,
+        "maximum": 15199
+      },
+      "major_faults": {
+        "median": 0,
+        "minimum": 0,
+        "maximum": 0
+      }
+    }
+  ],
+  "contrasts": [
+    {
+      "clip": "ip",
+      "mode": "copy_null",
+      "readrate": 1,
+      "unpaced_estimate": 0.006384687499999993,
+      "observed_paced_cores": 0.009082915607528972,
+      "observed_over_estimate": 1.4226092674902229
+    },
+    {
+      "clip": "ip",
+      "mode": "copy_null",
+      "readrate": 2,
+      "unpaced_estimate": 0.012769374999999986,
+      "observed_paced_cores": 0.016642821640854098,
+      "observed_over_estimate": 1.30333878054753
+    },
+    {
+      "clip": "ip",
+      "mode": "decode_null",
+      "readrate": 1,
+      "unpaced_estimate": 0.14937853124999975,
+      "observed_paced_cores": 0.304724312174467,
+      "observed_over_estimate": 2.0399471706177157
+    },
+    {
+      "clip": "ip",
+      "mode": "decode_null",
+      "readrate": 2,
+      "unpaced_estimate": 0.2987570624999995,
+      "observed_paced_cores": 0.47665306409365044,
+      "observed_over_estimate": 1.595453711135787
+    },
+    {
+      "clip": "ip",
+      "mode": "decode_raw",
+      "readrate": 1,
+      "unpaced_estimate": 0.17076168750000037,
+      "observed_paced_cores": 0.32910811568993087,
+      "observed_over_estimate": 1.927294819512311
+    },
+    {
+      "clip": "ip",
+      "mode": "decode_raw",
+      "readrate": 2,
+      "unpaced_estimate": 0.34152337500000074,
+      "observed_paced_cores": 0.51500687208745,
+      "observed_over_estimate": 1.5079696143417676
+    },
+    {
+      "clip": "b3",
+      "mode": "copy_null",
+      "readrate": 1,
+      "unpaced_estimate": 0.005357968749999914,
+      "observed_paced_cores": 0.007917795744937584,
+      "observed_over_estimate": 1.4777607176110743
+    },
+    {
+      "clip": "b3",
+      "mode": "copy_null",
+      "readrate": 2,
+      "unpaced_estimate": 0.010715937499999828,
+      "observed_paced_cores": 0.015489739899056816,
+      "observed_over_estimate": 1.4454862114543934
+    },
+    {
+      "clip": "b3",
+      "mode": "decode_null",
+      "readrate": 1,
+      "unpaced_estimate": 0.16794287500000038,
+      "observed_paced_cores": 0.33247565111301786,
+      "observed_over_estimate": 1.9796948879969878
+    },
+    {
+      "clip": "b3",
+      "mode": "decode_null",
+      "readrate": 2,
+      "unpaced_estimate": 0.33588575000000076,
+      "observed_paced_cores": 0.46304474486872216,
+      "observed_over_estimate": 1.3785781173173353
+    },
+    {
+      "clip": "b3",
+      "mode": "decode_raw",
+      "readrate": 1,
+      "unpaced_estimate": 0.18959753124999948,
+      "observed_paced_cores": 0.3564480660067718,
+      "observed_over_estimate": 1.8800248276269305
+    },
+    {
+      "clip": "b3",
+      "mode": "decode_raw",
+      "readrate": 2,
+      "unpaced_estimate": 0.37919506249999896,
+      "observed_paced_cores": 0.4798369193577452,
+      "observed_over_estimate": 1.2654091965075271
+    }
+  ],
+  "limits": [
+    "Pipeline contrasts, not additive causal attribution",
+    "No display, audio, energy, game concurrency or dedicated VCN",
+    "Synthetic repeated content, not32seconds of unique scenes",
+    "Decoder/output each requested1 thread; total process thread count may differ",
+    "CPU clocks and unrelated background load uncontrolled"
+  ]
+}

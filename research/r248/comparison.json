@@ -1,0 +1,140 @@
+{
+  "result": "PASS",
+  "matched_setting_pairs": [
+    {
+      "case": "1280x720-high-s1-b3",
+      "thread_setting": 1,
+      "ffmpeg_speed_ratio": 2.5538729918244414,
+      "candidate_cpu_cost_ratio": 2.216012742743695,
+      "ffmpeg_faster": true,
+      "ffmpeg_less_cpu": true
+    },
+    {
+      "case": "1280x720-high-s1-b3",
+      "thread_setting": 4,
+      "ffmpeg_speed_ratio": 4.159194650704955,
+      "candidate_cpu_cost_ratio": 2.6377442950235164,
+      "ffmpeg_faster": true,
+      "ffmpeg_less_cpu": true
+    },
+    {
+      "case": "1280x720-high-s1-b3",
+      "thread_setting": 8,
+      "ffmpeg_speed_ratio": 5.149655492033216,
+      "candidate_cpu_cost_ratio": 3.1174020929554556,
+      "ffmpeg_faster": true,
+      "ffmpeg_less_cpu": true
+    },
+    {
+      "case": "1280x720-high-s4-b3",
+      "thread_setting": 1,
+      "ffmpeg_speed_ratio": 2.5519668705672247,
+      "candidate_cpu_cost_ratio": 2.213963676073505,
+      "ffmpeg_faster": true,
+      "ffmpeg_less_cpu": true
+    },
+    {
+      "case": "1280x720-high-s4-b3",
+      "thread_setting": 4,
+      "ffmpeg_speed_ratio": 2.998462018616011,
+      "candidate_cpu_cost_ratio": 2.541153807081737,
+      "ffmpeg_faster": true,
+      "ffmpeg_less_cpu": true
+    },
+    {
+      "case": "1280x720-high-s4-b3",
+      "thread_setting": 8,
+      "ffmpeg_speed_ratio": 3.8631215083355523,
+      "candidate_cpu_cost_ratio": 2.836862254260038,
+      "ffmpeg_faster": true,
+      "ffmpeg_less_cpu": true
+    },
+    {
+      "case": "1920x1080-high-s1-b3",
+      "thread_setting": 1,
+      "ffmpeg_speed_ratio": 2.8460081908947634,
+      "candidate_cpu_cost_ratio": 2.4666364449045273,
+      "ffmpeg_faster": true,
+      "ffmpeg_less_cpu": true
+    },
+    {
+      "case": "1920x1080-high-s1-b3",
+      "thread_setting": 4,
+      "ffmpeg_speed_ratio": 5.048837820715956,
+      "candidate_cpu_cost_ratio": 2.704025285853521,
+      "ffmpeg_faster": true,
+      "ffmpeg_less_cpu": true
+    },
+    {
+      "case": "1920x1080-high-s1-b3",
+      "thread_setting": 8,
+      "ffmpeg_speed_ratio": 6.667260899281336,
+      "candidate_cpu_cost_ratio": 3.2618791503063034,
+      "ffmpeg_faster": true,
+      "ffmpeg_less_cpu": true
+    },
+    {
+      "case": "1920x1080-high-s4-b3",
+      "thread_setting": 1,
+      "ffmpeg_speed_ratio": 2.832866191493322,
+      "candidate_cpu_cost_ratio": 2.4468288466327426,
+      "ffmpeg_faster": true,
+      "ffmpeg_less_cpu": true
+    },
+    {
+      "case": "1920x1080-high-s4-b3",
+      "thread_setting": 4,
+      "ffmpeg_speed_ratio": 3.859742579268406,
+      "candidate_cpu_cost_ratio": 2.662699280398462,
+      "ffmpeg_faster": true,
+      "ffmpeg_less_cpu": true
+    },
+    {
+      "case": "1920x1080-high-s4-b3",
+      "thread_setting": 8,
+      "ffmpeg_speed_ratio": 5.501084457008693,
+      "candidate_cpu_cost_ratio": 3.079045956365191,
+      "ffmpeg_faster": true,
+      "ffmpeg_less_cpu": true
+    }
+  ],
+  "setting1_contrasts": [
+    {
+      "case": "1280x720-high-s1-b3",
+      "ffmpeg_setting1_fps": 345.7477935243904,
+      "fastest_candidate_fps": 217.6705395197058,
+      "ffmpeg_setting1_cpu_per_frame": 0.003317247395833329,
+      "lowest_candidate_cpu_per_frame": 0.007351062499999996,
+      "ffmpeg1_faster_than_all_tested_candidate_settings": true,
+      "ffmpeg1_less_cpu_than_all_tested_candidate_settings": true
+    },
+    {
+      "case": "1280x720-high-s4-b3",
+      "ffmpeg_setting1_fps": 347.29633609967544,
+      "fastest_candidate_fps": 291.3272854892694,
+      "ffmpeg_setting1_cpu_per_frame": 0.003300453125000028,
+      "lowest_candidate_cpu_per_frame": 0.007307083333333349,
+      "ffmpeg1_faster_than_all_tested_candidate_settings": true,
+      "ffmpeg1_less_cpu_than_all_tested_candidate_settings": true
+    },
+    {
+      "case": "1920x1080-high-s1-b3",
+      "ffmpeg_setting1_fps": 174.87917305328278,
+      "fastest_candidate_fps": 103.0454153137776,
+      "ffmpeg_setting1_cpu_per_frame": 0.006560302083333423,
+      "lowest_candidate_cpu_per_frame": 0.01618188020833332,
+      "ffmpeg1_faster_than_all_tested_candidate_settings": true,
+      "ffmpeg1_less_cpu_than_all_tested_candidate_settings": true
+    },
+    {
+      "case": "1920x1080-high-s4-b3",
+      "ffmpeg_setting1_fps": 176.50803292187075,
+      "fastest_candidate_fps": 131.61158910803965,
+      "ffmpeg_setting1_cpu_per_frame": 0.0065254583333333215,
+      "lowest_candidate_cpu_per_frame": 0.01596667968749999,
+      "ffmpeg1_faster_than_all_tested_candidate_settings": true,
+      "ffmpeg1_less_cpu_than_all_tested_candidate_settings": true
+    }
+  ],
+  "limits": "Measured synthetic inputs only; settings do not imply equal total OS thread counts; not an intrinsic B-picture cost experiment"
+}

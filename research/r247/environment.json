@@ -1,0 +1,33 @@
+{
+  "gpu_device_exposed": false,
+  "affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "cpu_max": "max 100000",
+  "cpu_stat_before": "usage_usec 106892\nuser_usec 54560\nsystem_usec 52331\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+  "ffmpeg_sha256": "a7ee46028d7b538b8b996ac3fa92785c858843d134aab12f6ecc3fe2b72663a2",
+  "container_launch_timed": false,
+  "process_launch_timed": true,
+  "q36_concurrent": false,
+  "decoder_threads_requested": 1,
+  "output_threads_requested": 1,
+  "frames_per_run": 960,
+  "shuffle_seed": 247,
+  "governor_modified": false,
+  "cpu_stat_after": "usage_usec 309736195\nuser_usec 305017285\nsystem_usec 4718909\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n"
+}

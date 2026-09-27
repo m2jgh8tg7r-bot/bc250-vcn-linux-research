@@ -1,0 +1,12 @@
+{
+  "observed_utc": "2026-09-27T12:49:22.505755+00:00",
+  "cpu_model": "AMD BC-250",
+  "governors": [
+    "performance"
+  ],
+  "online_logical_cpus": "0-15",
+  "image_id": "20edf197e69eecb12f76b3307e960e56e0a7e2f6471d1f046ce13d2095309313",
+  "boot_options_modified": false,
+  "reboot_performed": false,
+  "firmware_or_driver_modified": false
+}
