@@ -1,6 +1,12 @@
 # BC-250 VCN Linux research
 
-## Latest — R232, 2026-09-23
+## Latest — R233, 2026-09-27
+
+[R233 handoff](docs/CHATGPT_HANDOFF_R233.md) completes the saved-image checkpoint: 14 CPU model suites (8,191 cases), byte-provenance controls, saved signer metadata, and the Cyan PSP host-loader callback contract were revalidated. The saved no-signer rejection is consistent with the historical response; runtime service-image/KDB identity and VCN execution remain unproven. September 25–26 local progress and fresh external updates are incorporated.
+
+No hardware access or mutation occurred during closeout. No new live experiment is ready. Next: version-matched image/KDB identity evidence.
+
+### Previous R232 checkpoint
 
 [R232 handoff](docs/CHATGPT_HANDOFF_R232.md) restores the already-saved R218 SVC64 allocator evidence, corrects the row writer to stride0x54, and separates user pointers from file offsets. Driver-selector acquisition, registration, cleanup and the mode-dependent F2 walker are checked in 9,563 CPU-model cases. These are static results: running-image identity, live occupancy and VCN execution remain unproven.
 

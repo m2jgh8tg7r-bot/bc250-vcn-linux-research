@@ -1,0 +1,35 @@
+{
+  "classification": "PROVEN_STATICALLY",
+  "source_commit": "0bb924b042ab85b8f529aed6e4f3e24750584276",
+  "scope": "Saved source, not running binary identity; modified files hash-pinned, relevant excerpts match HEAD",
+  "sources": [
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/psp_v11_0_8.c",
+      "sha256": "a89117eb6066a668f23980936d77fa781873759befdf6a2aff21f1fc2fcae52f",
+      "excerpt_line": 175,
+      "excerpt": "static const struct psp_funcs psp_v11_0_8_funcs = {\n\t.ring_create = psp_v11_0_8_ring_create,\n\t.ring_stop = psp_v11_0_8_ring_stop,\n\t.ring_destroy = psp_v11_0_8_ring_destroy,\n\t.ring_get_wptr = psp_v11_0_8_ring_get_wptr,\n\t.ring_set_wptr = psp_v11_0_8_ring_set_wptr,\n};",
+      "excerpt_matches_git_head": true
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_psp.h",
+      "sha256": "9bd9b9409869064d913c0f69dc655c637772d8dc4b18eb023f2be32eed90186f",
+      "excerpt_line": 488,
+      "excerpt": "#define psp_init_microcode(psp) \\\n\t\t((psp)->funcs->init_microcode ? (psp)->funcs->init_microcode((psp)) : 0)",
+      "excerpt_matches_git_head": true
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_psp.c",
+      "sha256": "d0513be4c77d71d72a21ab47764cad16f958e5d193ff21d26d7844ec3be54b1d",
+      "excerpt_line": 250,
+      "excerpt": "case IP_VERSION(11, 0, 8):\n\t\tif (adev->apu_flags & AMD_APU_IS_CYAN_SKILLFISH2) {\n\t\t\tpsp_v11_0_8_set_psp_funcs(psp);\n\t\t}\n\t\tpsp->autoload_supported = false;\n\t\tpsp->boot_time_tmr = false;\n\t\tbreak;",
+      "excerpt_matches_git_head": true
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_device.c",
+      "sha256": "cc9fe304c5e51434bb7a2bc4e04ecd3ce61c95e642ea2e9e8ec910d6eb66b679",
+      "excerpt_line": 1592,
+      "excerpt": "case CHIP_CYAN_SKILLFISH:\n\t\tif ((adev->pdev->device == 0x13FE) ||\n\t\t    (adev->pdev->device == 0x143F))\n\t\t\tadev->apu_flags |= AMD_APU_IS_CYAN_SKILLFISH2;\n\t\tbreak;",
+      "excerpt_matches_git_head": true
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "checked_at": "2026-09-27T09:39:38.717611+00:00",
+  "classification": "PROVEN_STATICALLY",
+  "scope": "Existing bounded CPU text models, synthetic hooks; no PSP execution or hardware access",
+  "result": "PASS",
+  "tests": [
+    {
+      "test": "verify_bootstrap.py",
+      "result": "PASS",
+      "cases": 5979,
+      "positions": 241
+    },
+    {
+      "test": "verify_candidate_header.py",
+      "result": "PASS",
+      "cases": 19,
+      "positions": 141
+    },
+    {
+      "test": "verify_allocation.py",
+      "result": "PASS",
+      "cases": 378,
+      "positions": 131
+    },
+    {
+      "test": "verify_copy_window.py",
+      "result": "PASS",
+      "cases": 1000,
+      "positions": 63
+    },
+    {
+      "test": "verify_boot_mapping.py",
+      "result": "PASS",
+      "cases": 233,
+      "positions": 96
+    },
+    {
+      "test": "verify_loader_placement.py",
+      "result": "PASS",
+      "cases": 18,
+      "positions": 327
+    },
+    {
+      "test": "verify_t28_routes.py",
+      "result": "PASS",
+      "cases": 144,
+      "positions": 190
+    },
+    {
+      "test": "verify_region_state.py",
+      "result": "PASS",
+      "cases": 203,
+      "positions": 257
+    },
+    {
+      "test": "verify_protocol_bridge.py",
+      "result": "PASS",
+      "cases": 27,
+      "positions": 252
+    },
+    {
+      "test": "verify_key_lookup.py",
+      "result": "PASS",
+      "cases": 41,
+      "positions": 76
+    },
+    {
+      "test": "verify_kdb_loader.py",
+      "result": "PASS",
+      "cases": 55,
+      "positions": 61
+    },
+    {
+      "test": "verify_auth_prefix.py",
+      "result": "PASS",
+      "cases": 37,
+      "positions": 146
+    },
+    {
+      "test": "verify_load_rejection.py",
+      "result": "PASS",
+      "cases": 22,
+      "positions": 302
+    },
+    {
+      "test": "verify_init_contract.py",
+      "result": "PASS",
+      "cases": 35,
+      "positions": 258
+    }
+  ],
+  "total_model_cases": 8191,
+  "unique_instruction_positions": 2061,
+  "guards": {
+    "result": "PASS",
+    "negative_controls": [
+      "unseeded_memory",
+      "missing_instruction",
+      "missing_bytes",
+      "unknown_opcode",
+      "unhooked_svc",
+      "unknown_call",
+      "unbounded_loop",
+      "shift_outside_subset",
+      "pc_arithmetic"
+    ],
+    "arithmetic_cases": 252,
+    "limits": [
+      "Synthetic instruction text; placeholder bytes are not disassembled",
+      "Not a general ARM emulator; only bounded supported paths are claimed"
+    ]
+  },
+  "provenance": {
+    "result": "PASS",
+    "images": [
+      {
+        "image": "tos",
+        "sha256": "19f091ded7bea3ee3c61adc3b6a7e1d2a48c8a7817f885bdb43b9c1f2b6bc43d",
+        "result": "PASS",
+        "verified": {
+          "instructions": 6618,
+          "literals": 253,
+          "data": 0
+        },
+        "negative_controls": [
+          "changed image rejected",
+          "changed instruction record rejected"
+        ]
+      },
+      {
+        "image": "t28",
+        "sha256": "ebd9a7d279c5ac5751ebcc76fa7380c2da003e8f9bb49c1a419ef4c951e320e1",
+        "result": "PASS",
+        "verified": {
+          "instructions": 22755,
+          "literals": 977,
+          "data": 363
+        },
+        "negative_controls": [
+          "changed image rejected",
+          "changed instruction record rejected"
+        ]
+      }
+    ],
+    "limits": [
+      "Byte/provenance consistency only; not independent instruction decoding or signature verification"
+    ]
+  },
+  "metadata": {
+    "saved_images": 5,
+    "candidate_kdbs": 10,
+    "matching_signers": 0,
+    "runtime_kdb_identity": "UNPROVEN"
+  },
+  "reproduction": [
+    "python3 run_models.py",
+    "python3 verify_model_guards.py",
+    "python3 verify_provenance.py --tos ../r217-tos-load-response/tos-body.bin --t28 t28-container.bin",
+    "python3 audit_key_metadata.py"
+  ],
+  "local_evidence_hashes": {
+    "audit_image_inventory.py": "1f955e646f034243a8a86a24f90b4cf26d4fc505c400e0f3a00cfeae6bf46585",
+    "audit_key_metadata.py": "f8b0bba8575f26515d049e615f3344412b7a24661c2d20b1cbcf3d9832c39dd2",
+    "build_local_index.py": "72bb11478b458b5707a02875e3df20bed8edb8b96410eb9fa9acc46a6bb98d2e",
+    "build_t28_index.py": "3050c955ed2a06a8c05fb319661a84daf2b9dbc8c86f3664c623a2046f070e35",
+    "checkpoint.py": "71e0785506270c3cdb1600850197fc8a37c9384a0a38c739f14788256a059bba",
+    "run_models.py": "d50badfc8e3302e3976e7ce6dd8da8783aac951d1fde48d1f50234fd6da68b45",
+    "text_arm_model.py": "7a78b02ca52813435a981800474673a06403a715f6ff8c011dde53fc6cb83826",
+    "verify_allocation.py": "45e7caa22947c172947da115db596cdad42802eb795025b93731094313797140",
+    "verify_auth_prefix.py": "92039a2c2ce7ff7fe939733ac6ec91eb91bd54f019b8efbe1ddb7f27029b1cc1",
+    "verify_boot_mapping.py": "437a992edf6832408e54da7ac3c29234f1c1de46f0e63907ae9e7adb8849c072",
+    "verify_bootstrap.py": "d45809fca0a9ebd215d3b1b5feb96cd2f7b9d567d3bcfa7f66912caee2c2b429",
+    "verify_candidate_header.py": "466696d1410bb8baa5cc97922cce3ec36c7830229ce3d6a577e1ab6c1e848c42",
+    "verify_copy_window.py": "4327df06dff10e82a126fe90d66987937a1ea9da8a1be9681c0a94c7fcbf99ef",
+    "verify_init_contract.py": "19a1e9fa24940c040624a9532e74c84f399d3d5ce44476946c64b2d8cbc4e00e",
+    "verify_kdb_loader.py": "6c8523565872b7811eaadb4073f5cb0d39ba083cc8315d71b603c6fb0b250330",
+    "verify_key_lookup.py": "b52a97e8a51301bdb67338aafe910803467dc57aa828385fcd85a6295a5c75c6",
+    "verify_load_rejection.py": "4ca1c7b5e2269edf72c1291656487e9988789e9a22f225a902e7d008db650687",
+    "verify_loader_placement.py": "77f283a9e40d6ec190e856e5aedfb5bb6959b8d1c4958f356227a3272db8f739",
+    "verify_model_guards.py": "732071afd05911940fb46d65d4d71f9ed81ef6d8a3d92e986798d58ba400b3b4",
+    "verify_protocol_bridge.py": "d560f366b3cee3b26ef26054e497208990b067416b8f6070ef032ea6a4f8d954",
+    "verify_provenance.py": "4828f0811a46a3522d1471ea9fdf0d80e12ebaede219c0337864d1098ea2ffb1",
+    "verify_region_state.py": "5fce350e3c5503ec82c7a2c245802a83c59230c5e2816449ccb29fdd6f02f111",
+    "verify_t28_routes.py": "36443b18994aa768bc11a1ecbeea4926bba07d81fd58560238a0e48d13ac163a",
+    "allocation-model-results.json": "ec52a238356b6f5a8cefaec4c8cc74c12d4b9e904d1461b6c24ce871308fb9f2",
+    "auth-prefix-model-results.json": "aebac88a0b19e837d9edd596c445f30a288bf66c8c733794c0fbfaaa24828bff",
+    "boot-mapping-model-results.json": "0100a9c52a4d59f14f13504d354ae804cbcd0ec285917366ef75768a870ca1f0",
+    "bootstrap-model-results.json": "63e745ae5a0a816c4015143283e9b446e106e45a65abf3e7299451f12958fdb3",
+    "candidate-header-model-results.json": "d395488e827318fc77bf8c613326c8ca2f3415d24093cd77ad68b2e5fb76d871",
+    "copy-window-model-results.json": "4689f55204075ba2b275a745d25ea9eae0c3589d7e4cfe7d87bcd741cf3fce9e",
+    "init-contract-model-results.json": "15e6d3889e12fb283fcb9d8b704165af4e1d0358368ad79106d993f796e15dd0",
+    "kdb-loader-model-results.json": "3491f9601141fb0d74313f0bcf915eae4fe0b355ee28392f2ec695cb51b654ee",
+    "key-lookup-model-results.json": "70b7d4783cc50480fca6003d4afb88d6d01f528f16d0184c88a51c996de90d7e",
+    "load-rejection-model-results.json": "4065961675c26c882e739e57bb1c4c01f160c5530d67d3c122d83c07a80dc4b4",
+    "loader-placement-model-results.json": "51b6d754c855609910070452c618a5003f6017d01dfc71ebc5ec87bc971d54d0",
+    "model-guard-results.json": "b8af8df589aa3c4497bedb4bef43666cf2e0f3578e37f420f928dd732790a6a5",
+    "protocol-bridge-model-results.json": "3aeb2185fcf85aa717c381ff09ab3382ccd3cc13e7ed33a59b841ec225504694",
+    "provenance-results.json": "10d2df63e2736ef01b5cc7c3c0e309b4a89020c1ccbd80d50171403240f58c08",
+    "region-state-model-results.json": "2ed8c5520f0688a39d5fd4bb0db4ffd2a3ea1e0a9c413e10a6ead86a23d65b73",
+    "suite-results.json": "d0ee470588999acd504c95956d31aa69f6017856357435fc7f1aec9c5fcef33e",
+    "t28-route-model-results.json": "50c8c3e317c65d773989526d501489dc52cff91d1903b257d09c9469eef77ba7",
+    "key-metadata-audit.json": "8da8e7ff14274b246b72e59b324d3b4746935b16cb75738232ba4d67a8dff9dc",
+    "local-instruction-index.json": "639421e083078e0ed9aacd118ea18a0b1f022ad7b86b6b40a04cb91cc0baed6c",
+    "t28-instruction-index.json": "1ed6c27082194bf3b01f7b90fa95ca513220aa263ac089c7d2b202d38c4c5321"
+  }
+}

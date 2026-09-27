@@ -1,0 +1,78 @@
+{
+  "checked_at": "2026-09-27T09:36:04.783998+00:00",
+  "scope": "Named default branches and bounded Linux path history; not all branches, mailing lists or private reports",
+  "sources": [
+    {
+      "repository": "m2jgh8tg7r-bot/bc250-vcn-linux-research",
+      "sha": "f4a7fec5b40f8ba9a3022ea1c5653af8544f18e1",
+      "date": "2026-09-23T12:33:12Z",
+      "subject": "R232: reconcile PSP registration contracts and restore research evidence"
+    },
+    {
+      "repository": "Shalasere/bc250-vcn-research",
+      "sha": "edb222c65477b6ebc63834ef3562855009179539",
+      "date": "2026-09-20T20:36:08Z",
+      "subject": "Session 15: TOCTOU analysis \u2014 all 6 VCN gates dead for runtime software"
+    },
+    {
+      "repository": "katzzero/bc250-unofficial-community-guide",
+      "sha": "ee8df9405daf50abd046530eab0dfcad232253c0",
+      "date": "2026-09-26T13:14:06Z",
+      "subject": "Sep 26: kernel 7.2.x, encode stopgap, VCN PSP, Reddit doc 14"
+    },
+    {
+      "repository": "daveconde/bc250-vcn-enable",
+      "sha": "7c511b725b135766c52a3e13776c1cd187e5015d",
+      "date": "2026-08-24T10:06:18Z",
+      "subject": "Fixes"
+    },
+    {
+      "repository": "simpmix/bc250-encoding-decoding-fix",
+      "sha": "7d9c38bdfdc469505eeb94864a203c0b4ffee12c",
+      "date": "2026-09-27T08:30:31Z",
+      "subject": "fix(encoder_h264): close #ifdef BC250_HAVE_X264 and remove unused threads variable"
+    },
+    {
+      "repository": "Shalasere/bc250-vulkan-encode-stopgap",
+      "sha": "732dfb57dda4e08c4b31d95039e99dc232d0a809",
+      "date": "2026-09-26T13:48:00Z",
+      "subject": "vaapi: reject external DMA-BUF import in CreateSurfaces2; fix live RDNA2 vendor-string/doc misattribution"
+    },
+    {
+      "repository": "torvalds/linux",
+      "path": "drivers/gpu/drm/amd/amdgpu/psp_v11_0_8.c",
+      "since": "2026-09-23T12:33:12Z",
+      "commits": []
+    },
+    {
+      "repository": "torvalds/linux",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_psp.c",
+      "since": "2026-09-23T12:33:12Z",
+      "commits": []
+    },
+    {
+      "repository": "torvalds/linux",
+      "path": "drivers/gpu/drm/amd/amdgpu/soc15.c",
+      "since": "2026-09-23T12:33:12Z",
+      "commits": []
+    },
+    {
+      "repository": "torvalds/linux",
+      "path": "drivers/crypto/ccp",
+      "since": "2026-09-23T12:33:12Z",
+      "commits": []
+    },
+    {
+      "repository": "torvalds/linux",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.c",
+      "since": "2026-09-23T12:33:12Z",
+      "commits": []
+    },
+    {
+      "repository": "torvalds/linux",
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "since": "2026-09-23T12:33:12Z",
+      "commits": []
+    }
+  ]
+}
