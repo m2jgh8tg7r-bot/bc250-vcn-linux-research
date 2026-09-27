@@ -1,0 +1,29 @@
+{
+  "cpu_model": "AMD BC-250",
+  "os_reported_logical_cpus": 16,
+  "affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "governors": [
+    "performance"
+  ],
+  "cpus_online": "0-15",
+  "image_id": "20edf197e69eecb12f76b3307e960e56e0a7e2f6471d1f046ce13d2095309313",
+  "start_utc": "2026-09-27T11:58:56Z",
+  "target_active_seconds": 1200
+}

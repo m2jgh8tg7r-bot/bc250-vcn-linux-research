@@ -1,0 +1,135 @@
+{
+  "result": "PASS",
+  "matched_setting_pairs": 16,
+  "pairs": [
+    {
+      "case": "1280x720-high-s1",
+      "thread_setting": 1,
+      "ffmpeg_fps_ratio": 2.456736191906961,
+      "candidate_cpu_cost_ratio": 2.1454305070700888,
+      "ffmpeg_faster": true,
+      "ffmpeg_less_cpu_per_frame": true
+    },
+    {
+      "case": "1280x720-high-s1",
+      "thread_setting": 2,
+      "ffmpeg_fps_ratio": 3.1525040645088622,
+      "candidate_cpu_cost_ratio": 2.348030508395885,
+      "ffmpeg_faster": true,
+      "ffmpeg_less_cpu_per_frame": true
+    },
+    {
+      "case": "1280x720-high-s1",
+      "thread_setting": 4,
+      "ffmpeg_fps_ratio": 3.7987754545914965,
+      "candidate_cpu_cost_ratio": 2.560821848199645,
+      "ffmpeg_faster": true,
+      "ffmpeg_less_cpu_per_frame": true
+    },
+    {
+      "case": "1280x720-high-s1",
+      "thread_setting": 8,
+      "ffmpeg_fps_ratio": 4.211380025521989,
+      "candidate_cpu_cost_ratio": 3.337016190982728,
+      "ffmpeg_faster": true,
+      "ffmpeg_less_cpu_per_frame": true
+    },
+    {
+      "case": "1280x720-high-s4",
+      "thread_setting": 1,
+      "ffmpeg_fps_ratio": 2.469248725503541,
+      "candidate_cpu_cost_ratio": 2.1378231067162226,
+      "ffmpeg_faster": true,
+      "ffmpeg_less_cpu_per_frame": true
+    },
+    {
+      "case": "1280x720-high-s4",
+      "thread_setting": 2,
+      "ffmpeg_fps_ratio": 2.399674295487486,
+      "candidate_cpu_cost_ratio": 2.1701771552382,
+      "ffmpeg_faster": true,
+      "ffmpeg_less_cpu_per_frame": true
+    },
+    {
+      "case": "1280x720-high-s4",
+      "thread_setting": 4,
+      "ffmpeg_fps_ratio": 2.7054497445483747,
+      "candidate_cpu_cost_ratio": 2.2918014129163,
+      "ffmpeg_faster": true,
+      "ffmpeg_less_cpu_per_frame": true
+    },
+    {
+      "case": "1280x720-high-s4",
+      "thread_setting": 8,
+      "ffmpeg_fps_ratio": 3.408241264896781,
+      "candidate_cpu_cost_ratio": 2.92658124066065,
+      "ffmpeg_faster": true,
+      "ffmpeg_less_cpu_per_frame": true
+    },
+    {
+      "case": "1920x1080-high-s1",
+      "thread_setting": 1,
+      "ffmpeg_fps_ratio": 2.7727368130231675,
+      "candidate_cpu_cost_ratio": 2.3739840024114836,
+      "ffmpeg_faster": true,
+      "ffmpeg_less_cpu_per_frame": true
+    },
+    {
+      "case": "1920x1080-high-s1",
+      "thread_setting": 2,
+      "ffmpeg_fps_ratio": 3.7320132913538906,
+      "candidate_cpu_cost_ratio": 2.5631421429603263,
+      "ffmpeg_faster": true,
+      "ffmpeg_less_cpu_per_frame": true
+    },
+    {
+      "case": "1920x1080-high-s1",
+      "thread_setting": 4,
+      "ffmpeg_fps_ratio": 4.754248172952646,
+      "candidate_cpu_cost_ratio": 2.6703901415368647,
+      "ffmpeg_faster": true,
+      "ffmpeg_less_cpu_per_frame": true
+    },
+    {
+      "case": "1920x1080-high-s1",
+      "thread_setting": 8,
+      "ffmpeg_fps_ratio": 5.627140278442083,
+      "candidate_cpu_cost_ratio": 3.1983011441933193,
+      "ffmpeg_faster": true,
+      "ffmpeg_less_cpu_per_frame": true
+    },
+    {
+      "case": "1920x1080-high-s4",
+      "thread_setting": 1,
+      "ffmpeg_fps_ratio": 2.7640836822084434,
+      "candidate_cpu_cost_ratio": 2.3440435706169755,
+      "ffmpeg_faster": true,
+      "ffmpeg_less_cpu_per_frame": true
+    },
+    {
+      "case": "1920x1080-high-s4",
+      "thread_setting": 2,
+      "ffmpeg_fps_ratio": 2.9481298513076934,
+      "candidate_cpu_cost_ratio": 2.441970280337497,
+      "ffmpeg_faster": true,
+      "ffmpeg_less_cpu_per_frame": true
+    },
+    {
+      "case": "1920x1080-high-s4",
+      "thread_setting": 4,
+      "ffmpeg_fps_ratio": 3.822213935866548,
+      "candidate_cpu_cost_ratio": 2.642596518988606,
+      "ffmpeg_faster": true,
+      "ffmpeg_less_cpu_per_frame": true
+    },
+    {
+      "case": "1920x1080-high-s4",
+      "thread_setting": 8,
+      "ffmpeg_fps_ratio": 4.827515337887569,
+      "candidate_cpu_cost_ratio": 3.060943944127928,
+      "ffmpeg_faster": true,
+      "ffmpeg_less_cpu_per_frame": true
+    }
+  ],
+  "limits": "Settings identify requested parallelism, not equal OS thread counts; no universal workload claim"
+}

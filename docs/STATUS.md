@@ -1,6 +1,10 @@
 # Current status
 
-## Latest — R244, 2026-09-27
+## Latest — R246, 2026-09-27
+
+[R245–R246 handoff](CHATGPT_HANDOFF_R246.md) adds a controlled CPU throughput comparison, input-paced CPU-load controls, and24 exact B-picture output checks. FFmpeg software decode is faster and lower-cost than the custom CPU harness in this synthetic I/P matrix. Paced CPU measurements exceed simple unpaced estimates. These results do not establish dedicated VCN or complete-player performance.
+
+### Previous — R244, 2026-09-27
 
 [R236–R244 research handoff](CHATGPT_HANDOFF_R244.md) adds official control-file provenance, ten verified container checksums, 21-version VCN signer metadata and current source/interface checks. Running PSP/KDB identity and dedicated VCN operation remain unproven.
 

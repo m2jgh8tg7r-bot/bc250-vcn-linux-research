@@ -1,0 +1,35 @@
+{
+  "accepted": [
+    "Clarify output hashes against the saved FFmpeg reference for every decoder/clip/thread setting",
+    "Record CPU affinity and governor without changing them",
+    "Label null-output warm-cache synthetic throughput; no display or power inference",
+    "Record custom internal timing separately from full process timing"
+  ],
+  "rejected": [
+    "Container launch exclusion and process startup inclusion are not contradictory",
+    "Core-demand estimate is measured CPU seconds/frame times target fps; not target/observed fps times available cores",
+    "The plan already measures candidate full-process wall time, not just its internal timer"
+  ],
+  "q36_seconds": 48.53230938199704,
+  "tool_output_advisory_only": true,
+  "requested_six_points_but_returned_ten": true,
+  "wait_excluded_from_research_budget_seconds": 0,
+  "wait_accounting": "Other preparation continued throughout Q36 execution; no idle wait deducted",
+  "second_review": {
+    "seconds": 53.16532359300254,
+    "accepted": [
+      "Broad table direction agrees with independently computed16 paired comparisons",
+      "Keep slice configurations separate and distinguish throughput from CPU demand"
+    ],
+    "rejected": [
+      "Approximate speed ratio2.5\u20134 is inaccurate; actual median ratios2.40\u20135.63",
+      "Calling the lack of real-time-deadline proof an overclaim is incorrect: average throughput cannot establish every frame deadline",
+      "Review strayed into one-slice results while commenting on explicitly four-slice statements"
+    ],
+    "requested_four_bullets_but_returned_five": true,
+    "timed_benchmark_overlap": false,
+    "correctness_only_overlap": true,
+    "new_primary_evidence": false
+  },
+  "total_q36_seconds": 101.69763297499958
+}

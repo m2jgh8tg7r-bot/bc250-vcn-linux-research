@@ -1,0 +1,25 @@
+{
+  "source_commit": "7d9c38bdfdc469505eeb94864a203c0b4ffee12c",
+  "files": [
+    {
+      "path": "src/h264_threads.c",
+      "sha256": "edc05c619d0fdb8d91673a0db5b55835e82dcb5e38c3084f594cfa4d2828a3bb",
+      "upstream_url": "https://github.com/simpmix/bc250-encoding-decoding-fix/blob/7d9c38bdfdc469505eeb94864a203c0b4ffee12c/approach1-compute-encoder/src/h264_threads.c",
+      "local_diagnostic_change": false
+    },
+    {
+      "path": "src/decoder_h264.c",
+      "sha256": "70c3e60698a4cc666bbe6d95ceeb41a799c0487309b0381d97237a7f3e2138b6",
+      "upstream_url": "https://github.com/simpmix/bc250-encoding-decoding-fix/blob/7d9c38bdfdc469505eeb94864a203c0b4ffee12c/approach1-compute-encoder/src/decoder_h264.c",
+      "local_diagnostic_change": false
+    },
+    {
+      "path": "tools/h264dec.c",
+      "sha256": "65ec985ef4e19dab9a3f5ab69f9b96b5ec0e3c84f419737738a7d473ea54ad26",
+      "upstream_url": "https://github.com/simpmix/bc250-encoding-decoding-fix/blob/7d9c38bdfdc469505eeb94864a203c0b4ffee12c/approach1-compute-encoder/tools/h264dec.c",
+      "local_diagnostic_change": true
+    }
+  ],
+  "thread_setting_note": "candidate >=2 creates N workers plus caller; setting1 has no worker pool",
+  "original_decoder_core_modified": false
+}

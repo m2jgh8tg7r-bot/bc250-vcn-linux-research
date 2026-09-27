@@ -1,0 +1,49 @@
+{
+  "result": "PASS",
+  "scope": "FFmpeg CPU input pacing only, no display/audio",
+  "configurations": [
+    {
+      "threads": 1,
+      "nominal_fps": 30,
+      "measured_fps_median": 30.818624222765575,
+      "measured_busy_core_median": 0.3348797696914631,
+      "measured_busy_core_min": 0.331829007124907,
+      "measured_busy_core_max": 0.33549403125087734,
+      "unpaced_derived_core_estimate": 0.1814238281250001,
+      "actual_over_estimate": 1.8458422642296612
+    },
+    {
+      "threads": 1,
+      "nominal_fps": 60,
+      "measured_fps_median": 60.60731301370276,
+      "measured_busy_core_median": 0.5227516482559968,
+      "measured_busy_core_min": 0.5161317190976891,
+      "measured_busy_core_max": 0.5240487903171291,
+      "unpaced_derived_core_estimate": 0.3628476562500002,
+      "actual_over_estimate": 1.4406918144617245
+    },
+    {
+      "threads": 4,
+      "nominal_fps": 30,
+      "measured_fps_median": 30.81621551967399,
+      "measured_busy_core_median": 0.3510433581047031,
+      "measured_busy_core_min": 0.35028238832275943,
+      "measured_busy_core_max": 0.35162024162999267,
+      "unpaced_derived_core_estimate": 0.19831945312500654,
+      "actual_over_estimate": 1.770090389889439
+    },
+    {
+      "threads": 4,
+      "nominal_fps": 60,
+      "measured_fps_median": 60.54156289664622,
+      "measured_busy_core_median": 0.6000503598251861,
+      "measured_busy_core_min": 0.5592862126693467,
+      "measured_busy_core_max": 0.6285481817645027,
+      "unpaced_derived_core_estimate": 0.3966389062500131,
+      "actual_over_estimate": 1.5128378743737176
+    }
+  ],
+  "cause_of_difference": "UNPROVEN",
+  "trials": 12,
+  "frames": 4608
+}

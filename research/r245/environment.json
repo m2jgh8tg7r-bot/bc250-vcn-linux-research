@@ -1,0 +1,63 @@
+{
+  "gpu_device_exposed": false,
+  "affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "cpu_max": "max 100000",
+  "cpu_stat_before": "usage_usec 113810\nuser_usec 64004\nsystem_usec 49805\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+  "candidate_sha256": "16067ad4f19e5fe217c093c14c84e4f6decce3cae412069c5253b7df1a318de5",
+  "ffmpeg_sha256": "a7ee46028d7b538b8b996ac3fa92785c858843d134aab12f6ecc3fe2b72663a2",
+  "frames_per_trial": 384,
+  "trials": 5,
+  "shuffle_seed": 245,
+  "container_launch_timed": false,
+  "process_startup_timed": true,
+  "output": "/dev/null rawvideo",
+  "q36_concurrent": false,
+  "fixtures": [
+    {
+      "case": "1280x720-high-s1",
+      "original_sha256": "902b964689c7ea3c6747764d5013089b3fb7ecbeeebb691384edaa75b48875cd",
+      "extended_sha256": "fb5ce356fd8ecfe78be4c08430e64a77df8b739d5b5fc0895a68edc31df71a03",
+      "frames": 384,
+      "repeats": 4
+    },
+    {
+      "case": "1280x720-high-s4",
+      "original_sha256": "636eca47ffa8bd51a40d143e27b1f3b4eb7baa2a90fef6d5a60ded07fc18daea",
+      "extended_sha256": "df9257af0bf81df8992f122eff660140295e45c376a915df9db68b8912f03fac",
+      "frames": 384,
+      "repeats": 4
+    },
+    {
+      "case": "1920x1080-high-s1",
+      "original_sha256": "3d705f58a205264cbebd3a9360c1ea41cd2c3f4ccf2f51206a084b11b3f5820d",
+      "extended_sha256": "825ba56e9f24c5cb956032e406363c55f23c86d6dc11231c61fffe1d0192b853",
+      "frames": 384,
+      "repeats": 4
+    },
+    {
+      "case": "1920x1080-high-s4",
+      "original_sha256": "fc365397293566320d7fbc092593442349cbe31a85b04bd756d1d7ae50bf5017",
+      "extended_sha256": "e2160bf5349842bc438bff365a5eee869bfb22e2ed7ec4a283adc1e16f1cfbc0",
+      "frames": 384,
+      "repeats": 4
+    }
+  ],
+  "cpu_stat_after": "usage_usec 693617102\nuser_usec 653135581\nsystem_usec 40481521\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n"
+}

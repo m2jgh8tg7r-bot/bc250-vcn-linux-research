@@ -1,0 +1,25 @@
+{
+  "result": "PASS",
+  "unique_clips": 8,
+  "unique_frames": 768,
+  "unique_picture_counts": {
+    "I": 16,
+    "P": 292,
+    "B": 460
+  },
+  "worker_settings": [
+    1,
+    2,
+    8
+  ],
+  "matched_configurations": 24,
+  "decoded_frames": 2304,
+  "pic_order_cnt_type": [
+    0
+  ],
+  "new_decoder_core_changes": false,
+  "new_harness_changes": false,
+  "timing_is_benchmark": false,
+  "mmco5_covered": false,
+  "dedicated_vcn_proven": false
+}

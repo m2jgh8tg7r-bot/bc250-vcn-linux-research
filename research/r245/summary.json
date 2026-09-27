@@ -1,0 +1,1332 @@
+{
+  "result": "PASS",
+  "configurations": 32,
+  "warmups": 32,
+  "measured_trials": 160,
+  "measured_frames": 61440,
+  "excluded_measured_trials": 0,
+  "summary": [
+    {
+      "case": "1280x720-high-s1",
+      "engine": "candidate",
+      "threads": 1,
+      "trials": 5,
+      "fps": {
+        "median": 153.04979699951377,
+        "minimum": 151.6397372848848,
+        "maximum": 153.4039947952976
+      },
+      "wall_seconds": {
+        "median": 2.5089873199976864,
+        "minimum": 2.5031942650020937,
+        "maximum": 2.5323177610007406
+      },
+      "cpu_seconds": {
+        "median": 2.495760000000004,
+        "minimum": 2.4911620000000454,
+        "maximum": 2.519975999999996
+      },
+      "average_busy_cores": {
+        "median": 0.9951262984484747,
+        "minimum": 0.9935349119715334,
+        "maximum": 0.9952250648986138
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.006499375000000011,
+        "minimum": 0.006487401041666785,
+        "maximum": 0.00656243749999999
+      },
+      "estimated_cores_at_30fps": {
+        "median": 0.19498125000000033,
+        "minimum": 0.19462203125000355,
+        "maximum": 0.1968731249999997
+      },
+      "estimated_cores_at_60fps": {
+        "median": 0.38996250000000066,
+        "minimum": 0.3892440625000071,
+        "maximum": 0.3937462499999994
+      }
+    },
+    {
+      "case": "1280x720-high-s1",
+      "engine": "candidate",
+      "threads": 2,
+      "trials": 5,
+      "fps": {
+        "median": 192.80556778725145,
+        "minimum": 191.79863713213447,
+        "maximum": 193.6735915095904
+      },
+      "wall_seconds": {
+        "median": 1.9916437290012254,
+        "minimum": 1.9827174009988084,
+        "maximum": 2.0020997319988965
+      },
+      "cpu_seconds": {
+        "median": 2.8341009999999898,
+        "minimum": 2.825224000000004,
+        "maximum": 2.848389999999984
+      },
+      "average_busy_cores": {
+        "median": 1.4243707138438328,
+        "minimum": 1.4147385485890651,
+        "maximum": 1.424925205466385
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.00738047135416664,
+        "minimum": 0.007357354166666677,
+        "maximum": 0.007417682291666626
+      },
+      "estimated_cores_at_30fps": {
+        "median": 0.2214141406249992,
+        "minimum": 0.2207206250000003,
+        "maximum": 0.22253046874999877
+      },
+      "estimated_cores_at_60fps": {
+        "median": 0.4428282812499984,
+        "minimum": 0.4414412500000006,
+        "maximum": 0.44506093749999753
+      }
+    },
+    {
+      "case": "1280x720-high-s1",
+      "engine": "candidate",
+      "threads": 4,
+      "trials": 5,
+      "fps": {
+        "median": 230.98025316219338,
+        "minimum": 225.438572602402,
+        "maximum": 231.76952100064807
+      },
+      "wall_seconds": {
+        "median": 1.6624797780023073,
+        "minimum": 1.65681837000011,
+        "maximum": 1.7033464839987573
+      },
+      "cpu_seconds": {
+        "median": 3.285810999999983,
+        "minimum": 3.2705829999999807,
+        "maximum": 3.439182000000013
+      },
+      "average_busy_cores": {
+        "median": 1.9741096193883452,
+        "minimum": 1.9716603754275335,
+        "maximum": 2.0190736484371796
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.008556799479166622,
+        "minimum": 0.008517143229166616,
+        "maximum": 0.008956203125000034
+      },
+      "estimated_cores_at_30fps": {
+        "median": 0.25670398437499864,
+        "minimum": 0.2555142968749985,
+        "maximum": 0.268686093750001
+      },
+      "estimated_cores_at_60fps": {
+        "median": 0.5134079687499973,
+        "minimum": 0.511028593749997,
+        "maximum": 0.537372187500002
+      }
+    },
+    {
+      "case": "1280x720-high-s1",
+      "engine": "candidate",
+      "threads": 8,
+      "trials": 5,
+      "fps": {
+        "median": 240.08492028662857,
+        "minimum": 239.6939449884762,
+        "maximum": 241.05655752064376
+      },
+      "wall_seconds": {
+        "median": 1.5994340650031518,
+        "minimum": 1.592987156000163,
+        "maximum": 1.6020429720010725
+      },
+      "cpu_seconds": {
+        "median": 4.517785999999997,
+        "minimum": 4.363348999999992,
+        "maximum": 4.551314000000012
+      },
+      "average_busy_cores": {
+        "median": 2.8252610233813775,
+        "minimum": 2.7236154561758354,
+        "maximum": 2.8455777575245302
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.011765067708333327,
+        "minimum": 0.011362888020833314,
+        "maximum": 0.011852380208333365
+      },
+      "estimated_cores_at_30fps": {
+        "median": 0.3529520312499998,
+        "minimum": 0.3408866406249994,
+        "maximum": 0.35557140625000094
+      },
+      "estimated_cores_at_60fps": {
+        "median": 0.7059040624999996,
+        "minimum": 0.6817732812499988,
+        "maximum": 0.7111428125000019
+      }
+    },
+    {
+      "case": "1280x720-high-s1",
+      "engine": "ffmpeg",
+      "threads": 1,
+      "trials": 5,
+      "fps": {
+        "median": 376.0029754527189,
+        "minimum": 371.24831606171773,
+        "maximum": 379.0798180371467
+      },
+      "wall_seconds": {
+        "median": 1.0212685139995301,
+        "minimum": 1.0129792769985215,
+        "maximum": 1.0343481260024419
+      },
+      "cpu_seconds": {
+        "median": 1.163290999999969,
+        "minimum": 1.1600700000000082,
+        "maximum": 1.1913499999999502
+      },
+      "average_busy_cores": {
+        "median": 1.142492495483946,
+        "minimum": 1.13774037852574,
+        "maximum": 1.1517882326565336
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.0030294036458332527,
+        "minimum": 0.003021015625000021,
+        "maximum": 0.0031024739583332037
+      },
+      "estimated_cores_at_30fps": {
+        "median": 0.09088210937499758,
+        "minimum": 0.09063046875000064,
+        "maximum": 0.09307421874999611
+      },
+      "estimated_cores_at_60fps": {
+        "median": 0.18176421874999515,
+        "minimum": 0.18126093750000127,
+        "maximum": 0.18614843749999221
+      }
+    },
+    {
+      "case": "1280x720-high-s1",
+      "engine": "ffmpeg",
+      "threads": 2,
+      "trials": 5,
+      "fps": {
+        "median": 607.8203361092492,
+        "minimum": 596.6049607403194,
+        "maximum": 609.2274252180542
+      },
+      "wall_seconds": {
+        "median": 0.6317656339997484,
+        "minimum": 0.6303064899984747,
+        "maximum": 0.6436419830024533
+      },
+      "cpu_seconds": {
+        "median": 1.2070120000000237,
+        "minimum": 1.1937330000000301,
+        "maximum": 1.211356999999996
+      },
+      "average_busy_cores": {
+        "median": 1.8909054586714875,
+        "minimum": 1.8820354047591372,
+        "maximum": 1.9160015991259507
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.0031432604166667286,
+        "minimum": 0.0031086796875000786,
+        "maximum": 0.003154575520833323
+      },
+      "estimated_cores_at_30fps": {
+        "median": 0.09429781250000185,
+        "minimum": 0.09326039062500235,
+        "maximum": 0.09463726562499969
+      },
+      "estimated_cores_at_60fps": {
+        "median": 0.1885956250000037,
+        "minimum": 0.1865207812500047,
+        "maximum": 0.18927453124999938
+      }
+    },
+    {
+      "case": "1280x720-high-s1",
+      "engine": "ffmpeg",
+      "threads": 4,
+      "trials": 5,
+      "fps": {
+        "median": 877.4421162078701,
+        "minimum": 834.4294872049101,
+        "maximum": 917.698194686432
+      },
+      "wall_seconds": {
+        "median": 0.4376357059991278,
+        "minimum": 0.4184382210005424,
+        "maximum": 0.4601946670009056
+      },
+      "cpu_seconds": {
+        "median": 1.283108000000091,
+        "minimum": 1.1987740000000073,
+        "maximum": 1.3388340000000039
+      },
+      "average_busy_cores": {
+        "median": 2.90927752102214,
+        "minimum": 2.864876915721457,
+        "maximum": 2.9449630876383748
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.00334142708333357,
+        "minimum": 0.003121807291666686,
+        "maximum": 0.00348654687500001
+      },
+      "estimated_cores_at_30fps": {
+        "median": 0.1002428125000071,
+        "minimum": 0.09365421875000057,
+        "maximum": 0.1045964062500003
+      },
+      "estimated_cores_at_60fps": {
+        "median": 0.2004856250000142,
+        "minimum": 0.18730843750000115,
+        "maximum": 0.2091928125000006
+      }
+    },
+    {
+      "case": "1280x720-high-s1",
+      "engine": "ffmpeg",
+      "threads": 8,
+      "trials": 5,
+      "fps": {
+        "median": 1011.0888377241466,
+        "minimum": 994.4856985313314,
+        "maximum": 1036.5936928714736
+      },
+      "wall_seconds": {
+        "median": 0.3797885860003589,
+        "minimum": 0.3704440830006206,
+        "maximum": 0.38612923299660906
+      },
+      "cpu_seconds": {
+        "median": 1.3538399999999822,
+        "minimum": 1.3093950000000518,
+        "maximum": 1.3791639999999745
+      },
+      "average_busy_cores": {
+        "median": 3.553296089720513,
+        "minimum": 3.534663016868482,
+        "maximum": 3.654703213416068
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.0035256249999999537,
+        "minimum": 0.003409882812500135,
+        "maximum": 0.0035915729166666
+      },
+      "estimated_cores_at_30fps": {
+        "median": 0.1057687499999986,
+        "minimum": 0.10229648437500405,
+        "maximum": 0.10774718749999801
+      },
+      "estimated_cores_at_60fps": {
+        "median": 0.2115374999999972,
+        "minimum": 0.2045929687500081,
+        "maximum": 0.21549437499999602
+      }
+    },
+    {
+      "case": "1280x720-high-s4",
+      "engine": "candidate",
+      "threads": 1,
+      "trials": 5,
+      "fps": {
+        "median": 153.37691713930155,
+        "minimum": 151.6617278715988,
+        "maximum": 154.699051490648
+      },
+      "wall_seconds": {
+        "median": 2.503636186997028,
+        "minimum": 2.482238878001226,
+        "maximum": 2.531950581000274
+      },
+      "cpu_seconds": {
+        "median": 2.491014999999976,
+        "minimum": 2.4702439999999086,
+        "maximum": 2.5182419999999652
+      },
+      "average_busy_cores": {
+        "median": 0.9951089377904988,
+        "minimum": 0.9940640306674757,
+        "maximum": 0.9953525441402009
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.006487018229166604,
+        "minimum": 0.006432927083333095,
+        "maximum": 0.00655792187499991
+      },
+      "estimated_cores_at_30fps": {
+        "median": 0.19461054687499812,
+        "minimum": 0.19298781249999286,
+        "maximum": 0.19673765624999728
+      },
+      "estimated_cores_at_60fps": {
+        "median": 0.38922109374999625,
+        "minimum": 0.3859756249999857,
+        "maximum": 0.39347531249999457
+      }
+    },
+    {
+      "case": "1280x720-high-s4",
+      "engine": "candidate",
+      "threads": 2,
+      "trials": 5,
+      "fps": {
+        "median": 254.30641422279555,
+        "minimum": 251.6979096914745,
+        "maximum": 266.0811381228807
+      },
+      "wall_seconds": {
+        "median": 1.5099894399972982,
+        "minimum": 1.4431688119984756,
+        "maximum": 1.5256384149979567
+      },
+      "cpu_seconds": {
+        "median": 2.5971529999999774,
+        "minimum": 2.531755000000075,
+        "maximum": 2.6095289999999522
+      },
+      "average_busy_cores": {
+        "median": 1.7186736967629193,
+        "minimum": 1.7057836149110521,
+        "maximum": 1.754302739188317
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.006763419270833275,
+        "minimum": 0.006593111979166862,
+        "maximum": 0.006795648437499875
+      },
+      "estimated_cores_at_30fps": {
+        "median": 0.20290257812499823,
+        "minimum": 0.19779335937500586,
+        "maximum": 0.20386945312499627
+      },
+      "estimated_cores_at_60fps": {
+        "median": 0.40580515624999647,
+        "minimum": 0.3955867187500117,
+        "maximum": 0.40773890624999254
+      }
+    },
+    {
+      "case": "1280x720-high-s4",
+      "engine": "candidate",
+      "threads": 4,
+      "trials": 5,
+      "fps": {
+        "median": 327.7538769477535,
+        "minimum": 319.4897418688069,
+        "maximum": 333.7734742141201
+      },
+      "wall_seconds": {
+        "median": 1.1716108549990167,
+        "minimum": 1.1504808789977687,
+        "maximum": 1.2019165239980794
+      },
+      "cpu_seconds": {
+        "median": 2.8956589999999807,
+        "minimum": 2.8553299999999595,
+        "maximum": 2.999526999999972
+      },
+      "average_busy_cores": {
+        "median": 2.4799706678855484,
+        "minimum": 2.4698581547685023,
+        "maximum": 2.4956200702044473
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.007540778645833283,
+        "minimum": 0.007435755208333228,
+        "maximum": 0.007811268229166594
+      },
+      "estimated_cores_at_30fps": {
+        "median": 0.2262233593749985,
+        "minimum": 0.22307265624999684,
+        "maximum": 0.23433804687499782
+      },
+      "estimated_cores_at_60fps": {
+        "median": 0.452446718749997,
+        "minimum": 0.4461453124999937,
+        "maximum": 0.46867609374999564
+      }
+    },
+    {
+      "case": "1280x720-high-s4",
+      "engine": "candidate",
+      "threads": 8,
+      "trials": 5,
+      "fps": {
+        "median": 305.2372279250338,
+        "minimum": 303.13882036443715,
+        "maximum": 307.4853845658428
+      },
+      "wall_seconds": {
+        "median": 1.258037896001042,
+        "minimum": 1.2488398449968372,
+        "maximum": 1.2667463690013392
+      },
+      "cpu_seconds": {
+        "median": 3.9835979999999793,
+        "minimum": 3.9442090000000363,
+        "maximum": 4.011630999999969
+      },
+      "average_busy_cores": {
+        "median": 3.1668778361390575,
+        "minimum": 3.1582984926382016,
+        "maximum": 3.1761850450198033
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.010373953124999946,
+        "minimum": 0.010271377604166762,
+        "maximum": 0.010446955729166587
+      },
+      "estimated_cores_at_30fps": {
+        "median": 0.3112185937499984,
+        "minimum": 0.30814132812500283,
+        "maximum": 0.3134086718749976
+      },
+      "estimated_cores_at_60fps": {
+        "median": 0.6224371874999968,
+        "minimum": 0.6162826562500057,
+        "maximum": 0.6268173437499952
+      }
+    },
+    {
+      "case": "1280x720-high-s4",
+      "engine": "ffmpeg",
+      "threads": 1,
+      "trials": 5,
+      "fps": {
+        "median": 378.7257571678826,
+        "minimum": 371.5476018167285,
+        "maximum": 380.4493065694189
+      },
+      "wall_seconds": {
+        "median": 1.0139262850025261,
+        "minimum": 1.0093328949988063,
+        "maximum": 1.0335149470010947
+      },
+      "cpu_seconds": {
+        "median": 1.1652110000000278,
+        "minimum": 1.1533670000000011,
+        "maximum": 1.196616000000013
+      },
+      "average_busy_cores": {
+        "median": 1.142702279609509,
+        "minimum": 1.1389637605464802,
+        "maximum": 1.1578119924362793
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.0030344036458334056,
+        "minimum": 0.003003559895833336,
+        "maximum": 0.003116187500000034
+      },
+      "estimated_cores_at_30fps": {
+        "median": 0.09103210937500217,
+        "minimum": 0.09010679687500009,
+        "maximum": 0.09348562500000102
+      },
+      "estimated_cores_at_60fps": {
+        "median": 0.18206421875000434,
+        "minimum": 0.18021359375000018,
+        "maximum": 0.18697125000000203
+      }
+    },
+    {
+      "case": "1280x720-high-s4",
+      "engine": "ffmpeg",
+      "threads": 2,
+      "trials": 5,
+      "fps": {
+        "median": 610.2525653880357,
+        "minimum": 599.7752979320791,
+        "maximum": 611.7877670598864
+      },
+      "wall_seconds": {
+        "median": 0.6292476620001253,
+        "minimum": 0.6276686469973356,
+        "maximum": 0.6402397720012232
+      },
+      "cpu_seconds": {
+        "median": 1.1967470000000588,
+        "minimum": 1.1859790000000245,
+        "maximum": 1.2036190000000087
+      },
+      "average_busy_cores": {
+        "median": 1.8909134293170504,
+        "minimum": 1.8799503758378027,
+        "maximum": 1.9044806558213159
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.0031165286458334864,
+        "minimum": 0.0030884869791667304,
+        "maximum": 0.003134424479166689
+      },
+      "estimated_cores_at_30fps": {
+        "median": 0.0934958593750046,
+        "minimum": 0.09265460937500192,
+        "maximum": 0.09403273437500068
+      },
+      "estimated_cores_at_60fps": {
+        "median": 0.1869917187500092,
+        "minimum": 0.18530921875000383,
+        "maximum": 0.18806546875000135
+      }
+    },
+    {
+      "case": "1280x720-high-s4",
+      "engine": "ffmpeg",
+      "threads": 4,
+      "trials": 5,
+      "fps": {
+        "median": 886.7216426630391,
+        "minimum": 871.4455684080724,
+        "maximum": 916.2785918612103
+      },
+      "wall_seconds": {
+        "median": 0.4330558560031932,
+        "minimum": 0.4190865130003658,
+        "maximum": 0.4406471430011152
+      },
+      "cpu_seconds": {
+        "median": 1.2634860000000074,
+        "minimum": 1.2534129999999841,
+        "maximum": 1.2843800000000272
+      },
+      "average_busy_cores": {
+        "median": 2.9468032609734194,
+        "minimum": 2.8914540202539234,
+        "maximum": 2.9979227701819973
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.0032903281250000194,
+        "minimum": 0.0032640963541666255,
+        "maximum": 0.003344739583333404
+      },
+      "estimated_cores_at_30fps": {
+        "median": 0.09870984375000058,
+        "minimum": 0.09792289062499876,
+        "maximum": 0.10034218750000212
+      },
+      "estimated_cores_at_60fps": {
+        "median": 0.19741968750000116,
+        "minimum": 0.19584578124999752,
+        "maximum": 0.20068437500000424
+      }
+    },
+    {
+      "case": "1280x720-high-s4",
+      "engine": "ffmpeg",
+      "threads": 8,
+      "trials": 5,
+      "fps": {
+        "median": 1040.3221157968042,
+        "minimum": 990.1180826364981,
+        "maximum": 1051.590040704526
+      },
+      "wall_seconds": {
+        "median": 0.3691164440024295,
+        "minimum": 0.36516131299867993,
+        "maximum": 0.38783252900248044
+      },
+      "cpu_seconds": {
+        "median": 1.3611779999999989,
+        "minimum": 1.3157519999999998,
+        "maximum": 1.4229960000000172
+      },
+      "average_busy_cores": {
+        "median": 3.6428911374885646,
+        "minimum": 3.5645987096455114,
+        "maximum": 3.72760736569298
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.003544734374999997,
+        "minimum": 0.0034264374999999994,
+        "maximum": 0.003705718750000045
+      },
+      "estimated_cores_at_30fps": {
+        "median": 0.10634203124999991,
+        "minimum": 0.10279312499999999,
+        "maximum": 0.11117156250000135
+      },
+      "estimated_cores_at_60fps": {
+        "median": 0.21268406249999983,
+        "minimum": 0.20558624999999997,
+        "maximum": 0.2223431250000027
+      }
+    },
+    {
+      "case": "1920x1080-high-s1",
+      "engine": "candidate",
+      "threads": 1,
+      "trials": 5,
+      "fps": {
+        "median": 69.27190454873018,
+        "minimum": 68.58640712013181,
+        "maximum": 69.36057373052458
+      },
+      "wall_seconds": {
+        "median": 5.543372922998969,
+        "minimum": 5.536286384998675,
+        "maximum": 5.5987770190004085
+      },
+      "cpu_seconds": {
+        "median": 5.51292500000001,
+        "minimum": 5.508677999999968,
+        "maximum": 5.567277999999945
+      },
+      "average_busy_cores": {
+        "median": 0.9945015564670908,
+        "minimum": 0.9938869245956746,
+        "maximum": 0.9950131942101991
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.014356575520833359,
+        "minimum": 0.014345515624999916,
+        "maximum": 0.014498119791666523
+      },
+      "estimated_cores_at_30fps": {
+        "median": 0.43069726562500077,
+        "minimum": 0.4303654687499975,
+        "maximum": 0.4349435937499957
+      },
+      "estimated_cores_at_60fps": {
+        "median": 0.8613945312500015,
+        "minimum": 0.860730937499995,
+        "maximum": 0.8698871874999914
+      }
+    },
+    {
+      "case": "1920x1080-high-s1",
+      "engine": "candidate",
+      "threads": 2,
+      "trials": 5,
+      "fps": {
+        "median": 87.77237542967052,
+        "minimum": 84.32618031932232,
+        "maximum": 89.51316787383796
+      },
+      "wall_seconds": {
+        "median": 4.3749528040025325,
+        "minimum": 4.289871637000033,
+        "maximum": 4.55374592500084
+      },
+      "cpu_seconds": {
+        "median": 6.24676700000002,
+        "minimum": 6.137222000000023,
+        "maximum": 6.46535200000001
+      },
+      "average_busy_cores": {
+        "median": 1.427847860275204,
+        "minimum": 1.4197876004684689,
+        "maximum": 1.4347489903693773
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.016267622395833386,
+        "minimum": 0.015982348958333392,
+        "maximum": 0.016836854166666693
+      },
+      "estimated_cores_at_30fps": {
+        "median": 0.4880286718750016,
+        "minimum": 0.47947046875000177,
+        "maximum": 0.5051056250000008
+      },
+      "estimated_cores_at_60fps": {
+        "median": 0.9760573437500032,
+        "minimum": 0.9589409375000035,
+        "maximum": 1.0102112500000016
+      }
+    },
+    {
+      "case": "1920x1080-high-s1",
+      "engine": "candidate",
+      "threads": 4,
+      "trials": 5,
+      "fps": {
+        "median": 110.75093634384957,
+        "minimum": 109.64893476110191,
+        "maximum": 112.2691106581007
+      },
+      "wall_seconds": {
+        "median": 3.4672393090004334,
+        "minimum": 3.420353093999438,
+        "maximum": 3.5020860060030827
+      },
+      "cpu_seconds": {
+        "median": 6.778755999999998,
+        "minimum": 6.587915000000013,
+        "maximum": 6.926073000000011
+      },
+      "average_busy_cores": {
+        "median": 1.9550874329335628,
+        "minimum": 1.9260920784926119,
+        "maximum": 1.986957459526667
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.01765301041666666,
+        "minimum": 0.017156028645833366,
+        "maximum": 0.018036648437500028
+      },
+      "estimated_cores_at_30fps": {
+        "median": 0.5295903124999998,
+        "minimum": 0.514680859375001,
+        "maximum": 0.5410994531250009
+      },
+      "estimated_cores_at_60fps": {
+        "median": 1.0591806249999995,
+        "minimum": 1.029361718750002,
+        "maximum": 1.0821989062500017
+      }
+    },
+    {
+      "case": "1920x1080-high-s1",
+      "engine": "candidate",
+      "threads": 8,
+      "trials": 5,
+      "fps": {
+        "median": 116.48938559635921,
+        "minimum": 115.66680032301548,
+        "maximum": 117.01606460899973
+      },
+      "wall_seconds": {
+        "median": 3.296437680000963,
+        "minimum": 3.281600703998265,
+        "maximum": 3.3198808900015138
+      },
+      "cpu_seconds": {
+        "median": 8.998174000000006,
+        "minimum": 8.829045999999998,
+        "maximum": 9.198052999999945
+      },
+      "average_busy_cores": {
+        "median": 2.7420075785078706,
+        "minimum": 2.6783597498489393,
+        "maximum": 2.7731473448447694
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.023432744791666682,
+        "minimum": 0.022992307291666663,
+        "maximum": 0.02395326302083319
+      },
+      "estimated_cores_at_30fps": {
+        "median": 0.7029823437500005,
+        "minimum": 0.6897692187499999,
+        "maximum": 0.7185978906249957
+      },
+      "estimated_cores_at_60fps": {
+        "median": 1.405964687500001,
+        "minimum": 1.3795384374999997,
+        "maximum": 1.4371957812499914
+      }
+    },
+    {
+      "case": "1920x1080-high-s1",
+      "engine": "ffmpeg",
+      "threads": 1,
+      "trials": 5,
+      "fps": {
+        "median": 192.07275985049117,
+        "minimum": 190.8715005025221,
+        "maximum": 193.15672008052013
+      },
+      "wall_seconds": {
+        "median": 1.9992423719995713,
+        "minimum": 1.9880229890004557,
+        "maximum": 2.011824703997263
+      },
+      "cpu_seconds": {
+        "median": 2.3222250000000013,
+        "minimum": 2.3185430000000125,
+        "maximum": 2.352819000000043
+      },
+      "average_busy_cores": {
+        "median": 1.1634069321789293,
+        "minimum": 1.159710814692812,
+        "maximum": 1.1728767790418455
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.006047460937500003,
+        "minimum": 0.006037872395833366,
+        "maximum": 0.006127132812500112
+      },
+      "estimated_cores_at_30fps": {
+        "median": 0.1814238281250001,
+        "minimum": 0.18113617187500097,
+        "maximum": 0.18381398437500335
+      },
+      "estimated_cores_at_60fps": {
+        "median": 0.3628476562500002,
+        "minimum": 0.36227234375000195,
+        "maximum": 0.3676279687500067
+      }
+    },
+    {
+      "case": "1920x1080-high-s1",
+      "engine": "ffmpeg",
+      "threads": 2,
+      "trials": 5,
+      "fps": {
+        "median": 327.567671717234,
+        "minimum": 324.57105095654714,
+        "maximum": 332.86562736543607
+      },
+      "wall_seconds": {
+        "median": 1.1722768549989269,
+        "minimum": 1.1536186630000884,
+        "maximum": 1.1830999679987144
+      },
+      "cpu_seconds": {
+        "median": 2.4371519999999904,
+        "minimum": 2.4063279999999967,
+        "maximum": 2.4490740000000066
+      },
+      "average_busy_cores": {
+        "median": 2.081427051901749,
+        "minimum": 2.064516157608978,
+        "maximum": 2.085895519184932
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.006346749999999975,
+        "minimum": 0.006266479166666658,
+        "maximum": 0.006377796875000018
+      },
+      "estimated_cores_at_30fps": {
+        "median": 0.19040249999999925,
+        "minimum": 0.18799437499999974,
+        "maximum": 0.19133390625000052
+      },
+      "estimated_cores_at_60fps": {
+        "median": 0.3808049999999985,
+        "minimum": 0.3759887499999995,
+        "maximum": 0.38266781250000104
+      }
+    },
+    {
+      "case": "1920x1080-high-s1",
+      "engine": "ffmpeg",
+      "threads": 4,
+      "trials": 5,
+      "fps": {
+        "median": 526.5374367655415,
+        "minimum": 496.7770257936608,
+        "maximum": 543.3506377588945
+      },
+      "wall_seconds": {
+        "median": 0.7292928729984851,
+        "minimum": 0.706725957999879,
+        "maximum": 0.7729826060021878
+      },
+      "cpu_seconds": {
+        "median": 2.5384890000000837,
+        "minimum": 2.4672180000000132,
+        "maximum": 2.5908100000000225
+      },
+      "average_busy_cores": {
+        "median": 3.4433683544378586,
+        "minimum": 3.3517054328033478,
+        "maximum": 3.4981246413267395
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.006610648437500218,
+        "minimum": 0.0064250468750000345,
+        "maximum": 0.006746901041666725
+      },
+      "estimated_cores_at_30fps": {
+        "median": 0.19831945312500654,
+        "minimum": 0.19275140625000103,
+        "maximum": 0.20240703125000176
+      },
+      "estimated_cores_at_60fps": {
+        "median": 0.3966389062500131,
+        "minimum": 0.38550281250000207,
+        "maximum": 0.4048140625000035
+      }
+    },
+    {
+      "case": "1920x1080-high-s1",
+      "engine": "ffmpeg",
+      "threads": 8,
+      "trials": 5,
+      "fps": {
+        "median": 655.502113700244,
+        "minimum": 646.5806336665297,
+        "maximum": 662.0405228874913
+      },
+      "wall_seconds": {
+        "median": 0.5858104679973621,
+        "minimum": 0.5800249179992534,
+        "maximum": 0.5938934450023226
+      },
+      "cpu_seconds": {
+        "median": 2.813423000000064,
+        "minimum": 2.7659219999999785,
+        "maximum": 2.872414000000024
+      },
+      "average_busy_cores": {
+        "median": 4.807064267499897,
+        "minimum": 4.697700260621553,
+        "maximum": 4.8408762815292485
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.0073266223958335,
+        "minimum": 0.007202921874999944,
+        "maximum": 0.007480244791666729
+      },
+      "estimated_cores_at_30fps": {
+        "median": 0.21979867187500501,
+        "minimum": 0.21608765624999832,
+        "maximum": 0.22440734375000188
+      },
+      "estimated_cores_at_60fps": {
+        "median": 0.43959734375001003,
+        "minimum": 0.43217531249999663,
+        "maximum": 0.44881468750000375
+      }
+    },
+    {
+      "case": "1920x1080-high-s4",
+      "engine": "candidate",
+      "threads": 1,
+      "trials": 5,
+      "fps": {
+        "median": 69.94975594826346,
+        "minimum": 69.34036822088281,
+        "maximum": 70.07855522445753
+      },
+      "wall_seconds": {
+        "median": 5.489654607001285,
+        "minimum": 5.479565021996677,
+        "maximum": 5.5378996370018285
+      },
+      "cpu_seconds": {
+        "median": 5.46121599999999,
+        "minimum": 5.452359000000001,
+        "maximum": 5.5080409999999915
+      },
+      "average_busy_cores": {
+        "median": 0.994819599949872,
+        "minimum": 0.9932895383823145,
+        "maximum": 0.9953196569397169
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.01422191666666664,
+        "minimum": 0.014198851562500003,
+        "maximum": 0.01434385677083331
+      },
+      "estimated_cores_at_30fps": {
+        "median": 0.4266574999999992,
+        "minimum": 0.4259655468750001,
+        "maximum": 0.43031570312499934
+      },
+      "estimated_cores_at_60fps": {
+        "median": 0.8533149999999984,
+        "minimum": 0.8519310937500002,
+        "maximum": 0.8606314062499987
+      }
+    },
+    {
+      "case": "1920x1080-high-s4",
+      "engine": "candidate",
+      "threads": 2,
+      "trials": 5,
+      "fps": {
+        "median": 110.1456572711794,
+        "minimum": 109.00049188226951,
+        "maximum": 116.6381497629159
+      },
+      "wall_seconds": {
+        "median": 3.4862926919995516,
+        "minimum": 3.292233293999743,
+        "maximum": 3.522919882001588
+      },
+      "cpu_seconds": {
+        "median": 5.921270000000009,
+        "minimum": 5.701156999999963,
+        "maximum": 5.9704860000000295
+      },
+      "average_busy_cores": {
+        "median": 1.6984431667450974,
+        "minimum": 1.6925655989122814,
+        "maximum": 1.731698968718469
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.015419973958333355,
+        "minimum": 0.014846763020833237,
+        "maximum": 0.015548140625000076
+      },
+      "estimated_cores_at_30fps": {
+        "median": 0.46259921875000065,
+        "minimum": 0.4454028906249971,
+        "maximum": 0.4664442187500023
+      },
+      "estimated_cores_at_60fps": {
+        "median": 0.9251984375000013,
+        "minimum": 0.8908057812499942,
+        "maximum": 0.9328884375000046
+      }
+    },
+    {
+      "case": "1920x1080-high-s4",
+      "engine": "candidate",
+      "threads": 4,
+      "trials": 5,
+      "fps": {
+        "median": 140.94643491739382,
+        "minimum": 138.68397468859612,
+        "maximum": 142.41714624944012
+      },
+      "wall_seconds": {
+        "median": 2.7244392539978435,
+        "minimum": 2.696304553999653,
+        "maximum": 2.7688851640014036
+      },
+      "cpu_seconds": {
+        "median": 6.573295000000002,
+        "minimum": 6.455068000000001,
+        "maximum": 6.684708000000022
+      },
+      "average_busy_cores": {
+        "median": 2.411047739528023,
+        "minimum": 2.3892207124731466,
+        "maximum": 2.4232625118680846
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.017117955729166672,
+        "minimum": 0.01681007291666667,
+        "maximum": 0.017408093750000058
+      },
+      "estimated_cores_at_30fps": {
+        "median": 0.5135386718750001,
+        "minimum": 0.5043021875,
+        "maximum": 0.5222428125000017
+      },
+      "estimated_cores_at_60fps": {
+        "median": 1.0270773437500003,
+        "minimum": 1.008604375,
+        "maximum": 1.0444856250000034
+      }
+    },
+    {
+      "case": "1920x1080-high-s4",
+      "engine": "candidate",
+      "threads": 8,
+      "trials": 5,
+      "fps": {
+        "median": 139.44730630300776,
+        "minimum": 139.26981050891828,
+        "maximum": 140.18884931898805
+      },
+      "wall_seconds": {
+        "median": 2.753728344996489,
+        "minimum": 2.739162221998413,
+        "maximum": 2.757237900998007
+      },
+      "cpu_seconds": {
+        "median": 8.327297999999978,
+        "minimum": 8.29696899999999,
+        "maximum": 8.40324600000002
+      },
+      "average_busy_cores": {
+        "median": 3.035904165593009,
+        "minimum": 3.014218682482026,
+        "maximum": 3.051241742162813
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.02168567187499994,
+        "minimum": 0.021606690104166642,
+        "maximum": 0.021883453125000053
+      },
+      "estimated_cores_at_30fps": {
+        "median": 0.6505701562499983,
+        "minimum": 0.6482007031249992,
+        "maximum": 0.6565035937500016
+      },
+      "estimated_cores_at_60fps": {
+        "median": 1.3011403124999965,
+        "minimum": 1.2964014062499984,
+        "maximum": 1.3130071875000031
+      }
+    },
+    {
+      "case": "1920x1080-high-s4",
+      "engine": "ffmpeg",
+      "threads": 1,
+      "trials": 5,
+      "fps": {
+        "median": 193.34697899105802,
+        "minimum": 193.0192361463919,
+        "maximum": 194.5542321830439
+      },
+      "wall_seconds": {
+        "median": 1.9860667180000746,
+        "minimum": 1.9737427229993045,
+        "maximum": 1.9894390199988266
+      },
+      "cpu_seconds": {
+        "median": 2.3298270000000656,
+        "minimum": 2.321021999999985,
+        "maximum": 2.343160999999988
+      },
+      "average_busy_cores": {
+        "median": 1.1735051823812104,
+        "minimum": 1.1726571268799277,
+        "maximum": 1.1781418990953372
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.006067257812500171,
+        "minimum": 0.006044328124999961,
+        "maximum": 0.006101981770833302
+      },
+      "estimated_cores_at_30fps": {
+        "median": 0.18201773437500512,
+        "minimum": 0.18132984374999883,
+        "maximum": 0.18305945312499905
+      },
+      "estimated_cores_at_60fps": {
+        "median": 0.36403546875001025,
+        "minimum": 0.36265968749999766,
+        "maximum": 0.3661189062499981
+      }
+    },
+    {
+      "case": "1920x1080-high-s4",
+      "engine": "ffmpeg",
+      "threads": 2,
+      "trials": 5,
+      "fps": {
+        "median": 324.7237001930703,
+        "minimum": 319.88811006922447,
+        "maximum": 331.69997842999805
+      },
+      "wall_seconds": {
+        "median": 1.182543805000023,
+        "minimum": 1.1576726710009098,
+        "maximum": 1.200419734002935
+      },
+      "cpu_seconds": {
+        "median": 2.424791999999954,
+        "minimum": 2.394718999999986,
+        "maximum": 2.468684999999983
+      },
+      "average_busy_cores": {
+        "median": 2.051564647268291,
+        "minimum": 2.048467635203659,
+        "maximum": 2.068563126682036
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.00631456249999988,
+        "minimum": 0.006236247395833297,
+        "maximum": 0.006428867187499955
+      },
+      "estimated_cores_at_30fps": {
+        "median": 0.1894368749999964,
+        "minimum": 0.1870874218749989,
+        "maximum": 0.19286601562499867
+      },
+      "estimated_cores_at_60fps": {
+        "median": 0.3788737499999928,
+        "minimum": 0.3741748437499978,
+        "maximum": 0.38573203124999733
+      }
+    },
+    {
+      "case": "1920x1080-high-s4",
+      "engine": "ffmpeg",
+      "threads": 4,
+      "trials": 5,
+      "fps": {
+        "median": 538.72742775197,
+        "minimum": 513.9746460461506,
+        "maximum": 552.6661303515023
+      },
+      "wall_seconds": {
+        "median": 0.7127908849979576,
+        "minimum": 0.6948137020008289,
+        "maximum": 0.7471185649992549
+      },
+      "cpu_seconds": {
+        "median": 2.487438000000008,
+        "minimum": 2.3931699999999623,
+        "maximum": 2.5692260000000235
+      },
+      "average_busy_cores": {
+        "median": 3.460806763197928,
+        "minimum": 3.438846416569217,
+        "maximum": 3.49725360529602
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.006477703125000021,
+        "minimum": 0.006232213541666569,
+        "maximum": 0.006690692708333394
+      },
+      "estimated_cores_at_30fps": {
+        "median": 0.19433109375000063,
+        "minimum": 0.18696640624999705,
+        "maximum": 0.20072078125000184
+      },
+      "estimated_cores_at_60fps": {
+        "median": 0.38866218750000125,
+        "minimum": 0.3739328124999941,
+        "maximum": 0.4014415625000037
+      }
+    },
+    {
+      "case": "1920x1080-high-s4",
+      "engine": "ffmpeg",
+      "threads": 8,
+      "trials": 5,
+      "fps": {
+        "median": 673.1840100048757,
+        "minimum": 662.045498284788,
+        "maximum": 688.5407615231768
+      },
+      "wall_seconds": {
+        "median": 0.5704235310004151,
+        "minimum": 0.5577011870009301,
+        "maximum": 0.5800205590021505
+      },
+      "cpu_seconds": {
+        "median": 2.7204999999999835,
+        "minimum": 2.6956880000000023,
+        "maximum": 2.809676999999997
+      },
+      "average_busy_cores": {
+        "median": 4.828475400219374,
+        "minimum": 4.769263279214202,
+        "maximum": 4.849120036023011
+      },
+      "cpu_seconds_per_frame": {
+        "median": 0.007084635416666624,
+        "minimum": 0.007020020833333339,
+        "maximum": 0.007316867187499992
+      },
+      "estimated_cores_at_30fps": {
+        "median": 0.2125390624999987,
+        "minimum": 0.21060062500000018,
+        "maximum": 0.21950601562499977
+      },
+      "estimated_cores_at_60fps": {
+        "median": 0.4250781249999974,
+        "minimum": 0.42120125000000036,
+        "maximum": 0.43901203124999955
+      }
+    }
+  ],
+  "classification": "PROVEN_LIVE CPU-only synthetic process throughput",
+  "limitations": [
+    "Not VCN, VAAPI, display, audio synchronization, power or gaming concurrency",
+    "Warm-cache generated I/P input, four repeats of each 96-frame clip",
+    "Full process time includes process startup and rawvideo handling to /dev/null",
+    "Thread settings control different parallel architectures; not identical thread counts",
+    "CPU demand at target fps is an extrapolation, not paced-playback measurement",
+    "No CPU frequency or background desktop workload control; one machine/session",
+    "B pictures not in timed matrix; decoder core built -O2 without explicit native ISA flags"
+  ]
+}

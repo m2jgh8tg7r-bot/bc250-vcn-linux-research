@@ -1,0 +1,1268 @@
+{
+  "libraries": [
+    {
+      "name": "libavdevice.so.62",
+      "sha256": "e8d5add3e2f1c9b32a15934269c97bfb321bf23b1cf81e3f740e603bc0ad012d"
+    },
+    {
+      "name": "libavfilter.so.11",
+      "sha256": "d3b22c40a3728588acc6f88d3d2ddf382a76dacb17a401939aeefe76eb06be17"
+    },
+    {
+      "name": "libavformat.so.62",
+      "sha256": "23ecd0e241c9964eed94879b34eb19a4ee6bb4e7cd874036220136297b8e7d59"
+    },
+    {
+      "name": "libavcodec.so.62",
+      "sha256": "7701c5f95ba3012e0061d4728c2dc52a76380de26cbda549961056e9bb00f3be"
+    },
+    {
+      "name": "libswresample.so.6",
+      "sha256": "fff47615a66fadb355ce3ab834a8c6e8f0fbafc34d03817179a8f8d3fa0fc22f"
+    },
+    {
+      "name": "libswscale.so.9",
+      "sha256": "8d600f22da4de8239b6703dc4ed1b6fa87e2f789cb7838ca7088cba6ff4cfd9b"
+    },
+    {
+      "name": "libavutil.so.60",
+      "sha256": "c236eb2712aceb413640cba3a8c2a3f098b60451d61462eb3d97575da50e3965"
+    },
+    {
+      "name": "libm.so.6",
+      "sha256": "6f7365a58fc0778dbc8869d70cdd4822ab93d879c29e84bb491d447961735e56"
+    },
+    {
+      "name": "libz.so.1",
+      "sha256": "bbde8faec092a7c67b8bd76bbba4a826e61b05c171b97004ce6b308c5a090351"
+    },
+    {
+      "name": "libgcc_s.so.1",
+      "sha256": "c71a62b5ef442ab8cf4470874dee6f2383d73a744f0006b6d287412f131c2e09"
+    },
+    {
+      "name": "libc.so.6",
+      "sha256": "01cccbe278d898add05282986a9346d4dda4b3d2b84bc496f9c04c66016528db"
+    },
+    {
+      "name": "libzvbi.so.0",
+      "sha256": "fed3efdf0c0044c9e2a6424fe872175e2ab5bbfa686326ad42344ab607556e63"
+    },
+    {
+      "name": "libraw1394.so.11",
+      "sha256": "932dd89164d58598d57ff9e4d7576be15ee5ccdb398dacb0a216299ec8182d32"
+    },
+    {
+      "name": "libavc1394.so.0",
+      "sha256": "d2911ceba0365cfdddc6ee8d55d675226c6e8f7e428f071e05cfaefd4a950f93"
+    },
+    {
+      "name": "librom1394.so.0",
+      "sha256": "228ada16918d5064444bcded92ab3b64fbe9f6a090227798a6f4ce709d7c72e8"
+    },
+    {
+      "name": "libiec61883.so.0",
+      "sha256": "e390958533c154ea5005d72448d897de12d6fb9a7603179988d9cf58fc0b0caf"
+    },
+    {
+      "name": "libjack.so.0",
+      "sha256": "99b23f50624fc97677a5890d2485be39a2d2483fc5cb6457b18f59fb3d476d30"
+    },
+    {
+      "name": "libdrm.so.2",
+      "sha256": "e2a416f7b7c9e9e46b5f96bf20be71f146426daa6e1e8438adce2ab8e4c0fc0e"
+    },
+    {
+      "name": "libopenal.so.1",
+      "sha256": "cafeb94fb4f05d6d0b337cac62e77dbcf11037701c83f9f6444bb39c0c5ee7a1"
+    },
+    {
+      "name": "libxcb.so.1",
+      "sha256": "15fd80f8917a44ec68c17a322648a5c576c3fc3bc7745c691573bd6d24ade7eb"
+    },
+    {
+      "name": "libxcb-shm.so.0",
+      "sha256": "fe83f32f3c5d3337e2c6c1b36949e4087877697d32317c52611743c70ab7e13c"
+    },
+    {
+      "name": "libxcb-shape.so.0",
+      "sha256": "f37715a75850eb25ca17a76fe28d2769b5cf4975d2f72533888c685d50ee033c"
+    },
+    {
+      "name": "libxcb-xfixes.so.0",
+      "sha256": "3ba1cf11d47c26f03f2efa573acbdcc71e4a4e95b9438a1958e25b15a0f020fa"
+    },
+    {
+      "name": "libcdio_paranoia.so.2",
+      "sha256": "02284104d74bddddc7e9440d00173b111c61e360d8fe526eefcf9a7b7923fd66"
+    },
+    {
+      "name": "libcdio_cdda.so.2",
+      "sha256": "08e8dfbaeb7ada55ce283b68befc12a1f64c25943affe8414e6e89f678117fd8"
+    },
+    {
+      "name": "libdc1394.so.26",
+      "sha256": "c811fc734ec5788ebe33ac7a9aee55751359b7d245ddd8ab1c930367a00ef69f"
+    },
+    {
+      "name": "libasound.so.2",
+      "sha256": "38b129529203cc3dfe9a480d36e2e2c24a349d388c3705f3a1de0690e124bf34"
+    },
+    {
+      "name": "libcaca.so.0",
+      "sha256": "731553c5921b46a77f3c37a72b480f0babe456b81b45e45626947145b1e3f37a"
+    },
+    {
+      "name": "libklvanc.so.0",
+      "sha256": "8b51983b93e9a0d9b27bd9b38c7768a1981a250691678a4d933758e219d01a31"
+    },
+    {
+      "name": "libpulse.so.0",
+      "sha256": "b2521718d4f8a1e60b2fb622c296b7e4c0bc4843838a5936f7b37c4893c166b8"
+    },
+    {
+      "name": "libv4l2.so.0",
+      "sha256": "6a1e3c71320e29512b644eaf4a29a28fd5f5fb88470d0061acdff3e8b7e2148d"
+    },
+    {
+      "name": "libXv.so.1",
+      "sha256": "cf6d3467f24da296e0c90ecf04542e6a56bcffc8b5fb3d707af7645d2aca926a"
+    },
+    {
+      "name": "libX11.so.6",
+      "sha256": "aecc1e5b30e33390c40e429cd8d8b7256d05f2669d92b5523f0ee5217cda7af3"
+    },
+    {
+      "name": "libXext.so.6",
+      "sha256": "09056dd620dc643dc1c2ed20041fa11de6a981dd0f618d6785124b4bdc607a1e"
+    },
+    {
+      "name": "libstdc++.so.6",
+      "sha256": "fc224ee3cc56b9b3e58453bfb9a0cac3a696e60fd33ba48b6a30eb22b76cc867"
+    },
+    {
+      "name": "libbs2b.so.0",
+      "sha256": "d86114fd565ad14c59eb2c8046ca3ee3ba12978fe8ac6897706a2068e1d97b0c"
+    },
+    {
+      "name": "liblilv-0.so.0",
+      "sha256": "7365ff729c3f43519a402dd075d2456d9f045ff978736660c3c54161726ed514"
+    },
+    {
+      "name": "librubberband.so.3",
+      "sha256": "0b34029940185e12411df1c987f0b9e158978754cb8b3ad04942794e584d0f6c"
+    },
+    {
+      "name": "libmysofa.so.1",
+      "sha256": "d6813c368b0f62f84ffdcb7cd46543ad725d8450a2c17a5c5f26ca9b5e9ce9f2"
+    },
+    {
+      "name": "libharfbuzz.so.0",
+      "sha256": "1ad30cd84f030ac9aa2bda6edba150d612cab3534da0e42fd1102dffc286e5e5"
+    },
+    {
+      "name": "libfribidi.so.0",
+      "sha256": "8496748e622218c5013143b0d8edb480ca079afad052bf23824eb864d70274b4"
+    },
+    {
+      "name": "liblcms2.so.2",
+      "sha256": "346b67ffaef8d04f5cd4e95ae406248189a1c99904fa1dad8484703a92c645c7"
+    },
+    {
+      "name": "liblcevc_dec_api.so.4",
+      "sha256": "310d2ab0385881dc00436f378a57fb5edc50f676f91451ba8d3e9ced208abdfe"
+    },
+    {
+      "name": "libplacebo.so.360",
+      "sha256": "5040e448e811180b1fee280e1dcdf2443cb03dc3ff289fe4b07417d779b5b0b1"
+    },
+    {
+      "name": "libvmaf.so.3",
+      "sha256": "97b41ffe3692668eda4de48e12f81961621533c28b43271aff7a9906c5d91f1f"
+    },
+    {
+      "name": "libtesseract.so.5.5",
+      "sha256": "6897861815f39dc54930eadb48be794c7e4367c5625dcea41ea943556291b5b0"
+    },
+    {
+      "name": "libass.so.9",
+      "sha256": "5b75aa54f01403bc596495022adf69c76e63d1bcfc6b48fab3a64d7b76c458cb"
+    },
+    {
+      "name": "libva.so.2",
+      "sha256": "49c444907b7af338417edb8def13da6b0476c66c431bb65a353e9301b093d667"
+    },
+    {
+      "name": "libvidstab.so.1.2",
+      "sha256": "e91936f44a238e9cbb37cb096b4f7f6bc062f0b7e025aa8a609c9264af6ef936"
+    },
+    {
+      "name": "libzmq.so.5",
+      "sha256": "369055f4e34155fb959afa624a5a1b88b5e78e7b8d298d194830893e80d7225e"
+    },
+    {
+      "name": "libzimg.so.2",
+      "sha256": "3d69c7a8a1159d694ee80abc1d22bfc6016a3f7afa6302e568c8c767ce1b4f28"
+    },
+    {
+      "name": "libshaderc_shared.so.1",
+      "sha256": "a5f5761e4200c4a35bdf853167522cc3a615106cb3efb76b951f457a91ca3d7b"
+    },
+    {
+      "name": "libOpenCL.so.1",
+      "sha256": "27ec8ee6b04e43a9f60c450fc75f73fff4dfe7070d6d67ff628db7b44d40a00c"
+    },
+    {
+      "name": "libqrencode.so.4",
+      "sha256": "fb7aab5cdb5d45cae169b398a1b57a597307b3473a4b1a8376a19016c4016338"
+    },
+    {
+      "name": "libfontconfig.so.1",
+      "sha256": "ab67796a1071ee7fe53d89d4ece93a3805134d9c21931687a4f05fa5132036fd"
+    },
+    {
+      "name": "libfreetype.so.6",
+      "sha256": "8b3027d90bfcbdf021679e4ea72b8479d59b51bb3c4af4839fc4e32c51d07018"
+    },
+    {
+      "name": "libvpl.so.2",
+      "sha256": "d4dd7de922db5a529bb3e6310b2728df4bb6ce21f370cb86800556dfe9ae4ee1"
+    },
+    {
+      "name": "libxml2.so.2",
+      "sha256": "8473a76caaed1e702f5c4f2dfac69b4aa92d2f18217edcf23c73214ea7750ab5"
+    },
+    {
+      "name": "libbz2.so.1",
+      "sha256": "ef3c4ed7e70d03d7c406fb1cea9552e74d0b20006e7d8f66a60dc1a6009f4800"
+    },
+    {
+      "name": "libdvdnav.so.4",
+      "sha256": "6bc45d247bddb68b7a41a565e5c18575ca236a8f83364649f7381d5d25450689"
+    },
+    {
+      "name": "libdvdread.so.8",
+      "sha256": "b06da10325848949479cc486f5de09980e0110a4939fdd8ae34e3ed961dd1c43"
+    },
+    {
+      "name": "libgme.so.0",
+      "sha256": "a3021171d3ba18405cd8f1d5ca8fadc5b8e5d01f089992883de89198fa0ba3f6"
+    },
+    {
+      "name": "libmodplug.so.1",
+      "sha256": "262698133b46853b768b1fa970e88764eddd8b951835e1def6089eda07c8280f"
+    },
+    {
+      "name": "libopenmpt.so.0",
+      "sha256": "d0cd285601db6ee6759b8131b29ff074af22404dab5301e2a7cdfdd7c91af8bd"
+    },
+    {
+      "name": "libchromaprint.so.1",
+      "sha256": "8f4c19971184142ce1517a19106142ab92f47d83005cf6b8ff430d6096404197"
+    },
+    {
+      "name": "libbluray.so.3",
+      "sha256": "5a7f2475236cff931a5a6663586f6041d500379dc35f87a7a807f8e702e23552"
+    },
+    {
+      "name": "libssl.so.3",
+      "sha256": "7ec90ca58eeca6c872abf805602f4900fe5dc1d0d9f4563820b3734d7f043bfe"
+    },
+    {
+      "name": "libcrypto.so.3",
+      "sha256": "f5f59f72804bee79a294d385903fe57aa5d60a2134c239711bb9c524d35fc711"
+    },
+    {
+      "name": "librabbitmq.so.4",
+      "sha256": "91a6a524fb2264c58cb08bc7804dcf5a63f0669cc58b99c8b2b1f9e7f59c884b"
+    },
+    {
+      "name": "librist.so.4",
+      "sha256": "ba43a5303ee231bc76da495023ca7c8fa9c863fd7c222041ca62c70d4c40cdec"
+    },
+    {
+      "name": "librtmp.so.1",
+      "sha256": "4bb86c9fddc42d160249b4034377468dc4a4cace9881b8d4ff3ff0447c661402"
+    },
+    {
+      "name": "libsrt.so.1.5",
+      "sha256": "8a3d96237559e6cefd628df238cbadff77be68518ddd90b6babda13b2838245d"
+    },
+    {
+      "name": "libssh.so.4",
+      "sha256": "a03dafdd2d7ac474c3451644eac5426161b6fc363e583de67c0ac436af0a6341"
+    },
+    {
+      "name": "libsmbclient.so.0",
+      "sha256": "750e3d8f44ad4141be2a577aa4f36d40aec4c5dadff4a81e5c2ab7c5dae59fe0"
+    },
+    {
+      "name": "libvpx.so.9",
+      "sha256": "430137ab62b7dcaba658d033d34f361757d19c01ab504cf434c39d991974d14a"
+    },
+    {
+      "name": "libwebpmux.so.3",
+      "sha256": "bfd8b35bf3cb0f117032fccbdf2a27a67c4140a0fc30444147b2375bbb1bd3b5"
+    },
+    {
+      "name": "liblzma.so.5",
+      "sha256": "18b4994cd29a3e39f35ad719702925740703e76057fb2ce8c0eb7c7ce7a3acef"
+    },
+    {
+      "name": "libaribcaption.so.1",
+      "sha256": "dbff1a7d343c5ad44f1338945b5615c4793b6325a73b332d2b7367de822726a3"
+    },
+    {
+      "name": "libaribb24.so.0",
+      "sha256": "eb92728c658b6c0518f60c09e0db32a23ce0c5af7e7965c2b02c0ef7037aca3b"
+    },
+    {
+      "name": "libdav1d.so.7",
+      "sha256": "17a4017be6ccefcd6004043d69bbe082d5363e3ed13f67e748f4307bd06dad94"
+    },
+    {
+      "name": "libdavs2.so.16",
+      "sha256": "e5bc56c99bcc7c79b1dd5288bd46ba6c630fbb8a932f825abeb8ca4c5c322435"
+    },
+    {
+      "name": "libopencore-amrwb.so.0",
+      "sha256": "4683936a8dbb5725eb53ed51a1573e69bf3767f02c2e1ff79f191790283b2c10"
+    },
+    {
+      "name": "librsvg-2.so.2",
+      "sha256": "ec5b5702f638dbc553c129321b4664374760ad512cbc977848c741077a0bc5fc"
+    },
+    {
+      "name": "libcairo.so.2",
+      "sha256": "f644ecabee0abeda729667e31e52cd623e29280abc36696f2612ff6e4443d588"
+    },
+    {
+      "name": "libgobject-2.0.so.0",
+      "sha256": "fb3de26087ef60a3ca8da1688efbcf5a211e18c7b7fa37444a8bbbb749978da7"
+    },
+    {
+      "name": "libglib-2.0.so.0",
+      "sha256": "7967cdeb210f05c3ba74352d07e0c7e59c5bbbfbd2ca0cb1c601ae29ebc9fda7"
+    },
+    {
+      "name": "libuavs3d.so.1",
+      "sha256": "447f499a494f9499d4cc01c0b3f3c8428ad2adb036a1905fa0fab9e92f10c6b7"
+    },
+    {
+      "name": "libxevd.so.0",
+      "sha256": "ad44491e7100f4f76c39db825946e011f2ffb212b89021b995adcf5c75ebe096"
+    },
+    {
+      "name": "libsnappy.so.1",
+      "sha256": "949c4daa8b5fdee80b16b0b89069a4aba80fa9d8eb81a4dc6557bae69b4ab5eb"
+    },
+    {
+      "name": "libaom.so.3",
+      "sha256": "4b4bbf480ac95bf5b9650c150426a1230841a93f7e471afedde6e82728398219"
+    },
+    {
+      "name": "libcodec2.so.1.2",
+      "sha256": "2e1b6d210ccf04e5dcce8fee62214a59bc72bfdd316dbca8b62ee31d58eb8860"
+    },
+    {
+      "name": "libfdk-aac.so.2",
+      "sha256": "04efbbd2aedf6e12d02115a796e7e3ef9f86cd09a841f0b0d3f1b02b1ba1e937"
+    },
+    {
+      "name": "libgsm.so.1",
+      "sha256": "37cc31ff5ba643c05e0969680b762660f561318e8d99a8d2d4699b31626d0e1f"
+    },
+    {
+      "name": "libilbc.so.3",
+      "sha256": "7f81c09a47127ed092cdd501f7a83c60f2f70b71747f60c5a233fd30b1ba91a2"
+    },
+    {
+      "name": "libjxl.so.0.11",
+      "sha256": "98cdfe86715da2a658f1b48311041b76b0a5804f47bcbf4edc943556d40a4e11"
+    },
+    {
+      "name": "libjxl_threads.so.0.11",
+      "sha256": "ca02f70ddc5d3d5e4734b668b7ad4808f809fb124929d8cada74b54400ef7399"
+    },
+    {
+      "name": "liblc3.so.1",
+      "sha256": "f6554ce053d8be333cb30906999a5e6eb19f2f94af554460b0172a6831d0fb31"
+    },
+    {
+      "name": "libmp3lame.so.0",
+      "sha256": "372ea9c51a8dfd151994c2fbecc5ddc55451844dee441ad34f5388821d8a7448"
+    },
+    {
+      "name": "liboapv.so.2",
+      "sha256": "821f77b55fbbe070790c5fe1999d7e0347be298ffc90aebb50d938176d938e5f"
+    },
+    {
+      "name": "libopencore-amrnb.so.0",
+      "sha256": "aafc316365e464ae8efd39006f8a16751bdbaa60c5e673a99a77ca53db89a9aa"
+    },
+    {
+      "name": "libopenjp2.so.7",
+      "sha256": "425f3fee373de1ba0992e21fdce968b216e03b84dc489ad9a4e589e19da9aef2"
+    },
+    {
+      "name": "libopus.so.0",
+      "sha256": "55120a299e24febcf853507bfbf8ddf9a5719891969cfa6e69a85a8330d76e01"
+    },
+    {
+      "name": "librav1e.so.0",
+      "sha256": "c87cf80fd10488e0cda85d56bdda107fb4e53c421f53a16ef8f0fef0f2d55205"
+    },
+    {
+      "name": "libspeex.so.1",
+      "sha256": "2d764a875493082d14357da5d67bad3ed412ac9ff34cfc6c9b3dbf9dbe36f696"
+    },
+    {
+      "name": "libSvtAv1Enc.so.3",
+      "sha256": "0c3efd19a61b12efa0d3f08fb956ecd08d319d0966cef93a75867e3b83fc0de5"
+    },
+    {
+      "name": "libtheoraenc.so.1",
+      "sha256": "9ae614351b11bc5ccf79b2f2a485bfc2ee70ca91bec0dce7ed68396e6678f69d"
+    },
+    {
+      "name": "libtheoradec.so.1",
+      "sha256": "97c75156108f99f4cb8e628f7c23757acf52852959812153c59042111c183006"
+    },
+    {
+      "name": "libtwolame.so.0",
+      "sha256": "daa4fc9e5afae9bbb9ce3302795165b3e211e945be24c0c5d7aaa641b56d7656"
+    },
+    {
+      "name": "libvo-amrwbenc.so.0",
+      "sha256": "ad7adfa66c8b2c734913308a6a9d5d325de60b863e90a7631d08c0896a1f11b8"
+    },
+    {
+      "name": "libvorbis.so.0",
+      "sha256": "9a3e0048eda0eb9233b619fd768db9114280882b5acdcb429225675cfdb9feb3"
+    },
+    {
+      "name": "libvorbisenc.so.2",
+      "sha256": "97f21d095d0ff40c5db0a13995f805a449724fa6b209e8a40b24d5923307aa9b"
+    },
+    {
+      "name": "libSvtVp9Enc.so.1",
+      "sha256": "a24cec5c1865506527304e180f6fa5f4c010b83fa1d1da3ac471c69e7680adc3"
+    },
+    {
+      "name": "libvvenc.so.1.14",
+      "sha256": "719ef35e241cc4ed7268ca500bbde0330967dd4e6074242f1b91add76159069e"
+    },
+    {
+      "name": "libwebp.so.7",
+      "sha256": "1c09e91048aacc18776c8016a1854b6bab347ce98c8cfcb0b88b15887ea9557a"
+    },
+    {
+      "name": "libx264.so.165",
+      "sha256": "ca660b463f1bec2a3faa558b0ecd728dc20177cb42da35eb9f710259c2bd85e0"
+    },
+    {
+      "name": "libx265.so.216",
+      "sha256": "3691fd1073cc344d3bc16385e3243d142eae092b5deafab615a5c358d77a2bf8"
+    },
+    {
+      "name": "libxeve.so.0",
+      "sha256": "4f3e7bc0278f1a80d5ded55b8cc715fb61c6a266ec3b85cdaed21c34ea587f73"
+    },
+    {
+      "name": "libxavs.so.1",
+      "sha256": "238e9a4c12b0071aec3f9bf104019746e3c7032cdb93750dcfe8fab63f2d45be"
+    },
+    {
+      "name": "libxavs2.so.13",
+      "sha256": "e193c109e48468b41eccfa9b17b9b31000da9149739f95c89786a75c19487a57"
+    },
+    {
+      "name": "libxvidcore.so.4",
+      "sha256": "cfc18a08ec550a1fac9170a6ebe4e1239cb289437e8253518e09ea2f13d5b1d3"
+    },
+    {
+      "name": "libopenh264.so.8",
+      "sha256": "81b7892b3b694669e229b2b5ccce3ea98d824725e76316c85b597965d5d14958"
+    },
+    {
+      "name": "libkvazaar.so.7",
+      "sha256": "ff5c32c2c64ef1590f960227487f5da27957ad2d56db6db23a465a3c7bb7bc3b"
+    },
+    {
+      "name": "libsoxr.so.0",
+      "sha256": "b2b1679a2efc0c0548f4a082a710046066524732c6e8a4e253f891b9d8b8b89a"
+    },
+    {
+      "name": "libva-drm.so.2",
+      "sha256": "a11917047c3f62a76e95251802517b2cb9d826a2b8defe138e06732fb433705f"
+    },
+    {
+      "name": "libva-x11.so.2",
+      "sha256": "b9a5331a84fa10a28290293eed1e72a4bbc831d19a4290012f47c0167ab2f382"
+    },
+    {
+      "name": "libvdpau.so.1",
+      "sha256": "9026690640e8f155d34e447143b190cf9fa36ac19e1097ff370419d61f2baba6"
+    },
+    {
+      "name": "libgcrypt.so.20",
+      "sha256": "e1b08bd31205e3eeed3fd0680e65bd18c40395aa925e91b7eb1364af8ca84dab"
+    },
+    {
+      "name": "libpng16.so.16",
+      "sha256": "65cb04d6c4ec5c031f2f43a58ec5adc4bc9652be5703bb9fa1178f84a2e40446"
+    },
+    {
+      "name": "libpipewire-0.3.so.0",
+      "sha256": "090283425191c6c7d5bb38114cca47de3db7146f0439c273e5d6c441f6980bf4"
+    },
+    {
+      "name": "libfmt.so.11",
+      "sha256": "931f8898ba0409e8f4c7fe9cde2a1605ee5422f8f7d59a36430c8c696f1b5d83"
+    },
+    {
+      "name": "libXau.so.6",
+      "sha256": "78e2e7a514a6844530b099c7dfb184a9992f7b0681c30105281ddb8e48dc8a59"
+    },
+    {
+      "name": "libcdio.so.19",
+      "sha256": "33de9aac3d653d54c394ab42a0e3b7049ba2104683457152dbd277ee2173e338"
+    },
+    {
+      "name": "libusb-1.0.so.0",
+      "sha256": "97a15d6c53a846f7de69d72f678e7985e4a38a1b964e803109685c4d37be2492"
+    },
+    {
+      "name": "libgio-2.0.so.0",
+      "sha256": "690b46b90b9a1f61f08c8a8eea893e349fb2b68ff7618b9aba573ee9508b0fcb"
+    },
+    {
+      "name": "libslang.so.2",
+      "sha256": "e0962cd73406c266d17f905df4201310927422ff39c050088a30b1615b05c27e"
+    },
+    {
+      "name": "libncursesw.so.6",
+      "sha256": "15376b892e2894fc98254eb44a9063cda2e9641841ef0394ae28305edb699e21"
+    },
+    {
+      "name": "libtinfo.so.6",
+      "sha256": "b053da6b12bebc6e239835fbb646d46f26c97942b3098ac7b01604f8ce827679"
+    },
+    {
+      "name": "libGL.so.1",
+      "sha256": "cc4380adee239f7d4e0b5674ffde3d3add2e030778fb48db290bd96eafaf50e5"
+    },
+    {
+      "name": "libGLU.so.1",
+      "sha256": "97e521f2ed137f15978a6122869933c1b507604ee1a5b8df3a1e1c47eaf091af"
+    },
+    {
+      "name": "libglut.so.3",
+      "sha256": "cd9fb0f6ebf8465b8daec7374fe7c3af126be9992e9383fe477124ee995bcebd"
+    },
+    {
+      "name": "libpulsecommon-17.0.so",
+      "sha256": "39da7143fef36deeb4ae179bead7cc250d85fe0224161d005baf814d6819d9e4"
+    },
+    {
+      "name": "libdbus-1.so.3",
+      "sha256": "5c6ed93ed3e31e36a45e4e52725355b5e31248bb075d495bea29aa090e5f995f"
+    },
+    {
+      "name": "libv4lconvert.so.0",
+      "sha256": "dc3094c56c5043e9104c51caac2ff5f576b27ed7fbc0b12cc3e10cbee650329f"
+    },
+    {
+      "name": "libserd-0.so.0",
+      "sha256": "f4bcdfeeddd8f4d252dc8112e9aa42da0b2e8178319b2b5011f379b6657f7637"
+    },
+    {
+      "name": "libsord-0.so.0",
+      "sha256": "9bfde8738b05eb013e3e8866c25565f2cf1d5735a9a9cb2802c86369322f7974"
+    },
+    {
+      "name": "libsratom-0.so.0",
+      "sha256": "e8014825e465fc12fa9691b154b62adee50fff67d4e5830690365786316663be"
+    },
+    {
+      "name": "libzix-0.so.0",
+      "sha256": "0c013334350d670e04a50f45e68a66c5d2efb14139758eaff623d7450091a33c"
+    },
+    {
+      "name": "libfftw3.so.3",
+      "sha256": "0234df5c7bc0e6c7176cd88f48eeadebf7890972d3988aeee982d753e4aa109c"
+    },
+    {
+      "name": "libsamplerate.so.0",
+      "sha256": "842508b79594caec711a0cfa8b2c341b22b432e5a2beded5083cd23dfd7adede"
+    },
+    {
+      "name": "libgraphite2.so.3",
+      "sha256": "1e1e6f204c01d7e790d4d8fa55205ac030926863565327724ad1bea0b05071b8"
+    },
+    {
+      "name": "libunwind.so.8",
+      "sha256": "2920ea80ef5d2d15ae145b84c86d4a9ddc86ff13fe1c692b44f9144165475a3b"
+    },
+    {
+      "name": "libvulkan.so.1",
+      "sha256": "a09dab583a4b8e50bba61d1284b46b9d6256300713aa1db6f20f06b2dbbe0696"
+    },
+    {
+      "name": "libdovi.so.3",
+      "sha256": "e9c7a4d16cbe427cfbd497498cde1c35064335c0a9298321123ac9fc8af60fa9"
+    },
+    {
+      "name": "libcurl.so.4",
+      "sha256": "07ddc511494ca20329e440bfc5715519de40d560780e8b824733a68646d271ce"
+    },
+    {
+      "name": "libleptonica.so.6",
+      "sha256": "27f70f645a88e57cc5be893913933c8bd3a92de934093f5d8d5f82ccf5fb6c63"
+    },
+    {
+      "name": "libunibreak.so.6",
+      "sha256": "0c27436e8146c17f2724db48986e59d0bab218732ac2d0499efc1bc16c8d97bc"
+    },
+    {
+      "name": "libgomp.so.1",
+      "sha256": "637b2ab4eedf3ce72173a9d34a4c41c480082d68662db3f0ef4998117df8f9b2"
+    },
+    {
+      "name": "libsodium.so.26",
+      "sha256": "ba48ca24becd139e9fed52f6e9079eb7653aaf66cfee8b4c8a17ac927e7f673f"
+    },
+    {
+      "name": "libpgm-5.3.so.0",
+      "sha256": "c899f3c141bbb1eec607271c510c189a03563e56cf803b4fec0c1a098ecac8bd"
+    },
+    {
+      "name": "libgssapi_krb5.so.2",
+      "sha256": "4985d7c137097a00b5b20b09e208ea33514d96e098df37025f39ec4dedf1a65c"
+    },
+    {
+      "name": "libSPIRV-Tools.so",
+      "sha256": "06897d4ed1051d4e95b1045288d54230564440064fd117965d742267e7f4834e"
+    },
+    {
+      "name": "libSPIRV-Tools-opt.so",
+      "sha256": "6508a8464b3e53b8c8a5f2aefbd382bb21c0be104286298bc682539cef6b9403"
+    },
+    {
+      "name": "libbrotlidec.so.1",
+      "sha256": "741003cabf4d023b2575ef51711d0af57a2b78e904dbfda147b60074d8817aad"
+    },
+    {
+      "name": "libmvec.so.1",
+      "sha256": "e2689c36ae73a8cda4cdc864528cec4be1ce563dee954c7a4f4fa19c615e1e55"
+    },
+    {
+      "name": "libmpg123.so.0",
+      "sha256": "1343ad1cc39d7716a8a3b3c201f6d829c50ef571fe00d298567d68fd96a02a70"
+    },
+    {
+      "name": "libogg.so.0",
+      "sha256": "a7fcb0bfe563749b55151336f7e738f7639955e28dadc811e2dcee2f0c98df85"
+    },
+    {
+      "name": "libvorbisfile.so.3",
+      "sha256": "3d94a1b95d4b8d7cde47634cd05af9d3c6cd71251ce4cb2002e86e55ff002d18"
+    },
+    {
+      "name": "libudfread.so.3",
+      "sha256": "459e64996ee7c5fb7aaef19f4e3abd76c838450654da7aaa13c0d80bbe775f8f"
+    },
+    {
+      "name": "libnettle.so.8",
+      "sha256": "ee1be265655aeb38338faca6b8eb1d685f886e73ecb6fcde8c7b16934dab533a"
+    },
+    {
+      "name": "libhogweed.so.6",
+      "sha256": "1a9cb4208e4307f951703aaccbc1153b63b924557359dd5a7b1bdac2a8d00598"
+    },
+    {
+      "name": "libgmp.so.10",
+      "sha256": "47e2550d2f19c8c87886d82db6ed4896db9342e3f26f6d992911c4f037b6ef5d"
+    },
+    {
+      "name": "libgnutls.so.30",
+      "sha256": "c401fdf47f90dac4efa3893135e19ca1a9275696ff4a4a292fa183539f8d374d"
+    },
+    {
+      "name": "libcjson.so.1",
+      "sha256": "0b3b0d58cccf509e5b6948769b8dbef1564521a3eda872309660a81ab290064b"
+    },
+    {
+      "name": "libfido2.so.1",
+      "sha256": "d909caff39fad971897caf0c630a9b86062891286a7b74ac47209cd02f95a32d"
+    },
+    {
+      "name": "libreplace-private-samba.so",
+      "sha256": "6a27ac4fc914194d80a41f704246a6c7931ba0e68dbfeb5ed7f4f516c33c89de"
+    },
+    {
+      "name": "libsamba-errors.so.1",
+      "sha256": "2cc2a2a5bd4257ac9627cf7d96c5c0a6364cdb403538c9bdd0aec4a9367147a2"
+    },
+    {
+      "name": "libsamba-security-private-samba.so",
+      "sha256": "a5c948596836daa739b6866ed4f094f99f76684892bf0661ad3a4b030ee46e20"
+    },
+    {
+      "name": "libmsrpc3-private-samba.so",
+      "sha256": "93eb4d6a655c84badfcfd758a147a2e35502eb21951d5714a578038e3f4ffb0b"
+    },
+    {
+      "name": "liblibcli-lsa3-private-samba.so",
+      "sha256": "131caa1c1e669659438cc632677b0796a2f468b97682b026a2eed7014af0b031"
+    },
+    {
+      "name": "libsamba-hostconfig.so.0",
+      "sha256": "4f71d29aa2ee41e8a42c7a02b7c76e304427d3a8ef4544e00417e6b8ef27c845"
+    },
+    {
+      "name": "libtevent-util.so.0",
+      "sha256": "6efc28349fe7cafcf965ca3214396c86548a45d3ce251212b4edc99ec31a04c6"
+    },
+    {
+      "name": "libsmbconf.so.0",
+      "sha256": "5b4802268676ae6d744e3883bfadf3346c62a01f9c882cea96f028a5d57e1b72"
+    },
+    {
+      "name": "libndr.so.6",
+      "sha256": "b8f2d989ba9022ba9bf9208d99c78c3a43745f1692f4d5291ec0991845339f3d"
+    },
+    {
+      "name": "liblibsmb-private-samba.so",
+      "sha256": "6d2a10c6a4b70f7411aed76d1fc20c462a3f8e92a34d73be0dad54607a151c9f"
+    },
+    {
+      "name": "libsamba-util.so.0",
+      "sha256": "0c34cf72887d37cfc785f897b1010c1513f71bfcc61731341edb40350e98139c"
+    },
+    {
+      "name": "libsamba-credentials.so.1",
+      "sha256": "6760a311d2dd84778144d0a145e76ad9513e92c6d20d2bd767d0be402b907588"
+    },
+    {
+      "name": "libndr-standard.so.0",
+      "sha256": "a12ed287b537b60d7133d925394a790fd733518749bec08ed1ab9b488733e8b5"
+    },
+    {
+      "name": "libgse-private-samba.so",
+      "sha256": "cc3779974ffdc3c3722fab77b056ab7b7685566dee7e345ba64b1f01967c31c9"
+    },
+    {
+      "name": "libdcerpc-binding.so.0",
+      "sha256": "be37698dab840b2fd99f7f6c6e3d6cc0c077653d8671ee7b57dbb94f6179b555"
+    },
+    {
+      "name": "libdcerpc-samba-private-samba.so",
+      "sha256": "d0ff0553cb5e50b0e328c475caba609528c2f4f89e17093f4a2daeb00ccc8dc9"
+    },
+    {
+      "name": "libsamba-debug-private-samba.so",
+      "sha256": "2d71403015f70d3e713a517104d72522860e39cff50e4df27de3448f52d6de3c"
+    },
+    {
+      "name": "libsamba3-util-private-samba.so",
+      "sha256": "39def46e52e0a77cb15d950d6ca9270460d16a62e23008b13a4664ad0701a382"
+    },
+    {
+      "name": "libgenrand-private-samba.so",
+      "sha256": "a3f9ad1654f7496c35138efa36afde10b3d683dc3c1f8411382c9baf0d090e8d"
+    },
+    {
+      "name": "libcli-smb-common-private-samba.so",
+      "sha256": "7b54c3b4d569c81f4c72d248211d2fd284eb5818a4f0d67bd204b2839bf0bdb7"
+    },
+    {
+      "name": "libsecrets3-private-samba.so",
+      "sha256": "3d127b046b90f5efd7aaaf31f2f408f2dc56cd0b0a91c95696d79640e6b61557"
+    },
+    {
+      "name": "libtevent.so.0",
+      "sha256": "ae98b5f8e38158bc680647f927bd39c41cd3af80b3f97dfade84b38bd944c814"
+    },
+    {
+      "name": "libtalloc.so.2",
+      "sha256": "d9d21b6b57585be47ed38b7ae5d07802d3066e9535888b7552808b64b76b6950"
+    },
+    {
+      "name": "libgdk_pixbuf-2.0.so.0",
+      "sha256": "22c4612b77fce3087a83745d47454676a8f464c6645e361111f607386c6f3fbd"
+    },
+    {
+      "name": "libcairo-gobject.so.2",
+      "sha256": "3ee46bfc3c2cbefd67962f6558e9fb4e56c339d5dac4383276c94318c5593bf1"
+    },
+    {
+      "name": "libpangocairo-1.0.so.0",
+      "sha256": "174b0d3a92bbb70caa751a228bdfe4aba2cb52a307a5ea95307e071b49e84f44"
+    },
+    {
+      "name": "libpango-1.0.so.0",
+      "sha256": "8304396d42c9c18d77eb5d57f3a201f278d216c5b4d47090f52402c4365441a7"
+    },
+    {
+      "name": "libXrender.so.1",
+      "sha256": "4f7ea2102236e35b7844d83ba1bfc2ed6a74a62e6b51468e9801e3fa3b3ad31e"
+    },
+    {
+      "name": "libxcb-render.so.0",
+      "sha256": "7f7098ad9a9a0e09f93c0e8b5ffefc810741035f29e6f96414d1921b9f3c934c"
+    },
+    {
+      "name": "libpixman-1.so.0",
+      "sha256": "0af247f5d42793ed0db3295744cbe143bb4fa2f30242a6db734565fe4f876b18"
+    },
+    {
+      "name": "libffi.so.8",
+      "sha256": "05bf4048cc0fd016140d7d880c4a4ec402096732f60463c8fb87b98d877d3628"
+    },
+    {
+      "name": "libpcre2-8.so.0",
+      "sha256": "473aeb0704abc871886650c553b43bb300395d73fe4088620329459b5ddbf4be"
+    },
+    {
+      "name": "liblpcnetfreedv.so.0.5",
+      "sha256": "6fbb86cc432a4a6ae99a5de5cc5742e610a7e1c9fd3788c52636c712a8c4c69b"
+    },
+    {
+      "name": "libjxl_cms.so.0.11",
+      "sha256": "ac4fa6b65f3667be5d425f857515e9db29248b9304988aeb03aac9938b36bf36"
+    },
+    {
+      "name": "libhwy.so.1",
+      "sha256": "0d7fab9ac1ee7eab86c4ef4f7524944093261e9a90a29e865c7101ccce316b9b"
+    },
+    {
+      "name": "libbrotlienc.so.1",
+      "sha256": "3fb5443ab32ab464ebabf9b9a5f106f058cfd0a25b17c01e44971cc51ca97d3b"
+    },
+    {
+      "name": "libsharpyuv.so.0",
+      "sha256": "15e22b2e06d1ea76f09e08075281f27d2aa253c6f3ec9306b5a92f78790668a3"
+    },
+    {
+      "name": "libnuma.so.1",
+      "sha256": "6e2d8bbb7b5a35f45540a9bc38647ef43310818d36dcc99a1ac54aec8befb128"
+    },
+    {
+      "name": "libXfixes.so.3",
+      "sha256": "6160ee5edaa0aa4e96d263b16fcc41892567e82aca7e6d5bbb2a3d2e2bc4fa6f"
+    },
+    {
+      "name": "libX11-xcb.so.1",
+      "sha256": "29cf5509310ed9829a9fea18c781af82293eb3438dd329efd6c97e6b361f4755"
+    },
+    {
+      "name": "libxcb-dri3.so.0",
+      "sha256": "68618518da296821983f625112923b4c247dd073060508250e73cfd8cada166a"
+    },
+    {
+      "name": "libgpg-error.so.0",
+      "sha256": "9577b4be9a76cd37a63c561ead07109efcccea2ecdfafd50a4dd82eb450014fb"
+    },
+    {
+      "name": "libudev.so.1",
+      "sha256": "85fc9625b8831972fdbfa1a719f65e6219c60063a498822dc0b5f5acdfc03ea6"
+    },
+    {
+      "name": "libgmodule-2.0.so.0",
+      "sha256": "88fdcb5f1e7f1bb0943a472c6d43f232f5ecf73a284ac74b9e9d2afad4040448"
+    },
+    {
+      "name": "libmount.so.1",
+      "sha256": "988d2bbb5c40db1b93db90ff9082fd4e74d7a40bd13e7564f556da660ca0ea34"
+    },
+    {
+      "name": "libselinux.so.1",
+      "sha256": "197b6e2cfc6a41a022c85a4fe8c57bf1ff1bd91a497af16b65c93d66d7de9efe"
+    },
+    {
+      "name": "libGLX.so.0",
+      "sha256": "e2b8a09e81b686d1184fd7d60e69673bc7bfc7a89ce0ff1ba843a2450542e01b"
+    },
+    {
+      "name": "libGLdispatch.so.0",
+      "sha256": "3c53e14fb731128afe1fa1c88e94944fe9a60cbe170f2e08c1134b709d771ec7"
+    },
+    {
+      "name": "libOpenGL.so.0",
+      "sha256": "07a014ea0624d5d9711f941fb0401a203c2025b683d34897bd1b261a32a83d69"
+    },
+    {
+      "name": "libXi.so.6",
+      "sha256": "f523a327c18e217cbfecedff914d67b49e89e669b3aaf4dfe7d47c1af8a30d29"
+    },
+    {
+      "name": "libsndfile.so.1",
+      "sha256": "3bec79fa83476896481c2ca97b6fa47f2f25cd8e7de61db80834c86eee45d933"
+    },
+    {
+      "name": "libsystemd.so.0",
+      "sha256": "6e0f27d2c45f00c1e69f24801d4e270462edf082509849b51733b01033929eec"
+    },
+    {
+      "name": "libasyncns.so.0",
+      "sha256": "df6fe1dd9724e57d31d713200336246b0d3e8766a2f838a8d636213d6e646047"
+    },
+    {
+      "name": "libjpeg.so.62",
+      "sha256": "beb79376b4544260da3c31603784c908b58bdb959cbe1d8c48075dfa7d5bc80c"
+    },
+    {
+      "name": "libnghttp2.so.14",
+      "sha256": "8fd9e97899df16b29890fa87702d636b0ac4fbfbe58924947874ba265ddab02d"
+    },
+    {
+      "name": "libidn2.so.0",
+      "sha256": "d7add4da68cc0f9f9d7436be69fdaecff6a19deaefaff6fcac770c19f0e3524b"
+    },
+    {
+      "name": "libgif.so.7",
+      "sha256": "f57a042b5ca8e8d3e709d02c9f8747e2ad8da423b448c7634aa1cbadcf3e4c26"
+    },
+    {
+      "name": "libtiff.so.6",
+      "sha256": "180499d7abff423f85fe7e9461824ccf3c90d992712165bd4f63839204a1eade"
+    },
+    {
+      "name": "libkrb5.so.3",
+      "sha256": "4256ace2d584f14c5de4d0e045a8ab0258938c0bc9adf16fb49eadbe023c4453"
+    },
+    {
+      "name": "libk5crypto.so.3",
+      "sha256": "b2ca21d597a72b833d0816116cadc3493b624880d69819a9c7c33de8e93367f6"
+    },
+    {
+      "name": "libcom_err.so.2",
+      "sha256": "fd86ff884b7b6b441844d7f89afecbb7f53b7602c7f7515abc4c8bd5b8e83500"
+    },
+    {
+      "name": "libkrb5support.so.0",
+      "sha256": "171e649fbbcc92fb05b83929ac15e9b073fb703d796800b02265cf2d2cf8689f"
+    },
+    {
+      "name": "libkeyutils.so.1",
+      "sha256": "26ce5c6b6d9d9691437b0476dabe62fbc6e22ad0781b78d3df78906466dea121"
+    },
+    {
+      "name": "libresolv.so.2",
+      "sha256": "f5a00eb5e81b8ac7c273a0522557b296be7d79f9e37513fe29aef3c6c87839f8"
+    },
+    {
+      "name": "libbrotlicommon.so.1",
+      "sha256": "e2ba6cb211c8fd041aa820af30f606e54a089fc6038a021f7a320033f8c7d77f"
+    },
+    {
+      "name": "libp11-kit.so.0",
+      "sha256": "8a966951d57b06a71bfd450e774c18e3a5a5e1d029eb23582a865d2102f0d8ae"
+    },
+    {
+      "name": "libunistring.so.5",
+      "sha256": "5de0c08a98e1bffa31f9e4dc22870a20f903248078602a194398cd7206e2d831"
+    },
+    {
+      "name": "libtasn1.so.6",
+      "sha256": "13bc0f8c8317b4065bc21b2ae9c61a8c796a72ccb7bada45b953470f37f3f11e"
+    },
+    {
+      "name": "libcbor.so.0.13",
+      "sha256": "ca965de4110824a79ae1599e9da24a452986ebe7e3e98b34e23972a86659f1de"
+    },
+    {
+      "name": "libstable-sort-private-samba.so",
+      "sha256": "4e8a23d4df93c8888fa8f8bc289d4a3a2809a6d21b4b414d9826950cfa8722bd"
+    },
+    {
+      "name": "libndr-samba4-private-samba.so",
+      "sha256": "91b924d514c7dfc2e2aa990dc3f6b8774e8d5c862916daa4727c85b05c81e531"
+    },
+    {
+      "name": "libnpa-tstream-private-samba.so",
+      "sha256": "d884fc520c74acd073eac7c93411f20a1cbe80c06ecbee5c6725b98c01084ddc"
+    },
+    {
+      "name": "libcliauth-private-samba.so",
+      "sha256": "47531aceaf398b08cc7012c05ced9f4fbce44cdc8f1ae315352b312586653395"
+    },
+    {
+      "name": "libndr-samba-private-samba.so",
+      "sha256": "0c950467c50200b88cc8bd31c2b64ce0ee46dc0cf89dc72e1283e9c0459ca3ef"
+    },
+    {
+      "name": "libutil-tdb-private-samba.so",
+      "sha256": "f8553cba71d8aa31f958bf34d456291220a333de1964fc64a88d5bed980ea9c1"
+    },
+    {
+      "name": "libsamba-sockets-private-samba.so",
+      "sha256": "03df43906a39cd5554a0ab8783e4dd8190e556089bd8dfc517fdedb7b269e221"
+    },
+    {
+      "name": "libgensec-private-samba.so",
+      "sha256": "bfcbdd99347fade87a6ea978d1c67e707ca84d69f8dbed7c324daecde8917a7f"
+    },
+    {
+      "name": "libdbwrap-private-samba.so",
+      "sha256": "cf8493a1862fb0733d9af9e9e87ed079f8baec4dacc9e2e2294b52925060ec4c"
+    },
+    {
+      "name": "libsocket-blocking-private-samba.so",
+      "sha256": "cac39a02bb0ba7eb8de6efcca645924b07e007be1d24d9de1d89a78070ae1eb5"
+    },
+    {
+      "name": "libcommon-auth-private-samba.so",
+      "sha256": "f25cd206a479884209d35696adbcf0cb5bad5867ba9036a360505959e672e807"
+    },
+    {
+      "name": "libsmbd-shim-private-samba.so",
+      "sha256": "390d99fa040fb53f29fe9b6d2a624065be044fd7723d2dbdb47d89456641ed8c"
+    },
+    {
+      "name": "libserver-role-private-samba.so",
+      "sha256": "5b9e91bcd9b74232d890b27767d951609084721cef3963576f2c75790919e8e7"
+    },
+    {
+      "name": "libtdb.so.1",
+      "sha256": "a729c252939319e9d7a810a34e9a35afc6f0abd1cae0af9cb7d14e18accc38d9"
+    },
+    {
+      "name": "libtime-basic-private-samba.so",
+      "sha256": "81a96602f1b4fd32333ca782e5cdae1a30ef5e6615cb7b8b612a06da20c1a3a9"
+    },
+    {
+      "name": "libsamba-cluster-support-private-samba.so",
+      "sha256": "6b4d9b1502204215fae431484f6a59c45c9e85d44f02b913d1115603b70e3be2"
+    },
+    {
+      "name": "libserver-id-db-private-samba.so",
+      "sha256": "08b3aa2b0f9deecefafd70c5da6f4516cd7e270a5a0f86fc09f067824ed60180"
+    },
+    {
+      "name": "libtalloc-report-printf-private-samba.so",
+      "sha256": "3f1a3167c1ba99e09dc14386d469054900c29806cc5ec8504d79c47af446e141"
+    },
+    {
+      "name": "libutil-reg-private-samba.so",
+      "sha256": "b853c9b4f34ad260aab7fc76855bc4a01dcdcfddc212d8712029643d62cce009"
+    },
+    {
+      "name": "libinterfaces-private-samba.so",
+      "sha256": "f0f7dcdd620aec10ddd22a80bae1e68a726e41a744da5ac9e4f87f6d2df0d2d8"
+    },
+    {
+      "name": "libCHARSET3-private-samba.so",
+      "sha256": "c3aefadb7cd7a14551dac56a06a49c607c0eb3e350e9a2a32b03cdb183f779a0"
+    },
+    {
+      "name": "libsys-rw-private-samba.so",
+      "sha256": "371937963b22bcf4aac5b05318a22e2c892cd7a4a216757943d3c18a025bb7c4"
+    },
+    {
+      "name": "libmessages-dgm-private-samba.so",
+      "sha256": "1ed156b70aac3e6692d38152520719bcaf320f31a1c8b92cfef141d2c04622af"
+    },
+    {
+      "name": "libmessages-util-private-samba.so",
+      "sha256": "31181a148213d99a5ea18f39adc4a128dbb6fc826cd7b2832d7561f82a5b08f6"
+    },
+    {
+      "name": "libtdb-wrap-private-samba.so",
+      "sha256": "09cd779b8683608cf6b44258259303d7de0b3c6d782a4a22001f915ffa1c63ce"
+    },
+    {
+      "name": "libutil-setid-private-samba.so",
+      "sha256": "1efb1ba34b9dc8f468cfe3fdbc4ae3618dfbf82f95170a62d6646a35f5f6a550"
+    },
+    {
+      "name": "libldap.so.2",
+      "sha256": "0b918f908c87237e9fb6c327beca8e01dc523ca2987a1d15bdcffcbcd694d567"
+    },
+    {
+      "name": "libcap.so.2",
+      "sha256": "045455580153db0de1d2fcafafdcecf2d438844078f3fb6e25d938343d034baf"
+    },
+    {
+      "name": "liblber.so.2",
+      "sha256": "300439d404bd8407628a8c4223f317c15f29922db8ff0e4fec581241e0215449"
+    },
+    {
+      "name": "libauthkrb5-private-samba.so",
+      "sha256": "30fa3a570390fd6fdbeaff15b1bea9155ade5fb985c051d466edff0676fdf402"
+    },
+    {
+      "name": "libicui18n.so.77",
+      "sha256": "a7521c96c2517fa0c0eb40a1a93de584e9f2cb75a4515ccde17db9a6c76716b2"
+    },
+    {
+      "name": "libicuuc.so.77",
+      "sha256": "e7253748d03b2eeef515e621e7e9dd9940a42b1130ec8b90e5c72fdc19f14ab5"
+    },
+    {
+      "name": "libldbsamba-private-samba.so",
+      "sha256": "837f5a5c6f9d214df2cc67b5df83f267a16d1d9f3d3197ca47af3294ed2ba963"
+    },
+    {
+      "name": "libldb.so.2",
+      "sha256": "b7c0b08389de7410849bef360ca4962904983db67ffd10e71c354d14a1dc6b4c"
+    },
+    {
+      "name": "libkrb5samba-private-samba.so",
+      "sha256": "360580ed32f44a250840eec0c7cccbbd3ef80209664a410dd4cb7d9b55467109"
+    },
+    {
+      "name": "libsamdb-common-private-samba.so",
+      "sha256": "a7e5080deb7b226d7b496527dcb39103d355a4a70499ff945d51547b95654ff2"
+    },
+    {
+      "name": "libndr-nbt.so.0",
+      "sha256": "345c0c7b8fa0cf1d63b5dffe179be91eb188c62dce7ae2b225c45fd5beb04aae"
+    },
+    {
+      "name": "libcli-cldap-private-samba.so",
+      "sha256": "3294c0ae31acaf63f53b5518076e64f1863494a645498ca618826d879973662f"
+    },
+    {
+      "name": "libaddns-private-samba.so",
+      "sha256": "0486c5fa231be7bbeb7f742d554235017037404c2284cecfd85b9d9b9622bb52"
+    },
+    {
+      "name": "libcli-ldap-common-private-samba.so",
+      "sha256": "0b42c779ad9a168c88731968bf0027f6c17469de7b28b0dd3edb961465e38639"
+    },
+    {
+      "name": "libasn1util-private-samba.so",
+      "sha256": "26811a080c4538b564e28e915126b46faba3d8bfbd225120116cb847a357676c"
+    },
+    {
+      "name": "libcli-ldap-private-samba.so",
+      "sha256": "e9532862b2ca860a4b3f642955dcd92fe102a3fc2793e61c82ce6079e4af18e9"
+    },
+    {
+      "name": "libcli-nbt-private-samba.so",
+      "sha256": "2027ae4d0667a655913e9c19c8c22269eec74ab040624aeb7823ecd5ab02f66b"
+    },
+    {
+      "name": "libiov-buf-private-samba.so",
+      "sha256": "f501a751f006411902f9cfcaabf87213d59b8737f09ac7b3d92c24c76b9e0567"
+    },
+    {
+      "name": "libglycin-2.so.0",
+      "sha256": "acbc1de7045548813aebec7c222afe270d050e688001ef17b2922286c960674e"
+    },
+    {
+      "name": "libpangoft2-1.0.so.0",
+      "sha256": "bf4b4cf68e8573fc9b0dd65632a6785f4af8ca854cdd5b1d8653b18d3b461dbb"
+    },
+    {
+      "name": "libthai.so.0",
+      "sha256": "31d0a36694e1e8610b79c19dfbf274206da5e3cff0bb8dc8ada3625f5ebe16ad"
+    },
+    {
+      "name": "libblkid.so.1",
+      "sha256": "8d8d9fbb517a06c2c7bbf31a2993b5f2fb3b7b172b9008c2b90010ad7c6770fc"
+    },
+    {
+      "name": "libFLAC.so.14",
+      "sha256": "5ccfb694ef79f482d9848879e9429b8c59bf3d62b91da020af43366f7cb5da30"
+    },
+    {
+      "name": "libzstd.so.1",
+      "sha256": "70ec54d150f4052f28fb1e8f8a1c6ca35e1a499e4744c6f6d9d783537618f80b"
+    },
+    {
+      "name": "libLerc.so.4",
+      "sha256": "d897110748ef0280d25c7011610341b0a5a4e24f4ccbf44d4047aaf29f55d57a"
+    },
+    {
+      "name": "libjbig.so.2.1",
+      "sha256": "d9db82de57dc728836b0673208ec97ae7cfa3a4d27a662dc6bebf151fc451a55"
+    },
+    {
+      "name": "libndr-krb5pac.so.0",
+      "sha256": "aaf299b4f3492106ce64f924c29c68d6e779e57ec1ec87882b3f8fc73018e38e"
+    },
+    {
+      "name": "libsamba-modules-private-samba.so",
+      "sha256": "7b16d9918df04602e63a92ba8d85e3aa0bcafb8cf37f33b07a71fa9037635ce7"
+    },
+    {
+      "name": "libwbclient.so.0",
+      "sha256": "279f7d142dbb9efb747dec8ea08631107cd55bc2f239c3548a03f108fb9db5f2"
+    },
+    {
+      "name": "libsamdb.so.0",
+      "sha256": "5a99373cc483022387563df9430c4a231937ba6d335ec8bee91f591cc1e3f626"
+    },
+    {
+      "name": "libMESSAGING-SEND-private-samba.so",
+      "sha256": "9ed749f374948e48d3550ddc39c940e54df1bb85ba89782f054df772e52b8dba"
+    },
+    {
+      "name": "libjansson.so.4",
+      "sha256": "d81dc843cb2c2c6079afad172baeb70e65768a67ef90ac580276f70622af4f2a"
+    },
+    {
+      "name": "libmsghdr-private-samba.so",
+      "sha256": "42e511b6295d492a81066d2c517f53ab9e5f5a0c8a99b11562fa82a24c74aa16"
+    },
+    {
+      "name": "libevent-2.1.so.7",
+      "sha256": "6e3c2fc0b094e8604f888539e75969399a8b75f3c3c6240b88d9559b4ba2ef03"
+    },
+    {
+      "name": "libsasl2.so.3",
+      "sha256": "c012ce7e9db851e332b7c1b39830f43141eacbe4a063060ec042b3c85a1d9aca"
+    },
+    {
+      "name": "libquic-private-samba.so",
+      "sha256": "70e5e4dac7ced4e55108299810a943ecc99efa2e83e7d49425e165b75bf1297c"
+    },
+    {
+      "name": "libngtcp2.so.16",
+      "sha256": "7d935acd72beab8eb29ed905ea38c1e883c8971dde0393a2216dd75fd4ab2fd9"
+    },
+    {
+      "name": "libngtcp2_crypto_gnutls.so.8",
+      "sha256": "75b63eb3af155b514b77bc8860f2afbe49f322f85cf06f17df9ce61ecefe1817"
+    },
+    {
+      "name": "libicudata.so.77",
+      "sha256": "6dd8ebe59679ee6de1a279642afd800b2a58d03d2706380e0020d5c2cbd9fae1"
+    },
+    {
+      "name": "libsamba-security-trusts-private-samba.so",
+      "sha256": "8a1f6fde308356b62e689344dea65cc43dd4a76c687e3de8ad16f03a5e5fc943"
+    },
+    {
+      "name": "libflag-mapping-private-samba.so",
+      "sha256": "250f37f45dc17f40e6021c1ff8abb6af9ee5309a160ff3a13823d735e9d7ba66"
+    },
+    {
+      "name": "libclidns-private-samba.so",
+      "sha256": "f8ed23f3e764628fb7c1629a70e4a852108f3154bae25c117e371e01bc88e0e2"
+    },
+    {
+      "name": "libnetif-private-samba.so",
+      "sha256": "c4652e6238b980bbbf9da22625f11df459032e7687194930a4e61dadb95b92de"
+    },
+    {
+      "name": "libseccomp.so.2",
+      "sha256": "f68c7ca3bceac85616a123eaee680ffb925a5e55211f05ac5d35b7bde3c79329"
+    },
+    {
+      "name": "libdatrie.so.1",
+      "sha256": "5a468bda9fd16a2712665b96103d76e8e80f5958638b68e81daaf17d53a505d2"
+    },
+    {
+      "name": "libcluster-private-samba.so",
+      "sha256": "d36636cbce4b41d1911bcfea111d5072441c73c5a8d9f4b7a4fb5fc6d4d5a4dd"
+    },
+    {
+      "name": "libcrypt.so.2",
+      "sha256": "d599ca6de2ff06d1189c47945616fde24cd7816bcafb1c587ca1a51cb0c584e3"
+    }
+  ]
+}
