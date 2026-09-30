@@ -1,0 +1,15 @@
+STAGE=R270
+RESULT=PROVEN_LIVE_BASELINE
+DATE=2026-10-01
+STATIC_OR_LIVE=live ordinary-driver DRM information queries plus same-boot kernel-log observation
+KERNEL=7.2.1-ogc4.1.fc44.x86_64
+DEVICE=1002:13fe Cyan Skillfish BC-250
+DRIVER=amdgpu
+RENDER_NODE=/dev/dri/renderD128 selected by vendor/device sysfs match
+QUERY_SOURCE_SHA256=fcefedae17f358b4b762fc8faa732e1c3461a737bf8cc9c91e11ed45a78ab961
+HARDWARE_MUTATION=none
+PROVEN=AMDGPU acceleration path responds; GFX ring exposed; VCN_DEC/VCN_ENC/JPEG standard rings zero; VIDEO_CAPS decode/encode EINVAL; captured boot IP-block list contains PSP but no VCN/UVD/JPEG
+NOT_PROVEN=physical VCN absence; fuse/harvest disable; VCLK/GPCNT; RBC execution; firmware acceptance in current configuration; VCPU reset release; first fetch; VCPU execution; hardware ring; hardware decode/encode
+HISTORICAL_LOCAL_BOUNDARY=R173/R180/R182 guarded PSP LOAD_IP_FW path with VCN type13 status 0xffff0008 and placement 0
+EXTERNAL_ONLY=GPCNT frequency-tracking; RBC packet fetch/execute; alternate-context firmware acceptance/staging; domain-master/access progress; VCPU soft-reset release readback
+NEXT=preserve baseline; reproduce external milestones locally in order using reviewed target-specific acquisition paths; do not invent SMN/MMIO addresses or selectors
