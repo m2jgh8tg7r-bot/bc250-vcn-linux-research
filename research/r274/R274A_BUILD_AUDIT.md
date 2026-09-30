@@ -134,7 +134,7 @@ Before producing a live artifact, the next build helper must assert the known re
 
 ```text
 amdgpu_psp.c
-2087292def28e46fec9f4df25b152429eabb411e7be748e4121b7232f9f753a2
+d0513be4c77d71d72a21ab47764cad16f958e5d193ff21d26d7844ec3be54b1d
 ```
 
 and the known R152/R157 guard-source identities before invoking Kbuild.
@@ -152,3 +152,17 @@ R274-B:
 - build only;
 - restore amdgpu_vcn.c automatically;
 - no module install, no initramfs creation, no boot.
+
+## Correction to PSP baseline identity
+
+The earlier draft incorrectly used the R173 observer-modified `amdgpu_psp.c` SHA as the restored baseline expectation.
+
+Correct identities from retained provenance:
+
+```text
+restored/baseline amdgpu_psp.c = d0513be4c77d71d72a21ab47764cad16f958e5d193ff21d26d7844ec3be54b1d
+R173 observer amdgpu_psp.c       = 2087292def28e46fec9f4df25b152429eabb411e7be748e4121b7232f9f753a2
+R180 observer amdgpu_psp.c       = d3b182b226d80f42497d6e44d0203b285d9977f501bb01e52a4c932f0c73dcf5
+```
+
+The user's R274-B preflight observed the restored baseline value and stopped only because the helper's expected constant was wrong. No source mutation or build occurred before that stop.
