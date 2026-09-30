@@ -42,6 +42,12 @@ import sys
 src = Path(sys.argv[1]).read_text()
 out = Path(sys.argv[2])
 
+if '#include <linux/slab.h>\n' not in src:
+    anchor = '#include <linux/module.h>\n'
+    if anchor not in src:
+        raise SystemExit("missing slab include anchor")
+    src = src.replace(anchor, anchor + '#include <linux/slab.h>\n', 1)
+
 if '"amdgpu_uvd.h"' not in src:
     anchor = '#include "amdgpu_vcn.h"\n'
     if anchor not in src:
