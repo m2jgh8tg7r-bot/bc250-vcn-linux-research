@@ -1,0 +1,14 @@
+{
+  "baselines": {
+    "Shalasere/bc250-vcn-research": {
+      "role": "fixed board-specific external baseline",
+      "commit": "6c85b2fe382599ec80d6222b5ffe70eabb97457b",
+      "parent": "b09ef6ffd1730832066e7582ce7f36c25709f2b0",
+      "manifest": "research/r266/source-manifest.json",
+      "review": "research/r266/BASELINE.md",
+      "routine_head_monitoring": false,
+      "corrections_override_readme": true,
+      "new_evidence_policy": "Compare configurations and boards; do not use archived conclusions as universal truth"
+    }
+  }
+}

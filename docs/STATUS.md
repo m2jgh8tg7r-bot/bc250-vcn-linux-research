@@ -1,6 +1,10 @@
 # Current status
 
-## Latest — R265, 2026-10-01 JST
+## Latest — R266, 2026-10-01 JST
+
+[Fixed Shalasere external baseline](CHATGPT_HANDOFF_R266.md): pins final commit6c85b2fe and parentb09ef6ff, prioritizes corrections, records board-specific provisioning/prerequisite/fuse evidence, and compares Thomas observations without assuming identical hardware state. Includes negative-result reuse boundaries and discriminating cross-board outcomes. Source/raw measurement confidence is kept separate; no hardware experiment performed.
+
+### Previous — R265, 2026-10-01 JST
 
 [R251–R265 VCPU execution-boundary handoff](CHATGPT_HANDOFF_R265.md) separates source-confirmed facts, strong reported GPCNT/RBC activity, unresolved VCPU fetch/reset/bootstrap candidates, and demoted hypotheses. Whole-domain VCLK absence and direct harvesting-clear variants are deprioritized; the cause remains unknown. Includes counter/instance distinctions, lifecycle and completion audits, a rebuttal matrix and public offline replay. No new live VCN activation is claimed. R249 remains a separate CPU checkpoint and R250 remains unfinished advisory work.
 

@@ -1,0 +1,162 @@
+{
+  "repository": "Shalasere/bc250-vcn-research",
+  "role": "Fixed board-specific external baseline; no routine HEAD monitoring",
+  "policy_origin": "User reports researcher departure; not independently verified",
+  "retrieved_utc": "2026-09-30T15:09:17.440326+00:00",
+  "precedence": "6c85b2fe CORRECTIONS overrides earlier README/summary claims",
+  "revisions": [
+    {
+      "commit": "6c85b2fe382599ec80d6222b5ffe70eabb97457b",
+      "parents": [
+        "b09ef6ffd1730832066e7582ce7f36c25709f2b0"
+      ],
+      "subject": "Corrections to 2026-09-30 writeup after post-push validation pass",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/Shalasere/bc250-vcn-research/6c85b2fe382599ec80d6222b5ffe70eabb97457b/README.md",
+          "bytes": 17074,
+          "sha256": "8a47ef47b1b7d9fd80b67048f5bda099faed8d3819bd77b93e69a09cb091c100"
+        },
+        {
+          "path": "research/SESSION_SUMMARY_2026_09_30.md",
+          "url": "https://raw.githubusercontent.com/Shalasere/bc250-vcn-research/6c85b2fe382599ec80d6222b5ffe70eabb97457b/research/SESSION_SUMMARY_2026_09_30.md",
+          "bytes": 13001,
+          "sha256": "5aca837ce6f70357556341c9bde4fe808f45117d0aeaa9701d06fdf1f8f5beb3"
+        },
+        {
+          "path": "research/CORRECTIONS_2026_09_30.md",
+          "url": "https://raw.githubusercontent.com/Shalasere/bc250-vcn-research/6c85b2fe382599ec80d6222b5ffe70eabb97457b/research/CORRECTIONS_2026_09_30.md",
+          "bytes": 6876,
+          "sha256": "e6c55824d9d41d732ad06f7def4a18c89a8d63df924ec6a2ca8d1e29f204ed53"
+        },
+        {
+          "path": "research/EXHAUSTION_LOG.md",
+          "url": "https://raw.githubusercontent.com/Shalasere/bc250-vcn-research/6c85b2fe382599ec80d6222b5ffe70eabb97457b/research/EXHAUSTION_LOG.md",
+          "bytes": 50687,
+          "sha256": "79a91c482604d419c5e4e915fd46a8d38be93d85fe24a9ddf4294e83b54d67c0"
+        },
+        {
+          "path": "research/COMMUNITY_REPORT_2026_09_11.md",
+          "url": "https://raw.githubusercontent.com/Shalasere/bc250-vcn-research/6c85b2fe382599ec80d6222b5ffe70eabb97457b/research/COMMUNITY_REPORT_2026_09_11.md",
+          "bytes": 17983,
+          "sha256": "7e520add71c159f6543df37910dc4c4cb82b35db2098db070ecc634add1d7780"
+        }
+      ],
+      "tree_sha": "7da4f305e8b0dd21cc76c79e58b79989c81d546e",
+      "implementation_inventory": [
+        {
+          "path": "code/direct-load/PATCHES.md",
+          "git_blob_sha": "4fedab01c3d3bd942abdf226f0fe0d2008f1d92f"
+        },
+        {
+          "path": "code/direct-load/amdgpu.h",
+          "git_blob_sha": "037e342b603382762474e44b44517cf194069055"
+        },
+        {
+          "path": "code/direct-load/amdgpu_discovery.hunk.patch",
+          "git_blob_sha": "6e64d37a96b8defa29da77e5ecc96f8717da7d44"
+        },
+        {
+          "path": "code/direct-load/amdgpu_drv.c",
+          "git_blob_sha": "c8272a2b623abda5ec534ca72dc59cb5aba876dd"
+        },
+        {
+          "path": "code/direct-load/amdgpu_trace.h",
+          "git_blob_sha": "72f13cd5f540709f5c6fa312db029e6970b727be"
+        },
+        {
+          "path": "code/direct-load/amdgpu_trace.h.hunk.patch",
+          "git_blob_sha": "a837f49b1a9e1e834a9e8855875ce2b098dbc5f7"
+        },
+        {
+          "path": "code/direct-load/amdgpu_vcn.c",
+          "git_blob_sha": "67714292eaf213f1154883bab4842b88387f624c"
+        },
+        {
+          "path": "code/direct-load/vcn_v2_0.c",
+          "git_blob_sha": "f2889e15d605515ce84bfabc05a9a7220cc5b8c5"
+        },
+        {
+          "path": "code/direct-load/wsl-build.sh",
+          "git_blob_sha": "1ce680f012d189496c32d51166cc69afbf90bf36"
+        }
+      ],
+      "tree_truncated": false
+    },
+    {
+      "commit": "b09ef6ffd1730832066e7582ce7f36c25709f2b0",
+      "parents": [
+        "edb222c65477b6ebc63834ef3562855009179539"
+      ],
+      "subject": "2026-09-30 session: direct-load VCN driver-side proven; SMU PowerUpVcn confirmed at msg 0x2A/0x2B (PREREQ-locked)",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/Shalasere/bc250-vcn-research/b09ef6ffd1730832066e7582ce7f36c25709f2b0/README.md",
+          "bytes": 17084,
+          "sha256": "fdc50a7546c1ce3390d27afe350e16cb2a70d9b4ed9257656ddf735aa012a163"
+        },
+        {
+          "path": "research/SESSION_SUMMARY_2026_09_30.md",
+          "url": "https://raw.githubusercontent.com/Shalasere/bc250-vcn-research/b09ef6ffd1730832066e7582ce7f36c25709f2b0/research/SESSION_SUMMARY_2026_09_30.md",
+          "bytes": 12289,
+          "sha256": "d2e52031cc7b9dc93fc8829a9b8b368916a0b5b8a59bb65aeef42e958335bfa1"
+        },
+        {
+          "path": "research/EXHAUSTION_LOG.md",
+          "url": "https://raw.githubusercontent.com/Shalasere/bc250-vcn-research/b09ef6ffd1730832066e7582ce7f36c25709f2b0/research/EXHAUSTION_LOG.md",
+          "bytes": 50687,
+          "sha256": "79a91c482604d419c5e4e915fd46a8d38be93d85fe24a9ddf4294e83b54d67c0"
+        },
+        {
+          "path": "research/COMMUNITY_REPORT_2026_09_11.md",
+          "url": "https://raw.githubusercontent.com/Shalasere/bc250-vcn-research/b09ef6ffd1730832066e7582ce7f36c25709f2b0/research/COMMUNITY_REPORT_2026_09_11.md",
+          "bytes": 17983,
+          "sha256": "7e520add71c159f6543df37910dc4c4cb82b35db2098db070ecc634add1d7780"
+        }
+      ],
+      "tree_sha": "f7648dc47cefadc2fe9eadee3170ec97918bd4b4",
+      "implementation_inventory": [
+        {
+          "path": "code/direct-load/PATCHES.md",
+          "git_blob_sha": "4fedab01c3d3bd942abdf226f0fe0d2008f1d92f"
+        },
+        {
+          "path": "code/direct-load/amdgpu.h",
+          "git_blob_sha": "037e342b603382762474e44b44517cf194069055"
+        },
+        {
+          "path": "code/direct-load/amdgpu_discovery.hunk.patch",
+          "git_blob_sha": "6e64d37a96b8defa29da77e5ecc96f8717da7d44"
+        },
+        {
+          "path": "code/direct-load/amdgpu_drv.c",
+          "git_blob_sha": "c8272a2b623abda5ec534ca72dc59cb5aba876dd"
+        },
+        {
+          "path": "code/direct-load/amdgpu_trace.h",
+          "git_blob_sha": "72f13cd5f540709f5c6fa312db029e6970b727be"
+        },
+        {
+          "path": "code/direct-load/amdgpu_trace.h.hunk.patch",
+          "git_blob_sha": "a837f49b1a9e1e834a9e8855875ce2b098dbc5f7"
+        },
+        {
+          "path": "code/direct-load/amdgpu_vcn.c",
+          "git_blob_sha": "67714292eaf213f1154883bab4842b88387f624c"
+        },
+        {
+          "path": "code/direct-load/vcn_v2_0.c",
+          "git_blob_sha": "f2889e15d605515ce84bfabc05a9a7220cc5b8c5"
+        },
+        {
+          "path": "code/direct-load/wsl-build.sh",
+          "git_blob_sha": "1ce680f012d189496c32d51166cc69afbf90bf36"
+        }
+      ],
+      "tree_truncated": false
+    }
+  ],
+  "scope": "Selected original documents and Git metadata archived locally; no code executed or device accessed; raw originals not republished"
+}

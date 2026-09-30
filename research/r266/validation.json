@@ -1,0 +1,15 @@
+{
+  "result": "PASS",
+  "archived_documents_verified": 9,
+  "immediate_parent_verified": true,
+  "source_naming": {
+    "source_commit": "551c722f40809618230001baccf219193e22fc5a",
+    "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_ucode.c",
+    "sha256": "3b786c1da23c314830fa8232d908a872f13400f21aadf33afe9b0f5a181b534d",
+    "name": "vcn_2_0_3.bin",
+    "scope": "Normal source fallback, not resident firmware identity"
+  },
+  "community_reference_verified": true,
+  "direct_load_hardware_reproduced": false,
+  "fuse_identity_independently_proven": false
+}
