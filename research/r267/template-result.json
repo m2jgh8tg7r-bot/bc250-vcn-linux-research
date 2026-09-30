@@ -1,0 +1,36 @@
+{
+  "classification": "PROVEN_STATICALLY",
+  "scope": "Arithmetic over supplied saved samples; no authenticity verification",
+  "missing_provenance": [
+    "boot_context",
+    "configuration_identity",
+    "counter_identity",
+    "counter_model unsigned_modulo_up not established",
+    "mapping_provenance",
+    "sample validity",
+    "timebase_provenance"
+  ],
+  "counter_width_bits": 32,
+  "supplied_counts_change": false,
+  "intervals": [
+    {
+      "elapsed_ns": 1,
+      "modular_delta": 0,
+      "minimum_modular_rate_counts_per_second": 0.0,
+      "unique_delta_under_supplied_bound": false,
+      "additional_wraps_possible": null,
+      "rate_counts_per_second": null
+    }
+  ],
+  "requested_frequency_used_in_calculation": false,
+  "rate_unit": "counter increments per second; not automatically clock cycles per second",
+  "physical_clock_source_proven": false,
+  "vcpu_execution_proven": false,
+  "limits": [
+    "The supplied bound must bound actual increments over each interval; a nominal oscillator frequency alone does not establish this (sampling phase, read latency and timestamp uncertainty matter)",
+    "A supplied independent bound is not independently verified by this program",
+    "Timing uncertainty and read latency are not measured; results use supplied timestamps",
+    "A modulo lower bound of zero does not prove a stopped clock",
+    "No cross-counter equivalence is inferred"
+  ]
+}

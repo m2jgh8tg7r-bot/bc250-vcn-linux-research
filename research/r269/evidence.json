@@ -1,0 +1,22 @@
+{
+  "classification": "PROVEN_STATICALLY",
+  "header_url": "https://github.com/torvalds/linux/blob/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/include/asic_reg/vcn/vcn_2_0_0_sh_mask.h",
+  "header_sha256": "4c9ed19c3e744be938ada218d188c19ad7dc71e0dfb1652637ab116618bd489e",
+  "cc_field_witnesses": [
+    {
+      "line": 1532,
+      "text": "#define CC_UVD_HARVESTING__UVD_DISABLE__SHIFT                                                                 0x1"
+    },
+    {
+      "line": 1534,
+      "text": "#define CC_UVD_HARVESTING__UVD_DISABLE_MASK                                                                   0x00000002L"
+    }
+  ],
+  "smn_to_cc_mapping": "UNPROVEN",
+  "write_disable_field_map": "UNPROVEN",
+  "actual_disable_field_map": "UNPROVEN",
+  "thomas_new_values": "USER_RELAYED_EXTERNAL_REPORT",
+  "fault_observer_coverage": "UNPROVEN",
+  "hardware_access": false,
+  "archive_modified": false
+}

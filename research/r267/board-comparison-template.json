@@ -1,0 +1,106 @@
+{
+  "purpose": "Saved-record intake only; no device acquisition commands",
+  "board_alias": null,
+  "trial_id": null,
+  "boot_context": null,
+  "bios_identity": null,
+  "reset_history": null,
+  "kernel_module_identity": null,
+  "firmware_identity": null,
+  "capture_phase": null,
+  "source_record": null,
+  "observations": {
+    "cc_uvd_harvesting": {
+      "value": null,
+      "valid": null,
+      "method": null,
+      "source_location": null,
+      "timestamp_or_interval": null
+    },
+    "mirror_5d928": {
+      "value": null,
+      "valid": null,
+      "method": null,
+      "source_location": null,
+      "timestamp_or_interval": null
+    },
+    "mirror_5d930": {
+      "value": null,
+      "valid": null,
+      "method": null,
+      "source_location": null,
+      "timestamp_or_interval": null
+    },
+    "mirror_5d93c": {
+      "value": null,
+      "valid": null,
+      "method": null,
+      "source_location": null,
+      "timestamp_or_interval": null
+    },
+    "powerup_vcn_response": {
+      "value": null,
+      "valid": null,
+      "method": null,
+      "source_location": null,
+      "timestamp_or_interval": null
+    },
+    "pgfsm_status": {
+      "value": null,
+      "valid": null,
+      "method": null,
+      "source_location": null,
+      "timestamp_or_interval": null
+    },
+    "gpcnt_rate": {
+      "value": null,
+      "valid": null,
+      "method": null,
+      "source_location": null,
+      "timestamp_or_interval": null
+    },
+    "rbc_packet_execution": {
+      "value": null,
+      "valid": null,
+      "method": null,
+      "source_location": null,
+      "timestamp_or_interval": null
+    },
+    "vcpu_pc": {
+      "value": null,
+      "valid": null,
+      "method": null,
+      "source_location": null,
+      "timestamp_or_interval": null
+    },
+    "vcpu_prid": {
+      "value": null,
+      "valid": null,
+      "method": null,
+      "source_location": null,
+      "timestamp_or_interval": null
+    },
+    "vcpu_execution": {
+      "value": null,
+      "valid": null,
+      "method": null,
+      "source_location": null,
+      "timestamp_or_interval": null
+    },
+    "vcpu_cache_access": {
+      "value": null,
+      "valid": null,
+      "method": null,
+      "source_location": null,
+      "timestamp_or_interval": null
+    }
+  },
+  "rules": [
+    "null means unknown, never zero",
+    "Do not combine fields across different trials into an observed joint state",
+    "RBC/VCLK success does not establish VCPU execution",
+    "Same mirror values on two inactive VCPUs do not refute VCPU-specific disable",
+    "Different mirror values do not identify OTP fuse differences",
+    "Record cached/readback/reported versus physical-event observations separately"
+  ]
+}

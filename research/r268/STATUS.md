@@ -1,0 +1,10 @@
+STAGE=R268
+RESULT=PROVEN_STATICALLY
+STATIC_OR_LIVE=bounded pinned-source audit
+HARDWARE_ACCESS=none
+HARDWARE_MUTATION=none
+HARDWARE_FAILURE=NO_EVIDENCE
+PROVEN=three IRQ fence dispatches; two stop-path LMI status waits; header names are not attribution contracts
+REJECTED=clean status or generic interrupt alone proves VCPU instruction fetch
+UNPROVEN=actual first-fetch transaction; safe attributable trace acquisition
+NEXT=review original saved observations for attribution and paired-control quality, without new register operations

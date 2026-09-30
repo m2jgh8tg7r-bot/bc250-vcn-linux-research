@@ -1,0 +1,43 @@
+{
+  "classification": "PROVEN_STATICALLY",
+  "source": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+  "sha256": "753849c7c491b137913668f77b8a3a0f539c7cf5cd46423db22b8f1513d9d9f6",
+  "commit": "551c722f40809618230001baccf219193e22fc5a",
+  "witnesses": [
+    {
+      "anchor": "/* enable VCPU clock */",
+      "line": 1025
+    },
+    {
+      "anchor": "/* disable master interrupt */",
+      "line": 1029
+    },
+    {
+      "anchor": "vcn_v2_0_mc_resume(vinst);",
+      "line": 1067
+    },
+    {
+      "anchor": "/* release VCPU reset to boot */",
+      "line": 1069
+    },
+    {
+      "anchor": "/* enable LMI MC and UMC channels */",
+      "line": 1073
+    },
+    {
+      "anchor": "if (status & 2)",
+      "line": 1095
+    },
+    {
+      "anchor": "/* enable master interrupt */",
+      "line": 1119
+    }
+  ],
+  "scope": "Non-DPG start function; source order only",
+  "findings": [
+    "VCPU_EN in MASTINT_EN is used as master-interrupt control, disabled before the ready poll and enabled afterward",
+    "The source treats VCPU reset release as boot release, followed by channel/reset setup and ready polling",
+    "No source-order observation proves effective core enable or first instruction issue on BC250"
+  ],
+  "hardware_access": false
+}

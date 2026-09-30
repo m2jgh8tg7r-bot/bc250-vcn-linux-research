@@ -1,6 +1,10 @@
 # Current status
 
-## Latest — R266, 2026-10-01 JST
+## Latest — R269, 2026-10-01 JST
+
+[Write-disable versus disable; first-request boundary](CHATGPT_HANDOFF_R269.md): explicitly downgrades the SMN-to-UVD-disable fuse interpretation to an unresolved field-mapping hypothesis. CC bit definitions, SMN words, Thomas's named fields and discovery metadata remain separate. Fault silence is not proof of absent fetch. The fixed original Shalasere archive is unchanged. [R267–R268 preparation](CHATGPT_HANDOFF_R268.md) adds saved-counter analysis and ordinary-API preflight; critical new acquisition is not ready and no VCN device test was performed.
+
+### Previous — R266, 2026-10-01 JST
 
 [Fixed Shalasere external baseline](CHATGPT_HANDOFF_R266.md): pins final commit6c85b2fe and parentb09ef6ff, prioritizes corrections, records board-specific provisioning/prerequisite/fuse evidence, and compares Thomas observations without assuming identical hardware state. Includes negative-result reuse boundaries and discriminating cross-board outcomes. Source/raw measurement confidence is kept separate; no hardware experiment performed.
 

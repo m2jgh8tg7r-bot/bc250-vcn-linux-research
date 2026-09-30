@@ -1,0 +1,17 @@
+{
+  "result": "PASS",
+  "exhaustive_small_width_cases": 1692,
+  "named_controls": [
+    "no cap leaves wrap ambiguous",
+    "missing provenance withholds rate",
+    "invalid sample withholds rate",
+    "reset excludes interval",
+    "unknown counter model withholds rate",
+    "requested rate does not affect arithmetic",
+    "synthetic 800000000 counts/s",
+    "synthetic 1250000000 counts/s"
+  ],
+  "invalid_input_controls": 4,
+  "hardware_measurement": false,
+  "external_gpcnt_data_replayed": false
+}

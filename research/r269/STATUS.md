@@ -1,0 +1,10 @@
+STAGE=R269
+RESULT=PROVEN_STATICALLY
+STATIC_OR_LIVE=source namespace separation plus external-report reassessment
+HARDWARE_ACCESS=none
+HARDWARE_MUTATION=none
+HARDWARE_FAILURE=NO_EVIDENCE
+PROVEN=CC bit definition does not establish SMN field mapping; baseline inference explicitly downgraded
+REJECTED=write-disable implies UVD disabled; zero faults alone proves no fetch
+UNPROVEN=uvd_uvd_* field maps; OTP; effective core enable; first request and fault coverage
+NEXT=prioritize first-request boundary; seek original field definitions and observer-positive controls; no direct-clear trials

@@ -8,7 +8,9 @@
       "review": "research/r266/BASELINE.md",
       "routine_head_monitoring": false,
       "corrections_override_readme": true,
-      "new_evidence_policy": "Compare configurations and boards; do not use archived conclusions as universal truth"
+      "new_evidence_policy": "Compare configurations and boards; do not use archived conclusions as universal truth",
+      "latest_interpretation_overlay": "research/r269/RESULT.md",
+      "fuse_field_mapping": "UNPROVEN; strong external hypothesis only, not Confirmed"
     }
   }
 }

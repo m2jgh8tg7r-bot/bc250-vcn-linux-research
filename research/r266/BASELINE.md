@@ -1,5 +1,7 @@
 # R266 — Shalasere fixed external baseline
 
+> Interpretation updated by R269: UVD-disable fuse identity remains unresolved. Original pinned source archive is unchanged.
+
 Shalasere/bc250-vcn-research is registered as a fixed, board-specific comparison baseline, not a feed to monitor routinely. Researcher departure is user-supplied context, not independently verified. New Thomas/PhishMaster/Rukkus observations are compared against the recorded Shalasere configuration, not judged by whether they preserve its conclusions.
 
 Pinned final commit: [6c85b2fe382599ec80d6222b5ffe70eabb97457b](https://github.com/Shalasere/bc250-vcn-research/commit/6c85b2fe382599ec80d6222b5ffe70eabb97457b). Its immediate parent is independently confirmed as [b09ef6ffd1730832066e7582ce7f36c25709f2b0](https://github.com/Shalasere/bc250-vcn-research/commit/b09ef6ffd1730832066e7582ce7f36c25709f2b0). Nine selected original documents across these revisions, commit metadata and tree inventories are preserved locally with hashes. Original documents are not republished wholesale; implementation files are indexed by immutable Git blob identities, not installed, modified or executed.
@@ -20,7 +22,7 @@ Precedence: [CORRECTIONS](https://github.com/Shalasere/bc250-vcn-research/blob/6
 
 The reported prerequisite responses, access hangs, three equal mirror-like values, unsuccessful writes and extensive negative trials belong to the observed board, firmware, BIOS and transports. They are not impossibility proofs for all BC250 devices.
 
-The three reported values `0x10C6` and CC harvesting3 provide strong board-specific evidence of a persistent disable-associated configuration. Shalasere interprets it as UVD_DISABLE/fuse evidence. We preserve that interpretation as a strong external board-specific hypothesis, while distinguishing it from independently proven OTP fuse identity: the SMN locations' semantic identification comes from an external tip, and equal bit positions across unrelated registers do not establish equal meaning. Identical values likewise do not by themselves prove a hardware mirror relationship.
+**R269 semantic correction:** the three reported values `0x10C6` and CC harvesting3 are board-specific observations of persistent configuration values; their disable association is not independently established. The actual UVD-disable fuse interpretation is **Strong hypothesis / unresolved fuse-field mapping**, not Confirmed. A write-disable field must be distinguished from the disabled-state field, and neither is yet mapped here to these SMN bits. Shalasere interprets it as UVD_DISABLE/fuse evidence. We preserve that interpretation as a strong external board-specific hypothesis, while distinguishing it from independently proven OTP fuse identity: the SMN locations' semantic identification comes from an external tip, and equal bit positions across unrelated registers do not establish equal meaning. Identical values likewise do not by themselves prove a hardware mirror relationship.
 
 Possible prerequisites remain parallel: BIOS-init policy, fuse/configuration state, internal SMU state, early boot configuration and security policy. Neither the response nor readback establishes that one BIOS flag is sufficient, or that the decision is necessarily boot-only.
 

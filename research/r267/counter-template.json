@@ -1,0 +1,24 @@
+{
+  "counter_width_bits": 32,
+  "counter_identity": "",
+  "mapping_provenance": "",
+  "timebase_provenance": "",
+  "boot_context": "",
+  "configuration_identity": "",
+  "independent_max_rate_counts_per_second": null,
+  "max_rate_basis": "",
+  "samples": [
+    {
+      "t_ns": 0,
+      "count": 0,
+      "valid": false
+    },
+    {
+      "t_ns": 1,
+      "count": 0,
+      "valid": false
+    }
+  ],
+  "note": "Placeholder only, not real observations. Width32 is an input assumption to replace/justify.",
+  "counter_model": null
+}

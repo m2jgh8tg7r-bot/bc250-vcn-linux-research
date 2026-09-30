@@ -1,0 +1,72 @@
+{
+  "result": "PROVEN_STATICALLY",
+  "commit": "551c722f40809618230001baccf219193e22fc5a",
+  "scope": "Two pinned source files; lexical witnesses, not hardware semantics verification",
+  "files": [
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "sha256": "753849c7c491b137913668f77b8a3a0f539c7cf5cd46423db22b8f1513d9d9f6"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/include/asic_reg/vcn/vcn_2_0_0_sh_mask.h",
+      "sha256": "4c9ed19c3e744be938ada218d188c19ad7dc71e0dfb1652637ab116618bd489e"
+    }
+  ],
+  "witnesses": [
+    {
+      "path": "drivers/gpu/drm/amd/include/asic_reg/vcn/vcn_2_0_0_sh_mask.h",
+      "symbol": "UVD_SYS_INT_STATUS__PIF_ADDR_ERR_INT_MASK",
+      "line": 2152,
+      "text": "#define UVD_SYS_INT_STATUS__PIF_ADDR_ERR_INT_MASK                                                             0x00000001L"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/include/asic_reg/vcn/vcn_2_0_0_sh_mask.h",
+      "symbol": "UVD_SYS_INT_STATUS__RBC_REG_PRIV_FAULT_INT_MASK",
+      "line": 2156,
+      "text": "#define UVD_SYS_INT_STATUS__RBC_REG_PRIV_FAULT_INT_MASK                                                       0x00000040L"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/include/asic_reg/vcn/vcn_2_0_0_sh_mask.h",
+      "symbol": "UVD_LMI_STATUS__VCPU_LMI_WRITE_CLEAN_MASK",
+      "line": 2451,
+      "text": "#define UVD_LMI_STATUS__VCPU_LMI_WRITE_CLEAN_MASK                                                             0x00000008L"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/include/asic_reg/vcn/vcn_2_0_0_sh_mask.h",
+      "symbol": "UVD_LMI_STATUS__UMC_READ_CLEAN_RAW_MASK",
+      "line": 2457,
+      "text": "#define UVD_LMI_STATUS__UMC_READ_CLEAN_RAW_MASK                                                               0x00000200L"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "line": 1238,
+      "text": "r = SOC15_WAIT_ON_RREG(VCN, 0, mmUVD_LMI_STATUS, tmp, tmp);"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "line": 1249,
+      "text": "r = SOC15_WAIT_ON_RREG(VCN, 0, mmUVD_LMI_STATUS, tmp, tmp);"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "line": 1808,
+      "text": "amdgpu_fence_process(&adev->vcn.inst->ring_dec);"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "line": 1811,
+      "text": "amdgpu_fence_process(&adev->vcn.inst->ring_enc[0]);"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "line": 1814,
+      "text": "amdgpu_fence_process(&adev->vcn.inst->ring_enc[1]);"
+    }
+  ],
+  "checks": {
+    "three_fence_dispatch_calls": true,
+    "two_lmi_status_sites": true,
+    "sys_status_and_ack_not_used_in_this_driver": true
+  },
+  "hardware_access": false
+}

@@ -1,0 +1,23 @@
+{
+  "classification": "UNPROVEN",
+  "exact_names": [
+    "uvd_uvd_write_disable",
+    "uvd_uvd_disable",
+    "UVD_WRITE_DISABLE",
+    "uvd_write_disable"
+  ],
+  "sources_checked": [
+    "Web exact-name searches",
+    "GitHub indexed code search",
+    "Retained Linux AMD headers and source",
+    "Local research text/header corpus"
+  ],
+  "primary_exact_field_mapping_found": false,
+  "search_positive_control": "CC_UVD_HARVESTING repo:torvalds/linux returned known source/header witnesses",
+  "broad_uvd_uvd_matches": "Address-block names and unrelated register-table names; not fuse-field definitions",
+  "limits": [
+    "Search indexing and coverage are incomplete",
+    "No absence-of-hardware inference",
+    "No reinterpretation of SMN bit 1 as write-disable from this search"
+  ]
+}
