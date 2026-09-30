@@ -1,0 +1,474 @@
+{
+  "result": "PASS",
+  "classification": "PROVEN_STATICALLY",
+  "versions": [
+    {
+      "version": "v6.6",
+      "commit": "ffc253263a1375a65fa6c9f62a893e9767fbebfa",
+      "source_files": [
+        {
+          "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+          "sha256": "8d6700d7170d55dfa51df844cef6dc5aa434ff10b252c1630c76a6084d4a9c5b"
+        },
+        {
+          "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.c",
+          "sha256": "150b994c8a7fae51cd8ea4416871ecc6da8421c362c641a022c8859f131abd09"
+        }
+      ],
+      "invariant_checks": {
+        "stop_phase_order": true,
+        "stall_before_checked_umc_wait": true,
+        "stop_disables_clock": true,
+        "stop_asserts_vcpu_reset_then_zero_status": true,
+        "wrapper_same_state_guard_before_start": true,
+        "wrapper_state_only_on_success": true,
+        "start_contains_unstall_request": true,
+        "decode_positive_wait_maps_to_zero": true,
+        "decode_no_completion_error_query": true,
+        "encode_positive_wait_maps_to_zero": true,
+        "encode_no_completion_error_query": true
+      },
+      "lifecycle_variations": {
+        "state_storage": "device-wide VCN",
+        "wait_result_form": "assignment",
+        "begin_submission_counter": true,
+        "begin_cancel_only_first_submission": false,
+        "begin_has_pg_lock": true,
+        "idle_has_pg_lock": false,
+        "idle_submission_counter_predicate": true,
+        "legacy_uvd_dpm_branch": false,
+        "begin_power_profile_helper": false,
+        "vf_wrapper_shortcut": true
+      },
+      "function_witnesses": [
+        {
+          "function": "vcn_v2_0_stop",
+          "line": 1132,
+          "sha256": "ead773ed6603b1d4cd923a6499826f03f59f012dff9a4a0c6b21b86e858c2b8d"
+        },
+        {
+          "function": "vcn_v2_0_start",
+          "line": 929,
+          "sha256": "dc196aa2c81ed7ae1bbde9906d08b6be8cdeccd88519c8d5b27d2042ea1d7c57"
+        },
+        {
+          "function": "vcn_v2_0_set_powergating_state",
+          "line": 1755,
+          "sha256": "f8e3b9aa206d3210c0dfabef2cb14c3238ac55f9c4673d623cbf4ae66d02ae88"
+        },
+        {
+          "function": "amdgpu_vcn_ring_begin_use",
+          "line": 403,
+          "sha256": "232ed662259ae7cbaac91a54ef812c429fb1301687f10cd292af767dc40400a6"
+        },
+        {
+          "function": "amdgpu_vcn_idle_work_handler",
+          "line": 360,
+          "sha256": "fca298a7a0cb69ede7f93c0ccc246987c3ed29023af0d79716f97dd82d5abd5e"
+        },
+        {
+          "function": "amdgpu_vcn_dec_ring_test_ib",
+          "line": 629,
+          "sha256": "97f6613ab0ce0e81fd625e7b938410319e6accff907582500198439839d9d954"
+        },
+        {
+          "function": "amdgpu_vcn_enc_ring_test_ib",
+          "line": 958,
+          "sha256": "f3d907ff4871a550f03684a9b0e11eb048db6bb763cae106c5c3136c743c86ca"
+        }
+      ]
+    },
+    {
+      "version": "v6.12",
+      "commit": "adc218676eef25575469234709c2d87185ca223a",
+      "source_files": [
+        {
+          "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+          "sha256": "6135192fe60d3ab2f76eaff25449c5e38db76a075a8294d43f078caf114d3d6a"
+        },
+        {
+          "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.c",
+          "sha256": "a46637bd4da01471c12e229fb196b957b36386df7d97b40cf97017bd6d50975e"
+        }
+      ],
+      "invariant_checks": {
+        "stop_phase_order": true,
+        "stall_before_checked_umc_wait": true,
+        "stop_disables_clock": true,
+        "stop_asserts_vcpu_reset_then_zero_status": true,
+        "wrapper_same_state_guard_before_start": true,
+        "wrapper_state_only_on_success": true,
+        "start_contains_unstall_request": true,
+        "decode_positive_wait_maps_to_zero": true,
+        "decode_no_completion_error_query": true,
+        "encode_positive_wait_maps_to_zero": true,
+        "encode_no_completion_error_query": true
+      },
+      "lifecycle_variations": {
+        "state_storage": "device-wide VCN",
+        "wait_result_form": "assignment",
+        "begin_submission_counter": true,
+        "begin_cancel_only_first_submission": false,
+        "begin_has_pg_lock": true,
+        "idle_has_pg_lock": false,
+        "idle_submission_counter_predicate": true,
+        "legacy_uvd_dpm_branch": false,
+        "begin_power_profile_helper": false,
+        "vf_wrapper_shortcut": true
+      },
+      "function_witnesses": [
+        {
+          "function": "vcn_v2_0_stop",
+          "line": 1176,
+          "sha256": "ead773ed6603b1d4cd923a6499826f03f59f012dff9a4a0c6b21b86e858c2b8d"
+        },
+        {
+          "function": "vcn_v2_0_start",
+          "line": 973,
+          "sha256": "dc196aa2c81ed7ae1bbde9906d08b6be8cdeccd88519c8d5b27d2042ea1d7c57"
+        },
+        {
+          "function": "vcn_v2_0_set_powergating_state",
+          "line": 1799,
+          "sha256": "f8e3b9aa206d3210c0dfabef2cb14c3238ac55f9c4673d623cbf4ae66d02ae88"
+        },
+        {
+          "function": "amdgpu_vcn_ring_begin_use",
+          "line": 421,
+          "sha256": "5c23e3e14843e1fa7ebb07ad35a732e9fa30751331ff9407cb3ef0eac1c3a2e4"
+        },
+        {
+          "function": "amdgpu_vcn_idle_work_handler",
+          "line": 376,
+          "sha256": "651be1733a1862274b8532c128f793298fd59cb3272a708fe482b2e5dc352853"
+        },
+        {
+          "function": "amdgpu_vcn_dec_ring_test_ib",
+          "line": 653,
+          "sha256": "97f6613ab0ce0e81fd625e7b938410319e6accff907582500198439839d9d954"
+        },
+        {
+          "function": "amdgpu_vcn_enc_ring_test_ib",
+          "line": 981,
+          "sha256": "f3d907ff4871a550f03684a9b0e11eb048db6bb763cae106c5c3136c743c86ca"
+        }
+      ]
+    },
+    {
+      "version": "v7.2",
+      "commit": "8d3ae59288f1e7d58d76558a6ee96d533bc5019f",
+      "source_files": [
+        {
+          "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+          "sha256": "753849c7c491b137913668f77b8a3a0f539c7cf5cd46423db22b8f1513d9d9f6"
+        },
+        {
+          "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.c",
+          "sha256": "1437aff7a1df69d33406e39266764b88f7995c8eb5c54a9f1aa0562eb3e22f36"
+        }
+      ],
+      "invariant_checks": {
+        "stop_phase_order": true,
+        "stall_before_checked_umc_wait": true,
+        "stop_disables_clock": true,
+        "stop_asserts_vcpu_reset_then_zero_status": true,
+        "wrapper_same_state_guard_before_start": true,
+        "wrapper_state_only_on_success": true,
+        "start_contains_unstall_request": true,
+        "decode_positive_wait_maps_to_zero": true,
+        "decode_no_completion_error_query": true,
+        "encode_positive_wait_maps_to_zero": true,
+        "encode_no_completion_error_query": true
+      },
+      "lifecycle_variations": {
+        "state_storage": "per-instance",
+        "wait_result_form": "assignment",
+        "begin_submission_counter": true,
+        "begin_cancel_only_first_submission": false,
+        "begin_has_pg_lock": true,
+        "idle_has_pg_lock": true,
+        "idle_submission_counter_predicate": true,
+        "legacy_uvd_dpm_branch": false,
+        "begin_power_profile_helper": true,
+        "vf_wrapper_shortcut": true
+      },
+      "function_witnesses": [
+        {
+          "function": "vcn_v2_0_stop",
+          "line": 1215,
+          "sha256": "253a4c9e52799f86f532f1a7eccf15796c2ebc0e788a3551c803443ba4b9262d"
+        },
+        {
+          "function": "vcn_v2_0_start",
+          "line": 1000,
+          "sha256": "cf4410f81c87e50918ef613c9417b09bf180c2ce8d3550ba956eeb790d68aa82"
+        },
+        {
+          "function": "vcn_v2_0_set_pg_state",
+          "line": 1856,
+          "sha256": "44c64e0b927da62f197c3f5cd6a0ed2f0d566084c8df6d2d0c49fd033161c75f"
+        },
+        {
+          "function": "amdgpu_vcn_ring_begin_use",
+          "line": 503,
+          "sha256": "60be0539e9693de6ccef1656468bd30b3ec64efc8b2669855b06da1c25d53af8"
+        },
+        {
+          "function": "amdgpu_vcn_idle_work_handler",
+          "line": 461,
+          "sha256": "3012edb5b79669085cacb8a1e1c535113a42f900bd1e92de60caf32e70cb43cd"
+        },
+        {
+          "function": "amdgpu_vcn_dec_ring_test_ib",
+          "line": 731,
+          "sha256": "97f6613ab0ce0e81fd625e7b938410319e6accff907582500198439839d9d954"
+        },
+        {
+          "function": "amdgpu_vcn_enc_ring_test_ib",
+          "line": 1059,
+          "sha256": "ccb604c01939267f5f690ab92cb04fbdfaa049e28399f0010ca0d98dcf08b658"
+        }
+      ]
+    },
+    {
+      "version": "v5.4",
+      "commit": "219d54332a09e8d8741c1e1982f5eae56099de85",
+      "source_files": [
+        {
+          "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+          "sha256": "0716f7c8afc9eb59ca609b3a15ef64729fc475d0f1b10cb28851aaedad9cd6c6"
+        },
+        {
+          "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.c",
+          "sha256": "39955fd2988b27c7ceca5ad3057e2d137fccb43228d2787858fef63ef3c1ebb1"
+        }
+      ],
+      "invariant_checks": {
+        "stop_phase_order": true,
+        "stall_before_checked_umc_wait": true,
+        "stop_disables_clock": true,
+        "stop_asserts_vcpu_reset_then_zero_status": true,
+        "wrapper_same_state_guard_before_start": true,
+        "wrapper_state_only_on_success": true,
+        "start_contains_unstall_request": true,
+        "decode_positive_wait_maps_to_zero": true,
+        "decode_no_completion_error_query": true,
+        "encode_positive_wait_maps_to_zero": true,
+        "encode_no_completion_error_query": true
+      },
+      "lifecycle_variations": {
+        "state_storage": "device-wide VCN",
+        "wait_result_form": "output argument",
+        "begin_submission_counter": false,
+        "begin_cancel_only_first_submission": false,
+        "begin_has_pg_lock": false,
+        "idle_has_pg_lock": false,
+        "idle_submission_counter_predicate": false,
+        "legacy_uvd_dpm_branch": true,
+        "begin_power_profile_helper": false,
+        "vf_wrapper_shortcut": false
+      },
+      "function_witnesses": [
+        {
+          "function": "vcn_v2_0_stop",
+          "line": 1258,
+          "sha256": "f58264df7871fd017b527e14e9482b831b1555bcc40fba1ce22fda6e335c4ae7"
+        },
+        {
+          "function": "vcn_v2_0_start",
+          "line": 1053,
+          "sha256": "0a49c24612427108da10c00db6a5ba29f876dd141fbf6213072c47f6c887876f"
+        },
+        {
+          "function": "vcn_v2_0_set_powergating_state",
+          "line": 2123,
+          "sha256": "7b3fa9d6baa80678388da2f71e71a6b6d67819ae6393f634b7da1de23a03ad28"
+        },
+        {
+          "function": "amdgpu_vcn_ring_begin_use",
+          "line": 333,
+          "sha256": "7b15d20bcfc94da91494b2cc3a93ac9c0d998567e5b910e8e9d08c301d11c001"
+        },
+        {
+          "function": "amdgpu_vcn_idle_work_handler",
+          "line": 286,
+          "sha256": "e01830d60d906a9cfd05aa36c4bf3974f5bb6df99cf3d657ee9d2dbe9003bb93"
+        },
+        {
+          "function": "amdgpu_vcn_dec_ring_test_ib",
+          "line": 518,
+          "sha256": "9e42af552166ee5dbfe47ded37aa965d089d463bcdba56f04ab8976abb5b8e9a"
+        },
+        {
+          "function": "amdgpu_vcn_enc_ring_test_ib",
+          "line": 676,
+          "sha256": "c5ebb8061be97644b90f6435d9dddba1346254b76478353bd9c4040d36ef5295"
+        }
+      ]
+    },
+    {
+      "version": "v5.15",
+      "commit": "8bb7eca972ad531c9b149c0a51ab43a417385813",
+      "source_files": [
+        {
+          "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+          "sha256": "cb3f2fe5532000cf534a644613caafdec1b0db7c9d17484914cb206e30bd4825"
+        },
+        {
+          "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.c",
+          "sha256": "88429909c2cf74418d7a841df27bdcd15c77160205c93b1ce371844ea18fbf7a"
+        }
+      ],
+      "invariant_checks": {
+        "stop_phase_order": true,
+        "stall_before_checked_umc_wait": true,
+        "stop_disables_clock": true,
+        "stop_asserts_vcpu_reset_then_zero_status": true,
+        "wrapper_same_state_guard_before_start": true,
+        "wrapper_state_only_on_success": true,
+        "start_contains_unstall_request": true,
+        "decode_positive_wait_maps_to_zero": true,
+        "decode_no_completion_error_query": true,
+        "encode_positive_wait_maps_to_zero": true,
+        "encode_no_completion_error_query": true
+      },
+      "lifecycle_variations": {
+        "state_storage": "device-wide VCN",
+        "wait_result_form": "assignment",
+        "begin_submission_counter": true,
+        "begin_cancel_only_first_submission": false,
+        "begin_has_pg_lock": true,
+        "idle_has_pg_lock": false,
+        "idle_submission_counter_predicate": true,
+        "legacy_uvd_dpm_branch": false,
+        "begin_power_profile_helper": false,
+        "vf_wrapper_shortcut": true
+      },
+      "function_witnesses": [
+        {
+          "function": "vcn_v2_0_stop",
+          "line": 1125,
+          "sha256": "ead773ed6603b1d4cd923a6499826f03f59f012dff9a4a0c6b21b86e858c2b8d"
+        },
+        {
+          "function": "vcn_v2_0_start",
+          "line": 924,
+          "sha256": "67bb6fce6cc8b0e5a2947765bc3ba89374b29de137131a160205defd9621fc02"
+        },
+        {
+          "function": "vcn_v2_0_set_powergating_state",
+          "line": 1748,
+          "sha256": "f8e3b9aa206d3210c0dfabef2cb14c3238ac55f9c4673d623cbf4ae66d02ae88"
+        },
+        {
+          "function": "amdgpu_vcn_ring_begin_use",
+          "line": 427,
+          "sha256": "232ed662259ae7cbaac91a54ef812c429fb1301687f10cd292af767dc40400a6"
+        },
+        {
+          "function": "amdgpu_vcn_idle_work_handler",
+          "line": 383,
+          "sha256": "a00a96a305b5e0cb1fabd1e678468ebf4bc3c29f047b325343de43280cffdfa6"
+        },
+        {
+          "function": "amdgpu_vcn_dec_ring_test_ib",
+          "line": 657,
+          "sha256": "cdeabe70701a7959d8228c1d11ca86f8c801c0575597062bf893f1f899395fe5"
+        },
+        {
+          "function": "amdgpu_vcn_enc_ring_test_ib",
+          "line": 918,
+          "sha256": "d8e3479be4d6b14f5311d4a9f606b589b81c70ceeef3fba619dbdc525f9fbf56"
+        }
+      ]
+    },
+    {
+      "version": "current",
+      "commit": "551c722f40809618230001baccf219193e22fc5a",
+      "source_files": [
+        {
+          "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+          "sha256": "753849c7c491b137913668f77b8a3a0f539c7cf5cd46423db22b8f1513d9d9f6"
+        },
+        {
+          "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.c",
+          "sha256": "f4fa6fa891cb1b56d4bd5602dd97801a4fc12d3fbdb385a10388ddc6c883e670"
+        }
+      ],
+      "invariant_checks": {
+        "stop_phase_order": true,
+        "stall_before_checked_umc_wait": true,
+        "stop_disables_clock": true,
+        "stop_asserts_vcpu_reset_then_zero_status": true,
+        "wrapper_same_state_guard_before_start": true,
+        "wrapper_state_only_on_success": true,
+        "start_contains_unstall_request": true,
+        "decode_positive_wait_maps_to_zero": true,
+        "decode_no_completion_error_query": true,
+        "encode_positive_wait_maps_to_zero": true,
+        "encode_no_completion_error_query": true
+      },
+      "lifecycle_variations": {
+        "state_storage": "per-instance",
+        "wait_result_form": "assignment",
+        "begin_submission_counter": true,
+        "begin_cancel_only_first_submission": true,
+        "begin_has_pg_lock": true,
+        "idle_has_pg_lock": true,
+        "idle_submission_counter_predicate": true,
+        "legacy_uvd_dpm_branch": false,
+        "begin_power_profile_helper": true,
+        "vf_wrapper_shortcut": true
+      },
+      "function_witnesses": [
+        {
+          "function": "vcn_v2_0_stop",
+          "line": 1215,
+          "sha256": "253a4c9e52799f86f532f1a7eccf15796c2ebc0e788a3551c803443ba4b9262d"
+        },
+        {
+          "function": "vcn_v2_0_start",
+          "line": 1000,
+          "sha256": "cf4410f81c87e50918ef613c9417b09bf180c2ce8d3550ba956eeb790d68aa82"
+        },
+        {
+          "function": "vcn_v2_0_set_pg_state",
+          "line": 1856,
+          "sha256": "44c64e0b927da62f197c3f5cd6a0ed2f0d566084c8df6d2d0c49fd033161c75f"
+        },
+        {
+          "function": "amdgpu_vcn_ring_begin_use",
+          "line": 503,
+          "sha256": "942fdce3dfd053a9c77cb0f9ea2469119b34a7f7b0ebd451a03a30ea3e9f357f"
+        },
+        {
+          "function": "amdgpu_vcn_idle_work_handler",
+          "line": 461,
+          "sha256": "3012edb5b79669085cacb8a1e1c535113a42f900bd1e92de60caf32e70cb43cd"
+        },
+        {
+          "function": "amdgpu_vcn_dec_ring_test_ib",
+          "line": 730,
+          "sha256": "97f6613ab0ce0e81fd625e7b938410319e6accff907582500198439839d9d954"
+        },
+        {
+          "function": "amdgpu_vcn_enc_ring_test_ib",
+          "line": 1061,
+          "sha256": "ccb604c01939267f5f690ab92cb04fbdfaa049e28399f0010ca0d98dcf08b658"
+        }
+      ]
+    }
+  ],
+  "checks_per_revision": 11,
+  "findings": [
+    "The limited normal-stop ordering, conditional local return and wrapper bookkeeping pattern persist in all six samples",
+    "Decode and encode IB tests map positive wait returns to success without their own completion-error queries in all six samples",
+    "Idle locking, submission accounting, callback routing and state storage differ; do not transplant the entire current lifecycle"
+  ],
+  "limits": [
+    "Six samples only, not an introduction or regression bisection",
+    "Old wait-macro result plumbing differs; this audit checks call-site use, not full historical macro implementations",
+    "Historical fence internals and full reachability chains are not re-proven; R261 complete fence reasoning is for its current pin",
+    "No hardware failure or vulnerable condition reproduced; no physical diagnosis from source invariants"
+  ]
+}

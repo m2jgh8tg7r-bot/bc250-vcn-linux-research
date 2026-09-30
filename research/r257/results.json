@@ -1,0 +1,113 @@
+{
+  "result": "PASS",
+  "classification": "PROVEN_STATICALLY",
+  "generations": [
+    {
+      "generation": "2.0",
+      "source": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "source_sha256": "753849c7c491b137913668f77b8a3a0f539c7cf5cd46423db22b8f1513d9d9f6",
+      "header": "drivers/gpu/drm/amd/include/asic_reg/vcn/vcn_2_0_0_sh_mask.h",
+      "header_sha256": "4c9ed19c3e744be938ada218d188c19ad7dc71e0dfb1652637ab116618bd489e",
+      "release_register": "UVD_SOFT_RESET",
+      "release_field": "UVD_SOFT_RESET__VCPU_SOFT_RESET_MASK",
+      "release_line": 1070,
+      "release_source": "WREG32_P(SOC15_REG_OFFSET(UVD, 0, mmUVD_SOFT_RESET), 0,\n\t\t~UVD_SOFT_RESET__VCPU_SOFT_RESET_MASK);",
+      "fields": {
+        "UVD_VCPU_CNTL__CLK_EN_MASK": "0x200",
+        "UVD_VCPU_CNTL__BLK_RST_MASK": null,
+        "UVD_VCPU_CNTL__CABAC_MB_ACC_MASK": "0x10000000",
+        "UVD_SOFT_RESET__VCPU_SOFT_RESET_MASK": "0x8",
+        "UVD_RB_ARB_CTRL__VCPU_DIS_MASK": "0x8"
+      },
+      "vcpu_dis_source_references": 0
+    },
+    {
+      "generation": "2.5",
+      "source": "drivers/gpu/drm/amd/amdgpu/vcn_v2_5.c",
+      "source_sha256": "56758f1b265b32e4ca7262162776f8c2a4ffeaa0b3fc8b7c749bb1597a950cd3",
+      "header": "drivers/gpu/drm/amd/include/asic_reg/vcn/vcn_2_5_sh_mask.h",
+      "header_sha256": "e837a4d77a22b90789517cf75bb15fc3fe7ef58d7c34acf7965c4ac0d416b1dd",
+      "release_register": "UVD_VCPU_CNTL",
+      "release_field": "UVD_VCPU_CNTL__BLK_RST_MASK",
+      "release_line": 1246,
+      "release_source": "WREG32_P(SOC15_REG_OFFSET(VCN, i, mmUVD_VCPU_CNTL), 0,\n\t\t ~UVD_VCPU_CNTL__BLK_RST_MASK);",
+      "fields": {
+        "UVD_VCPU_CNTL__CLK_EN_MASK": "0x200",
+        "UVD_VCPU_CNTL__BLK_RST_MASK": "0x10000000",
+        "UVD_VCPU_CNTL__CABAC_MB_ACC_MASK": null,
+        "UVD_SOFT_RESET__VCPU_SOFT_RESET_MASK": "0x8",
+        "UVD_RB_ARB_CTRL__VCPU_DIS_MASK": "0x8"
+      },
+      "vcpu_dis_source_references": 3
+    },
+    {
+      "generation": "3.0",
+      "source": "drivers/gpu/drm/amd/amdgpu/vcn_v3_0.c",
+      "source_sha256": "f01d2a327f3c2a2fdde8c6e2acf6cefe7ef61ad83b2929512af10ce8bbd6f14e",
+      "header": "drivers/gpu/drm/amd/include/asic_reg/vcn/vcn_3_0_0_sh_mask.h",
+      "header_sha256": "4cb679e51338387e759e0bb9dde3ae1d0dee775ceaa0dd6bbdb0a875ebcd6ee1",
+      "release_register": "UVD_VCPU_CNTL",
+      "release_field": "UVD_VCPU_CNTL__BLK_RST_MASK",
+      "release_line": 1283,
+      "release_source": "WREG32_P(SOC15_REG_OFFSET(VCN, i, mmUVD_VCPU_CNTL), 0,\n\t\t ~UVD_VCPU_CNTL__BLK_RST_MASK);",
+      "fields": {
+        "UVD_VCPU_CNTL__CLK_EN_MASK": "0x200",
+        "UVD_VCPU_CNTL__BLK_RST_MASK": "0x10000000",
+        "UVD_VCPU_CNTL__CABAC_MB_ACC_MASK": null,
+        "UVD_SOFT_RESET__VCPU_SOFT_RESET_MASK": "0x8",
+        "UVD_RB_ARB_CTRL__VCPU_DIS_MASK": "0x8"
+      },
+      "vcpu_dis_source_references": 3
+    },
+    {
+      "generation": "4.0",
+      "source": "drivers/gpu/drm/amd/amdgpu/vcn_v4_0.c",
+      "source_sha256": "77d8deb3284df7522134fccf41f59a30990a0dd242ea01f29cd3e713ee86392b",
+      "header": "drivers/gpu/drm/amd/include/asic_reg/vcn/vcn_4_0_0_sh_mask.h",
+      "header_sha256": "a4bb1dadf3e9caa6188692c2e4a2b4ebc0faa7c7317809b0ec625b2f62ac6ee7",
+      "release_register": "UVD_VCPU_CNTL",
+      "release_field": "UVD_VCPU_CNTL__BLK_RST_MASK",
+      "release_line": 1228,
+      "release_source": "WREG32_P(SOC15_REG_OFFSET(VCN, i, regUVD_VCPU_CNTL), 0,\n\t\t ~UVD_VCPU_CNTL__BLK_RST_MASK);",
+      "fields": {
+        "UVD_VCPU_CNTL__CLK_EN_MASK": "0x200",
+        "UVD_VCPU_CNTL__BLK_RST_MASK": "0x10000000",
+        "UVD_VCPU_CNTL__CABAC_MB_ACC_MASK": null,
+        "UVD_SOFT_RESET__VCPU_SOFT_RESET_MASK": "0x8",
+        "UVD_RB_ARB_CTRL__VCPU_DIS_MASK": "0x8"
+      },
+      "vcpu_dis_source_references": 3
+    },
+    {
+      "generation": "5.0",
+      "source": "drivers/gpu/drm/amd/amdgpu/vcn_v5_0_0.c",
+      "source_sha256": "1cb5bc39b0ee17d04cc9fe429fb4c803026a3168bd14c91e5fae51ccb280ac43",
+      "header": "drivers/gpu/drm/amd/include/asic_reg/vcn/vcn_5_0_0_sh_mask.h",
+      "header_sha256": "5d696288f81775eb74cdd5f363f4b3e5ba35bf1175162f10a3b6de96242a28c9",
+      "release_register": "UVD_VCPU_CNTL",
+      "release_field": "UVD_VCPU_CNTL__BLK_RST_MASK",
+      "release_line": 894,
+      "release_source": "WREG32_P(SOC15_REG_OFFSET(VCN, i, regUVD_VCPU_CNTL), 0,\n\t\t ~UVD_VCPU_CNTL__BLK_RST_MASK);",
+      "fields": {
+        "UVD_VCPU_CNTL__CLK_EN_MASK": "0x200",
+        "UVD_VCPU_CNTL__BLK_RST_MASK": "0x10000000",
+        "UVD_VCPU_CNTL__CABAC_MB_ACC_MASK": null,
+        "UVD_SOFT_RESET__VCPU_SOFT_RESET_MASK": "0x8",
+        "UVD_RB_ARB_CTRL__VCPU_DIS_MASK": "0x8"
+      },
+      "vcpu_dis_source_references": 3
+    }
+  ],
+  "findings": [
+    "VCPU reset release changes register/field between the inspected2.0 and2.5+ reference drivers",
+    "The later BLK_RST bit value aliases the CABAC_MB_ACC name in the2.0 header; a matching register name or bit number does not establish semantics",
+    "VCPU_DIS exists in the2.0 header but is not referenced in the inspected vcn_v2_0.c; later source explicitly handles it",
+    "No generation transfer is justified by a field name alone"
+  ],
+  "limitations": [
+    "Reference header2.0.0 is not an independently validated BC2502.0.3 silicon register specification",
+    "No inference about which reference the external suggestion used",
+    "No recommendation to write either bit or transplant a later startup sequence",
+    "Absence is bounded to the named source file, not firmware/UEFI or all software"
+  ]
+}

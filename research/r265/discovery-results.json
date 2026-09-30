@@ -1,0 +1,77 @@
+{
+  "result": "PASS",
+  "classification": "PROVEN_STATICALLY",
+  "source_witnesses": [
+    {
+      "claim": "early_no_device_returns_zero",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_discovery.c",
+      "line": 1194,
+      "matched_source": "/* In early init mode (adev == NULL), harvest info is not available */\n\tif (!adev)\n\t\treturn 0;"
+    },
+    {
+      "claim": "normal_vcn_harvest_uses_instance_mask",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_discovery.c",
+      "line": 1200,
+      "matched_source": "case VCN_HWID:\n\t\t/* VCN vs UVD+VCE */\n\t\tif (!amdgpu_ip_version(adev, VCE_HWIP, 0))\n\t\t\tharvest = ((1 << inst) & adev->vcn.inst_mask) == 0;"
+    },
+    {
+      "claim": "table_entry_increments_count_and_instance_bit",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_discovery.c",
+      "line": 1815,
+      "matched_source": "adev->vcn.num_vcn_inst++;\n\t\t\t\t\tadev->vcn.inst_mask |=\n\t\t\t\t\t\t(1U << ip->instance_number);"
+    },
+    {
+      "claim": "revision_capability_bits_saved_separately",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_discovery.c",
+      "line": 1813,
+      "matched_source": "vcn_config =\n\t\t\t\t\t\tip->revision & 0xc0;"
+    },
+    {
+      "claim": "revision_display_strips_capability_bits",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_discovery.c",
+      "line": 1825,
+      "matched_source": "ip->revision &= ~0xc0;"
+    }
+  ],
+  "cc_register_masks": {
+    "CC_UVD_HARVESTING__MMSCH_DISABLE_MASK": "0x1",
+    "CC_UVD_HARVESTING__UVD_DISABLE_MASK": "0x2"
+  },
+  "saved_record": {
+    "sha256": "9b6f92511ff3d506d9abacd45dd00389ed357387779a4f4eefdff219aaf5b717",
+    "captured_at": "2026-09-09T12:26:03.170212+09:00",
+    "scope": "Cached sysfs IP metadata only",
+    "recorded_entries": 1,
+    "recorded_instances": [
+      "0"
+    ],
+    "version": "2.0.3",
+    "harvest_display": "0x0",
+    "physical_instance_count_proven": false
+  },
+  "source_files": [
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_discovery.c",
+      "sha256": "076f5c3fb0a37ae041d7ee6b49b56dd850b3027c583a2744ce25f4d6c64e4ce1"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/include/asic_reg/vcn/vcn_2_0_0_sh_mask.h",
+      "sha256": "4c9ed19c3e744be938ada218d188c19ad7dc71e0dfb1652637ab116618bd489e"
+    }
+  ],
+  "conclusions": [
+    "The saved September9 record lists instance0 only; it corroborates a prior one-exposed-instance observation, not a universal physical count",
+    "CC register bits0/1 are MMSCH_DISABLE/UVD_DISABLE, not VCN0/VCN1",
+    "Displayed harvest0 and live CC3 need not be contradictory because their provenance and semantics differ",
+    "Current early-mode zero fallback cannot be retroactively assigned to the saved capture without matching its implementation",
+    "Reported nonpersistent writes are compatible with mirror/restore/lock behavior but do not identify a producer"
+  ],
+  "priority": "Low-cost static producer/source review only; direct clear variants excluded from the main line",
+  "hypotheses_remaining": [
+    "causal VCPU-specific effect",
+    "mirror of another cause/state",
+    "unrelated availability indication"
+  ],
+  "producer_identified": false,
+  "hardware_access": false
+}

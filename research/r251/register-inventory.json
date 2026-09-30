@@ -1,0 +1,1345 @@
+{
+  "result": "PASS",
+  "classification": "PROVEN_STATICALLY",
+  "source_path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+  "source_sha256": "753849c7c491b137913668f77b8a3a0f539c7cf5cd46423db22b8f1513d9d9f6",
+  "functions": [
+    {
+      "function": "vcn_v2_0_start",
+      "scope": "normal entry with DPG early-return branch",
+      "function_line": 1001,
+      "source_sha256": "637c64136d8e920b426bf69ba812dc89832e9309460eeb7f818561a8e660208d",
+      "call_sites": [
+        {
+          "source_order": 1,
+          "line": 1019,
+          "macro": "RREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_STATUS"
+          ],
+          "source_expression_sha256": "486a417dd4eed00aedda66b1f8006d3bd56be156073661103bbb3afe9de97491"
+        },
+        {
+          "source_order": 2,
+          "line": 1020,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_STATUS"
+          ],
+          "source_expression_sha256": "727ce756eea4aa01de0aff1a684ad2b7efe8f48fd6c6c8cd7bc03a845f761a48"
+        },
+        {
+          "source_order": 3,
+          "line": 1026,
+          "macro": "WREG32_P",
+          "register_symbols": [
+            "mmUVD_VCPU_CNTL"
+          ],
+          "source_expression_sha256": "56e4e0c6602e2feaa5476dea350b419648b2e9f0dfed66cf181f07c1b3029c08"
+        },
+        {
+          "source_order": 4,
+          "line": 1030,
+          "macro": "WREG32_P",
+          "register_symbols": [
+            "mmUVD_MASTINT_EN"
+          ],
+          "source_expression_sha256": "82155090c297134f4ee520bd29d5c119dcdd8f31b70b9cbf73bd0bee0a96e377"
+        },
+        {
+          "source_order": 5,
+          "line": 1034,
+          "macro": "RREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_LMI_CTRL"
+          ],
+          "source_expression_sha256": "72a0ff23c9d6184dd365c6cda1eb5e73e7b37874c5cad6e2716f5e433160bdbb"
+        },
+        {
+          "source_order": 6,
+          "line": 1035,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_LMI_CTRL"
+          ],
+          "source_expression_sha256": "c056039e1cfd192660e5b125ac03f3d435f8b200ef17570621a5c32db3cd74ff"
+        },
+        {
+          "source_order": 7,
+          "line": 1042,
+          "macro": "RREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_MPC_CNTL"
+          ],
+          "source_expression_sha256": "5c60e27168afd31de0ea40a2ac8a6d4d035d51a2815b9ec237b79e4df5103849"
+        },
+        {
+          "source_order": 8,
+          "line": 1045,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_MPC_CNTL"
+          ],
+          "source_expression_sha256": "9a8700108b1e5de2eff52e3b9f735fc49a2c8ee5d5462775f83bf540069e6cf9"
+        },
+        {
+          "source_order": 9,
+          "line": 1048,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_MPC_SET_MUXA0"
+          ],
+          "source_expression_sha256": "e811f552d05bb5af097dc4f1fd11548da86e3482e314564614523d4d41e9745f"
+        },
+        {
+          "source_order": 10,
+          "line": 1055,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_MPC_SET_MUXB0"
+          ],
+          "source_expression_sha256": "6935919fef08506a668263f2f225de544457f4b44be97bab0d7243b0bb31c0d3"
+        },
+        {
+          "source_order": 11,
+          "line": 1062,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_MPC_SET_MUX"
+          ],
+          "source_expression_sha256": "d21b00406d0f09c642f8dff66d325bdbc69bfe1a73a65e7422366afc364f6f33"
+        },
+        {
+          "source_order": 12,
+          "line": 1070,
+          "macro": "WREG32_P",
+          "register_symbols": [
+            "mmUVD_SOFT_RESET"
+          ],
+          "source_expression_sha256": "f88045be719515876fdfeec061a96969c99724c472a4e68acfe3d3799d2d7d96"
+        },
+        {
+          "source_order": 13,
+          "line": 1074,
+          "macro": "WREG32_P",
+          "register_symbols": [
+            "mmUVD_LMI_CTRL2"
+          ],
+          "source_expression_sha256": "5920ad031ebce9dedc1b268a8e076434cdba2e27bcc640063fc166ba19dfb5ef"
+        },
+        {
+          "source_order": 14,
+          "line": 1077,
+          "macro": "RREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_SOFT_RESET"
+          ],
+          "source_expression_sha256": "210f8f473e9def9a448b4eb65886fe35217d85f4b33bea2ecc366414c9208d86"
+        },
+        {
+          "source_order": 15,
+          "line": 1080,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_SOFT_RESET"
+          ],
+          "source_expression_sha256": "fadbcd11317041f4081152f3ee3248c3001acf1d209cd88f73db2b9579e5312f"
+        },
+        {
+          "source_order": 16,
+          "line": 1088,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_LMI_SWAP_CNTL"
+          ],
+          "source_expression_sha256": "600fba3750aa3c084829c59468b93217a62116951522eb816b2e5a2f2cd0c3e7"
+        },
+        {
+          "source_order": 17,
+          "line": 1094,
+          "macro": "RREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_STATUS"
+          ],
+          "source_expression_sha256": "486a417dd4eed00aedda66b1f8006d3bd56be156073661103bbb3afe9de97491"
+        },
+        {
+          "source_order": 18,
+          "line": 1104,
+          "macro": "WREG32_P",
+          "register_symbols": [
+            "mmUVD_SOFT_RESET"
+          ],
+          "source_expression_sha256": "9f21dea732505636a8137498613366ff15661471e7ea4f8b3b6d65081ca33cf1"
+        },
+        {
+          "source_order": 19,
+          "line": 1108,
+          "macro": "WREG32_P",
+          "register_symbols": [
+            "mmUVD_SOFT_RESET"
+          ],
+          "source_expression_sha256": "a715855616ce229dd0958bb8d4885354a3576152121d3c350653679949e62b4f"
+        },
+        {
+          "source_order": 20,
+          "line": 1120,
+          "macro": "WREG32_P",
+          "register_symbols": [
+            "mmUVD_MASTINT_EN"
+          ],
+          "source_expression_sha256": "8fb69009b377fa62659ebd71500c912ce5abf9f0404ce14464895146afebced4"
+        },
+        {
+          "source_order": 21,
+          "line": 1125,
+          "macro": "WREG32_P",
+          "register_symbols": [
+            "mmUVD_STATUS"
+          ],
+          "source_expression_sha256": "909509c4b346354548e58a4fc2cab7551d2083b8bc30ae6253be0b5b731f3c46"
+        },
+        {
+          "source_order": 22,
+          "line": 1128,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_LMI_RBC_RB_VMID"
+          ],
+          "source_expression_sha256": "89a826ac7ba5dc233340196820e1813fb27abdaecf528fbf4fd1cd1ff451a66f"
+        },
+        {
+          "source_order": 23,
+          "line": 1137,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_RBC_RB_CNTL"
+          ],
+          "source_expression_sha256": "85f96fbb730b61ca97c5d6f920a79ad8a23ae7e1973601111656926762dd541d"
+        },
+        {
+          "source_order": 24,
+          "line": 1141,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_LMI_RBC_RB_64BIT_BAR_LOW"
+          ],
+          "source_expression_sha256": "3d0d5c219bc35b3581cd9f31e9bc1948285bd511908b35cb4343e8a752560d7c"
+        },
+        {
+          "source_order": 25,
+          "line": 1143,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_LMI_RBC_RB_64BIT_BAR_HIGH"
+          ],
+          "source_expression_sha256": "07979e756f237b03e4616a30e51d84f6c2de3d16ebc33b8f14fbb1eeaa5df124"
+        },
+        {
+          "source_order": 26,
+          "line": 1147,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_RBC_RB_RPTR"
+          ],
+          "source_expression_sha256": "5d8bf16211d5fec99ee396a87e9966df6bd8830ae4fe74deb7d6f95fe03a1a9f"
+        },
+        {
+          "source_order": 27,
+          "line": 1149,
+          "macro": "RREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_RBC_RB_RPTR"
+          ],
+          "source_expression_sha256": "38a7e53c5fe5c2323dec5725d9e0e74b5215fb3d32096e0dbf573d39077bd190"
+        },
+        {
+          "source_order": 28,
+          "line": 1150,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_RBC_RB_WPTR"
+          ],
+          "source_expression_sha256": "011af9e699f8da06d303916c39d491542ba9f84cf2d34bf18a125648005d1a8b"
+        },
+        {
+          "source_order": 29,
+          "line": 1156,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_RB_RPTR"
+          ],
+          "source_expression_sha256": "2d5929c741243678adba40ffcc09caf8f348bcfbe124a94f814b3b66579afdfc"
+        },
+        {
+          "source_order": 30,
+          "line": 1157,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_RB_WPTR"
+          ],
+          "source_expression_sha256": "b0d894c1c01a87866a9f7e00d5e55728eaecd89eae34d3bc13ac76c9e39c3be4"
+        },
+        {
+          "source_order": 31,
+          "line": 1158,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_RB_BASE_LO"
+          ],
+          "source_expression_sha256": "c77bda3955891e140f370e2cdd5e560eefb59d7d29c6ed4b3ebdbe86acf16286"
+        },
+        {
+          "source_order": 32,
+          "line": 1159,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_RB_BASE_HI"
+          ],
+          "source_expression_sha256": "1a7cb542a9ce2026f6c32265f928edc3d6a78dcb75a07583037f580b18e1edbe"
+        },
+        {
+          "source_order": 33,
+          "line": 1160,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_RB_SIZE"
+          ],
+          "source_expression_sha256": "54e1fb980e86a14390a9664d3362ad3e42c9f5442100df3215b15c0d9b08c6c0"
+        },
+        {
+          "source_order": 34,
+          "line": 1165,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_RB_RPTR2"
+          ],
+          "source_expression_sha256": "f8021f3fb9f876eed7c4dfaa96601e0b9366f448ee93662cf631e841ec4ee08c"
+        },
+        {
+          "source_order": 35,
+          "line": 1166,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_RB_WPTR2"
+          ],
+          "source_expression_sha256": "9616fa2265fcdebc4c29749b59bcd0da023d3b89dc869116e49feb5e8a661025"
+        },
+        {
+          "source_order": 36,
+          "line": 1167,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_RB_BASE_LO2"
+          ],
+          "source_expression_sha256": "82b26de20562b359887d9138555bb9f576e66562984aa2f6fdf46139393b7832"
+        },
+        {
+          "source_order": 37,
+          "line": 1168,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_RB_BASE_HI2"
+          ],
+          "source_expression_sha256": "e82c2c0950ed1369689b3441641570d5278247d5d633bc115252c07d0d70f7f5"
+        },
+        {
+          "source_order": 38,
+          "line": 1169,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_RB_SIZE2"
+          ],
+          "source_expression_sha256": "6099ddaede0534dfc067f7d7edb09278b42f26fbf9cceeac46b2af7933635e85"
+        },
+        {
+          "source_order": 39,
+          "line": 1175,
+          "macro": "RREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_STATUS"
+          ],
+          "source_expression_sha256": "486a417dd4eed00aedda66b1f8006d3bd56be156073661103bbb3afe9de97491"
+        }
+      ]
+    },
+    {
+      "function": "vcn_v2_0_mc_resume",
+      "scope": "normal mapping helper with PSP/driver alternatives",
+      "function_line": 381,
+      "source_sha256": "23fe3eae199d1d5f9a1a6cb206d4ae0956f18fe46629d7e21b6c850d6492102f",
+      "call_sites": [
+        {
+          "source_order": 1,
+          "line": 392,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_LMI_VCPU_CACHE_64BIT_BAR_LOW"
+          ],
+          "source_expression_sha256": "aef04adee2239175735b1d83f1ff0971f041f3b6c9db73a90c438db606989ec7"
+        },
+        {
+          "source_order": 2,
+          "line": 394,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_LMI_VCPU_CACHE_64BIT_BAR_HIGH"
+          ],
+          "source_expression_sha256": "09ea74761ce74ee35858671b515d0a71be217b477e91fe7d6e540f2f7441c147"
+        },
+        {
+          "source_order": 3,
+          "line": 396,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_VCPU_CACHE_OFFSET0"
+          ],
+          "source_expression_sha256": "17f9b9cef00f04e70293df638ec8c8d30a3b5007e3c4c47eb8eaaa878a6c11f0"
+        },
+        {
+          "source_order": 4,
+          "line": 399,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_LMI_VCPU_CACHE_64BIT_BAR_LOW"
+          ],
+          "source_expression_sha256": "4ee140cfc16eb35b1f3d0327f18b2a63e96fc5b7302f35d9445f164f4241ee1e"
+        },
+        {
+          "source_order": 5,
+          "line": 401,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_LMI_VCPU_CACHE_64BIT_BAR_HIGH"
+          ],
+          "source_expression_sha256": "e7a1e809b0ffef5d8249257a65fa71028a2806c0d781f9def0f8ef32216e631f"
+        },
+        {
+          "source_order": 6,
+          "line": 404,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_VCPU_CACHE_OFFSET0"
+          ],
+          "source_expression_sha256": "101321c85a02d31afce8af8f48dfb5d167addd9835717f2d77cb005a8442e8a8"
+        },
+        {
+          "source_order": 7,
+          "line": 408,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_VCPU_CACHE_SIZE0"
+          ],
+          "source_expression_sha256": "927c70e260b3ecdaca83ac29ddccb3c140dfc7c46dc74aefdadefca14c34e031"
+        },
+        {
+          "source_order": 8,
+          "line": 411,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_LMI_VCPU_CACHE1_64BIT_BAR_LOW"
+          ],
+          "source_expression_sha256": "51d4366822cba3f662465b160fe6848dc81782fae679830ebbfdc50e9d494c8f"
+        },
+        {
+          "source_order": 9,
+          "line": 413,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_LMI_VCPU_CACHE1_64BIT_BAR_HIGH"
+          ],
+          "source_expression_sha256": "a2da5fe3614971ab6a82029a5ef9986e37233b27b49b27629fbc72264a0187c3"
+        },
+        {
+          "source_order": 10,
+          "line": 415,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_VCPU_CACHE_OFFSET1"
+          ],
+          "source_expression_sha256": "60f4ed2cf2d6ee0015581bfa8327833772c491d972cde855fe21b1f5b7acbaa8"
+        },
+        {
+          "source_order": 11,
+          "line": 416,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_VCPU_CACHE_SIZE1"
+          ],
+          "source_expression_sha256": "75c812b07b7b60b037c9ad20b9daf642d041672966b95ad1920c389a7a94be82"
+        },
+        {
+          "source_order": 12,
+          "line": 419,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_LMI_VCPU_CACHE2_64BIT_BAR_LOW"
+          ],
+          "source_expression_sha256": "42cdd732fc287714ae859a5d42029f0bb791279ae662d789d3da81403424b8d5"
+        },
+        {
+          "source_order": 13,
+          "line": 421,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_LMI_VCPU_CACHE2_64BIT_BAR_HIGH"
+          ],
+          "source_expression_sha256": "30de0d0e82f498e7edfe248a721771ce4c668ad0561a3c0dfd5b3d4d2904b1ad"
+        },
+        {
+          "source_order": 14,
+          "line": 423,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_VCPU_CACHE_OFFSET2"
+          ],
+          "source_expression_sha256": "208874aac6721250069e5dfd2293f7fca5ed7f0bfe9717203b5be2b2810e6e58"
+        },
+        {
+          "source_order": 15,
+          "line": 424,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_VCPU_CACHE_SIZE2"
+          ],
+          "source_expression_sha256": "17ee5a1f6d7dfcc5bf6be881e5d3e2c5f6a50a568c7cfad1f6c09ab2c22fe4a7"
+        },
+        {
+          "source_order": 16,
+          "line": 427,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_LMI_VCPU_NC0_64BIT_BAR_LOW"
+          ],
+          "source_expression_sha256": "446fa6669d79c34cfe959591ce6a6f54c5cfc464df8e2ed04e81d5ff5b99d75f"
+        },
+        {
+          "source_order": 17,
+          "line": 429,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_LMI_VCPU_NC0_64BIT_BAR_HIGH"
+          ],
+          "source_expression_sha256": "5b9764e70b62f39417d5b69519d2cfc49e55215a07fbaffd638adfb3dc233f8f"
+        },
+        {
+          "source_order": 18,
+          "line": 431,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_VCPU_NONCACHE_OFFSET0"
+          ],
+          "source_expression_sha256": "ab655f088ddd4f8c1141451793b738545ec9238a103ff7e91741d02f9aa7fd9d"
+        },
+        {
+          "source_order": 19,
+          "line": 432,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_VCPU_NONCACHE_SIZE0"
+          ],
+          "source_expression_sha256": "65d6ac7159c63563cb5e935f465e3828da2a43a4cc4ca573ed87af317b72f42d"
+        },
+        {
+          "source_order": 20,
+          "line": 435,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_GFX10_ADDR_CONFIG"
+          ],
+          "source_expression_sha256": "224c3c6d2bccbe2795a4250bdc0608898ffd9c4f9cacf53962dd478c13a9c179"
+        }
+      ]
+    },
+    {
+      "function": "vcn_v2_0_disable_static_power_gating",
+      "scope": "normal power helper with VF/policy branches",
+      "function_line": 760,
+      "source_sha256": "a3841e98a6ac6fe9ad3924fbb4510429cb682a04559c69ebae957ccf04d342b7",
+      "call_sites": [
+        {
+          "source_order": 1,
+          "line": 780,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_PGFSM_CONFIG"
+          ],
+          "source_expression_sha256": "a61d81570be37999c3f39ddca6a4778c6a107cb7aee5a8c601ccc1a962ccab70"
+        },
+        {
+          "source_order": 2,
+          "line": 781,
+          "macro": "SOC15_WAIT_ON_RREG",
+          "register_symbols": [
+            "mmUVD_PGFSM_STATUS"
+          ],
+          "source_expression_sha256": "89c9b65da2953d1dac72b3b647bc7bb89e21cebbacefd6d1986fa158b476aa3c"
+        },
+        {
+          "source_order": 3,
+          "line": 794,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_PGFSM_CONFIG"
+          ],
+          "source_expression_sha256": "a61d81570be37999c3f39ddca6a4778c6a107cb7aee5a8c601ccc1a962ccab70"
+        },
+        {
+          "source_order": 4,
+          "line": 795,
+          "macro": "SOC15_WAIT_ON_RREG",
+          "register_symbols": [
+            "mmUVD_PGFSM_STATUS"
+          ],
+          "source_expression_sha256": "f14ae96a0b137150eb1a910d8172a1891d1403a1252e42704872ab644f4cfbba"
+        },
+        {
+          "source_order": 5,
+          "line": 801,
+          "macro": "RREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_POWER_STATUS"
+          ],
+          "source_expression_sha256": "1b98f3c68b179259d959e8ca752555b702f2fe0a9f3a5822f4c687e21c91fff5"
+        },
+        {
+          "source_order": 6,
+          "line": 807,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_POWER_STATUS"
+          ],
+          "source_expression_sha256": "cde7a5fe96ba3cdbc52bacccb20105006b89d964f95fb90d44e5f70cb45ed8c0"
+        }
+      ]
+    },
+    {
+      "function": "vcn_v2_0_disable_clock_gating",
+      "scope": "normal clock helper with VF/capability branches",
+      "function_line": 543,
+      "source_sha256": "96e55d635c62372698cc1164ed9f4c40b967589773ee257cf7d6cac669588764",
+      "call_sites": [
+        {
+          "source_order": 1,
+          "line": 552,
+          "macro": "RREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_CGC_CTRL"
+          ],
+          "source_expression_sha256": "e3728bccbc20500e1cbf76606e560f7ad3856f52a86b2a93f95d19bc46342c5e"
+        },
+        {
+          "source_order": 2,
+          "line": 559,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_CGC_CTRL"
+          ],
+          "source_expression_sha256": "8aa28e8a44a961fe624411289974a45d8a5dde6cd02e4bb99fbb8c197bd64b13"
+        },
+        {
+          "source_order": 3,
+          "line": 561,
+          "macro": "RREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_CGC_GATE"
+          ],
+          "source_expression_sha256": "2bfefd4d6d292422e06deaba49adce58becf63912e04eab3c604b1f7796b94c0"
+        },
+        {
+          "source_order": 4,
+          "line": 582,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_CGC_GATE"
+          ],
+          "source_expression_sha256": "7383d26fbdbcdcdb96ce6a39f0650f69014576597d390071d9647a7cad2801d5"
+        },
+        {
+          "source_order": 5,
+          "line": 584,
+          "macro": "RREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_CGC_CTRL"
+          ],
+          "source_expression_sha256": "e3728bccbc20500e1cbf76606e560f7ad3856f52a86b2a93f95d19bc46342c5e"
+        },
+        {
+          "source_order": 6,
+          "line": 605,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_CGC_CTRL"
+          ],
+          "source_expression_sha256": "8aa28e8a44a961fe624411289974a45d8a5dde6cd02e4bb99fbb8c197bd64b13"
+        },
+        {
+          "source_order": 7,
+          "line": 608,
+          "macro": "RREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_SUVD_CGC_GATE"
+          ],
+          "source_expression_sha256": "651cf03d28e44477aa716b42e34bb24c92b6cbb7b2d31a69820d4126da423d8e"
+        },
+        {
+          "source_order": 8,
+          "line": 633,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_SUVD_CGC_GATE"
+          ],
+          "source_expression_sha256": "d2d03b9202cb30dcb33babbb865363f1445257df2864400fef1be90063828bcc"
+        },
+        {
+          "source_order": 9,
+          "line": 635,
+          "macro": "RREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_SUVD_CGC_CTRL"
+          ],
+          "source_expression_sha256": "7b372901d24aca3e1e6bedd2bfc1d5fdadbb08d7afe707c035451422a934d0e5"
+        },
+        {
+          "source_order": 10,
+          "line": 646,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_SUVD_CGC_CTRL"
+          ],
+          "source_expression_sha256": "4c7c39145546d0e5ec381821bf346a1494da80678a1d250ddc138c7187971347"
+        }
+      ]
+    },
+    {
+      "function": "vcn_v2_0_start_dpg_mode",
+      "scope": "DPG direct/indirect entry",
+      "function_line": 853,
+      "source_sha256": "dc13d6cc662c69d930821786335eed922680ced8c0930d1b56b9853dc3fb16b5",
+      "call_sites": [
+        {
+          "source_order": 1,
+          "line": 864,
+          "macro": "RREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_POWER_STATUS"
+          ],
+          "source_expression_sha256": "fae4b0f76a736571bae30fec678ba5ef502a1658c12204a18655733b34c33317"
+        },
+        {
+          "source_order": 2,
+          "line": 867,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_POWER_STATUS"
+          ],
+          "source_expression_sha256": "ee3271ba0afb3a6c20c256848a2a98b91d29d4aaf46b29558741aaa039aa63f5"
+        },
+        {
+          "source_order": 3,
+          "line": 879,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_VCPU_CNTL"
+          ],
+          "source_expression_sha256": "ead9912dda3ffea386d7f38f36940d5fac4d331b376a5af30df7395f5fe81f12"
+        },
+        {
+          "source_order": 4,
+          "line": 883,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_MASTINT_EN"
+          ],
+          "source_expression_sha256": "4828d741f79ea570d4f7a21d36a5340e84a4bbc8c2ea14c4e9de5996f0696898"
+        },
+        {
+          "source_order": 5,
+          "line": 895,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_LMI_CTRL"
+          ],
+          "source_expression_sha256": "71fbaccc95a8302e312f6df99daed88e14b6d0c060f07fa7e9f3ab123a3ca747"
+        },
+        {
+          "source_order": 6,
+          "line": 898,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_MPC_CNTL"
+          ],
+          "source_expression_sha256": "38f64f6f77e395a7b9717ac8d845606cc305c2a314c74f4040484a45fe729e3e"
+        },
+        {
+          "source_order": 7,
+          "line": 902,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_MPC_SET_MUXA0"
+          ],
+          "source_expression_sha256": "ab2673a3b8c26df658c1c96165a83684fe4ecd044fe602687e59973153f1c9d2"
+        },
+        {
+          "source_order": 8,
+          "line": 909,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_MPC_SET_MUXB0"
+          ],
+          "source_expression_sha256": "79958f45ffb554feccbd7ff53b1cb8e36b0a6b37628176e49f795141a923fcec"
+        },
+        {
+          "source_order": 9,
+          "line": 916,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_MPC_SET_MUX"
+          ],
+          "source_expression_sha256": "36bdc68589a4ba8f7a3eed8af4b27f9852d7af2a494535bb333bed0b64aa02f6"
+        },
+        {
+          "source_order": 10,
+          "line": 924,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_REG_XX_MASK"
+          ],
+          "source_expression_sha256": "6f74b6bf0d1fc475198d1fd3e59e5c75ca158a514257f70e521a56cf00082a67"
+        },
+        {
+          "source_order": 11,
+          "line": 926,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_RBC_XX_IB_REG_CHECK"
+          ],
+          "source_expression_sha256": "33c7205f872ca6560583818a61c55f6129e7fddc0f55e53c40a31ca9ec2d0717"
+        },
+        {
+          "source_order": 12,
+          "line": 930,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_SOFT_RESET"
+          ],
+          "source_expression_sha256": "a12035f4aeb9e50e0a9eedef935a209d6ba5f24f36e35c02d8b578739654dc50"
+        },
+        {
+          "source_order": 13,
+          "line": 934,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_LMI_CTRL2"
+          ],
+          "source_expression_sha256": "65e324e23217327d0a095fccac77b9fdd22ee5520f40262206c57c1145daa44a"
+        },
+        {
+          "source_order": 14,
+          "line": 939,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_MASTINT_EN"
+          ],
+          "source_expression_sha256": "fce7b2d9becb6fe9bc4c22f405c2fefa14327d10d39ee26d686b2fbcdc7206a3"
+        },
+        {
+          "source_order": 15,
+          "line": 958,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_RBC_RB_CNTL"
+          ],
+          "source_expression_sha256": "85f96fbb730b61ca97c5d6f920a79ad8a23ae7e1973601111656926762dd541d"
+        },
+        {
+          "source_order": 16,
+          "line": 961,
+          "macro": "WREG32_P",
+          "register_symbols": [
+            "mmUVD_POWER_STATUS"
+          ],
+          "source_expression_sha256": "6802cc91bb059ebfb0b09c30903421d6cc175afbe1aac893fc4ee8003d1546a4"
+        },
+        {
+          "source_order": 17,
+          "line": 967,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_RBC_RB_WPTR_CNTL"
+          ],
+          "source_expression_sha256": "d678b1eed8e85b65bd77205a94d14ba409ca3cd1830063ce4b1a5cf659ddc244"
+        },
+        {
+          "source_order": 18,
+          "line": 970,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_RBC_RB_RPTR_ADDR"
+          ],
+          "source_expression_sha256": "62532068b9e0cd7af429c313bed1addc0330fa3038069391dd3802afbb868602"
+        },
+        {
+          "source_order": 19,
+          "line": 974,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_LMI_RBC_RB_64BIT_BAR_LOW"
+          ],
+          "source_expression_sha256": "3d0d5c219bc35b3581cd9f31e9bc1948285bd511908b35cb4343e8a752560d7c"
+        },
+        {
+          "source_order": 20,
+          "line": 976,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_LMI_RBC_RB_64BIT_BAR_HIGH"
+          ],
+          "source_expression_sha256": "07979e756f237b03e4616a30e51d84f6c2de3d16ebc33b8f14fbb1eeaa5df124"
+        },
+        {
+          "source_order": 21,
+          "line": 980,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_RBC_RB_RPTR"
+          ],
+          "source_expression_sha256": "5d8bf16211d5fec99ee396a87e9966df6bd8830ae4fe74deb7d6f95fe03a1a9f"
+        },
+        {
+          "source_order": 22,
+          "line": 982,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_SCRATCH2"
+          ],
+          "source_expression_sha256": "9ed3afeea4dd771a6f6f7ca395b9c380e55449db870a3fedce74e6554a31675a"
+        },
+        {
+          "source_order": 23,
+          "line": 984,
+          "macro": "RREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_RBC_RB_RPTR"
+          ],
+          "source_expression_sha256": "38a7e53c5fe5c2323dec5725d9e0e74b5215fb3d32096e0dbf573d39077bd190"
+        },
+        {
+          "source_order": 24,
+          "line": 985,
+          "macro": "WREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_RBC_RB_WPTR"
+          ],
+          "source_expression_sha256": "8b07a2e3b7cf96e57e7a4097007c47c5fc09e83fceb51cb5e99a998391eab5d5"
+        },
+        {
+          "source_order": 25,
+          "line": 990,
+          "macro": "WREG32_P",
+          "register_symbols": [
+            "mmUVD_POWER_STATUS"
+          ],
+          "source_expression_sha256": "480773c121f5ffad0dd81f816e83b5c88ea468e6706d720a09ecccf8b97cc1a4"
+        },
+        {
+          "source_order": 26,
+          "line": 996,
+          "macro": "RREG32_SOC15",
+          "register_symbols": [
+            "mmUVD_STATUS"
+          ],
+          "source_expression_sha256": "486a417dd4eed00aedda66b1f8006d3bd56be156073661103bbb3afe9de97491"
+        }
+      ]
+    },
+    {
+      "function": "vcn_v2_0_mc_resume_dpg_mode",
+      "scope": "DPG mapping helper with load-mode/indirect alternatives",
+      "function_line": 438,
+      "source_sha256": "ec6fa8e23f3000ce50f93cec7656dbf969158273309d72c70d4439bcddf24ead",
+      "call_sites": [
+        {
+          "source_order": 1,
+          "line": 448,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_LMI_VCPU_CACHE_64BIT_BAR_LOW"
+          ],
+          "source_expression_sha256": "5e2df9935686e224e1f6425df8e93247b8a63852ff680dc169db97557f4ad1e3"
+        },
+        {
+          "source_order": 2,
+          "line": 451,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_LMI_VCPU_CACHE_64BIT_BAR_HIGH"
+          ],
+          "source_expression_sha256": "9b4735241cbfb84da4597da2ad46120bc66a65961be8bed8d72af589a5270968"
+        },
+        {
+          "source_order": 3,
+          "line": 454,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_VCPU_CACHE_OFFSET0"
+          ],
+          "source_expression_sha256": "02cf7c26c60fe271a5bb481a85c41d5551851bb6cc9b1a3be6cf26d8f5929569"
+        },
+        {
+          "source_order": 4,
+          "line": 457,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_LMI_VCPU_CACHE_64BIT_BAR_LOW"
+          ],
+          "source_expression_sha256": "bf0502379566a8e12a18cc77df9927d9119409ec9a7271820a27fc25915b2583"
+        },
+        {
+          "source_order": 5,
+          "line": 459,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_LMI_VCPU_CACHE_64BIT_BAR_HIGH"
+          ],
+          "source_expression_sha256": "e9091afbd3fec6311441acd0d0a8aa3f18eb7865203947bcf30320212a8b7c4a"
+        },
+        {
+          "source_order": 6,
+          "line": 461,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_VCPU_CACHE_OFFSET0"
+          ],
+          "source_expression_sha256": "02cf7c26c60fe271a5bb481a85c41d5551851bb6cc9b1a3be6cf26d8f5929569"
+        },
+        {
+          "source_order": 7,
+          "line": 466,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_LMI_VCPU_CACHE_64BIT_BAR_LOW"
+          ],
+          "source_expression_sha256": "86f0c99ce1b62cf31501e8fbab5aaa1eda907cda7fe4275e63c49c9b7cab7589"
+        },
+        {
+          "source_order": 8,
+          "line": 469,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_LMI_VCPU_CACHE_64BIT_BAR_HIGH"
+          ],
+          "source_expression_sha256": "a982a73eac73c016df5d24cfd013aba1061f1f257e73b1ac2c354ce47eb5de6a"
+        },
+        {
+          "source_order": 9,
+          "line": 473,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_VCPU_CACHE_OFFSET0"
+          ],
+          "source_expression_sha256": "cd0773409bb2fe5a14455e3aea639b3174d7ccb3e73435a3c90120f164c4fc62"
+        },
+        {
+          "source_order": 10,
+          "line": 479,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_VCPU_CACHE_SIZE0"
+          ],
+          "source_expression_sha256": "76670f00abf0b386b0a57e360b5c61b8bc5e04db61e6c29bbc483be02b6c6208"
+        },
+        {
+          "source_order": 11,
+          "line": 482,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_VCPU_CACHE_SIZE0"
+          ],
+          "source_expression_sha256": "cef8b986cf5a757ec6f13ccbc8f0a711a9e23dd714676a9a144d611e647567de"
+        },
+        {
+          "source_order": 12,
+          "line": 487,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_LMI_VCPU_CACHE1_64BIT_BAR_LOW"
+          ],
+          "source_expression_sha256": "c049e530c2206bb044a54a2426d642ea730d6f55948abf10a483f64d2be3c4d0"
+        },
+        {
+          "source_order": 13,
+          "line": 490,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_LMI_VCPU_CACHE1_64BIT_BAR_HIGH"
+          ],
+          "source_expression_sha256": "c2a8081a3b467bbc74d0165728c849b1c4c7f31a18da22168d53c687e06bed32"
+        },
+        {
+          "source_order": 14,
+          "line": 493,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_VCPU_CACHE_OFFSET1"
+          ],
+          "source_expression_sha256": "a58c48cb6a486afba53b57468791e6151acdfa421d3410b64c76b97b1f1939c3"
+        },
+        {
+          "source_order": 15,
+          "line": 496,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_LMI_VCPU_CACHE1_64BIT_BAR_LOW"
+          ],
+          "source_expression_sha256": "37b02c4166f779998598058360d0ec4f262fc26152f5b9b02c49d7ded0bb28a3"
+        },
+        {
+          "source_order": 16,
+          "line": 498,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_LMI_VCPU_CACHE1_64BIT_BAR_HIGH"
+          ],
+          "source_expression_sha256": "2e92c7cd941b713639a9bfe64b15dded6ac1779940adf0f51faa4e8d77d47721"
+        },
+        {
+          "source_order": 17,
+          "line": 500,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_VCPU_CACHE_OFFSET1"
+          ],
+          "source_expression_sha256": "a58c48cb6a486afba53b57468791e6151acdfa421d3410b64c76b97b1f1939c3"
+        },
+        {
+          "source_order": 18,
+          "line": 503,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_VCPU_CACHE_SIZE1"
+          ],
+          "source_expression_sha256": "3aa45d5ffec2f3bedbcdcee10fec6a3dedb33d5f6317bc3a8006233a71751647"
+        },
+        {
+          "source_order": 19,
+          "line": 507,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_LMI_VCPU_CACHE2_64BIT_BAR_LOW"
+          ],
+          "source_expression_sha256": "ecf2db61033210757ac6905ceaa4bcebd8fffa1a1cab93259ad86f8f72fb6eb1"
+        },
+        {
+          "source_order": 20,
+          "line": 510,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_LMI_VCPU_CACHE2_64BIT_BAR_HIGH"
+          ],
+          "source_expression_sha256": "f86845154c89c55da273ccbc28cec24e484ceb936cb17ba5b40a0c2b390417d8"
+        },
+        {
+          "source_order": 21,
+          "line": 513,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_VCPU_CACHE_OFFSET2"
+          ],
+          "source_expression_sha256": "aa67bf9e109a2fa01f01c95dcfbc36921e330b150f2554d16077c123beb4b9e1"
+        },
+        {
+          "source_order": 22,
+          "line": 515,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_VCPU_CACHE_SIZE2"
+          ],
+          "source_expression_sha256": "aa0f459b52be811cea52465a6f705e01c380a9e0ccb779901ab6b8ecb8b6b050"
+        },
+        {
+          "source_order": 23,
+          "line": 519,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_LMI_VCPU_NC0_64BIT_BAR_LOW"
+          ],
+          "source_expression_sha256": "25b7e9580e4354ce4fe0a3a3ffe60d68c47ec74e196f77d1b208c348d673b1e4"
+        },
+        {
+          "source_order": 24,
+          "line": 522,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_LMI_VCPU_NC0_64BIT_BAR_HIGH"
+          ],
+          "source_expression_sha256": "751c3319fe99ce835ba047a85d3d76ea3bf5623ec9e14f6e2fb6190a14416d18"
+        },
+        {
+          "source_order": 25,
+          "line": 525,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_VCPU_NONCACHE_OFFSET0"
+          ],
+          "source_expression_sha256": "afb296c5d9948cfb244b3bcece9af12b1be9c4b8e4ac8d51c64f3efed2e3c8e7"
+        },
+        {
+          "source_order": 26,
+          "line": 527,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_VCPU_NONCACHE_SIZE0"
+          ],
+          "source_expression_sha256": "6c968b220787be8fbf0e09f31b8d0461d065014e594052de430623784a95a950"
+        },
+        {
+          "source_order": 27,
+          "line": 532,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_GFX10_ADDR_CONFIG"
+          ],
+          "source_expression_sha256": "9eee26e758ffca01f67234c14d0606eff4e24f97e47524739b6202b4f48f886d"
+        }
+      ]
+    },
+    {
+      "function": "vcn_v2_0_clock_gating_dpg_mode",
+      "scope": "DPG clock helper",
+      "function_line": 649,
+      "source_sha256": "fd9c901a9c94a1c493c6f0964da843b0b8f4f8e9f8b83ef770d9ae43f5ef4135",
+      "call_sites": [
+        {
+          "source_order": 1,
+          "line": 682,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_CGC_CTRL"
+          ],
+          "source_expression_sha256": "99fefdec807bc1832a2b2b51dd4c8796c73b9679277d076538b9a4c81fcae0c7"
+        },
+        {
+          "source_order": 2,
+          "line": 686,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_CGC_GATE"
+          ],
+          "source_expression_sha256": "e1a0b94a0217c7717e1a2dd2251d86f93063a1ee627e719633acadf6038d3e95"
+        },
+        {
+          "source_order": 3,
+          "line": 690,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_SUVD_CGC_GATE"
+          ],
+          "source_expression_sha256": "b8f08240cd71bb606e9ac59b87870babf02aeec538c177310c7724f114a6f0e7"
+        },
+        {
+          "source_order": 4,
+          "line": 694,
+          "macro": "WREG32_SOC15_DPG_MODE",
+          "register_symbols": [
+            "mmUVD_SUVD_CGC_CTRL"
+          ],
+          "source_expression_sha256": "2ebda8f7fa1f1ec6aa06e31a8f13f23d7e076af26e98c6cca012a8106d52bf22"
+        }
+      ]
+    },
+    {
+      "function": "vcn_v2_0_dec_ring_test_ring",
+      "scope": "specialized test with VF bypass",
+      "function_line": 1825,
+      "source_sha256": "e29ae22b4e03ca9f7de1e36f7154bc6fb5e7de2b49f56b8c3c2491669e3e0025",
+      "call_sites": [
+        {
+          "source_order": 1,
+          "line": 1835,
+          "macro": "WREG32",
+          "register_symbols": [
+            "symbolic external scratch9 mapping"
+          ],
+          "source_expression_sha256": "f36d279b26225a80d8608ad554d855cc091b6999e15e0f8e88e370f5a95b28c4"
+        },
+        {
+          "source_order": 2,
+          "line": 1845,
+          "macro": "RREG32",
+          "register_symbols": [
+            "symbolic external scratch9 mapping"
+          ],
+          "source_expression_sha256": "0d23de44a71031a3ecdac28c4f6f947410d680c6a9b6e1d0c6f642abf73bcbb1"
+        }
+      ]
+    }
+  ],
+  "lexical_call_site_count": 134,
+  "distinct_register_symbols": [
+    "mmUVD_CGC_CTRL",
+    "mmUVD_CGC_GATE",
+    "mmUVD_GFX10_ADDR_CONFIG",
+    "mmUVD_LMI_CTRL",
+    "mmUVD_LMI_CTRL2",
+    "mmUVD_LMI_RBC_RB_64BIT_BAR_HIGH",
+    "mmUVD_LMI_RBC_RB_64BIT_BAR_LOW",
+    "mmUVD_LMI_RBC_RB_VMID",
+    "mmUVD_LMI_SWAP_CNTL",
+    "mmUVD_LMI_VCPU_CACHE1_64BIT_BAR_HIGH",
+    "mmUVD_LMI_VCPU_CACHE1_64BIT_BAR_LOW",
+    "mmUVD_LMI_VCPU_CACHE2_64BIT_BAR_HIGH",
+    "mmUVD_LMI_VCPU_CACHE2_64BIT_BAR_LOW",
+    "mmUVD_LMI_VCPU_CACHE_64BIT_BAR_HIGH",
+    "mmUVD_LMI_VCPU_CACHE_64BIT_BAR_LOW",
+    "mmUVD_LMI_VCPU_NC0_64BIT_BAR_HIGH",
+    "mmUVD_LMI_VCPU_NC0_64BIT_BAR_LOW",
+    "mmUVD_MASTINT_EN",
+    "mmUVD_MPC_CNTL",
+    "mmUVD_MPC_SET_MUX",
+    "mmUVD_MPC_SET_MUXA0",
+    "mmUVD_MPC_SET_MUXB0",
+    "mmUVD_PGFSM_CONFIG",
+    "mmUVD_PGFSM_STATUS",
+    "mmUVD_POWER_STATUS",
+    "mmUVD_RBC_RB_CNTL",
+    "mmUVD_RBC_RB_RPTR",
+    "mmUVD_RBC_RB_RPTR_ADDR",
+    "mmUVD_RBC_RB_WPTR",
+    "mmUVD_RBC_RB_WPTR_CNTL",
+    "mmUVD_RBC_XX_IB_REG_CHECK",
+    "mmUVD_RB_BASE_HI",
+    "mmUVD_RB_BASE_HI2",
+    "mmUVD_RB_BASE_LO",
+    "mmUVD_RB_BASE_LO2",
+    "mmUVD_RB_RPTR",
+    "mmUVD_RB_RPTR2",
+    "mmUVD_RB_SIZE",
+    "mmUVD_RB_SIZE2",
+    "mmUVD_RB_WPTR",
+    "mmUVD_RB_WPTR2",
+    "mmUVD_REG_XX_MASK",
+    "mmUVD_SCRATCH2",
+    "mmUVD_SOFT_RESET",
+    "mmUVD_STATUS",
+    "mmUVD_SUVD_CGC_CTRL",
+    "mmUVD_SUVD_CGC_GATE",
+    "mmUVD_VCPU_CACHE_OFFSET0",
+    "mmUVD_VCPU_CACHE_OFFSET1",
+    "mmUVD_VCPU_CACHE_OFFSET2",
+    "mmUVD_VCPU_CACHE_SIZE0",
+    "mmUVD_VCPU_CACHE_SIZE1",
+    "mmUVD_VCPU_CACHE_SIZE2",
+    "mmUVD_VCPU_CNTL",
+    "mmUVD_VCPU_NONCACHE_OFFSET0",
+    "mmUVD_VCPU_NONCACHE_SIZE0",
+    "symbolic external scratch9 mapping"
+  ],
+  "limitations": [
+    "Lexical call sites, not runtime operation counts",
+    "Branch alternatives and loops retain their original source context",
+    "DPG macro effect depends on its indirect argument",
+    "Host shared-memory queue updates and non-register helper calls are covered by the phase audit, not this register-call index",
+    "No physical addresses, device writes or observed transitions generated"
+  ]
+}

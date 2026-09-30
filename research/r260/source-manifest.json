@@ -1,0 +1,269 @@
+{
+  "commit": "551c722f40809618230001baccf219193e22fc5a",
+  "retrieved_utc": "2026-09-30T13:08:41.175040+00:00",
+  "files": [
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "sha256": "753849c7c491b137913668f77b8a3a0f539c7cf5cd46423db22b8f1513d9d9f6",
+      "bytes": 71359
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_5.c",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/amdgpu/vcn_v2_5.c",
+      "sha256": "56758f1b265b32e4ca7262162776f8c2a4ffeaa0b3fc8b7c749bb1597a950cd3",
+      "bytes": 71090
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.h",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/amdgpu/vcn_v2_0.h",
+      "sha256": "c175434c7e0cd5bb710d2e86b8696e8da378ad16d9f0109b76efa8820deb4083",
+      "bytes": 2761
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.c",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.c",
+      "sha256": "f4fa6fa891cb1b56d4bd5602dd97801a4fc12d3fbdb385a10388ddc6c883e670",
+      "bytes": 45469
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.h",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.h",
+      "sha256": "aae122032df161880e34d2e17cfd546e128e2572bcc8fc505fb434b3a14a3ac3",
+      "bytes": 19258
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_psp.c",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/amdgpu/amdgpu_psp.c",
+      "sha256": "4eb9ce8a315de3812a18aa28b412cde9b86749cdf7b9906cf3383f60abdfab7b",
+      "bytes": 140515
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/psp_v11_0_8.c",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/amdgpu/psp_v11_0_8.c",
+      "sha256": "a89117eb6066a668f23980936d77fa781873759befdf6a2aff21f1fc2fcae52f",
+      "bytes": 6039
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_discovery.c",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/amdgpu/amdgpu_discovery.c",
+      "sha256": "076f5c3fb0a37ae041d7ee6b49b56dd850b3027c583a2744ce25f4d6c64e4ce1",
+      "bytes": 109302
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/soc15.c",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/amdgpu/soc15.c",
+      "sha256": "c9d35914b18db547cd4af4f100ee37c464cc94a62154dbc2060a4ded7c54867e",
+      "bytes": 45666
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/soc15d.h",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/amdgpu/soc15d.h",
+      "sha256": "f39adef602b90ac33036d15a7710e51242ec822f826e8a9823ab466a493325f1",
+      "bytes": 25520
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_ucode.h",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/amdgpu/amdgpu_ucode.h",
+      "sha256": "222b508dfd40897ead5aecd207ab54c015c311c50e96246a962c1eb29c63b1e0",
+      "bytes": 21072
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_ucode.c",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/amdgpu/amdgpu_ucode.c",
+      "sha256": "3b786c1da23c314830fa8232d908a872f13400f21aadf33afe9b0f5a181b534d",
+      "bytes": 55185
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu.h",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/amdgpu/amdgpu.h",
+      "sha256": "40ab2e3907dcb8d121505dcdd76c1bf10b1775b7504f2a115c2fada5577cb12b",
+      "bytes": 42872
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_ring.c",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/amdgpu/amdgpu_ring.c",
+      "sha256": "08697e2e1731112282c724952ab0219302b3ba3b0c4c29a480cfeb9b2925d080",
+      "bytes": 31357
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_kms.c",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/amdgpu/amdgpu_kms.c",
+      "sha256": "0c5080e1b1b3faed36368d4621af01b80aefea09bd1a01313292926461a5b22a",
+      "bytes": 60592
+    },
+    {
+      "path": "drivers/gpu/drm/amd/include/asic_reg/vcn/vcn_2_0_0_sh_mask.h",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/include/asic_reg/vcn/vcn_2_0_0_sh_mask.h",
+      "sha256": "4c9ed19c3e744be938ada218d188c19ad7dc71e0dfb1652637ab116618bd489e",
+      "bytes": 392019
+    },
+    {
+      "path": "drivers/gpu/drm/amd/include/asic_reg/vcn/vcn_2_0_0_offset.h",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/include/asic_reg/vcn/vcn_2_0_0_offset.h",
+      "sha256": "026dabdbf0f2b731db71cd99a4f617f347589a61d8015afe29abb82f94ad5eb7",
+      "bytes": 102365
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/nv.c",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/amdgpu/nv.c",
+      "sha256": "341c3b49935f6915dca1cb5d8389dfecfeeddfffe2dafcad09bbda6a74f45013",
+      "bytes": 34189
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_device.c",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c",
+      "sha256": "3d91a5755f1513378d544e56f840cdf6773706b2f7de17dace3df099ac1a1a8c",
+      "bytes": 189530
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/psp_gfx_if.h",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/amdgpu/psp_gfx_if.h",
+      "sha256": "e12b7894cc9cb30a7de5e6707d7af60908941e85fcdcd562dc27b58a9d80f6ee",
+      "bytes": 26757
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_psp.h",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/amdgpu/amdgpu_psp.h",
+      "sha256": "41b26a6310a042d1ed219006e88da5320d0994b8a1298370fc1a808b29e043a5",
+      "bytes": 22736
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/mmsch_v2_0.h",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/amdgpu/mmsch_v2_0.h",
+      "sha256": "bbbaa1ddce6e6ad77fcc83e3c6988eabd48a2dfd3f105ca5122faa7a8d3c295a",
+      "bytes": 25616
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/soc15_common.h",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/amdgpu/soc15_common.h",
+      "sha256": "3bd3e7f95e5ff9637e4608be639355a3fa82b9dad6635623104f6e084e9bfda6",
+      "bytes": 9201
+    },
+    {
+      "path": "drivers/gpu/drm/amd/pm/amdgpu_dpm.c",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/pm/amdgpu_dpm.c",
+      "sha256": "d72811284837e0e4f1e6e925324681a43e10ec523af217c58b3befb0052ef767",
+      "bytes": 52476
+    },
+    {
+      "path": "drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c",
+      "sha256": "7f3a44a8b75b54b3454df0f76d6fdeadf8c517454a2b042d19492d794b495136",
+      "bytes": 108367
+    },
+    {
+      "path": "drivers/gpu/drm/amd/pm/swsmu/smu11/cyan_skillfish_ppt.c",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/pm/swsmu/smu11/cyan_skillfish_ppt.c",
+      "sha256": "9259ad3ff6f660fe97ca7ea68f9b7e5f5d185982f0d3341180bd880442f030f1",
+      "bytes": 17680
+    },
+    {
+      "path": "drivers/gpu/drm/amd/pm/swsmu/smu11/navi10_ppt.c",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/pm/swsmu/smu11/navi10_ppt.c",
+      "sha256": "deab5eaa1c11477a086f31b00780cd1363404519a7e73bb72a33dc0ce1df9436",
+      "bytes": 108315
+    },
+    {
+      "path": "drivers/gpu/drm/amd/pm/swsmu/smu11/smu_v11_0.c",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/pm/swsmu/smu11/smu_v11_0.c",
+      "sha256": "3d4a62199f4b2dfea021b9c36f473fb161f10bd3aed89bcdc99f0d5eb2a5ccb1",
+      "bytes": 56083
+    },
+    {
+      "path": "drivers/gpu/drm/amd/pm/swsmu/smu_internal.h",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/pm/swsmu/smu_internal.h",
+      "sha256": "24692eb883692f7fb97a4268ae65aeb5ce612d3b7a4ead28389d872da7a3448b",
+      "bytes": 7900
+    },
+    {
+      "path": "drivers/gpu/drm/amd/pm/swsmu/inc/amdgpu_smu.h",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/pm/swsmu/inc/amdgpu_smu.h",
+      "sha256": "572933fcb82ce1054ea5b76774252462b70f1ec9c9edf0a03da313d9460dbfd4",
+      "bytes": 62044
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_uvd.h",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/amdgpu/amdgpu_uvd.h",
+      "sha256": "8a863d7b7f51cf7dbca45e83a04bab36927f4a6cbb376fa60129be11ec4a3f78",
+      "bytes": 3674
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_gart.h",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/amdgpu/amdgpu_gart.h",
+      "sha256": "a85ed422b1cc0eabde14ef930a41e7c4970fc520e7a0f9f0ee2e7f5990442919",
+      "bytes": 2886
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_ring.h",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/amdgpu/amdgpu_ring.h",
+      "sha256": "d791cc949412dff2ecc906bca12467a42c2d98681a2089fdb569a45b7f27832e",
+      "bytes": 21085
+    },
+    {
+      "path": "drivers/gpu/drm/amd/include/amd_shared.h",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/include/amd_shared.h",
+      "sha256": "8d139d5ca40b769594fb26c8df3decff11f17384113382459366f17e1104511f",
+      "bytes": 16448
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_reg_access.h",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/amdgpu/amdgpu_reg_access.h",
+      "sha256": "e47ffc00971107c3ed9aaf06e589dcabb826daaacc14596431e8b5f744476504",
+      "bytes": 7321
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_reg_access.c",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/amdgpu/amdgpu_reg_access.c",
+      "sha256": "60ee0b99d513c67b7774e91c8e61e2d0e74ec2be4be4bd66a85b91f1681e422a",
+      "bytes": 27600
+    },
+    {
+      "path": "drivers/gpu/drm/amd/include/soc15_hw_ip.h",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/include/soc15_hw_ip.h",
+      "sha256": "c5600b5f4d64c76eae11c2bc28b8c40a316d0b6831a7adfc26ff22a508838813",
+      "bytes": 6144
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_ip.h",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/amdgpu/amdgpu_ip.h",
+      "sha256": "dde3a58612933f890921698b3dd05ec8cb4595f4ceeb366baf94ec3f178d7e97",
+      "bytes": 4568
+    },
+    {
+      "path": "drivers/dma-buf/dma-fence.c",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/dma-buf/dma-fence.c",
+      "sha256": "74cd1f45daba9dd0829f6c48ae4075c632baf2f61e41192959de12bf0ed26ae8",
+      "bytes": 40304
+    },
+    {
+      "path": "include/linux/dma-fence.h",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/include/linux/dma-fence.h",
+      "sha256": "8651b7049e538e8b99dbb12bae9ed34b3cb5682aa0a39421b2fc41a6070d8be5",
+      "bytes": 27784
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_fence.c",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/amdgpu/amdgpu_fence.c",
+      "sha256": "2dd7103028ce36fef9a5408db72e4bdc77a2792a2cc6b2e0162cafacd1ed0e19",
+      "bytes": 29351
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_ib.c",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/amdgpu/amdgpu_ib.c",
+      "sha256": "4ebea4e3ed0200451c5a1cc086618e65b4a1f9a5725e63af7079e202d85da75b",
+      "bytes": 15834
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_job.c",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/amdgpu/amdgpu_job.c",
+      "sha256": "3b68543053f7e52aac2e624c9c10a9860c437656e4daeb949c89f2e55a852807",
+      "bytes": 14710
+    },
+    {
+      "path": "drivers/gpu/drm/amd/include/asic_reg/vcn/vcn_4_0_5_sh_mask.h",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/551c722f40809618230001baccf219193e22fc5a/drivers/gpu/drm/amd/include/asic_reg/vcn/vcn_4_0_5_sh_mask.h",
+      "sha256": "0eaceab50fe9454dc7ac81408ab215680078c5418bea2528f0decfb456f05143"
+    }
+  ]
+}

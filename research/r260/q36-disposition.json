@@ -1,0 +1,73 @@
+{
+  "scope": "Q36 advisory source review, independently checked against pinned source",
+  "model_output_is_evidence": false,
+  "broad_reviews": "Not accepted: drift, compaction or missing requested artifacts",
+  "bounded_reviews": [
+    {
+      "name": "ring-test",
+      "runtime_returncode": 0,
+      "advisory_end_marker_present": true,
+      "disposition": "Literal source facts only; not accepted wholesale",
+      "corrections_or_limits": [
+        "Allocation does not guarantee submission readiness",
+        "Timeout does not prove the scratch value remained equal to its seed",
+        "Speculative writes were not demonstrated"
+      ]
+    },
+    {
+      "name": "cache-normal",
+      "runtime_returncode": 0,
+      "advisory_end_marker_present": false,
+      "disposition": "Literal source facts only; not accepted wholesale",
+      "corrections_or_limits": [
+        "gpu_addr alone does not establish a physical allocation class or physical nonadjacency",
+        "No global bounds-validation defect inferred from a single function"
+      ]
+    },
+    {
+      "name": "cache-dpg",
+      "runtime_returncode": 0,
+      "advisory_end_marker_present": true,
+      "disposition": "Literal source facts only; not accepted wholesale",
+      "corrections_or_limits": [
+        "Indirect macro stages memory rather than necessarily performing physical writes",
+        "SIZE0 and window1 zero branches are not restricted to PSP loading",
+        "Which agent resolves final mappings was not proven by this excerpt"
+      ]
+    },
+    {
+      "name": "clock-helper",
+      "runtime_returncode": 0,
+      "advisory_end_marker_present": false,
+      "disposition": "Literal source facts only; not accepted wholesale",
+      "corrections_or_limits": [
+        "Shared control register does not prove shared physical power domain",
+        "Clock-gate polarity was guessed by model and rejected",
+        "VF early return does not imply default or unmanaged hardware state"
+      ]
+    },
+    {
+      "name": "power-helper",
+      "runtime_returncode": 0,
+      "advisory_end_marker_present": false,
+      "disposition": "Literal source facts only; not accepted wholesale",
+      "corrections_or_limits": [
+        "Capability branches are not VF-support branches",
+        "Wait expected value is distinct from its mask",
+        "Field values1/2 do not change field shift positions",
+        "Discarded return alone does not define every possible fault path"
+      ]
+    },
+    {
+      "name": "pg-state",
+      "runtime_returncode": 0,
+      "advisory_end_marker_present": true,
+      "disposition": "Literal source facts only; not accepted wholesale",
+      "corrections_or_limits": [
+        "Literal same-state/VF returns verified independently",
+        "No physical race demonstrated",
+        "Suggested live instrumentation was not performed"
+      ]
+    }
+  ]
+}

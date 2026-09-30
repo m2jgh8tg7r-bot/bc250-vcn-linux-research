@@ -1,0 +1,126 @@
+{
+  "result": "PASS",
+  "verified_masks": [
+    {
+      "register": "UVD_VCPU_CNTL",
+      "label": "clock_enable_requested",
+      "mask": "0x200"
+    },
+    {
+      "register": "UVD_VCPU_CNTL",
+      "label": "pmb_reset_requested",
+      "mask": "0x40"
+    },
+    {
+      "register": "UVD_VCPU_CNTL",
+      "label": "rbbm_reset_requested",
+      "mask": "0x80"
+    },
+    {
+      "register": "UVD_VCPU_CNTL",
+      "label": "cabac_mb_acc_named_bit",
+      "mask": "0x10000000"
+    },
+    {
+      "register": "UVD_SOFT_RESET",
+      "label": "vcpu_reset_requested",
+      "mask": "0x8"
+    },
+    {
+      "register": "UVD_SOFT_RESET",
+      "label": "rbc_reset_requested",
+      "mask": "0x1"
+    },
+    {
+      "register": "UVD_SOFT_RESET",
+      "label": "vcpu_vclk_reset_status_bit",
+      "mask": "0x80000"
+    },
+    {
+      "register": "UVD_SOFT_RESET",
+      "label": "lmi_reset_requested",
+      "mask": "0x4"
+    },
+    {
+      "register": "UVD_SOFT_RESET",
+      "label": "lmi_umc_reset_requested",
+      "mask": "0x2000"
+    },
+    {
+      "register": "UVD_STATUS",
+      "label": "reference_ready_bit",
+      "mask": "0x2"
+    },
+    {
+      "register": "UVD_STATUS",
+      "label": "driver_busy_bit",
+      "mask": "0x4"
+    },
+    {
+      "register": "UVD_STATUS",
+      "label": "rbc_busy_bit",
+      "mask": "0x1"
+    },
+    {
+      "register": "UVD_RBC_RB_CNTL",
+      "label": "no_fetch_bit",
+      "mask": "0x10000"
+    },
+    {
+      "register": "UVD_RBC_RB_CNTL",
+      "label": "no_update_bit",
+      "mask": "0x1000000"
+    },
+    {
+      "register": "UVD_RBC_RB_CNTL",
+      "label": "rptr_write_enable_bit",
+      "mask": "0x10000000"
+    },
+    {
+      "register": "CC_UVD_HARVESTING",
+      "label": "mmsch_disable_bit",
+      "mask": "0x1"
+    },
+    {
+      "register": "CC_UVD_HARVESTING",
+      "label": "uvd_disable_bit",
+      "mask": "0x2"
+    },
+    {
+      "register": "UVD_RB_ARB_CTRL",
+      "label": "vcpu_dis_named_bit",
+      "mask": "0x8"
+    },
+    {
+      "register": "UVD_CGC_GATE",
+      "label": "rbc_gate_named_bit",
+      "mask": "0x10"
+    },
+    {
+      "register": "UVD_CGC_GATE",
+      "label": "vcpu_gate_named_bit",
+      "mask": "0x40000"
+    },
+    {
+      "register": "UVD_CGC_CTRL",
+      "label": "dynamic_clock_mode_named_bit",
+      "mask": "0x1"
+    },
+    {
+      "register": "UVD_CGC_CTRL",
+      "label": "rbc_mode_named_bit",
+      "mask": "0x100000"
+    },
+    {
+      "register": "UVD_CGC_CTRL",
+      "label": "vcpu_mode_named_bit",
+      "mask": "0x20000000"
+    },
+    {
+      "register": "UVD_LMI_CTRL2",
+      "label": "stall_arb_umc_named_bit",
+      "mask": "0x100"
+    }
+  ],
+  "scope": "Header definitions and explicitly labeled driver conventions; no hardware validation"
+}

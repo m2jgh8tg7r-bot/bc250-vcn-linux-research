@@ -1,6 +1,10 @@
 # BC-250 VCN Linux research
 
-## Latest — R248, 2026-09-27
+## Latest — R265, 2026-10-01 JST
+
+[R251–R265 VCPU execution-boundary handoff](docs/CHATGPT_HANDOFF_R265.md) separates source-confirmed facts, strong reported GPCNT/RBC activity, unresolved VCPU fetch/reset/bootstrap candidates, and demoted hypotheses. Whole-domain VCLK absence and direct harvesting-clear variants are deprioritized; the cause remains unknown. Includes counter/instance distinctions, lifecycle and completion audits, a rebuttal matrix and public offline replay. No new live VCN activation is claimed. R249 remains a separate CPU checkpoint and R250 remains unfinished advisory work.
+
+### Previous — R248, 2026-09-27
 
 [R247–R248 handoff](docs/CHATGPT_HANDOFF_R248.md) adds input-pacing pipeline controls and B-picture CPU throughput measurements. Rawvideo output packing is not the sole explanation for the higher paced CPU cost. The compared FFmpeg paths use software decoding; no boot-option change, firmware operation or dedicated VCN execution is involved.
 

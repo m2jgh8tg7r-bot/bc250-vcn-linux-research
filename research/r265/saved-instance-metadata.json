@@ -1,0 +1,17 @@
+{
+  "captured_at": "2026-09-09T12:26:03.170212+09:00",
+  "scope": "Cached sysfs IP metadata only",
+  "instances": [
+    {
+      "hw_id": "12",
+      "num_instance": "0",
+      "major": "2",
+      "minor": "0",
+      "revision": "3",
+      "harvest": "0x0",
+      "num_base_addresses": "3"
+    }
+  ],
+  "physical_power": "UNPROVEN",
+  "hardware_execution": "UNPROVEN"
+}

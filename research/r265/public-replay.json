@@ -1,0 +1,120 @@
+{
+  "result": "PASS",
+  "scope": "Pinned source and synthetic offline replay only",
+  "source_file_instances_verified": 66,
+  "matched_checks": [
+    {
+      "stage": "r251",
+      "script": "audit_start.py",
+      "result": "MATCH",
+      "published_result": "results.json"
+    },
+    {
+      "stage": "r252",
+      "script": "audit_calls.py",
+      "result": "MATCH",
+      "published_result": "results.json"
+    },
+    {
+      "stage": "r256",
+      "script": "audit_observation.py",
+      "result": "MATCH",
+      "published_result": "results.json"
+    },
+    {
+      "stage": "r258",
+      "script": "audit_preconditions.py",
+      "result": "MATCH",
+      "published_result": "results.json"
+    },
+    {
+      "stage": "r259",
+      "script": "audit_provenance.py",
+      "result": "MATCH",
+      "published_result": "results.json"
+    },
+    {
+      "stage": "r261",
+      "script": "audit_completion.py",
+      "result": "MATCH",
+      "published_result": "results.json"
+    },
+    {
+      "stage": "r262",
+      "script": "audit_lifecycle.py",
+      "result": "MATCH",
+      "published_result": "results.json"
+    },
+    {
+      "stage": "r264",
+      "script": "audit_labels.py",
+      "result": "MATCH",
+      "published_result": "results.json"
+    },
+    {
+      "stage": "r251",
+      "script": "audit_inventory.py",
+      "result": "MATCH",
+      "published_result": "register-inventory.json"
+    },
+    {
+      "stage": "r253",
+      "script": "verify_interpretation.py",
+      "result": "MATCH",
+      "published_result": "verification.json"
+    },
+    {
+      "stage": "r253",
+      "script": "verify_comparison.py",
+      "result": "MATCH",
+      "published_result": "comparison-verification.json"
+    },
+    {
+      "stage": "r253",
+      "script": "verify_source_fields.py",
+      "result": "MATCH",
+      "published_result": "source-field-verification.json"
+    },
+    {
+      "stage": "r253",
+      "script": "interpret_capture.py",
+      "result": "MATCH",
+      "published_result": "template-result.json"
+    },
+    {
+      "stage": "r254",
+      "script": "compare_history.py",
+      "result": "MATCH",
+      "published_result": "results.json"
+    },
+    {
+      "stage": "r257",
+      "script": "audit_generations.py",
+      "result": "MATCH",
+      "published_result": "results.json"
+    },
+    {
+      "stage": "r263",
+      "script": "audit_history.py",
+      "result": "MATCH",
+      "published_result": "results.json"
+    },
+    {
+      "stage": "r265",
+      "script": "audit_counters.py",
+      "result": "MATCH",
+      "published_result": "counter-results.json"
+    },
+    {
+      "stage": "r265",
+      "script": "audit_discovery.py",
+      "result": "MATCH",
+      "published_result": "discovery-results.json"
+    }
+  ],
+  "r255_saved_file_replayed": false,
+  "retained_private_source_replayed": false,
+  "hardware_access": false,
+  "firmware_upload_or_load": false,
+  "run_source_acquisition": "Previously downloaded pinned source cache, reverified by SHA256; initial fresh download attempt received HTTP429"
+}

@@ -1,0 +1,37 @@
+{
+  "retrieved_utc": "2026-09-30T14:15:45.637946+00:00",
+  "sources": [
+    {
+      "repo": "rpf16rj/bc250-steamos-real-toolkit",
+      "path": ".kb/vcn.md",
+      "commit": "d0e41ed5ad74a4d8b50293c37d41b4c935a69869",
+      "url": "https://raw.githubusercontent.com/rpf16rj/bc250-steamos-real-toolkit/d0e41ed5ad74a4d8b50293c37d41b4c935a69869/.kb/vcn.md",
+      "sha256": "a2e4fe3e551ec4ca68c33121f616e025a67c9e9e2a9221149d9f3955e39fe8a3",
+      "classification": "ATTRIBUTED_EXTERNAL_DOCUMENT",
+      "assessment": "September23 categorical dead conclusion is revised by a September26 addendum in the same file; the addendum cites our public repository, so this is not independent corroboration of our findings. No external procedures reproduced."
+    },
+    {
+      "repo": "simpmix/bc250-encoding-decoding-fix",
+      "path": "README.md",
+      "commit": "98828189e95de4c07a99c6174939101947e0076c",
+      "url": "https://raw.githubusercontent.com/simpmix/bc250-encoding-decoding-fix/98828189e95de4c07a99c6174939101947e0076c/README.md",
+      "sha256": "82fcafaa13a5239607d4252672f24188a96d6003336fd1984e26b46c26c837ce",
+      "classification": "ATTRIBUTED_EXTERNAL_README_CLAIM",
+      "assessment": "README makes a categorical factory-disable/eFuse claim; that wording is not a primary silicon measurement established by this review. CPU/Vulkan codec functionality is separate from dedicated VCN execution."
+    },
+    {
+      "repo": "AMD-BC-250/documentation",
+      "path": "issues.md",
+      "commit": "b20bc51eafa89b662324e96c2d40a14d2d6420b6",
+      "url": "https://raw.githubusercontent.com/AMD-BC-250/documentation/b20bc51eafa89b662324e96c2d40a14d2d6420b6/issues.md",
+      "sha256": "8176e19ad25d043857a2842cdcd4c29a6bb531dea331f23dc99272c6f8277ef8",
+      "classification": "EXTERNAL_ISSUE_INDEX",
+      "assessment": "Index marks VCN support not planned and links a freedesktop comment. The linked primary discussion returned access denied; its contents were not independently verified this session."
+    }
+  ],
+  "limits": [
+    "No external acquisition, exploit, boot patch or device procedure run",
+    "No new independent public raw capture validating the user-supplied September30 RBC report identified in this bounded review",
+    "Absence in these sources/searches is not global absence proof"
+  ]
+}

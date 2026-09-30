@@ -1,0 +1,117 @@
+{
+  "result": "PASS",
+  "classification": "PROVEN_STATICALLY",
+  "source_files": [
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "sha256": "753849c7c491b137913668f77b8a3a0f539c7cf5cd46423db22b8f1513d9d9f6"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.c",
+      "sha256": "f4fa6fa891cb1b56d4bd5602dd97801a4fc12d3fbdb385a10388ddc6c883e670"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.h",
+      "sha256": "aae122032df161880e34d2e17cfd546e128e2572bcc8fc505fb434b3a14a3ac3"
+    }
+  ],
+  "findings": [
+    {
+      "claim": "busy marker preserves other input status bits at the C expression level",
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "line": 1019,
+      "matched_source": "tmp = RREG32_SOC15(UVD, 0, mmUVD_STATUS) | UVD_STATUS__UVD_BUSY;\n\tWREG32_SOC15(UVD, 0, mmUVD_STATUS, tmp);"
+    },
+    {
+      "claim": "ready predicate does not itself require an observed transition",
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "line": 1094,
+      "matched_source": "status = RREG32_SOC15(UVD, 0, mmUVD_STATUS);\n\t\t\tif (status & 2)\n\t\t\t\tbreak;"
+    },
+    {
+      "claim": "normal stop explicitly clears status after requesting VCPU reset",
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "line": 1267,
+      "matched_source": "/* reset VCPU */\n\tWREG32_P(SOC15_REG_OFFSET(UVD, 0, mmUVD_SOFT_RESET),\n\t\tUVD_SOFT_RESET__VCPU_SOFT_RESET_MASK,\n\t\t~UVD_SOFT_RESET__VCPU_SOFT_RESET_MASK);\n\n\t/* clear status */\n\tWREG32_SOC15(VCN, 0, mmUVD_STATUS, 0);"
+    },
+    {
+      "claim": "static power helper returns void",
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "line": 760,
+      "matched_source": "static void vcn_v2_0_disable_static_power_gating(struct amdgpu_vcn_inst *vinst)"
+    },
+    {
+      "claim": "both static power-policy branches request PGFSM configuration and discard wait return values",
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "line": 760,
+      "wait_calls": [
+        "SOC15_WAIT_ON_RREG(VCN, 0, mmUVD_PGFSM_STATUS,\n\t\t\tUVD_PGFSM_STATUS__UVDM_UVDU_PWR_ON_2_0, 0xFFFFF);",
+        "SOC15_WAIT_ON_RREG(VCN, 0, mmUVD_PGFSM_STATUS, 0,  0xFFFFF);"
+      ],
+      "limitation": "Does not establish an actual timeout or physical power transition"
+    },
+    {
+      "claim": "vcn_reset_mask returns supported reset methods, not live held-reset state",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.c",
+      "line": 1372,
+      "matched_source": "return amdgpu_show_reset_mask(buf, adev->vcn.supported_reset);"
+    },
+    {
+      "claim": "power-state wrapper can return success before invoking start or stop",
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "line": 1871,
+      "matched_source": "if (amdgpu_sriov_vf(adev)) {\n\t\tvinst->cur_state = AMD_PG_STATE_UNGATE;\n\t\treturn 0;\n\t}\n\n\tif (state == vinst->cur_state)\n\t\treturn 0;"
+    },
+    {
+      "claim": "indirect DPG branch appends offset and value to host staging storage",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.h",
+      "line": 155,
+      "matched_source": "} else {                                                              \\\n\t\t\t*adev->vcn.inst[inst_idx].dpg_sram_curr_addr++ =              \\\n\t\t\t\toffset;                                               \\\n\t\t\t*adev->vcn.inst[inst_idx].dpg_sram_curr_addr++ =              \\\n\t\t\t\tvalue;"
+    },
+    {
+      "claim": "DPG SRAM update uses RAM firmware IDs and calls the PSP load helper",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.c",
+      "line": 1347,
+      "matched_source": "int amdgpu_vcn_psp_update_sram(struct amdgpu_device *adev, int inst_idx,\n\t\t\t       enum AMDGPU_UCODE_ID ucode_id)\n{\n\tstruct amdgpu_firmware_info ucode = {\n\t\t.ucode_id = (ucode_id ? ucode_id :\n\t\t\t    (inst_idx ? AMDGPU_UCODE_ID_VCN1_RAM :\n\t\t\t\t\tAMDGPU_UCODE_ID_VCN0_RAM)),\n\t\t.mc_addr = adev->vcn.inst[inst_idx].dpg_sram_gpu_addr,\n\t\t.ucode_size = ((uintptr_t)adev->vcn.inst[inst_idx].dpg_sram_curr_addr -\n\t\t\t      (uintptr_t)adev->vcn.inst[inst_idx].dpg_sram_cpu_addr),\n\t};\n\n\treturn psp_execute_ip_fw_load(&adev->psp, &ucode);"
+    }
+  ],
+  "conditional_scalar_examples": [
+    {
+      "input_status": "0x0",
+      "host_busy_expression": "0x4",
+      "ready_if_value_remains_unchanged": false,
+      "actual_hardware_persistence_proven": false
+    },
+    {
+      "input_status": "0x2",
+      "host_busy_expression": "0x6",
+      "ready_if_value_remains_unchanged": true,
+      "actual_hardware_persistence_proven": false
+    },
+    {
+      "input_status": "0x4",
+      "host_busy_expression": "0x4",
+      "ready_if_value_remains_unchanged": false,
+      "actual_hardware_persistence_proven": false
+    },
+    {
+      "input_status": "0x6",
+      "host_busy_expression": "0x6",
+      "ready_if_value_remains_unchanged": true,
+      "actual_hardware_persistence_proven": false
+    },
+    {
+      "input_status": "0xffffffff",
+      "host_busy_expression": "0xffffffff",
+      "ready_if_value_remains_unchanged": true,
+      "actual_hardware_persistence_proven": false
+    }
+  ],
+  "limitations": [
+    "Scalar examples are not a hardware model or a demonstrated stale-status bug",
+    "Power and reset side effects can change hardware status independently of host expressions",
+    "No reset, power, cache or firmware request performed",
+    "No-ready observations cannot exclude partial execution before a firmware handshake",
+    "Current upstream reference path is not evidence of the loaded BC250 module path"
+  ]
+}

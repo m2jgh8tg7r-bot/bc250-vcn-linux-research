@@ -1,0 +1,158 @@
+{
+  "result": "PASS",
+  "classification": "PROVEN_STATICALLY",
+  "source_files": [
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_discovery.c",
+      "sha256": "076f5c3fb0a37ae041d7ee6b49b56dd850b3027c583a2744ce25f4d6c64e4ce1"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/nv.c",
+      "sha256": "341c3b49935f6915dca1cb5d8389dfecfeeddfffe2dafcad09bbda6a74f45013"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_device.c",
+      "sha256": "3d91a5755f1513378d544e56f840cdf6773706b2f7de17dace3df099ac1a1a8c"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "sha256": "753849c7c491b137913668f77b8a3a0f539c7cf5cd46423db22b8f1513d9d9f6"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_ring.c",
+      "sha256": "08697e2e1731112282c724952ab0219302b3ba3b0c4c29a480cfeb9b2925d080"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.c",
+      "sha256": "f4fa6fa891cb1b56d4bd5602dd97801a4fc12d3fbdb385a10388ddc6c883e670"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/pm/amdgpu_dpm.c",
+      "sha256": "d72811284837e0e4f1e6e925324681a43e10ec523af217c58b3befb0052ef767"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c",
+      "sha256": "7f3a44a8b75b54b3454df0f76d6fdeadf8c517454a2b042d19492d794b495136"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/pm/swsmu/smu11/cyan_skillfish_ppt.c",
+      "sha256": "9259ad3ff6f660fe97ca7ea68f9b7e5f5d185982f0d3341180bd880442f030f1"
+    }
+  ],
+  "findings": [
+    {
+      "claim": "upstream VCN2.0.3 registration branch adds no IP block",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_discovery.c",
+      "line": 2909,
+      "matched_source": "case IP_VERSION(2, 0, 3):\n\t\t\tbreak;\n\t\tcase IP_VERSION(2, 5, 0):"
+    },
+    {
+      "claim": "Cyan source has discovery-based and static-assignment IP provenance branches",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_discovery.c",
+      "line": 3292,
+      "matched_source": "case CHIP_CYAN_SKILLFISH:\n\t\tif (adev->apu_flags & AMD_APU_IS_CYAN_SKILLFISH2) {\n\t\t\tr = amdgpu_discovery_reg_base_init(adev);\n\t\t\tif (r)\n\t\t\t\treturn -EINVAL;\n\n\t\t\tamdgpu_discovery_harvest_ip(adev);\n\t\t\tamdgpu_discovery_get_gfx_info(adev);\n\t\t\tamdgpu_discovery_get_mall_info(adev);\n\t\t\tamdgpu_discovery_get_vcn_info(adev);\n\t\t} else {\n\t\t\tcyan_skillfish_reg_base_init(adev);\n\t\t\tadev->sdma.num_instances = 2;\n\t\t\tadev->sdma.sdma_mask = 3;\n\t\t\tadev->gfx.xcc_mask = 1;\n\t\t\tadev->ip_versions[MMHUB_HWIP][0] = IP_VERSION(2, 0, 3);\n\t\t\tadev->ip_versions[ATHUB_HWIP][0] = IP_VERSION(2, 0, 3);\n\t\t\tadev->ip_versions[OSSSYS_HWIP][0] = IP_VERSION(5, 0, 1);\n\t\t\tadev->ip_versions[HDP_HWIP][0] = IP_VERSION(5, 0, 1);\n\t\t\tadev->ip_versions[SDMA0_HWIP][0] = IP_VERSION(5, 0, 1);\n\t\t\tadev->ip_versions[SDMA1_HWIP][1] = IP_VERSION(5, 0, 1);\n\t\t\tadev->ip_versions[DF_HWIP][0] = IP_VERSION(3, 5, 0);\n\t\t\tadev->ip_versions[NBIO_HWIP][0] = IP_VERSION(2, 1, 1);\n\t\t\tadev->ip_versions[UMC_HWIP][0] = IP_VERSION(8, 1, 1);\n\t\t\tadev->ip_versions[MP0_HWIP][0] = IP_VERSION(11, 0, 8);\n\t\t\tadev->ip_versions[MP1_HWIP][0] = IP_VERSION(11, 0, 8);\n\t\t\tadev->ip_versions[THM_HWIP][0] = IP_VERSION(11, 0, 1);\n\t\t\tadev->ip_versions[SMUIO_HWIP][0] = IP_VERSION(11, 0, 8);\n\t\t\tadev->ip_versions[GC_HWIP][0] = IP_VERSION(10, 1, 3);\n\t\t\tadev->ip_versions[UVD_HWIP][0] = IP_VERSION(2, 0, 3);"
+    },
+    {
+      "claim": "GC10.1.3/10.1.4 default cg and pg flags are zero",
+      "path": "drivers/gpu/drm/amd/amdgpu/nv.c",
+      "line": 828,
+      "matched_source": "case IP_VERSION(10, 1, 3):\n\tcase IP_VERSION(10, 1, 4):\n\t\tadev->cg_flags = 0;\n\t\tadev->pg_flags = 0;"
+    },
+    {
+      "claim": "global pg mask removes existing flags",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_device.c",
+      "line": 2180,
+      "matched_source": "adev->pg_flags &= amdgpu_pg_mask;"
+    },
+    {
+      "claim": "normal hardware init invokes ring test helper",
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "line": 294,
+      "matched_source": "r = amdgpu_ring_test_helper(ring);\n\tif (r)\n\t\treturn r;"
+    },
+    {
+      "claim": "VCN2 uses specialized packet-start ring test",
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "line": 2131,
+      "matched_source": ".test_ring = vcn_v2_0_dec_ring_test_ring,"
+    },
+    {
+      "claim": "VCN2 ring begin-use is generic VCN helper",
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "line": 2137,
+      "matched_source": ".begin_use = amdgpu_vcn_ring_begin_use,"
+    },
+    {
+      "claim": "ring allocation invokes void begin_use then returns zero",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_ring.c",
+      "line": 104,
+      "matched_source": "if (ring->funcs->begin_use)\n\t\tring->funcs->begin_use(ring);\n\n\treturn 0;"
+    },
+    {
+      "claim": "begin-use ignores set_pg_state return",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.c",
+      "line": 504,
+      "matched_source": "void amdgpu_vcn_ring_begin_use(struct amdgpu_ring *ring)\n{\n\tstruct amdgpu_device *adev = ring->adev;\n\tstruct amdgpu_vcn_inst *vcn_inst = &adev->vcn.inst[ring->me];\n\n\tif (!atomic_fetch_inc(&vcn_inst->total_submission_cnt))\n\t\tcancel_delayed_work_sync(&vcn_inst->idle_work);\n\n\tmutex_lock(&vcn_inst->vcn_pg_lock);\n\tvcn_inst->set_pg_state(vcn_inst, AMD_PG_STATE_UNGATE);"
+    },
+    {
+      "claim": "set_pg_state only updates bookkeeping after start/stop success",
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "line": 1879,
+      "matched_source": "if (state == AMD_PG_STATE_GATE)\n\t\tret = vcn_v2_0_stop(vinst);\n\telse\n\t\tret = vcn_v2_0_start(vinst);\n\n\tif (!ret)\n\t\tvinst->cur_state = state;\n\n\treturn ret;"
+    },
+    {
+      "claim": "DPM enable helper logs error but returns void",
+      "path": "drivers/gpu/drm/amd/pm/amdgpu_dpm.c",
+      "line": 617,
+      "matched_source": "void amdgpu_dpm_enable_vcn(struct amdgpu_device *adev, bool enable, int inst)\n{\n\tint ret = 0;\n\n\tret = amdgpu_dpm_set_powergating_by_smu(adev, AMD_IP_BLOCK_TYPE_VCN, !enable, inst);\n\tif (ret)\n\t\tdrm_err(adev_to_drm(adev), \"DPM %s vcn failed, ret = %d.\\n\",\n\t\t\tenable ? \"enable\" : \"disable\", ret);\n}"
+    },
+    {
+      "claim": "missing VCN enable callback returns zero",
+      "path": "drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c",
+      "line": 266,
+      "matched_source": "if (!smu->ppt_funcs->dpm_set_vcn_enable)\n\t\treturn 0;"
+    },
+    {
+      "claim": "VCN absence/invalidity skips power operation",
+      "path": "drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c",
+      "line": 263,
+      "matched_source": "if (!is_vcn_enabled(smu->adev))\n\t\treturn 0;"
+    },
+    {
+      "claim": "Cyan static pptable initializer has no dpm_set_vcn_enable member",
+      "path": "drivers/gpu/drm/amd/pm/swsmu/smu11/cyan_skillfish_ppt.c",
+      "line": 580,
+      "initializer_sha256": "f4672fbcf74739773d88fdfe9cce46157ecf837b8a843f5de7eae6c6223824c7",
+      "absence_scope": "this complete initializer only"
+    }
+  ],
+  "retained_local_source": [
+    {
+      "claim": "start explicitly rejects Cyan",
+      "line": 1064,
+      "matched_source": "static int vcn_v2_0_start(struct amdgpu_vcn_inst *vinst)\n{\n\tif (vcn_v2_0_is_cyan_2_0_3(vinst->adev))\n\t\treturn -EOPNOTSUPP;"
+    },
+    {
+      "claim": "hw_init skips Cyan",
+      "line": 316,
+      "matched_source": "static int vcn_v2_0_hw_init(struct amdgpu_ip_block *ip_block)\n{\n\tif (vcn_v2_0_is_cyan_2_0_3(ip_block->adev)) {\n\t\tdev_info(ip_block->adev->dev, \"BC250 R141 vcn_hw_init: skipped\\n\");\n\t\treturn 0;"
+    },
+    {
+      "source_sha256": "eb62b3f8575eff45019712ebc3f68acf4d190834900eb591b5ff7416a42ff075",
+      "scope": "retained R152 working source, not an assertion about the current loaded module"
+    }
+  ],
+  "conclusions": [
+    "Normal VCN2 reference startup is not upstream native enablement of VCN2.0.3",
+    "Cyan source defaults do not select DPG; an external custom configuration still needs attribution",
+    "Ring allocation returning zero does not propagate or prove VCPU startup success",
+    "Successful absent-callback return is not physical power evidence",
+    "Retained diagnostic source deliberately avoids VCPU startup for Cyan"
+  ],
+  "limitations": [
+    "No live module or power-state measurement",
+    "No claim that an external custom BIOS/kernel uses these branches",
+    "No silicon-disable semantics derived from software omission",
+    "No hardware test or new kernel patch prepared"
+  ]
+}

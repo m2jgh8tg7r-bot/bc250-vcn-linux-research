@@ -1,0 +1,111 @@
+{
+  "classification": "PROVEN_STATICALLY",
+  "scope": "Decoding supplied scalar values only; no hardware access or authenticity verification",
+  "register_map": "vcn_2_0_0",
+  "mode": "unknown",
+  "decoded": {
+    "UVD_VCPU_CNTL": {
+      "provided": false,
+      "raw": null,
+      "fields": {
+        "clock_enable_requested": null,
+        "pmb_reset_requested": null,
+        "rbbm_reset_requested": null,
+        "cabac_mb_acc_named_bit": null
+      }
+    },
+    "UVD_SOFT_RESET": {
+      "provided": false,
+      "raw": null,
+      "fields": {
+        "vcpu_reset_requested": null,
+        "rbc_reset_requested": null,
+        "vcpu_vclk_reset_status_bit": null,
+        "lmi_reset_requested": null,
+        "lmi_umc_reset_requested": null
+      }
+    },
+    "UVD_STATUS": {
+      "provided": false,
+      "raw": null,
+      "fields": {
+        "reference_ready_bit": null,
+        "driver_busy_bit": null,
+        "rbc_busy_bit": null
+      }
+    },
+    "UVD_RBC_RB_CNTL": {
+      "provided": false,
+      "raw": null,
+      "fields": {
+        "no_fetch_bit": null,
+        "no_update_bit": null,
+        "rptr_write_enable_bit": null
+      }
+    },
+    "CC_UVD_HARVESTING": {
+      "provided": false,
+      "raw": null,
+      "fields": {
+        "mmsch_disable_bit": null,
+        "uvd_disable_bit": null
+      }
+    },
+    "UVD_RB_ARB_CTRL": {
+      "provided": false,
+      "raw": null,
+      "fields": {
+        "vcpu_dis_named_bit": null
+      }
+    },
+    "UVD_CGC_GATE": {
+      "provided": false,
+      "raw": null,
+      "fields": {
+        "rbc_gate_named_bit": null,
+        "vcpu_gate_named_bit": null
+      }
+    },
+    "UVD_CGC_CTRL": {
+      "provided": false,
+      "raw": null,
+      "fields": {
+        "dynamic_clock_mode_named_bit": null,
+        "rbc_mode_named_bit": null,
+        "vcpu_mode_named_bit": null
+      }
+    },
+    "UVD_LMI_CTRL2": {
+      "provided": false,
+      "raw": null,
+      "fields": {
+        "stall_arb_umc_named_bit": null
+      }
+    }
+  },
+  "cache": {
+    "configured_bar_from_inputs": null,
+    "offset0": null,
+    "size0": null,
+    "backing_bytes_verified": false,
+    "instruction_fetch_proven": false
+  },
+  "missing_provenance": [
+    "source_revision",
+    "module_identity",
+    "firmware_identity",
+    "boot_context",
+    "capture_phase",
+    "mapping_provenance",
+    "read_method",
+    "load_mode",
+    "mode"
+  ],
+  "notes": [
+    "Reference decoding does not establish exact BC2502.0.3 silicon applicability",
+    "Harvest field names do not specify whole-block power isolation or the pre-ABL writer"
+  ],
+  "execution_proven": false,
+  "hardware_failure_proven": false,
+  "external_capture_authenticity": "UNPROVEN"
+}

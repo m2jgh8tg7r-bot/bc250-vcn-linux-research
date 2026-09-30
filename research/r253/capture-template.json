@@ -1,0 +1,29 @@
+{
+  "mode": "unknown",
+  "source_revision": "",
+  "boot_context": "",
+  "capture_phase": "",
+  "mapping_provenance": "",
+  "read_method": "",
+  "load_mode": "",
+  "registers": {
+    "UVD_VCPU_CNTL": null,
+    "UVD_SOFT_RESET": null,
+    "UVD_STATUS": null,
+    "UVD_RBC_RB_CNTL": null,
+    "CC_UVD_HARVESTING": null,
+    "UVD_LMI_VCPU_CACHE_64BIT_BAR_LOW": null,
+    "UVD_LMI_VCPU_CACHE_64BIT_BAR_HIGH": null,
+    "UVD_VCPU_CACHE_OFFSET0": null,
+    "UVD_VCPU_CACHE_SIZE0": null,
+    "UVD_RBC_RB_RPTR": null,
+    "UVD_RBC_RB_WPTR": null,
+    "UVD_RB_ARB_CTRL": null,
+    "UVD_CGC_GATE": null,
+    "UVD_CGC_CTRL": null,
+    "UVD_LMI_CTRL2": null
+  },
+  "register_map": "vcn_2_0_0",
+  "module_identity": "",
+  "firmware_identity": ""
+}

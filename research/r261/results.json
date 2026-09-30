@@ -1,0 +1,204 @@
+{
+  "result": "PASS",
+  "classification": "PROVEN_STATICALLY",
+  "findings": [
+    {
+      "claim": "doorbell write-pointer getter returns host shadow memory",
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "function": "vcn_v2_0_dec_ring_get_wptr",
+      "line": 1443,
+      "matched_source": "if (ring->use_doorbell)\n\t\treturn *ring->wptr_cpu_addr;\n\telse\n\t\treturn RREG32_SOC15(UVD, 0, mmUVD_RBC_RB_WPTR);"
+    },
+    {
+      "claim": "VF scratch-test path returns zero without executing the test",
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "function": "vcn_v2_0_dec_ring_test_ring",
+      "line": 1832,
+      "matched_source": "if (amdgpu_sriov_vf(adev))\n\t\treturn 0;"
+    },
+    {
+      "claim": "scheduler readiness is assigned from the scratch-test return",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_ring.c",
+      "function": "amdgpu_ring_test_helper",
+      "line": 818,
+      "matched_source": "ring->sched.ready = !r;"
+    },
+    {
+      "claim": "aggregate IB testing skips rings not ready or without a test callback",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_ib.c",
+      "function": "amdgpu_ib_ring_tests",
+      "line": 490,
+      "matched_source": "if (!ring->sched.ready || !ring->funcs->test_ib)\n\t\t\tcontinue;"
+    },
+    {
+      "claim": "positive fence wait maps to test success",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.c",
+      "function": "amdgpu_vcn_dec_ring_test_ib",
+      "line": 752,
+      "matched_source": "r = dma_fence_wait_timeout(fence, false, timeout);\n\tif (r == 0)\n\t\tr = -ETIMEDOUT;\n\telse if (r > 0)\n\t\tr = 0;"
+    },
+    {
+      "claim": "positive fence wait maps to test success",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.c",
+      "function": "amdgpu_vcn_enc_ring_test_ib",
+      "line": 1084,
+      "matched_source": "r = dma_fence_wait_timeout(fence, false, timeout);\n\tif (r == 0)\n\t\tr = -ETIMEDOUT;\n\telse if (r > 0)\n\t\tr = 0;"
+    },
+    {
+      "claim": "decode IB test sends create without a returned caller fence and destroy with one",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.c",
+      "function": "amdgpu_vcn_dec_ring_test_ib",
+      "line": 741,
+      "matched_source": "amdgpu_vcn_dec_send_msg(ring, &ib, NULL);\n\tif (r)\n\t\tgoto error;\n\tr = amdgpu_vcn_dec_get_destroy_msg(ring, 1, &ib);\n\tif (r)\n\t\tgoto error;\n\n\tr = amdgpu_vcn_dec_send_msg(ring, &ib, &fence);"
+    },
+    {
+      "claim": "message helper schedules a direct job and returns its fence reference",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.c",
+      "function": "amdgpu_vcn_dec_send_msg",
+      "line": 650,
+      "matched_source": "r = amdgpu_job_submit_direct(job, ring, &f);\n\tif (r)\n\t\tgoto err_free;\n\n\tamdgpu_ib_free(ib_msg, f);\n\n\tif (fence)\n\t\t*fence = dma_fence_get(f);"
+    },
+    {
+      "claim": "direct submit forwards the IB scheduling fence",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_job.c",
+      "function": "amdgpu_job_submit_direct",
+      "line": 390,
+      "matched_source": "r = amdgpu_ib_schedule(ring, job->num_ibs, job->ibs, job, fence);"
+    },
+    {
+      "claim": "IB scheduler returns the emitted AMDGPU fence base",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_ib.c",
+      "function": "amdgpu_ib_schedule",
+      "line": 326,
+      "matched_source": "amdgpu_fence_emit(ring, af, fence_flags);\n\t*f = &af->base;"
+    },
+    {
+      "claim": "emitted fence is initialized with AMDGPU fence operations",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_fence.c",
+      "function": "amdgpu_fence_emit",
+      "line": 113,
+      "matched_source": "dma_fence_init(fence, &amdgpu_fence_ops,"
+    },
+    {
+      "claim": "AMDGPU fence operations initializer does not install a custom wait",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_fence.c",
+      "line": 923,
+      "initializer_sha256": "7eb9e08d12c79aed16d43dba94da88af7ce0a2ee59d1ef5dc2e79b23c5f83703",
+      "absence_scope": "complete named initializer"
+    },
+    {
+      "claim": "no custom wait delegates to default wait",
+      "path": "drivers/dma-buf/dma-fence.c",
+      "function": "dma_fence_wait_timeout",
+      "line": 553,
+      "matched_source": "ret = dma_fence_default_wait(fence, intr, timeout);"
+    },
+    {
+      "claim": "already-signaled fence returns positive timeout-or-one without inspecting its error field",
+      "path": "drivers/dma-buf/dma-fence.c",
+      "function": "dma_fence_default_wait",
+      "line": 816,
+      "matched_source": "signed long ret = timeout ? timeout : 1;\n\n\tdma_fence_lock_irqsave(fence, flags);\n\n\tif (dma_fence_test_signaled_flag(fence))\n\t\tgoto out;"
+    },
+    {
+      "claim": "completion error status is a separate query",
+      "path": "include/linux/dma-fence.h",
+      "function": "dma_fence_get_status_locked",
+      "line": 667,
+      "matched_source": "if (dma_fence_is_signaled_locked(fence))\n\t\treturn fence->error ?: 1;"
+    },
+    {
+      "claim": "software force-completion assigns errors then writes the latest sequence and invokes processing",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_fence.c",
+      "function": "amdgpu_fence_driver_force_completion",
+      "line": 682,
+      "matched_source": "dma_fence_set_error(fence, -ETIME);\n\t\t\telse\n\t\t\t\tdma_fence_set_error(fence, -ECANCELED);\n\t\t}\n\t}\n\tspin_unlock_irqrestore(&drv->lock, flags);\n\n\tamdgpu_fence_write(ring, ring->fence_drv.sync_seq);\n\tamdgpu_fence_process(ring);"
+    },
+    {
+      "claim": "fence processing signals the fence objects it processes",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_fence.c",
+      "function": "amdgpu_fence_process",
+      "line": 243,
+      "matched_source": "dma_fence_signal(fence);"
+    },
+    {
+      "claim": "fence-info read invokes fence processing before printing",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_fence.c",
+      "function": "amdgpu_debugfs_fence_info_show",
+      "line": 945,
+      "matched_source": "amdgpu_fence_process(ring);\n\n\t\tseq_printf("
+    }
+  ],
+  "bounded_absence_checks": [
+    {
+      "function": "amdgpu_vcn_dec_ring_test_ib",
+      "no_fence_error_query_in_complete_body": true,
+      "function_sha256": "97f6613ab0ce0e81fd625e7b938410319e6accff907582500198439839d9d954"
+    },
+    {
+      "function": "amdgpu_vcn_enc_ring_test_ib",
+      "no_fence_error_query_in_complete_body": true,
+      "function_sha256": "ccb604c01939267f5f690ab92cb04fbdfaa049e28399f0010ca0d98dcf08b658"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "sha256": "753849c7c491b137913668f77b8a3a0f539c7cf5cd46423db22b8f1513d9d9f6"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.c",
+      "sha256": "f4fa6fa891cb1b56d4bd5602dd97801a4fc12d3fbdb385a10388ddc6c883e670"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_job.c",
+      "sha256": "3b68543053f7e52aac2e624c9c10a9860c437656e4daeb949c89f2e55a852807"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_ib.c",
+      "sha256": "4ebea4e3ed0200451c5a1cc086618e65b4a1f9a5725e63af7079e202d85da75b"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_fence.c",
+      "sha256": "2dd7103028ce36fef9a5408db72e4bdc77a2792a2cc6b2e0162cafacd1ed0e19"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_ring.c",
+      "sha256": "08697e2e1731112282c724952ab0219302b3ba3b0c4c29a480cfeb9b2925d080"
+    },
+    {
+      "path": "drivers/dma-buf/dma-fence.c",
+      "sha256": "74cd1f45daba9dd0829f6c48ae4075c632baf2f61e41192959de12bf0ed26ae8"
+    },
+    {
+      "path": "include/linux/dma-fence.h",
+      "sha256": "8651b7049e538e8b99dbb12bae9ed34b3cb5682aa0a39421b2fc41a6070d8be5"
+    }
+  ],
+  "conditional_examples": [
+    {
+      "condition": "default-wait fence already signaled, positive timeout, no fence error",
+      "test_wait_result": "positive",
+      "test_return": 0
+    },
+    {
+      "condition": "default-wait fence already signaled, positive timeout, negative completion error",
+      "test_wait_result": "positive",
+      "test_return": 0,
+      "negative_completion_error_observed_by_test": false
+    }
+  ],
+  "conclusions": [
+    "IB-test success is a wait-result contract, not a decoded-frame check or an explicit completion-error check",
+    "Software force completion exists, so fence signaling needs provenance",
+    "A write-pointer callback can report a host shadow rather than an MMIO read",
+    "Reading fence debug information can process and signal existing fence state"
+  ],
+  "limitations": [
+    "No claim of an observed false-positive test, VCPU execution or codec output",
+    "No evidence that reset/force-completion occurred during any external test",
+    "No fault injection, device access, recovery trigger or failure reproduction performed",
+    "Does not establish which hardware or firmware agent implements each ring command",
+    "Absence of a firmware-response check here is bounded to the inspected test/helper contract"
+  ]
+}

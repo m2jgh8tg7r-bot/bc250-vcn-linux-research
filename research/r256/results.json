@@ -1,0 +1,129 @@
+{
+  "result": "PASS",
+  "classification": "PROVEN_STATICALLY",
+  "sources": [
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.c",
+      "sha256": "f4fa6fa891cb1b56d4bd5602dd97801a4fc12d3fbdb385a10388ddc6c883e670"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "sha256": "753849c7c491b137913668f77b8a3a0f539c7cf5cd46423db22b8f1513d9d9f6"
+    }
+  ],
+  "findings": [
+    {
+      "claim": "fwlog read requires enabled logging and shared memory",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.c",
+      "line": 1177,
+      "matched_source": "if (!vcn->fw_shared.cpu_addr || !amdgpu_vcnfw_log)\n\t\treturn -EFAULT;"
+    },
+    {
+      "claim": "empty log returns zero on equal pointers",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.c",
+      "line": 1189,
+      "matched_source": "if (!size || (read_pos == write_pos))\n\t\treturn 0;"
+    },
+    {
+      "claim": "fwlog read advances shared read pointer",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.c",
+      "line": 1219,
+      "matched_source": "plog->rptr = read_pos;\n\t*pos += read_bytes;\n\treturn read_bytes;"
+    },
+    {
+      "claim": "fwlog file read permission is0444",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.c",
+      "line": 1240,
+      "matched_source": "debugfs_create_file_size(name, S_IFREG | 0444, root, vcn,"
+    },
+    {
+      "claim": "host initializes the log header and both pointers",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.c",
+      "line": 1261,
+      "matched_source": "log_buf->header_size = sizeof(struct amdgpu_vcn_fwlog);\n\tlog_buf->buffer_size = AMDGPU_VCNFW_LOG_SIZE;\n\tlog_buf->rptr = log_buf->header_size;\n\tlog_buf->wptr = log_buf->header_size;\n\tlog_buf->wrapped = 0;"
+    },
+    {
+      "claim": "VCN2 software init conditionally enables logging",
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "line": 230,
+      "matched_source": "if (amdgpu_vcnfw_log)\n\t\tamdgpu_vcn_fwlog_init(adev->vcn.inst);"
+    },
+    {
+      "claim": "dump storage is zero-initialized",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.c",
+      "line": 1574,
+      "matched_source": "adev->vcn.ip_dump = kcalloc(adev->vcn.num_vcn_inst * count,\n\t\t\t\t     sizeof(uint32_t), GFP_KERNEL);"
+    },
+    {
+      "claim": "dump reads other registers only under source power predicate",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.c",
+      "line": 1614,
+      "matched_source": "if (is_powered)\n\t\t\tfor (j = 1; j < adev->vcn.reg_count; j++)\n\t\t\t\tadev->vcn.ip_dump[inst_off + j] =\n\t\t\t\tRREG32(SOC15_REG_ENTRY_OFFSET_INST(adev->vcn.reg_list[j], i));"
+    },
+    {
+      "claim": "printed values come from saved dump storage",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.c",
+      "line": 1646,
+      "matched_source": "drm_printf(p, \"%-50s \\t 0x%08x\\n\", adev->vcn.reg_list[j].reg_name,\n\t\t\t\t\t   adev->vcn.ip_dump[inst_off + j]);"
+    }
+  ],
+  "vcn2_dump_register_count": 33,
+  "vcn2_dump_registers": [
+    "mmUVD_POWER_STATUS",
+    "mmUVD_STATUS",
+    "mmUVD_CONTEXT_ID",
+    "mmUVD_CONTEXT_ID2",
+    "mmUVD_GPCOM_VCPU_DATA0",
+    "mmUVD_GPCOM_VCPU_DATA1",
+    "mmUVD_GPCOM_VCPU_CMD",
+    "mmUVD_RB_BASE_HI",
+    "mmUVD_RB_BASE_LO",
+    "mmUVD_RB_BASE_HI2",
+    "mmUVD_RB_BASE_LO2",
+    "mmUVD_RB_BASE_HI3",
+    "mmUVD_RB_BASE_LO3",
+    "mmUVD_RB_BASE_HI4",
+    "mmUVD_RB_BASE_LO4",
+    "mmUVD_RB_RPTR",
+    "mmUVD_RB_WPTR",
+    "mmUVD_RB_RPTR2",
+    "mmUVD_RB_WPTR2",
+    "mmUVD_RB_RPTR3",
+    "mmUVD_RB_WPTR3",
+    "mmUVD_RB_RPTR4",
+    "mmUVD_RB_WPTR4",
+    "mmUVD_RB_SIZE",
+    "mmUVD_RB_SIZE2",
+    "mmUVD_RB_SIZE3",
+    "mmUVD_RB_SIZE4",
+    "mmUVD_PGFSM_CONFIG",
+    "mmUVD_PGFSM_STATUS",
+    "mmUVD_DPG_LMA_CTL",
+    "mmUVD_DPG_LMA_DATA",
+    "mmUVD_DPG_LMA_MASK",
+    "mmUVD_DPG_PAUSE"
+  ],
+  "requested_coverage": {
+    "mmUVD_STATUS": true,
+    "mmUVD_VCPU_CNTL": false,
+    "mmUVD_SOFT_RESET": false,
+    "mmUVD_LMI_VCPU_CACHE_64BIT_BAR_LOW": false,
+    "mmUVD_LMI_VCPU_CACHE_64BIT_BAR_HIGH": false,
+    "mmUVD_VCPU_CACHE_OFFSET0": false,
+    "mmUVD_VCPU_CACHE_SIZE0": false,
+    "mmUVD_RBC_RB_CNTL": false
+  },
+  "conclusions": [
+    "Read-only file permission does not make fwlog reads observationally side-effect-free",
+    "Host-initialized firmware-log header is not a VCPU heartbeat",
+    "Empty log output cannot establish that no instruction executed",
+    "print_ip_state reports saved values; Active is a power-status predicate label, not a VCPU execution measurement",
+    "Current VCN2 dump list does not provide the complete requested clock/reset/cache tuple"
+  ],
+  "limits": [
+    "No debugfs read, MMIO, logging enable or recovery action performed",
+    "No external firmware logging capability established",
+    "No claim that any actual printed dump was uninitialized or stale",
+    "No universal physical interpretation of the tile-off predicate"
+  ]
+}

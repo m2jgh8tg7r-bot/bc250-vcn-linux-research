@@ -1,0 +1,349 @@
+{
+  "result": "PASS",
+  "classification": "PROVEN_STATICALLY",
+  "scope": "Pinned source structure and field definitions; no runtime or silicon equivalence claim",
+  "source_files": [
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "sha256": "753849c7c491b137913668f77b8a3a0f539c7cf5cd46423db22b8f1513d9d9f6"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/include/asic_reg/vcn/vcn_2_0_0_sh_mask.h",
+      "sha256": "4c9ed19c3e744be938ada218d188c19ad7dc71e0dfb1652637ab116618bd489e"
+    }
+  ],
+  "normal_path_phases": [
+    {
+      "phase": "DPM request when enabled",
+      "line": 1011,
+      "needle": "amdgpu_dpm_enable_vcn(adev, true, 0)",
+      "offset": 325
+    },
+    {
+      "phase": "DPG early-return branch",
+      "line": 1014,
+      "needle": "return vcn_v2_0_start_dpg_mode",
+      "offset": 412
+    },
+    {
+      "phase": "static power gate helper",
+      "line": 1016,
+      "needle": "vcn_v2_0_disable_static_power_gating(vinst)",
+      "offset": 484
+    },
+    {
+      "phase": "mark busy",
+      "line": 1019,
+      "needle": "UVD_STATUS__UVD_BUSY",
+      "offset": 601
+    },
+    {
+      "phase": "disable clock gating",
+      "line": 1023,
+      "needle": "vcn_v2_0_disable_clock_gating(vinst)",
+      "offset": 689
+    },
+    {
+      "phase": "enable VCPU clock",
+      "line": 1027,
+      "needle": "UVD_VCPU_CNTL__CLK_EN_MASK",
+      "offset": 808
+    },
+    {
+      "phase": "disable master interrupt",
+      "line": 1029,
+      "needle": "/* disable master interrupt */",
+      "offset": 868
+    },
+    {
+      "phase": "LMI coherence setup",
+      "line": 1033,
+      "needle": "/* setup mmUVD_LMI_CTRL */",
+      "offset": 992
+    },
+    {
+      "phase": "MPC setup",
+      "line": 1041,
+      "needle": "/* setup mmUVD_MPC_CNTL */",
+      "offset": 1279
+    },
+    {
+      "phase": "cache mappings",
+      "line": 1067,
+      "needle": "vcn_v2_0_mc_resume(vinst)",
+      "offset": 2223
+    },
+    {
+      "phase": "release VCPU reset",
+      "line": 1069,
+      "needle": "/* release VCPU reset to boot */",
+      "offset": 2252
+    },
+    {
+      "phase": "unstall LMI channel",
+      "line": 1073,
+      "needle": "/* enable LMI MC and UMC channels */",
+      "offset": 2386
+    },
+    {
+      "phase": "release LMI reset fields",
+      "line": 1078,
+      "needle": "tmp &= ~UVD_SOFT_RESET__LMI_SOFT_RESET_MASK",
+      "offset": 2567
+    },
+    {
+      "phase": "byte-swap setup",
+      "line": 1082,
+      "needle": "/* disable byte swapping */",
+      "offset": 2710
+    },
+    {
+      "phase": "bounded readiness retry",
+      "line": 1090,
+      "needle": "for (i = 0; i < 10; ++i)",
+      "offset": 2900
+    },
+    {
+      "phase": "readiness test",
+      "line": 1095,
+      "needle": "if (status & 2)",
+      "offset": 3028
+    },
+    {
+      "phase": "failure exit",
+      "line": 1114,
+      "needle": "if (r) {",
+      "offset": 3468
+    },
+    {
+      "phase": "enable master interrupt",
+      "line": 1119,
+      "needle": "/* enable master interrupt */",
+      "offset": 3552
+    },
+    {
+      "phase": "clear busy report bit",
+      "line": 1126,
+      "needle": "~(2 << UVD_STATUS__VCPU_REPORT__SHIFT)",
+      "offset": 3798
+    },
+    {
+      "phase": "RBC VMID",
+      "line": 1128,
+      "needle": "mmUVD_LMI_RBC_RB_VMID",
+      "offset": 3862
+    },
+    {
+      "phase": "RBC idle configuration",
+      "line": 1130,
+      "needle": "/* force RBC into idle state */",
+      "offset": 3891
+    },
+    {
+      "phase": "decode queue reset",
+      "line": 1139,
+      "needle": "decode_queue_mode |= FW_QUEUE_RING_RESET",
+      "offset": 4340
+    },
+    {
+      "phase": "decode buffer base",
+      "line": 1140,
+      "needle": "/* program the RB_BASE for ring buffer */",
+      "offset": 4383
+    },
+    {
+      "phase": "decode ring pointers",
+      "line": 1146,
+      "needle": "/* Initialize the ring buffer",
+      "offset": 4604
+    },
+    {
+      "phase": "decode queue reset cleared",
+      "line": 1152,
+      "needle": "decode_queue_mode &= ~FW_QUEUE_RING_RESET",
+      "offset": 4860
+    },
+    {
+      "phase": "encode general queue",
+      "line": 1154,
+      "needle": "encode_generalpurpose_queue_mode |= FW_QUEUE_RING_RESET",
+      "offset": 4928
+    },
+    {
+      "phase": "encode low-latency queue",
+      "line": 1163,
+      "needle": "encode_lowlatency_queue_mode |= FW_QUEUE_RING_RESET",
+      "offset": 5448
+    },
+    {
+      "phase": "completion readback",
+      "line": 1172,
+      "needle": "/* Keeping one read-back",
+      "offset": 5942
+    }
+  ],
+  "fields": [
+    {
+      "symbol": "UVD_VCPU_CNTL__CLK_EN_MASK",
+      "value": "0x200",
+      "line": 2759
+    },
+    {
+      "symbol": "UVD_VCPU_CNTL__PMB_SOFT_RESET_MASK",
+      "value": "0x40",
+      "line": 2756
+    },
+    {
+      "symbol": "UVD_VCPU_CNTL__RBBM_SOFT_RESET_MASK",
+      "value": "0x80",
+      "line": 2757
+    },
+    {
+      "symbol": "UVD_SOFT_RESET__VCPU_SOFT_RESET_MASK",
+      "value": "0x8",
+      "line": 2826
+    },
+    {
+      "symbol": "UVD_SOFT_RESET__RBC_SOFT_RESET_MASK",
+      "value": "0x1",
+      "line": 2823
+    },
+    {
+      "symbol": "UVD_SOFT_RESET__VCPU_VCLK_RESET_STATUS_MASK",
+      "value": "0x80000",
+      "line": 2842
+    },
+    {
+      "symbol": "UVD_STATUS__VCPU_REPORT_MASK",
+      "value": "0xfe",
+      "line": 2914
+    },
+    {
+      "symbol": "UVD_STATUS__VCPU_REPORT__SHIFT",
+      "value": "0x1",
+      "line": 2903
+    },
+    {
+      "symbol": "UVD_RBC_RB_CNTL__RB_NO_FETCH_MASK",
+      "value": "0x10000",
+      "line": 2888
+    },
+    {
+      "symbol": "CC_UVD_HARVESTING__MMSCH_DISABLE_MASK",
+      "value": "0x1",
+      "line": 1533
+    },
+    {
+      "symbol": "CC_UVD_HARVESTING__UVD_DISABLE_MASK",
+      "value": "0x2",
+      "line": 1534
+    }
+  ],
+  "functions": [
+    {
+      "name": "vcn_v2_0_start",
+      "line": 1001,
+      "sha256": "637c64136d8e920b426bf69ba812dc89832e9309460eeb7f818561a8e660208d"
+    },
+    {
+      "name": "vcn_v2_0_start_dpg_mode",
+      "line": 853,
+      "sha256": "dc13d6cc662c69d930821786335eed922680ced8c0930d1b56b9853dc3fb16b5"
+    },
+    {
+      "name": "vcn_v2_0_mc_resume",
+      "line": 381,
+      "sha256": "23fe3eae199d1d5f9a1a6cb206d4ae0956f18fe46629d7e21b6c850d6492102f"
+    },
+    {
+      "name": "vcn_v2_0_mc_resume_dpg_mode",
+      "line": 438,
+      "sha256": "ec6fa8e23f3000ce50f93cec7656dbf969158273309d72c70d4439bcddf24ead"
+    },
+    {
+      "name": "vcn_v2_0_disable_static_power_gating",
+      "line": 760,
+      "sha256": "a3841e98a6ac6fe9ad3924fbb4510429cb682a04559c69ebae957ccf04d342b7"
+    },
+    {
+      "name": "vcn_v2_0_disable_clock_gating",
+      "line": 543,
+      "sha256": "96e55d635c62372698cc1164ed9f4c40b967589773ee257cf7d6cac669588764"
+    },
+    {
+      "name": "vcn_v2_0_set_pg_state",
+      "line": 1858,
+      "sha256": "89f1e31fc8cd0eeedc8c22d62bca72945a7997a40182db28db1d07878344eb69"
+    },
+    {
+      "name": "vcn_v2_0_dec_ring_test_ring",
+      "line": 1825,
+      "sha256": "e29ae22b4e03ca9f7de1e36f7154bc6fb5e7de2b49f56b8c3c2491669e3e0025"
+    },
+    {
+      "name": "vcn_v2_0_hw_init",
+      "line": 282,
+      "sha256": "aab936d1804f295a6b6a5fc58ae0aa2658c7a67d96cdb8a6f62420b395eecfdd"
+    }
+  ],
+  "readiness_test_mask": 2,
+  "driver_busy_mask": 4,
+  "readiness_truth_table": [
+    {
+      "status": "0x0",
+      "passes_status_and_2": false,
+      "clears_busy_to": "0x0",
+      "valid_device_read_established": false
+    },
+    {
+      "status": "0x1",
+      "passes_status_and_2": false,
+      "clears_busy_to": "0x1",
+      "valid_device_read_established": false
+    },
+    {
+      "status": "0x2",
+      "passes_status_and_2": true,
+      "clears_busy_to": "0x2",
+      "valid_device_read_established": false
+    },
+    {
+      "status": "0x3",
+      "passes_status_and_2": true,
+      "clears_busy_to": "0x3",
+      "valid_device_read_established": false
+    },
+    {
+      "status": "0x4",
+      "passes_status_and_2": false,
+      "clears_busy_to": "0x0",
+      "valid_device_read_established": false
+    },
+    {
+      "status": "0x6",
+      "passes_status_and_2": true,
+      "clears_busy_to": "0x2",
+      "valid_device_read_established": false
+    },
+    {
+      "status": "0xffffffff",
+      "passes_status_and_2": true,
+      "clears_busy_to": "0xfffffffb",
+      "valid_device_read_established": false
+    }
+  ],
+  "findings": [
+    "Normal path polls readiness before final RBC setup; DPG path has a different contract",
+    "PMB/RBBM resets in VCPU_CNTL are not the VCPU_SOFT_RESET field in UVD_SOFT_RESET",
+    "VCPU_REPORT is a field; readiness mask2 and busy mask4 are distinct bits",
+    "Both start paths set RB_NO_FETCH=1 with no explicit same-function clear; missing clear is not by itself a defect",
+    "Cache source is conditional on PSP versus driver loading; register access alone does not validate its backing bytes",
+    "Readiness polling accepts any value containing bit1, including all-ones; source predicate alone cannot establish read validity"
+  ],
+  "limitations": [
+    "Normal VCN2 reference does not prove BC250 executes the same path",
+    "DPG and virtualization must not be merged with the normal path",
+    "This is not a manual register-write procedure",
+    "No VCPU instruction, ring operation, decoding or clock physical state observed"
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "result": "PASS",
+  "classification": "PROVEN_STATICALLY",
+  "versions": [
+    {
+      "version": "v6.6",
+      "commit": "ffc253263a1375a65fa6c9f62a893e9767fbebfa",
+      "file_sha256": "8d6700d7170d55dfa51df844cef6dc5aa434ff10b252c1630c76a6084d4a9c5b",
+      "normal_function_line": 929,
+      "dpg_function_line": 794,
+      "invariant_checks": {
+        "normal_ready_before_rbc": true,
+        "normal_busy_clear_mask4": true,
+        "normal_vcpu_reset_field": true,
+        "normal_clock_field": true,
+        "normal_cache_before_reset_release": true,
+        "normal_no_fetch_set": true,
+        "normal_no_explicit_no_fetch_zero": true,
+        "dpg_no_normal_ready_loop": true,
+        "specialized_dec_ring_test": true,
+        "packet_start_test": true
+      },
+      "fields": {
+        "UVD_VCPU_CNTL__CLK_EN_MASK": "0x200",
+        "UVD_VCPU_CNTL__PMB_SOFT_RESET_MASK": "0x40",
+        "UVD_VCPU_CNTL__RBBM_SOFT_RESET_MASK": "0x80",
+        "UVD_SOFT_RESET__VCPU_SOFT_RESET_MASK": "0x8",
+        "UVD_SOFT_RESET__RBC_SOFT_RESET_MASK": "0x1",
+        "UVD_SOFT_RESET__VCPU_VCLK_RESET_STATUS_MASK": "0x80000",
+        "UVD_STATUS__VCPU_REPORT_MASK": "0xfe",
+        "UVD_STATUS__VCPU_REPORT__SHIFT": "0x1",
+        "UVD_RBC_RB_CNTL__RB_NO_FETCH_MASK": "0x10000",
+        "CC_UVD_HARVESTING__MMSCH_DISABLE_MASK": "0x1",
+        "CC_UVD_HARVESTING__UVD_DISABLE_MASK": "0x2"
+      },
+      "shared_decode_queue_reset": true,
+      "normal_function_sha256": "dc196aa2c81ed7ae1bbde9906d08b6be8cdeccd88519c8d5b27d2042ea1d7c57"
+    },
+    {
+      "version": "v6.12",
+      "commit": "adc218676eef25575469234709c2d87185ca223a",
+      "file_sha256": "6135192fe60d3ab2f76eaff25449c5e38db76a075a8294d43f078caf114d3d6a",
+      "normal_function_line": 973,
+      "dpg_function_line": 838,
+      "invariant_checks": {
+        "normal_ready_before_rbc": true,
+        "normal_busy_clear_mask4": true,
+        "normal_vcpu_reset_field": true,
+        "normal_clock_field": true,
+        "normal_cache_before_reset_release": true,
+        "normal_no_fetch_set": true,
+        "normal_no_explicit_no_fetch_zero": true,
+        "dpg_no_normal_ready_loop": true,
+        "specialized_dec_ring_test": true,
+        "packet_start_test": true
+      },
+      "fields": {
+        "UVD_VCPU_CNTL__CLK_EN_MASK": "0x200",
+        "UVD_VCPU_CNTL__PMB_SOFT_RESET_MASK": "0x40",
+        "UVD_VCPU_CNTL__RBBM_SOFT_RESET_MASK": "0x80",
+        "UVD_SOFT_RESET__VCPU_SOFT_RESET_MASK": "0x8",
+        "UVD_SOFT_RESET__RBC_SOFT_RESET_MASK": "0x1",
+        "UVD_SOFT_RESET__VCPU_VCLK_RESET_STATUS_MASK": "0x80000",
+        "UVD_STATUS__VCPU_REPORT_MASK": "0xfe",
+        "UVD_STATUS__VCPU_REPORT__SHIFT": "0x1",
+        "UVD_RBC_RB_CNTL__RB_NO_FETCH_MASK": "0x10000",
+        "CC_UVD_HARVESTING__MMSCH_DISABLE_MASK": "0x1",
+        "CC_UVD_HARVESTING__UVD_DISABLE_MASK": "0x2"
+      },
+      "shared_decode_queue_reset": true,
+      "normal_function_sha256": "dc196aa2c81ed7ae1bbde9906d08b6be8cdeccd88519c8d5b27d2042ea1d7c57"
+    },
+    {
+      "version": "v7.2",
+      "commit": "8d3ae59288f1e7d58d76558a6ee96d533bc5019f",
+      "file_sha256": "753849c7c491b137913668f77b8a3a0f539c7cf5cd46423db22b8f1513d9d9f6",
+      "normal_function_line": 1000,
+      "dpg_function_line": 852,
+      "invariant_checks": {
+        "normal_ready_before_rbc": true,
+        "normal_busy_clear_mask4": true,
+        "normal_vcpu_reset_field": true,
+        "normal_clock_field": true,
+        "normal_cache_before_reset_release": true,
+        "normal_no_fetch_set": true,
+        "normal_no_explicit_no_fetch_zero": true,
+        "dpg_no_normal_ready_loop": true,
+        "specialized_dec_ring_test": true,
+        "packet_start_test": true
+      },
+      "fields": {
+        "UVD_VCPU_CNTL__CLK_EN_MASK": "0x200",
+        "UVD_VCPU_CNTL__PMB_SOFT_RESET_MASK": "0x40",
+        "UVD_VCPU_CNTL__RBBM_SOFT_RESET_MASK": "0x80",
+        "UVD_SOFT_RESET__VCPU_SOFT_RESET_MASK": "0x8",
+        "UVD_SOFT_RESET__RBC_SOFT_RESET_MASK": "0x1",
+        "UVD_SOFT_RESET__VCPU_VCLK_RESET_STATUS_MASK": "0x80000",
+        "UVD_STATUS__VCPU_REPORT_MASK": "0xfe",
+        "UVD_STATUS__VCPU_REPORT__SHIFT": "0x1",
+        "UVD_RBC_RB_CNTL__RB_NO_FETCH_MASK": "0x10000",
+        "CC_UVD_HARVESTING__MMSCH_DISABLE_MASK": "0x1",
+        "CC_UVD_HARVESTING__UVD_DISABLE_MASK": "0x2"
+      },
+      "shared_decode_queue_reset": true,
+      "normal_function_sha256": "cf4410f81c87e50918ef613c9417b09bf180c2ce8d3550ba956eeb790d68aa82"
+    },
+    {
+      "version": "v5.4",
+      "commit": "219d54332a09e8d8741c1e1982f5eae56099de85",
+      "file_sha256": "0716f7c8afc9eb59ca609b3a15ef64729fc475d0f1b10cb28851aaedad9cd6c6",
+      "normal_function_line": 1053,
+      "dpg_function_line": 927,
+      "invariant_checks": {
+        "normal_ready_before_rbc": true,
+        "normal_busy_clear_mask4": true,
+        "normal_vcpu_reset_field": true,
+        "normal_clock_field": true,
+        "normal_cache_before_reset_release": true,
+        "normal_no_fetch_set": true,
+        "normal_no_explicit_no_fetch_zero": true,
+        "dpg_no_normal_ready_loop": true,
+        "specialized_dec_ring_test": true,
+        "packet_start_test": true
+      },
+      "fields": {
+        "UVD_VCPU_CNTL__CLK_EN_MASK": "0x200",
+        "UVD_VCPU_CNTL__PMB_SOFT_RESET_MASK": "0x40",
+        "UVD_VCPU_CNTL__RBBM_SOFT_RESET_MASK": "0x80",
+        "UVD_SOFT_RESET__VCPU_SOFT_RESET_MASK": "0x8",
+        "UVD_SOFT_RESET__RBC_SOFT_RESET_MASK": "0x1",
+        "UVD_SOFT_RESET__VCPU_VCLK_RESET_STATUS_MASK": "0x80000",
+        "UVD_STATUS__VCPU_REPORT_MASK": "0xfe",
+        "UVD_STATUS__VCPU_REPORT__SHIFT": "0x1",
+        "UVD_RBC_RB_CNTL__RB_NO_FETCH_MASK": "0x10000",
+        "CC_UVD_HARVESTING__MMSCH_DISABLE_MASK": "0x1",
+        "CC_UVD_HARVESTING__UVD_DISABLE_MASK": "0x2"
+      },
+      "shared_decode_queue_reset": false,
+      "normal_function_sha256": "0a49c24612427108da10c00db6a5ba29f876dd141fbf6213072c47f6c887876f"
+    },
+    {
+      "version": "v5.15",
+      "commit": "8bb7eca972ad531c9b149c0a51ab43a417385813",
+      "file_sha256": "cb3f2fe5532000cf534a644613caafdec1b0db7c9d17484914cb206e30bd4825",
+      "normal_function_line": 924,
+      "dpg_function_line": 787,
+      "invariant_checks": {
+        "normal_ready_before_rbc": true,
+        "normal_busy_clear_mask4": true,
+        "normal_vcpu_reset_field": true,
+        "normal_clock_field": true,
+        "normal_cache_before_reset_release": true,
+        "normal_no_fetch_set": true,
+        "normal_no_explicit_no_fetch_zero": true,
+        "dpg_no_normal_ready_loop": true,
+        "specialized_dec_ring_test": true,
+        "packet_start_test": true
+      },
+      "fields": {
+        "UVD_VCPU_CNTL__CLK_EN_MASK": "0x200",
+        "UVD_VCPU_CNTL__PMB_SOFT_RESET_MASK": "0x40",
+        "UVD_VCPU_CNTL__RBBM_SOFT_RESET_MASK": "0x80",
+        "UVD_SOFT_RESET__VCPU_SOFT_RESET_MASK": "0x8",
+        "UVD_SOFT_RESET__RBC_SOFT_RESET_MASK": "0x1",
+        "UVD_SOFT_RESET__VCPU_VCLK_RESET_STATUS_MASK": "0x80000",
+        "UVD_STATUS__VCPU_REPORT_MASK": "0xfe",
+        "UVD_STATUS__VCPU_REPORT__SHIFT": "0x1",
+        "UVD_RBC_RB_CNTL__RB_NO_FETCH_MASK": "0x10000",
+        "CC_UVD_HARVESTING__MMSCH_DISABLE_MASK": "0x1",
+        "CC_UVD_HARVESTING__UVD_DISABLE_MASK": "0x2"
+      },
+      "shared_decode_queue_reset": true,
+      "normal_function_sha256": "67bb6fce6cc8b0e5a2947765bc3ba89374b29de137131a160205defd9621fc02"
+    },
+    {
+      "version": "current",
+      "commit": "551c722f40809618230001baccf219193e22fc5a",
+      "file_sha256": "753849c7c491b137913668f77b8a3a0f539c7cf5cd46423db22b8f1513d9d9f6",
+      "normal_function_line": 1000,
+      "dpg_function_line": 852,
+      "invariant_checks": {
+        "normal_ready_before_rbc": true,
+        "normal_busy_clear_mask4": true,
+        "normal_vcpu_reset_field": true,
+        "normal_clock_field": true,
+        "normal_cache_before_reset_release": true,
+        "normal_no_fetch_set": true,
+        "normal_no_explicit_no_fetch_zero": true,
+        "dpg_no_normal_ready_loop": true,
+        "specialized_dec_ring_test": true,
+        "packet_start_test": true
+      },
+      "fields": {
+        "UVD_VCPU_CNTL__CLK_EN_MASK": "0x200",
+        "UVD_VCPU_CNTL__PMB_SOFT_RESET_MASK": "0x40",
+        "UVD_VCPU_CNTL__RBBM_SOFT_RESET_MASK": "0x80",
+        "UVD_SOFT_RESET__VCPU_SOFT_RESET_MASK": "0x8",
+        "UVD_SOFT_RESET__RBC_SOFT_RESET_MASK": "0x1",
+        "UVD_SOFT_RESET__VCPU_VCLK_RESET_STATUS_MASK": "0x80000",
+        "UVD_STATUS__VCPU_REPORT_MASK": "0xfe",
+        "UVD_STATUS__VCPU_REPORT__SHIFT": "0x1",
+        "UVD_RBC_RB_CNTL__RB_NO_FETCH_MASK": "0x10000",
+        "CC_UVD_HARVESTING__MMSCH_DISABLE_MASK": "0x1",
+        "CC_UVD_HARVESTING__UVD_DISABLE_MASK": "0x2"
+      },
+      "shared_decode_queue_reset": true,
+      "normal_function_sha256": "cf4410f81c87e50918ef613c9417b09bf180c2ce8d3550ba956eeb790d68aa82"
+    }
+  ],
+  "invariant_checks_per_version": 10,
+  "field_definitions_per_version": 11,
+  "findings": [
+    "Readiness ordering, reset/clock definitions, mask2 versus mask4 distinction, NO_FETCH initialization and specialized packet-start test persist across all six sampled revisions",
+    "Shared decode queue reset is absent in sampled v5.4 and present in v5.15 and later samples; do not transplant the complete sequence blindly"
+  ],
+  "limits": [
+    "Six sampled revisions, not every intervening commit",
+    "No assumption of identical firmware or silicon support across releases",
+    "A same-function missing explicit zero assignment is not a global absence proof",
+    "Normal driver reference source only; no execution or BC250 bring-up observed"
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "result": "PASS",
+  "classification": "PROVEN_STATICALLY",
+  "scope": "Normal reference-source formulas applied to one already-saved firmware file; no submitted or resident bytes measured",
+  "witnesses": [
+    {
+      "claim": "reference cache span uses full firmware file size plus4",
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "line": 384,
+      "source_sha256": "753849c7c491b137913668f77b8a3a0f539c7cf5cd46423db22b8f1513d9d9f6",
+      "matched_source": "uint32_t size = AMDGPU_GPU_PAGE_ALIGN(adev->vcn.inst[0].fw->size + 4);"
+    },
+    {
+      "claim": "PSP cache base takes TMR response bookkeeping",
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "line": 391,
+      "source_sha256": "753849c7c491b137913668f77b8a3a0f539c7cf5cd46423db22b8f1513d9d9f6",
+      "matched_source": "if (adev->firmware.load_type == AMDGPU_FW_LOAD_PSP) {\n\t\tWREG32_SOC15(UVD, 0, mmUVD_LMI_VCPU_CACHE_64BIT_BAR_LOW,\n\t\t\t(adev->firmware.ucode[AMDGPU_UCODE_ID_VCN].tmr_mc_addr_lo));\n\t\tWREG32_SOC15(UVD, 0, mmUVD_LMI_VCPU_CACHE_64BIT_BAR_HIGH,\n\t\t\t(adev->firmware.ucode[AMDGPU_UCODE_ID_VCN].tmr_mc_addr_hi));\n\t\tWREG32_SOC15(UVD, 0, mmUVD_VCPU_CACHE_OFFSET0, 0);\n\t\toffset = 0;"
+    },
+    {
+      "claim": "driver branch cache offset uses firmware offset divided by8",
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "line": 405,
+      "source_sha256": "753849c7c491b137913668f77b8a3a0f539c7cf5cd46423db22b8f1513d9d9f6",
+      "matched_source": "AMDGPU_UVD_FIRMWARE_OFFSET >> 3);"
+    },
+    {
+      "claim": "driver-loaded allocation reserves payload plus8 aligned",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.c",
+      "line": 206,
+      "source_sha256": "f4fa6fa891cb1b56d4bd5602dd97801a4fc12d3fbdb385a10388ddc6c883e670",
+      "matched_source": "if (adev->firmware.load_type != AMDGPU_FW_LOAD_PSP)\n\t\tbo_size += AMDGPU_GPU_PAGE_ALIGN(le32_to_cpu(hdr->ucode_size_bytes) + 8);"
+    },
+    {
+      "claim": "driver resume copies declared payload only in nonPSP branch",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.c",
+      "line": 397,
+      "source_sha256": "f4fa6fa891cb1b56d4bd5602dd97801a4fc12d3fbdb385a10388ddc6c883e670",
+      "matched_source": "if (adev->firmware.load_type != AMDGPU_FW_LOAD_PSP) {\n\t\t\toffset = le32_to_cpu(hdr->ucode_array_offset_bytes);\n\t\t\tif (drm_dev_enter(adev_to_drm(adev), &idx)) {\n\t\t\t\tmemcpy_toio(adev->vcn.inst[i].cpu_addr,\n\t\t\t\t\t    adev->vcn.inst[i].fw->data + offset,\n\t\t\t\t\t    le32_to_cpu(hdr->ucode_size_bytes));"
+    },
+    {
+      "claim": "response address copied into ucode bookkeeping",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_psp.c",
+      "line": 801,
+      "source_sha256": "4eb9ce8a315de3812a18aa28b412cde9b86749cdf7b9906cf3383f60abdfab7b",
+      "matched_source": "if (ucode) {\n\t\tucode->tmr_mc_addr_lo = psp->cmd_buf_mem->resp.fw_addr_lo;\n\t\tucode->tmr_mc_addr_hi = psp->cmd_buf_mem->resp.fw_addr_hi;\n\t}"
+    },
+    {
+      "claim": "GPU page size4096",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_gart.h",
+      "line": 35,
+      "source_sha256": "a85ed422b1cc0eabde14ef930a41e7c4970fc520e7a0f9f0ee2e7f5990442919",
+      "matched_source": "#define AMDGPU_GPU_PAGE_SIZE 4096"
+    },
+    {
+      "claim": "UVD firmware offset256",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_uvd.h",
+      "line": 32,
+      "source_sha256": "8a863d7b7f51cf7dbca45e83a04bab36927f4a6cbb376fa60129be11ec4a3f78",
+      "matched_source": "#define AMDGPU_UVD_FIRMWARE_OFFSET\t256"
+    },
+    {
+      "claim": "stack/context sizes",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.h",
+      "line": 29,
+      "source_sha256": "aae122032df161880e34d2e17cfd546e128e2572bcc8fc505fb434b3a14a3ac3",
+      "matched_source": "#define AMDGPU_VCN_STACK_SIZE\t\t(128*1024)\n#define AMDGPU_VCN_CONTEXT_SIZE \t(512*1024)"
+    },
+    {
+      "claim": "VCN type13 decimal",
+      "path": "drivers/gpu/drm/amd/amdgpu/psp_gfx_if.h",
+      "line": 224,
+      "source_sha256": "e12b7894cc9cb30a7de5e6707d7af60908941e85fcdcd562dc27b58a9d80f6ee",
+      "matched_source": "GFX_FW_TYPE_VCN         = 13,"
+    },
+    {
+      "claim": "MMSCH type19 decimal",
+      "path": "drivers/gpu/drm/amd/amdgpu/psp_gfx_if.h",
+      "line": 230,
+      "source_sha256": "e12b7894cc9cb30a7de5e6707d7af60908941e85fcdcd562dc27b58a9d80f6ee",
+      "matched_source": "GFX_FW_TYPE_MMSCH       = 19,"
+    },
+    {
+      "claim": "MMSCH startup is reached from SRIOV startup in this source",
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "line": 2093,
+      "source_sha256": "753849c7c491b137913668f77b8a3a0f539c7cf5cd46423db22b8f1513d9d9f6",
+      "matched_source": "return vcn_v2_0_start_mmsch(adev, &adev->virt.mm_table);"
+    }
+  ],
+  "saved_firmware": {
+    "file_sha256": "a9ec155695b5020009d3986cfd4ebd00ad9ddbd12ac7e5fa15ec86b8a571dbe5",
+    "payload_sha256": "d2a57f82ab8fe7911822052af12f25563d76c1ddefa0978049cf98efb8c671b3",
+    "file_size": 405952,
+    "payload_size": 405696,
+    "common_header_offset": 256
+  },
+  "conditional_geometry": {
+    "cache_size0": 409600,
+    "driver_payload_reservation": 409600,
+    "stack_size": 131072,
+    "context_size": 524288,
+    "psp_cache_offset0": 0,
+    "driver_cache_offset0_encoded": 32,
+    "psp_stack_relative_to_vcpu_bo": 0,
+    "driver_stack_relative_to_vcpu_bo": 409600,
+    "psp_context_relative_to_vcpu_bo": 131072,
+    "driver_context_relative_to_vcpu_bo": 540672,
+    "noncache_base": "separate fw_shared.gpu_addr",
+    "base_addresses": "not measured; symbolic only"
+  },
+  "conclusions": [
+    "For this retained file, the two distinct size formulas align to the same409600-byte span",
+    "PSP returned placement fields feed the reference firmware cache base; a readable cache register is not backing-memory provenance",
+    "R252 retained diagnostic source skips startup, so historical zero placement is not evidence that a live zero cache BAR was programmed",
+    "External RBC/cache-access reports do not alone establish acceptance of the historically rejected VCN payload",
+    "MMSCH19 and VCN13 are distinct; the inspected MMSCH startup belongs to the SRIOV path"
+  ],
+  "limitations": [
+    "No argument that every possible firmware size has the same alignment result",
+    "No signature validation, authentication bypass, firmware loading or memory fetch performed",
+    "No proposed switch of loading mode or firmware command type",
+    "No claim about another BIOS, external boot conditions or physical power"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "scope": "Advisory review, not primary evidence",
+  "independent_review": {
+    "role": "counterevidence",
+    "files": [
+      "HYPOTHESES.md",
+      "LATEST_EXTERNAL_REVIEW.md",
+      "final handoff",
+      "counter and discovery results"
+    ],
+    "accepted_correction": "Retirement excludes isolation sufficient to prevent that retirement, not every interface isolation",
+    "final_result": "No other substantive counter conflation, GPCNT underweighting or priority violation found"
+  },
+  "q36_extension_reviews": [
+    {
+      "topic": "fence completion",
+      "accepted": "Only independently checked source wait/error distinction",
+      "rejected": [
+        "Invented dma_fence_get_error_flag API",
+        "Unrequested fault-injection suggestion",
+        "Observed-contract-violation label",
+        "Claim that already-signaled is the only possible case"
+      ]
+    },
+    {
+      "topic": "idle lifecycle",
+      "accepted": "Bounded normal-stop ordering and conditional bookkeeping path",
+      "qualified": "DPG bypasses the inspected normal sequence, not necessarily every stall operation in its own helper"
+    },
+    {
+      "topic": "broad source gaps",
+      "result": "Stopped after context compaction and repetition; not accepted"
+    },
+    {
+      "topic": "new positive evidence",
+      "result": "Completed but causal review misread several supplied conclusions",
+      "rejected": "Demoting reported independently timed GPCNT activity to a weak structural clue merely because the older header lacks the mapping",
+      "accepted": "No new model-only fact"
+    }
+  ],
+  "hardware_experiment": false,
+  "raw_model_outputs_published": false
+}

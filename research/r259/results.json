@@ -1,0 +1,228 @@
+{
+  "result": "PASS",
+  "classification": "PROVEN_STATICALLY",
+  "findings": [
+    {
+      "claim": "UVD and VCN HWIP identifiers alias in this source",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_ip.h",
+      "line": 50,
+      "matched_source": "VCN_HWIP = UVD_HWIP,"
+    },
+    {
+      "claim": "SOC15 register index depends on per-IP instance base and BASE_IDX",
+      "path": "drivers/gpu/drm/amd/amdgpu/soc15_common.h",
+      "line": 36,
+      "matched_source": "#define SOC15_REG_OFFSET(ip, inst, reg)\t(adev->reg_offset[ip##_HWIP][inst][reg##_BASE_IDX] + reg)"
+    },
+    {
+      "claim": "SOC15 read dispatches through the configured RLC register helper",
+      "path": "drivers/gpu/drm/amd/amdgpu/soc15_common.h",
+      "line": 43,
+      "matched_source": "#define __RREG32_SOC15_RLC__(reg, flag, hwip, inst) \\\n\tadev->gfx.rlc.reg_funcs->rreg32(adev, reg, flag, hwip, inst)"
+    },
+    {
+      "claim": "amdgpu_device_rreg may return software zero before any read",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_reg_access.c",
+      "line": 363,
+      "matched_source": "uint32_t amdgpu_device_rreg(struct amdgpu_device *adev, uint32_t reg,\n\t\t\t    uint32_t acc_flags)\n{\n\tuint32_t ret;\n\n\tif (amdgpu_device_skip_hw_access(adev))\n\t\treturn 0;"
+    },
+    {
+      "claim": "direct MMIO branch converts dword register index to byte offset",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_reg_access.c",
+      "line": 378,
+      "matched_source": "ret = readl(((void __iomem *)adev->rmmio) + (reg * 4));"
+    },
+    {
+      "claim": "normal clock helper explicitly clears dynamic-clock mode when capability absent",
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "line": 553,
+      "matched_source": "if (adev->cg_flags & AMD_CG_SUPPORT_VCN_MGCG)\n\t\tdata |= 1 << UVD_CGC_CTRL__DYN_CLOCK_MODE__SHIFT;\n\telse\n\t\tdata &= ~UVD_CGC_CTRL__DYN_CLOCK_MODE_MASK;"
+    },
+    {
+      "claim": "normal clock helper clears distinct RBC and VCPU gate fields",
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "line": 562,
+      "matched_source": "data &= ~(UVD_CGC_GATE__SYS_MASK\n\t\t| UVD_CGC_GATE__UDEC_MASK\n\t\t| UVD_CGC_GATE__MPEG2_MASK\n\t\t| UVD_CGC_GATE__REGS_MASK\n\t\t| UVD_CGC_GATE__RBC_MASK\n\t\t| UVD_CGC_GATE__LMI_MC_MASK\n\t\t| UVD_CGC_GATE__LMI_UMC_MASK\n\t\t| UVD_CGC_GATE__IDCT_MASK\n\t\t| UVD_CGC_GATE__MPRD_MASK\n\t\t| UVD_CGC_GATE__MPC_MASK\n\t\t| UVD_CGC_GATE__LBSI_MASK\n\t\t| UVD_CGC_GATE__LRBBM_MASK\n\t\t| UVD_CGC_GATE__UDEC_RE_MASK\n\t\t| UVD_CGC_GATE__UDEC_CM_MASK\n\t\t| UVD_CGC_GATE__UDEC_IT_MASK\n\t\t| UVD_CGC_GATE__UDEC_DB_MASK\n\t\t| UVD_CGC_GATE__UDEC_MP_MASK\n\t\t| UVD_CGC_GATE__WCB_MASK\n\t\t| UVD_CGC_GATE__VCPU_MASK\n\t\t| UVD_CGC_GATE__SCPU_MASK);\n\tWREG32_SOC15(VCN, 0, mmUVD_CGC_GATE, data);"
+    },
+    {
+      "claim": "normal clock helper also clears distinct RBC and VCPU mode fields",
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "line": 585,
+      "matched_source": "data &= ~(UVD_CGC_CTRL__UDEC_RE_MODE_MASK\n\t\t| UVD_CGC_CTRL__UDEC_CM_MODE_MASK\n\t\t| UVD_CGC_CTRL__UDEC_IT_MODE_MASK\n\t\t| UVD_CGC_CTRL__UDEC_DB_MODE_MASK\n\t\t| UVD_CGC_CTRL__UDEC_MP_MODE_MASK\n\t\t| UVD_CGC_CTRL__SYS_MODE_MASK\n\t\t| UVD_CGC_CTRL__UDEC_MODE_MASK\n\t\t| UVD_CGC_CTRL__MPEG2_MODE_MASK\n\t\t| UVD_CGC_CTRL__REGS_MODE_MASK\n\t\t| UVD_CGC_CTRL__RBC_MODE_MASK\n\t\t| UVD_CGC_CTRL__LMI_MC_MODE_MASK\n\t\t| UVD_CGC_CTRL__LMI_UMC_MODE_MASK\n\t\t| UVD_CGC_CTRL__IDCT_MODE_MASK\n\t\t| UVD_CGC_CTRL__MPRD_MODE_MASK\n\t\t| UVD_CGC_CTRL__MPC_MODE_MASK\n\t\t| UVD_CGC_CTRL__LBSI_MODE_MASK\n\t\t| UVD_CGC_CTRL__LRBBM_MODE_MASK\n\t\t| UVD_CGC_CTRL__WCB_MODE_MASK\n\t\t| UVD_CGC_CTRL__VCPU_MODE_MASK\n\t\t| UVD_CGC_CTRL__SCPU_MODE_MASK);\n\tWREG32_SOC15(VCN, 0, mmUVD_CGC_CTRL, data);"
+    },
+    {
+      "claim": "software VCN harvest bits identify instances, not CC register subfields",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.h",
+      "line": 38,
+      "matched_source": "#define AMDGPU_VCN_HARVEST_VCN0 (1 << 0)\n#define AMDGPU_VCN_HARVEST_VCN1 (1 << 1)"
+    },
+    {
+      "claim": "whole-IP harvest mask uses another namespace",
+      "path": "drivers/gpu/drm/amd/include/amd_shared.h",
+      "line": 238,
+      "matched_source": "enum amd_harvest_ip_mask {\n    AMD_HARVEST_IP_VCN_MASK = 0x1,\n    AMD_HARVEST_IP_JPEG_MASK = 0x2,"
+    },
+    {
+      "claim": "harvest table reader maps VCN instance numbers to software bits",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_discovery.c",
+      "line": 907,
+      "matched_source": "case VCN_HWID:\n\t\t\t(*vcn_harvest_count)++;\n\t\t\tadev->vcn.harvest_config |= BIT(inst);\n\t\t\tadev->jpeg.harvest_config |= BIT(inst);"
+    },
+    {
+      "claim": "all-instances count condition sets whole-IP software masks",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_discovery.c",
+      "line": 1974,
+      "matched_source": "if (vcn_harvest_count == adev->vcn.num_vcn_inst) {\n\t\tadev->harvest_ip_mask |= AMD_HARVEST_IP_VCN_MASK;\n\t\tadev->harvest_ip_mask |= AMD_HARVEST_IP_JPEG_MASK;"
+    }
+  ],
+  "fields": {
+    "UVD_CGC_GATE__RBC_MASK": "0x10",
+    "UVD_CGC_GATE__VCPU_MASK": "0x40000",
+    "UVD_CGC_CTRL__DYN_CLOCK_MODE_MASK": "0x1",
+    "UVD_CGC_CTRL__RBC_MODE_MASK": "0x100000",
+    "UVD_CGC_CTRL__VCPU_MODE_MASK": "0x20000000",
+    "UVD_LMI_CTRL2__STALL_ARB_UMC_MASK": "0x100"
+  },
+  "register_names": [
+    {
+      "symbol": "mmUVD_VCPU_CNTL",
+      "header_index": "0x0258",
+      "base_idx": 1,
+      "absolute_address_computed": false,
+      "line": 658
+    },
+    {
+      "symbol": "mmUVD_SOFT_RESET",
+      "header_index": "0x0260",
+      "base_idx": 1,
+      "absolute_address_computed": false,
+      "line": 672
+    },
+    {
+      "symbol": "mmUVD_STATUS",
+      "header_index": "0x026f",
+      "base_idx": 1,
+      "absolute_address_computed": false,
+      "line": 698
+    },
+    {
+      "symbol": "mmUVD_CGC_GATE",
+      "header_index": "0x01ea",
+      "base_idx": 1,
+      "absolute_address_computed": false,
+      "line": 504
+    },
+    {
+      "symbol": "mmUVD_CGC_CTRL",
+      "header_index": "0x01ec",
+      "base_idx": 1,
+      "absolute_address_computed": false,
+      "line": 508
+    },
+    {
+      "symbol": "mmUVD_RB_ARB_CTRL",
+      "header_index": "0x01e0",
+      "base_idx": 1,
+      "absolute_address_computed": false,
+      "line": 488
+    },
+    {
+      "symbol": "mmCC_UVD_HARVESTING",
+      "header_index": "0x0007",
+      "base_idx": 1,
+      "absolute_address_computed": false,
+      "line": 390
+    },
+    {
+      "symbol": "mmUVD_LMI_VCPU_CACHE_64BIT_BAR_LOW",
+      "header_index": "0x061f",
+      "base_idx": 1,
+      "absolute_address_computed": false,
+      "line": 944
+    },
+    {
+      "symbol": "mmUVD_LMI_VCPU_CACHE_64BIT_BAR_HIGH",
+      "header_index": "0x061e",
+      "base_idx": 1,
+      "absolute_address_computed": false,
+      "line": 942
+    },
+    {
+      "symbol": "mmUVD_VCPU_CACHE_OFFSET0",
+      "header_index": "0x0242",
+      "base_idx": 1,
+      "absolute_address_computed": false,
+      "line": 614
+    },
+    {
+      "symbol": "mmUVD_VCPU_CACHE_SIZE0",
+      "header_index": "0x0243",
+      "base_idx": 1,
+      "absolute_address_computed": false,
+      "line": 616
+    }
+  ],
+  "harvest_namespaces": [
+    {
+      "name": "CC_UVD_HARVESTING reference register",
+      "bit0": "MMSCH_DISABLE",
+      "bit1": "UVD_DISABLE"
+    },
+    {
+      "name": "adev->vcn.harvest_config software bitmap",
+      "bit0": "VCN instance0",
+      "bit1": "VCN instance1"
+    },
+    {
+      "name": "adev->harvest_ip_mask software bitmap",
+      "bit0": "VCN IP",
+      "bit1": "JPEG IP"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "sha256": "753849c7c491b137913668f77b8a3a0f539c7cf5cd46423db22b8f1513d9d9f6"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/soc15_common.h",
+      "sha256": "3bd3e7f95e5ff9637e4608be639355a3fa82b9dad6635623104f6e084e9bfda6"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_reg_access.c",
+      "sha256": "60ee0b99d513c67b7774e91c8e61e2d0e74ec2be4be4bd66a85b91f1681e422a"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_ip.h",
+      "sha256": "dde3a58612933f890921698b3dd05ec8cb4595f4ceeb366baf94ec3f178d7e97"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/include/asic_reg/vcn/vcn_2_0_0_sh_mask.h",
+      "sha256": "4c9ed19c3e744be938ada218d188c19ad7dc71e0dfb1652637ab116618bd489e"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/include/asic_reg/vcn/vcn_2_0_0_offset.h",
+      "sha256": "026dabdbf0f2b731db71cd99a4f617f347589a61d8015afe29abb82f94ad5eb7"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.h",
+      "sha256": "aae122032df161880e34d2e17cfd546e128e2572bcc8fc505fb434b3a14a3ac3"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_discovery.c",
+      "sha256": "076f5c3fb0a37ae041d7ee6b49b56dd850b3027c583a2744ce25f4d6c64e4ce1"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/include/amd_shared.h",
+      "sha256": "8d139d5ca40b769594fb26c8df3decff11f17384113382459366f17e1104511f"
+    }
+  ],
+  "limitations": [
+    "No actual mapping, read path, clock or gate state measured",
+    "Separate named fields do not specify independent physical power domains",
+    "Software-zero branch is a possibility conditional on the actual helper and state, not a diagnosis",
+    "Cache configuration symbols do not identify what an external cache-register report refers to",
+    "Software harvest table handling does not define CC register physical isolation or identify its writer",
+    "No physical addresses or acquisition commands generated"
+  ]
+}

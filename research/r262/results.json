@@ -1,0 +1,216 @@
+{
+  "result": "PASS",
+  "classification": "PROVEN_STATICALLY",
+  "findings": [
+    {
+      "claim": "nominal idle-work delay is1000ms converted to jiffies",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.h",
+      "line": 78,
+      "matched_source": "#define VCN_IDLE_TIMEOUT\tmsecs_to_jiffies(1000)"
+    },
+    {
+      "claim": "last submission release schedules delayed idle work",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.c",
+      "function": "amdgpu_vcn_ring_end_use",
+      "line": 552,
+      "matched_source": "if (atomic_dec_and_test(&ring->adev->vcn.inst[ring->me].total_submission_cnt))\n\t\tschedule_delayed_work(&ring->adev->vcn.inst[ring->me].idle_work,\n\t\t\t\t      VCN_IDLE_TIMEOUT);"
+    },
+    {
+      "claim": "first new submission cancels idle work synchronously",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.c",
+      "function": "amdgpu_vcn_ring_begin_use",
+      "line": 509,
+      "matched_source": "if (!atomic_fetch_inc(&vcn_inst->total_submission_cnt))\n\t\tcancel_delayed_work_sync(&vcn_inst->idle_work);"
+    },
+    {
+      "claim": "begin-use requests ungate under the per-instance lock",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.c",
+      "function": "amdgpu_vcn_ring_begin_use",
+      "line": 512,
+      "matched_source": "mutex_lock(&vcn_inst->vcn_pg_lock);\n\tvcn_inst->set_pg_state(vcn_inst, AMD_PG_STATE_UNGATE);"
+    },
+    {
+      "claim": "idle worker requests gate only after no pending fences and no submissions",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.c",
+      "function": "amdgpu_vcn_idle_work_handler",
+      "line": 493,
+      "matched_source": "if (!fences && !atomic_read(&vcn_inst->total_submission_cnt)) {\n\t\tmutex_lock(&vcn_inst->vcn_pg_lock);\n\t\tvcn_inst->set_pg_state(vcn_inst, AMD_PG_STATE_GATE);"
+    },
+    {
+      "claim": "idle worker ignores gate return and releases its profile reference",
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.c",
+      "function": "amdgpu_vcn_idle_work_handler",
+      "line": 495,
+      "matched_source": "vcn_inst->set_pg_state(vcn_inst, AMD_PG_STATE_GATE);\n\t\tmutex_unlock(&vcn_inst->vcn_pg_lock);\n\t\tamdgpu_vcn_put_profile(adev);"
+    },
+    {
+      "claim": "DPG stop takes a distinct path to the final power-off section",
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "function": "vcn_v2_0_stop",
+      "line": 1222,
+      "matched_source": "if (adev->pg_flags & AMD_PG_SUPPORT_VCN_DPG) {\n\t\tr = vcn_v2_0_stop_dpg_mode(vinst);\n\t\tif (r)\n\t\t\treturn r;\n\t\tgoto power_off;"
+    },
+    {
+      "claim": "normal stop first requires the idle status predicate",
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "function": "vcn_v2_0_stop",
+      "line": 1230,
+      "matched_source": "r = SOC15_WAIT_ON_RREG(VCN, 0, mmUVD_STATUS, UVD_STATUS__IDLE, 0x7);\n\tif (r)\n\t\treturn r;"
+    },
+    {
+      "claim": "stall request precedes a checked UMC-clean wait and immediate error return",
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "function": "vcn_v2_0_stop",
+      "line": 1244,
+      "matched_source": "tmp |= UVD_LMI_CTRL2__STALL_ARB_UMC_MASK;\n\tWREG32_SOC15(VCN, 0, mmUVD_LMI_CTRL2, tmp);\n\n\ttmp = UVD_LMI_STATUS__UMC_READ_CLEAN_RAW_MASK|\n\t\tUVD_LMI_STATUS__UMC_WRITE_CLEAN_RAW_MASK;\n\tr = SOC15_WAIT_ON_RREG(VCN, 0, mmUVD_LMI_STATUS, tmp, tmp);\n\tif (r)\n\t\treturn r;"
+    },
+    {
+      "claim": "successful normal stop explicitly clears the VCPU clock-enable request",
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "function": "vcn_v2_0_stop",
+      "line": 1254,
+      "matched_source": "WREG32_P(SOC15_REG_OFFSET(UVD, 0, mmUVD_VCPU_CNTL), 0,\n\t\t~(UVD_VCPU_CNTL__CLK_EN_MASK));"
+    },
+    {
+      "claim": "successful normal stop asserts VCPU reset then clears status",
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "function": "vcn_v2_0_stop",
+      "line": 1267,
+      "matched_source": "/* reset VCPU */\n\tWREG32_P(SOC15_REG_OFFSET(UVD, 0, mmUVD_SOFT_RESET),\n\t\tUVD_SOFT_RESET__VCPU_SOFT_RESET_MASK,\n\t\t~UVD_SOFT_RESET__VCPU_SOFT_RESET_MASK);\n\n\t/* clear status */\n\tWREG32_SOC15(VCN, 0, mmUVD_STATUS, 0);"
+    },
+    {
+      "claim": "same bookkeeping state returns zero before invoking start/stop",
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "function": "vcn_v2_0_set_pg_state",
+      "line": 1876,
+      "matched_source": "if (state == vinst->cur_state)\n\t\treturn 0;"
+    },
+    {
+      "claim": "bookkeeping state only changes after a successful stop/start result",
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "function": "vcn_v2_0_set_pg_state",
+      "line": 1884,
+      "matched_source": "if (!ret)\n\t\tvinst->cur_state = state;\n\n\treturn ret;"
+    },
+    {
+      "claim": "static power-off register configuration is conditional on the VCN PG flag",
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "function": "vcn_v2_0_enable_static_power_gating",
+      "line": 818,
+      "matched_source": "if (adev->pg_flags & AMD_PG_SUPPORT_VCN) {\n\t\t/* Before power off, this indicator has to be turned on */\n\t\tdata = RREG32_SOC15(VCN, 0, mmUVD_POWER_STATUS);\n\t\tdata &= ~UVD_POWER_STATUS__UVD_POWER_STATUS_MASK;\n\t\tdata |= UVD_POWER_STATUS__UVD_POWER_STATUS_TILES_OFF;\n\t\tWREG32_SOC15(VCN, 0, mmUVD_POWER_STATUS, data);\n\n\n\t\tdata = (2 << UVD_PGFSM_CONFIG__UVDM_PWR_CONFIG__SHIFT\n\t\t\t| 2 << UVD_PGFSM_CONFIG__UVDU_PWR_CONFIG__SHIFT\n\t\t\t| 2 << UVD_PGFSM_CONFIG__UVDF_PWR_CONFIG__SHIFT\n\t\t\t| 2 << UVD_PGFSM_CONFIG__UVDC_PWR_CONFIG__SHIFT\n\t\t\t| 2 << UVD_PGFSM_CONFIG__UVDB_PWR_CONFIG__SHIFT\n\t\t\t| 2 << UVD_PGFSM_CONFIG__UVDIL_PWR_CONFIG__SHIFT\n\t\t\t| 2 << UVD_PGFSM_CONFIG__UVDIR_PWR_CONFIG__SHIFT\n\t\t\t| 2 << UVD_PGFSM_CONFIG__UVDTD_PWR_CONFIG__SHIFT\n\t\t\t| 2 << UVD_PGFSM_CONFIG__UVDTE_PWR_CONFIG__SHIFT\n\t\t\t| 2 << UVD_PGFSM_CONFIG__UVDE_PWR_CONFIG__SHIFT);\n\n\t\tWREG32_SOC15(VCN, 0, mmUVD_PGFSM_CONFIG, data);"
+    },
+    {
+      "claim": "normal start contains the corresponding LMI unstall request",
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "function": "vcn_v2_0_start",
+      "line": 1074,
+      "matched_source": "WREG32_P(SOC15_REG_OFFSET(UVD, 0, mmUVD_LMI_CTRL2), 0,\n\t\t~UVD_LMI_CTRL2__STALL_ARB_UMC_MASK);"
+    }
+  ],
+  "normal_stop_phases": [
+    {
+      "phase": "idle predicate",
+      "line": 1229,
+      "offset": 256
+    },
+    {
+      "phase": "LMI clean predicate",
+      "line": 1234,
+      "offset": 372
+    },
+    {
+      "phase": "UMC stall request",
+      "line": 1242,
+      "offset": 618
+    },
+    {
+      "phase": "UMC clean predicate",
+      "line": 1247,
+      "offset": 778
+    },
+    {
+      "phase": "clock request disabled",
+      "line": 1253,
+      "offset": 952
+    },
+    {
+      "phase": "LMI UMC reset",
+      "line": 1257,
+      "offset": 1069
+    },
+    {
+      "phase": "LMI reset",
+      "line": 1262,
+      "offset": 1233
+    },
+    {
+      "phase": "VCPU reset",
+      "line": 1267,
+      "offset": 1385
+    },
+    {
+      "phase": "status cleared",
+      "line": 1272,
+      "offset": 1540
+    },
+    {
+      "phase": "clock gating helper",
+      "line": 1275,
+      "offset": 1601
+    },
+    {
+      "phase": "static power gating helper",
+      "line": 1276,
+      "offset": 1639
+    },
+    {
+      "phase": "readback",
+      "line": 1281,
+      "offset": 1804
+    },
+    {
+      "phase": "optional DPM request",
+      "line": 1285,
+      "offset": 1881
+    }
+  ],
+  "source_files": [
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+      "sha256": "753849c7c491b137913668f77b8a3a0f539c7cf5cd46423db22b8f1513d9d9f6"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.c",
+      "sha256": "f4fa6fa891cb1b56d4bd5602dd97801a4fc12d3fbdb385a10388ddc6c883e670"
+    },
+    {
+      "path": "drivers/gpu/drm/amd/amdgpu/amdgpu_vcn.h",
+      "sha256": "aae122032df161880e34d2e17cfd546e128e2572bcc8fc505fb434b3a14a3ac3"
+    }
+  ],
+  "successful_stop_request_effects": {
+    "VCPU_CNTL.CLK_EN": "cleared",
+    "SOFT_RESET.VCPU_SOFT_RESET": "asserted",
+    "UVD_STATUS": "host writes zero",
+    "physical_values_measured": false
+  },
+  "conditional_partial_stop": {
+    "preconditions": [
+      "normal non-VF/non-DPG source path",
+      "software cur_state previously UNGATE",
+      "initial status and LMI-clean waits pass",
+      "post-stall UMC-clean wait returns an error",
+      "no intervening other state change before the later UNGATE request"
+    ],
+    "source_consequence": "stop returns before clock-disable/reset/status-clear; cur_state remains UNGATE; later same-state UNGATE returns0 without calling start",
+    "scope": "No explicit stall rollback in this inspected return path; no claim about autonomous hardware or other callbacks",
+    "observed_on_hardware": false
+  },
+  "limitations": [
+    "Idle timeout is a nominal scheduling delay, not an exact observed shutdown time",
+    "A successful stopped-state snapshot does not show whether earlier startup succeeded or failed",
+    "Partial-stop reasoning is not an explanation of an initial cold-start failure without its stated preconditions",
+    "No physical clock, reset, stall, memory progress or RBC functionality measured",
+    "No wait failure induced and no hardware procedure proposed"
+  ]
+}
