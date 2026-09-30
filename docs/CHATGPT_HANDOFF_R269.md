@@ -86,3 +86,7 @@ Direct harvesting-clear trials remain outside the main line. This update does no
 ## Counterevidence review disposition
 
 Accepted: unmapped fields are an evidence gap, not direct contradiction; another board's disable value does not refute Shalasere's board state. GPCNT evidence does not establish a shared VCPU clock. Only validated coverage of request emission itself, not fault coverage, can support localization before request emission from an absent request.
+
+## Session status
+
+Stopped at the user's request. See [session closure](../research/r269/SESSION_CLOSE.md). No new device experiment was run; original field maps and observer provenance remain needed.

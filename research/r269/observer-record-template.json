@@ -1,0 +1,27 @@
+{
+  "purpose": "Record existing observer evidence; not an acquisition procedure",
+  "board_alias": null,
+  "trial_id": null,
+  "reset_epoch": null,
+  "start_interval": null,
+  "observer_identity": null,
+  "observer_kind": null,
+  "source_revision": null,
+  "event_definition": null,
+  "instruction_fetch_initiator_attribution": null,
+  "capture_coverage": null,
+  "positive_control_record": null,
+  "enable_mask_and_reset_state": null,
+  "read_ack_clear_side_effects": null,
+  "raw_record_reference": null,
+  "value_before": null,
+  "value_after": null,
+  "sample_validity": null,
+  "interpretation": "Unknown until event semantics and coverage are established",
+  "limits": [
+    "Fault detection and request-emission observation are different coverage claims",
+    "Master-interrupt enable is not automatically a fault-counter enable",
+    "Zero fault delta does not by itself identify absent requests",
+    "A request or response must belong to the same identified startup/reset epoch"
+  ]
+}
