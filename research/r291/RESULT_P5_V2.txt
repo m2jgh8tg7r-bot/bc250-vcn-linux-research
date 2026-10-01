@@ -1,0 +1,11 @@
+R291-P5-v2 INSTALL WITHOUT SELECTION PASS (2026-10-01)
+
+Old R281/R282 R274-B test artifact was retired after verifying its HOME restore source and saving the exact R282 entry. Free /boot space after retirement was 324861952 bytes, sufficient for the new 257087668-byte R291 pre-reset image with 50 MB margin.
+
+Installed R291 image SHA256: 03db7e3aca4d096be7d2abcc95a1adcb9becd9f6731e43866d5b4e8740960bbb
+Installed R291 BLS entry SHA256: 2ac1832db61d214469f194d15383c9936dd61283678dde97a02b80297bd5b84f
+Saved retired R282 entry SHA256: aac0ab07bf31082de8250e90ebda635242ff1ee59e442c4671336c9b37525551
+
+Protected boot policy hashes (grub.cfg, grubenv, Bazzite ostree entries, R180 entry/image, kernel) were unchanged before/after. R180 recovery remained exact. boot_success=1 and no next_entry was set. No module load, VCN register access, reset release, FILTER write, PowerUpVcn, hardware mutation, boot selection, or reboot occurred.
+
+Result: R291_P5_V2_INSTALL_NO_SELECT=PASS
