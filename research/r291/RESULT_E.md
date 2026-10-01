@@ -1,0 +1,59 @@
+# R291-E result — pre-mc_resume prerequisite boundary
+
+Date: 2026-10-01
+
+Source SHA256:
+eb62b3f8575eff45019712ebc3f68acf4d190834900eb591b5ff7416a42ff075
+
+Stage ordering proven static:
+- amdgpu_dpm_enable_vcn before mc_resume
+- static power-gating disable before mc_resume
+- clock-gating disable before mc_resume
+- VCPU/LMI/MPC setup before mc_resume
+- mc_resume before UVD_SOFT_RESET
+
+Pre-mc direct writes observed:
+- UVD_STATUS
+- UVD_VCPU_CNTL CLK_EN
+- UVD_MASTINT_EN VCPU interrupt disable
+- UVD_LMI_CTRL
+- UVD_MPC_CNTL
+- UVD_MPC_SET_MUXA0
+- UVD_MPC_SET_MUXB0
+- UVD_MPC_SET_MUX
+
+Power-gating helper: 3 writes.
+Clock-gating helper: 5 writes.
+
+Boundary:
+- PRE_MC_RESET_TOKEN_HITS=NONE
+- first post-mc write is UVD_SOFT_RESET VCPU reset handling
+
+Checks:
+- POWER_CALL_BEFORE_MC=YES
+- POWER_GATING_BEFORE_MC=YES
+- CLOCK_GATING_BEFORE_MC=YES
+- RESET_AFTER_MC=YES
+- NO_SOFT_RESET_BEFORE_MC=YES
+
+Conclusion:
+- MEMORY_WINDOW_REQUIRES_PRE_MC_STAGE=YES
+- MEMORY_WINDOW_IS_AFTER_POWER_SETUP=YES
+- MEMORY_WINDOW_IS_AFTER_CLOCK_SETUP=YES
+- MEMORY_WINDOW_IS_BEFORE_SOFT_RESET=YES
+- MEMORY_ONLY_HELPER_SHOULD_NOT_BE_CALLED_AT_HW_INIT_ENTRY=YES
+- NEXT_STEP_MUST_PRESERVE_PRE_MC_PREREQUISITES=YES
+
+Safety:
+- HARDWARE_ACCESS=NO
+- SOURCE_MODIFICATION=NO
+- MODULE_BUILD=NO
+- BOOT_CHANGE=NO
+- RESET_RELEASE=NO
+
+R291_E_PRE_MC_PREREQUISITES=PASS
+
+Audit script SHA256:
+a0fe08197b8113581acdf6bdff5f63f19596070d9da72a0bb3f4cd31d11add43
+Log SHA256:
+4934fd1984add693c13eb4d4379976268f8bec9e57a6c34d1966d21ed3827ccc
