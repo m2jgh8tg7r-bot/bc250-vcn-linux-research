@@ -1,0 +1,5 @@
+R291-P7A ONE-SHOT ARM PASS (2026-10-01)
+
+R291 artifact precheck PASS, recovery precheck PASS, protected policy precheck PASS. Before arming: boot_success=1 and no pending next_entry. After arming: next_entry=boot-entry-r291-pre-reset exactly. Protected files remained unchanged. No reboot, module load, VCN register access, hardware mutation, reset release, FILTER write, or PowerUpVcn occurred.
+
+Result: R291_P7A_ONE_SHOT_ARM=PASS
