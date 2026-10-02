@@ -1,8 +1,8 @@
-# R297 CP03 full-module checkpoint — 2026-10-02 JST
+# R297 CP03 full-module build-only PASS — 2026-10-02 JST
 
 ## Scope
 
-This checkpoint records the current BC-250 / Cyan Skillfish VCN native-enable research state **without advancing to package/install/boot/LIVE CP03**.
+This checkpoint records the formal **build-only PASS** for the current BC-250 / Cyan Skillfish R274B + CP03 full-amdgpu composition, **without advancing to package/install/boot/LIVE CP03**.
 
 Current main path:
 
@@ -91,7 +91,7 @@ The isolated `vcn_v2_0.o` CP03 build had already passed:
 - cold path disassembly showed `_dev_info -> _dev_emerg -> panic`
 - R152 `vcn_v2_0.c` restored exactly afterward
 
-## CP03 full-module composition attempt
+## CP03 full-module composition — formal PASS
 
 Build script:
 
@@ -164,52 +164,64 @@ R_X86_64_PLT32  panic-0x4
 
 This is exactly the intended CP03 machine-code control flow.
 
-## Why the script nevertheless exited 1
+## Automated machine-code audit — resolved
 
-The build script's Python audit used:
+The first full-module build produced the correct module but the audit ended with exit 1 because it used an unconstrained string search for `panic`. That could match the pathname `r297-checkpoint-panic` before the actual relocation.
 
-```python
-s = Path(sys.argv[1]).read_text()
-
-info = s.find('_dev_info')
-emerg = s.find('_dev_emerg')
-panic = s.find('panic')
-helper = s.find('vcn_v2_0_cyan_pre_reset_only')
-```
-
-Observed values:
+The audit was narrowed to `R_X86_64_PLT32` relocation targets and first validated against the already-generated disassembly:
 
 ```
-ORDER_DEV_INFO=502
-ORDER_DEV_EMERG=807
-ORDER_PANIC=56
+ORDER_DEV_INFO=487
+ORDER_DEV_EMERG=792
+ORDER_PANIC=987
 HELPER_CALL_POS=-1
-STOP: CP03 cold-path call order invalid
+CP03_EXISTING_DISASM_AUDIT=PASS
 ```
 
-The `panic=56` result is a **tooling false match candidate**, not evidence of wrong machine code.
-
-Reason: the disassembly file begins with a pathname containing:
+The final build-only rerun then passed the same audit:
 
 ```
-.../research/r297-checkpoint-panic/cp03-fullmodule/...
+ORDER_DEV_INFO=487
+ORDER_DEV_EMERG=792
+ORDER_PANIC=987
+HELPER_CALL_POS=-1
+HW_INIT_COLD_DEV_INFO_THEN_DEV_EMERG_THEN_PANIC=YES
+HW_INIT_COLD_HELPER_CALL_PRESENT=NO
+CP03_MACHINE_CODE_CONTRACT=PASS
 ```
 
-so generic `s.find('panic')` can match the directory name `checkpoint-panic` before the actual `panic` relocation in the disassembly.
+Final script and output identities:
 
-The displayed disassembly itself shows the true call order as `_dev_info -> _dev_emerg -> panic`.
+```
+BUILD_SCRIPT_SHA256=38dad21287f796a6675193c83f6614198fca54de64091395a4aa6dddce493b11
+CP03_FULLMODULE_SHA256=9a9bc4fd0bec05a38189ac80e0d0c9d6fadf83010143c62a61e095d5d482290b
+BUILD_ID=94c0a230babde9b97af4a513b97ea45a2e1aec89
+R297_CP03_FULLMODULE_BUILD.log SHA256=0b486c08b3dfcc652cada22c92b72349cb01b7578ddb090032dbf11ada5393af
+```
 
-Therefore, at this checkpoint:
+The module SHA256 and Build ID are identical to the earlier run, so the audit fix changed the tooling only and did not change the generated module.
 
-- full-module compile/link: **PASS**
-- required/forbidden marker audit: **PASS**
-- lifecycle symbol audit: **PASS**
-- panic undefined reference: **PASS**
-- displayed CP03 cold-path code shape: **PASS by direct inspection**
-- automated machine-code order audit: **INVALID due to likely parser/string-match bug**
-- overall script exit code `1`: **tooling/audit failure, not a demonstrated scientific/build failure**
+Final result:
 
-This should be verified with a narrowly fixed parser before promoting the full module to a formal PASS.
+```
+INPUT_CANDIDATES=PASS
+R152_BASELINE=PASS
+R274B_SOURCE_CONTRACT=PASS
+CP03_SOURCE_CONTRACT=PASS
+SOURCE_COMPOSITION=PASS
+MAKE_RC=0
+REQUIRED_MARKERS=PASS
+FORBIDDEN_MARKERS_ABSENT=PASS
+LIFECYCLE_SYMBOLS=PASS
+PANIC_REFERENCE=PASS
+CP03_MACHINE_CODE_CONTRACT=PASS
+R152_SOURCE_RESTORATION=PASS
+R297_CP03_FULLMODULE=PASS
+CP03_FULLMODULE_SCRIPT_EXIT_CODE=0
+TERMINAL_SURVIVED=YES
+```
+
+The detailed result is preserved in [research/r297/RESULT_CP03_FULLMODULE_PASS.md](../research/r297/RESULT_CP03_FULLMODULE_PASS.md).
 
 ## Safety boundary
 
@@ -247,25 +259,20 @@ SHA256 080c5393778338783fbc912a1b3edc31b5f2b6008a356bd15abd89aea2c02dce
 
 ## Recommended next action — NOT executed here
 
-Fix only the machine-code audit so that `panic` is matched as a relocation/call target rather than as arbitrary pathname text. Then rerun the **build-only** full-module composition and require:
+The build-only gate is now complete. The next stage is to preserve exact CP03 module provenance through packaging and installation **without selecting or booting it yet**, then audit the initramfs/boot-entry path before any one-shot LIVE CP03 boot.
+
+Required ordering:
 
 ```
-INPUT_CANDIDATES=PASS
-R152_BASELINE=PASS
-R274B_SOURCE_CONTRACT=PASS
-CP03_SOURCE_CONTRACT=PASS
-SOURCE_COMPOSITION=PASS
-MAKE_RC=0
-REQUIRED_MARKERS=PASS
-FORBIDDEN_MARKERS_ABSENT=PASS
-LIFECYCLE_SYMBOLS=PASS
-PANIC_REFERENCE=PASS
-CP03_MACHINE_CODE_CONTRACT=PASS
-R152_SOURCE_RESTORATION=PASS
-R297_CP03_FULLMODULE=PASS
+1. package exact CP03 module
+2. verify packaged module identity
+3. install without selecting/booting
+4. verify installed module identity and marker contract
+5. build/audit the dedicated initramfs and boot entry
+6. only then consider one-shot LIVE CP03
 ```
 
-Only after that should package/install/initramfs/one-shot boot/LIVE CP03 be considered.
+No helper execution, reset release, VCPU fetch, or other new VCN MMIO action should be introduced in CP03.
 
 ## Current scientific boundary
 
