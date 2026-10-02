@@ -1,8 +1,8 @@
 # BC-250 VCN Linux research
 
-## Latest — R297 CP03 full-module checkpoint, 2026-10-02 JST
+## Latest — R297 CP03 full-module build-only PASS, 2026-10-02 JST
 
-[CP03 full-module checkpoint](docs/CHATGPT_HANDOFF_R297_CP03.md): records the current R274B + CP03 full-amdgpu composition without advancing to package/install/boot/LIVE. The full module itself built successfully (`MAKE_RC=0`), required markers and lifecycle symbols passed, and the shown `vcn_v2_0_hw_init.cold` code is `_dev_info -> _dev_emerg -> panic`. The script's final exit 1 is attributed to a likely audit false match: `s.find('panic')` can hit the `r297-checkpoint-panic` pathname before the actual panic relocation. This remains a build/tooling checkpoint only; LIVE proof still stops at CP02 direct provisioning `equal=1`.
+[CP03 full-module handoff](docs/CHATGPT_HANDOFF_R297_CP03.md) · [formal result](research/r297/RESULT_CP03_FULLMODULE_PASS.md): the R274B + CP03 full-amdgpu composition now passes the corrected relocation-target audit with `MAKE_RC=0`, `CP03_MACHINE_CODE_CONTRACT=PASS`, source restoration PASS, and final script exit 0. The full module is unchanged from the earlier build (`SHA256 9a9bc4fd…`, Build ID `94c0a230…`), confirming the prior exit 1 was audit-tooling only. No package/install/boot/LIVE CP03 action has occurred; LIVE proof still stops at CP02 direct provisioning `equal=1`.
 
 ### Previous — R269, 2026-10-01 JST
 
