@@ -280,6 +280,23 @@ The installed CP03 image/BLS and the extracted amdgpu module/VCN firmware match 
 
 Detailed result: [research/r297/RESULT_CP03_INSTALLED_FINAL_AUDIT.md](../research/r297/RESULT_CP03_INSTALLED_FINAL_AUDIT.md).
 
+## CP03 LIVE — PASS
+
+EFI pstore from the CP03 boot captured the decisive sequence:
+
+```
+BC250 R274B direct_copy: bytes=405696 src_off=256 dst_off=0 bo=1069056 equal=1
+BC250 R291P1 pre_reset: begin
+BC250 R297 CP03: panic after P1 begin before helper
+Kernel panic - not syncing: BC250 R297 CP03 after P1 begin before helper
+```
+
+This is the first LIVE proof that the actual initial boot lifecycle reached the Cyan `vcn_v2_0_hw_init()` branch. The helper itself remains unexecuted/unproven in LIVE.
+
+Important safety note: after returning to the normal safe Bazzite kernel, `grubenv` still contained `next_entry=boot-entry-r297-cp03`. Disarm this explicitly before any further reboot.
+
+Detailed result: [research/r297/RESULT_CP03_LIVE.md](../research/r297/RESULT_CP03_LIVE.md).
+
 ## Recommended next action — NOT executed here
 
 The build-only gate is now complete. The next stage is to preserve exact CP03 module provenance through packaging and installation **without selecting or booting it yet**, then audit the initramfs/boot-entry path before any one-shot LIVE CP03 boot.
