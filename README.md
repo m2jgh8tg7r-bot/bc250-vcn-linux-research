@@ -1,6 +1,10 @@
 # BC-250 VCN Linux research
 
-## Latest — R269, 2026-10-01 JST
+## Latest — R297 CP03 full-module checkpoint, 2026-10-02 JST
+
+[CP03 full-module checkpoint](docs/CHATGPT_HANDOFF_R297_CP03.md): records the current R274B + CP03 full-amdgpu composition without advancing to package/install/boot/LIVE. The full module itself built successfully (`MAKE_RC=0`), required markers and lifecycle symbols passed, and the shown `vcn_v2_0_hw_init.cold` code is `_dev_info -> _dev_emerg -> panic`. The script's final exit 1 is attributed to a likely audit false match: `s.find('panic')` can hit the `r297-checkpoint-panic` pathname before the actual panic relocation. This remains a build/tooling checkpoint only; LIVE proof still stops at CP02 direct provisioning `equal=1`.
+
+### Previous — R269, 2026-10-01 JST
 
 [Write-disable versus disable; first-request boundary](docs/CHATGPT_HANDOFF_R269.md): explicitly downgrades the SMN-to-UVD-disable fuse interpretation to an unresolved field-mapping hypothesis. CC bit definitions, SMN words, Thomas's named fields and discovery metadata remain separate. Fault silence is not proof of absent fetch. The fixed original Shalasere archive is unchanged. [R267–R268 preparation](docs/CHATGPT_HANDOFF_R268.md) adds saved-counter analysis and ordinary-API preflight; critical new acquisition is not ready and no VCN device test was performed.
 
