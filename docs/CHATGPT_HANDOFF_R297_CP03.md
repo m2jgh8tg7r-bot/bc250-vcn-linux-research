@@ -257,6 +257,23 @@ SHA256 080c5393778338783fbc912a1b3edc31b5f2b6008a356bd15abd89aea2c02dce
 621 lines
 ```
 
+
+## CP03 HOME-only package — PASS
+
+The exact full-module PASS was packaged in an isolated HOME-only initramfs tree and audited successfully without touching /boot.
+
+Fixed identities:
+
+```
+SIGNED_MODULE_SHA256=43f177df38a8d4bef6572fcaca89c6d0f1f6165fd8983ee3ce62d019ec7c3d9a
+IMAGE_SHA256=eb71ca03672e0d9070a5d6ecb3193ec175be70137ab212a802989456a4d31854
+VCN_FW_SHA256=a9ec155695b5020009d3986cfd4ebd00ad9ddbd12ac7e5fa15ec86b8a571dbe5
+R297_CP03_HOME_PACKAGE=PASS
+CP03_PACKAGE_SCRIPT_EXIT_CODE=0
+```
+
+Archive round-trip, signature metadata, CP03 marker contract and `U panic` retention all passed. Detailed result: [research/r297/RESULT_CP03_HOME_PACKAGE.md](../research/r297/RESULT_CP03_HOME_PACKAGE.md).
+
 ## Recommended next action — NOT executed here
 
 The build-only gate is now complete. The next stage is to preserve exact CP03 module provenance through packaging and installation **without selecting or booting it yet**, then audit the initramfs/boot-entry path before any one-shot LIVE CP03 boot.
