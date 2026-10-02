@@ -274,6 +274,12 @@ CP03_PACKAGE_SCRIPT_EXIT_CODE=0
 
 Archive round-trip, signature metadata, CP03 marker contract and `U panic` retention all passed. Detailed result: [research/r297/RESULT_CP03_HOME_PACKAGE.md](../research/r297/RESULT_CP03_HOME_PACKAGE.md).
 
+## CP03 installed-final audit — PASS
+
+The installed CP03 image/BLS and the extracted amdgpu module/VCN firmware match the HOME package exactly. Signature metadata, marker contract, panic reference, installed machine-code order, protected recovery state and boot-selection state all passed.
+
+Detailed result: [research/r297/RESULT_CP03_INSTALLED_FINAL_AUDIT.md](../research/r297/RESULT_CP03_INSTALLED_FINAL_AUDIT.md).
+
 ## Recommended next action — NOT executed here
 
 The build-only gate is now complete. The next stage is to preserve exact CP03 module provenance through packaging and installation **without selecting or booting it yet**, then audit the initramfs/boot-entry path before any one-shot LIVE CP03 boot.
