@@ -2,7 +2,7 @@
 
 ## Latest — R297 CP03 full-module build-only PASS, 2026-10-02 JST
 
-[CP03 full-module handoff](docs/CHATGPT_HANDOFF_R297_CP03.md) · [formal result](research/r297/RESULT_CP03_FULLMODULE_PASS.md): the R274B + CP03 full-amdgpu composition now passes the corrected relocation-target audit with `MAKE_RC=0`, `CP03_MACHINE_CODE_CONTRACT=PASS`, source restoration PASS, and final script exit 0. The full module is unchanged from the earlier build (`SHA256 9a9bc4fd…`, Build ID `94c0a230…`), confirming the prior exit 1 was audit-tooling only. No package/install/boot/LIVE CP03 action has occurred; LIVE proof still stops at CP02 direct provisioning `equal=1`.
+[CP03 full-module handoff](docs/CHATGPT_HANDOFF_R297_CP03.md) · [formal result](research/r297/RESULT_CP03_FULLMODULE_PASS.md): the R274B + CP03 full-amdgpu composition now passes the corrected relocation-target audit with `MAKE_RC=0`, `CP03_MACHINE_CODE_CONTRACT=PASS`, source restoration PASS, and final script exit 0. The full module is unchanged from the earlier build (`SHA256 9a9bc4fd…`, Build ID `94c0a230…`), confirming the prior exit 1 was audit-tooling only. The exact CP03 module has also passed HOME-only packaging and initramfs round-trip (`SIGNED_MODULE_SHA256 43f177df…`, `IMAGE_SHA256 eb71ca03…`) without any `/boot` write or boot selection change. LIVE proof still stops at CP02 direct provisioning `equal=1`.
 
 ### Previous — R269, 2026-10-01 JST
 
