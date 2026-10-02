@@ -120,12 +120,21 @@ POWERUP_VCN=NO
 REBOOT=NO
 ```
 
-Package audit log:
+Package audit log provenance note:
+
+The package script printed:
 
 ```
-R297_CP03_PACKAGE_AUDIT.log
-SHA256 dea1b1caaee951b6c2283c4657469891ba718e98c5da0989d08da0113b22257b
+dea1b1caaee951b6c2283c4657469891ba718e98c5da0989d08da0113b22257b  R297_CP03_PACKAGE_AUDIT.log
 ```
+
+from inside the same tee-backed log stream. That value is **not** a stable post-run file identity because the printed SHA line itself is appended to the log after the hash is computed. A later read-only preflight measured the completed log as:
+
+```
+POST_RUN_LOG_SHA256=059894cf29cb1fdabb4f0305485244471c7f7991e640f468d27de5b225748850
+```
+
+Therefore the package log hash is provenance-only and must not be used as a fixed install gate. Package correctness is gated instead by the exact script, image, signed-module and firmware hashes plus semantic PASS markers.
 
 ## Next stage
 
