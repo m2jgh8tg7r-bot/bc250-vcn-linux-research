@@ -14,7 +14,7 @@ The R297 checkpoint sequence has advanced from CP05 LIVE proof of the first inte
 
 The first CP06 boot attempt produced no persisted EFI pstore records, so it must not be classified as either a CP06 hardware PASS or a PGFSM read failure.
 
-A stronger `SELECT-WITNESS no-amdgpu` BLS diagnostic is now installed but not selected.
+The stronger `SELECT-WITNESS no-amdgpu` BLS diagnostic has now been selected successfully and reached its intended early dracut witness point. A subsequent main-CP06 attempt blacked out/hard-hung and required forced power-button recovery, but produced no persisted pstore.
 
 ## Exact current classifications
 
@@ -33,7 +33,8 @@ CP06 INSTALLED FINAL AUDIT           = PASS
 CP06 FIRST LIVE ATTEMPT              = INCONCLUSIVE
 CP06 SELECT-WITNESS HOME             = PASS
 CP06 SELECT-WITNESS BLS INSTALL      = PASS
-CP06 SELECT-WITNESS LIVE             = NOT YET
+CP06 SELECT-WITNESS LIVE             = PASS
+CP06 SECOND MAIN LIVE ATTEMPT         = HARD-HANG OBSERVED / NO PSTORE
 ```
 
 ## Strongest LIVE result
@@ -171,21 +172,56 @@ MENU_SHOW_ONCE_CHANGE=NO
 GRUBENV_BYTE_EXACT=YES
 ```
 
+## SELECT-WITNESS LIVE result
+
+The witness was manually selected successfully.
+
+At the `rd.break=pre-mount` dracut shell:
+
+- the command line contained the select-witness marker and all three amdgpu blacklist forms;
+- `amdgpu` was not present in `/proc/modules`;
+- the one-time menu state was later consumed cleanly after returning to normal Bazzite.
+
+Therefore:
+
+```text
+CP06 SELECT-WITNESS LIVE = PASS
+```
+
+This is boot-selection evidence only, not VCN execution evidence.
+
+## Main CP06 attempt 2
+
+After the selection mechanism had been independently witnessed, the main CP06 BLS was retried with a clean pstore baseline.
+
+Observed behavior:
+
+- user manually selected the main CP06 entry;
+- display blacked out;
+- no automatic panic/reboot was observed;
+- forced 4-second power-button recovery was required;
+- the one-time menu state was consumed;
+- postmortem found zero persisted pstore files and zero CP06 markers.
+
+Classification:
+
+```text
+CP06 main attempt 2 = LIVE hard-hang observation
+persisted pstore     = NONE
+exact hang boundary  = UNPROVEN
+```
+
+Do not state that `PGFSM_STATUS` read is proven to be the cause. The CP05 -> CP06 delta makes that read a strong suspect, but the current evidence is still an inference.
+
+Attempt-2 collection log SHA-256:
+
+`e2b63cfc392f3d915ebe8e4545e589ba5759d21cd02c31f0e8caceb2e6baec31`
+
 ## Required next-step discipline
 
-The next LIVE action should be a **selection witness**, not a CP06 VCN result.
+Do not repeat the unchanged direct-read CP06 LIVE attempt. Two main attempts have produced no persisted pstore, and attempt 2 was an observed hard hang after boot-selection ambiguity had already been removed.
 
-Expected sequence:
-
-1. keep the system on the normal safe Bazzite kernel;
-2. verify exact installed witness identity;
-3. arm only a one-time visible GRUB menu;
-4. manually select `BC-250 R297 CP06 SELECT-WITNESS no-amdgpu`;
-5. use the early `rd.break=pre-mount` / marker state to prove the intended BLS was selected;
-6. return to the safe normal boot without interpreting this as VCN evidence;
-7. only then retry the main CP06 BLS and collect EFI pstore.
-
-Never conflate the witness with VCN execution.
+The next experiment should first be designed and audited as STATIC/BUILD-ONLY. A preferred direction is to execute the single status read in a worker context while a separate CPU retains a bounded timeout/panic path. This can distinguish: read returns; one CPU stalls while the system remains recoverable; or the read stalls the wider fabric/system. No new LIVE run should occur before that design has passed source/object/fullmodule machine-code audit.
 
 ## Important tooling lessons retained
 
@@ -199,9 +235,10 @@ Never conflate the witness with VCN execution.
 
 - source/object/fullmodule/package/installed audits: STATIC / BUILD-ONLY / INSTALL evidence
 - CP05 pstore checkpoint: LIVE
-- CP06 first attempt: LIVE attempt, but scientifically INCONCLUSIVE
-- SELECT-WITNESS preparation/install: STATIC / INSTALL only
-- SELECT-WITNESS has not yet been executed
+- CP06 first attempt: LIVE attempt, scientifically INCONCLUSIVE
+- SELECT-WITNESS preparation/install: STATIC / INSTALL
+- SELECT-WITNESS execution: LIVE PASS
+- CP06 main attempt 2: LIVE hard-hang observation, no persisted trace, exact MMIO boundary unresolved
 
 Full detailed checkpoint:
 
