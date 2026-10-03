@@ -1,3 +1,5 @@
+> **Current checkpoint — R323/R324:** [Offline reader and checkpoint draft](docs/CHATGPT_HANDOFF_R324.md). CPU tests and paired builds completed; compiler instrumentation review remains open. No boot package or live test is ready.
+
 > **Current checkpoint — R322:** [Discovery evidence inventory and export limits](docs/CHATGPT_HANDOFF_R322.md). No matching full capture found in scoped search. Sysfs entries cannot certify record uniqueness; debugfs exposes post-parser heap data. Static review only; no hardware operation.
 
 > **Current checkpoint — R321:** [Final-base provenance](docs/CHATGPT_HANDOFF_R321.md). PGFSM uses segment 1; parser samples and sysfs copies do not attest the final helper pointer. Static audit; no new live test.

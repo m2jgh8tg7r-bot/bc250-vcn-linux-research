@@ -1,0 +1,6 @@
+{
+  "baseline_sha256": "619da2f08eb0d116f83930d1746721d93eaeae526cc292e49477150fe3168371",
+  "candidate_sha256": "7866a67260e412c713c45a5ea5715c8de3c7799890b17741592d63511d278a15",
+  "observer_sha256": "6cfebd9e18f065c3bcd5c9fb478ca07c99b7b3c9506b22b0b1e845819aeb87e1",
+  "changes": "vcn_v2_0.c only; saved baseline source unchanged; private isolated build tree"
+}

@@ -1,3 +1,5 @@
+> **Current checkpoint — R323/R324:** [Offline reader and checkpoint draft](CHATGPT_HANDOFF_R324.md). CPU tests and paired builds completed; compiler instrumentation review remains open. No boot package or live test is ready.
+
 > **Current checkpoint — R322:** [Discovery evidence inventory and export limits](CHATGPT_HANDOFF_R322.md). No matching full capture found in scoped search. Sysfs entries cannot certify record uniqueness; debugfs exposes post-parser heap data. Static review only; no hardware operation.
 
 > **Current checkpoint — R321 (2026-10-04 JST):** [Final-base provenance](CHATGPT_HANDOFF_R321.md). R318 received helper/guards/META and the intended pre-MMIO panic through its end marker; manual recovery reported. R319 interprets software fields; R320 audits discovery lifetime; R321 separates parser samples, sysfs copies and the final helper array. VCN execution and old CP06/07 causes remain unproven. No unchanged live repeat is requested. Earlier preparation-only notices below are historical.

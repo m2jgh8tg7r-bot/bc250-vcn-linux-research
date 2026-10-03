@@ -1,0 +1,27 @@
+{
+  "builds": "PASS",
+  "modules": [
+    {
+      "variant": "baseline",
+      "sha256": "1acf4a50a3f6d78e1fec32d8596f02adbdc52218050d0d3058435d7f7ab261b4",
+      "vermagic": "7.2.3+ SMP preempt mod_unload"
+    },
+    {
+      "variant": "candidate",
+      "sha256": "799711c3abf227d26813601435fb91fc55b4d0940d97f89c197f6b596682bdd8",
+      "vermagic": "7.2.3+ SMP preempt mod_unload"
+    }
+  ],
+  "observer_external_calls": [
+    "__fentry__-0x4",
+    "__ubsan_handle_out_of_bounds-0x4",
+    "_dev_emerg-0x4",
+    "_dev_emerg-0x4",
+    "_dev_emerg-0x4",
+    "_dev_emerg-0x4"
+  ],
+  "review": "OPEN: __fentry__ and __ubsan_handle_out_of_bounds compiler instrumentation requires branch review",
+  "package_ready": false,
+  "installed": false,
+  "booted": false
+}
