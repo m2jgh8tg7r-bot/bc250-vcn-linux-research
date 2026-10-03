@@ -44,3 +44,10 @@ image_sha256: `a7099cfcf102cb8eb1ba61832e1456a886b104c893a7788376338eb21112df74`
 bls_sha256: `aa393aaade9a9b0dc5970c894f2c03cdd03aff8b8f38bf334233d00b0fb3a0d3`
 init_sha256: `d577454d3b42e9a3306a71923517473c836361db74f144ef1ba088f086e55b79`
 cp03_signed_module_sha256: `43f177df38a8d4bef6572fcaca89c6d0f1f6165fd8983ee3ce62d019ec7c3d9a`
+
+
+## Privileged read-only preflight PASS — 2026-10-03
+
+User executed the default privileged preflight. Saved contract PASS was independently read; installer/package/image/BLS/init identities matched current HOME artifacts. Protected normal/R180/R298/kernel/GRUB identities and exact CP07 retirement identities passed. Free space was 68,395,008 bytes; planned new image 168,061,706 bytes; verified CP07 retirement permits the required 52,428,800-byte post-install margin. No boot write, selection change, GPU module load or reboot.
+
+NEXT=User-run `install.py --install`: archive and verify CP07, replace only its image/BLS with R299, preserve protected identities, and save installed audit. Installation and combined LIVE control remain UNPROVEN.
