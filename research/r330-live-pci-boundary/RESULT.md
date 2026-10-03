@@ -20,3 +20,7 @@ R329 sequences1181–1182 establish selected discovery die0/count3/one instance0
 The begin marker precedes the standard PCI API call in the audited candidate. Missing return alone does not prove the CPU entered/stalled in that call: scheduling, logging loss or excerpt truncation remain alternatives. Explicit operator confirmation of the terminal receiver suffix and recovery is needed. No new boot is required to resolve those observations. The agent currently reads normal7.2.1 kernel; this does not identify recovery mechanism or certify full system health.
 
 The R329 init line says panic before helper VCN MMIO, an inherited stale description. The module transaction markers and compiled contract correctly show one CONFIG write before panic; use those as authoritative sequence evidence. Correct this label in a future distinct package, without repackaging or repeating the current trial solely for wording.
+
+## Operator clarification
+
+The operator confirms CFG_AFTER_BEGIN is the actual last received line, with no suffix, and explicitly denies automatic restart. Thus receiver-tail truncation by this paste is no longer pending. Post-read return and planned panic remain unobserved. Manual reset versus power interruption and their timing remain unspecified; current normal-kernel read alone does not resolve them. A standard PCI-read stall is consistent with this boundary, but entered instruction, CPU/bus state and logging-loss alternatives are not independently proven. No unchanged retry is justified.
