@@ -1,0 +1,9 @@
+{
+  "contract": "PASS",
+  "installed_files_read_and_hashed": 2,
+  "retired_files_backups_read_and_hashed": 2,
+  "retired_paths_absent": true,
+  "protected_hash_records_match_preflight": true,
+  "protected_files_independently_rehashed": false,
+  "reboot": false
+}
