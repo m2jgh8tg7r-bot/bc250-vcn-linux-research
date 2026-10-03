@@ -1,3 +1,5 @@
+> **R329 installed, independent audit PASS:** [Installed status](research/r329-pci-config-package/INSTALLED_SUMMARY.md). Protected files/default and normal kernel unchanged; R325 backup verified. Not booted; raw receiver and manual menu next.
+
 > **R329 protected preflight PASS:** [Verified preflight](research/r329-pci-config-package/PREFLIGHT_SUMMARY.md). Local hashes match; normal default preserved. Not installed or booted; installation and independent audit next.
 
 > **R329 HOME preparation complete:** [PCI configuration completion package](docs/CHATGPT_HANDOFF_R329.md). Paired build/call audit, signing, archive roundtrip and CPU checks pass. Protected read-only preflight requires user sudo authentication; not installed or booted. VCN execution remains unproven.

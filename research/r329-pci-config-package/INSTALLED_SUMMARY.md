@@ -1,0 +1,3 @@
+# R329 installation and independent audit PASS
+
+User-run installation and independent protected-file audit report PASS. Saved result hashes match the HOME package and preflight; the agent also verified the R325 HOME retirement backup hashes. Normal kernel and protected boot files are unchanged; no boot selection, module load or reboot occurred. Installed=YES; booted=NO. Next: fresh raw receiver capture, separate manual-menu preparation, manually selected R329 boot and receiver-qualified local input. Agent did not independently read root-only installed image bytes. Live PCI return and VCN execution remain unproven.

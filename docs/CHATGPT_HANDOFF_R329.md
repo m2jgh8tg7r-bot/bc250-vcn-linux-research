@@ -1,3 +1,5 @@
+> **R329 installed, independent audit PASS:** Saved package/preflight/installed identities and HOME retirement backup match. Normal boot unchanged. Not booted; fresh receiver capture and manual menu next. Earlier uninstalled notices below are historical.
+
 > **Protected preflight PASS:** User-run result independently matched package, installer, image/entry and checker hashes. Normal default preserved; exact R325 retirement meets space margin. Not installed or booted. Next: installation then independent audit. Earlier pending-preflight statements below are historical.
 
 # R329 — PCI configuration completion HOME package

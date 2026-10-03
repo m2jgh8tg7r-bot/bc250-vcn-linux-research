@@ -2,9 +2,10 @@
   "stage": "R329",
   "home_preparation_complete": true,
   "protected_boot_preflight": "PASS",
-  "installed": false,
+  "installed": true,
   "booted": false,
-  "live_test_ready": false,
+  "live_test_ready": true,
   "hardware_access": false,
-  "active_build": false
+  "active_build": false,
+  "installed_independent_audit": "PASS"
 }
