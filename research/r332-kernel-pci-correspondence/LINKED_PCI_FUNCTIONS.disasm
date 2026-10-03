@@ -1,0 +1,150 @@
+
+
+ffffffff81ec83e0 <pci_bus_read_config_dword>:
+ffffffff81ec83e0:	f3 0f 1e fa          	endbr64
+ffffffff81ec83e4:	e8 17 0e 4d ff       	call   ffffffff81399200 <__fentry__>
+ffffffff81ec83e9:	48 83 ec 18          	sub    $0x18,%rsp
+ffffffff81ec83ed:	65 48 8b 05 13 3c 4f 	mov    %gs:0x24f3c13(%rip),%rax        # ffffffff843bc008 <__stack_chk_guard>
+ffffffff81ec83f4:	02 
+ffffffff81ec83f5:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ffffffff81ec83fa:	31 c0                	xor    %eax,%eax
+ffffffff81ec83fc:	c7 44 24 04 00 00 00 	movl   $0x0,0x4(%rsp)
+ffffffff81ec8403:	00 
+ffffffff81ec8404:	b8 87 00 00 00       	mov    $0x87,%eax
+ffffffff81ec8409:	f6 c2 03             	test   $0x3,%dl
+ffffffff81ec840c:	75 31                	jne    ffffffff81ec843f <pci_bus_read_config_dword+0x5f>
+ffffffff81ec840e:	48 8b 87 c0 00 00 00 	mov    0xc0(%rdi),%rax
+ffffffff81ec8415:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ffffffff81ec841a:	4c 8d 44 24 04       	lea    0x4(%rsp),%r8
+ffffffff81ec841f:	48 89 cb             	mov    %rcx,%rbx
+ffffffff81ec8422:	b9 04 00 00 00       	mov    $0x4,%ecx
+ffffffff81ec8427:	48 8b 40 18          	mov    0x18(%rax),%rax
+ffffffff81ec842b:	e8 10 e9 91 00       	call   ffffffff827e6d40 <__x86_indirect_thunk_array>
+ffffffff81ec8430:	85 c0                	test   %eax,%eax
+ffffffff81ec8432:	74 23                	je     ffffffff81ec8457 <pci_bus_read_config_dword+0x77>
+ffffffff81ec8434:	c7 03 ff ff ff ff    	movl   $0xffffffff,(%rbx)
+ffffffff81ec843a:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ffffffff81ec843f:	48 8b 54 24 08       	mov    0x8(%rsp),%rdx
+ffffffff81ec8444:	65 48 2b 15 bc 3b 4f 	sub    %gs:0x24f3bbc(%rip),%rdx        # ffffffff843bc008 <__stack_chk_guard>
+ffffffff81ec844b:	02 
+ffffffff81ec844c:	75 16                	jne    ffffffff81ec8464 <pci_bus_read_config_dword+0x84>
+ffffffff81ec844e:	48 83 c4 18          	add    $0x18,%rsp
+ffffffff81ec8452:	e9 19 f5 91 00       	jmp    ffffffff827e7970 <__pi___x86_return_thunk>
+ffffffff81ec8457:	8b 54 24 04          	mov    0x4(%rsp),%edx
+ffffffff81ec845b:	89 13                	mov    %edx,(%rbx)
+ffffffff81ec845d:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ffffffff81ec8462:	eb db                	jmp    ffffffff81ec843f <pci_bus_read_config_dword+0x5f>
+ffffffff81ec8464:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ffffffff81ec8469:	e8 72 b8 90 00       	call   ffffffff827d3ce0 <__stack_chk_fail>
+
+
+
+ffffffff827868e0 <pci_conf1_read>:
+ffffffff827868e0:	f3 0f 1e fa          	endbr64
+ffffffff827868e4:	e8 17 29 c1 fe       	call   ffffffff81399200 <__fentry__>
+ffffffff827868e9:	89 f0                	mov    %esi,%eax
+ffffffff827868eb:	09 d0                	or     %edx,%eax
+ffffffff827868ed:	3d ff 00 00 00       	cmp    $0xff,%eax
+ffffffff827868f2:	0f 87 c0 00 00 00    	ja     ffffffff827869b8 <pci_conf1_read+0xd8>
+ffffffff827868f8:	85 ff                	test   %edi,%edi
+ffffffff827868fa:	0f 85 b8 00 00 00    	jne    ffffffff827869b8 <pci_conf1_read+0xd8>
+ffffffff82786900:	81 f9 ff 0f 00 00    	cmp    $0xfff,%ecx
+ffffffff82786906:	0f 8f ac 00 00 00    	jg     ffffffff827869b8 <pci_conf1_read+0xd8>
+ffffffff8278690c:	41 56                	push   %r14
+ffffffff8278690e:	48 c7 c7 b8 4f 60 84 	mov    $0xffffffff84604fb8,%rdi
+ffffffff82786915:	41 89 f6             	mov    %esi,%r14d
+ffffffff82786918:	41 55                	push   %r13
+ffffffff8278691a:	45 89 c5             	mov    %r8d,%r13d
+ffffffff8278691d:	41 54                	push   %r12
+ffffffff8278691f:	41 89 cc             	mov    %ecx,%r12d
+ffffffff82786922:	55                   	push   %rbp
+ffffffff82786923:	89 d5                	mov    %edx,%ebp
+ffffffff82786925:	53                   	push   %rbx
+ffffffff82786926:	4c 89 cb             	mov    %r9,%rbx
+ffffffff82786929:	c1 e5 08             	shl    $0x8,%ebp
+ffffffff8278692c:	e8 3f ea 05 00       	call   ffffffff827e5370 <_raw_spin_lock_irqsave>
+ffffffff82786931:	44 89 e2             	mov    %r12d,%edx
+ffffffff82786934:	48 89 c6             	mov    %rax,%rsi
+ffffffff82786937:	44 89 e0             	mov    %r12d,%eax
+ffffffff8278693a:	81 e2 fc 00 00 00    	and    $0xfc,%edx
+ffffffff82786940:	25 00 0f 00 00       	and    $0xf00,%eax
+ffffffff82786945:	09 d5                	or     %edx,%ebp
+ffffffff82786947:	ba f8 0c 00 00       	mov    $0xcf8,%edx
+ffffffff8278694c:	44 09 f0             	or     %r14d,%eax
+ffffffff8278694f:	c1 e0 10             	shl    $0x10,%eax
+ffffffff82786952:	09 e8                	or     %ebp,%eax
+ffffffff82786954:	0d 00 00 00 80       	or     $0x80000000,%eax
+ffffffff82786959:	ef                   	out    %eax,(%dx)
+ffffffff8278695a:	41 83 fd 02          	cmp    $0x2,%r13d
+ffffffff8278695e:	74 43                	je     ffffffff827869a3 <pci_conf1_read+0xc3>
+ffffffff82786960:	41 83 fd 04          	cmp    $0x4,%r13d
+ffffffff82786964:	74 33                	je     ffffffff82786999 <pci_conf1_read+0xb9>
+ffffffff82786966:	41 83 fd 01          	cmp    $0x1,%r13d
+ffffffff8278696a:	75 12                	jne    ffffffff8278697e <pci_conf1_read+0x9e>
+ffffffff8278696c:	41 83 e4 03          	and    $0x3,%r12d
+ffffffff82786970:	41 8d 94 24 fc 0c 00 	lea    0xcfc(%r12),%edx
+ffffffff82786977:	00 
+ffffffff82786978:	ec                   	in     (%dx),%al
+ffffffff82786979:	0f b6 c0             	movzbl %al,%eax
+ffffffff8278697c:	89 03                	mov    %eax,(%rbx)
+ffffffff8278697e:	48 c7 c7 b8 4f 60 84 	mov    $0xffffffff84604fb8,%rdi
+ffffffff82786985:	e8 66 ea 05 00       	call   ffffffff827e53f0 <_raw_spin_unlock_irqrestore>
+ffffffff8278698a:	31 c0                	xor    %eax,%eax
+ffffffff8278698c:	5b                   	pop    %rbx
+ffffffff8278698d:	5d                   	pop    %rbp
+ffffffff8278698e:	41 5c                	pop    %r12
+ffffffff82786990:	41 5d                	pop    %r13
+ffffffff82786992:	41 5e                	pop    %r14
+ffffffff82786994:	e9 d7 0f 06 00       	jmp    ffffffff827e7970 <__pi___x86_return_thunk>
+ffffffff82786999:	ba fc 0c 00 00       	mov    $0xcfc,%edx
+ffffffff8278699e:	ed                   	in     (%dx),%eax
+ffffffff8278699f:	89 03                	mov    %eax,(%rbx)
+ffffffff827869a1:	eb db                	jmp    ffffffff8278697e <pci_conf1_read+0x9e>
+ffffffff827869a3:	41 83 e4 02          	and    $0x2,%r12d
+ffffffff827869a7:	41 8d 94 24 fc 0c 00 	lea    0xcfc(%r12),%edx
+ffffffff827869ae:	00 
+ffffffff827869af:	66 ed                	in     (%dx),%ax
+ffffffff827869b1:	0f b7 c0             	movzwl %ax,%eax
+ffffffff827869b4:	89 03                	mov    %eax,(%rbx)
+ffffffff827869b6:	eb c6                	jmp    ffffffff8278697e <pci_conf1_read+0x9e>
+ffffffff827869b8:	41 c7 01 ff ff ff ff 	movl   $0xffffffff,(%r9)
+ffffffff827869bf:	b8 ea ff ff ff       	mov    $0xffffffea,%eax
+ffffffff827869c4:	e9 a7 0f 06 00       	jmp    ffffffff827e7970 <__pi___x86_return_thunk>
+
+
+
+ffffffff81ec8790 <pci_read_config_dword>:
+ffffffff81ec8790:	f3 0f 1e fa          	endbr64
+ffffffff81ec8794:	e8 67 0a 4d ff       	call   ffffffff81399200 <__fentry__>
+ffffffff81ec8799:	83 bf cc 00 00 00 03 	cmpl   $0x3,0xcc(%rdi)
+ffffffff81ec87a0:	74 13                	je     ffffffff81ec87b5 <pci_read_config_dword+0x25>
+ffffffff81ec87a2:	8b 47 38             	mov    0x38(%rdi),%eax
+ffffffff81ec87a5:	48 8b 7f 10          	mov    0x10(%rdi),%rdi
+ffffffff81ec87a9:	48 89 d1             	mov    %rdx,%rcx
+ffffffff81ec87ac:	89 f2                	mov    %esi,%edx
+ffffffff81ec87ae:	89 c6                	mov    %eax,%esi
+ffffffff81ec87b0:	e9 2b fc ff ff       	jmp    ffffffff81ec83e0 <pci_bus_read_config_dword>
+ffffffff81ec87b5:	c7 02 ff ff ff ff    	movl   $0xffffffff,(%rdx)
+ffffffff81ec87bb:	b8 86 00 00 00       	mov    $0x86,%eax
+ffffffff81ec87c0:	e9 ab f1 91 00       	jmp    ffffffff827e7970 <__pi___x86_return_thunk>
+
+
+
+ffffffff8278c040 <raw_pci_read>:
+ffffffff8278c040:	f3 0f 1e fa          	endbr64
+ffffffff8278c044:	e8 b7 d1 c0 fe       	call   ffffffff81399200 <__fentry__>
+ffffffff8278c049:	85 ff                	test   %edi,%edi
+ffffffff8278c04b:	75 1d                	jne    ffffffff8278c06a <raw_pci_read+0x2a>
+ffffffff8278c04d:	81 f9 ff 00 00 00    	cmp    $0xff,%ecx
+ffffffff8278c053:	7f 15                	jg     ffffffff8278c06a <raw_pci_read+0x2a>
+ffffffff8278c055:	48 8b 05 fc b7 12 01 	mov    0x112b7fc(%rip),%rax        # ffffffff838b7858 <raw_pci_ops>
+ffffffff8278c05c:	48 85 c0             	test   %rax,%rax
+ffffffff8278c05f:	74 09                	je     ffffffff8278c06a <raw_pci_read+0x2a>
+ffffffff8278c061:	48 8b 00             	mov    (%rax),%rax
+ffffffff8278c064:	e9 d7 ac 05 00       	jmp    ffffffff827e6d40 <__x86_indirect_thunk_array>
+ffffffff8278c069:	cc                   	int3
+ffffffff8278c06a:	48 8b 05 df b7 12 01 	mov    0x112b7df(%rip),%rax        # ffffffff838b7850 <raw_pci_ext_ops>
+ffffffff8278c071:	48 85 c0             	test   %rax,%rax
+ffffffff8278c074:	75 eb                	jne    ffffffff8278c061 <raw_pci_read+0x21>
+ffffffff8278c076:	b8 ea ff ff ff       	mov    $0xffffffea,%eax
+ffffffff8278c07b:	e9 f0 b8 05 00       	jmp    ffffffff827e7970 <__pi___x86_return_thunk>
