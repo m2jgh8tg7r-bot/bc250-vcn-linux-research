@@ -1,7 +1,8 @@
 """Fail-closed check for this machine's saved-ID or fixed-index BLS layout."""
 import re
+from boot_includes import inspect_sources
 
-def check_default(environment, config, before, after):
+def check_default(environment, config, before, after, includes=None):
     # before/after map BLS filenames to text. No filesystem or boot mutations.
     def fields(text):
         result={}
@@ -37,6 +38,6 @@ def check_default(environment, config, before, after):
         return {'mode':'saved_normal_id','selected_entry':saved+'.conf'}
     assert assignments==['set default=1'], 'Only observed fixed default=1 is supported'
     assert lines.count('blscfg')==1 and lines.index('set default=1')<lines.index('blscfg'), 'Unexpected BLS/default control flow'
-    assert not any(re.search(r'\b(menuentry|submenu|configfile|source)\b',x) for x in lines[:lines.index('blscfg')]), 'Preceding menu/config source requires review'
+    include_check=inspect_sources(config,includes or {})
     assert not any(k in environment for k in ['next_entry','blsdir']), 'Unreviewed environment override'
-    return {'mode':'fixed_index_1_no_saved_entry','normal_bls_prefix':oldnormal,'selected_entry':oldnormal[1],'research_count_before':len(oldresearch),'research_count_after':len(newresearch),'normal_prefix_unchanged':True,'scope':'Observed conventional Fedora BLS names and matching numeric versions; not a general GRUB parser'}
+    return {'include_check':include_check,'mode':'fixed_index_1_no_saved_entry','normal_bls_prefix':oldnormal,'selected_entry':oldnormal[1],'research_count_before':len(oldresearch),'research_count_after':len(newresearch),'normal_prefix_unchanged':True,'scope':'Observed conventional Fedora BLS names and matching numeric versions; not a general GRUB parser'}

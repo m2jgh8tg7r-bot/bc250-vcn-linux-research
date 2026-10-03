@@ -1,3 +1,5 @@
+> **Include-check correction:** Observed bootuuid/console/user source lines now receive restricted read-only content validation and hash/existence protection. 13 default and 14 include cases pass. Privileged preflight still pending; no install/boot. [Details](../research/r312-metadata-boot-package/INCLUDE_CHECK_CORRECTION.md).
+
 > **Preflight correction:** Actual configuration uses fixed `default=1` with no saved_entry. Guard updated and 13 CPU cases pass; privileged preflight must be rerun. No installation or boot. See [correction](../research/r312-metadata-boot-package/DEFAULT_CHECK_CORRECTION.md). This supersedes the explicit-saved-ID requirement below.
 
 # R311/R312 — Bounded metadata candidate and HOME boot package
