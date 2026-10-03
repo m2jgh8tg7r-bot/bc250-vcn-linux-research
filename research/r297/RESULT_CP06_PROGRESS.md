@@ -502,8 +502,15 @@ Also still unproven:
 
 ## Next safe direction
 
-Do not immediately classify another CP06 boot as a VCN test.
+The manual BLS-selection mechanism is now independently proven by the SELECT-WITNESS LIVE PASS, and the unchanged main CP06 candidate has subsequently hard-hung twice without a persisted pstore trace.
 
-First use the installed `SELECT-WITNESS no-amdgpu` BLS entry to establish that manual menu selection reaches the intended research BLS path.
+Do **not** repeat the unchanged direct-read CP06 boot.
 
-Only after that selection mechanism is independently witnessed should the CP06 LIVE experiment be retried and its EFI pstore evidence classified.
+The next stage should remain STATIC/READ-ONLY first:
+
+1. verify the research kernel was built with hard-lockup/NMI watchdog support and confirm the relevant kernel parameters are available;
+2. if supported, prepare a BLS-only diagnostic variant that keeps the exact same CP06 initramfs/module but adds bounded hard-lockup panic parameters;
+3. audit that BLS variant without selecting it;
+4. only after that audit consider one LIVE diagnostic run.
+
+If the watchdog diagnostic can panic and persist a stack while the status read is stalled, it can distinguish a CPU-local MMIO stall from a wider fabric/system hang without yet changing the CP06 machine-code body.
