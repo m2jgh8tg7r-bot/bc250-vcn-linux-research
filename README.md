@@ -1,3 +1,5 @@
+> Latest: [R320 — Discovery base ownership and lifetime](docs/CHATGPT_HANDOFF_R320.md). Static audit only; no new hardware test.
+
 > Latest: [R319 — R318 live metadata checkpoint and static interpretation](docs/CHATGPT_HANDOFF_R319.md). Intended panic received; manual recovery reported. No VCN execution claim.
 
 > R318: [Panic-hold package prepared](docs/CHATGPT_HANDOFF_R318.md). Same R316 modules; panic=0 requires manual recovery. Kernel executable correspondence and restart-skipping branch verified; not installed or booted.
