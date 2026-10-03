@@ -1,0 +1,299 @@
+{
+  "checked_at": "2026-10-03T10:05:32.797596+00:00",
+  "result": "PASS",
+  "classification": "STATIC_CONFIRMED",
+  "scope": "Saved-file metadata revalidation and version-pinned host source; no device access",
+  "saved_vcn": {
+    "file_sha256": "a9ec155695b5020009d3986cfd4ebd00ad9ddbd12ac7e5fa15ec86b8a571dbe5",
+    "payload_sha256": "d2a57f82ab8fe7911822052af12f25563d76c1ddefa0978049cf98efb8c671b3",
+    "signer": "c37290c310e64a62b027c56695492368",
+    "payload_size": 405696
+  },
+  "saved_images": [
+    {
+      "label": "bios-p3-read1.bin",
+      "rom_sha256": "691a2ae40f0c9e62211591d234b3d32bcfa775f535a0a947aee34b085101c556",
+      "tos_body_sha256": "19f091ded7bea3ee3c61adc3b6a7e1d2a48c8a7817f885bdb43b9c1f2b6bc43d",
+      "type28_body_sha256": "edae7f4dcdbeab4267b5201218ea7c1be56e8d6cfb9bf1909fba893eb13042c9",
+      "kdbs": [
+        {
+          "directory_type": "0x50",
+          "body_sha256": "cce2f63bde701768c46630aed958941f4f913859560857e2602cbe49e83197bf",
+          "records": 8,
+          "usages": [
+            14,
+            30,
+            31,
+            32,
+            35,
+            42,
+            44,
+            47
+          ],
+          "declared_key_bits": [
+            2048
+          ],
+          "vcn_signer_matches": 0,
+          "control_signer_matches": 0
+        },
+        {
+          "directory_type": "0x51",
+          "body_sha256": "cfc1b0ef089c8dd021f7d1abd7f1fe9da525119d1e5919751e8a9354deac8803",
+          "records": 3,
+          "usages": [
+            10,
+            17,
+            44
+          ],
+          "declared_key_bits": [
+            2048
+          ],
+          "vcn_signer_matches": 0,
+          "control_signer_matches": 1
+        }
+      ]
+    },
+    {
+      "label": "bios-p3-read2.bin",
+      "rom_sha256": "691a2ae40f0c9e62211591d234b3d32bcfa775f535a0a947aee34b085101c556",
+      "tos_body_sha256": "19f091ded7bea3ee3c61adc3b6a7e1d2a48c8a7817f885bdb43b9c1f2b6bc43d",
+      "type28_body_sha256": "edae7f4dcdbeab4267b5201218ea7c1be56e8d6cfb9bf1909fba893eb13042c9",
+      "kdbs": [
+        {
+          "directory_type": "0x50",
+          "body_sha256": "cce2f63bde701768c46630aed958941f4f913859560857e2602cbe49e83197bf",
+          "records": 8,
+          "usages": [
+            14,
+            30,
+            31,
+            32,
+            35,
+            42,
+            44,
+            47
+          ],
+          "declared_key_bits": [
+            2048
+          ],
+          "vcn_signer_matches": 0,
+          "control_signer_matches": 0
+        },
+        {
+          "directory_type": "0x51",
+          "body_sha256": "cfc1b0ef089c8dd021f7d1abd7f1fe9da525119d1e5919751e8a9354deac8803",
+          "records": 3,
+          "usages": [
+            10,
+            17,
+            44
+          ],
+          "declared_key_bits": [
+            2048
+          ],
+          "vcn_signer_matches": 0,
+          "control_signer_matches": 1
+        }
+      ]
+    },
+    {
+      "label": "Robin1.00.zip",
+      "rom_sha256": "e0f5505b7ec36ef9e28868524541513f74bfbae62c236fa18f2e9699bf1f9656",
+      "tos_body_sha256": "19f091ded7bea3ee3c61adc3b6a7e1d2a48c8a7817f885bdb43b9c1f2b6bc43d",
+      "type28_body_sha256": "edae7f4dcdbeab4267b5201218ea7c1be56e8d6cfb9bf1909fba893eb13042c9",
+      "kdbs": [
+        {
+          "directory_type": "0x50",
+          "body_sha256": "cce2f63bde701768c46630aed958941f4f913859560857e2602cbe49e83197bf",
+          "records": 8,
+          "usages": [
+            14,
+            30,
+            31,
+            32,
+            35,
+            42,
+            44,
+            47
+          ],
+          "declared_key_bits": [
+            2048
+          ],
+          "vcn_signer_matches": 0,
+          "control_signer_matches": 0
+        },
+        {
+          "directory_type": "0x51",
+          "body_sha256": "cfc1b0ef089c8dd021f7d1abd7f1fe9da525119d1e5919751e8a9354deac8803",
+          "records": 3,
+          "usages": [
+            10,
+            17,
+            44
+          ],
+          "declared_key_bits": [
+            2048
+          ],
+          "vcn_signer_matches": 0,
+          "control_signer_matches": 1
+        }
+      ]
+    },
+    {
+      "label": "Robin3.00.zip",
+      "rom_sha256": "5d659a3b3fe5cc416c65851da5036941f482d0d0c3724fe7fa62856a1cbac701",
+      "tos_body_sha256": "19f091ded7bea3ee3c61adc3b6a7e1d2a48c8a7817f885bdb43b9c1f2b6bc43d",
+      "type28_body_sha256": "edae7f4dcdbeab4267b5201218ea7c1be56e8d6cfb9bf1909fba893eb13042c9",
+      "kdbs": [
+        {
+          "directory_type": "0x50",
+          "body_sha256": "cce2f63bde701768c46630aed958941f4f913859560857e2602cbe49e83197bf",
+          "records": 8,
+          "usages": [
+            14,
+            30,
+            31,
+            32,
+            35,
+            42,
+            44,
+            47
+          ],
+          "declared_key_bits": [
+            2048
+          ],
+          "vcn_signer_matches": 0,
+          "control_signer_matches": 0
+        },
+        {
+          "directory_type": "0x51",
+          "body_sha256": "cfc1b0ef089c8dd021f7d1abd7f1fe9da525119d1e5919751e8a9354deac8803",
+          "records": 3,
+          "usages": [
+            10,
+            17,
+            44
+          ],
+          "declared_key_bits": [
+            2048
+          ],
+          "vcn_signer_matches": 0,
+          "control_signer_matches": 1
+        }
+      ]
+    },
+    {
+      "label": "Robin5.00.zip",
+      "rom_sha256": "a8ebd8105096b7ac9cb0dc526d0383bb72eed1c6c748616091890a22856bad86",
+      "tos_body_sha256": "259a31d52ec847df23596ae1c7e736212ff6bab7793af741b83fa62e439ade68",
+      "type28_body_sha256": "4f864eaaf448071770328773504ffa7e9a78f170215b6c5f54f825e8ab19761b",
+      "kdbs": [
+        {
+          "directory_type": "0x50",
+          "body_sha256": "cce2f63bde701768c46630aed958941f4f913859560857e2602cbe49e83197bf",
+          "records": 8,
+          "usages": [
+            14,
+            30,
+            31,
+            32,
+            35,
+            42,
+            44,
+            47
+          ],
+          "declared_key_bits": [
+            2048
+          ],
+          "vcn_signer_matches": 0,
+          "control_signer_matches": 0
+        },
+        {
+          "directory_type": "0x51",
+          "body_sha256": "cfc1b0ef089c8dd021f7d1abd7f1fe9da525119d1e5919751e8a9354deac8803",
+          "records": 3,
+          "usages": [
+            10,
+            17,
+            44
+          ],
+          "declared_key_bits": [
+            2048
+          ],
+          "vcn_signer_matches": 0,
+          "control_signer_matches": 1
+        }
+      ]
+    }
+  ],
+  "distinct_rom_hashes": 4,
+  "saved_instruction_byte_provenance": [
+    {
+      "image": "tos",
+      "image_sha256": "19f091ded7bea3ee3c61adc3b6a7e1d2a48c8a7817f885bdb43b9c1f2b6bc43d",
+      "extent": "TOS body",
+      "verified": {
+        "instructions": 6618,
+        "literals": 253,
+        "data": 0
+      },
+      "negative_controls": [
+        "altered image rejected",
+        "altered record rejected"
+      ]
+    },
+    {
+      "image": "t28",
+      "image_sha256": "ebd9a7d279c5ac5751ebcc76fa7380c2da003e8f9bb49c1a419ef4c951e320e1",
+      "extent": "type28 container",
+      "verified": {
+        "instructions": 22755,
+        "literals": 977,
+        "data": 363
+      },
+      "negative_controls": [
+        "altered image rejected",
+        "altered record rejected"
+      ]
+    }
+  ],
+  "distinct_kdb_body_hashes": [
+    "cce2f63bde701768c46630aed958941f4f913859560857e2602cbe49e83197bf",
+    "cfc1b0ef089c8dd021f7d1abd7f1fe9da525119d1e5919751e8a9354deac8803"
+  ],
+  "host_source": {
+    "commit": "0bb924b042ab85b8f529aed6e4f3e24750584276",
+    "relative_path": "drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c",
+    "baseline_sha256": "753849c7c491b137913668f77b8a3a0f539c7cf5cd46423db22b8f1513d9d9f6",
+    "working_sha256": "eb62b3f8575eff45019712ebc3f68acf4d190834900eb591b5ff7416a42ff075",
+    "baseline_order_confirmed": [
+      "vcn_v2_0_mc_resume(vinst);",
+      "/* release VCPU reset to boot */",
+      "if (status & 2)",
+      "/* force RBC into idle state */"
+    ],
+    "working_quarantines": {
+      "vcn_v2_0_hw_init": {
+        "line": 316,
+        "cyan_guard_before_normal_body": true
+      },
+      "vcn_v2_0_mc_resume": {
+        "line": 429,
+        "cyan_guard_before_normal_body": true
+      },
+      "vcn_v2_0_start": {
+        "line": 1064,
+        "cyan_guard_before_normal_body": true
+      }
+    },
+    "error_detector_symbols_in_vcn_source": false
+  },
+  "limits": [
+    "No signature authentication or private-key identification",
+    "No running TOS, service image or KDB identity established",
+    "Public record membership cannot prove firmware acceptance",
+    "Source quarantine is deliberate experimental scope, not silicon incapability",
+    "No usage-check bypass conditions or modification targets reproduced",
+    "External reset-primitive and ERR_DETECT value claims remain UNPROVEN"
+  ]
+}
