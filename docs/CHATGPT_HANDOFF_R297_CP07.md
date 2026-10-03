@@ -1,3 +1,5 @@
+> **Current status, 2026-10-03:** CP07 selected by user; persistent blackout and manual reboot reported. Salvage collection PASS, zero pstore records. Execution boundary and cause remain UNPROVEN. Do not repeat unchanged CP07; prior arm/not-booted instructions below are historical. [Postmortem and static observation audit](R297_CP07_OBSERVABILITY_AUDIT.md).
+
 # R297 CP07 — read-only PGFSM_STATUS control prepared
 
 Date: 2026-10-03 JST
