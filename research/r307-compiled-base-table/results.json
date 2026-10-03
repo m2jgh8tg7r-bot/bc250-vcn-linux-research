@@ -1,0 +1,70 @@
+{
+  "classification": "PROVEN_STATICALLY",
+  "header": "r152-psp-boundary-src/drivers/gpu/drm/amd/include/cyan_skillfish_ip_offset.h",
+  "header_sha256": "4e3e383d212924b1378a2225edaee8c42046ebf4b19475a128985941720492d3",
+  "initializer_bytes": 120,
+  "initializer_sha256": "0a5342be2ea2db10fa16d3a48b9fd743cbb2b003ebd2d60c1425af21df74b6fb",
+  "modules": [
+    {
+      "compiled_init_references": [
+        {
+          "function_relative_offset": 294,
+          "relocation_type": "R_X86_64_32S",
+          "table_relative_addend": 0
+        }
+      ],
+      "checkpoint": "CP05",
+      "module": "research/r297-checkpoint-panic/r297-cp05-home-package/amdgpu-r297-cp05-signed.ko",
+      "module_sha256": "30bf6a5dfc0436bb1fafea41ed7bcc6b2e5453dff09206fbdd626fa2a5cf0f0f",
+      "symbol": "UVD0_BASE",
+      "symbol_size": 120,
+      "section": ".rodata",
+      "compiled_data_sha256": "0a5342be2ea2db10fa16d3a48b9fd743cbb2b003ebd2d60c1425af21df74b6fb",
+      "matches_retained_header_initializer": true
+    },
+    {
+      "compiled_init_references": [
+        {
+          "function_relative_offset": 294,
+          "relocation_type": "R_X86_64_32S",
+          "table_relative_addend": 0
+        }
+      ],
+      "checkpoint": "CP06",
+      "module": "research/r297-checkpoint-panic/r297-cp06-home-package/amdgpu-r297-cp06-signed.ko",
+      "module_sha256": "2944bb21c058e4561fa17d9f49a64d301a8665ab0b455bc49c12b5de30c6bbe8",
+      "symbol": "UVD0_BASE",
+      "symbol_size": 120,
+      "section": ".rodata",
+      "compiled_data_sha256": "0a5342be2ea2db10fa16d3a48b9fd743cbb2b003ebd2d60c1425af21df74b6fb",
+      "matches_retained_header_initializer": true
+    },
+    {
+      "compiled_init_references": [
+        {
+          "function_relative_offset": 294,
+          "relocation_type": "R_X86_64_32S",
+          "table_relative_addend": 0
+        }
+      ],
+      "checkpoint": "CP07",
+      "module": "research/r297-checkpoint-panic/r297-cp07-home-package/amdgpu-r297-cp07-signed.ko",
+      "module_sha256": "fbb5849df514077e75d41a8a3eb46c7f85e62aa7f6f9c82e549c8e3c64bb8ce3",
+      "symbol": "UVD0_BASE",
+      "symbol_size": 120,
+      "section": ".rodata",
+      "compiled_data_sha256": "0a5342be2ea2db10fa16d3a48b9fd743cbb2b003ebd2d60c1425af21df74b6fb",
+      "matches_retained_header_initializer": true
+    }
+  ],
+  "all_match": true,
+  "limits": [
+    "UVD0_BASE belongs to the non-Skillfish2 fallback branch; retained source selects discovery-derived bases for PCI 13FE",
+    "Data-symbol equality is not proof that initialization ran",
+    "Not proof of failed-boot reg_offset contents or runtime device response",
+    "Six storage slots and zero entries are not physical-instance discovery evidence",
+    "Not a complete transitive-header or module-equivalence claim"
+  ],
+  "hardware_access": false,
+  "module_executed": false
+}

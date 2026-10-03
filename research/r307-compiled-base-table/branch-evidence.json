@@ -1,0 +1,48 @@
+{
+  "classification": "PROVEN_STATICALLY",
+  "scope": "Retained source; not a failed-boot runtime witness",
+  "evidence": [
+    {
+      "source": "r152-psp-boundary-src/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c",
+      "sha256": "cc9fe304c5e51434bb7a2bc4e04ecd3ce61c95e642ea2e9e8ec910d6eb66b679",
+      "first_line": 1567,
+      "last_line": 1603,
+      "excerpt": "static int amdgpu_device_init_apu_flags(struct amdgpu_device *adev)\n{\n\tif (!(adev->flags & AMD_IS_APU) ||\n\t    adev->asic_type < CHIP_RAVEN)\n\t\treturn 0;\n\n\tswitch (adev->asic_type) {\n\tcase CHIP_RAVEN:\n\t\tif (adev->pdev->device == 0x15dd)\n\t\t\tadev->apu_flags |= AMD_APU_IS_RAVEN;\n\t\tif (adev->pdev->device == 0x15d8)\n\t\t\tadev->apu_flags |= AMD_APU_IS_PICASSO;\n\t\tbreak;\n\tcase CHIP_RENOIR:\n\t\tif ((adev->pdev->device == 0x1636) ||\n\t\t    (adev->pdev->device == 0x164c))\n\t\t\tadev->apu_flags |= AMD_APU_IS_RENOIR;\n\t\telse\n\t\t\tadev->apu_flags |= AMD_APU_IS_GREEN_SARDINE;\n\t\tbreak;\n\tcase CHIP_VANGOGH:\n\t\tadev->apu_flags |= AMD_APU_IS_VANGOGH;\n\t\tbreak;\n\tcase CHIP_YELLOW_CARP:\n\t\tbreak;\n\tcase CHIP_CYAN_SKILLFISH:\n\t\tif ((adev->pdev->device == 0x13FE) ||\n\t\t    (adev->pdev->device == 0x143F))\n\t\t\tadev->apu_flags |= AMD_APU_IS_CYAN_SKILLFISH2;\n\t\tbreak;\n\tdefault:\n\t\tbreak;\n\t}\n\n\treturn 0;\n}\n"
+    },
+    {
+      "source": "r152-psp-boundary-src/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c",
+      "sha256": "cc9fe304c5e51434bb7a2bc4e04ecd3ce61c95e642ea2e9e8ec910d6eb66b679",
+      "first_line": 3858,
+      "last_line": 3858,
+      "excerpt": "\tamdgpu_device_init_apu_flags(adev);"
+    },
+    {
+      "source": "r152-psp-boundary-src/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c",
+      "sha256": "cc9fe304c5e51434bb7a2bc4e04ecd3ce61c95e642ea2e9e8ec910d6eb66b679",
+      "first_line": 3972,
+      "last_line": 3972,
+      "excerpt": "\tr = amdgpu_device_ip_early_init(adev);"
+    },
+    {
+      "source": "r152-psp-boundary-src/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c",
+      "sha256": "cc9fe304c5e51434bb7a2bc4e04ecd3ce61c95e642ea2e9e8ec910d6eb66b679",
+      "first_line": 2078,
+      "last_line": 2078,
+      "excerpt": "\t\tr = amdgpu_discovery_set_ip_blocks(adev);"
+    },
+    {
+      "source": "r152-psp-boundary-src/drivers/gpu/drm/amd/amdgpu/amdgpu_discovery.c",
+      "sha256": "37202992e43a0d450b0b7e0d9c1e47ca97af95f8d1d02e6f22108aaf9d5302b5",
+      "first_line": 3053,
+      "last_line": 3066,
+      "excerpt": "\tcase CHIP_CYAN_SKILLFISH:\n\t\tif (adev->apu_flags & AMD_APU_IS_CYAN_SKILLFISH2) {\n\t\t\tr = amdgpu_discovery_reg_base_init(adev);\n\t\t\tif (r)\n\t\t\t\treturn -EINVAL;\n\n\t\t\tamdgpu_discovery_harvest_ip(adev);\n\t\t\tamdgpu_discovery_get_gfx_info(adev);\n\t\t\tamdgpu_discovery_get_mall_info(adev);\n\t\t\tamdgpu_discovery_get_vcn_info(adev);\n\t\t} else {\n\t\t\tcyan_skillfish_reg_base_init(adev);\n\t\t\tadev->sdma.num_instances = 2;\n\t\t\tadev->sdma.sdma_mask = 3;"
+    },
+    {
+      "source": "r152-psp-boundary-src/drivers/gpu/drm/amd/amdgpu/amdgpu_discovery.c",
+      "sha256": "37202992e43a0d450b0b7e0d9c1e47ca97af95f8d1d02e6f22108aaf9d5302b5",
+      "first_line": 1630,
+      "last_line": 1658,
+      "excerpt": "\t\t\t\t/*\n\t\t\t\t * convert the endianness of base addresses in place,\n\t\t\t\t * so that we don't need to convert them when accessing adev->reg_offset.\n\t\t\t\t */\n\t\t\t\tif (ihdr->base_addr_64_bit)\n\t\t\t\t\t/* Truncate the 64bit base address from ip discovery\n\t\t\t\t\t * and only store lower 32bit ip base in reg_offset[].\n\t\t\t\t\t * Bits > 32 follows ASIC specific format, thus just\n\t\t\t\t\t * discard them and handle it within specific ASIC.\n\t\t\t\t\t * By this way reg_offset[] and related helpers can\n\t\t\t\t\t * stay unchanged.\n\t\t\t\t\t * The base address is in dwords, thus clear the\n\t\t\t\t\t * highest 2 bits to store.\n\t\t\t\t\t */\n\t\t\t\t\tip->base_address[k] =\n\t\t\t\t\t\tlower_32_bits(le64_to_cpu(ip->base_address_64[k])) & 0x3FFFFFFF;\n\t\t\t\telse\n\t\t\t\t\tip->base_address[k] = le32_to_cpu(ip->base_address[k]);\n\t\t\t\tDRM_DEBUG(\"\\t0x%08x\\n\", ip->base_address[k]);\n\t\t\t}\n\n\t\t\tfor (hw_ip = 0; hw_ip < MAX_HWIP; hw_ip++) {\n\t\t\t\tif (hw_id_map[hw_ip] == le16_to_cpu(ip->hw_id) &&\n\t\t\t\t    hw_id_map[hw_ip] != 0) {\n\t\t\t\t\tDRM_DEBUG(\"set register base offset for %s\\n\",\n\t\t\t\t\t\t\thw_id_names[le16_to_cpu(ip->hw_id)]);\n\t\t\t\t\tadev->reg_offset[hw_ip][ip->instance_number] =\n\t\t\t\t\t\tip->base_address;\n\t\t\t\t\t/* Instance support is somewhat inconsistent."
+    }
+  ]
+}

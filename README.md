@@ -1,3 +1,5 @@
+> **R307 correction:** The retained Skillfish2 source path derives register bases from IP discovery. Compiled legacy UVD0_BASE equality does not attest failed-boot runtime bases. CP05 live evidence remains unchanged. [R307](https://github.com/m2jgh8tg7r-bot/bc250-vcn-linux-research/blob/main/docs/CHATGPT_HANDOFF_R307.md).
+
 > **Current checkpoint: R306 (2026-10-03 JST).** [Retained artifact/header provenance audit](docs/CHATGPT_HANDOFF_R306.md): 26 hash comparison rows match; saved CP05/06 modules and CP07 package/image records agree. Historical header-content identity and failed-boot runtime state remain distinct unknowns. No new device operation or build.
 >
 > R303's later receiver evidence confirms the pre-MMIO guard boundary; older “not installed/booted” notes below are superseded by its [live-result section](docs/CHATGPT_HANDOFF_R303_NETCP04.md). [R304](docs/CHATGPT_HANDOFF_R304.md) defers an unnecessary CP05 repeat; [R305](docs/CHATGPT_HANDOFF_R305.md) records conditional source access mapping. CP06/07 cause and VCPU execution remain unproven.
