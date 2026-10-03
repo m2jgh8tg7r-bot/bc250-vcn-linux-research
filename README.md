@@ -1,3 +1,5 @@
+> **R333 static continuation:** [Latest checkpoint](docs/CHATGPT_HANDOFF_R333.md). No new hardware operation; no more live trials this week.
+
 > **R332 static continuation:** [Latest checkpoint](docs/CHATGPT_HANDOFF_R332.md). No new hardware operation; no more live trials this week.
 
 > **R331 low-quota handoff:** [Self-contained continuation record](docs/CHATGPT_HANDOFF_R331.md). Generic PCI lock excluded by build config; type1 backend lock/IO remain distinct unproven candidates. R329 terminal post-read begin/manual reset confirmed. User forbids more live tests this week. Static continuation only.

@@ -1,0 +1,8 @@
+{
+  "drivers/net/netconsole.c": "8a9c4888b77601c10be7e9dc46b0e1d0a60fb1f6485705c5b30489a859736932",
+  "net/core/netpoll.c": "74d6d64b047cbc09d2911fba5ac3a980200909472b81c1967f7edc4bc3b0feb0",
+  "drivers/net/ethernet/realtek/r8169_main.c": "be0ed0d27f4d62dfaefdb59a7cf4438a8b82df3b66c24266cbcf065d929acdc8",
+  "drivers/gpu/drm/amd/amdgpu/amdgpu_device.c": "cc9fe304c5e51434bb7a2bc4e04ecd3ce61c95e642ea2e9e8ec910d6eb66b679",
+  "drivers/gpu/drm/amd/amdgpu/amdgpu_virt.c": "adebd320e2b819a7d940e843f46d9e14a22b46058fa82f04d186ed7fd9a1ab4d",
+  "drivers/gpu/drm/amd/amdgpu/amdgpu_virt.h": "ffbd3e2e24011bc610e67fbb814279dfd6869c8dca5349a98748e136b40f1e1f"
+}
