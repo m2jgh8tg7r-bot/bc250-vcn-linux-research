@@ -1,0 +1,12 @@
+{
+  "syntax": "PASS",
+  "classifier_cases": 6,
+  "complete_ordered_record": "PROVEN_LIVE",
+  "reversed_order": "UNPROVEN",
+  "missing_panic": "UNPROVEN",
+  "old_stage": "UNPROVEN",
+  "empty_capture": "UNPROVEN",
+  "split_records": "UNPROVEN",
+  "privileged_arm_execution": "NOT_PERFORMED",
+  "collector_live_execution": "NOT_PERFORMED"
+}

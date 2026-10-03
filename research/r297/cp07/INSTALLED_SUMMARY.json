@@ -1,0 +1,17 @@
+{
+  "contract": "PASS",
+  "installed_hashes": {
+    "/boot/initramfs-7.2.3-r297-cp07.img": "a8160d963b7b8b21cf7d9078f157895259944050611abedee2576d670c9ca93b",
+    "/boot/loader/entries/boot-entry-r297-cp07.conf": "719e0bfb6f522bfbf3861c1100802e1b4d55d1c70165c72ed2db897ea0fbb501"
+  },
+  "cp06_backup_hashes": {
+    "/boot/initramfs-7.2.3-r297-cp06.img": "9bfac31bfa9bd0a1cf44d0afb009a332b8f3c6857312883041917ec6b7010927",
+    "/boot/loader/entries/boot-entry-r297-cp06.conf": "63d6dc8b849c3e2652de20b37e58a7fdd124f9f53953c0c75df4b4453ecab8d0",
+    "/boot/loader/entries/boot-entry-r297-cp06-select-witness.conf": "ad6fe52270cea2786e643c2cd126c045b7fdba275333e05cb12eebd84a90be3b"
+  },
+  "boot_free_bytes": 78823424,
+  "boot_selection_change": false,
+  "hardware_access": false,
+  "reboot": false,
+  "independently_recomputed_installed_image_and_bls_match": true
+}

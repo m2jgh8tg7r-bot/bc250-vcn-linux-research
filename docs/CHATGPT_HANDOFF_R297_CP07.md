@@ -3,7 +3,7 @@
 Date: 2026-10-03 JST
 
 STAGE=R297 CP07 STATIC / BUILD-ONLY / HOME PACKAGE
-RESULT=Read-only control candidate built and audited; not installed or booted.
+RESULT=Read-only control candidate built, audited and installed without selection; not booted.
 STATIC_OR_LIVE=PROVEN_STATICALLY
 HARDWARE_ACCESS=NO
 HARDWARE_MUTATION=NO
@@ -11,7 +11,7 @@ HARDWARE_FAILURE=UNPROVEN
 PROVEN=Source/helper, object, fullmodule, signed-module machine contracts; executable-section identity; archive round-trip. CP05 remains strongest saved PROVEN_LIVE boundary.
 REJECTED=CP06 hang alone proves status-read execution or cause; unchanged CP06 retry.
 UNPROVEN=CP07 LIVE execution/read value/safety, PGFSM transition, physical power, VCPU, hardware rings, VA-API, FFmpeg decode and stable playback.
-NEXT=Privileged read-only preflight, then install-no-select and final identity audit; notify user before boot-condition changes or reboot. No automatic LIVE launch.
+NEXT=Manual-menu arm and user-selected CP07 boot, then normal-boot postmortem collection. No automatic LIVE launch.
 
 ## Experimental contrast
 
@@ -68,3 +68,15 @@ The user executed the prepared privileged read-only preflight. The saved result 
 The normal boot, normal pstore policy and absence of pending one-shot selection passed. Free boot space: 78,823,424 bytes. New image: 246,028,802 bytes. Retiring the verified CP06 image plus its main/witness entries allows the 52,428,800-byte margin while retaining the normal and R180 recovery entries.
 
 NEXT=Execute prepared install-no-select via sudo; revalidate all preflight identities, flush verified CP06 backups before deletion, install CP07, verify installed hashes and protected policy. Install has not been executed; CP07 LIVE remains UNPROVEN. The installer now flushes backups before retirement and handles catchable interruption with rollback. Syntax check passed; these recovery paths are not live-proven.
+
+## CP07 installed, not yet LIVE — 2026-10-03
+
+The user executed install-no-select. Saved installed-final-audit is PASS. The installed image and main BLS hashes were independently recomputed and matched the audited package. Three CP06 recovery artifacts were retained in a verified local backup before retirement. Normal entries, R180 recovery, research kernel, grub.cfg and grubenv remained unchanged. Remaining /boot capacity is 78,823,424 bytes. No module load, VCN access, boot selection change or reboot occurred.
+
+Classification: PROVEN_STATICALLY for installed artifact identity. CP07 LIVE remains UNPROVEN.
+
+Manual-menu arm and postmortem collection tools are prepared. Arm rechecks installed/protected hashes and verified CP06 backups, archives and verifies every exposed pstore record before clearing, restores normal pstore policy, then sets only menu_show_once_timeout=30. It never sets next_entry or reboots. On catchable failure it restores the byte-exact grubenv snapshot and normal pstore policy. These privileged recovery paths remain UNPROVEN until executed; source syntax is checked.
+
+The postmortem collector requires return to normal Bazzite. It does not clear pstore or access VCN. It restores the original pstore policy unconditionally and retains raw records locally. Classification requires one record containing ordered helper/guards/raw-value/CP07-panic markers. Six CPU cases passed, including reversed order, missing panic, old-stage markers, no record, and split-record negatives. Split records remain UNPROVEN pending manual correlation; zero pstore does not establish the instruction that stalled.
+
+NEXT=Run manual-menu arm; after its PASS, manually reboot and select the CP07 read-only checkpoint. A returned read should log its raw value and intentionally panic with panic=10. Return to normal Bazzite before collection. A persistent hard hang may still require manual power recovery; CP07 recovery and read safety are not yet proven. Do not repeat an unchanged hanging test. No autonomous reboot or live test has been launched.
