@@ -1,3 +1,5 @@
+> **R330 / R329 partial LIVE:** [PCI boundary observation](docs/CHATGPT_HANDOFF_R330.md). Pre-read ret0/identity matches and CONFIG write-return received. Pasted tail is post-read begin; return/panic and recovery method unproven. No unchanged repeat.
+
 > **R329 installed, independent audit PASS:** [Installed status](research/r329-pci-config-package/INSTALLED_SUMMARY.md). Protected files/default and normal kernel unchanged; R325 backup verified. Not booted; raw receiver and manual menu next.
 
 > **R329 protected preflight PASS:** [Verified preflight](research/r329-pci-config-package/PREFLIGHT_SUMMARY.md). Local hashes match; normal default preserved. Not installed or booted; installation and independent audit next.
