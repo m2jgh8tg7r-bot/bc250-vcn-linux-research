@@ -54,3 +54,9 @@ UNPROVEN=R302 installation/boot, real gate behavior, GPU-stage transport, CP03 b
 NEXT=User-run privileged read-only preflight, then independent audit
 
 Private network configuration and raw machine logs remain local. [Package audit](../research/r302/PACKAGE_AUDIT.json), [independent tree comparison](../research/r302/INDEPENDENT_PACKAGE_AUDIT.json), [CPU/PTY gate results](../research/r302/GATE_TEST.json).
+
+## Privileged read-only preflight verified
+
+The user-run preflight returned PASS. The saved result was independently checked against current HOME package/image/BLS/init/installer hashes, exact installed R299 retirement hashes, prior protected records and R300 identities. Nine protected files were directly readable and matched; four require privileged reads and are supported by the user-run preflight record, not a new independent privileged read. Estimated post-replacement capacity is 135,906,713 bytes, above the 52,428,800-byte margin. Normal kernel confirmed; no boot write, selection change, module load or reboot.
+
+NEXT=User-run the same install.py with --install. This archives and verifies R299 before replacement, installs R302 without selection, preserves R300/normal/recovery artifacts, and saves an installed audit. Audit that result before menu preparation or manual boot. Installation and R302 LIVE remain UNPROVEN.
