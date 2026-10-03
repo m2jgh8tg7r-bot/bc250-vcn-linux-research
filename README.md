@@ -1,3 +1,5 @@
+> R318: [Panic-hold package prepared](docs/CHATGPT_HANDOFF_R318.md). Same R316 modules; panic=0 requires manual recovery. Kernel executable correspondence and restart-skipping branch verified; not installed or booted.
+
 > R317: [Panic-flush ordering audit](docs/CHATGPT_HANDOFF_R317.md). Retained unsafe netconsole final flush follows timed restart, providing a concrete missing-tail hypothesis. R316 extended reception recorded; checkpoint/reset cause unproven. No further hardware tests today.
 
 > R316: [Extended metadata boot package prepared](docs/CHATGPT_HANDOFF_R316.md). Only init changed; modules/firmware identical to R312, archive verified. Privileged preflight pending; not installed or booted.

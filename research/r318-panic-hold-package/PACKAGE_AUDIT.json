@@ -1,0 +1,16 @@
+{
+  "contract": "PASS",
+  "image_sha256": "99ce2746bc8ce353df06e407dbc58c7894c3d9e0009a0dcef733aeb475b62de9",
+  "image_size": 168061883,
+  "bls_sha256": "ae581209c69f07f39ddb77f0e56f8c9eb221866edf2fdc7e2b57d1d1b7750423",
+  "init_sha256": "0dd442e1777fe9ed7c38ffd6b55f7eb8bf429671bf7d6ccc6eed9c8b240d8958",
+  "changed_paths": [
+    "init"
+  ],
+  "roundtrip_exact": true,
+  "baseline_unchanged": true,
+  "all_modules_firmware_unchanged": true,
+  "installed": false,
+  "booted": false,
+  "hardware_access": false
+}
