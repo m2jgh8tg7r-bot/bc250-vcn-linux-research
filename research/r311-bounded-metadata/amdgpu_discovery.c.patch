@@ -1,0 +1,16 @@
+--- a/amdgpu_discovery.c
++++ b/amdgpu_discovery.c
+@@ -1646,6 +1646,13 @@
+ 				else
+ 					ip->base_address[k] = le32_to_cpu(ip->base_address[k]);
+ 				DRM_DEBUG("\t0x%08x\n", ip->base_address[k]);
++				/* Existing count-bounded parser loop; log at most 3 slots. */
++				if (hw_id == VCN_HWID && k < 3)
++					dev_emerg(adev->dev,
++						  "BC250 R311 DISC die=%d inst=%u count=%u index=%u base=0x%08x\n",
++						  i, (unsigned int)inst,
++						  (unsigned int)num_base_address,
++						  (unsigned int)k, ip->base_address[k]);
+ 			}
+ 
+ 			for (hw_ip = 0; hw_ip < MAX_HWIP; hw_ip++) {

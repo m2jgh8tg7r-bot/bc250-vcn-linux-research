@@ -1,0 +1,17 @@
+{
+  "result": "PASS",
+  "scope": "Rebuilt pair, not equivalence to historical CP04",
+  "modules": [
+    {
+      "variant": "baseline",
+      "module": "amdgpu.baseline.ko",
+      "sha256": "3932e902a6c2cea08891087cc50e639a467383b7a0ef6878c7d32c7c661909d9"
+    },
+    {
+      "variant": "candidate",
+      "module": "amdgpu.candidate.ko",
+      "sha256": "ba0bd9ffa33e86e8170d9b4b197f81d2a7c5bd458dd272ab0ea7b0296e916b7f"
+    }
+  ],
+  "hardware_access": false
+}

@@ -1,0 +1,10 @@
+{
+  "amdgpu_discovery.c": {
+    "baseline_sha256": "37202992e43a0d450b0b7e0d9c1e47ca97af95f8d1d02e6f22108aaf9d5302b5",
+    "candidate_sha256": "692a948197981aea57969d4444ef6c66d3083f0c1fc7a5525fb7ba4c7895c3bb"
+  },
+  "vcn_v2_0.c": {
+    "baseline_sha256": "49416974d1a816a22dc0f7a768fc3528a98eb643525156afb0f9dbd358203f42",
+    "candidate_sha256": "619da2f08eb0d116f83930d1746721d93eaeae526cc292e49477150fe3168371"
+  }
+}

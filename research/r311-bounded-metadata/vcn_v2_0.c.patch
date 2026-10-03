@@ -1,0 +1,19 @@
+--- a/vcn_v2_0.c
++++ b/vcn_v2_0.c
+@@ -536,7 +536,15 @@
+ 
+ 	dev_emerg(adev->dev,
+ 		  "BC250 R297 CP04: guards_pass before first VCN MMIO\n");
+-	panic("BC250 R297 CP04 guards_pass before first VCN MMIO");
++	/* Scalar software fields only; no reg_offset dereference here. */
++	dev_emerg(adev->dev,
++		  "BC250 R311 META apu=0x%lx pg=0x%llx cg=0x%llx no_hw=%u aperture=%llu\n",
++		  adev->apu_flags, (unsigned long long)adev->pg_flags,
++		  (unsigned long long)adev->cg_flags,
++		  (unsigned int)adev->no_hw_access,
++		  (unsigned long long)adev->rmmio_size);
++	dev_emerg(adev->dev, "BC250 R311 META complete before helper VCN MMIO\n");
++	panic("BC250 R311 metadata checkpoint before helper VCN MMIO");
+ 	/*
+ 	 * Zero-flag branch of
+ 	 * vcn_v2_0_disable_static_power_gating().

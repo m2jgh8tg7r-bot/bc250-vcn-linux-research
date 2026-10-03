@@ -1,0 +1,42 @@
+{
+  "result": "PASS",
+  "comparisons": [
+    {
+      "object": "amdgpu_discovery",
+      "common_function_symbols": 66,
+      "changed_function_bytes": [
+        "amdgpu_discovery_fini",
+        "amdgpu_discovery_reg_base_init",
+        "amdgpu_discovery_reg_base_init.cold",
+        "amdgpu_discovery_set_ip_blocks",
+        "amdgpu_discovery_sysfs_init.isra.0"
+      ],
+      "added": [],
+      "removed": []
+    },
+    {
+      "object": "vcn_v2_0",
+      "common_function_symbols": 53,
+      "changed_function_bytes": [
+        "vcn_v2_0_hw_init.cold"
+      ],
+      "added": [],
+      "removed": []
+    }
+  ],
+  "checkpoint_call_relocations": [
+    "_dev_info-0x4",
+    "_dev_info-0x4",
+    "_dev_info-0x4",
+    "_dev_emerg-0x4",
+    "_dev_emerg-0x4",
+    "_dev_emerg-0x4",
+    "panic-0x4"
+  ],
+  "limits": [
+    "Function-byte comparison is before relocation and excludes debug metadata",
+    "Matching bytes do not attest referenced data, callees or runtime execution",
+    "Object checkpoint inspection is not a final linked module audit"
+  ],
+  "hardware_access": false
+}

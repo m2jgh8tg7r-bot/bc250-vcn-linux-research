@@ -1,0 +1,26 @@
+{
+  "result": "PASS",
+  "scope": "Same isolated tree/toolchain baseline and candidate objects; not a complete module or live test",
+  "objects": [
+    {
+      "variant": "baseline",
+      "object": "amdgpu_discovery.baseline.o",
+      "sha256": "1e4b93ce058d632e4038ca4497614abbfca5f3afb4c36e4c579011f3b010c6bf"
+    },
+    {
+      "variant": "baseline",
+      "object": "vcn_v2_0.baseline.o",
+      "sha256": "93e448dcf461e702f2454c2afa25fa293913de62d2b40a95dc22f9da340361cc"
+    },
+    {
+      "variant": "candidate",
+      "object": "amdgpu_discovery.candidate.o",
+      "sha256": "ae4ef392ea2ffeb5ea70e3be1b6f950e79ba4da9389d2420e2774fe5de1e7e05"
+    },
+    {
+      "variant": "candidate",
+      "object": "vcn_v2_0.candidate.o",
+      "sha256": "8f48b8716cf44ce8a6826fda7d4f787670467f2046b7631e082281068dba3e09"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "scope": "Disassembly instruction text only; relocation records/data not normalized or proven equivalent",
+  "comparisons": [
+    {
+      "function": "amdgpu_discovery_fini",
+      "instruction_text_equal_after_symbolizing_direct_targets": true
+    },
+    {
+      "function": "amdgpu_discovery_reg_base_init",
+      "instruction_text_equal_after_symbolizing_direct_targets": false
+    },
+    {
+      "function": "amdgpu_discovery_reg_base_init.cold",
+      "instruction_text_equal_after_symbolizing_direct_targets": false
+    },
+    {
+      "function": "amdgpu_discovery_set_ip_blocks",
+      "instruction_text_equal_after_symbolizing_direct_targets": true
+    },
+    {
+      "function": "amdgpu_discovery_sysfs_init.isra.0",
+      "instruction_text_equal_after_symbolizing_direct_targets": true
+    },
+    {
+      "function": "vcn_v2_0_hw_init.cold",
+      "instruction_text_equal_after_symbolizing_direct_targets": false
+    }
+  ]
+}

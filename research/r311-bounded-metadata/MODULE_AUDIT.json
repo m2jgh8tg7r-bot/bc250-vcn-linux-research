@@ -1,0 +1,49 @@
+{
+  "result": "PASS",
+  "scope": "Final linked pre-relocation checkpoint path and module metadata, not complete semantic equivalence or live operation",
+  "modules": [
+    {
+      "variant": "baseline",
+      "sha256": "3932e902a6c2cea08891087cc50e639a467383b7a0ef6878c7d32c7c661909d9",
+      "bytes": 809426640,
+      "checkpoint_call_relocations": [
+        "_dev_info-0x4",
+        "_dev_info-0x4",
+        "_dev_info-0x4",
+        "_dev_emerg-0x4",
+        "panic-0x4"
+      ],
+      "metadata": {
+        "vermagic": "7.2.3+ SMP preempt mod_unload",
+        "license": "GPL and additional rights"
+      }
+    },
+    {
+      "variant": "candidate",
+      "sha256": "ba0bd9ffa33e86e8170d9b4b197f81d2a7c5bd458dd272ab0ea7b0296e916b7f",
+      "bytes": 809429032,
+      "checkpoint_call_relocations": [
+        "_dev_info-0x4",
+        "_dev_info-0x4",
+        "_dev_info-0x4",
+        "_dev_emerg-0x4",
+        "_dev_emerg-0x4",
+        "_dev_emerg-0x4",
+        "panic-0x4"
+      ],
+      "metadata": {
+        "vermagic": "7.2.3+ SMP preempt mod_unload",
+        "license": "GPL and additional rights"
+      }
+    }
+  ],
+  "unsigned_research_artifacts": true,
+  "installed": false,
+  "booted": false,
+  "limits": [
+    "Logging can change timing",
+    "Parser observations precede the helper and can be superseded",
+    "Historical CP04 is not the newly rebuilt baseline",
+    "No hardware state or instruction execution established"
+  ]
+}
