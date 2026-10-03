@@ -1,0 +1,135 @@
+0000000000009920 <amdgpu_device_wreg>:
+    9920:	f3 0f 1e fa          	endbr64
+    9924:	e8 00 00 00 00       	call   9929 <amdgpu_device_wreg+0x9>
+			9925: R_X86_64_PLT32	__fentry__-0x4
+    9929:	41 57                	push   %r15
+    992b:	41 89 d7             	mov    %edx,%r15d
+    992e:	41 56                	push   %r14
+    9930:	41 89 ce             	mov    %ecx,%r14d
+    9933:	55                   	push   %rbp
+    9934:	89 f5                	mov    %esi,%ebp
+    9936:	53                   	push   %rbx
+    9937:	48 89 fb             	mov    %rdi,%rbx
+    993a:	e8 00 00 00 00       	call   993f <amdgpu_device_wreg+0x1f>
+			993b: R_X86_64_PLT32	amdgpu_device_skip_hw_access-0x4
+    993f:	84 c0                	test   %al,%al
+    9941:	75 16                	jne    9959 <amdgpu_device_wreg+0x39>
+    9943:	44 89 f1             	mov    %r14d,%ecx
+    9946:	44 89 fa             	mov    %r15d,%edx
+    9949:	89 ee                	mov    %ebp,%esi
+    994b:	48 89 df             	mov    %rbx,%rdi
+    994e:	5b                   	pop    %rbx
+    994f:	5d                   	pop    %rbp
+    9950:	41 5e                	pop    %r14
+    9952:	41 5f                	pop    %r15
+    9954:	e9 17 f4 ff ff       	jmp    8d70 <amdgpu_device_wreg.part.0>
+    9959:	5b                   	pop    %rbx
+    995a:	5d                   	pop    %rbp
+    995b:	41 5e                	pop    %r14
+    995d:	41 5f                	pop    %r15
+    995f:	e9 00 00 00 00       	jmp    9964 <amdgpu_device_wreg+0x44>
+			9960: R_X86_64_PLT32	__x86_return_thunk-0x4
+
+
+0000000000008d70 <amdgpu_device_wreg.part.0>:
+    8d70:	e8 00 00 00 00       	call   8d75 <amdgpu_device_wreg.part.0+0x5>
+			8d71: R_X86_64_PLT32	__fentry__-0x4
+    8d75:	89 c8                	mov    %ecx,%eax
+    8d77:	48 83 ec 18          	sub    $0x18,%rsp
+    8d7b:	49 89 f8             	mov    %rdi,%r8
+    8d7e:	41 89 f1             	mov    %esi,%r9d
+    8d81:	8d 0c b5 00 00 00 00 	lea    0x0(,%rsi,4),%ecx
+    8d88:	48 3b 8f e8 08 00 00 	cmp    0x8e8(%rdi),%rcx
+    8d8f:	0f 83 e8 00 00 00    	jae    8e7d <amdgpu_device_wreg.part.0+0x10d>
+    8d95:	a8 02                	test   $0x2,%al
+    8d97:	74 68                	je     8e01 <amdgpu_device_wreg.part.0+0x91>
+    8d99:	49 03 88 f0 08 00 00 	add    0x8f0(%r8),%rcx
+    8da0:	89 11                	mov    %edx,(%rcx)
+    8da2:	66 90                	xchg   %ax,%ax
+    8da4:	48 83 c4 18          	add    $0x18,%rsp
+    8da8:	e9 00 00 00 00       	jmp    8dad <amdgpu_device_wreg.part.0+0x3d>
+			8da9: R_X86_64_PLT32	__x86_return_thunk-0x4
+    8dad:	49 8b 40 08          	mov    0x8(%r8),%rax
+    8db1:	0f b7 70 3e          	movzwl 0x3e(%rax),%esi
+    8db5:	65 8b 05 00 00 00 00 	mov    %gs:0x0(%rip),%eax        # 8dbc <amdgpu_device_wreg.part.0+0x4c>
+			8db8: R_X86_64_PC32	cpu_number-0x4
+    8dbc:	48 0f a3 05 00 00 00 	bt     %rax,0x0(%rip)        # 8dc4 <amdgpu_device_wreg.part.0+0x54>
+    8dc3:	00 
+			8dc0: R_X86_64_PC32	__cpu_online_mask-0x4
+    8dc4:	73 de                	jae    8da4 <amdgpu_device_wreg.part.0+0x34>
+    8dc6:	4c 8b 05 00 00 00 00 	mov    0x0(%rip),%r8        # 8dcd <amdgpu_device_wreg.part.0+0x5d>
+			8dc9: R_X86_64_PC32	tracepoint_srcu-0x4
+    8dcd:	65 49 ff 00          	incq   %gs:(%r8)
+    8dd1:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 8dd8 <amdgpu_device_wreg.part.0+0x68>
+			8dd4: R_X86_64_PC32	__tracepoint_amdgpu_device_wreg+0x34
+    8dd8:	48 85 c0             	test   %rax,%rax
+    8ddb:	74 16                	je     8df3 <amdgpu_device_wreg.part.0+0x83>
+    8ddd:	48 8b 78 08          	mov    0x8(%rax),%rdi
+    8de1:	89 d1                	mov    %edx,%ecx
+    8de3:	44 89 ca             	mov    %r9d,%edx
+    8de6:	4c 89 04 24          	mov    %r8,(%rsp)
+    8dea:	e8 00 00 00 00       	call   8def <amdgpu_device_wreg.part.0+0x7f>
+			8deb: R_X86_64_PLT32	__SCT__tp_func_amdgpu_device_wreg-0x4
+    8def:	4c 8b 04 24          	mov    (%rsp),%r8
+    8df3:	65 49 ff 40 08       	incq   %gs:0x8(%r8)
+    8df8:	48 83 c4 18          	add    $0x18,%rsp
+    8dfc:	e9 00 00 00 00       	jmp    8e01 <amdgpu_device_wreg.part.0+0x91>
+			8dfd: R_X86_64_PLT32	__x86_return_thunk-0x4
+    8e01:	f6 87 90 b9 05 00 10 	testb  $0x10,0x5b990(%rdi)
+    8e08:	74 8f                	je     8d99 <amdgpu_device_wreg.part.0+0x29>
+    8e0a:	48 8b 87 a8 de 05 00 	mov    0x5dea8(%rdi),%rax
+    8e11:	48 89 3c 24          	mov    %rdi,(%rsp)
+    8e15:	89 54 24 10          	mov    %edx,0x10(%rsp)
+    8e19:	48 8d 78 18          	lea    0x18(%rax),%rdi
+    8e1d:	48 89 4c 24 08       	mov    %rcx,0x8(%rsp)
+    8e22:	89 74 24 14          	mov    %esi,0x14(%rsp)
+    8e26:	e8 00 00 00 00       	call   8e2b <amdgpu_device_wreg.part.0+0xbb>
+			8e27: R_X86_64_PLT32	down_read_trylock-0x4
+    8e2b:	4c 8b 04 24          	mov    (%rsp),%r8
+    8e2f:	48 8b 4c 24 08       	mov    0x8(%rsp),%rcx
+    8e34:	85 c0                	test   %eax,%eax
+    8e36:	8b 54 24 10          	mov    0x10(%rsp),%edx
+    8e3a:	44 8b 4c 24 14       	mov    0x14(%rsp),%r9d
+    8e3f:	0f 84 54 ff ff ff    	je     8d99 <amdgpu_device_wreg.part.0+0x29>
+    8e45:	44 89 ce             	mov    %r9d,%esi
+    8e48:	4c 89 c7             	mov    %r8,%rdi
+    8e4b:	31 c9                	xor    %ecx,%ecx
+    8e4d:	44 89 4c 24 08       	mov    %r9d,0x8(%rsp)
+    8e52:	e8 00 00 00 00       	call   8e57 <amdgpu_device_wreg.part.0+0xe7>
+			8e53: R_X86_64_PLT32	amdgpu_kiq_wreg-0x4
+    8e57:	4c 8b 04 24          	mov    (%rsp),%r8
+    8e5b:	49 8b 80 a8 de 05 00 	mov    0x5dea8(%r8),%rax
+    8e62:	48 8d 78 18          	lea    0x18(%rax),%rdi
+    8e66:	e8 00 00 00 00       	call   8e6b <amdgpu_device_wreg.part.0+0xfb>
+			8e67: R_X86_64_PLT32	up_read-0x4
+    8e6b:	4c 8b 04 24          	mov    (%rsp),%r8
+    8e6f:	44 8b 4c 24 08       	mov    0x8(%rsp),%r9d
+    8e74:	8b 54 24 10          	mov    0x10(%rsp),%edx
+    8e78:	e9 25 ff ff ff       	jmp    8da2 <amdgpu_device_wreg.part.0+0x32>
+    8e7d:	48 8b 87 b8 09 00 00 	mov    0x9b8(%rdi),%rax
+    8e84:	48 85 c0             	test   %rax,%rax
+    8e87:	74 27                	je     8eb0 <amdgpu_device_wreg.part.0+0x140>
+    8e89:	44 89 4c 24 10       	mov    %r9d,0x10(%rsp)
+    8e8e:	48 89 ce             	mov    %rcx,%rsi
+    8e91:	89 54 24 08          	mov    %edx,0x8(%rsp)
+    8e95:	48 89 3c 24          	mov    %rdi,(%rsp)
+    8e99:	e8 00 00 00 00       	call   8e9e <amdgpu_device_wreg.part.0+0x12e>
+			8e9a: R_X86_64_PLT32	__x86_indirect_thunk_rax-0x4
+    8e9e:	44 8b 4c 24 10       	mov    0x10(%rsp),%r9d
+    8ea3:	8b 54 24 08          	mov    0x8(%rsp),%edx
+    8ea7:	4c 8b 04 24          	mov    (%rsp),%r8
+    8eab:	e9 f2 fe ff ff       	jmp    8da2 <amdgpu_device_wreg.part.0+0x32>
+    8eb0:	80 3d 00 00 00 00 00 	cmpb   $0x0,0x0(%rip)        # 8eb7 <amdgpu_device_wreg.part.0+0x147>
+			8eb2: R_X86_64_PC32	.data..read_mostly+0xc
+    8eb7:	0f 84 00 00 00 00    	je     8ebd <amdgpu_device_wreg.part.0+0x14d>
+			8eb9: R_X86_64_PC32	.text+0xab1094
+    8ebd:	e9 e0 fe ff ff       	jmp    8da2 <amdgpu_device_wreg.part.0+0x32>
+
+
+0000000000003ee0 <amdgpu_device_skip_hw_access>:
+    3ee0:	f3 0f 1e fa          	endbr64
+    3ee4:	e8 00 00 00 00       	call   3ee9 <amdgpu_device_skip_hw_access+0x9>
+			3ee5: R_X86_64_PLT32	__fentry__-0x4
+    3ee9:	0f b6 87 89 c2 05 00 	movzbl 0x5c289(%rdi),%eax
+    3ef0:	e9 00 00 00 00       	jmp    3ef5 <amdgpu_device_skip_hw_access+0x15>
+			3ef1: R_X86_64_PLT32	__x86_return_thunk-0x4
