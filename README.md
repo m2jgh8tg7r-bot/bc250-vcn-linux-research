@@ -1,3 +1,5 @@
+> **R326 / R325 LIVE:** [Final-pointer observation](docs/CHATGPT_HANDOFF_R326.md). Selected discovery record matched: die0/count3, one instance0 record, base1=0x7e00. Intended pre-MMIO panic/end received; current normal kernel read. Historical failed boots and VCN execution remain unproven. No unchanged repeat.
+
 > **R325 installed, independent audit PASS:** [Preparation complete](research/r325-final-pointer-package/INSTALLED_SUMMARY.md). Image/entry hashes match, protected files and normal kernel unchanged, R318 backup verified. No boot selection change or live trial; raw receiver and manual menu steps remain.
 
 > **Current checkpoint — R325:** [Final-pointer checkpoint HOME image](docs/CHATGPT_HANDOFF_R325.md). Module/signing/roundtrip and gate/default/include checks passed. Protected boot preflight requires user sudo authentication; not installed or booted.

@@ -1,0 +1,68 @@
+{
+  "source": "User-pasted R325 receiver transcript; raw JSONL not independently inspected",
+  "visible_sequence_range": [
+    899,
+    1280
+  ],
+  "qualification_complete": {
+    "seq": 908
+  },
+  "input_exact_match": {
+    "seq": 911
+  },
+  "parser": {
+    "sequences": [
+      923,
+      924,
+      925
+    ],
+    "die": 0,
+    "instance": 0,
+    "count": 3,
+    "bases": [
+      30720,
+      32256,
+      37761024
+    ]
+  },
+  "guards_pass": {
+    "seq": 1198
+  },
+  "metadata": {
+    "seq": 1199,
+    "apu": 64,
+    "pg": 0,
+    "cg": 0,
+    "no_hw": 0,
+    "aperture_bytes": 524288
+  },
+  "final_record": {
+    "seq": 1201,
+    "time_us": 56422120,
+    "matched": true,
+    "die": 0,
+    "count": 3,
+    "vcn0_records": 1
+  },
+  "final_addresses": {
+    "seq": 1202,
+    "time_us": 56422128,
+    "base1": 32256,
+    "config_byte": 129024,
+    "status_byte": 129028,
+    "aperture_bytes": 524288
+  },
+  "planned_panic": {
+    "seq": 1203,
+    "time_us": 56422139,
+    "name": "BC250 R324 final-pointer checkpoint before helper VCN MMIO"
+  },
+  "panic_end": {
+    "seq": 1280,
+    "time_us": 56426610
+  },
+  "current_kernel_read": "7.2.1-ogc4.1.fc44.x86_64",
+  "operator_recovery_method": "AWAITING_USER_CONFIRMATION",
+  "full_capture_completeness": "UNPROVEN",
+  "vcn_execution": "UNPROVEN"
+}
