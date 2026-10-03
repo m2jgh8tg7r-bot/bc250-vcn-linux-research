@@ -1,0 +1,33 @@
+{
+  "captured_utc": "2026-10-03T11:47:01.251439+00:00",
+  "kernel_release": "7.2.1-ogc4.1.fc44.x86_64",
+  "scope": "Current normal-boot sysfs IP metadata, not CP05/06/07 failed-boot runtime state",
+  "classification": "PROVEN_LIVE",
+  "classification_limit": "Exported metadata was observed; physical VCN activity is not established",
+  "entries": [
+    {
+      "values": {
+        "hw_id": "12",
+        "num_instance": "0",
+        "major": "2",
+        "minor": "0",
+        "revision": "3",
+        "harvest": "0x0",
+        "num_base_addresses": "3",
+        "base_addr": "0x00007800\n0x00007E00\n0x02403000"
+      },
+      "base_dwords": [
+        30720,
+        32256,
+        37761024
+      ]
+    }
+  ],
+  "direct_hardware_access": false,
+  "hardware_mutation": false,
+  "limitations": [
+    "Current kernel implementation not attested by the retained research source",
+    "sysfs array is not a direct dump of failed-boot adev->reg_offset",
+    "One exposed entry is not proof of physical instance count"
+  ]
+}
