@@ -1,4 +1,4 @@
-> Latest R297 CP07: [Installed and audited; manual-menu preparation pending, not yet LIVE](docs/CHATGPT_HANDOFF_R297_CP07.md). CP05 remains the strongest LIVE checkpoint; CP06 hang boundary remains UNPROVEN.
+> Latest R297 CP07: [Attempted boot: blackout reported, postmortem zero pstore; execution boundary UNPROVEN](docs/CHATGPT_HANDOFF_R297_CP07.md). [Observation coverage audit](docs/R297_CP07_OBSERVABILITY_AUDIT.md). Do not repeat unchanged CP07; CP05 remains strongest saved LIVE checkpoint.
 
 # BC-250 VCN Linux research
 
