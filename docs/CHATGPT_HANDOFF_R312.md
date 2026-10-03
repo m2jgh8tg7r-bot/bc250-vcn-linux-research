@@ -1,3 +1,5 @@
+> **R312 installed:** User-run installation PASS; image/entry and R303 backups independently hash-verified. No boot yet. Manual-menu preparation is next, after receiver logging starts. [Installed status](../research/r312-metadata-boot-package/INSTALLED_SUMMARY.md). Supersedes preparation/preflight status below.
+
 > **Include-check correction:** Observed bootuuid/console/user source lines now receive restricted read-only content validation and hash/existence protection. 13 default and 14 include cases pass. Privileged preflight still pending; no install/boot. [Details](../research/r312-metadata-boot-package/INCLUDE_CHECK_CORRECTION.md).
 
 > **Preflight correction:** Actual configuration uses fixed `default=1` with no saved_entry. Guard updated and 13 CPU cases pass; privileged preflight must be rerun. No installation or boot. See [correction](../research/r312-metadata-boot-package/DEFAULT_CHECK_CORRECTION.md). This supersedes the explicit-saved-ID requirement below.

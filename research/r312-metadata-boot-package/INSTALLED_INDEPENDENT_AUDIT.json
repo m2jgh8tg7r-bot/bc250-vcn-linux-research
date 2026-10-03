@@ -1,0 +1,12 @@
+{
+  "result": "PASS",
+  "installed_files_independently_verified": [
+    "initramfs-7.2.3-r312-netmeta.img",
+    "boot-entry-r312-netmeta.conf"
+  ],
+  "retired_R303_backup_hashes_verified": true,
+  "old_paths_absent": true,
+  "protected_records_match_preflight": true,
+  "protected_files_scope": "Privileged installer records compared; not all protected files independently readable",
+  "reboot": false
+}
