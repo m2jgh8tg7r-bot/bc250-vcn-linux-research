@@ -1,0 +1,282 @@
+{
+  "classification": "PROVEN_STATICALLY",
+  "scope": "Retained artifacts only; no failed-boot runtime attestation",
+  "manifest_rows": [
+    {
+      "manifest": "research/r305-register-access-static/INPUT_SHA256.json",
+      "path": "r152-psp-boundary-src/drivers/gpu/drm/amd/amdgpu/soc15_common.h",
+      "expected": "2340e0144ae8efb1b59b520fa2b951920c649106a923b108bd45af24b8cc274e",
+      "actual": "2340e0144ae8efb1b59b520fa2b951920c649106a923b108bd45af24b8cc274e",
+      "matches": true
+    },
+    {
+      "manifest": "research/r305-register-access-static/INPUT_SHA256.json",
+      "path": "r152-psp-boundary-src/drivers/gpu/drm/amd/amdgpu/amdgpu.h",
+      "expected": "85a97ef20f12bd17a822284f7c50c4da6518aab2145a02852a3aa3834933c183",
+      "actual": "85a97ef20f12bd17a822284f7c50c4da6518aab2145a02852a3aa3834933c183",
+      "matches": true
+    },
+    {
+      "manifest": "research/r305-register-access-static/INPUT_SHA256.json",
+      "path": "r152-psp-boundary-src/drivers/gpu/drm/amd/amdgpu/amdgpu_reg_access.c",
+      "expected": "60ee0b99d513c67b7774e91c8e61e2d0e74ec2be4be4bd66a85b91f1681e422a",
+      "actual": "60ee0b99d513c67b7774e91c8e61e2d0e74ec2be4be4bd66a85b91f1681e422a",
+      "matches": true
+    },
+    {
+      "manifest": "research/r305-register-access-static/INPUT_SHA256.json",
+      "path": "r152-psp-boundary-src/drivers/gpu/drm/amd/amdgpu/cyan_skillfish_reg_init.c",
+      "expected": "a7eb00298075eeb120b7ae57c9dd408bab71e0065201b3a7e50e4f3384dd91e2",
+      "actual": "a7eb00298075eeb120b7ae57c9dd408bab71e0065201b3a7e50e4f3384dd91e2",
+      "matches": true
+    },
+    {
+      "manifest": "research/r305-register-access-static/INPUT_SHA256.json",
+      "path": "r152-psp-boundary-src/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c",
+      "expected": "cc9fe304c5e51434bb7a2bc4e04ecd3ce61c95e642ea2e9e8ec910d6eb66b679",
+      "actual": "cc9fe304c5e51434bb7a2bc4e04ecd3ce61c95e642ea2e9e8ec910d6eb66b679",
+      "matches": true
+    },
+    {
+      "manifest": "research/r305-register-access-static/INPUT_SHA256.json",
+      "path": "r152-psp-boundary-src/drivers/gpu/drm/amd/include/cyan_skillfish_ip_offset.h",
+      "expected": "4e3e383d212924b1378a2225edaee8c42046ebf4b19475a128985941720492d3",
+      "actual": "4e3e383d212924b1378a2225edaee8c42046ebf4b19475a128985941720492d3",
+      "matches": true
+    },
+    {
+      "manifest": "research/r305-register-access-static/INPUT_SHA256.json",
+      "path": "r152-psp-boundary-src/drivers/gpu/drm/amd/include/asic_reg/vcn/vcn_2_0_0_offset.h",
+      "expected": "026dabdbf0f2b731db71cd99a4f617f347589a61d8015afe29abb82f94ad5eb7",
+      "actual": "026dabdbf0f2b731db71cd99a4f617f347589a61d8015afe29abb82f94ad5eb7",
+      "matches": true
+    },
+    {
+      "manifest": "research/r304-checkpoint-decision/INPUT_SHA256.json",
+      "path": "research/r297-checkpoint-panic/cp04-v1/vcn_v2_0-r297-cp04.c",
+      "expected": "49416974d1a816a22dc0f7a768fc3528a98eb643525156afb0f9dbd358203f42",
+      "actual": "49416974d1a816a22dc0f7a768fc3528a98eb643525156afb0f9dbd358203f42",
+      "matches": true
+    },
+    {
+      "manifest": "research/r304-checkpoint-decision/INPUT_SHA256.json",
+      "path": "research/r297-checkpoint-panic/cp05-v1/vcn_v2_0-r297-cp05.c",
+      "expected": "ddcf26fbac9657793fd891ec3a11746410526eb9f7c7d0cc1c4460a5a394a1b9",
+      "actual": "ddcf26fbac9657793fd891ec3a11746410526eb9f7c7d0cc1c4460a5a394a1b9",
+      "matches": true
+    },
+    {
+      "manifest": "research/r304-checkpoint-decision/INPUT_SHA256.json",
+      "path": "research/r297-checkpoint-panic/cp06-v1/vcn_v2_0-r297-cp06.c",
+      "expected": "15ae7a736ae5cce2658cf5b304e59bb3895616c0298e15eb9b34ffad1ec85c4a",
+      "actual": "15ae7a736ae5cce2658cf5b304e59bb3895616c0298e15eb9b34ffad1ec85c4a",
+      "matches": true
+    },
+    {
+      "manifest": "research/r304-checkpoint-decision/INPUT_SHA256.json",
+      "path": "research/r297-checkpoint-panic/cp07-v1/vcn_v2_0-r297-cp07.c",
+      "expected": "a2aebdfa5bc65e26dd812351da72046ef476cf617cde5914ba0059595683243e",
+      "actual": "a2aebdfa5bc65e26dd812351da72046ef476cf617cde5914ba0059595683243e",
+      "matches": true
+    },
+    {
+      "manifest": "research/r304-checkpoint-decision/INPUT_SHA256.json",
+      "path": "research/r297-checkpoint-panic/RESULT_CP05_LIVE.md",
+      "expected": "8bbbaababf087929f8bf615bf2bf0845ce113fd760c6eef74d76c3ea0c68f8f6",
+      "actual": "8bbbaababf087929f8bf615bf2bf0845ce113fd760c6eef74d76c3ea0c68f8f6",
+      "matches": true
+    },
+    {
+      "manifest": "research/r304-checkpoint-decision/INPUT_SHA256.json",
+      "path": "handoffs/BC250_VCN_handoff_CANONICAL_R297_CP07.md",
+      "expected": "2188968496133e861f771c6be98f96039c2f0280dd4b494ec99598b5ee423e96",
+      "actual": "2188968496133e861f771c6be98f96039c2f0280dd4b494ec99598b5ee423e96",
+      "matches": true
+    },
+    {
+      "manifest": "research/r304-checkpoint-decision/INPUT_SHA256.json",
+      "path": "research/r303-netconsole-cp04/RECEIVER_SELECTED_EVIDENCE.md",
+      "expected": "8c7411cf68d04e27e102cc13fcc23b18def8f02bcdf320d6382dc3d9b2548432",
+      "actual": "8c7411cf68d04e27e102cc13fcc23b18def8f02bcdf320d6382dc3d9b2548432",
+      "matches": true
+    },
+    {
+      "manifest": "research/r297-checkpoint-panic/cp07-v1/BUILD_MANIFEST.json",
+      "path": "research/r297-checkpoint-panic/cp07-v1/vcn_v2_0-r297-cp07.c",
+      "expected": "a2aebdfa5bc65e26dd812351da72046ef476cf617cde5914ba0059595683243e",
+      "actual": "a2aebdfa5bc65e26dd812351da72046ef476cf617cde5914ba0059595683243e",
+      "matches": true
+    },
+    {
+      "manifest": "research/r297-checkpoint-panic/cp07-v1/BUILD_MANIFEST.json",
+      "path": "research/r297-checkpoint-panic/cp07-v1/cp06-to-cp07.diff",
+      "expected": "6af5101a56b89221c0a277d0bc9af1201437f58fd623f1ccc297ae8a416eaf6a",
+      "actual": "6af5101a56b89221c0a277d0bc9af1201437f58fd623f1ccc297ae8a416eaf6a",
+      "matches": true
+    },
+    {
+      "manifest": "research/r297-checkpoint-panic/cp07-v1/BUILD_MANIFEST.json",
+      "path": "research/r297-checkpoint-panic/cp07-v1/STATIC_AUDIT.log",
+      "expected": "8786af2af85ec53c3ee87cd8759bf0364ee02665e37788b8818282c605080fc9",
+      "actual": "8786af2af85ec53c3ee87cd8759bf0364ee02665e37788b8818282c605080fc9",
+      "matches": true
+    },
+    {
+      "manifest": "research/r297-checkpoint-panic/cp07-v1/BUILD_MANIFEST.json",
+      "path": "research/r297-checkpoint-panic/cp07-v1/build.py",
+      "expected": "55b484f6a4c0e977c3877aeb1f8f35939456947ccd8c0e7d42752ecc04cf95c5",
+      "actual": "55b484f6a4c0e977c3877aeb1f8f35939456947ccd8c0e7d42752ecc04cf95c5",
+      "matches": true
+    },
+    {
+      "manifest": "research/r297-checkpoint-panic/cp07-v1/BUILD_MANIFEST.json",
+      "path": "research/r297-checkpoint-panic/cp07-v1/OBJECT_BUILD.log",
+      "expected": "bd36cfb42e103780557f31640d02944d93d5d4cdbdd8041398b71af0be53bac1",
+      "actual": "bd36cfb42e103780557f31640d02944d93d5d4cdbdd8041398b71af0be53bac1",
+      "matches": true
+    },
+    {
+      "manifest": "research/r297-checkpoint-panic/cp07-v1/BUILD_MANIFEST.json",
+      "path": "research/r297-checkpoint-panic/cp07-v1/vcn_v2_0-r297-cp07.o",
+      "expected": "cfda2f5a4372fb7f639b9474ac335f70570b4d7c5150c749aa8dc15deacdaf32",
+      "actual": "cfda2f5a4372fb7f639b9474ac335f70570b4d7c5150c749aa8dc15deacdaf32",
+      "matches": true
+    },
+    {
+      "manifest": "research/r297-checkpoint-panic/cp07-v1/BUILD_MANIFEST.json",
+      "path": "research/r297-checkpoint-panic/cp07-v1/FULLMODULE_BUILD.log",
+      "expected": "15cb8dbf337bad718df16b10d67b9da4e7987744c03b9ec89f8027a61382b2ea",
+      "actual": "15cb8dbf337bad718df16b10d67b9da4e7987744c03b9ec89f8027a61382b2ea",
+      "matches": true
+    },
+    {
+      "manifest": "research/r297-checkpoint-panic/cp07-v1/BUILD_MANIFEST.json",
+      "path": "research/r297-checkpoint-panic/cp07-v1/amdgpu-r297-cp07.ko.unstripped",
+      "expected": "010d8bfe57ab24e6d7655e8d73313070c0de6c01659993b6361eb4b65cd1c83d",
+      "actual": "010d8bfe57ab24e6d7655e8d73313070c0de6c01659993b6361eb4b65cd1c83d",
+      "matches": true
+    },
+    {
+      "manifest": "research/r297-checkpoint-panic/cp07-v1/BUILD_MANIFEST.json",
+      "path": "research/r297-checkpoint-panic/cp07-v1/vcn_v2_0-r297-cp07.o.nm",
+      "expected": "d886ed9daa7411eb745f27de7ab6e077934cb0d3ada7506e7f06839c8d1c17b0",
+      "actual": "d886ed9daa7411eb745f27de7ab6e077934cb0d3ada7506e7f06839c8d1c17b0",
+      "matches": true
+    },
+    {
+      "manifest": "research/r297-checkpoint-panic/cp07-v1/BUILD_MANIFEST.json",
+      "path": "research/r297-checkpoint-panic/cp07-v1/vcn_v2_0-r297-cp07.o.disasm",
+      "expected": "a94817731aa212c20a61282726c064fa9bd96c2a6e730eb50c6f7dcd67764a5d",
+      "actual": "a94817731aa212c20a61282726c064fa9bd96c2a6e730eb50c6f7dcd67764a5d",
+      "matches": true
+    },
+    {
+      "manifest": "research/r297-checkpoint-panic/cp07-v1/BUILD_MANIFEST.json",
+      "path": "research/r297-checkpoint-panic/cp07-v1/amdgpu-r297-cp07.ko.unstripped.nm",
+      "expected": "3c2916ff8b1817637d679350e4e8b26a3707da34a76863733ea1b8097d8f7879",
+      "actual": "3c2916ff8b1817637d679350e4e8b26a3707da34a76863733ea1b8097d8f7879",
+      "matches": true
+    },
+    {
+      "manifest": "research/r297-checkpoint-panic/cp07-v1/BUILD_MANIFEST.json",
+      "path": "research/r297-checkpoint-panic/cp07-v1/amdgpu-r297-cp07.ko.unstripped.disasm",
+      "expected": "7e0c7938d07b66d5105a710d7b50d35f6b219a2644ed2fb06d59297122744811",
+      "actual": "7e0c7938d07b66d5105a710d7b50d35f6b219a2644ed2fb06d59297122744811",
+      "matches": true
+    }
+  ],
+  "manifest_matches": 26,
+  "manifest_total": 26,
+  "object_debug": [
+    {
+      "object": "research/r297-checkpoint-panic/cp05-v1/vcn_v2_0-r297-cp05.o",
+      "sha256": "978a513440c5261bad8e4661390a92914110dfe10933a3aa33b5655eff2863eb",
+      "dwarf_versions": [
+        "5"
+      ],
+      "file_table_descriptions": [
+        "The File Name Table (offset 0x91, lines 380, columns 2):"
+      ],
+      "file_table_column_headers": [
+        "Entry\tDir\tName"
+      ],
+      "macro_section": false,
+      "macinfo_section": false,
+      "file_table_has_md5_column": false
+    },
+    {
+      "object": "research/r297-checkpoint-panic/cp06-v1/vcn_v2_0-r297-cp06.o",
+      "sha256": "70fad7ffa22b5586faa986e06202d0104fe1b80e65701724d88c2a56d356dded",
+      "dwarf_versions": [
+        "5"
+      ],
+      "file_table_descriptions": [
+        "The File Name Table (offset 0x91, lines 380, columns 2):"
+      ],
+      "file_table_column_headers": [
+        "Entry\tDir\tName"
+      ],
+      "macro_section": false,
+      "macinfo_section": false,
+      "file_table_has_md5_column": false
+    },
+    {
+      "object": "research/r297-checkpoint-panic/cp07-v1/vcn_v2_0-r297-cp07.o",
+      "sha256": "cfda2f5a4372fb7f639b9474ac335f70570b4d7c5150c749aa8dc15deacdaf32",
+      "dwarf_versions": [
+        "5"
+      ],
+      "file_table_descriptions": [
+        "The File Name Table (offset 0x91, lines 380, columns 2):"
+      ],
+      "file_table_column_headers": [
+        "Entry\tDir\tName"
+      ],
+      "macro_section": false,
+      "macinfo_section": false,
+      "file_table_has_md5_column": false
+    }
+  ],
+  "package_installed_pairs": [
+    {
+      "checkpoint": "CP05",
+      "package_module": "research/r297-checkpoint-panic/r297-cp05-home-package/amdgpu-r297-cp05-signed.ko",
+      "package_sha256": "30bf6a5dfc0436bb1fafea41ed7bcc6b2e5453dff09206fbdd626fa2a5cf0f0f",
+      "saved_installed_module": "research/r297-checkpoint-panic/r297-cp05-installed-final-audit/installed-amdgpu.ko",
+      "saved_installed_sha256": "30bf6a5dfc0436bb1fafea41ed7bcc6b2e5453dff09206fbdd626fa2a5cf0f0f",
+      "saved_installed_match": true
+    },
+    {
+      "checkpoint": "CP06",
+      "package_module": "research/r297-checkpoint-panic/r297-cp06-home-package/amdgpu-r297-cp06-signed.ko",
+      "package_sha256": "2944bb21c058e4561fa17d9f49a64d301a8665ab0b455bc49c12b5de30c6bbe8",
+      "saved_installed_module": "research/r297-checkpoint-panic/r297-cp06-installed-final-audit/installed-amdgpu.ko",
+      "saved_installed_sha256": "2944bb21c058e4561fa17d9f49a64d301a8665ab0b455bc49c12b5de30c6bbe8",
+      "saved_installed_match": true
+    },
+    {
+      "checkpoint": "CP07",
+      "package_module": "research/r297-checkpoint-panic/r297-cp07-home-package/amdgpu-r297-cp07-signed.ko",
+      "package_sha256": "fbb5849df514077e75d41a8a3eb46c7f85e62aa7f6f9c82e549c8e3c64bb8ce3",
+      "saved_installed_module": null,
+      "saved_installed_sha256": null,
+      "saved_installed_match": null
+    }
+  ],
+  "cp07_saved_chain": {
+    "saved_image_sha256": "a8160d963b7b8b21cf7d9078f157895259944050611abedee2576d670c9ca93b",
+    "matches_package_image_record": true,
+    "matches_historical_installed_image_record": true,
+    "module_matches_package_record": true,
+    "roundtrip_evidence": "Historical package audit reports exact archive roundtrip; not rerun here",
+    "current_boot_files_read": false
+  },
+  "hardware_access": false,
+  "build_or_install_performed": false,
+  "limits": [
+    "Current source hashes do not establish complete historical build-input identity",
+    "Missing saved-installed module here is not a claim that no historical package/install audit exists",
+    "DWARF filename/line presence is not a header-content digest",
+    "No failed-boot access instruction or physical state inferred"
+  ]
+}

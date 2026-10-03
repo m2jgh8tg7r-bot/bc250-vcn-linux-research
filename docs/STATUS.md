@@ -1,3 +1,7 @@
+> **Current checkpoint: R306 (2026-10-03 JST).** [Retained artifact/header provenance audit](CHATGPT_HANDOFF_R306.md): 26 hash comparison rows match; saved CP05/06 modules and CP07 package/image records agree. Historical header-content identity and failed-boot runtime state remain distinct unknowns. No new device operation or build.
+>
+> R303's later receiver evidence confirms the pre-MMIO guard boundary; older “not installed/booted” notes below are superseded by its [live-result section](CHATGPT_HANDOFF_R303_NETCP04.md). [R304](CHATGPT_HANDOFF_R304.md) defers an unnecessary CP05 repeat; [R305](CHATGPT_HANDOFF_R305.md) records conditional source access mapping. CP06/07 cause and VCPU execution remain unproven.
+
 > Latest R303: [R302 LIVE CP03 receipt and normal return; CP04 network comparison prepared](CHATGPT_HANDOFF_R303_NETCP04.md). Not installed or booted; no new VCN MMIO experiment.
 
 # Current status
