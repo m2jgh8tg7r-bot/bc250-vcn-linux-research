@@ -1,0 +1,24 @@
+{
+  "amdgpu_discovery.c": {
+    "sha256": "692a948197981aea57969d4444ef6c66d3083f0c1fc7a5525fb7ba4c7895c3bb",
+    "excerpts": [
+      {
+        "first_line": 346,
+        "text": "\tadev->discovery.bin = kzalloc(adev->discovery.size, GFP_KERNEL);\n\tif (!adev->discovery.bin)\n\t\treturn -ENOMEM;\n\tadev->discovery.debugfs_blob.data = adev->discovery.bin;\n\tadev->discovery.debugfs_blob.size = adev->discovery.size;"
+      },
+      {
+        "first_line": 1250,
+        "text": "\t\t\t\t\t\t      ip->num_base_address);\n\t\t\tif (!ip_hw_instance) {\n\t\t\t\tDRM_ERROR(\"no memory for ip_hw_instance\");\n\t\t\t\treturn -ENOMEM;\n\t\t\t}\n\t\t\tip_hw_instance->hw_id = le16_to_cpu(ip->hw_id); /* == ii */\n\t\t\tip_hw_instance->num_instance = ip->instance_number;\n\t\t\tip_hw_instance->major = ip->major;\n\t\t\tip_hw_instance->minor = ip->minor;\n\t\t\tip_hw_instance->revision = ip->revision;\n\t\t\tip_hw_instance->harvest =\n\t\t\t\tamdgpu_discovery_get_harvest_info(\n\t\t\t\t\tadev, ip_hw_instance->hw_id,\n\t\t\t\t\tip_hw_instance->num_instance);\n\t\t\tip_hw_instance->num_base_addresses = ip->num_base_address;\n\n\t\t\tfor (kk = 0; kk < ip_hw_instance->num_base_addresses; kk++)\n\t\t\t\tip_hw_instance->base_addr[kk] = ip->base_address[kk];\n\n\t\t\tkobject_init(&ip_hw_instance->kobj, &ip_hw_instance_ktype);\n\t\t\tip_hw_instance->kobj.kset = &ip_hw_id->hw_id_kset;\n\t\t\tres = kobject_add(&ip_hw_instance->kobj, NULL,\n\t\t\t\t\t  \"%d\", ip_hw_instance->num_instance);\nnext_ip:\n\t\t\tif (reg_base_64)\n\t\t\t\tip_offset += struct_size(ip, base_address_64,\n\t\t\t\t\t\t\t ip->num_base_address);\n\t\t\telse\n\t\t\t\tip_offset += struct_size(ip, base_address,\n\t\t\t\t\t\t\t ip->num_base_address);\n\t\t}\n\t}\n\n\treturn 0;\n}\n\nstatic int amdgpu_discovery_sysfs_recurse(struct amdgpu_device *adev)"
+      }
+    ]
+  },
+  "amdgpu_debugfs.c": {
+    "sha256": "76a0ad570fda09e135ee57a2f0da50ab9f649f0622b1975491adef8fec82affd",
+    "excerpts": [
+      {
+        "first_line": 2228,
+        "text": "\tif (adev->discovery.debugfs_blob.size)\n\t\tdebugfs_create_blob(\"amdgpu_discovery\", 0444, root,\n\t\t\t\t    &adev->discovery.debugfs_blob);"
+      }
+    ]
+  }
+}

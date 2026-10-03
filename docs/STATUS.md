@@ -1,3 +1,5 @@
+> **Current checkpoint — R322:** [Discovery evidence inventory and export limits](CHATGPT_HANDOFF_R322.md). No matching full capture found in scoped search. Sysfs entries cannot certify record uniqueness; debugfs exposes post-parser heap data. Static review only; no hardware operation.
+
 > **Current checkpoint — R321 (2026-10-04 JST):** [Final-base provenance](CHATGPT_HANDOFF_R321.md). R318 received helper/guards/META and the intended pre-MMIO panic through its end marker; manual recovery reported. R319 interprets software fields; R320 audits discovery lifetime; R321 separates parser samples, sysfs copies and the final helper array. VCN execution and old CP06/07 causes remain unproven. No unchanged live repeat is requested. Earlier preparation-only notices below are historical.
 
 > **R311/R312 prepared:** Count-bounded parser logging replaces the R310 draft. Paired modules and HOME boot image validated; no installation or boot. Privileged read-only preflight pending. [R312](https://github.com/m2jgh8tg7r-bot/bc250-vcn-linux-research/blob/main/docs/CHATGPT_HANDOFF_R312.md).
