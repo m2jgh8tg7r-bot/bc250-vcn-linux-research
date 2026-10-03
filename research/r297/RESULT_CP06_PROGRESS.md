@@ -2,7 +2,7 @@
 
 Date: 2026-10-03 JST
 
-Status: **PRE-LIVE CHAIN PASS / CP06 LIVE NOT YET PROVEN**
+Status: **PRE-LIVE CHAIN PASS / SELECT-WITNESS LIVE PASS / CP06 MAIN LIVE STILL NOT PROVEN**
 
 ## Scope
 
@@ -311,7 +311,7 @@ Scientific classification:
 - CP06 PRIVILEGED PREFLIGHT V2 = PASS
 - CP06 INSTALL-NO-SELECT = PASS
 - CP06 INSTALLED FINAL AUDIT = PASS
-- CP06 LIVE = **NOT YET PROVEN / FIRST ATTEMPT INCONCLUSIVE**
+- CP06 LIVE = **NOT YET PROVEN / ATTEMPT 1 INCONCLUSIVE / ATTEMPT 2 HARD-HANG WITH NO PERSISTED TRACE**
 
 ## SELECT-WITNESS diagnostic
 
@@ -399,9 +399,88 @@ menu_show_once_timeout absent
 pstore_disable=Y
 ```
 
+## SELECT-WITNESS LIVE result
+
+The installed `SELECT-WITNESS no-amdgpu` entry was manually selected and stopped at the intended `rd.break=pre-mount` boundary.
+
+Observed from the dracut shell:
+
+- `/proc/cmdline` contained:
+  - `module_blacklist=amdgpu`
+  - `rd.driver.blacklist=amdgpu`
+  - `modprobe.blacklist=amdgpu`
+  - `rd.break=pre-mount`
+  - `bc250_cp06_select_witness=1`
+- the kernel image was the research kernel path;
+- `grep '^amdgpu ' /proc/modules` returned no match.
+
+After forced return to normal Bazzite, the one-time menu state was consumed and the normal pstore runtime policy was restored.
+
+Scientific classification:
+
+- CP06 SELECT-WITNESS LIVE = **PASS**
+- this proves the intended witness BLS can be manually selected and reaches its early dracut witness point;
+- it does **not** prove any CP06 VCN MMIO execution.
+
+## CP06 LIVE attempt 2: hard-hang observation, no persisted pstore
+
+After the selection witness succeeded, a second main-CP06 manual-menu attempt was prepared with a clean pstore baseline.
+
+Attempt-2 arm identities:
+
+```text
+arm-cp06-live-attempt2-menu-v1.sh
+SHA-256: 1bb0ba3ee2ab5e33ab5f86c86bb17b3a5d9413db9ff841a791af5ce5ec8f8542
+
+bc250-r297-cp06-attempt2-arm.log
+SHA-256: 8f27716b4989497deceafbf76f0d1150b16d0d8a91dd9b59662430be4789fe21
+```
+
+The user manually selected the main CP06 entry. The display blacked out and the machine did not automatically recover; a forced power-button recovery was required.
+
+Postmortem:
+
+```text
+MENU_SHOW_ONCE_CONSUMED=YES
+NEXT_ENTRY_ABSENT=YES
+PSTORE_FILE_COUNT=0
+
+R274B_COUNT=0
+P1_COUNT=0
+HELPER_COUNT=0
+GUARDS_COUNT=0
+AFTER_WRITE_COUNT=0
+RAW_STATUS_COUNT=0
+CP06_PANIC_COUNT=0
+KERNEL_PANIC_COUNT=0
+
+CP06_ATTEMPT2_PSTORE_RESULT=NO_PERSISTED_RECORDS
+```
+
+Current-boot reset-reason evidence after recovery included:
+
+```text
+Previous system reset reason [0x40080402]: power button was pressed for 4 seconds
+Previous system reset reason [0x40080402]: software wrote 0x6 to reset control register 0xCF9
+Previous system reset reason [0x40080402]: a parity error occurred
+```
+
+Attempt-2 collection log SHA-256:
+
+`e2b63cfc392f3d915ebe8e4545e589ba5759d21cd02c31f0e8caceb2e6baec31`
+
+Classification:
+
+- CP06 attempt 2 = **LIVE hard-hang observation / NO PERSISTED TRACE**
+- this is stronger than the first attempt operationally because manual BLS selection had already been independently validated;
+- however, absence of pstore means the exact executed boundary is still unproven;
+- do **not** claim that the single `PGFSM_STATUS` read executed, returned, or caused the hang.
+
+The direct single-read candidate is therefore no longer worth rerunning unchanged. The next diagnostic should add an independently recoverable witness around the read, for example by moving the MMIO read to a worker context while another CPU retains a timeout/panic path. That design must first be STATIC/BUILD-ONLY audited before any new LIVE run.
+
 ## Current scientific boundary
 
-The strongest LIVE statement remains CP05:
+The strongest direct VCN-path LIVE statement remains CP05:
 
 > the first intended VCN MMIO write path executed and returned.
 
