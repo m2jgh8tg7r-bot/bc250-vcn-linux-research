@@ -1,0 +1,268 @@
+--- CP06
++++ CP07
+@@ -517,259 +517,19 @@
+ vcn_v2_0_cyan_pre_reset_only(struct amdgpu_vcn_inst *vinst)
+ {
+ 	struct amdgpu_device *adev = vinst->adev;
+-	uint32_t data = 0;
+ 	uint32_t tmp;
+ 
+-	dev_info(adev->dev,
+-		 "BC250 R297 CP06: helper_entry before guards\n");
+-
+-	/*
+-	 * Safety contract derived from GFX 10.1.3 nv.c:
+-	 * this candidate is only defined for the zero-flag path.
+-	 */
++	dev_info(adev->dev, "BC250 R297 CP07: helper_entry before guards\n");
+ 	if (adev->pg_flags || adev->cg_flags)
+ 		return;
+-
+ 	if (amdgpu_sriov_vf(adev))
+ 		return;
+ 
+-	dev_info(adev->dev,
+-		 "BC250 R297 CP06: guards_pass before PGFSM_CONFIG\n");
+-
+-	/*
+-	 * Zero-flag branch of
+-	 * vcn_v2_0_disable_static_power_gating().
+-	 */
+-	data =
+-		(1 << UVD_PGFSM_CONFIG__UVDM_PWR_CONFIG__SHIFT) |
+-		(1 << UVD_PGFSM_CONFIG__UVDU_PWR_CONFIG__SHIFT) |
+-		(1 << UVD_PGFSM_CONFIG__UVDF_PWR_CONFIG__SHIFT) |
+-		(1 << UVD_PGFSM_CONFIG__UVDC_PWR_CONFIG__SHIFT) |
+-		(1 << UVD_PGFSM_CONFIG__UVDB_PWR_CONFIG__SHIFT) |
+-		(1 << UVD_PGFSM_CONFIG__UVDIL_PWR_CONFIG__SHIFT) |
+-		(1 << UVD_PGFSM_CONFIG__UVDIR_PWR_CONFIG__SHIFT) |
+-		(1 << UVD_PGFSM_CONFIG__UVDTD_PWR_CONFIG__SHIFT) |
+-		(1 << UVD_PGFSM_CONFIG__UVDTE_PWR_CONFIG__SHIFT) |
+-		(1 << UVD_PGFSM_CONFIG__UVDE_PWR_CONFIG__SHIFT);
+-
+-	WREG32_SOC15(VCN, 0, mmUVD_PGFSM_CONFIG, data);
+-
+-	dev_emerg(adev->dev,
+-              "BC250 R297 CP06: after PGFSM_CONFIG write before single status read\n");
+-
+-    tmp = RREG32_SOC15(VCN, 0, mmUVD_PGFSM_STATUS);
+-
+-    dev_emerg(adev->dev,
+-              "BC250 R297 CP06: PGFSM_STATUS raw=0x%08x after PGFSM_CONFIG write\n",
+-              tmp);
+-    panic("BC250 R297 CP06 after single PGFSM_STATUS read");
+-
+-	SOC15_WAIT_ON_RREG(
+-		VCN, 0, mmUVD_PGFSM_STATUS, 0, 0xFFFFF);
+-
+-	data = RREG32_SOC15(
+-		VCN, 0, mmUVD_POWER_STATUS);
+-	data &= ~0x103;
+-	WREG32_SOC15(
+-		VCN, 0, mmUVD_POWER_STATUS, data);
+-
+-	/* set UVD status busy */
+-	tmp = RREG32_SOC15(
+-		UVD, 0, mmUVD_STATUS) |
+-		UVD_STATUS__UVD_BUSY;
+-
+-	WREG32_SOC15(
+-		UVD, 0, mmUVD_STATUS, tmp);
+-
+-	/*
+-	 * Zero-flag branch of
+-	 * vcn_v2_0_disable_clock_gating().
+-	 */
+-	data = RREG32_SOC15(
+-		VCN, 0, mmUVD_CGC_CTRL);
+-
+-	data &= ~UVD_CGC_CTRL__DYN_CLOCK_MODE_MASK;
+-	data |=
+-		1 << UVD_CGC_CTRL__CLK_GATE_DLY_TIMER__SHIFT;
+-	data |=
+-		4 << UVD_CGC_CTRL__CLK_OFF_DELAY__SHIFT;
+-
+-	WREG32_SOC15(
+-		VCN, 0, mmUVD_CGC_CTRL, data);
+-
+-	data = RREG32_SOC15(
+-		VCN, 0, mmUVD_CGC_GATE);
+-
+-	data &= ~(
+-		UVD_CGC_GATE__SYS_MASK |
+-		UVD_CGC_GATE__UDEC_MASK |
+-		UVD_CGC_GATE__MPEG2_MASK |
+-		UVD_CGC_GATE__REGS_MASK |
+-		UVD_CGC_GATE__RBC_MASK |
+-		UVD_CGC_GATE__LMI_MC_MASK |
+-		UVD_CGC_GATE__LMI_UMC_MASK |
+-		UVD_CGC_GATE__IDCT_MASK |
+-		UVD_CGC_GATE__MPRD_MASK |
+-		UVD_CGC_GATE__MPC_MASK |
+-		UVD_CGC_GATE__LBSI_MASK |
+-		UVD_CGC_GATE__LRBBM_MASK |
+-		UVD_CGC_GATE__UDEC_RE_MASK |
+-		UVD_CGC_GATE__UDEC_CM_MASK |
+-		UVD_CGC_GATE__UDEC_IT_MASK |
+-		UVD_CGC_GATE__UDEC_DB_MASK |
+-		UVD_CGC_GATE__UDEC_MP_MASK |
+-		UVD_CGC_GATE__WCB_MASK |
+-		UVD_CGC_GATE__VCPU_MASK |
+-		UVD_CGC_GATE__SCPU_MASK);
+-
+-	WREG32_SOC15(
+-		VCN, 0, mmUVD_CGC_GATE, data);
+-
+-	data = RREG32_SOC15(
+-		VCN, 0, mmUVD_CGC_CTRL);
+-
+-	data &= ~(
+-		UVD_CGC_CTRL__UDEC_RE_MODE_MASK |
+-		UVD_CGC_CTRL__UDEC_CM_MODE_MASK |
+-		UVD_CGC_CTRL__UDEC_IT_MODE_MASK |
+-		UVD_CGC_CTRL__UDEC_DB_MODE_MASK |
+-		UVD_CGC_CTRL__UDEC_MP_MODE_MASK |
+-		UVD_CGC_CTRL__SYS_MODE_MASK |
+-		UVD_CGC_CTRL__UDEC_MODE_MASK |
+-		UVD_CGC_CTRL__MPEG2_MODE_MASK |
+-		UVD_CGC_CTRL__REGS_MODE_MASK |
+-		UVD_CGC_CTRL__RBC_MODE_MASK |
+-		UVD_CGC_CTRL__LMI_MC_MODE_MASK |
+-		UVD_CGC_CTRL__LMI_UMC_MODE_MASK |
+-		UVD_CGC_CTRL__IDCT_MODE_MASK |
+-		UVD_CGC_CTRL__MPRD_MODE_MASK |
+-		UVD_CGC_CTRL__MPC_MODE_MASK |
+-		UVD_CGC_CTRL__LBSI_MODE_MASK |
+-		UVD_CGC_CTRL__LRBBM_MODE_MASK |
+-		UVD_CGC_CTRL__WCB_MODE_MASK |
+-		UVD_CGC_CTRL__VCPU_MODE_MASK |
+-		UVD_CGC_CTRL__SCPU_MODE_MASK);
+-
+-	WREG32_SOC15(
+-		VCN, 0, mmUVD_CGC_CTRL, data);
+-
+-	data = RREG32_SOC15(
+-		VCN, 0, mmUVD_SUVD_CGC_GATE);
+-
+-	data |= (
+-		UVD_SUVD_CGC_GATE__SRE_MASK |
+-		UVD_SUVD_CGC_GATE__SIT_MASK |
+-		UVD_SUVD_CGC_GATE__SMP_MASK |
+-		UVD_SUVD_CGC_GATE__SCM_MASK |
+-		UVD_SUVD_CGC_GATE__SDB_MASK |
+-		UVD_SUVD_CGC_GATE__SRE_H264_MASK |
+-		UVD_SUVD_CGC_GATE__SRE_HEVC_MASK |
+-		UVD_SUVD_CGC_GATE__SIT_H264_MASK |
+-		UVD_SUVD_CGC_GATE__SIT_HEVC_MASK |
+-		UVD_SUVD_CGC_GATE__SCM_H264_MASK |
+-		UVD_SUVD_CGC_GATE__SCM_HEVC_MASK |
+-		UVD_SUVD_CGC_GATE__SDB_H264_MASK |
+-		UVD_SUVD_CGC_GATE__SDB_HEVC_MASK |
+-		UVD_SUVD_CGC_GATE__SCLR_MASK |
+-		UVD_SUVD_CGC_GATE__UVD_SC_MASK |
+-		UVD_SUVD_CGC_GATE__ENT_MASK |
+-		UVD_SUVD_CGC_GATE__SIT_HEVC_DEC_MASK |
+-		UVD_SUVD_CGC_GATE__SIT_HEVC_ENC_MASK |
+-		UVD_SUVD_CGC_GATE__SITE_MASK |
+-		UVD_SUVD_CGC_GATE__SRE_VP9_MASK |
+-		UVD_SUVD_CGC_GATE__SCM_VP9_MASK |
+-		UVD_SUVD_CGC_GATE__SIT_VP9_DEC_MASK |
+-		UVD_SUVD_CGC_GATE__SDB_VP9_MASK |
+-		UVD_SUVD_CGC_GATE__IME_HEVC_MASK);
+-
+-	WREG32_SOC15(
+-		VCN, 0, mmUVD_SUVD_CGC_GATE, data);
+-
+-	data = RREG32_SOC15(
+-		VCN, 0, mmUVD_SUVD_CGC_CTRL);
+-
+-	data &= ~(
+-		UVD_SUVD_CGC_CTRL__SRE_MODE_MASK |
+-		UVD_SUVD_CGC_CTRL__SIT_MODE_MASK |
+-		UVD_SUVD_CGC_CTRL__SMP_MODE_MASK |
+-		UVD_SUVD_CGC_CTRL__SCM_MODE_MASK |
+-		UVD_SUVD_CGC_CTRL__SDB_MODE_MASK |
+-		UVD_SUVD_CGC_CTRL__SCLR_MODE_MASK |
+-		UVD_SUVD_CGC_CTRL__UVD_SC_MODE_MASK |
+-		UVD_SUVD_CGC_CTRL__ENT_MODE_MASK |
+-		UVD_SUVD_CGC_CTRL__IME_MODE_MASK |
+-		UVD_SUVD_CGC_CTRL__SITE_MODE_MASK);
+-
+-	WREG32_SOC15(
+-		VCN, 0, mmUVD_SUVD_CGC_CTRL, data);
+-
+-	/* enable VCPU clock */
+-	WREG32_P(
+-		SOC15_REG_OFFSET(UVD, 0, mmUVD_VCPU_CNTL),
+-		UVD_VCPU_CNTL__CLK_EN_MASK,
+-		~UVD_VCPU_CNTL__CLK_EN_MASK);
+-
+-	/* keep VCPU master interrupt disabled */
+-	WREG32_P(
+-		SOC15_REG_OFFSET(UVD, 0, mmUVD_MASTINT_EN),
+-		0,
+-		~UVD_MASTINT_EN__VCPU_EN_MASK);
+-
+-	/* LMI setup */
+-	tmp = RREG32_SOC15(
+-		UVD, 0, mmUVD_LMI_CTRL);
+-
+-	WREG32_SOC15(
+-		UVD, 0, mmUVD_LMI_CTRL,
+-		tmp |
+-		UVD_LMI_CTRL__WRITE_CLEAN_TIMER_EN_MASK |
+-		UVD_LMI_CTRL__MASK_MC_URGENT_MASK |
+-		UVD_LMI_CTRL__DATA_COHERENCY_EN_MASK |
+-		UVD_LMI_CTRL__VCPU_DATA_COHERENCY_EN_MASK);
+-
+-	/* MPC replacement mode */
+-	tmp = RREG32_SOC15(
+-		UVD, 0, mmUVD_MPC_CNTL);
+-
+-	tmp &= ~UVD_MPC_CNTL__REPLACEMENT_MODE_MASK;
+-	tmp |=
+-		0x2 <<
+-		UVD_MPC_CNTL__REPLACEMENT_MODE__SHIFT;
+-
+-	WREG32_SOC15(
+-		VCN, 0, mmUVD_MPC_CNTL, tmp);
+-
+-	WREG32_SOC15(
+-		UVD, 0, mmUVD_MPC_SET_MUXA0,
+-		(0x1 << UVD_MPC_SET_MUXA0__VARA_1__SHIFT) |
+-		(0x2 << UVD_MPC_SET_MUXA0__VARA_2__SHIFT) |
+-		(0x3 << UVD_MPC_SET_MUXA0__VARA_3__SHIFT) |
+-		(0x4 << UVD_MPC_SET_MUXA0__VARA_4__SHIFT));
+-
+-	WREG32_SOC15(
+-		UVD, 0, mmUVD_MPC_SET_MUXB0,
+-		(0x1 << UVD_MPC_SET_MUXB0__VARB_1__SHIFT) |
+-		(0x2 << UVD_MPC_SET_MUXB0__VARB_2__SHIFT) |
+-		(0x3 << UVD_MPC_SET_MUXB0__VARB_3__SHIFT) |
+-		(0x4 << UVD_MPC_SET_MUXB0__VARB_4__SHIFT));
+-
+-	WREG32_SOC15(
+-		UVD, 0, mmUVD_MPC_SET_MUX,
+-		(0x0 << UVD_MPC_SET_MUX__SET_0__SHIFT) |
+-		(0x1 << UVD_MPC_SET_MUX__SET_1__SHIFT) |
+-		(0x2 << UVD_MPC_SET_MUX__SET_2__SHIFT));
+-
+-	/*
+-	 * Reuse the already-audited R291-C 17-write
+-	 * direct-BO memory mapping.
+-	 */
+-	vcn_v2_0_cyan_memory_window_only(vinst);
+-
+-	/*
+-	 * STOP HERE.
+-	 *
+-	 * No VCPU reset release.
+-	 */
++	/* Read-only control: no PGFSM_CONFIG write, wait, reset or power command. */
++	dev_emerg(adev->dev, "BC250 R297 CP07: guards_pass before single status read no config write\n");
++	tmp = RREG32_SOC15(VCN, 0, mmUVD_PGFSM_STATUS);
++	dev_emerg(adev->dev, "BC250 R297 CP07: PGFSM_STATUS raw=0x%08x no preceding config write\n", tmp);
++	panic("BC250 R297 CP07 after single PGFSM_STATUS read no config write");
+ }
+ 
+ static void vcn_v2_0_mc_resume(struct amdgpu_vcn_inst *vinst)

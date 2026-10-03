@@ -1,0 +1,21 @@
+{
+  "artifact": "amdgpu-r297-cp07.ko.unstripped",
+  "sha256": "010d8bfe57ab24e6d7655e8d73313070c0de6c01659993b6361eb4b65cd1c83d",
+  "counts": {
+    "amdgpu_device_rreg": 1,
+    "amdgpu_sriov_rreg": 1,
+    "amdgpu_device_wreg": 0,
+    "amdgpu_sriov_wreg": 0,
+    "amdgpu_device_wait_on_rreg": 0,
+    "_dev_emerg": 2,
+    "panic": 1
+  },
+  "helper_inlined_into_hw_init_cold": true,
+  "guard_patterns": true,
+  "status_offset_plus_one": true,
+  "read_return_log_panic_order": true,
+  "config_write_absent": true,
+  "wait_absent": true,
+  "contract": "PASS",
+  "hardware_access": false
+}

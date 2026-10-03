@@ -1,3 +1,5 @@
+> Latest R297 CP07: [STATIC / BUILD-ONLY preparation, not installed or live](docs/CHATGPT_HANDOFF_R297_CP07.md). CP05 remains the strongest LIVE checkpoint; CP06 hang boundary remains UNPROVEN.
+
 # BC-250 VCN Linux research
 
 ## Latest — R297 CP03 LIVE PASS, 2026-10-02 JST

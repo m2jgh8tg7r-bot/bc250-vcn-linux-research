@@ -1,0 +1,22 @@
+{
+  "contract": "PASS",
+  "template_sha256": "9bfac31bfa9bd0a1cf44d0afb009a332b8f3c6857312883041917ec6b7010927",
+  "signed_module_sha256": "fbb5849df514077e75d41a8a3eb46c7f85e62aa7f6f9c82e549c8e3c64bb8ce3",
+  "image_sha256": "a8160d963b7b8b21cf7d9078f157895259944050611abedee2576d670c9ca93b",
+  "image_size": 246028802,
+  "bls_sha256": "719e0bfb6f522bfbf3861c1100802e1b4d55d1c70165c72ed2db897ea0fbb501",
+  "executable_sections_exact": [
+    ".text",
+    ".init.text",
+    ".exit.text",
+    ".altinstr_replacement",
+    ".altinstr_aux",
+    ".static_call.text"
+  ],
+  "roundtrip_exact": true,
+  "changed_archive_paths": [
+    "usr/lib/modules/7.2.3+/kernel/drivers/gpu/drm/amd/amdgpu/amdgpu.ko"
+  ],
+  "boot_write": false,
+  "hardware_access": false
+}
