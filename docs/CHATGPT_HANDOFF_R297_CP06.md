@@ -243,3 +243,27 @@ The next experiment should first be designed and audited as STATIC/BUILD-ONLY. A
 Full detailed checkpoint:
 
 `research/r297/RESULT_CP06_PROGRESS.md`
+
+
+## 2026-10-03 later update
+
+The SELECT-WITNESS was subsequently executed and reached the intended dracut `rd.break=pre-mount` shell with the witness marker and AMDGPU blacklists present; the initramfs check showed no loaded amdgpu module. Classify:
+
+```text
+CP06 SELECT-WITNESS LIVE = PASS
+```
+
+This is only boot-selection evidence.
+
+The main CP06 experiment was then retried with a fresh clean pstore baseline. Attempt 2 again returned to the normal kernel with **zero persisted EFI pstore records**. Its postmortem machine counters were all zero, including helper/guards/after-write/raw-status/panic markers. The current boot recorded prior reset reason `0x40080402`, including a 4-second power-button event, reset-control write, and parity-error report.
+
+Therefore:
+
+```text
+CP06 LIVE ATTEMPT 2 = INCONCLUSIVE / NO_PERSISTED_RECORDS
+CP06 PGFSM_STATUS value = NOT PROVEN
+```
+
+Do not claim the read executed merely from the hard-hang behavior.
+
+Because the selection path is now independently witnessed, the next high-information experiment should be a separate read-only control: one `PGFSM_STATUS` read with no preceding `PGFSM_CONFIG` write, raw-value log, then panic. Stage it through STATIC and BUILD-ONLY audits before any install/LIVE action.
