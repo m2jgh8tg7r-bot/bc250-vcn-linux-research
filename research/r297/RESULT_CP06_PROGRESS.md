@@ -514,3 +514,61 @@ The next stage should remain STATIC/READ-ONLY first:
 4. only after that audit consider one LIVE diagnostic run.
 
 If the watchdog diagnostic can panic and persist a stack while the status read is stalled, it can distinguish a CPU-local MMIO stall from a wider fabric/system hang without yet changing the CP06 machine-code body.
+
+
+## 2026-10-03 update — SELECT-WITNESS LIVE proved; CP06 attempt 2 still no pstore
+
+The manual-selection witness was executed successfully before the second main CP06 retry.
+
+At the dracut `rd.break=pre-mount` emergency shell, the selected kernel command line visibly contained:
+
+```text
+module_blacklist=amdgpu
+rd.driver.blacklist=amdgpu
+modprobe.blacklist=amdgpu
+rd.break=pre-mount
+bc250_cp06_select_witness=1
+```
+
+and an explicit initramfs check reported no loaded amdgpu module.
+
+Therefore:
+
+```text
+CP06 SELECT-WITNESS LIVE = PASS
+```
+
+This proves the manual GRUB/BLS selection mechanism can reach the intended research entry. It is selection-path evidence only and is not VCN hardware evidence.
+
+A second main CP06 LIVE attempt was then prepared with a clean EFI pstore baseline and the main CP06 BLS. The postmortem collection again found:
+
+```text
+PSTORE_FILE_COUNT=0
+R274B_COUNT=0
+P1_COUNT=0
+HELPER_COUNT=0
+GUARDS_COUNT=0
+AFTER_WRITE_COUNT=0
+RAW_STATUS_COUNT=0
+CP06_PANIC_COUNT=0
+KERNEL_PANIC_COUNT=0
+CP06_ATTEMPT2_PSTORE_RESULT=NO_PERSISTED_RECORDS
+```
+
+The following normal boot reported previous reset reason `0x40080402`, including:
+
+```text
+power button was pressed for 4 seconds
+software wrote 0x6 to reset control register 0xCF9
+a parity error occurred
+```
+
+Attempt-2 collection log:
+
+```text
+bc250-r297-cp06-attempt2-live-collect.log
+```
+
+The second attempt therefore remains **LIVE INCONCLUSIVE**. It does not establish a `PGFSM_STATUS` value and does not independently prove that the status read executed. However, because SELECT-WITNESS LIVE independently proved the manual-selection path, simple menu/BLS-selection failure is now a weaker explanation than before.
+
+A useful next discriminating control is a new read-only checkpoint that performs exactly one `PGFSM_STATUS` read **without** the preceding `PGFSM_CONFIG` write, then logs the raw value and panics. This can distinguish a read-path problem from a write-then-read interaction. It must first pass STATIC / BUILD-ONLY / package / install audit before any LIVE use.
