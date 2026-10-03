@@ -1,3 +1,5 @@
+> **R309:** Retained CP05/06/07 discovery selector/parser function bytes match. Parser relocation differences resolve to identical diagnostic strings. Failed-boot runtime input/state remains unknown. [R309](https://github.com/m2jgh8tg7r-bot/bc250-vcn-linux-research/blob/main/docs/CHATGPT_HANDOFF_R309.md).
+
 > **R308:** Current normal-boot sysfs VCN bases captured: 0x7800 / 0x7e00 / 0x02403000. Metadata only; failed-boot runtime values and VCPU execution remain unproven. [R308](https://github.com/m2jgh8tg7r-bot/bc250-vcn-linux-research/blob/main/docs/CHATGPT_HANDOFF_R308.md).
 
 > **R307 correction:** The retained Skillfish2 source path derives register bases from IP discovery. Compiled legacy UVD0_BASE equality does not attest failed-boot runtime bases. CP05 live evidence remains unchanged. [R307](https://github.com/m2jgh8tg7r-bot/bc250-vcn-linux-research/blob/main/docs/CHATGPT_HANDOFF_R307.md).
