@@ -1,0 +1,11 @@
+{
+  "result": "PASS",
+  "archive_tree_changed_files": [
+    "init"
+  ],
+  "prior_network_sequence_preserved": true,
+  "same_cp03_module": true,
+  "new_vcn_access": false,
+  "installed": false,
+  "booted": false
+}
