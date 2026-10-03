@@ -1,3 +1,5 @@
+> **R325 protected preflight PASS:** User-run local result and installer/package hashes verified. Normal boot prefix preserved; exact R318 retirement meets space margin. Not installed or booted; installation requires user sudo authentication.
+
 > **Current checkpoint — R325:** [Final-pointer checkpoint HOME image](CHATGPT_HANDOFF_R325.md). Module/signing/roundtrip and gate/default/include checks passed. Protected boot preflight requires user sudo authentication; not installed or booted.
 
 > **Current checkpoint — R323/R324:** [Offline reader and checkpoint draft](CHATGPT_HANDOFF_R324.md). CPU tests and paired builds completed; compiler instrumentation review remains open. No boot package or live test is ready.

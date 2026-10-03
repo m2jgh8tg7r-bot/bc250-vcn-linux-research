@@ -1,6 +1,6 @@
 {
   "home_preparation": "PASS",
-  "protected_boot_preflight": "PENDING_USER_SUDO_AUTHENTICATION",
+  "protected_boot_preflight": "PASS_USER_RUN_LOCAL_RESULT_VERIFIED",
   "image_validated": true,
   "installed": false,
   "booted": false,
@@ -11,5 +11,6 @@
     "DEFAULT_CHECK_TEST.json": "PASS",
     "INCLUDE_CHECK_TEST.json": "PASS",
     "GATE_TEST.json": "PASS"
-  }
+  },
+  "installation": "PENDING"
 }
