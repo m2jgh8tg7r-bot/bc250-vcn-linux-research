@@ -1,3 +1,5 @@
+> **R331 low-quota handoff:** [Self-contained continuation record](CHATGPT_HANDOFF_R331.md). Generic PCI lock excluded by build config; type1 backend lock/IO remain distinct unproven candidates. R329 terminal post-read begin/manual reset confirmed. User forbids more live tests this week. Static continuation only.
+
 > **R330 / R329 partial LIVE:** [PCI boundary observation](CHATGPT_HANDOFF_R330.md). Pre-read ret0/identity matches and CONFIG write-return received. Pasted tail is post-read begin; return/panic and recovery method unproven. No unchanged repeat.
 
 > **R329 installed, independent audit PASS:** [Installed status](../research/r329-pci-config-package/INSTALLED_SUMMARY.md). Protected files/default and normal kernel unchanged; R325 backup verified. Not booted; raw receiver and manual menu next.
