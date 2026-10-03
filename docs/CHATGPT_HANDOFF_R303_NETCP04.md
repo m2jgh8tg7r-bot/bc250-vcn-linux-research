@@ -19,3 +19,9 @@ UNPROVEN=R303 live boundary, final panic transport, VCN power/VCPU/ring executio
 NEXT=Privileged read-only R303 preflight followed by independent audit
 
 Validation: 11/11 CPU/PTY gate cases PASS; dependency closure, warning-free depmod, gzip and exact archive round-trip PASS. Independent comparison against R302 finds only init and amdgpu.ko changed. Image size 168064077 bytes; image SHA-256 f100c7aebe64bec65a452646360a9a198dc183bafe056c00c280b7c4b4ad9b8c.
+
+## Installed and independently audited
+
+User-run installation PASS. Installed R303 image/BLS and both R302 retirement backups independently match. Retired R302 paths are absent. Protected hash records equal preflight: nine accessible protected files independently checked, four rely on the privileged installer record. No selection, module load or reboot occurred.
+
+Next: save receiver output to a file, then user-run arm-menu.py. This backs up grubenv and sets only a transient 30-second manual menu timeout; it does not select an entry, change pstore or reboot. Audit its PASS output before manual R303 boot. Confirm same-boot R303 QUALIFICATION_COMPLETE on receiver before entering the retained public token R299-CP03-RECEIVED. Expected CP04 helper-entry/guards-pass/panic occurs before first helper VCN MMIO. R303 LIVE remains UNPROVEN.
