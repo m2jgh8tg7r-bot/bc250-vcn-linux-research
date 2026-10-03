@@ -1,0 +1,10 @@
+{
+  "research/r312-metadata-boot-package/init": "a759324df65273bbe5d1cb00242b073621422f2af503c039b9ffbcdd4bfef9fb",
+  "research/r312-metadata-boot-package/build.py": "f813584ea6b41bca7ebf863d40908a0778a38ad40c28932b01403341794728ae",
+  "research/r310-preaccess-metadata/build-tree/drivers/net/netconsole.c": "8a9c4888b77601c10be7e9dc46b0e1d0a60fb1f6485705c5b30489a859736932",
+  "research/r310-preaccess-metadata/build-tree/net/core/netpoll.c": "74d6d64b047cbc09d2911fba5ac3a980200909472b81c1967f7edc4bc3b0feb0",
+  "research/r310-preaccess-metadata/build-tree/kernel/panic.c": "7c00ccaf178a60ec6449365e7b240602d0f7d9ac92fba8b80f84acbee81d2344",
+  "research/r310-preaccess-metadata/build-tree/Documentation/networking/netconsole.rst": "d2b528d8ab0864ea0398172b6efc29be5480836afc39e7d875853d0d79558c21",
+  "research/r310-preaccess-metadata/build-tree/drivers/gpu/drm/amd/amdgpu/vcn_v2_0.c": "619da2f08eb0d116f83930d1746721d93eaeae526cc292e49477150fe3168371",
+  "research/r310-preaccess-metadata/build-tree/.config": "2cc99daf0d2a896b9beede9c0d77d14d8f53cef4a705e723c017ccbd1e3d97f4"
+}

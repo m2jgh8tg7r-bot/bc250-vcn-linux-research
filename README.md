@@ -1,3 +1,5 @@
+> R313: [R312 receiver boundary audit](docs/CHATGPT_HANDOFF_R313.md). Automatic reboot is operator-reported; intended panic remains unproven. Static logging-path audit and discriminating observation proposal; no hardware changes.
+
 > **R311/R312 prepared:** Count-bounded parser logging replaces the R310 draft. Paired modules and HOME boot image validated; no installation or boot. Privileged read-only preflight pending. [R312](https://github.com/m2jgh8tg7r-bot/bc250-vcn-linux-research/blob/main/docs/CHATGPT_HANDOFF_R312.md).
 
 > **R310 preparation deferred after review:** No new live test, installation or reboot. Metadata draft needs validated array bounds and broader rebuild provenance before release. [R310](https://github.com/m2jgh8tg7r-bot/bc250-vcn-linux-research/blob/main/docs/CHATGPT_HANDOFF_R310.md).
