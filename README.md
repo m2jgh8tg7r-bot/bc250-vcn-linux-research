@@ -1,3 +1,5 @@
+> R314: [Sequence-aware receiver tools](docs/CHATGPT_HANDOFF_R314.md), eight offline tests passed. No receiver launched or boot changed; missing suffix remains unknown.
+
 > R313: [R312 receiver boundary audit](docs/CHATGPT_HANDOFF_R313.md). Automatic reboot is operator-reported; intended panic remains unproven. Static logging-path audit and discriminating observation proposal; no hardware changes.
 
 > **R311/R312 prepared:** Count-bounded parser logging replaces the R310 draft. Paired modules and HOME boot image validated; no installation or boot. Privileged read-only preflight pending. [R312](https://github.com/m2jgh8tg7r-bot/bc250-vcn-linux-research/blob/main/docs/CHATGPT_HANDOFF_R312.md).
