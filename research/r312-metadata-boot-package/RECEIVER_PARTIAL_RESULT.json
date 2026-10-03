@@ -54,13 +54,15 @@
   "r311_meta_visible": false,
   "r312_helper_guard_visible": false,
   "panic_visible": false,
-  "automatic_restart_proven": false,
-  "normal_return_reported": false,
+  "normal_return_reported": true,
   "limits": [
     "Earlier R303 helper markers belong to a different boot",
     "Missing tail does not establish a hang or identify a failing instruction",
     "Parser values are not a later reg_offset witness",
     "Display warnings are not established as the termination cause",
     "No physical VCN or VCPU activity established"
-  ]
+  ],
+  "automatic_restart_reported": true,
+  "restart_evidence_source": "User follow-up; not a captured panic or reset trace",
+  "receiver_tail_complete_as_reported": true
 }

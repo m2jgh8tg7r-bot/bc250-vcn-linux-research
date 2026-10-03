@@ -1,8 +1,10 @@
+> Recovery update: the user confirms the receiver file ends at 47.220948 and the machine rebooted automatically. No further tail is available. This is operator-reported recovery; the intended panic, helper checkpoint and reset mechanism remain unproven. No repeat boot requested.
+
 ## R312 live update — partial receiver evidence
 
 PROVEN_LIVE: the R312 segment includes qualification completion, accepted local confirmation, module loading, and R311 parser records for die 0 / instance 0 / count 3: `0x7800`, `0x7e00`, `0x02403000`. These match R308 normal-boot exported metadata. Host firmware copy reports 405696 bytes and equal=1; this is not firmware execution.
 
-The supplied cumulative excerpt ends at 47.220948 during display IRQ diagnostics. This boot's helper/guards, R311 META and final panic are absent from the excerpt. Historical R303 markers belong to a separate boot. Missing output proves neither a hang nor its cause. Parser values do not establish later reg_offset contents or past CP06/07 inputs. Existing receiver tail and recovery outcome are needed; do not repeat the test on this evidence alone.
+The supplied cumulative excerpt ends at 47.220948 during display IRQ diagnostics. This boot's helper/guards, R311 META and final panic are absent from the excerpt. Historical R303 markers belong to a separate boot. Missing output proves neither a hang nor its cause. Parser values do not establish later reg_offset contents or past CP06/07 inputs. Recovery follow-up is recorded above; do not repeat the test on this evidence alone.
 
 ---
 
