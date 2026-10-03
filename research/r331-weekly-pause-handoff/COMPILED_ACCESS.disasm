@@ -1,0 +1,156 @@
+0000000000000010 <pci_conf1_read>:
+  10:	f3 0f 1e fa          	endbr64
+  14:	e8 00 00 00 00       	call   19 <pci_conf1_read+0x9>
+			15: R_X86_64_PLT32	__fentry__-0x4
+  19:	89 f0                	mov    %esi,%eax
+  1b:	09 d0                	or     %edx,%eax
+  1d:	3d ff 00 00 00       	cmp    $0xff,%eax
+  22:	0f 87 c0 00 00 00    	ja     e8 <pci_conf1_read+0xd8>
+  28:	85 ff                	test   %edi,%edi
+  2a:	0f 85 b8 00 00 00    	jne    e8 <pci_conf1_read+0xd8>
+  30:	81 f9 ff 0f 00 00    	cmp    $0xfff,%ecx
+  36:	0f 8f ac 00 00 00    	jg     e8 <pci_conf1_read+0xd8>
+  3c:	41 56                	push   %r14
+  3e:	48 c7 c7 00 00 00 00 	mov    $0x0,%rdi
+			41: R_X86_64_32S	pci_config_lock
+  45:	41 89 f6             	mov    %esi,%r14d
+  48:	41 55                	push   %r13
+  4a:	45 89 c5             	mov    %r8d,%r13d
+  4d:	41 54                	push   %r12
+  4f:	41 89 cc             	mov    %ecx,%r12d
+  52:	55                   	push   %rbp
+  53:	89 d5                	mov    %edx,%ebp
+  55:	53                   	push   %rbx
+  56:	4c 89 cb             	mov    %r9,%rbx
+  59:	c1 e5 08             	shl    $0x8,%ebp
+  5c:	e8 00 00 00 00       	call   61 <pci_conf1_read+0x51>
+			5d: R_X86_64_PLT32	_raw_spin_lock_irqsave-0x4
+  61:	44 89 e2             	mov    %r12d,%edx
+  64:	48 89 c6             	mov    %rax,%rsi
+  67:	44 89 e0             	mov    %r12d,%eax
+  6a:	81 e2 fc 00 00 00    	and    $0xfc,%edx
+  70:	25 00 0f 00 00       	and    $0xf00,%eax
+  75:	09 d5                	or     %edx,%ebp
+  77:	ba f8 0c 00 00       	mov    $0xcf8,%edx
+  7c:	44 09 f0             	or     %r14d,%eax
+  7f:	c1 e0 10             	shl    $0x10,%eax
+  82:	09 e8                	or     %ebp,%eax
+  84:	0d 00 00 00 80       	or     $0x80000000,%eax
+  89:	ef                   	out    %eax,(%dx)
+  8a:	41 83 fd 02          	cmp    $0x2,%r13d
+  8e:	74 43                	je     d3 <pci_conf1_read+0xc3>
+  90:	41 83 fd 04          	cmp    $0x4,%r13d
+  94:	74 33                	je     c9 <pci_conf1_read+0xb9>
+  96:	41 83 fd 01          	cmp    $0x1,%r13d
+  9a:	75 12                	jne    ae <pci_conf1_read+0x9e>
+  9c:	41 83 e4 03          	and    $0x3,%r12d
+  a0:	41 8d 94 24 fc 0c 00 	lea    0xcfc(%r12),%edx
+  a7:	00 
+  a8:	ec                   	in     (%dx),%al
+  a9:	0f b6 c0             	movzbl %al,%eax
+  ac:	89 03                	mov    %eax,(%rbx)
+  ae:	48 c7 c7 00 00 00 00 	mov    $0x0,%rdi
+			b1: R_X86_64_32S	pci_config_lock
+  b5:	e8 00 00 00 00       	call   ba <pci_conf1_read+0xaa>
+			b6: R_X86_64_PLT32	_raw_spin_unlock_irqrestore-0x4
+  ba:	31 c0                	xor    %eax,%eax
+  bc:	5b                   	pop    %rbx
+  bd:	5d                   	pop    %rbp
+  be:	41 5c                	pop    %r12
+  c0:	41 5d                	pop    %r13
+  c2:	41 5e                	pop    %r14
+  c4:	e9 00 00 00 00       	jmp    c9 <pci_conf1_read+0xb9>
+			c5: R_X86_64_PLT32	__x86_return_thunk-0x4
+  c9:	ba fc 0c 00 00       	mov    $0xcfc,%edx
+  ce:	ed                   	in     (%dx),%eax
+  cf:	89 03                	mov    %eax,(%rbx)
+  d1:	eb db                	jmp    ae <pci_conf1_read+0x9e>
+  d3:	41 83 e4 02          	and    $0x2,%r12d
+  d7:	41 8d 94 24 fc 0c 00 	lea    0xcfc(%r12),%edx
+  de:	00 
+  df:	66 ed                	in     (%dx),%ax
+  e1:	0f b7 c0             	movzwl %ax,%eax
+  e4:	89 03                	mov    %eax,(%rbx)
+  e6:	eb c6                	jmp    ae <pci_conf1_read+0x9e>
+  e8:	41 c7 01 ff ff ff ff 	movl   $0xffffffff,(%r9)
+  ef:	b8 ea ff ff ff       	mov    $0xffffffea,%eax
+  f4:	e9 00 00 00 00       	jmp    f9 <pci_conf1_read+0xe9>
+			f5: R_X86_64_PLT32	__x86_return_thunk-0x4
+  f9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+ 100:	90                   	nop
+ 101:	90                   	nop
+ 102:	90                   	nop
+ 103:	90                   	nop
+ 104:	90                   	nop
+ 105:	90                   	nop
+ 106:	90                   	nop
+ 107:	90                   	nop
+ 108:	90                   	nop
+ 109:	90                   	nop
+ 10a:	90                   	nop
+ 10b:	90                   	nop
+ 10c:	90                   	nop
+ 10d:	90                   	nop
+ 10e:	90                   	nop
+ 10f:	90                   	nop
+
+
+0000000000000150 <pci_bus_read_config_dword>:
+     150:	f3 0f 1e fa          	endbr64
+     154:	e8 00 00 00 00       	call   159 <pci_bus_read_config_dword+0x9>
+			155: R_X86_64_PLT32	__fentry__-0x4
+     159:	48 83 ec 18          	sub    $0x18,%rsp
+     15d:	65 48 8b 05 00 00 00 	mov    %gs:0x0(%rip),%rax        # 165 <pci_bus_read_config_dword+0x15>
+     164:	00 
+			161: R_X86_64_PC32	__ref_stack_chk_guard-0x4
+     165:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+     16a:	31 c0                	xor    %eax,%eax
+     16c:	c7 44 24 04 00 00 00 	movl   $0x0,0x4(%rsp)
+     173:	00 
+     174:	b8 87 00 00 00       	mov    $0x87,%eax
+     179:	f6 c2 03             	test   $0x3,%dl
+     17c:	75 31                	jne    1af <pci_bus_read_config_dword+0x5f>
+     17e:	48 8b 87 c0 00 00 00 	mov    0xc0(%rdi),%rax
+     185:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+     18a:	4c 8d 44 24 04       	lea    0x4(%rsp),%r8
+     18f:	48 89 cb             	mov    %rcx,%rbx
+     192:	b9 04 00 00 00       	mov    $0x4,%ecx
+     197:	48 8b 40 18          	mov    0x18(%rax),%rax
+     19b:	e8 00 00 00 00       	call   1a0 <pci_bus_read_config_dword+0x50>
+			19c: R_X86_64_PLT32	__x86_indirect_thunk_rax-0x4
+     1a0:	85 c0                	test   %eax,%eax
+     1a2:	74 23                	je     1c7 <pci_bus_read_config_dword+0x77>
+     1a4:	c7 03 ff ff ff ff    	movl   $0xffffffff,(%rbx)
+     1aa:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+     1af:	48 8b 54 24 08       	mov    0x8(%rsp),%rdx
+     1b4:	65 48 2b 15 00 00 00 	sub    %gs:0x0(%rip),%rdx        # 1bc <pci_bus_read_config_dword+0x6c>
+     1bb:	00 
+			1b8: R_X86_64_PC32	__ref_stack_chk_guard-0x4
+     1bc:	75 16                	jne    1d4 <pci_bus_read_config_dword+0x84>
+     1be:	48 83 c4 18          	add    $0x18,%rsp
+     1c2:	e9 00 00 00 00       	jmp    1c7 <pci_bus_read_config_dword+0x77>
+			1c3: R_X86_64_PLT32	__x86_return_thunk-0x4
+     1c7:	8b 54 24 04          	mov    0x4(%rsp),%edx
+     1cb:	89 13                	mov    %edx,(%rbx)
+     1cd:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+     1d2:	eb db                	jmp    1af <pci_bus_read_config_dword+0x5f>
+     1d4:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+     1d9:	e8 00 00 00 00       	call   1de <pci_bus_read_config_dword+0x8e>
+			1da: R_X86_64_PLT32	__stack_chk_fail-0x4
+     1de:	66 90                	xchg   %ax,%ax
+     1e0:	90                   	nop
+     1e1:	90                   	nop
+     1e2:	90                   	nop
+     1e3:	90                   	nop
+     1e4:	90                   	nop
+     1e5:	90                   	nop
+     1e6:	90                   	nop
+     1e7:	90                   	nop
+     1e8:	90                   	nop
+     1e9:	90                   	nop
+     1ea:	90                   	nop
+     1eb:	90                   	nop
+     1ec:	90                   	nop
+     1ed:	90                   	nop
+     1ee:	90                   	nop
+     1ef:	90                   	nop
