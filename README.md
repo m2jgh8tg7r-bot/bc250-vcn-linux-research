@@ -1,3 +1,5 @@
+> Latest R298 NETOBS1: [Observation-only pre-GPU network qualification prepared, not installed or booted](docs/CHATGPT_HANDOFF_R298_NETOBS1.md). Normal-boot netconsole receipt confirmed after delayed Windows display; standalone image excludes amdgpu and disk-root mounting. CP07 read boundary remains UNPROVEN; no unchanged retry.
+
 > Latest R297 CP07: [Attempted boot: blackout reported, postmortem zero pstore; execution boundary UNPROVEN](docs/CHATGPT_HANDOFF_R297_CP07.md). [Observation coverage audit](docs/R297_CP07_OBSERVABILITY_AUDIT.md). Do not repeat unchanged CP07; CP05 remains strongest saved LIVE checkpoint.
 
 # BC-250 VCN Linux research
