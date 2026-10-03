@@ -41,3 +41,21 @@ PROVEN=Current normal kernel; user-reported return to normal entry
 REJECTED=Normal return alone proves CP04 checkpoint delivery or VCN operation
 UNPROVEN=R303 token acceptance, CP04 receipt, final panic/countdown, automatic restart, VCN execution
 NEXT=Inspect R303 receiver output from QUALIFICATION_COMPLETE through final received lines; classify checkpoint before choosing next comparison
+
+
+## R303 receiver evidence — CP04 guards reached live
+
+The user-supplied cumulative receiver text contains separate historical R298/R299/R300/R302 boots followed by R303. R303 includes all qualification markers 1/10–10/10, completion at 15.372569, input read_rc=0 and bytes=18 at 45.845515, exact-match acceptance, receiver confirmation and GPU load beginning at 50.847807. Firmware direct-copy reports 405696 bytes and equal=1; software initialization completes. At 56.266818 P1 begins, at 56.266827 CP04 helper_entry is received, and at 56.266834 CP04 guards_pass before first VCN MMIO is received. These last two lines belong to R303, not the earlier R302 CP03 boot.
+
+This establishes network delivery through the helper guard boundary. The retained CP04 source places intentional panic after this marker and before the helper's first VCN MMIO; the supplied text ends at guards_pass. No final Kernel panic line or restart countdown is present. Automatic restart and complete panic delivery remain UNPROVEN. The init prefix retains NETCP03, but its R303 stage and CP04 expected/actual markers identify this comparison. Display IRQ warnings precede continued P1/helper progress and do not by themselves establish the termination cause. The early previous-reset parity flag describes previous-reset status; it does not prove a new R303 parity fault.
+
+STAGE=R303 CP04 receiver qualification
+RESULT=PROVEN_LIVE receipt through helper entry and guards_pass before first helper VCN MMIO
+STATIC_OR_LIVE=User-supplied LIVE receiver evidence plus retained static CP04 boundary
+HARDWARE_ACCESS=User-run R303 boot; no new agent device transaction
+HARDWARE_MUTATION=No new agent hardware mutation
+HARDWARE_FAILURE=NO_EVIDENCE of an unintended failure in the supplied ending
+PROVEN=Qualification 1/10–10/10 receipt, exact token acceptance, GPU software initialization/direct-copy markers, P1, helper entry, guard passage; normal return recorded separately
+REJECTED=This proves VCN firmware execution or makes historical CP05 write-return evidence invalid
+UNPROVEN=Final panic/countdown delivery, automatic restart, arbitrary hang-time transport, VCN physical power/VCPU/ring execution
+NEXT=Use CP04 as the qualified pre-MMIO network boundary; statically review a discriminating next comparison using historical CP05 and failed CP06/CP07 evidence, without repeating an unchanged failing read
