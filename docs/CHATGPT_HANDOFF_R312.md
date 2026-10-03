@@ -1,3 +1,11 @@
+## R312 live update — partial receiver evidence
+
+PROVEN_LIVE: the R312 segment includes qualification completion, accepted local confirmation, module loading, and R311 parser records for die 0 / instance 0 / count 3: `0x7800`, `0x7e00`, `0x02403000`. These match R308 normal-boot exported metadata. Host firmware copy reports 405696 bytes and equal=1; this is not firmware execution.
+
+The supplied cumulative excerpt ends at 47.220948 during display IRQ diagnostics. This boot's helper/guards, R311 META and final panic are absent from the excerpt. Historical R303 markers belong to a separate boot. Missing output proves neither a hang nor its cause. Parser values do not establish later reg_offset contents or past CP06/07 inputs. Existing receiver tail and recovery outcome are needed; do not repeat the test on this evidence alone.
+
+---
+
 > **R312 installed:** User-run installation PASS; image/entry and R303 backups independently hash-verified. No boot yet. Manual-menu preparation is next, after receiver logging starts. [Installed status](../research/r312-metadata-boot-package/INSTALLED_SUMMARY.md). Supersedes preparation/preflight status below.
 
 > **Include-check correction:** Observed bootuuid/console/user source lines now receive restricted read-only content validation and hash/existence protection. 13 default and 14 include cases pass. Privileged preflight still pending; no install/boot. [Details](../research/r312-metadata-boot-package/INCLUDE_CHECK_CORRECTION.md).
