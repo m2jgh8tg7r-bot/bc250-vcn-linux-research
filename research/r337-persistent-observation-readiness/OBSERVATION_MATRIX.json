@@ -1,0 +1,36 @@
+{
+  "kind": "STATIC_PACKAGE_READINESS_NOT_LIVE",
+  "routes": [
+    {
+      "route": "existing netconsole",
+      "artifact_state": "included and qualified through last received marker",
+      "gap": "not independent of same PCI/network/console failure; no raw capture file"
+    },
+    {
+      "route": "NMI watchdog registers",
+      "artifact_state": "compiled capability and prior boot enabled report",
+      "gap": "coverage/sample generation and independent durable delivery unproven"
+    },
+    {
+      "route": "EFI pstore",
+      "artifact_state": "explicitly disabled in R329 boot entry",
+      "gap": "not an armed persistent evidence route in this trial"
+    },
+    {
+      "route": "ramoops",
+      "artifact_state": "no setup or module-load operation in R329 init",
+      "gap": "reserved region/backend/reset retention not qualified"
+    },
+    {
+      "route": "crash dump",
+      "artifact_state": "kernel capability; no crashkernel boot option or crash-kernel-load step in R329 package",
+      "gap": "no evidence of an armed capture kernel"
+    },
+    {
+      "route": "SysRq",
+      "artifact_state": "boot enables SysRq; tty0 console",
+      "gap": "input interrupt/control path and surviving output route unproven"
+    }
+  ],
+  "new_hardware_operation": false
+}
