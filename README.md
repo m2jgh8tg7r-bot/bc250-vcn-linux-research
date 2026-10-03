@@ -1,3 +1,5 @@
+> **Current checkpoint — R321:** [Final-base provenance](docs/CHATGPT_HANDOFF_R321.md). PGFSM uses segment 1; parser samples and sysfs copies do not attest the final helper pointer. Static audit; no new live test.
+
 > Latest: [R320 — Discovery base ownership and lifetime](docs/CHATGPT_HANDOFF_R320.md). Static audit only; no new hardware test.
 
 > Latest: [R319 — R318 live metadata checkpoint and static interpretation](docs/CHATGPT_HANDOFF_R319.md). Intended panic received; manual recovery reported. No VCN execution claim.

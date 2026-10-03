@@ -1,0 +1,37 @@
+{
+  "amdgpu/amdgpu_discovery.c": {
+    "sha256": "692a948197981aea57969d4444ef6c66d3083f0c1fc7a5525fb7ba4c7895c3bb",
+    "excerpts": [
+      {
+        "first_line": 749,
+        "text": "static int amdgpu_discovery_validate_ip(struct amdgpu_device *adev,\n\t\t\t\t\tuint8_t instance, uint16_t hw_id)\n{\n\tif (instance >= HWIP_MAX_INSTANCE) {\n\t\tdev_err(adev->dev,\n\t\t\t\"Unexpected instance_number (%d) from ip discovery blob\\n\",\n\t\t\tinstance);\n\t\treturn -EINVAL;\n\t}\n\tif (hw_id >= HW_ID_MAX) {\n\t\tdev_err(adev->dev,\n\t\t\t\"Unexpected hw_id (%d) from ip discovery blob\\n\",\n\t\t\thw_id);\n\t\treturn -EINVAL;\n\t}\n\n\treturn 0;\n}\n"
+      },
+      {
+        "first_line": 1254,
+        "text": "\t\t\t}\n\t\t\tip_hw_instance->hw_id = le16_to_cpu(ip->hw_id); /* == ii */\n\t\t\tip_hw_instance->num_instance = ip->instance_number;\n\t\t\tip_hw_instance->major = ip->major;\n\t\t\tip_hw_instance->minor = ip->minor;\n\t\t\tip_hw_instance->revision = ip->revision;\n\t\t\tip_hw_instance->harvest =\n\t\t\t\tamdgpu_discovery_get_harvest_info(\n\t\t\t\t\tadev, ip_hw_instance->hw_id,\n\t\t\t\t\tip_hw_instance->num_instance);\n\t\t\tip_hw_instance->num_base_addresses = ip->num_base_address;\n\n\t\t\tfor (kk = 0; kk < ip_hw_instance->num_base_addresses; kk++)\n\t\t\t\tip_hw_instance->base_addr[kk] = ip->base_address[kk];"
+      },
+      {
+        "first_line": 1650,
+        "text": "\t\t\t\tif (hw_id == VCN_HWID && k < 3)\n\t\t\t\t\tdev_emerg(adev->dev,\n\t\t\t\t\t\t  \"BC250 R311 DISC die=%d inst=%u count=%u index=%u base=0x%08x\\n\",\n\t\t\t\t\t\t  i, (unsigned int)inst,\n\t\t\t\t\t\t  (unsigned int)num_base_address,\n\t\t\t\t\t\t  (unsigned int)k, ip->base_address[k]);\n\t\t\t}\n\n\t\t\tfor (hw_ip = 0; hw_ip < MAX_HWIP; hw_ip++) {\n\t\t\t\tif (hw_id_map[hw_ip] == le16_to_cpu(ip->hw_id) &&\n\t\t\t\t    hw_id_map[hw_ip] != 0) {\n\t\t\t\t\tDRM_DEBUG(\"set register base offset for %s\\n\",\n\t\t\t\t\t\t\thw_id_names[le16_to_cpu(ip->hw_id)]);\n\t\t\t\t\tadev->reg_offset[hw_ip][ip->instance_number] =\n\t\t\t\t\t\tip->base_address;"
+      }
+    ]
+  },
+  "amdgpu/soc15_common.h": {
+    "sha256": "2340e0144ae8efb1b59b520fa2b951920c649106a923b108bd45af24b8cc274e",
+    "excerpts": [
+      {
+        "first_line": 36,
+        "text": "#define SOC15_REG_OFFSET(ip, inst, reg)\t(adev->reg_offset[ip##_HWIP][inst][reg##_BASE_IDX] + reg)"
+      }
+    ]
+  },
+  "include/asic_reg/vcn/vcn_2_0_0_offset.h": {
+    "sha256": "026dabdbf0f2b731db71cd99a4f617f347589a61d8015afe29abb82f94ad5eb7",
+    "excerpts": [
+      {
+        "first_line": 380,
+        "text": "#define mmUVD_PGFSM_CONFIG                                                                             0x0000\n#define mmUVD_PGFSM_CONFIG_BASE_IDX                                                                    1\n#define mmUVD_PGFSM_STATUS                                                                             0x0001\n#define mmUVD_PGFSM_STATUS_BASE_IDX                                                                    1"
+      }
+    ]
+  }
+}
