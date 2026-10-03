@@ -1,3 +1,5 @@
+> Latest R299: [Network-first, receiver-gated CP03 control prepared](docs/CHATGPT_HANDOFF_R299_NETCP03.md). HOME package and gate validation PASS; privileged preflight pending, not installed/booted. No new VCN status read.
+
 > Latest R298 NETOBS1: [LIVE pre-GPU external transport qualification and normal return](docs/CHATGPT_HANDOFF_R298_NETOBS1.md#r298-netobs1-live-result--2026-10-03-supersedes-preparation-status). Received 2/10–10/10 plus completion; incomplete excerpt coverage and GPU/fabric hang-time delivery remain unproven.
 
 > Previous R298 preparation (superseded by live result): [Observation-only pre-GPU network qualification prepared, not installed or booted](docs/CHATGPT_HANDOFF_R298_NETOBS1.md). Normal-boot netconsole receipt confirmed after delayed Windows display; standalone image excludes amdgpu and disk-root mounting. CP07 read boundary remains UNPROVEN; no unchanged retry.

@@ -1,0 +1,30 @@
+{
+  "tests": [
+    {
+      "case": "wrong_token",
+      "mock_gpu_load": false,
+      "exit_code": 20,
+      "pass": true
+    },
+    {
+      "case": "eof",
+      "mock_gpu_load": false,
+      "exit_code": 20,
+      "pass": true
+    },
+    {
+      "case": "gpu_already_present",
+      "mock_gpu_load": false,
+      "exit_code": 20,
+      "pass": true
+    },
+    {
+      "case": "confirmed",
+      "mock_gpu_load": true,
+      "exit_code": 0,
+      "pass": true
+    }
+  ],
+  "real_module_load": false,
+  "sysfs_guard_mocked": true
+}
