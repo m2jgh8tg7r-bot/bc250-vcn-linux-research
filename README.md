@@ -1,3 +1,5 @@
+> R316: [Extended metadata boot package prepared](docs/CHATGPT_HANDOFF_R316.md). Only init changed; modules/firmware identical to R312, archive verified. Privileged preflight pending; not installed or booted.
+
 > R315: [Packaged netconsole artifact audit](docs/CHATGPT_HANDOFF_R315.md). Explicit extended-mode support confirmed statically; four executable sections match retained build. Private one-character draft only; no boot changes.
 
 > R314: [Sequence-aware receiver tools](docs/CHATGPT_HANDOFF_R314.md), eight offline tests passed. No receiver launched or boot changed; missing suffix remains unknown.
