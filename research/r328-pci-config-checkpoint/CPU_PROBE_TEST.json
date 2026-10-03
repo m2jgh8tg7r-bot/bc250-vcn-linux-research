@@ -1,0 +1,8 @@
+{
+  "result": "PASS",
+  "cases": 64,
+  "write_cases": 32,
+  "control_cases": 32,
+  "kind": "CPU API stubs; not hardware",
+  "compiler_flags": "-Wall -Wextra -Werror"
+}

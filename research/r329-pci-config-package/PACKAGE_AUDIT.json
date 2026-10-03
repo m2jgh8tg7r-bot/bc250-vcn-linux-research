@@ -1,0 +1,44 @@
+{
+  "contract": "PASS",
+  "image_sha256": "58834f33c08ce5da28533ee6f7c3a80bf7cfa401043b0e74fddc5dbd493c64a3",
+  "image_size": 168063182,
+  "bls_sha256": "4fde0f3b17900abf455066f5d21d9c2bd931bdfc9fa71c534abc137525d361bb",
+  "init_sha256": "24f83c9773f82efdedbb760a1d07cdb9af375df076b731dbda0b89b5a4a2f83f",
+  "module_sha256": "bc4487d40944e09b04946339ffb69a7d5a15fa2d375f192d3ee501dca879d6b0",
+  "signed_executable_sections_equal": [
+    {
+      "section": ".text",
+      "sha256": "a76d15650c4f4bc103e483223743a8eb144d010555ea3abde573be9b4be8e2b1"
+    },
+    {
+      "section": ".init.text",
+      "sha256": "a0cb4657702de06a331ca159fad4ba0a95676eeb5ca569a51e8e3fbd280918d4"
+    },
+    {
+      "section": ".exit.text",
+      "sha256": "0574b332567140dc1311b0c804fb003c3dd4c00fbab82c466db5856515e0548f"
+    },
+    {
+      "section": ".altinstr_replacement",
+      "sha256": "a51c257aed676bb3977227c85af77311f00d57834988edde5699e3f9796a4773"
+    },
+    {
+      "section": ".altinstr_aux",
+      "sha256": "04629a8386ebcfafb2a1521aa2ad478ce45e7752ec14af6ccd98b350945f5a3d"
+    },
+    {
+      "section": ".static_call.text",
+      "sha256": "1032a161afbe5c0db75f5e3efc08d221b9f884ef8ce2798a47deae8943b4e8e3"
+    }
+  ],
+  "changed_paths": [
+    "init",
+    "usr/lib/modules/7.2.3+/kernel/drivers/gpu/drm/amd/amdgpu/amdgpu.ko"
+  ],
+  "dependencies": "depmod clean",
+  "baseline_unchanged": true,
+  "roundtrip_exact": true,
+  "installed": false,
+  "booted": false,
+  "hardware_access": false
+}

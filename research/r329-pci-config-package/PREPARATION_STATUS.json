@@ -1,0 +1,10 @@
+{
+  "stage": "R329",
+  "home_preparation_complete": true,
+  "protected_boot_preflight": "PENDING_USER_SUDO_AUTHENTICATION",
+  "installed": false,
+  "booted": false,
+  "live_test_ready": false,
+  "hardware_access": false,
+  "active_build": false
+}

@@ -1,4 +1,4 @@
-> **R327–R329 preparation in progress:** [PCI configuration completion checkpoint](docs/CHATGPT_HANDOFF_R329.md). Probe CPU tests: 64 conditions pass. Paired module builds and package audit remain open; not installed or booted. R326 remains latest live evidence.
+> **R329 HOME preparation complete:** [PCI configuration completion package](docs/CHATGPT_HANDOFF_R329.md). Paired build/call audit, signing, archive roundtrip and CPU checks pass. Protected read-only preflight requires user sudo authentication; not installed or booted. VCN execution remains unproven.
 
 > **R326 / R325 LIVE:** [Final-pointer observation](docs/CHATGPT_HANDOFF_R326.md). Selected discovery record matched: die0/count3, one instance0 record, base1=0x7e00. Intended pre-MMIO panic/end received; current normal kernel read. Historical failed boots and VCN execution remain unproven. No unchanged repeat.
 

@@ -1,0 +1,33 @@
+{
+  "result": "PASS",
+  "paired_build": {
+    "result": "PASS",
+    "other_objects_identical": 1003,
+    "source_sha256": "75645f12848ce3c9373ae0e54c1a6d688074c87f38ce06dc4ff796a2d8effd08",
+    "control_source_sha256": "913c6b08324451257becf1d828d597d2d38e97cebaeb7e7880485667b66bf8e6",
+    "candidate_module_sha256": "c54f7132b5eba16dda8b88e283d6978adf2584f3285e9da1a2788e03bfd8f00b",
+    "control_module_sha256": "2338d78129c60ce3166af334bcc84434129efbad067c860f39a9b7e87cbf5a50",
+    "limit": "Object equality excludes linked data semantics; disassembly audit required",
+    "hardware_access": false
+  },
+  "control_vs_candidate_changed_functions": [
+    "bc250_r324_final_base",
+    "vcn_v2_0_hw_init",
+    "vcn_v2_0_hw_init.cold",
+    "vcn_v2_0_start_dpg_mode.cold"
+  ],
+  "added_functions": [
+    "bc250_r328_pci_config_probe"
+  ],
+  "removed_functions": [
+    "vcn_v2_0_cyan_pre_reset_only.isra.0"
+  ],
+  "common_functions": 56,
+  "probe_pci_reads": 2,
+  "probe_normal_mmio_writes": 1,
+  "probe_mmio_reads": 0,
+  "manual_review": "COMPILED_REVIEW.md",
+  "cpu_probe_cases": 64,
+  "cpu_observer_cases": 180,
+  "limit": "No claim of whole VCN function-byte equivalence; compiler outlines helper differently and cold labels move"
+}

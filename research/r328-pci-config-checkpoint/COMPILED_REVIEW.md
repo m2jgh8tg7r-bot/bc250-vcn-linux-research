@@ -1,0 +1,9 @@
+# R328 compiled checkpoint audit
+
+Paired no-write control and candidate retain 1003 other AMD object hashes. VCN functions differ as listed in CLOSED_MODULE_AUDIT.json: compiler outlines/inlines the helper differently and cold labels move. Function byte equality is not claimed for those functions. The initial relocated-path rebuild is a new baseline, not an assertion of all R325 linked bytes being identical.
+
+Candidate .text.unlikely probe offsets 0x3c5 and 0x486 call standard pci_read_config_dword with offset0. Status/identity conditions at 0x3e4–0x3ff skip the write and post-read on failed pre-read. The no_hw_access branch skips both reads and the write. Offset0x450 loads value0x55555 and 0x458 calls amdgpu_device_wreg; offset0x415 takes register index from selected segment1. Macro alternative amdgpu_sriov_wreg exists in compiled bytes but enclosing hw_init rejects VF at0x608–0x60f. No MMIO read call is present in this probe.
+
+Enclosing hw_init rejects pg/cg/VF, calls bounded final observer at0x666, tests its boolean at0x66c and only then calls probe at0x673. False path logs ABORT and joins the same unconditional panic at0x67f; probe returns also lead there. Thus source code after panic does not perform STATUS, power, reset or clock transactions along this checkpoint path. The observer retains the previously reviewed bounded die-index UBSan failure instrumentation; normal accepted ndies<=16 keeps that index in range. Function tracing and stack checking are ordinary compiler instrumentation.
+
+PCI API return is not a VCN command acknowledgement; no software timeout can recover a CPU stalled inside a bus access. Source constants, CPU stubs and disassembly are static evidence. Actual pre/post return, write delivery, receiver markers and recovery remain unproven until live testing.
