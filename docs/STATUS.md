@@ -1,3 +1,5 @@
+> Latest R303: [R302 LIVE CP03 receipt and normal return; CP04 network comparison prepared](CHATGPT_HANDOFF_R303_NETCP04.md). Not installed or booted; no new VCN MMIO experiment.
+
 # Current status
 
 ## Latest — R269, 2026-10-01 JST

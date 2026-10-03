@@ -1,0 +1,74 @@
+{
+  "result": "PASS",
+  "tests": [
+    {
+      "case": "exact",
+      "pass_result": true,
+      "mocked_gpu_loads": 1,
+      "output": "INPUT_READY stdin_tty=NO expected_bytes=18 diagnostic_only=NO\nINPUT_RESULT read_rc=0 bytes=18 escaped_prefix=R299-CP03-RECEIVED\nINPUT_EXACT_MATCH; receiver confirmation accepted\nRECEIVER_CONFIRMED; CP04 control begins in 5 seconds\nAMDGPU_MODPROBE_BEGIN; expected CP04 panic after guards before first VCN MMIO\nMOCK_GPU_LOAD amdgpu dc=1\nUNEXPECTED_MODPROBE_RETURN rc=17; do not retry\n"
+    },
+    {
+      "case": "trailing_space",
+      "pass_result": true,
+      "mocked_gpu_loads": 0,
+      "output": "INPUT_READY stdin_tty=NO expected_bytes=18 diagnostic_only=NO\nINPUT_RESULT read_rc=0 bytes=19 escaped_prefix=R299-CP03-RECEIVED\\ \nFAIL INPUT_MISMATCH; GPU not loaded\n"
+    },
+    {
+      "case": "pipe_crlf",
+      "pass_result": true,
+      "mocked_gpu_loads": 0,
+      "output": "INPUT_READY stdin_tty=NO expected_bytes=18 diagnostic_only=NO\nINPUT_RESULT read_rc=0 bytes=19 escaped_prefix=$'R299-CP03-RECEIVED\\r'\nFAIL INPUT_MISMATCH; GPU not loaded\n"
+    },
+    {
+      "case": "empty_line",
+      "pass_result": true,
+      "mocked_gpu_loads": 0,
+      "output": "INPUT_READY stdin_tty=NO expected_bytes=18 diagnostic_only=NO\nINPUT_RESULT read_rc=0 bytes=0 escaped_prefix=''\nFAIL INPUT_MISMATCH; GPU not loaded\n"
+    },
+    {
+      "case": "eof",
+      "pass_result": true,
+      "mocked_gpu_loads": 0,
+      "output": "INPUT_READY stdin_tty=NO expected_bytes=18 diagnostic_only=NO\nINPUT_RESULT read_rc=1 bytes=0 escaped_prefix=''\nFAIL INPUT_READ_FAILURE; EOF or read error; GPU not loaded\n"
+    },
+    {
+      "case": "exact_without_newline",
+      "pass_result": true,
+      "mocked_gpu_loads": 0,
+      "output": "INPUT_READY stdin_tty=NO expected_bytes=18 diagnostic_only=NO\nINPUT_RESULT read_rc=1 bytes=18 escaped_prefix=R299-CP03-RECEIVED\nFAIL INPUT_READ_FAILURE; EOF or read error; GPU not loaded\n"
+    },
+    {
+      "case": "unicode_dash",
+      "pass_result": true,
+      "mocked_gpu_loads": 0,
+      "output": "INPUT_READY stdin_tty=NO expected_bytes=18 diagnostic_only=NO\nINPUT_RESULT read_rc=0 bytes=20 escaped_prefix=$'R299\\342\\200\\223CP03-RECEIVED'\nFAIL INPUT_MISMATCH; GPU not loaded\n"
+    },
+    {
+      "case": "long_input",
+      "pass_result": true,
+      "mocked_gpu_loads": 0,
+      "output": "INPUT_READY stdin_tty=NO expected_bytes=18 diagnostic_only=NO\nINPUT_RESULT read_rc=0 bytes=200 escaped_prefix=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\nFAIL INPUT_MISMATCH; GPU not loaded\n"
+    },
+    {
+      "case": "gpu_already_present",
+      "pass_result": true,
+      "mocked_gpu_loads": 0,
+      "output": "INPUT_READY stdin_tty=NO expected_bytes=18 diagnostic_only=NO\nINPUT_RESULT read_rc=0 bytes=18 escaped_prefix=R299-CP03-RECEIVED\nINPUT_EXACT_MATCH; receiver confirmation accepted\nFAIL GPU loaded before gate\n"
+    },
+    {
+      "case": "queued_wrong_line",
+      "pass_result": true,
+      "mocked_gpu_loads": 0,
+      "output": "INPUT_READY stdin_tty=NO expected_bytes=18 diagnostic_only=NO\nINPUT_RESULT read_rc=0 bytes=5 escaped_prefix=wrong\nFAIL INPUT_MISMATCH; GPU not loaded\n"
+    },
+    {
+      "case": "pty_exact",
+      "pass_result": true,
+      "mocked_gpu_loads": 1,
+      "output": "INPUT_READY stdin_tty=YES expected_bytes=18 diagnostic_only=NO\r\nR299-CP03-RECEIVED\r\nspeed 38400 baud; rows 0; columns 0; line = 0;\r\nintr = ^C; quit = ^\\; erase = ^?; kill = ^U; eof = ^D; eol = <undef>;\r\neol2 = <undef>; swtch = <undef>; start = ^Q; stop = ^S; susp = ^Z; rprnt = ^R;\r\nwerase = ^W; lnext = ^V; discard = ^O; min = 1; time = 0;\r\n-parenb -parodd -cmspar cs8 -hupcl -cstopb cread -clocal -crtscts\r\n-ignbrk -brkint -ignpar -parmrk -inpck -istrip -inlcr -igncr icrnl ixon -ixoff\r\n-iuclc -ixany -imaxbel -iutf8\r\nopost -olcuc -ocrnl onlcr -onocr -onlret -ofill -ofdel nl0 cr0 tab0 bs0 vt0 ff0\r\nisig icanon iexten echo echoe echok -echonl -noflsh -xcase -tostop -echoprt\r\nechoctl echoke -flusho -extproc\r\nINPUT_RESULT read_rc=0 bytes=18 escaped_prefix=R299-CP03-RECEIVED\r\nINPUT_EXACT_MATCH; receiver confirmation accepted\r\nRECEIVER_CONFIRMED; CP04 control begins in 5 seconds\r\nAMDGPU_MODPROBE_BEGIN; expected CP04 panic after guards before first VCN MMIO\r\nMOCK_GPU_LOAD amdgpu dc=1\r\nUNEXPECTED_MODPROBE_RETURN rc=17; do not retry\r\n"
+    }
+  ],
+  "real_gpu_load": false,
+  "live_console_test": false,
+  "limits": "Command stubs and PTY do not prove boot-console or panic delivery"
+}

@@ -1,3 +1,5 @@
+> Latest R303: [R302 LIVE CP03 receipt and normal return; CP04 network comparison prepared](docs/CHATGPT_HANDOFF_R303_NETCP04.md). Not installed or booted; no new VCN MMIO experiment.
+
 > R299 installation update: image/BLS and archived CP07 identities independently verified; manual-menu tool prepared, not yet booted. [Current handoff](docs/CHATGPT_HANDOFF_R299_NETCP03.md#installed-and-independently-audited--2026-10-03).
 
 > Latest R299: [Network-first, receiver-gated CP03 control prepared](docs/CHATGPT_HANDOFF_R299_NETCP03.md). HOME package and gate validation PASS; privileged preflight pending, not installed/booted. No new VCN status read.

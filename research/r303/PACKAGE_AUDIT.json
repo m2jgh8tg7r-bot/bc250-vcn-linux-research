@@ -1,0 +1,30 @@
+{
+  "contract": "PASS",
+  "image_sha256": "f100c7aebe64bec65a452646360a9a198dc183bafe056c00c280b7c4b4ad9b8c",
+  "image_size": 168064077,
+  "bls_sha256": "55935c7188f546cf15f186723ec33b798a6260d0d769f87a7a960ab72311f284",
+  "init_sha256": "c1a80377559af17bebca0528c26bdb9e68b4ae7b1152fd9d496583bc9f361d80",
+  "cp04_module_sha256": "2b154c25d7de1bef4fcdc127edf10df3b6388897760cc0da55b52242fae2bdf9",
+  "gpu_module_closure": [
+    "kernel/drivers/acpi/video.ko",
+    "kernel/drivers/gpu/drm/amd/amdgpu/amdgpu.ko",
+    "kernel/drivers/gpu/drm/amd/amdxcp/amdxcp.ko",
+    "kernel/drivers/gpu/drm/display/drm_display_helper.ko",
+    "kernel/drivers/gpu/drm/drm_buddy.ko",
+    "kernel/drivers/gpu/drm/drm_exec.ko",
+    "kernel/drivers/gpu/drm/drm_panel_backlight_quirks.ko",
+    "kernel/drivers/gpu/drm/drm_suballoc_helper.ko",
+    "kernel/drivers/gpu/drm/drm_ttm_helper.ko",
+    "kernel/drivers/gpu/drm/scheduler/gpu-sched.ko",
+    "kernel/drivers/gpu/drm/ttm/ttm.ko",
+    "kernel/drivers/i2c/algos/i2c-algo-bit.ko",
+    "kernel/drivers/media/cec/core/cec.ko",
+    "kernel/drivers/platform/wmi/wmi.ko"
+  ],
+  "roundtrip_exact": true,
+  "root_mount": false,
+  "boot_write": false,
+  "module_load": false,
+  "receiver_gate": "R299-CP03-RECEIVED",
+  "live_result": "UNPROVEN"
+}

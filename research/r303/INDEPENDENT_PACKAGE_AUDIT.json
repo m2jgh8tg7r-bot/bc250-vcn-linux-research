@@ -1,0 +1,10 @@
+{
+  "contract": "PASS",
+  "changed_files": [
+    "init",
+    "usr/lib/modules/7.2.3+/kernel/drivers/gpu/drm/amd/amdgpu/amdgpu.ko"
+  ],
+  "same_path_set": true,
+  "receiver_token_preserved": true,
+  "live": "UNPROVEN"
+}
