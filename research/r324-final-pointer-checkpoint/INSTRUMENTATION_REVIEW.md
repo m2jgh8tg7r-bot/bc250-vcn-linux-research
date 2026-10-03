@@ -1,0 +1,7 @@
+# Compiler instrumentation review
+
+The observer's __ubsan_handle_out_of_bounds relocation belongs to the fixed die_info[16] array subscript, not a register access. In the linked candidate, +0x108 compares ndies with 16 and rejects greater counts; +0x134 initializes die to zero; +0x15a compares die to 15 before the UBSan branch; the loop tail increments die and returns to the body only while die < ndies. Thus under unchanged local loop/header values, die is always 0..15 at the array access and the UBSan failure branch is unreachable. Bounds instrumentation remains enabled. Corruption/concurrency outside those assumptions is not disproved.
+
+__fentry__ is normal CONFIG_FUNCTION_TRACER entry instrumentation emitted for the function, rather than a developer-added hardware operation. Existing baseline VCN functions also have this entry relocation. No runtime tracing configuration is attested by that static fact. We do not claim a logging-only relocation set: the accepted set is _dev_emerg, __fentry__, and the guarded __ubsan_handle_out_of_bounds.
+
+The linked checkpoint calls the observer and then the unconditional named panic; it does not return from the success path into helper register operations. The guarded-out path already present in baseline can return without the observer. Panic and observation logging may alter timing. Static inspection is not evidence that any live record was read.

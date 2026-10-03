@@ -1,0 +1,72 @@
+# DOCUMENTATION ONLY: replace sender/receiver TEST-NET addresses and destination MAC before use.
+#!/bin/bash
+export PATH=/usr/bin:/usr/sbin:/bin:/sbin
+mount -t proc proc /proc || exec /bin/bash
+mount -t sysfs sysfs /sys || exec /bin/bash
+mount -t devtmpfs devtmpfs /dev || true
+exec </dev/console >/dev/console 2>&1
+echo 'R325 NETHOLD: metadata-only CP04-derived control; GPU load requires local receiver confirmation'
+marker() { printf '<0>R325 NETHOLD: %s\n' "$*" >/dev/kmsg; }
+hold() {
+    echo 'Observation ended. No root filesystem mounted. No automatic reboot.'
+    echo 'To return to normal Bazzite: type reboot -f, then select normal entry.'
+    while true; do /bin/bash --noprofile --norc; sleep 1; done
+}
+fail() { marker "FAIL $*"; echo "FAIL: $*"; hold; }
+[[ $(uname -r) == '7.2.3+' ]] || fail 'wrong research kernel'
+[[ ! -d /sys/module/amdgpu ]] || fail 'unexpected amdgpu already loaded'
+modprobe realtek || fail 'realtek module load'
+modprobe r8169 || fail 'r8169 module load'
+iface=''
+for ((i=0; i<15; i++)); do
+    for p in /sys/class/net/*; do
+        [[ -e "$p/device" ]] || continue
+        [[ $(readlink -f "$p/device") == */0000:04:00.0 ]] || continue
+        iface=${p##*/}
+    done
+    [[ -n "$iface" ]] && break
+    sleep 1
+done
+[[ -n "$iface" ]] || fail 'wired PCI NIC not found'
+ip link set dev "$iface" up || fail 'NIC up'
+ip address add 192.0.2.10/24 dev "$iface" || fail 'sender address'
+linked=0
+for ((i=0; i<30; i++)); do
+    read -r carrier <"/sys/class/net/$iface/carrier" || carrier=0
+    if [[ "$carrier" == 1 ]]; then linked=1; break; fi
+    sleep 1
+done
+[[ "$linked" == 1 ]] || fail 'no wired link after 30 seconds'
+marker "wired_link_ready interface=$iface"
+modprobe netconsole oops_only=0 "netconsole=+6665@192.0.2.10/$iface,6666@192.0.2.20/02:00:00:00:00:20" || fail 'netconsole load'
+[[ -d /sys/module/netconsole ]] || fail 'netconsole absent'
+[[ ! -d /sys/module/amdgpu ]] || fail 'unexpected GPU load'
+for ((i=1; i<=10; i++)); do
+    marker "QUALIFICATION $i/10 kernel=7.2.3+ amdgpu_absent=YES no_VCN_access"
+    sleep 1
+done
+marker 'QUALIFICATION_COMPLETE; awaiting local receiver-confirmation token; GPU not loaded'
+echo 'After Windows has saved R325 QUALIFICATION_COMPLETE, type exactly: R299-CP03-RECEIVED'
+export LC_ALL=C
+[[ -t 0 ]] && tty_status=YES || tty_status=NO
+marker "INPUT_READY stdin_tty=$tty_status expected_bytes=18 diagnostic_only=NO"
+stty -a </dev/console
+acknowledgement=''
+IFS= read -r acknowledgement
+read_rc=$?
+printf -v escaped '%q' "${acknowledgement:0:64}"
+marker "INPUT_RESULT read_rc=$read_rc bytes=${#acknowledgement} escaped_prefix=$escaped"
+if ((read_rc != 0)); then
+    fail 'INPUT_READ_FAILURE; EOF or read error; GPU not loaded'
+elif [[ "$acknowledgement" != 'R299-CP03-RECEIVED' ]]; then
+    fail 'INPUT_MISMATCH; GPU not loaded'
+fi
+marker 'INPUT_EXACT_MATCH; receiver confirmation accepted'
+[[ ! -d /sys/module/amdgpu ]] || fail 'GPU loaded before gate'
+marker 'RECEIVER_CONFIRMED; R324 final-pointer control begins in 5 seconds'
+sleep 5
+marker 'AMDGPU_MODPROBE_BEGIN; expected R324 final-pointer metadata then panic before helper VCN MMIO'
+modprobe amdgpu dc=1
+rc=$?
+marker "UNEXPECTED_MODPROBE_RETURN rc=$rc; do not retry"
+hold

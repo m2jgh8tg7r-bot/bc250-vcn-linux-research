@@ -1,0 +1,5 @@
+{
+  "result": "PASS",
+  "cases": 180,
+  "sanitizer": "unavailable: system libubsan missing; ordinary -Wall -Wextra -Werror build passed"
+}

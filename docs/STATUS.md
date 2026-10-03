@@ -1,3 +1,5 @@
+> **Current checkpoint — R325:** [Final-pointer checkpoint HOME image](CHATGPT_HANDOFF_R325.md). Module/signing/roundtrip and gate/default/include checks passed. Protected boot preflight requires user sudo authentication; not installed or booted.
+
 > **Current checkpoint — R323/R324:** [Offline reader and checkpoint draft](CHATGPT_HANDOFF_R324.md). CPU tests and paired builds completed; compiler instrumentation review remains open. No boot package or live test is ready.
 
 > **Current checkpoint — R322:** [Discovery evidence inventory and export limits](CHATGPT_HANDOFF_R322.md). No matching full capture found in scoped search. Sysfs entries cannot certify record uniqueness; debugfs exposes post-parser heap data. Static review only; no hardware operation.

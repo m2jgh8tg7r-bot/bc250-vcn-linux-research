@@ -1,0 +1,156 @@
+--- a/vcn_v2_0.c
++++ b/vcn_v2_0.c
+@@ -33,6 +33,8 @@
+ #include "amdgpu_psp.h"
+ #include "mmsch_v2_0.h"
+ #include "vcn_v2_0.h"
++#include "discovery.h"
++#include "soc15_hw_ip.h"
+ 
+ #include "vcn/vcn_2_0_0_offset.h"
+ #include "vcn/vcn_2_0_0_sh_mask.h"
+@@ -513,6 +515,134 @@
+  * It must not release reset, configure rings, touch FILTER,
+  * send SMU VCN power messages, or touch MMSCH.
+  */
++/* Software-only observation of the discovery-owned final VCN base pointer.
++ * x86 little-endian post-parser layout only. No register accessor calls.
++ */
++static bool bc250_r324_range(size_t off, size_t bytes, size_t end)
++{
++	return off <= end && bytes <= end - off;
++}
++
++static void bc250_r324_final_base(struct amdgpu_device *adev)
++{
++	const u8 *buf = adev->discovery.bin;
++	const struct binary_header *bh;
++	const struct ip_discovery_header *ih;
++	const struct table_info *ti;
++	const struct ip_v4 *match = NULL;
++	size_t alloc = adev->discovery.size, total, table, start, end;
++	size_t cur, extent, previous_end = 0;
++	unsigned int ndies, die, ordinal, count, vcn0 = 0, match_die = 0;
++	unsigned int major, nbase, record_count = 0;
++	u32 base;
++	u64 config_byte, status_byte;
++	bool wide;
++	const char *reason = "header";
++
++	if (!buf || !bc250_r324_range(0, sizeof(*bh), alloc))
++		goto reject;
++	bh = (const struct binary_header *)buf;
++	if (le32_to_cpu(bh->binary_signature) != BINARY_SIGNATURE)
++		goto reject;
++	total = le16_to_cpu(bh->binary_size);
++	if (total < sizeof(*bh) || total > alloc)
++		goto reject;
++	major = le16_to_cpu(bh->version_major);
++	if (major <= 1) {
++		table = offsetof(struct binary_header, table_list);
++	} else if (major == 2) {
++		const struct binary_header_v2 *v2 = (const void *)buf;
++		unsigned int tables;
++
++		if (!bc250_r324_range(0, sizeof(*v2), total))
++			goto reject;
++		tables = le16_to_cpu(v2->num_tables);
++		table = offsetof(struct binary_header_v2, table_list);
++		if (!tables || !bc250_r324_range(table, tables * sizeof(*ti), total))
++			goto reject;
++	} else {
++		goto reject;
++	}
++	if (!bc250_r324_range(table, sizeof(*ti), total))
++		goto reject;
++	ti = (const void *)(buf + table);
++	start = le16_to_cpu(ti->offset);
++	extent = le16_to_cpu(ti->size);
++	if (!bc250_r324_range(start, extent, total) || extent < sizeof(*ih))
++		goto reject;
++	ih = (const void *)(buf + start);
++	if (le32_to_cpu(ih->signature) != DISCOVERY_TABLE_SIGNATURE ||
++	    le16_to_cpu(ih->size) < sizeof(*ih) || le16_to_cpu(ih->size) > extent ||
++	    le16_to_cpu(ih->version) < 1 || le16_to_cpu(ih->version) > 4)
++		goto reject;
++	end = start + le16_to_cpu(ih->size);
++	ndies = le16_to_cpu(ih->num_dies);
++	if (ndies > ARRAY_SIZE(ih->die_info))
++		goto reject;
++	wide = ih->base_addr_64_bit;
++	previous_end = start + sizeof(*ih);
++	reason = "records";
++	for (die = 0; die < ndies; die++) {
++		const struct die_header *dh;
++
++		cur = le16_to_cpu(ih->die_info[die].die_offset);
++		/* Conservative: unusual ordering is inconclusive, never dereferenced. */
++		if (cur < previous_end || !bc250_r324_range(cur, sizeof(*dh), end))
++			goto reject;
++		dh = (const void *)(buf + cur);
++		if (le16_to_cpu(dh->die_id) != die)
++			goto reject;
++		count = le16_to_cpu(dh->num_ips);
++		cur += sizeof(*dh);
++		for (ordinal = 0; ordinal < count; ordinal++) {
++			const struct ip_v4 *ip;
++
++			if (++record_count > 8192 || !bc250_r324_range(cur, sizeof(*ip), end))
++				goto reject;
++			ip = (const void *)(buf + cur);
++			nbase = ip->num_base_address;
++			extent = sizeof(*ip) + nbase * (wide ? sizeof(u64) : sizeof(u32));
++			if (!bc250_r324_range(cur, extent, end))
++				goto reject;
++			if (le16_to_cpu(ip->hw_id) == VCN_HWID && ip->instance_number == 0) {
++				vcn0++;
++				if ((const void *)ip->base_address ==
++				    (const void *)adev->reg_offset[VCN_HWIP][0]) {
++					if (match) {
++						reason = "ambiguous_pointer";
++						goto reject;
++					}
++					match = ip;
++					match_die = die;
++				}
++			}
++			cur += extent;
++		}
++		previous_end = cur;
++	}
++	reason = "no_matching_record";
++	if (!match)
++		goto reject;
++	nbase = match->num_base_address;
++	dev_emerg(adev->dev, "BC250 R324 FINAL matched=YES die=%u count=%u vcn0_records=%u\n",
++		  match_die, nbase, vcn0);
++	if (nbase <= mmUVD_PGFSM_STATUS_BASE_IDX ||
++	    nbase <= mmUVD_PGFSM_CONFIG_BASE_IDX) {
++		dev_emerg(adev->dev, "BC250 R324 FINAL segment1_absent\n");
++		return;
++	}
++	/* Parser already writes native u32 entries, even in wide records. */
++	memcpy(&base, (const u8 *)match->base_address + sizeof(u32), sizeof(base));
++	config_byte = ((u64)base + mmUVD_PGFSM_CONFIG) * 4;
++	status_byte = ((u64)base + mmUVD_PGFSM_STATUS) * 4;
++	dev_emerg(adev->dev, "BC250 R324 FINAL base1=0x%08x config_byte=0x%llx status_byte=0x%llx aperture=%llu\n",
++		  base, (unsigned long long)config_byte, (unsigned long long)status_byte,
++		  (unsigned long long)adev->rmmio_size);
++	return;
++reject:
++	dev_emerg(adev->dev, "BC250 R324 FINAL inconclusive=%s\n", reason);
++}
++
+ static void __maybe_unused
+ vcn_v2_0_cyan_pre_reset_only(struct amdgpu_vcn_inst *vinst)
+ {
+@@ -544,7 +674,8 @@
+ 		  (unsigned int)adev->no_hw_access,
+ 		  (unsigned long long)adev->rmmio_size);
+ 	dev_emerg(adev->dev, "BC250 R311 META complete before helper VCN MMIO\n");
+-	panic("BC250 R311 metadata checkpoint before helper VCN MMIO");
++	bc250_r324_final_base(adev);
++	panic("BC250 R324 final-pointer checkpoint before helper VCN MMIO");
+ 	/*
+ 	 * Zero-flag branch of
+ 	 * vcn_v2_0_disable_static_power_gating().

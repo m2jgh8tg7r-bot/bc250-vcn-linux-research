@@ -1,0 +1,84 @@
+{
+  "result": "PASS",
+  "scope": "CPU fixtures using current readable BLS files; protected actual GRUB config remains user-supplied until preflight",
+  "cases": [
+    {
+      "case": "observed_layout_fixed_1",
+      "expected_acceptance": true,
+      "pass": true
+    },
+    {
+      "case": "changed_default",
+      "expected_acceptance": false,
+      "pass": true
+    },
+    {
+      "case": "multiple_defaults",
+      "expected_acceptance": false,
+      "pass": true
+    },
+    {
+      "case": "preceding_menu",
+      "expected_acceptance": false,
+      "pass": true
+    },
+    {
+      "case": "extra_config",
+      "expected_acceptance": false,
+      "pass": true
+    },
+    {
+      "case": "multiple_bls",
+      "expected_acceptance": false,
+      "pass": true
+    },
+    {
+      "case": "next_entry",
+      "expected_acceptance": false,
+      "pass": true
+    },
+    {
+      "case": "blsdir",
+      "expected_acceptance": false,
+      "pass": true
+    },
+    {
+      "case": "saved_entry",
+      "expected_acceptance": false,
+      "pass": true
+    },
+    {
+      "case": "normal_content_changed",
+      "expected_acceptance": false,
+      "pass": true
+    },
+    {
+      "case": "candidate_priority_changed",
+      "expected_acceptance": false,
+      "pass": true
+    },
+    {
+      "case": "unknown_entry",
+      "expected_acceptance": false,
+      "pass": true
+    },
+    {
+      "case": "saved_normal_id",
+      "expected_acceptance": true,
+      "pass": true
+    }
+  ],
+  "observed_layout_prediction": {
+    "include_check": {},
+    "mode": "fixed_index_1_no_saved_entry",
+    "normal_bls_prefix": [
+      "ostree-2.conf",
+      "ostree-1.conf"
+    ],
+    "selected_entry": "ostree-1.conf",
+    "research_count_before": 4,
+    "research_count_after": 4,
+    "normal_prefix_unchanged": true,
+    "scope": "Observed conventional Fedora BLS names and matching numeric versions; not a general GRUB parser"
+  }
+}

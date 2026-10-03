@@ -1,0 +1,23 @@
+{
+  "result": "PASS",
+  "other_objects_identical": 1003,
+  "candidate_rebuild_exact": true,
+  "common_functions": 53,
+  "changed_function_bytes": [
+    "vcn_v2_0_hw_init.cold"
+  ],
+  "added_functions": [
+    "bc250_r324_final_base"
+  ],
+  "removed_functions": [],
+  "observer_external_calls": [
+    "__fentry__-0x4",
+    "__ubsan_handle_out_of_bounds-0x4",
+    "_dev_emerg-0x4",
+    "_dev_emerg-0x4",
+    "_dev_emerg-0x4",
+    "_dev_emerg-0x4"
+  ],
+  "guarded_ubsan_review": "INSTRUMENTATION_REVIEW.md",
+  "limit": "Pre-relocation function bytes do not attest referenced data or historical/live state"
+}

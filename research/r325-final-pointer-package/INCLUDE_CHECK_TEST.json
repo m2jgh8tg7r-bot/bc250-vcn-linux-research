@@ -1,0 +1,76 @@
+{
+  "result": "PASS",
+  "cases": [
+    {
+      "case": "absent_bootuuid.cfg",
+      "accepted": true,
+      "pass": true
+    },
+    {
+      "case": "absent_console.cfg",
+      "accepted": true,
+      "pass": true
+    },
+    {
+      "case": "absent_user.cfg",
+      "accepted": true,
+      "pass": true
+    },
+    {
+      "case": "uuid_assignment",
+      "accepted": true,
+      "pass": true
+    },
+    {
+      "case": "console_commands",
+      "accepted": true,
+      "pass": true
+    },
+    {
+      "case": "password_assignment",
+      "accepted": true,
+      "pass": true
+    },
+    {
+      "case": "reject_default_bootuuid.cfg",
+      "accepted": false,
+      "pass": true
+    },
+    {
+      "case": "reject_default_console.cfg",
+      "accepted": false,
+      "pass": true
+    },
+    {
+      "case": "reject_default_user.cfg",
+      "accepted": false,
+      "pass": true
+    },
+    {
+      "case": "reject_nested_source",
+      "accepted": false,
+      "pass": true
+    },
+    {
+      "case": "three_observed_absent_sources",
+      "accepted": true,
+      "pass": true
+    },
+    {
+      "case": "missing_observation",
+      "accepted": false,
+      "pass": true
+    },
+    {
+      "case": "unknown_source",
+      "accepted": false,
+      "pass": true
+    },
+    {
+      "case": "preceding_menu",
+      "accepted": false,
+      "pass": true
+    }
+  ],
+  "hardware_access": false
+}
