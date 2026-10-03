@@ -1,0 +1,50 @@
+{
+  "artifact": "R332 retained linked research kernel text",
+  "symbol_size_hex": "0xe9",
+  "artifact_text_sha256": "1f2968332a5846ab3a4158a573b4680c405c7fbd84f0e7bba94c90fc5ee72b9d",
+  "instruction_sites": [
+    {
+      "symbol": "pci_conf1_read",
+      "offset_hex": "0x4c",
+      "operation": "call",
+      "operand_or_target": "ffffffff827e5370 <_raw_spin_lock_irqsave>",
+      "meaning": "Sample site only; no stall/cause/lock ownership inference"
+    },
+    {
+      "symbol": "pci_conf1_read",
+      "offset_hex": "0x79",
+      "operation": "out",
+      "operand_or_target": "%eax,(%dx)",
+      "meaning": "Sample site only; no stall/cause/lock ownership inference"
+    },
+    {
+      "symbol": "pci_conf1_read",
+      "offset_hex": "0x98",
+      "operation": "in",
+      "operand_or_target": "(%dx),%al",
+      "meaning": "Sample site only; no stall/cause/lock ownership inference"
+    },
+    {
+      "symbol": "pci_conf1_read",
+      "offset_hex": "0xa5",
+      "operation": "call",
+      "operand_or_target": "ffffffff827e53f0 <_raw_spin_unlock_irqrestore>",
+      "meaning": "Sample site only; no stall/cause/lock ownership inference"
+    },
+    {
+      "symbol": "pci_conf1_read",
+      "offset_hex": "0xbe",
+      "operation": "in",
+      "operand_or_target": "(%dx),%eax",
+      "meaning": "Sample site only; no stall/cause/lock ownership inference"
+    },
+    {
+      "symbol": "pci_conf1_read",
+      "offset_hex": "0xcf",
+      "operation": "in",
+      "operand_or_target": "(%dx),%ax",
+      "meaning": "Sample site only; no stall/cause/lock ownership inference"
+    }
+  ],
+  "use": "Require same-kernel symbol/size provenance and a genuine sampled RIP. Do not treat call-trace return addresses as sampled PC. No R329 sample exists."
+}
