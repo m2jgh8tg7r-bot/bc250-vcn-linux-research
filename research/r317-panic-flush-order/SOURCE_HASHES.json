@@ -1,0 +1,7 @@
+{
+  "drivers/net/netconsole.c": "8a9c4888b77601c10be7e9dc46b0e1d0a60fb1f6485705c5b30489a859736932",
+  "include/linux/console.h": "6b84c2ec9b7e8cd08c5e742fef9cee5296010fce5a566fba519eb443330ad5a3",
+  "kernel/printk/nbcon.c": "e66c2bde10cc42db85e87979881d8cb849d5b06440a2a4ab87df4a0aa4354321",
+  "kernel/printk/printk.c": "5bf2b1c8ef40f422f9a667e58aecc9da9e9b30fb7049baca90ee083e76598e04",
+  "kernel/panic.c": "7c00ccaf178a60ec6449365e7b240602d0f7d9ac92fba8b80f84acbee81d2344"
+}

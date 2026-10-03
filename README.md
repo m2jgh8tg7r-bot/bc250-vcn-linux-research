@@ -1,3 +1,5 @@
+> R317: [Panic-flush ordering audit](docs/CHATGPT_HANDOFF_R317.md). Retained unsafe netconsole final flush follows timed restart, providing a concrete missing-tail hypothesis. R316 extended reception recorded; checkpoint/reset cause unproven. No further hardware tests today.
+
 > R316: [Extended metadata boot package prepared](docs/CHATGPT_HANDOFF_R316.md). Only init changed; modules/firmware identical to R312, archive verified. Privileged preflight pending; not installed or booted.
 
 > R315: [Packaged netconsole artifact audit](docs/CHATGPT_HANDOFF_R315.md). Explicit extended-mode support confirmed statically; four executable sections match retained build. Private one-character draft only; no boot changes.

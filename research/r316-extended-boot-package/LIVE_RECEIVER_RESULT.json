@@ -1,0 +1,45 @@
+{
+  "source": "User-pasted extended log; original JSONL not inspected",
+  "received_sequence_runs_as_pasted": [
+    [
+      0,
+      275
+    ],
+    [
+      900,
+      1200
+    ]
+  ],
+  "absent_in_paste": [
+    [
+      276,
+      899
+    ]
+  ],
+  "absent_sequence_count": 624,
+  "last_sequence": 1200,
+  "last_timestamp_us": 65215382,
+  "last_message": "dal_irq_service_ack: src: 9",
+  "qualification_complete_sequence": 909,
+  "input_accepted_sequence": 912,
+  "module_begin_sequence": 914,
+  "discovery_sequences": [
+    924,
+    925,
+    926
+  ],
+  "discovery_bases": [
+    "0x7800",
+    "0x7e00",
+    "0x02403000"
+  ],
+  "direct_copy_sequence": 959,
+  "direct_copy_equal": 1,
+  "helper_marker_received": false,
+  "metadata_checkpoint_received": false,
+  "panic_received": false,
+  "recovery_method": "UNKNOWN for R316",
+  "loss_location": "UNKNOWN; copying omission versus original capture loss not distinguished",
+  "suffix_completeness": "UNKNOWN",
+  "new_boot_requested": false
+}
