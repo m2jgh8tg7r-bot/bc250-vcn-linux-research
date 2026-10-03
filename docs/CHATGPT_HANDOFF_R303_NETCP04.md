@@ -25,3 +25,19 @@ Validation: 11/11 CPU/PTY gate cases PASS; dependency closure, warning-free depm
 User-run installation PASS. Installed R303 image/BLS and both R302 retirement backups independently match. Retired R302 paths are absent. Protected hash records equal preflight: nine accessible protected files independently checked, four rely on the privileged installer record. No selection, module load or reboot occurred.
 
 Next: save receiver output to a file, then user-run arm-menu.py. This backs up grubenv and sets only a transient 30-second manual menu timeout; it does not select an entry, change pstore or reboot. Audit its PASS output before manual R303 boot. Confirm same-boot R303 QUALIFICATION_COMPLETE on receiver before entering the retained public token R299-CP03-RECEIVED. Expected CP04 helper-entry/guards-pass/panic occurs before first helper VCN MMIO. R303 LIVE remains UNPROVEN.
+
+
+## User-reported R303 boot and normal return (2026-10-03)
+
+User reports booting R303, entering input according to the procedure, then rebooting and returning to the normal entry. Agent read-only inspection confirms the current normal kernel `7.2.1-ogc4.1.fc44.x86_64`; current command line points to the normal deployment. Receiver output has not yet been supplied for this attempt. This report does not independently establish token acceptance, GPU load, CP04 helper entry/guards/panic, or automatic panic-driven restart.
+
+STAGE=R303 user-reported boot / normal return
+RESULT=User reports procedure completed and normal entry restored; receiver evidence pending
+STATIC_OR_LIVE=PROVEN_LIVE current normal kernel; user-reported R303 attempt
+HARDWARE_ACCESS=Agent read-only procfs inspection; user-performed boot/input/reboot
+HARDWARE_MUTATION=No new agent hardware mutation
+HARDWARE_FAILURE=NO_EVIDENCE in the current report
+PROVEN=Current normal kernel; user-reported return to normal entry
+REJECTED=Normal return alone proves CP04 checkpoint delivery or VCN operation
+UNPROVEN=R303 token acceptance, CP04 receipt, final panic/countdown, automatic restart, VCN execution
+NEXT=Inspect R303 receiver output from QUALIFICATION_COMPLETE through final received lines; classify checkpoint before choosing next comparison
