@@ -1,0 +1,51 @@
+{
+  "tests": [
+    {
+      "case": "exact",
+      "pass": true,
+      "output": "INPUT_READY stdin_tty=NO expected_bytes=18 diagnostic_only=YES\nINPUT_RESULT read_rc=0 bytes=18 escaped_prefix=R299-CP03-RECEIVED\nINPUT_EXACT_MATCH; diagnostic complete; GPU not included\n"
+    },
+    {
+      "case": "space",
+      "pass": true,
+      "output": "INPUT_READY stdin_tty=NO expected_bytes=18 diagnostic_only=YES\nINPUT_RESULT read_rc=0 bytes=19 escaped_prefix=R299-CP03-RECEIVED\\ \nINPUT_MISMATCH; GPU not included\n"
+    },
+    {
+      "case": "carriage_return",
+      "pass": true,
+      "output": "INPUT_READY stdin_tty=NO expected_bytes=18 diagnostic_only=YES\nINPUT_RESULT read_rc=0 bytes=19 escaped_prefix=$'R299-CP03-RECEIVED\\r'\nINPUT_MISMATCH; GPU not included\n"
+    },
+    {
+      "case": "empty_line",
+      "pass": true,
+      "output": "INPUT_READY stdin_tty=NO expected_bytes=18 diagnostic_only=YES\nINPUT_RESULT read_rc=0 bytes=0 escaped_prefix=''\nINPUT_MISMATCH; GPU not included\n"
+    },
+    {
+      "case": "eof",
+      "pass": true,
+      "output": "INPUT_READY stdin_tty=NO expected_bytes=18 diagnostic_only=YES\nINPUT_RESULT read_rc=1 bytes=0 escaped_prefix=''\nINPUT_READ_FAILURE; EOF or read error; GPU not included\n"
+    },
+    {
+      "case": "partial_eof",
+      "pass": true,
+      "output": "INPUT_READY stdin_tty=NO expected_bytes=18 diagnostic_only=YES\nINPUT_RESULT read_rc=1 bytes=18 escaped_prefix=R299-CP03-RECEIVED\nINPUT_READ_FAILURE; EOF or read error; GPU not included\n"
+    },
+    {
+      "case": "unicode_dash",
+      "pass": true,
+      "output": "INPUT_READY stdin_tty=NO expected_bytes=18 diagnostic_only=YES\nINPUT_RESULT read_rc=0 bytes=20 escaped_prefix=$'R299\\342\\200\\223CP03-RECEIVED'\nINPUT_MISMATCH; GPU not included\n"
+    },
+    {
+      "case": "long_input",
+      "pass": true,
+      "output": "INPUT_READY stdin_tty=NO expected_bytes=18 diagnostic_only=YES\nINPUT_RESULT read_rc=0 bytes=200 escaped_prefix=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\nINPUT_MISMATCH; GPU not included\n"
+    },
+    {
+      "case": "pty_exact",
+      "pass": true,
+      "output": "INPUT_READY stdin_tty=YES expected_bytes=18 diagnostic_only=YES\r\nR299-CP03-RECEIVED\r\nspeed 38400 baud; rows 0; columns 0; line = 0;\r\nintr = ^C; quit = ^\\; erase = ^?; kill = ^U; eof = ^D; eol = <undef>;\r\neol2 = <undef>; swtch = <undef>; start = ^Q; stop = ^S; susp = ^Z; rprnt = ^R;\r\nwerase = ^W; lnext = ^V; discard = ^O; min = 1; time = 0;\r\n-parenb -parodd -cmspar cs8 -hupcl -cstopb cread -clocal -crtscts\r\n-ignbrk -brkint -ignpar -parmrk -inpck -istrip -inlcr -igncr icrnl ixon -ixoff\r\n-iuclc -ixany -imaxbel -iutf8\r\nopost -olcuc -ocrnl onlcr -onocr -onlret -ofill -ofdel nl0 cr0 tab0 bs0 vt0 ff0\r\nisig icanon iexten echo echoe echok -echonl -noflsh -xcase -tostop -echoprt\r\nechoctl echoke -flusho -extproc\r\nINPUT_RESULT read_rc=0 bytes=18 escaped_prefix=R299-CP03-RECEIVED\r\nINPUT_EXACT_MATCH; diagnostic complete; GPU not included\r\n"
+    }
+  ],
+  "real_gpu_load": false,
+  "live_console_test": false
+}

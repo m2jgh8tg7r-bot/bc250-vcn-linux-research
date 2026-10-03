@@ -58,3 +58,21 @@ NEXT=User-run `install.py --install`: archive and verify CP07, replace only its 
 User-run install returned PASS. Agent independently recomputed installed image/BLS and archived CP07 image/BLS hashes; all matched audited identities, and original CP07 paths are absent. Saved protected hashes match the preflight; privileged installer reports protected identity preservation. No selection, module load or reboot. Prepared manual-menu script rechecks all installed/protected hashes, normal kernel and absent pending selection, then sets only one-time 30-second menu timeout, with verified grubenv backup and catchable rollback. Script syntax passed; menu preparation is not yet executed.
 
 NEXT=Receiver file logging ready; user runs arm-menu.py. After PASS, user manually reboots and selects R299. Confirm Windows saved R299 QUALIFICATION_COMPLETE before typing R299-CP03-RECEIVED at the BC-250 console. This initiates GPU initialization and an expected CP03 panic before the VCN helper; panic=10 may reboot if panic handling proceeds. If qualification is absent, do not enter the token; use reboot -f from the RAM shell and normal entry. Unexpected load return holds without retry. Combined live path and hang-time delivery remain UNPROVEN.
+
+
+## User-reported LIVE attempt — 2026-10-03
+
+STAGE=R299 NETCP03 LIVE receiver gate
+RESULT=Pre-GPU qualification received; receiver gate rejected input; CP03 control NOT REACHED.
+STATIC_OR_LIVE=LIVE user-supplied receiver excerpt, plus STATIC init inspection
+HARDWARE_ACCESS=NIC/netconsole live; no intended GPU/VCN load reached
+HARDWARE_MUTATION=No new agent hardware mutation; user reports manual reboot -f
+HARDWARE_FAILURE=No evidence of GPU hang or CP03 panic in supplied excerpt
+PROVEN=R299 QUALIFICATION 2/10 through 10/10 and COMPLETE received; FAIL token mismatch received at 65.842606; implemented failure branch holds without automatic reboot. Current agent host reports normal kernel 7.2.1-ogc4.1.fc44.x86_64.
+REJECTED=Treating this attempt as CP03 panic/reboot failure, GPU-stage transmission proof, or VCN failure.
+UNPROVEN=Exact bytes consumed by read, read exit status, reason for rejection, qualification 1/10 receipt, GPU-stage/panic delivery and CP03 boundary.
+NEXT=Prepare input diagnostics distinguishing EOF/read error from mismatched bytes before any repeat boot; preserve exact-token GPU gate.
+
+User reports entering exactly R299-CP03-RECEIVED, then using reboot -f because no reboot occurred. The script uses IFS= read -r acknowledgement followed by exact equality, without checking/logging the read status or input bytes. EOF and mismatched input therefore share the same FAIL marker. Hidden characters, queued input, or console read behavior remain hypotheses; the supplied log does not identify a cause and does not establish user mistyping. RECEIVER_CONFIRMED and AMDGPU_MODPROBE_BEGIN are absent from the supplied excerpt. The failure branch explicitly starts a RAM shell and directs reboot -f. panic=10 cannot trigger an automatic reboot before a panic.
+
+Read-only GitHub origin HEAD lookup matched local commit b3d293be06c3133303f667112d996cadf14a8436 (installed audit/manual procedure). Existing 4/4 mocked gate checks do not test actual /dev/console input. Installed image, boot entries and frozen init were not changed during this analysis.

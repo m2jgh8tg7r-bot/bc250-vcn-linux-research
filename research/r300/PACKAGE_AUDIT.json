@@ -1,0 +1,20 @@
+{
+  "contract": "PASS",
+  "image_sha256": "9ed01bc61374a1b4468320e9c2555ec8cde13883a5ccfa06db0a4f354868ba65",
+  "image_size": 10449032,
+  "bls_sha256": "b4cab77aa08eb1cc8eb7fd82c1ae024038e8c01baee30ceec0ac550b682f3c39",
+  "init_sha256": "f967502045c8599f9218d70dd1e5f5450b3311b8375e6b3dce710662ea2fd16c",
+  "research_kernel_sha256": "c556be76b14b42edf41b6d4d3b6526f41daf694fa79348da9c0d0231e02bb6c6",
+  "modules": [
+    "kernel/drivers/net/ethernet/realtek/r8169.ko",
+    "kernel/drivers/net/netconsole.ko",
+    "kernel/drivers/net/phy/phy_package.ko",
+    "kernel/drivers/net/phy/realtek/realtek.ko"
+  ],
+  "amdgpu_included": false,
+  "root_mount": false,
+  "automatic_reboot": false,
+  "roundtrip_exact": true,
+  "hardware_access": false,
+  "boot_write": false
+}
