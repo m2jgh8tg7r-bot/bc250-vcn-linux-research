@@ -1,0 +1,32 @@
+{
+  "module_sha256": {
+    "staged": "69c2cbcf7e0eb51eb48c29fa998ee57245922adf417b242157160be692d517bd",
+    "roundtrip": "69c2cbcf7e0eb51eb48c29fa998ee57245922adf417b242157160be692d517bd",
+    "build": "a8e06765472b110cd143e4a233f3bc0a051fb8c2c0dc082ecef032d6a8b3ae54"
+  },
+  "staged_roundtrip_equal": true,
+  "executable_section_names_equal": true,
+  "executable_sections": {
+    ".text": {
+      "size": 14927,
+      "sha256": "32764a079f6b3529df88a8f6c45fd2fa3ec012bf7ef8ae9103cd7245fef8629b",
+      "build_equal": true
+    },
+    ".exit.text": {
+      "size": 220,
+      "sha256": "7aa45147de5090a77f1ebf0024bcaf873266c4f6911e806699c7baaa5f30c1ca",
+      "build_equal": true
+    },
+    ".altinstr_replacement": {
+      "size": 7,
+      "sha256": "e62a7fb49f0f557217d8f8a367d5ea9991d86c6ad8bb5dcf5a9e13973d0c3d59",
+      "build_equal": true
+    },
+    ".init.text": {
+      "size": 807,
+      "sha256": "5c3aa37b5169ee4fb3ec519e95b0abb1f1fcc2f44df2769d33ff85a60551b7f3",
+      "build_equal": true
+    }
+  },
+  "limits": "Executable bytes only; not relocation/data equality, running module identity or live delivery proof"
+}

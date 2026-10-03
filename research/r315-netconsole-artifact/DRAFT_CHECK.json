@@ -1,0 +1,9 @@
+{
+  "only_change": "Insert + after netconsole= in the existing module argument",
+  "original_sha256": "a759324df65273bbe5d1cb00242b073621422f2af503c039b9ffbcdd4bfef9fb",
+  "candidate_sha256": "42e3e92e8a64e9b566aa159b928b3bdc417b8725e386dfda183ab88197a4dd6c",
+  "reverse_change_exact": true,
+  "packaged": false,
+  "installed": false,
+  "private_network_values": "Retained locally; draft excluded from publication"
+}

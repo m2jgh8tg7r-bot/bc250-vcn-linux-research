@@ -1,3 +1,5 @@
+> R315: [Packaged netconsole artifact audit](docs/CHATGPT_HANDOFF_R315.md). Explicit extended-mode support confirmed statically; four executable sections match retained build. Private one-character draft only; no boot changes.
+
 > R314: [Sequence-aware receiver tools](docs/CHATGPT_HANDOFF_R314.md), eight offline tests passed. No receiver launched or boot changed; missing suffix remains unknown.
 
 > R313: [R312 receiver boundary audit](docs/CHATGPT_HANDOFF_R313.md). Automatic reboot is operator-reported; intended panic remains unproven. Static logging-path audit and discriminating observation proposal; no hardware changes.
