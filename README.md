@@ -1,3 +1,5 @@
+> R299 installation update: image/BLS and archived CP07 identities independently verified; manual-menu tool prepared, not yet booted. [Current handoff](docs/CHATGPT_HANDOFF_R299_NETCP03.md#installed-and-independently-audited--2026-10-03).
+
 > Latest R299: [Network-first, receiver-gated CP03 control prepared](docs/CHATGPT_HANDOFF_R299_NETCP03.md). HOME package and gate validation PASS; privileged preflight pending, not installed/booted. No new VCN status read.
 
 > Latest R298 NETOBS1: [LIVE pre-GPU external transport qualification and normal return](docs/CHATGPT_HANDOFF_R298_NETOBS1.md#r298-netobs1-live-result--2026-10-03-supersedes-preparation-status). Received 2/10–10/10 plus completion; incomplete excerpt coverage and GPU/fabric hang-time delivery remain unproven.

@@ -51,3 +51,10 @@ cp03_signed_module_sha256: `43f177df38a8d4bef6572fcaca89c6d0f1f6165fd8983ee3ce62
 User executed the default privileged preflight. Saved contract PASS was independently read; installer/package/image/BLS/init identities matched current HOME artifacts. Protected normal/R180/R298/kernel/GRUB identities and exact CP07 retirement identities passed. Free space was 68,395,008 bytes; planned new image 168,061,706 bytes; verified CP07 retirement permits the required 52,428,800-byte post-install margin. No boot write, selection change, GPU module load or reboot.
 
 NEXT=User-run `install.py --install`: archive and verify CP07, replace only its image/BLS with R299, preserve protected identities, and save installed audit. Installation and combined LIVE control remain UNPROVEN.
+
+
+## Installed and independently audited — 2026-10-03
+
+User-run install returned PASS. Agent independently recomputed installed image/BLS and archived CP07 image/BLS hashes; all matched audited identities, and original CP07 paths are absent. Saved protected hashes match the preflight; privileged installer reports protected identity preservation. No selection, module load or reboot. Prepared manual-menu script rechecks all installed/protected hashes, normal kernel and absent pending selection, then sets only one-time 30-second menu timeout, with verified grubenv backup and catchable rollback. Script syntax passed; menu preparation is not yet executed.
+
+NEXT=Receiver file logging ready; user runs arm-menu.py. After PASS, user manually reboots and selects R299. Confirm Windows saved R299 QUALIFICATION_COMPLETE before typing R299-CP03-RECEIVED at the BC-250 console. This initiates GPU initialization and an expected CP03 panic before the VCN helper; panic=10 may reboot if panic handling proceeds. If qualification is absent, do not enter the token; use reboot -f from the RAM shell and normal entry. Unexpected load return holds without retry. Combined live path and hang-time delivery remain UNPROVEN.
