@@ -24,3 +24,7 @@ The R329 init line says panic before helper VCN MMIO, an inherited stale descrip
 ## Operator clarification
 
 The operator confirms CFG_AFTER_BEGIN is the actual last received line, with no suffix, and explicitly denies automatic restart. Thus receiver-tail truncation by this paste is no longer pending. Post-read return and planned panic remain unobserved. Manual reset versus power interruption and their timing remain unspecified; current normal-kernel read alone does not resolve them. A standard PCI-read stall is consistent with this boundary, but entered instruction, CPU/bus state and logging-loss alternatives are not independently proven. No unchanged retry is justified.
+
+## Recovery confirmed
+
+Operator confirms manual reset recovery. Automatic restart is excluded by operator report. This resolves recovery-method uncertainty; cold-power-cycle recovery remains untested. The terminal receiver line remains CFG_AFTER_BEGIN, with no post-read return or planned panic. No unchanged retry.
