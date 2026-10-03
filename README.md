@@ -1,3 +1,5 @@
+> Latest: [R319 — R318 live metadata checkpoint and static interpretation](docs/CHATGPT_HANDOFF_R319.md). Intended panic received; manual recovery reported. No VCN execution claim.
+
 > R318: [Panic-hold package prepared](docs/CHATGPT_HANDOFF_R318.md). Same R316 modules; panic=0 requires manual recovery. Kernel executable correspondence and restart-skipping branch verified; not installed or booted.
 
 > R317: [Panic-flush ordering audit](docs/CHATGPT_HANDOFF_R317.md). Retained unsafe netconsole final flush follows timed restart, providing a concrete missing-tail hypothesis. R316 extended reception recorded; checkpoint/reset cause unproven. No further hardware tests today.
