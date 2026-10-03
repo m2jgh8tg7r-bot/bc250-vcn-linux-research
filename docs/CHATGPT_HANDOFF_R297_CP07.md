@@ -60,3 +60,11 @@ image_sha256: `a8160d963b7b8b21cf7d9078f157895259944050611abedee2576d670c9ca93b`
 
 bls_sha256: `719e0bfb6f522bfbf3861c1100802e1b4d55d1c70165c72ed2db897ea0fbb501`
 
+
+## CP07 privileged preflight — 2026-10-03
+
+The user executed the prepared privileged read-only preflight. The saved result was independently read and its script/package hashes matched. Classification: PROVEN_STATICALLY for protected-file identities and capacity checks; no VCN access, boot write, selection change or reboot.
+
+The normal boot, normal pstore policy and absence of pending one-shot selection passed. Free boot space: 78,823,424 bytes. New image: 246,028,802 bytes. Retiring the verified CP06 image plus its main/witness entries allows the 52,428,800-byte margin while retaining the normal and R180 recovery entries.
+
+NEXT=Execute prepared install-no-select via sudo; revalidate all preflight identities, flush verified CP06 backups before deletion, install CP07, verify installed hashes and protected policy. Install has not been executed; CP07 LIVE remains UNPROVEN. The installer now flushes backups before retirement and handles catchable interruption with rollback. Syntax check passed; these recovery paths are not live-proven.

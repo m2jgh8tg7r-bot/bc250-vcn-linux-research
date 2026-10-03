@@ -1,0 +1,13 @@
+{
+  "contract": "PASS",
+  "preflight_script_sha256": "baff2e2933ebc681bded61f22f4a897787cf67e4a459dc1e809b83562d4fc62d",
+  "package_audit_sha256": "415add56e62a86f2c0a9272535ab8a378e336d30b28c8ec8492001fd54b411fc",
+  "boot_free_bytes": 78823424,
+  "new_image_bytes": 246028802,
+  "margin_bytes": 52428800,
+  "cp06_retirement_needed": true,
+  "normal_boot": true,
+  "pending_selection": false,
+  "boot_write": false,
+  "hardware_access": false
+}
