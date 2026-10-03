@@ -54,3 +54,21 @@ init_sha256: `3dda67d141788c1e08530c320e12a0306e12dcba35f5c13e00977f10eafbf388`
 
 research_kernel_sha256: `c556be76b14b42edf41b6d4d3b6526f41daf694fa79348da9c0d0231e02bb6c6`
 
+
+
+## R298 NETOBS1 live result — 2026-10-03 (supersedes preparation status)
+
+STAGE=R298 NETOBS1 LIVE QUALIFICATION
+RESULT=PROVEN_LIVE research-kernel pre-GPU external marker receipt; user reports normal reboot after observation.
+STATIC_OR_LIVE=PROVEN_LIVE (user-supplied Windows receiver excerpt); current normal kernel independently read as 7.2.1-ogc4.1.fc44.x86_64.
+HARDWARE_ACCESS=User ran observation boot; agent performed only post-return uname and filesystem/Git inspection.
+HARDWARE_MUTATION=NIC/netconsole initialization during user-run boot; no VCN access in reviewed init; no new agent hardware mutation.
+HARDWARE_FAILURE=NO_EVIDENCE in supplied excerpt.
+PROVEN=Unique QUALIFICATION 2/10 through 10/10 received at 6.454454 through 14.478145 seconds, each reporting kernel=7.2.3+ amdgpu_absent=YES no_VCN_access; QUALIFICATION_COMPLETE at 15.480975 seconds. Successful return reported by user, with normal kernel confirmed locally.
+REJECTED=Research-kernel network transport categorically unavailable; early timestamps alone prove immediate early-boot delivery; this excerpt proves lossless logging.
+UNPROVEN=QUALIFICATION 1/10 receipt, complete kernel log receipt, packet-loss cause, receiver file durability, loaded-image live hash attestation, GPU/fabric hang-time packet delivery, VCN read completion and VCN execution.
+NEXT=Review a fresh instrumentation boundary with unique immediately-before/after markers and an external receiver acknowledgement before any VCN experiment. No unchanged CP07 retry or automatic boot.
+
+The excerpt includes the receiver-ready line, early kernel messages through approximately 0.242737 seconds, then QUALIFICATION 2/10 onward. QUALIFICATION 1/10 and the intervening kernel messages are absent from the supplied excerpt. This is a coverage gap, not evidence identifying packet loss, terminal clipping, or any particular failing instruction. The early messages can be buffered replay after netconsole registration; the unique periodic R298 markers establish the live post-registration path. The /vmlinuz-7.2.3-r138 command-line name is consistent with the retained research kernel, while R298 identifies the independent initramfs test.
+
+Next-test constraints: retain the qualified NIC path; establish external receipt before experimental access; use a new stage/attempt identifier and bounded pre-access pause; emit emergency-priority markers immediately before and after the single access. A received before marker without after marker narrows the last observable boundary but cannot distinguish an access stall from subsequent netpoll/receiver failure. CPU heartbeat and local console observations, if added, require a separate static review. The qualification does not make a GPU/fabric hang observable by itself. No new boot selection, installation, VCN read/write, or reboot was performed in this result review.
