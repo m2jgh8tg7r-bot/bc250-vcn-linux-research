@@ -1,3 +1,5 @@
+> **Protected preflight PASS:** User-run result independently matched package, installer, image/entry and checker hashes. Normal default preserved; exact R325 retirement meets space margin. Not installed or booted. Next: installation then independent audit. Earlier pending-preflight statements below are historical.
+
 # R329 — PCI configuration completion HOME package
 
 STAGE=R329

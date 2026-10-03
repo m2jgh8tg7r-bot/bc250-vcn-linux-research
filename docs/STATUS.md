@@ -1,3 +1,5 @@
+> **R329 protected preflight PASS:** [Verified preflight](../research/r329-pci-config-package/PREFLIGHT_SUMMARY.md). Local hashes match; normal default preserved. Not installed or booted; installation and independent audit next.
+
 > **R329 HOME preparation complete:** [PCI configuration completion package](CHATGPT_HANDOFF_R329.md). Paired build/call audit, signing, archive roundtrip and CPU checks pass. Protected read-only preflight requires user sudo authentication; not installed or booted. VCN execution remains unproven.
 
 > **R326 / R325 LIVE:** [Final-pointer observation](CHATGPT_HANDOFF_R326.md). Selected discovery record matched: die0/count3, one instance0 record, base1=0x7e00. Intended pre-MMIO panic/end received; current normal kernel read. Historical failed boots and VCN execution remain unproven. No unchanged repeat.

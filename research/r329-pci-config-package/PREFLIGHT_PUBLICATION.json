@@ -1,0 +1,8 @@
+{
+  "contract": "PASS",
+  "user_run_protected_preflight_verified": true,
+  "package_and_installer_hashes_match": true,
+  "normal_default_preserved": true,
+  "installed": false,
+  "booted": false
+}
