@@ -1,0 +1,10 @@
+{
+  "contract": "PASS",
+  "installed_files_exact": true,
+  "protected_files_unchanged": true,
+  "retirement_backup_verified": true,
+  "normal_kernel_unchanged": true,
+  "boot_selection_change": false,
+  "module_load": false,
+  "reboot": false
+}

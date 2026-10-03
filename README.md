@@ -1,3 +1,5 @@
+> **R325 installed, independent audit PASS:** [Preparation complete](research/r325-final-pointer-package/INSTALLED_SUMMARY.md). Image/entry hashes match, protected files and normal kernel unchanged, R318 backup verified. No boot selection change or live trial; raw receiver and manual menu steps remain.
+
 > **Current checkpoint — R325:** [Final-pointer checkpoint HOME image](docs/CHATGPT_HANDOFF_R325.md). Module/signing/roundtrip and gate/default/include checks passed. Protected boot preflight requires user sudo authentication; not installed or booted.
 
 > **Current checkpoint — R323/R324:** [Offline reader and checkpoint draft](docs/CHATGPT_HANDOFF_R324.md). CPU tests and paired builds completed; compiler instrumentation review remains open. No boot package or live test is ready.

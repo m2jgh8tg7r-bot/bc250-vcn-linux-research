@@ -2,7 +2,7 @@
   "home_preparation": "PASS",
   "protected_boot_preflight": "PASS_USER_RUN_LOCAL_RESULT_VERIFIED",
   "image_validated": true,
-  "installed": false,
+  "installed": true,
   "booted": false,
   "normal_kernel_read": "7.2.1-ogc4.1.fc44.x86_64",
   "kernel_image_sha256": "c556be76b14b42edf41b6d4d3b6526f41daf694fa79348da9c0d0231e02bb6c6",
@@ -12,5 +12,6 @@
     "INCLUDE_CHECK_TEST.json": "PASS",
     "GATE_TEST.json": "PASS"
   },
-  "installation": "PENDING"
+  "installation": "PASS_USER_RUN_INDEPENDENT_AUDIT",
+  "live_preparation": "COMPLETE; receiver readiness and manual menu steps remain operator actions"
 }
