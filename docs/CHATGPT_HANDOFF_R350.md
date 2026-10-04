@@ -1,10 +1,10 @@
 # R350 — no-PGFSM-write PCI-read control installed
 
-STAGE=R350_MENU_ARMED_AWAITING_RECEIVER_AND_MANUAL_BOOT
-RESULT=R350 image and BLS entry installed, independently verified, and one-time menu armed; no boot or reboot yet
-STATIC/LIVE=PACKAGE_STATIC_CHECKS_PASS; INSTALLATION_LIVE_STATE_PASS
-HARDWARE_ACCESS=NONE
-HARDWARE_MUTATION=NONE
+STAGE=R350_LIVE_GATE_REACHED_RECEIVER_CAPTURE_FAILED
+RESULT=User reports R350 reached local receiver-confirmation prompt; token typed but input remained waiting; normal Bazzite restored
+STATIC/LIVE=PACKAGE_STATIC_CHECKS_PASS; USER_REPORTED_LOCAL_GATE_PROMPT; receiver delivery/token acceptance unverified
+HARDWARE_ACCESS=AMDGPU_LOAD_NOT_PROVEN; gate precedes modprobe
+HARDWARE_MUTATION=NONE_PROVEN
 VCN_ACTIVATION=UNPROVEN
 
 ## Package and installation
@@ -13,16 +13,16 @@ R350 uses the previously audited R328 no-PGFSM_CONFIG-write control module. It p
 
 Before installation, the user-run protected preflight passed: the normal kernel was still running, GRUB reported a successful normal boot with no pending override, the observed fixed-index default selected a protected normal entry, and all recorded protected file hashes matched. The R350 image and BLS entry matched the package audit. The /boot space check passed with the configured safety margin after retiring the exact R329 image and entry.
 
-The separate install action passed. It backed up the exact R329 image and entry locally, installed R350, and verified the protected hashes. It did not change the boot selection, load a module, reboot, or access hardware. The normal boot entry remains the default.
+The separate install action passed. It backed up the exact R329 image and entry locally, installed R350, and verified the protected hashes. It did not change the boot selection, load a module, reboot, or access hardware. A later user-reported R350 boot reached the local receiver-confirmation prompt; after the user typed the token, the display remained at input wait. The user then returned to normal Bazzite.
 
 ## Observation and recovery limits
 
-The running system has `nmi_watchdog=1`, but prior observation did not establish an NMI event. The normal kernel has EFI pstore disabled and the observed pstore directory was empty. R350's entry requests hardlockup panic and EFI pstore for that boot, but neither hardlockup capture nor post-reset pstore persistence is qualified. Its intentional panic uses `panic=0`, requiring manual reset. No unchanged R329 CONFIG-write retry is planned.
+The running system has `nmi_watchdog=1`, but prior observation did not establish an NMI event. The normal kernel initially had EFI pstore disabled. After the reported trial, EFI pstore was enabled at runtime and the pstore directory remained empty; the normal setting was then restored. No recoverable panic record was found. R350's entry requests hardlockup panic and EFI pstore for that boot, but hardlockup capture remains unqualified. Its intentional panic uses `panic=0`, requiring manual reset. No unchanged R329 CONFIG-write retry is planned.
 
-A local operator procedure is prepared for a fresh raw netconsole JSONL capture, independent installed-state verification, a one-time GRUB menu, manual R350 selection, receiver confirmation before GPU load, and manual recovery. The receiver is not yet confirmed running; the 30-second one-time menu is armed with no next-entry override; R350 is not booted.
+The local operator procedure requires a fresh raw netconsole capture and receiver confirmation before GPU load. The receiver capture failed due to a reported router problem. The local prompt implies the init passed wired-link setup, netconsole module load and its ten-iteration qualification loop, but does not prove datagram receipt. Token acceptance is unverified. The init calls amdgpu modprobe only after an exact line and a five-second delay, so GPU load, PCI reads and checkpoint panic remain unproven. Do not repeat R350 unchanged until an independent receiver path and console input behavior are understood.
 
 ## Next gate
 
-The root-only read-only installed-state verifier and one-time menu preparation have both passed. Start and validate the independent receiver before rebooting, then select R350 manually. Wait for all qualification markers on the receiver before entering the local confirmation token. Preserve the entire raw capture.
+The attempted run is inconclusive. Requalify an independent receiver and console input path before another boot. Preserve raw datagrams and require the receiver's complete qualification sequence before any token is entered. Preserve the entire raw capture.
 
 Even successful PCI reads and the planned checkpoint do not prove VCN power, firmware execution, ring execution, or hardware video decode/encode.
