@@ -1,3 +1,5 @@
+> **R350 installed, not booted:** [No-PGFSM-write PCI-read control](CHATGPT_HANDOFF_R350.md). Protected preflight/install PASS, R329 exact backup retained, normal default unchanged. Receiver, independent post-install audit and one-time manual menu remain; EFI pstore/hardlockup capture and VCN execution are unproven.
+
 > **R349 static continuation:** [Latest checkpoint](CHATGPT_HANDOFF_R349.md). No new hardware operation; no more live trials this week.
 
 > **R348 static continuation:** [Latest checkpoint](CHATGPT_HANDOFF_R348.md). No new hardware operation; no more live trials this week.
