@@ -25,4 +25,9 @@ The VCN checkpoint reports the final discovery record matched (`die=0`, `count=3
 
 The intended panic, `BC250 R328 PCI config completion checkpoint; no VCN STATUS read`, and the panic end marker were received. Thus the observed PCI identity reads returned on both sides of the deliberately omitted write, and the bounded control reached its planned endpoint. No VCN STATUS read or first helper VCN MMIO operation was performed. The run does not prove VCN power, firmware execution, ring execution, or hardware video decode/encode.
 
+
+## Comparison with the earlier write candidate
+
+The earlier R329 capture showed a successful pre-read, a returned CONFIG write, then a post-read begin marker without a captured return. In this R350 no-write control, both PCI identity reads returned successfully. This contrast raises the write-associated state change as a priority explanation for the earlier boundary, but does not prove causality: the R329 tail was incomplete, and the two live runs are not a repeated paired measurement under identical post-write state.
+
 The entry uses `panic=0`; manual recovery is expected. Preserve the original private JSONL capture. The pasted excerpt does not include qualification 1/10–4/10. After recovering to normal Bazzite, report the recovery method and whether the display returned normally.
