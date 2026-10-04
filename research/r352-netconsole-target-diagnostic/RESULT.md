@@ -19,4 +19,13 @@ The local R352 initramfs was built from the R351 initramfs tree with the out-of-
 
 ## Deployment constraint
 
-The existing `/boot` partition has limited free space and currently has R351 installed. R352 must replace R351 in place while preserving R351's exact image and BLS entry in the user home directory; do not install a second research image alongside it. Installation requires an explicit privileged command by the operator. A guarded in-place replacement, exact R351 backup, and rollback preflight still need to be prepared before any deployment request.
+The existing `/boot` partition has limited free space and currently has R351 installed. R352 must replace R351 in place while preserving R351's exact image and BLS entry in the user home directory; do not install a second research image alongside it. `install.py` performs a read-only preflight by default, requires the exact recorded R351 hashes, checks pstore is empty, preserves protected GRUB/kernel files and the unchanged boot default, verifies the 50 MiB post-replacement margin, and makes exact R351 backups before an explicit `--install`. Its rollback path restores R351 if the replacement operation reports an error. No sudo command has been run in preparing this package.
+
+The operator's next command, when ready, is only the protected read-only preflight:
+
+```sh
+sudo sysctl -w kernel.nmi_watchdog=1
+sudo python3 ~/bc250-research/research/r352-netconsole-target-diagnostic/install.py
+```
+
+Do not add `--install` until the preflight reports PASS and its result has been reviewed. Installation, GRUB menu arming, and reboot remain separate steps.
