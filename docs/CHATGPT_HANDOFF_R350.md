@@ -1,28 +1,28 @@
-# R350 — no-PGFSM-write PCI-read control installed
+# R350 — live no-PGFSM-write PCI-read control
 
-STAGE=R350_RETRY_ARMED_RECEIVER_UDP_PATH_QUALIFIED
-RESULT=First R350 attempt inconclusive; same entry re-armed; receiver now confirmed a normal-boot UDP smoke datagram
-STATIC/LIVE=PACKAGE_STATIC_CHECKS_PASS; USER_REPORTED_LOCAL_GATE_PROMPT; receiver delivery/token acceptance unverified
-HARDWARE_ACCESS=AMDGPU_LOAD_NOT_PROVEN; gate precedes modprobe
-HARDWARE_MUTATION=NONE_PROVEN
-VCN_ACTIVATION=UNPROVEN
+STAGE=R350_ATTEMPT_2_PLANNED_PANIC_CAPTURED_RECOVERY_PENDING
+RESULT=Exact input gate, AMDGPU init, matching pre/post PCI identity reads, no CONFIG write, and intended checkpoint panic/end were received
+STATIC/LIVE=PACKAGE_STATIC_CHECKS_PASS; R350_CONTROL_PATH_CONFIRMED_LIVE
+HARDWARE_ACCESS=AMDGPU initialization and PCI configuration reads observed
+TARGETED_WRITE=PGFSM_CONFIG write omitted and explicit no-write marker received
+VCN_STATUS_READ=NONE
+VCN_EXECUTION=UNPROVEN
+NORMAL_RECOVERY_AFTER_ATTEMPT_2=NOT_YET_REPORTED
 
-## Package and installation
+## Preparation and boot control
 
-R350 uses the previously audited R328 no-PGFSM_CONFIG-write control module. It performs the planned PCI identity reads, then reaches the named checkpoint panic path. It does not include the R329 PGFSM_CONFIG MMIO write. The read transactions can still hang, and ordinary GPU initialization performs hardware accesses.
+R350 uses the paired R328 control module. It includes two PCI identity reads and omits the PGFSM_CONFIG MMIO write. The package passed signed executable-section comparison, depmod, exact initramfs roundtrip, and the existing no-write CPU harness. The image was installed after protected preflight; the exact R329 image and BLS entry were retained in a local backup. The normal BLS default stayed unchanged.
 
-Before installation, the user-run protected preflight passed: the normal kernel was still running, GRUB reported a successful normal boot with no pending override, the observed fixed-index default selected a protected normal entry, and all recorded protected file hashes matched. The R350 image and BLS entry matched the package audit. The /boot space check passed with the configured safety margin after retiring the exact R329 image and entry.
+The first R350 boot attempt had no usable receiver capture. After a normal-boot UDP smoke test reached the receiver over the same wired source path and the resolved target MAC matched R350's configured target, the same R350 entry was re-armed. A fresh raw capture then received the retry boot. Private IP and MAC values are intentionally omitted.
 
-The separate install action passed. It backed up the exact R329 image and entry locally, installed R350, and verified the protected hashes. It did not change the boot selection, load a module, reboot, or access hardware. A later user-reported R350 boot reached the local receiver-confirmation prompt; after the user typed the token, the display remained at input wait. The user then returned to normal Bazzite. A subsequent user-run read-only GRUB environment check returned only `boot_success=1`; no pending one-shot menu timeout or next-entry override remained.
+## Attempt 2 — captured result
 
-## Observation and recovery limits
+The pasted receiver excerpt begins with qualification 5/10. It contains qualification 5/10 through 10/10 and `QUALIFICATION_COMPLETE`; entries 1/10–4/10 are outside the excerpt. It also records `stdin_tty=YES`, the exact 18-byte token as `read_rc=0`, and `AMDGPU_MODPROBE_BEGIN`.
 
-The running system has `nmi_watchdog=1`, but prior observation did not establish an NMI event. The normal kernel initially had EFI pstore disabled. After the reported trial, EFI pstore was enabled at runtime and the pstore directory remained empty; the normal setting was then restored. No recoverable panic record was found. R350's entry requests hardlockup panic and EFI pstore for that boot, but hardlockup capture remains unqualified. Its intentional panic uses `panic=0`, requiring manual reset. No unchanged R329 CONFIG-write retry is planned.
+AMDGPU initialization proceeded through VCN IP discovery, software initialization, firmware version reporting and hardware phase 2. PSP VCN firmware enrollment was skipped by the existing R79 guard. The log then shows two display IRQ warning traces in `dal_irq_service_ack` and `dal_irq_service_set`; execution continued to the checkpoint. In the retained source, these functions assert when the selected callbacks are dummy handlers. The warning cause or broader display impact has not been investigated.
 
-The local operator procedure requires a fresh raw netconsole capture and receiver confirmation before GPU load. The initial capture failed due to a reported router problem. A later 25-byte UDP smoke datagram from the configured sender address to the configured receiver port was observed by the user at the receiver; the destination MAC resolved on the wired path matches R350's configured static target. This qualifies the ordinary UDP receiver route, not yet the kernel netconsole R350 boot stream. The local prompt implies the init passed wired-link setup, netconsole module load and its ten-iteration qualification loop, but does not prove datagram receipt. Token acceptance is unverified. The init calls amdgpu modprobe only after an exact line and a five-second delay, so GPU load, PCI reads and checkpoint panic remain unproven. Do not repeat R350 unchanged until an independent receiver path and console input behavior are understood.
+The VCN checkpoint reports the final discovery record matched (`die=0`, `count=3`, one VCN0 record, `base1=0x7e00`). The pre-read returned `ret=0` with PCI identity `0x13fe1002`, matching the expected identity. The control then explicitly logged that it performed no CONFIG write. The post-read also returned `ret=0` with the same identity and `match=1`.
 
-## Next gate
+The intended panic, `BC250 R328 PCI config completion checkpoint; no VCN STATUS read`, and the panic end marker were received. Thus the observed PCI identity reads returned on both sides of the deliberately omitted write, and the bounded control reached its planned endpoint. No VCN STATUS read or first helper VCN MMIO operation was performed. The run does not prove VCN power, firmware execution, ring execution, or hardware video decode/encode.
 
-The user recommends repeating the same R350 entry when capture is available; no new numbered package is needed. The retry arming script passed for the existing R350 entry. It revalidated installed/protected state and the R329 backup, created a fresh GRUB environment backup, and set only a 30-second manual menu timeout. The saved default is unchanged, no next-entry override exists, and no reboot has occurred. Before rebooting, start a new per-boot raw capture on the now-qualified receiver path. Require all ten qualification datagrams plus completion before entering the exact token. Preserve `INPUT_RESULT` and all subsequent markers. Preserve the entire raw capture.
-
-Even successful PCI reads and the planned checkpoint do not prove VCN power, firmware execution, ring execution, or hardware video decode/encode.
+The entry uses `panic=0`; manual recovery is expected. Preserve the original private JSONL capture. The pasted excerpt does not include qualification 1/10–4/10. After recovering to normal Bazzite, report the recovery method and whether the display returned normally.
