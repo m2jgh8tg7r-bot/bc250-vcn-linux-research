@@ -29,3 +29,5 @@ sudo python3 ~/bc250-research/research/r352-netconsole-target-diagnostic/install
 ```
 
 Do not add `--install` until the preflight reports PASS and its result has been reviewed. Installation, GRUB menu arming, and reboot remain separate steps.
+
+After a successful replacement, `verify_installed.py` performs the protected read-only check. `arm-menu.py` then creates a fresh GRUB environment backup and shows the menu for 30 seconds, requiring the operator to select R352 manually. It does not reboot or set `next_entry`. Start the Windows raw UDP receiver before arming/rebooting. At R352, inspect the local `TARGET` report and the Windows capture; do not expect a prompt/token and do not select another VCN experiment from this boot.
