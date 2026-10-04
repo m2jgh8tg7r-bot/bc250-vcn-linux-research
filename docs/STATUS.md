@@ -1,4 +1,4 @@
-> **R350 live attempt inconclusive:** [No-PGFSM-write PCI-read control](CHATGPT_HANDOFF_R350.md). User reports token echo and Enter at the local receiver-confirmation prompt, followed by an error and return to input wait; exact error was not retained. Receiver capture failed; pstore empty after runtime enable. `grubenv` shows only `boot_success=1`. GPU load and PCI reads remain unproven. Same R350 entry is re-armed with a 30-second manual menu; saved default unchanged, no retry boot. A 25-byte normal-boot UDP smoke datagram reached the receiver and its resolved target MAC matched R350; start a fresh raw capture before retrying.
+> **R350 captured live PCI-read control:** [Attempt 2 result](CHATGPT_HANDOFF_R350.md). Exact receiver token, AMDGPU init, matching PCI identity reads before/after the explicitly omitted CONFIG write, and planned no-VCN-STATUS panic/end received. No VCN STATUS read or VCN execution proof; normal recovery after panic pending.
 
 > **R349 static continuation:** [Latest checkpoint](CHATGPT_HANDOFF_R349.md). No new hardware operation; no more live trials this week.
 
