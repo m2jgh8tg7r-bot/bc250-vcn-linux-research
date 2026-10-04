@@ -15,7 +15,8 @@ audit=json.loads((OUT/'INSTALLED_RESULT.json').read_text())
 assert audit.get('contract')=='PASS'
 for path,expected in audit['installed_hashes'].items(): assert sha(Path(path))==expected,'Installed artifact changed: '+path
 for path,expected in audit['protected_hashes'].items(): assert sha(Path(path))==expected,'Protected file changed: '+path
-assert sha(Path('/boot/grub2/grubenv'))==audit['grubenv_sha256_at_install'],'GRUB environment changed since install'
+expected_env=audit.get('grubenv_sha256_at_correction',audit['grubenv_sha256_at_install'])
+assert sha(Path('/boot/grub2/grubenv'))==expected_env,'GRUB environment changed since last install/correction'
 e=env(); assert e=={'boot_success':'1'},'GRUB environment is not recovered baseline: '+repr(e)
 assert os.uname().release=='7.2.1-ogc4.1.fc44.x86_64'
 assert Path('/sys/module/efi_pstore/parameters/pstore_disable').read_text().strip()=='Y'
