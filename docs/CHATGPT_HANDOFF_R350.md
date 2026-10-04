@@ -23,6 +23,6 @@ The local operator procedure requires a fresh raw netconsole capture and receive
 
 ## Next gate
 
-The user recommends repeating the same R350 entry when capture is available; no new numbered package is needed. A retry arming script is prepared to revalidate installed/protected state and create a fresh GRUB environment backup. Before another boot, make the receiver available, start a new raw capture, and require all ten qualification datagrams plus completion before entering the exact token. Preserve `INPUT_RESULT` and all subsequent markers. Preserve the entire raw capture.
+The user recommends repeating the same R350 entry when capture is available; no new numbered package is needed. The retry arming script passed for the existing R350 entry. It revalidated installed/protected state and the R329 backup, created a fresh GRUB environment backup, and set only a 30-second manual menu timeout. The saved default is unchanged, no next-entry override exists, and no reboot has occurred. Before rebooting, make the receiver available, start a new raw capture, and require all ten qualification datagrams plus completion before entering the exact token. Preserve `INPUT_RESULT` and all subsequent markers. Preserve the entire raw capture.
 
 Even successful PCI reads and the planned checkpoint do not prove VCN power, firmware execution, ring execution, or hardware video decode/encode.
