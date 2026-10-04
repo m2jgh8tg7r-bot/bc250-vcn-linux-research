@@ -1,4 +1,4 @@
-> **R350 installed/menu armed, not booted:** [No-PGFSM-write PCI-read control](CHATGPT_HANDOFF_R350.md). Protected preflight/install, independent verifier and one-time manual menu PASS; R329 exact backup retained, normal default unchanged. Receiver must be active before reboot; EFI pstore/hardlockup capture and VCN execution remain unproven.
+> **R350 live attempt inconclusive:** [No-PGFSM-write PCI-read control](CHATGPT_HANDOFF_R350.md). User reports reaching the local receiver-confirmation prompt, typing the token, remaining at input wait, and returning to normal Bazzite. Receiver capture failed; pstore empty after runtime enable. Token acceptance, GPU load, PCI reads and VCN execution remain unproven; do not repeat unchanged.
 
 > **R349 static continuation:** [Latest checkpoint](CHATGPT_HANDOFF_R349.md). No new hardware operation; no more live trials this week.
 
