@@ -1,3 +1,5 @@
+> **R347 static continuation:** [Latest checkpoint](CHATGPT_HANDOFF_R347.md). No new hardware operation; no more live trials this week.
+
 > **R346 static continuation:** [Latest checkpoint](CHATGPT_HANDOFF_R346.md). No new hardware operation; no more live trials this week.
 
 > **R345 static continuation:** [Latest checkpoint](CHATGPT_HANDOFF_R345.md). No new hardware operation; no more live trials this week.
