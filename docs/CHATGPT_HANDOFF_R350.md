@@ -13,7 +13,7 @@ R350 uses the previously audited R328 no-PGFSM_CONFIG-write control module. It p
 
 Before installation, the user-run protected preflight passed: the normal kernel was still running, GRUB reported a successful normal boot with no pending override, the observed fixed-index default selected a protected normal entry, and all recorded protected file hashes matched. The R350 image and BLS entry matched the package audit. The /boot space check passed with the configured safety margin after retiring the exact R329 image and entry.
 
-The separate install action passed. It backed up the exact R329 image and entry locally, installed R350, and verified the protected hashes. It did not change the boot selection, load a module, reboot, or access hardware. A later user-reported R350 boot reached the local receiver-confirmation prompt; after the user typed the token, the display remained at input wait. The user then returned to normal Bazzite.
+The separate install action passed. It backed up the exact R329 image and entry locally, installed R350, and verified the protected hashes. It did not change the boot selection, load a module, reboot, or access hardware. A later user-reported R350 boot reached the local receiver-confirmation prompt; after the user typed the token, the display remained at input wait. The user then returned to normal Bazzite. A subsequent user-run read-only GRUB environment check returned only `boot_success=1`; no pending one-shot menu timeout or next-entry override remained.
 
 ## Observation and recovery limits
 
