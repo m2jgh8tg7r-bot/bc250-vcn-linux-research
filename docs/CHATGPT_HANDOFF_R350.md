@@ -1,7 +1,7 @@
 # R350 — no-PGFSM-write PCI-read control installed
 
 STAGE=R350_LIVE_GATE_REACHED_RECEIVER_CAPTURE_FAILED
-RESULT=User reports R350 reached local receiver-confirmation prompt; token typed but input remained waiting; normal Bazzite restored
+RESULT=User reports R350 reached local receiver-confirmation prompt; token echoed and Enter pressed; error returned display to input wait; normal Bazzite restored
 STATIC/LIVE=PACKAGE_STATIC_CHECKS_PASS; USER_REPORTED_LOCAL_GATE_PROMPT; receiver delivery/token acceptance unverified
 HARDWARE_ACCESS=AMDGPU_LOAD_NOT_PROVEN; gate precedes modprobe
 HARDWARE_MUTATION=NONE_PROVEN
@@ -23,6 +23,6 @@ The local operator procedure requires a fresh raw netconsole capture and receive
 
 ## Next gate
 
-The attempted run is inconclusive. Requalify an independent receiver and console input path before another boot. Preserve raw datagrams and require the receiver's complete qualification sequence before any token is entered. Preserve the entire raw capture.
+The user recommends repeating the same R350 entry when capture is available; no new numbered package is needed. A retry arming script is prepared to revalidate installed/protected state and create a fresh GRUB environment backup. Before another boot, make the receiver available, start a new raw capture, and require all ten qualification datagrams plus completion before entering the exact token. Preserve `INPUT_RESULT` and all subsequent markers. Preserve the entire raw capture.
 
 Even successful PCI reads and the planned checkpoint do not prove VCN power, firmware execution, ring execution, or hardware video decode/encode.
