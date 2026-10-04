@@ -1,4 +1,4 @@
-> **R350 live attempt inconclusive:** [No-PGFSM-write PCI-read control](CHATGPT_HANDOFF_R350.md). User reports reaching the local receiver-confirmation prompt, typing the token, remaining at input wait, and returning to normal Bazzite. Receiver capture failed; pstore empty after runtime enable. Token acceptance, GPU load, PCI reads and VCN execution remain unproven; do not repeat unchanged.
+> **R350 live attempt inconclusive:** [No-PGFSM-write PCI-read control](CHATGPT_HANDOFF_R350.md). User reports reaching the local receiver-confirmation prompt, typing the token, remaining at input wait, and returning to normal Bazzite. Receiver capture failed; pstore empty after runtime enable. `grubenv` now shows only `boot_success=1`; no pending menu override. Token acceptance, GPU load, PCI reads and VCN execution remain unproven; do not repeat unchanged.
 
 > **R349 static continuation:** [Latest checkpoint](CHATGPT_HANDOFF_R349.md). No new hardware operation; no more live trials this week.
 
