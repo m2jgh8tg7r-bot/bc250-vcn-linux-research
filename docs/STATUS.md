@@ -1,4 +1,4 @@
-> **R350 captured live PCI-read control:** [Attempt 2 result](CHATGPT_HANDOFF_R350.md). Exact receiver token, AMDGPU init, matching PCI identity reads before/after the explicitly omitted CONFIG write, and planned no-VCN-STATUS panic/end received. No VCN STATUS read or VCN execution proof; normal recovery after panic pending.
+> **R350 captured live PCI-read control:** [Attempt 2 result](CHATGPT_HANDOFF_R350.md). Exact receiver token, AMDGPU init, matching PCI identity reads before/after the explicitly omitted CONFIG write, and planned no-VCN-STATUS panic/end received. User reports manual reset after the panic. No VCN STATUS read or VCN execution proof.
 
 > **R349 static continuation:** [Latest checkpoint](CHATGPT_HANDOFF_R349.md). No new hardware operation; no more live trials this week.
 

@@ -1,13 +1,13 @@
 # R350 — live no-PGFSM-write PCI-read control
 
-STAGE=R350_ATTEMPT_2_PLANNED_PANIC_CAPTURED_RECOVERY_PENDING
+STAGE=R350_ATTEMPT_2_CONTROL_CHECKPOINT_CAPTURED_AND_MANUAL_RESET_CONFIRMED
 RESULT=Exact input gate, AMDGPU init, matching pre/post PCI identity reads, no CONFIG write, and intended checkpoint panic/end were received
 STATIC/LIVE=PACKAGE_STATIC_CHECKS_PASS; R350_CONTROL_PATH_CONFIRMED_LIVE
 HARDWARE_ACCESS=AMDGPU initialization and PCI configuration reads observed
 TARGETED_WRITE=PGFSM_CONFIG write omitted and explicit no-write marker received
 VCN_STATUS_READ=NONE
 VCN_EXECUTION=UNPROVEN
-NORMAL_RECOVERY_AFTER_ATTEMPT_2=NOT_YET_REPORTED
+NORMAL_RECOVERY_AFTER_ATTEMPT_2=USER_REPORTED_MANUAL_RESET
 
 ## Preparation and boot control
 
@@ -30,4 +30,4 @@ The intended panic, `BC250 R328 PCI config completion checkpoint; no VCN STATUS 
 
 The earlier R329 capture showed a successful pre-read, a returned CONFIG write, then a post-read begin marker without a captured return. In this R350 no-write control, both PCI identity reads returned successfully. This contrast raises the write-associated state change as a priority explanation for the earlier boundary, but does not prove causality: the R329 tail was incomplete, and the two live runs are not a repeated paired measurement under identical post-write state.
 
-The entry uses `panic=0`; manual recovery is expected. Preserve the original private JSONL capture. The pasted excerpt does not include qualification 1/10–4/10. After recovering to normal Bazzite, report the recovery method and whether the display returned normally.
+The entry uses `panic=0`; the user reports manually resetting after the planned panic. Whether the display returned normally was not reported. Preserve the original private JSONL capture. The pasted excerpt does not include qualification 1/10–4/10.
