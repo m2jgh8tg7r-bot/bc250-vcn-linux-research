@@ -17,6 +17,14 @@ Both image iterations were built from an initramfs tree with no `amdgpu.ko`. The
 - Local `enabled=1` without receiver packets does not by itself prove UDP delivery; compare the Windows raw capture and `transmit_errors`.
 - Missing receiver data before target diagnostics is not a VCN result.
 
+## Corrected live result
+
+The corrected image was installed and manually selected. The user reported the initramfs text ended in an input-wait shell and returned with `reboot -f`, as designed. Windows captured `R352 NETDIAG: QUALIFICATION 5/10` through `10/10` and `QUALIFICATION_COMPLETE` (`GPU module absent; no VCN access`). Because the init emits these markers only after configfs target attributes match the expected enabled state, interface, local/remote IP/ports, and receiver MAC, this confirms those checks passed and early UDP delivery worked in this boot. The submitted excerpt omits the preceding `TARGET` line and qualification 1–4; retain the original full receiver capture if available.
+
+An earlier R351 block in the Windows text is from the incorrectly assembled first R352 image and is historical. The subsequent fresh `LISTENING UDP 6666` block contains the successful corrected R352 markers.
+
+This resolves the R352 network diagnostic. Next research step is the token-gated R351 single `PGFSM_STATUS` observation, after a guarded in-place restore of the exact backed-up R351 image. Separate `install-r351-status-read-trial.py`, `verify-r351-status-trial.py`, and `arm-r351-status-trial.py` scripts now provide the preflight/install/verify/manual-arm sequence. No R351 restoration or VCN trial has yet occurred after the R352 capture.
+
 ## Deployment constraint
 
 The initial image is currently installed under the R352 filename, and the exact original R351 files are retained under `r351-retirement-backup`. Do not boot the current image again. Once normal Bazzite is recovered, `update-corrected-image.py` performs a read-only preflight by default, requires exact hashes of the installed first R352 image and protected files, checks pstore is empty, confirms the normal GRUB environment, and verifies the 50 MiB post-replacement margin. Its explicit `--install` saves the current image to `r352-initial-bad-build-backup` before replacing it, with rollback on reported errors.
