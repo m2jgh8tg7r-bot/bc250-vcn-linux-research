@@ -1,0 +1,19 @@
+{
+  "contract": "PASS",
+  "result": "HOME_PACKAGE_PREPARED_NOT_INSTALLED",
+  "revision": "R353",
+  "purpose": "Verify the dynamic netconsole target and receiver endpoint before a token-gated R351 single VCN PGFSM_STATUS read",
+  "image": "initramfs-7.2.3-r353-vcnstatus.img",
+  "image_sha256": "7782ba9b91c88d81e5f6ac659d51509c778f71ef6d54c9fb49ab414a5f6ae2ee",
+  "image_size_bytes": 168107963,
+  "bls": "boot-entry-r353-vcnstatus.conf",
+  "bls_sha256": "8660bf7dc4a438cb6c9ca3bb77baa4ffcb4d1f71c8ca999943899c47f9feb560",
+  "init_sha256": "4f678793dad6f92314efa6e9937f07519d2df58ac198ee89cc239afadbae82c9",
+  "embedded_init_revision": "R353",
+  "amdgpu_module_path": "usr/lib/modules/7.2.3+/kernel/drivers/gpu/drm/amd/amdgpu/amdgpu.ko",
+  "amdgpu_module_sha256": "46a6e6a0e852063b22802b54635d63688c5cafd5712c701491a9898e34c2c9ed",
+  "gate": "Require netconsole configfs target enabled with exact sender, receiver, UDP ports, and receiver MAC; then exact R353-STATUS-READ input",
+  "hardware_access_during_preflight": false,
+  "boot_selection_change_during_preflight": false,
+  "reboot_during_preflight": false
+}
