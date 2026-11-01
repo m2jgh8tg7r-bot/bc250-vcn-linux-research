@@ -1,3 +1,5 @@
+> **PROJECT PAUSED INDEFINITELY (2026-11-01):** No active experiments, hardware tests, or monitoring are planned. The BC-250 hardware is retained, but its experimental environment has been repurposed and is not maintained. Any future restart requires an explicit decision and a clean rebuild from zero, including Bazzite. See [project pause notice](docs/PROJECT_PAUSE_2026-11-01.md). Historical checkpoints below are retained as evidence, not as current instructions or authorization to continue.
+
 > **R351 preparation checkpoint:** [Latest handoff](docs/CHATGPT_HANDOFF_R351.md). R350 receiver-qualified PCI no-write control is captured; a guarded single VCN0 PGFSM_STATUS read package is prepared locally. No R351 protected preflight, install, boot, or hardware access has occurred. The user's current session authorization supersedes earlier weekly live-test pause; the next step still requires the user at the host for sudo preflight and any manual boot.
 
 > **R349 static continuation (historical):** [Checkpoint](docs/CHATGPT_HANDOFF_R349.md). Its earlier pause on live trials is superseded by the user's current-session authorization.
